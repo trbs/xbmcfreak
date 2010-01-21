@@ -1,0 +1,298 @@
+<window>
+    <defaultcontrol>51</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+
+    <controls>
+        <control type="image">
+            <description>background image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>720</width>
+            <height>576</height>
+            <colorkey>0</colorkey>
+            <textcolor>ffffffff</textcolor>
+            <colordiffuse>ffffffff</colordiffuse>
+            <texture>xot_background.png</texture>
+        </control>
+        <control type="image">
+            <description>background image</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>720</width>
+            <height>88</height>
+            <colorkey>0</colorkey>
+            <textcolor>ffffffff</textcolor>
+            <colordiffuse>ffffffff</colordiffuse>
+            <texture>xot_top-background.png</texture>
+        </control>
+        <control type="image">
+            <description>XOT logo</description>
+            <posx>20</posx>
+            <posy>410</posy>
+            <width>152</width>
+            <height>95</height>
+            <colorkey>0</colorkey>
+            <textcolor>ffffffff</textcolor>
+            <colordiffuse>ffffffff</colordiffuse>
+            <texture>XOT logo.png</texture>
+        </control>
+
+        
+        <control type="group" id="1000">
+            <!-- Do NOT remove. This control is needed by the script -->
+            <animation effect="slide" start="-140,0" time="150">WindowOpen</animation>
+            <animation effect="slide" end="-140,0" time="150">WindowClose</animation>
+            <posx>60</posx>
+            <posy>110</posy>
+            <control type="image" id="1001">
+                <!-- Do NOT remove. This control is needed by the script -->
+                <description>ChannelIcon</description>
+                <visible>true</visible>
+                <posx>0</posx>
+                <posy>15</posy>
+                <width>75</width>
+                <height>75</height>
+                <aligny>center</aligny>
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
+            </control>
+            <control type="label" id="1002">
+	            <description>ChannelName label</description>
+	            <posx>37</posx>
+	            <posy>95</posy>
+	            <align>center</align>
+	            <label>ChannelName</label>
+	            <font>special13</font>
+	        </control>
+            <control type="label" id="1003">
+				<description>ChannelDescription</description>
+				<posx>-22</posx>
+				<posy>130</posy>
+				<width>120</width>
+				<height>200</height>
+				<visible>true</visible>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<font>font10</font>
+				<align>center</align>
+				<textcolor>FFFFFFFF</textcolor>
+                <wrapmultiline>true</wrapmultiline>
+		    </control>
+        </control>
+
+        
+        <control type="group" id="1050">
+	        <control type="group" id="1051">
+	            <control type="panel" id="51">
+		            <!-- Do NOT remove. This control is needed by the script -->
+		            <posx>198</posx>
+		            <posy>115</posy>
+		            <width>500</width>
+		            <height>395</height>
+		            
+		            <onleft>51</onleft>
+		            <onright>51</onright>
+		            <onup>51</onup>
+		            <ondown>51</ondown>
+		            
+		            <animation effect="slide" start="720" time="150">WindowOpen</animation>
+		            <animation effect="slide" end="720" time="150">WindowClose</animation>
+		            
+		            <viewtype label="Channels">icon</viewtype>
+		            
+		            <scrolltime>200</scrolltime>
+		                
+		            <itemlayout height="100" width="100">
+		                <control type="image">
+		                    <width>100</width>
+		                    <height>100</height>
+		                    <posx>0</posx>
+		                    <posy>0</posy>
+		                    <texture>xot_channel-bg.png</texture>
+		                </control>
+		                <control type="image">
+		                    <posx>23</posx>
+		                    <posy>10</posy>
+		                    <width>60</width>
+		                    <height>60</height>
+		                    <info>ListItem.Icon</info>
+		                </control>
+		                <control type="image">
+		                    <posx>23</posx>
+		                    <posy>10</posy>
+		                    <width>60</width>
+		                    <height>60</height>
+		                    <info>ListItem.Overlay</info>
+		                </control>
+                        <control type="label">
+	                        <posx>53</posx>
+	                        <posy>73</posy>
+	                        <width>78</width>
+	                        <height>22</height>
+	                        <font>font10</font>
+	                        <!--selectedcolor>FFe2ff43</selectedcolor-->
+	                        <align>center</align>
+                        <info>ListItem.Label</info>
+                    </control>
+		            </itemlayout>
+		            <focusedlayout height="100" width="100">
+		                <control type="image">
+		                    <width>100</width>
+		                    <height>100</height>
+		                    <posx>0</posx>
+		                    <posy>0</posy>
+		                    <texture>xot_channel-bg-focus.png</texture>
+		                </control>
+		                <control type="image">
+                            <posx>23</posx>
+                            <posy>10</posy>
+                            <width>60</width>
+                            <height>60</height>
+                            <info>ListItem.Icon</info>
+                        </control>
+                        <control type="image">
+                            <posx>23</posx>
+                            <posy>10</posy>
+                            <width>60</width>
+                            <height>60</height>
+                            <info>ListItem.Overlay</info>
+                        </control>
+                        <control type="label">
+                            <posx>53</posx>
+                            <posy>73</posy>
+                            <width>78</width>
+                            <height>22</height>
+                            <font>font10</font>
+                            <textcolor>FFB8CA61</textcolor>
+                            <align>center</align>
+                            <info>ListItem.Label</info>
+                        </control>
+		            </focusedlayout>
+		        </control>
+		    </control>
+	
+	        <control type="group" id="1060">
+		        <posx>198</posx>
+                <posy>120</posy>
+                <animation effect="slide" start="720" time="150">WindowOpen</animation>
+                <animation effect="slide" end="720" time="150">WindowClose</animation>
+                       
+		        <control type="list" id="60">
+					<!-- Do NOT remove. This control is needed by the script -->
+					<width>500</width>
+					<height>390</height>
+					
+					<!-- onleft>2</onleft-->
+					<onright>61</onright>
+					<onup>60</onup>
+					<ondown>60</ondown>
+					<pagecontrol>61</pagecontrol>
+                    
+					<!-- visible>!Control.IsVisible(1051)</visible-->
+					
+					<viewtype label="Programs">Programmlist</viewtype>
+					<scrolltime>200</scrolltime>
+					
+					<itemlayout height="27">
+					 <control type="image">
+					     <width>480</width>
+					     <height>25</height>
+					     <posx>0</posx>
+					     <posy>0</posy>
+					     <texture>xot_list-nofocus.png</texture>
+					 </control>
+					 <control type="image">
+					     <posx>5</posx>
+					     <posy>3</posy>
+					     <width>20</width>
+					     <height>20</height>
+					     <info>ListItem.Icon</info>
+					 </control>
+					 <control type="label">
+					     <posx>30</posx>
+					     <posy>2</posy>
+					     <width>480</width>
+					     <height>22</height>
+					     <font>font13</font>
+					     <selectedcolor>FFe2ff43</selectedcolor>
+					     <align>left</align>
+					     <info>ListItem.Label</info>
+					 </control>
+					 <control type="label">
+					     <posx>480</posx>
+					     <posy>2</posy>
+					     <width>480</width>
+					     <height>22</height>
+					     <font>font13</font>
+					     <selectedcolor>FFe2ff43</selectedcolor>
+	                     <textcolor>60ffffff</textcolor>
+					     <align>right</align>
+					     <info>ListItem.Label2</info>
+					 </control>
+					</itemlayout>
+					<focusedlayout height="27">
+					 <control type="image">
+					     <width>480</width>
+					     <height>25</height>
+					     <posx>0</posx>
+					     <posy>0</posy>
+					     <visible>!Control.HasFocus(60)</visible>
+					     <texture>xot_list-focus.png</texture>
+					 </control>
+					 <control type="image">
+					     <width>480</width>
+					     <height>25</height>
+					     <posx>0</posx>
+					     <posy>0</posy>
+					     <visible>Control.HasFocus(60)</visible>
+					     <texture>xot_list-focus.png</texture>
+					 </control>
+					 <control type="image">
+					     <posx>5</posx>
+					     <posy>3</posy>
+					     <width>20</width>
+					     <height>20</height>
+					     <info>ListItem.Icon</info>
+					 </control>
+					 <control type="label">
+					     <posx>30</posx>
+					     <posy>2</posy>
+					     <width>480</width>
+					     <height>22</height>
+					     <font>font13</font>
+					     <selectedcolor>FFe2ff43</selectedcolor>
+					     <align>left</align>
+					     <info>ListItem.Label</info>
+					 </control>
+					 <control type="label">
+					     <posx>480</posx>
+					     <posy>2</posy>
+					     <width>480</width>
+					     <height>22</height>
+					     <font>font13</font>
+					     <selectedcolor>FFe2ff43</selectedcolor>
+					     <!--textcolor>60ffffff</textcolor-->
+					     <align>right</align>
+					     <info>ListItem.Label2</info>
+					 </control>
+					</focusedlayout>
+		        </control>
+		        
+			    <control type="scrollbar" id="61">
+	                <visible>true</visible>
+	                <posx>485</posx>
+	                <posy>0</posy>
+	                <width>10</width>
+	                <height>390</height>
+	                <onleft>60</onleft>
+	                <description>Scroll Bar</description>
+	                <texturesliderbackground>xot_scrollbar_background.png</texturesliderbackground>
+	                <texturesliderbar>xot_scrollbar_bar.png</texturesliderbar>
+	                <texturesliderbarfocus>xot_scrollbar_bar_focus.png</texturesliderbarfocus>
+	                <textureslidernib>-</textureslidernib>
+	                <textureslidernibfocus>-</textureslidernibfocus>
+	                <orientation>vertical</orientation>
+	            </control>
+            </control>            
+        </control>	    
+    </controls>
+</window>

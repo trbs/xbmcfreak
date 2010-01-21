@@ -1,0 +1,11 @@
+<colors>
+	<color name="DefaultColor3">ffCF2A2A</color>
+	<color name="DefaultColor4">ffA22121</color>
+	<color name="SelectedColor2">ffCF2A2A</color>
+	<color name="MenuItemColor2">ffA22121</color>
+	<color name="InfoPaneColor2">ff751818</color>
+	<color name="DialogHeadColor">ffCF2A2A</color>
+	<color name="MediaInfoHeadColor">ffCF2A2A</color>
+	<color name="MediaInfoItemColor">ffA22121</color>
+	<color name="TopBarStatusColor2">ffCF2A2A</color>
+</colors>

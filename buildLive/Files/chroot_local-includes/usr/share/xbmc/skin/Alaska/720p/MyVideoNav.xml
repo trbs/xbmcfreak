@@ -1,0 +1,145 @@
+<!--Alaska-->
+
+<window id="25">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>Animation_CommonFade</include>
+			<visible>!Skin.HasSetting(hidefanart)</visible>
+		</control>
+		<include>Global_Filter</include>
+
+		<include>Object_MovieInfoLines</include>
+
+		<include>Viewtype_Files</include>
+		<include>Viewtype_Poster</include>
+		<include>Viewtype_Fanart</include>
+		<include>Viewtype_Landscape</include>
+		<include>Viewtype_Episode</include>
+		<include>Viewtype_SquarePoster</include>
+		<include>Viewtype_Banner</include>
+		<control type="group">
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>PosterMediaFlags</include>
+		</control>
+
+		<include>Global_ContextFilter</include>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyVideoNav.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="grouplist" id="7000">
+			<include>WindowMenuVars</include>
+			<posy>330</posy>			
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+			<control type="togglebutton" id="14">
+				<include>WindowMenuButton</include>
+				<!-- LOC -->
+				<label>SHOWN</label>
+				<!-- LOC -->
+				<altlabel>HIDDEN</altlabel>				
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(14)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+			<control type="button" id="8">
+				<include>WindowMenuButton</include>
+				<label>137</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(8)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>	
+			<control type="button" id="19">
+				<include>WindowMenuButton</include>
+				<label>587</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(19)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<include>WindowMenuVars</include>
+			<posy>300</posy>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>VIEWTYPE</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>ORDER</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>WATCHED</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(14)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>
+			<control type="button" id="43">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>TITLE</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(8)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>			
+			</control>	
+			<control type="button" id="44">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>TITLE</label>
+				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(19)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />					
+				</animation>				
+			</control>				
+		</control>
+		<include>Global_Time</include>
+		<include>Global_Heading</include>
+		<include>Global_RSS</include>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>	
+</window>

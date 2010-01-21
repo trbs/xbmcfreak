@@ -1,0 +1,399 @@
+<includes>
+	<include name="InfoPaneImage">	
+		<include>BottomPaneImage2</include>
+		<include>BottomPaneOverlay</include>
+		<include>BottomPaneOpenCloseAnim</include>
+		<include>InfoPaneSpecificCloseAnim</include>
+		<visible>!Skin.HasSetting(HideInfoPane)</visible>
+	</include>
+	
+	<include name="InfoPaneHeadLabel">
+		<posy>10</posy>
+		<font>InfoPaneFont</font>
+		<textcolor>InfoPaneColor</textcolor>
+		<scroll>yes</scroll>
+	</include>
+	
+	<include name="InfoPaneHeadLabel2">
+		<posy>43</posy>
+		<font>InfoPaneFont2</font>
+		<textcolor>InfoPaneColor2</textcolor>
+		<scroll>yes</scroll>
+	</include>
+	
+	<include name="InfoPaneIcon">
+		<posx>10</posx>
+		<posy>15</posy>
+		<width>54</width>
+		<height>54</height>
+		<fadetime>IconCrossfadeTime</fadetime>
+		<aspectratio>keep</aspectratio>
+		<animation effect="fade" end="50" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="InfoPaneMediaFlag">
+		<control type="grouplist">
+			<description>Media Flags Area</description>
+			<posx>690</posx>
+			<posy>25</posy>
+			<width>580</width>
+			<height>40</height>
+			<itemgap>0</itemgap>
+			<align>right</align>
+			<visible>!Container.OnNext + !Container.OnPrevious + !Skin.HasSetting(HideMediaFlags)</visible>
+			<orientation>horizontal</orientation>
+			<include>MediaFlagFadeAnim</include>
+			<include>VideoMediaFlags</include>
+			<include>AudioMediaFlags</include>
+			<include>AspectMediaFlags</include>
+			<include>RatingMediaFlags</include>
+		</control>
+	</include>
+	
+	<include name="InfoPaneMediaFlagXbox">
+		<control type="grouplist">
+			<description>Media Flags Area</description>
+			<posx>690</posx>
+			<posy>25</posy>
+			<width>580</width>
+			<height>40</height>
+			<itemgap>0</itemgap>
+			<align>right</align>
+			<visible>!Container.OnNext + !Container.OnPrevious + Skin.HasSetting(ShowMediaFlagsXbox)</visible>
+			<orientation>horizontal</orientation>
+			<include>MediaFlagFadeAnim</include>
+			<include>VideoMediaFlags</include>
+			<include>AudioMediaFlags</include>
+			<include>AspectMediaFlags</include>
+			<include>RatingMediaFlags</include>
+		</control>
+	</include>
+	
+	<include name="InfoPaneStarRating">
+		<control type="image">
+			<description>Star Rating</description>
+			<posx>1080</posx>
+			<posy>20</posy>
+			<width>140</width>
+			<height>40</height>
+			<texture background="true">$INFO[ListItem.Rating]</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<visible>Container.Content(Songs)</visible>
+		</control>
+	</include>
+	
+	<include name="InfoPaneDatabasePath">
+		 <control type="label">
+            <posx>630</posx>
+			<posy>37</posy>
+            <width>640</width>
+            <align>center</align>
+			<aligny>center</aligny>
+            <font>DatabasePathFont</font>
+			<textcolor>InfoPaneColor</textcolor>
+            <label>$INFO[Container.FolderPath]</label>
+			<scroll>yes</scroll>
+        </control>
+	</include>
+	
+	<include name="InfoPaneMediaDetails">
+		<control type="group">
+			<visible>Window.IsActive(VideoLibrary)</visible>
+			
+			<control type="image">
+				<include>InfoPaneIcon</include>
+				<texture>$INFO[ListItem.Icon]</texture>	
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<width>500</width>
+				<include>InfoPaneHeadLabel</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<posy>43</posy>
+				<width>500</width>
+				<include>InfoPaneHeadLabel2</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2,,   ][COLOR=InfoPaneColor3]$INFO[Container.NumItems,[, $LOCALIZE[127]]][/COLOR][/UPPERCASE]</label>
+				<visible>!Container.Content(TVShows)</visible>
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<posy>43</posy>
+				<width>500</width>
+				<include>InfoPaneHeadLabel2</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2,, ]$INFO[ListItem.Property(WatchedEpisodes),($LOCALIZE[16102] ]$INFO[ListItem.Property(UnWatchedEpisodes), - $LOCALIZE[16101] ,)   ][COLOR=InfoPaneColor3]$INFO[Container.NumItems,[, $LOCALIZE[127]]][/COLOR][/UPPERCASE]</label>
+				<visible>Container.Content(TVShows)</visible>
+			</control>
+			
+			<include condition="Skin.HasSetting(ShowDatabasePath)">InfoPaneDatabasePath</include>
+			<include condition="!Skin.HasSetting(ShowDatabasePath)">StudioMediaFlag</include>
+			<include condition="!System.Platform.Xbox + !Skin.HasSetting(ShowDatabasePath)">InfoPaneMediaFlag</include>
+			<include condition="System.Platform.Xbox + !Skin.HasSetting(ShowDatabasePath)">InfoPaneMediaFlagXbox</include>
+		</control>
+		
+		<control type="group">
+			<visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible>
+			
+			<control type="image">
+				<include>InfoPaneIcon</include>
+				<texture>$INFO[ListItem.Icon]</texture>	
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<width>980</width>
+				<include>InfoPaneHeadLabel</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<posy>43</posy>
+				<width>980</width>
+				<include>InfoPaneHeadLabel2</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2,,   ][COLOR=InfoPaneColor3]$INFO[Container.NumItems,[, $LOCALIZE[127]]][/COLOR][/UPPERCASE]</label>
+			</control>
+			
+			<include condition="Skin.HasSetting(ShowDatabasePath)">InfoPaneDatabasePath</include>
+			<include condition="!Skin.HasSetting(ShowDatabasePath)">InfoPaneStarRating</include>
+		</control>
+		
+		<control type="group">
+			<visible>!Window.IsActive(VideoLibrary) + !Window.IsActive(MusicFiles) + !Window.IsActive(MusicLibrary)</visible>
+			
+			<control type="image">
+				<include>InfoPaneIcon</include>
+				<texture>$INFO[ListItem.Icon]</texture>	
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<width>1190</width>
+				<include>InfoPaneHeadLabel</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+			</control>
+			
+			<control type="label">
+				<posx>80</posx>
+				<posy>43</posy>
+				<width>1190</width>
+				<include>InfoPaneHeadLabel2</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2,,   ][COLOR=InfoPaneColor3]$INFO[Container.NumItems,[, $LOCALIZE[127]]][/COLOR][/UPPERCASE]</label>
+			</control>
+			
+			<include condition="Skin.HasSetting(ShowDatabasePath)">InfoPaneDatabasePath</include>
+		</control>
+	</include>
+
+	<include name="InfoPaneFileManagerDetails">	
+		<control type="label">
+			<posx>80</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Container(20).ListItem.Label][/UPPERCASE]</label>
+			<visible>Control.HasFocus(20)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>750</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Container(21).ListItem.Label][/UPPERCASE]</label>
+			<visible>Control.HasFocus(21)</visible>
+		</control>
+				
+		<control type="label">
+			<posx>80</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$INFO[Container(20).ListItem.Label2][/UPPERCASE]</label>
+			<visible>Control.HasFocus(20)</visible>
+		</control>
+
+		<control type="label">
+			<posx>750</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$INFO[Container(21).ListItem.Label2][/UPPERCASE]</label>
+			<visible>Control.HasFocus(21)</visible>
+		</control>				
+	</include>
+	
+	<include name="InfoPaneMusicPlaylistEditorDetails">	
+		<control type="label">
+			<posx>80</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Container(50).ListItem.Label][/UPPERCASE]</label>
+			<visible>Control.HasFocus(50)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>750</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Container(100).ListItem.Label][/UPPERCASE]</label>
+			<visible>Control.HasFocus(100)</visible>
+		</control>
+				
+		<control type="label">
+			<posx>80</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$INFO[Container(50).ListItem.Label2][/UPPERCASE]</label>
+			<visible>Control.HasFocus(50)</visible>
+		</control>
+
+		<control type="label">
+			<posx>750</posx>
+			<width>450</width>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$INFO[Container(100).ListItem.Label2][/UPPERCASE]</label>
+			<visible>Control.HasFocus(100)</visible>
+		</control>						
+	</include>
+	
+	<include name="InfoPaneWeatherDetails">	
+		<control type="image">
+			<include>InfoPaneIcon</include>
+			<texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+		</control>
+		
+		<control type="label">
+			<posx>80</posx>
+			<width>680</width>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Weather.Location][/UPPERCASE]</label>
+		</control>
+				
+		<control type="label">
+			<posx>80</posx>
+			<width>680</width>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$INFO[Window.Property(Updated),$LOCALIZE[31300] ][/UPPERCASE]</label>
+		</control>		
+	</include>
+	
+	<include name="InfoPaneSettingsDetails">		
+		<control type="image">
+			<include>InfoPaneIcon</include>
+			<texture>Settings.png</texture>
+		</control>
+		
+		<control type="label" id="2">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+		</control>
+				
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[166], $LOCALIZE[14090], $LOCALIZE[14081], $LOCALIZE[360][/UPPERCASE]</label>
+			<visible>Window.IsActive(AppearanceSettings)</visible>
+		</control>
+
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[14081], $LOCALIZE[108][/UPPERCASE]</label>
+			<visible>Window.IsActive(PicturesSettings)</visible>
+		</control>	
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[14022], $LOCALIZE[14086], $LOCALIZE[14081], $LOCALIZE[15221], $LOCALIZE[620], $LOCALIZE[13327][/UPPERCASE]</label>
+			<visible>Window.IsActive(MusicSettings)</visible>
+		</control>	
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[14022], $LOCALIZE[14086], $LOCALIZE[14081], $LOCALIZE[287], $LOCALIZE[14087], $LOCALIZE[21412][/UPPERCASE]</label>
+			<visible>Window.IsActive(VideosSettings)</visible>
+		</control>	
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[128][/UPPERCASE]</label>
+			<visible>Window.IsActive(WeatherSettings)</visible>
+		</control>	
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[14036], $LOCALIZE[798][/UPPERCASE]</label>
+			<visible>Window.IsActive(NetworkSettings)</visible>
+		</control>	
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[21373], $LOCALIZE[337], $LOCALIZE[14094], $LOCALIZE[14095], $LOCALIZE[14092], $LOCALIZE[12360][/UPPERCASE]</label>
+			<visible>Window.IsActive(SystemSettings)</visible>
+		</control>	
+	</include>
+	
+	<include name="InfoPaneSkinSettingsDetails">	
+		<control type="image">
+			<include>InfoPaneIcon</include>
+			<texture>Settings.png</texture>
+		</control>
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$LOCALIZE[20077][/UPPERCASE]</label>
+		</control>
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[31210][/UPPERCASE]</label>
+		</control>		
+	</include>
+	
+	<include name="InfoPaneSystemInfoDetails">	
+		<control type="image">
+			<include>InfoPaneIcon</include>
+			<texture>Settings.png</texture>
+		</control>
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$LOCALIZE[13000] $LOCALIZE[31304][/UPPERCASE]</label>
+		</control>
+		
+		<control type="label" id="52">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+		</control>		
+	</include>
+	
+	<include name="InfoPaneProfileDetails">
+		<control type="image">
+			<include>InfoPaneIcon</include>
+			<texture fallback="unknown-user.png">$INFO[Container(2).ListItem.Icon]</texture>
+		</control>
+		
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel</include>
+			<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
+		</control>
+
+		<control type="label">
+			<posx>80</posx>
+			<include>InfoPaneHeadLabel2</include>
+			<label>[UPPERCASE]$LOCALIZE[13204] $INFO[System.ProfileName][/UPPERCASE]</label>
+		</control>		
+	</include>
+</includes>

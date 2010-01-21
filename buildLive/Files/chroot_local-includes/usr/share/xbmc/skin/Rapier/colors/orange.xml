@@ -1,0 +1,11 @@
+<colors>
+	<color name="DefaultColor3">ffFF5D05</color>
+	<color name="DefaultColor4">ffCC5819</color>
+	<color name="SelectedColor2">ffFF5D05</color>
+	<color name="MenuItemColor2">ffCC5819</color>
+	<color name="InfoPaneColor2">ff8D3D11</color>
+	<color name="DialogHeadColor">ffFF5D05</color>
+	<color name="MediaInfoHeadColor">ffFF5D05</color>
+	<color name="MediaInfoItemColor">ffCC5819</color>
+	<color name="TopBarStatusColor2">ffFF5D05</color>
+</colors>

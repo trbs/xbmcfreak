@@ -1,0 +1,335 @@
+<window type="window" id="3001">
+	<defaultcontrol always="true">850</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>	
+		<control type="group">					
+    		<include>BackgroundSystem</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>   
+			<include>FullControlAreaBackground</include>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<texture>special://skin/images/backgrounds/default-background.jpg</texture>		
+			<visible>ControlGroup(903).HasFocus(4049)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<texture>special://skin/images/backgrounds/default-background2.jpg</texture>		
+			<visible>ControlGroup(903).HasFocus(4050)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<texture>special://skin/images/backgrounds/default-background3.jpg</texture>		
+			<visible>ControlGroup(903).HasFocus(4051)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<texture>special://skin/images/backgrounds/default-background4.jpg</texture>		
+			<visible>ControlGroup(903).HasFocus(4052)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(ProgramsCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4002) | ControlGroup(903).HasFocus(4003)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(PicturesCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4008) | ControlGroup(903).HasFocus(4009)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(MusicCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4014) | ControlGroup(903).HasFocus(4015)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(VideosCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4020) | ControlGroup(903).HasFocus(4021)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(MoviesCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4026) | ControlGroup(903).HasFocus(4027)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(TVShowsCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4032) | ControlGroup(903).HasFocus(4033)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(GeneralCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4038) | ControlGroup(903).HasFocus(4039)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(SystemCustomBG)</info>		
+			<visible>ControlGroup(903).HasFocus(4044) | ControlGroup(903).HasFocus(4045)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(ProgramsCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2002)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(PicturesCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2003)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(MusicCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2004)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(VideosCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2005)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(MoviesCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2006)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(TVShowsCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2007)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(GeneralCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2008)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="image">
+			<include>CustomImagePreview</include>
+			<info>Skin.String(SystemCategoryIconPath)</info>		
+			<visible>ControlGroup(901).HasFocus(2009)</visible>
+			<include>CustomImagePreviewFadeInAnim</include>
+		</control>
+		
+		<control type="group" id="850">
+			<description>Category Area</description>
+			<posx>95</posx>
+			<posy>142</posy>
+			<include>ControlsOpenCloseAnim</include>
+			
+			<control type="image">
+				<include>SettingsCatInactive</include>
+				<visible>Control.IsVisible(900)</visible>
+			</control>
+			
+			<control type="button" id="1">
+				<Description>General</Description>
+				<include>SettingsCatBtn</include>
+				<label>$LOCALIZE[128]</label>
+				<onfocus>Skin.SetString(SkinSettingsCategory,1)</onfocus>
+				<onup>6</onup>
+				<ondown>2</ondown>
+				<onleft>600</onleft>
+				<onright>851</onright>
+			</control>
+			
+			<control type="image">
+				<posy>37</posy>
+				<include>SettingsCatInactive</include>
+				<visible>Control.IsVisible(901)</visible>
+			</control>
+
+			<control type="button" id="2">
+				<Description>Home</Description>
+				<posy>37</posy>
+				<include>SettingsCatBtn</include>
+				<label>$LOCALIZE[10000]</label>
+				<onfocus>Skin.SetString(SkinSettingsCategory,2)</onfocus>
+				<onup>1</onup>
+				<ondown>3</ondown>
+				<onleft>600</onleft>
+				<onright>851</onright>
+			</control>
+			
+			<control type="image">
+				<posy>74</posy>
+				<include>SettingsCatInactive</include>
+				<visible>Control.IsVisible(902)</visible>
+			</control>
+			
+			<control type="button" id="3">
+				<Description>Media</Description>
+				<posy>74</posy>
+				<include>SettingsCatBtn</include>
+				<label>$LOCALIZE[31013]</label>
+				<onfocus>Skin.SetString(SkinSettingsCategory,3)</onfocus>
+				<onup>2</onup>
+				<ondown>4</ondown>
+				<onleft>600</onleft>
+				<onright>851</onright>
+			</control>	
+			
+			<control type="image">
+				<posy>111</posy>
+				<include>SettingsCatInactive</include>
+				<visible>Control.IsVisible(903)</visible>
+			</control>
+			
+			<control type="button" id="4">
+				<Description>Backgrounds</Description>
+				<posy>111</posy>
+				<include>SettingsCatBtn</include>
+				<label>$LOCALIZE[33069]</label>
+				<onfocus>Skin.SetString(SkinSettingsCategory,4)</onfocus>
+				<onup>3</onup>
+				<ondown>5</ondown>
+				<onleft>600</onleft>
+				<onright>851</onright>
+			</control>
+			
+			<control type="image">
+				<posy>148</posy>
+				<include>SettingsCatInactive</include>
+				<visible>Control.IsVisible(904)</visible>
+			</control>
+			
+			<control type="button" id="5">
+				<Description>Scripts</Description>
+				<posy>148</posy>
+				<include>SettingsCatBtn</include>
+				<label>$LOCALIZE[247]</label>
+				<onfocus>Skin.SetString(SkinSettingsCategory,5)</onfocus>
+				<onup>4</onup>
+				<ondown>6</ondown>
+				<onleft>600</onleft>
+				<onright>851</onright>
+			</control>
+			
+			<control type="image">
+				<posy>185</posy>
+				<include>SettingsCatInactive</include>
+				<visible>Control.IsVisible(905)</visible>
+			</control>
+			
+			<control type="button" id="6">
+				<Description>Reset Skin Settings</Description>
+				<posy>185</posy>
+				<include>SettingsCatBtn</include>
+				<label>$LOCALIZE[31014]</label>
+				<onfocus>Skin.SetString(SkinSettingsCategory,6)</onfocus>
+				<onup>5</onup>
+				<ondown>1</ondown>
+				<onleft>600</onleft>
+				<onright>905</onright>
+			</control>	
+		</control>
+		
+		<control type="group" id="851">
+			<description>Content Area</description>
+			<include>ControlsOpenCloseAnim</include>			
+			<include>GeneralSkinSettings</include>
+			<include>HomeSkinSettings</include>
+			<include>MediaSkinSettings</include>
+			<include>BackgroundsSkinSettings</include>
+			<include>ScriptsSkinSettings</include>
+
+			<control type="grouplist" id="905">		
+				<description>Reset Settings</description>
+				<posx>385</posx>
+				<posy>140</posy>
+				<width>800</width>
+				<height>444</height>
+				<itemgap>2</itemgap>
+				<orientation>vertical</orientation>	
+				<onup>903</onup>
+				<ondown>903</ondown>
+				<onleft>850</onleft>
+				<visible>Skin.String(SkinSettingsCategory,6)</visible>
+				<control type="button" id="6000">
+					<description>Confirm Reset Settings</description>
+					<include>SettingsContentBtn</include>
+					<label>$LOCALIZE[31999]</label>
+					<onclick>Skin.ResetSettings</onclick>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group">
+			<include>ControlsOpenCloseAnim</include>
+		
+			<control type="image">
+				<description>Up Arrow</description>
+				<posx>1195</posx>
+				<posy>140</posy>
+				<include>PreviousUp</include>
+				<visible>Container(900).HasPrevious | Container(901).HasPrevious | Container(902).HasPrevious | Container(903).HasPrevious</visible>
+			</control>
+			
+			<control type="image">
+				<description>Down Arrow</description>
+				<posx>1195</posx>
+				<posy>568</posy>
+				<include>NextDown</include>
+				<visible>Container(900).HasNext | Container(901).HasNext | Container(902).HasNext | Container(903).HasNext</visible>
+			</control>
+		</control>
+
+		<include>DialogPopUpScreenDim</include>
+		
+		<control type="group">	
+			<description>Top Bar Area</description>		
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbSkinSettings</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>
+		
+		<control type="group">
+			<description>Bottom Bar Area</description>
+			<posy>BottomPaneOffsetY</posy>	
+			<include>InfoPaneImage</include>
+			<include>InfoPaneSkinSettingsDetails</include>
+		</control>
+	</controls> 
+</window>

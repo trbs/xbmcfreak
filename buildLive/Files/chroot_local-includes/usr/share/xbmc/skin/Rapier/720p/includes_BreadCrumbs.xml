@@ -1,0 +1,889 @@
+<includes>
+	<include name="BreadCrumbBackgroundColor2">
+		<colordiffuse>ffBFBFBF</colordiffuse>
+	</include>
+	
+	<include name="BreadCrumbBackgroundColor3">
+		<colordiffuse>ff3F3F3F</colordiffuse>
+	</include>
+	
+	<include name="BreadCrumbBackgroundColor4">
+		<colordiffuse>ff454A4F</colordiffuse>
+	</include>
+	
+	<include name="BreadCrumbDefaultFontColor">
+		<textcolor>BreadCrumbColor2</textcolor>
+		<focusedcolor>BreadCrumbColor2</focusedcolor>
+	</include>
+	
+	<include name="BreadCrumbFontColor2">
+		<textcolor>BreadCrumbColor</textcolor>
+		<focusedcolor>BreadCrumbColor</focusedcolor>
+	</include>
+	
+	<include name="BreadCrumbFontColor3">
+		<textcolor>BreadCrumbColor</textcolor>
+		<focusedcolor>BreadCrumbColor</focusedcolor>
+	</include>
+	
+	<include name="BreadCrumbFontColor4">
+		<textcolor>BreadCrumbColor</textcolor>
+		<focusedcolor>BreadCrumbColor</focusedcolor>
+	</include>
+	
+	<include name="BreadCrumbHome">	
+		<control type="image">
+			<width>70</width>
+			<height>43</height>
+			<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+			<include condition="Skin.String(TopBarColor,2)">BreadCrumbBackgroundColor2</include>
+			<include condition="Skin.String(TopBarColor,3)">BreadCrumbBackgroundColor3</include>
+			<include condition="Skin.String(TopBarColor,4)">BreadCrumbBackgroundColor4</include>
+		</control>	
+		
+		<control type="button">
+			<width>50</width>
+			<height>43</height>
+			<texturefocus>special://skin/images/skin/breadcrumb-home-focus.png</texturefocus>
+			<texturenofocus>special://skin/images/skin/breadcrumb-home-nofocus.png</texturenofocus>
+			<onclick>ActivateWindow(Home)</onclick>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+	
+	<include name="BreadCrumbBtn">
+	    <width>240</width>
+		<height>43</height>
+		<font>BreadCrumbFont</font>
+		<include condition="Skin.String(TopBarColor,) | Skin.String(TopBarColor,1)">BreadCrumbDefaultFontColor</include>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbFontColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbFontColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbFontColor4</include>
+		<textoffsetx>30</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<textwidth>190</textwidth>
+		<align>left</align>
+		<aligny>top</aligny>
+		<texturefocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+		<texturenofocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+		<aspectratio>keep</aspectratio>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbBackgroundColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbBackgroundColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbBackgroundColor4</include>
+	</include>
+
+	<include name="BreadCrumbSmallBtn">
+	    <width>170</width>
+		<height>43</height>
+		<font>BreadCrumbFont</font>
+		<include condition="Skin.String(TopBarColor,) | Skin.String(TopBarColor,1)">BreadCrumbDefaultFontColor</include>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbFontColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbFontColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbFontColor4</include>
+		<textoffsetx>30</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<textwidth>120</textwidth>
+		<align>left</align>
+		<aligny>top</aligny>
+		<texturefocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+		<texturenofocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>	
+		<aspectratio>keep</aspectratio>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbBackgroundColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbBackgroundColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbBackgroundColor4</include>
+	</include>
+	
+	<include name="BreadCrumbBigBtn">
+	    <width>270</width>
+		<height>43</height>
+		<font>BreadCrumbFont</font>
+		<include condition="Skin.String(TopBarColor,) | Skin.String(TopBarColor,1)">BreadCrumbDefaultFontColor</include>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbFontColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbFontColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbFontColor4</include>
+		<textoffsetx>30</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<textwidth>220</textwidth>
+		<align>left</align>
+		<aligny>top</aligny>
+		<texturefocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+		<texturenofocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>	
+		<aspectratio>keep</aspectratio>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbBackgroundColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbBackgroundColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbBackgroundColor4</include>
+	</include>
+	
+	<include name="BreadCrumbBiggerBtn">
+	    <width>310</width>
+		<height>43</height>
+		<font>BreadCrumbFont</font>
+		<include condition="Skin.String(TopBarColor,) | Skin.String(TopBarColor,1)">BreadCrumbDefaultFontColor</include>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbFontColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbFontColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbFontColor4</include>
+		<textoffsetx>30</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<textwidth>260</textwidth>
+		<align>left</align>
+		<aligny>top</aligny>
+		<texturefocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+		<texturenofocus border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>	
+		<aspectratio>keep</aspectratio>
+		<include condition="Skin.String(TopBarColor,2)">BreadCrumbBackgroundColor2</include>
+		<include condition="Skin.String(TopBarColor,3)">BreadCrumbBackgroundColor3</include>
+		<include condition="Skin.String(TopBarColor,4)">BreadCrumbBackgroundColor4</include>
+	</include>
+
+	<include name="BreadCrumbVideoFiles">
+		<control type="group">		
+			<posx>270</posx>			
+			<include>BreadCrumbOpenCloseAnim2</include>
+			<visible>!Window.IsActive(MovieInformation)</visible>
+			
+			<control type="button">
+				<description>Files</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1214][/UPPERCASE]</label>
+				<visible>!Substring(Container.FolderPath,plugin://video/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Video Plugins</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31302][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,plugin://video/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+		</control>
+		
+		<control type="group">			
+			<posx>50</posx>		
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Videos</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<include>BreadCrumbHome</include>
+	</include>
+	
+	<include name="BreadCrumbVideoLibrary">	
+		<control type="group">		
+			<posx>270</posx>		
+			<include>BreadCrumbOpenCloseAnim2</include>
+			<visible>!Window.IsActive(MovieInformation)</visible>
+			
+			<control type="button">
+				<description>Library</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/,Right) | Substring(Container.FolderPath,videodb://2/,Right) | Substring(Container.FolderPath,videodb://3/,Right) | IsEmpty(Container.FolderPath)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+	
+			<control type="button">
+				<description>Genres</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/1/,Left) | Substring(Container.FolderPath,videodb://2/1/,Left) | Substring(Container.FolderPath,videodb://3/1/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Title</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[369][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/2/,Left) | Substring(Container.FolderPath,videodb://2/2/,Left) | Substring(Container.FolderPath,videodb://3/2/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Year</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/3/,Left) | Substring(Container.FolderPath,videodb://2/3/,Left) | Substring(Container.FolderPath,videodb://3/3/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Actors</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/4/,Left) | Substring(Container.FolderPath,videodb://2/4/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Artists</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[133][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://3/4/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Albums</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[132][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://3/5/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Directors</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20348][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/5/,Left) | Substring(Container.FolderPath,videodb://3/6/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Studios</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20388][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/6/,Left) | Substring(Container.FolderPath,videodb://2/5/,Left) | Substring(Container.FolderPath,videodb://3/7/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Video Playlists</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[136][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,special://videoplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Video Plugins</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31302][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,plugin://video/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Recently Added</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31303][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://4/,Left) | Substring(Container.FolderPath,videodb://5/,Left) | Substring(Container.FolderPath,videodb://6/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Videos</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+				<visible>!Substring(Container.FolderPath,videodb://1/,Left) + !Substring(Container.FolderPath,videodb://4/,Left)
+				+ !Substring(Container.FolderPath,videodb://2/,Left) + !Substring(Container.FolderPath,videodb://5/,Left)</visible>
+			</control>
+			
+			<control type="button">
+				<description>Movies</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20342][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://1/,Left) | Substring(Container.FolderPath,videodb://4/,Left)</visible>
+			</control>
+			
+			<control type="button">
+				<description>TV Shows</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://2/,Left) | Substring(Container.FolderPath,videodb://5/,Left)</visible>
+			</control>
+			
+			<control type="button">
+				<description>Music Videos</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://3/,Left) | Substring(Container.FolderPath,videodb://6/,Left)</visible>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>
+	</include>
+	
+	<include name="BreadCrumbVideoPlaylist">		
+		<control type="group">		
+			<posx>270</posx>		
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Playlist</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[559][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Videos</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>	
+	</include>
+	
+	<include name="BreadCrumbMusicFiles">
+		<control type="group">		
+			<posx>270</posx>		
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Files</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1214][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Music</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbMusicLibrary">	
+		<control type="group">			
+			<posx>270</posx>			
+			<include>BreadCrumbOpenCloseAnim2</include>
+			<visible>!Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation)</visible>
+			
+			<control type="button">
+				<description>Library</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<visible>IsEmpty(Container.FolderPath)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+
+			<control type="button">
+				<description>Genres</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://1/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Artists</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[133][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://2/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Albums</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[132][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://3/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Singles</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1050][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://10/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Songs</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[134][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://4/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Years</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[652][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://9/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Top 100</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[271][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://5/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Compilations</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[521][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://8/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Music Playlists</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[136][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,special://musicplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+					
+			<control type="button">
+				<description>Music Videos</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,videodb://3/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Recently Added</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31303][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Music</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbMusicPlaylist">	
+		<control type="group">		
+			<posx>270</posx>		
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Playlist</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[559][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<control type="group">			
+			<posx>50</posx>			
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Music</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbMusicPlaylistEditor">
+		<control type="group">			
+			<posx>270</posx>
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Playlist Editor</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[10503][/UPPERCASE]</label>	
+			</control>	
+		</control>
+		<control type="group">			
+			<posx>50</posx>			
+			<include>BreadCrumbAltOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Music</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbPictures">
+		<control type="group">		
+			<posx>270</posx>			
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Files</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1214][/UPPERCASE]</label>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+		</control>
+		
+		<control type="group">			
+			<posx>50</posx>			
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Pictures</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbPrograms">		
+		<control type="group">		
+			<posx>270</posx>			
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Files</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1214][/UPPERCASE]</label>
+				<visible>!Substring(Container.FolderPath,plugin://programs/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+			
+			<control type="button">
+				<description>Program Plugins</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31302][/UPPERCASE]</label>
+				<visible>Substring(Container.FolderPath,plugin://programs/,Left)</visible>
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>
+		</control>
+		
+		<control type="group">			
+			<posx>50</posx>			
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Programs</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbWeather">		
+		<control type="group">			
+			<posx>50</posx>			
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Weather</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbSkinSettings">	
+		<control type="group">			
+			<posx>270</posx>	
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Skin</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
+			</control>		
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Settings</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbSystemInfo">	
+		<control type="group">			
+			<posx>270</posx>	
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Information</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31304][/UPPERCASE]</label>
+			</control>		
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>System</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbProfilesSettings">	
+		<control type="group">			
+			<posx>270</posx>	
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Profiles</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+			</control>	
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Settings</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbCredits">	
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Credits</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[470][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+	
+	<include name="BreadCrumbSettings">
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbAltOpenCloseAnim</include>
+		
+			<control type="button">
+				<description>Settings</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<include>BreadCrumbHome</include>	
+	</include>
+	
+	<include name="BreadCrumbFileManager">
+		<control type="group">			
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>File Manager</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[7][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>	
+	</include>
+	
+	<include name="BreadCrumbScripts">		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Scripts</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[247][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+
+	<include name="BreadCrumbVideoInfo">
+		<control type="group">		
+			<posx>270</posx>		
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Video/Movie/TV Show/Episode/Music Video Information</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31304][/UPPERCASE]</label>	
+				<include>BreadCrumbVisibleAnim2</include>
+			</control>		
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			
+			<control type="button">
+				<description>Video</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[157][/UPPERCASE]</label>
+				<visible>!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Episodes) + !Container.Content(MusicVideos)</visible>
+			</control>
+			
+			<control type="button">
+				<description>Movie</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20338][/UPPERCASE]</label>
+				<visible>Container.Content(Movies)</visible>
+			</control>
+			
+			<control type="button">
+				<description>TV Show</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20364][/UPPERCASE]</label>
+				<visible>Container.Content(TVShows)</visible>
+			</control>
+			
+			<control type="button">
+				<description>Episode</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20359][/UPPERCASE]</label>
+				<visible>Container.Content(Episodes)</visible>
+			</control>
+			
+			<control type="button">
+				<description>Music Video</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20391][/UPPERCASE]</label>
+				<visible>Container.Content(MusicVideos)</visible>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>	
+	</include>
+	
+	<include name="BreadCrumbAlbumInfo">
+		<control type="group">
+			<visible>Container.Content(Albums)</visible>
+		
+			<control type="group">		
+				<posx>270</posx>
+				<include>BreadCrumbOpenCloseAnim2</include>
+				
+				<control type="button">
+					<description>Album Information</description>
+					<include>BreadCrumbBigBtn</include>
+					<label>[UPPERCASE]$LOCALIZE[31304][/UPPERCASE]</label>
+				</control>
+			</control>
+			
+			<control type="group">		
+				<posx>50</posx>		
+				
+				<control type="button">
+					<description>Album</description>
+					<include>BreadCrumbBtn</include>
+					<label>[UPPERCASE]$LOCALIZE[558][/UPPERCASE]</label>
+				</control>
+			</control>
+		
+			<include>BreadCrumbHome</include>
+		</control>
+	</include>
+	
+	<include name="BreadCrumbArtistInfo">
+		<control type="group">
+			<visible>Container.Content(Artists)</visible>
+			
+			<control type="group">		
+				<posx>270</posx>
+				<include>BreadCrumbOpenCloseAnim2</include>
+
+				<control type="button">
+					<description>Artist Information</description>
+					<include>BreadCrumbBigBtn</include>
+					<label>[UPPERCASE]$LOCALIZE[31304][/UPPERCASE]</label>
+				</control>
+			</control>
+			
+			<control type="group">		
+				<posx>50</posx>		
+				
+				<control type="button">
+					<description>Artist</description>
+					<include>BreadCrumbBtn</include>
+					<label>[UPPERCASE]$LOCALIZE[557][/UPPERCASE]</label>
+				</control>
+			</control>
+				
+			<include>BreadCrumbHome</include>
+		</control>
+	</include>
+	
+	<include name="BreadCrumbSongInfo">
+		<control type="group">		
+			<posx>270</posx>			
+			<include>BreadCrumbOpenCloseAnim2</include>
+			
+			<control type="button">
+				<description>Song Information</description>
+				<include>BreadCrumbBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[31304][/UPPERCASE]</label>
+			</control>
+		</control>
+		
+		<control type="group">		
+			<posx>50</posx>		
+			<include>BreadCrumbOpenCloseAnim</include>
+			
+			<control type="button">
+				<description>Song</description>
+				<include>BreadCrumbBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[179][/UPPERCASE]</label>
+			</control>
+		</control>
+			
+		<include>BreadCrumbHome</include>		
+	</include>
+</includes>

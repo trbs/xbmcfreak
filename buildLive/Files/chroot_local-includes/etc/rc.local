@@ -1,0 +1,19 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+insmod /lib/modules/2.6.31-17-generic/kernel/drivers/hwmon/coretemp.ko
+if [ ! -e "/usr/share/xbmc/runonce" ]; then
+ echo "runonce script already applied"
+else
+ /usr/share/xbmc/runonce
+fi
+exit 0

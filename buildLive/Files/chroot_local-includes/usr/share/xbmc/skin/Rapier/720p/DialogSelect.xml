@@ -1,0 +1,87 @@
+<window type="dialog" id="2000">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="390" y="120">true</origin>
+	</coordinates>
+	
+	<controls>		
+		<include>SelectDialogBox</include>
+
+		<control type="label" id="1">
+			<include>DialogTitle2</include>
+		</control>
+		
+		<control type="panel" id="3">
+			<posx>DialogMarginOffsetX</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>420</width>
+			<height>368</height>
+			<viewtype label="">list</viewtype>
+			<pagecontrol>101</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<onleft>5</onleft>
+			<onright>101</onright>
+			<itemlayout height="37" width="420">		
+				<control type="image">
+					<width>420</width>
+					<height>35</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>					
+				<control type="label">
+					<posx>5</posx>
+					<width>410</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>				
+			</itemlayout>				
+			<focusedlayout height="37" width="420">				
+				<control type="image">
+					<width>420</width>
+					<height>35</height>
+					<texture border="5">button-focus.png</texture>
+				</control>					
+				<control type="label">
+					<posx>5</posx>
+					<width>410</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="button" id="5">
+			<description>Manual</description>
+			<posx>165</posx>
+			<posy>440</posy>
+			<include>DialogMenuBarBtn</include>
+			<label>$LOCALIZE[368]</label>
+			<onup>3</onup>
+			<onleft>101</onleft>
+			<onright>101</onright>
+		</control>
+		
+		<control type="spincontrol" id="101">
+			<description>Next Page</description>
+			<posx>422</posx>
+			<posy>451</posy>
+			<align>right</align>
+			<onup>3</onup>
+			<onleft>5</onleft>
+			<onright>5</onright>
+		</control>
+	</controls>
+</window>

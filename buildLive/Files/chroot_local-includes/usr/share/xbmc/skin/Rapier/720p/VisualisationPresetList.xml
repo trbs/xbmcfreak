@@ -1,0 +1,79 @@
+<window id="122">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>30</posx>
+		<posy>70</posy>
+	</coordinates>
+	
+	<controls>
+		<include>PlayerDialogBox</include>
+
+		<control type="label" id="3">
+			<include>FullscreenDialogTitle</include>
+		</control>
+
+		<control type="list" id="2">
+			<description>Presets List</description>
+			<posx>DialogMarginOffsetX</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>410</width>
+			<height>407</height>
+			<pagecontrol>101</pagecontrol>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>101</onleft>
+			<onright>101</onright>
+			<itemlayout height="37">
+				<control type="image">
+					<width>410</width>
+					<height>35</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<width>400</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="37">
+				<control type="image">
+					<width>410</width>
+					<height>35</height>
+					<texture border="5">button-focus.png</texture>
+					<visible>Control.HasFocus(2)</visible>
+				</control>
+				<control type="image">
+					<width>410</width>
+					<height>35</height>
+					<texture border="5">button-nofocus.png</texture>
+					<visible>!Control.HasFocus(2)</visible>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<width>400</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>	
+			</focusedlayout>
+		</control>
+		
+		<control type="spincontrol" id="101">
+			<description>Next Page</description>
+			<posx>412</posx>
+			<posy>488</posy>
+			<onup>2</onup>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,934 @@
+<includes>
+	<include name="MenuBarImage">	
+		<control type="image">
+			<width>ScreenWidth</width>
+			<height>38</height>
+			<texture border="0,0,0,6">menu-bar-background.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	
+	<include name="MenuBarSeparator">	
+		<width>2</width>
+		<height>34</height>
+		<texture>menu-bar-separator.png</texture>		
+	</include>
+	
+	<include name="MenuBarItemBtn">	
+		<width>193</width>
+		<height>38</height>
+		<font>MenuItemFont</font>
+		<textcolor>MenuItemColor</textcolor>
+		<focusedcolor>MenuItemFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<align>left</align>
+		<textwidth>162</textwidth>
+		<texturefocus border="9,0,9,0">menu-bar-item-focus.png</texturefocus>
+		<texturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>		
+	</include>
+	
+	<include name="MenuBarItemBigBtn">	
+		<width>229</width>
+		<height>38</height>
+		<font>MenuItemFont</font>
+		<textcolor>MenuItemColor</textcolor>
+		<focusedcolor>MenuItemFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<align>left</align>
+		<textwidth>198</textwidth>
+		<texturefocus border="9,0,9,0">menu-bar-item-focus.png</texturefocus>
+		<texturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>		
+	</include>
+	
+	<include name="MenuBarItemBigRadioBtn">	
+		<width>213</width>
+		<height>38</height>
+		<font>MenuItemFont</font>
+		<textcolor>MenuItemColor</textcolor>
+		<focusedcolor>MenuItemFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<align>left</align>
+		<radioposx>182</radioposx>
+		<radioposy>-</radioposy>
+		<textwidth>164</textwidth>
+		<textureradiofocus>radio-button-focus2.png</textureradiofocus>
+		<textureradionofocus>radio-button-nofocus2.png</textureradionofocus>
+		<texturefocus border="9,0,9,0">menu-bar-item-focus.png</texturefocus>
+		<texturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>		
+	</include>
+	
+	<include name="MenuBarItemBigToggleBtn">	
+		<width>213</width>
+		<height>38</height>
+		<font>MenuItemFont</font>
+		<textcolor>MenuItemColor</textcolor>
+		<focusedcolor>MenuItemFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<align>left</align>
+		<textwidth>164</textwidth>
+		<texturefocus border="9,0,9,0">menu-bar-item-focus.png</texturefocus>
+		<texturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</texturenofocus>
+		<alttexturefocus border="9,0,9,0">menu-bar-item-focus.png</alttexturefocus>
+		<alttexturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</alttexturenofocus>
+		<pulseonselect>false</pulseonselect>		
+	</include>
+	
+	<include name="MenuBarItemViewOptionsRadioBtn">	
+		<width>295</width>
+		<height>38</height>
+		<font>MenuItemFont</font>
+		<textcolor>MenuItemColor</textcolor>
+		<focusedcolor>MenuItemFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<align>left</align>
+		<radioposx>248</radioposx>
+		<radioposy>-</radioposy>
+		<textwidth>246</textwidth>
+		<textureradiofocus>radio-button-focus2.png</textureradiofocus>
+		<textureradionofocus>radio-button-nofocus2.png</textureradionofocus>
+		<texturefocus border="9,0,9,0">menu-bar-item-focus.png</texturefocus>
+		<texturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>		
+	</include>
+	
+	<include name="MenuBarItemViewOptionsToggleBtn">	
+		<width>295</width>
+		<height>38</height>
+		<font>MenuItemFont</font>
+		<textcolor>MenuItemColor</textcolor>
+		<focusedcolor>MenuItemFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<align>left</align>
+		<textwidth>246</textwidth>
+		<texturefocus border="9,0,9,0">menu-bar-item-focus.png</texturefocus>
+		<texturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</texturenofocus>
+		<alttexturefocus border="9,0,9,0">menu-bar-item-focus.png</alttexturefocus>
+		<alttexturenofocus border="7,0,7,0">menu-bar-item-nofocus.png</alttexturenofocus>
+		<pulseonselect>false</pulseonselect>		
+	</include>
+	
+	<include name="MenuBarItemTopBorder">
+		<width>193</width>
+		<height>8</height>
+		<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>		
+	</include>
+	
+	<include name="MenuBarItemBigTopBorder">
+		<width>229</width>
+		<height>8</height>
+		<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>		
+	</include>
+	
+	<include name="MenuBarItemViewOptionsTopBorder">
+		<width>295</width>
+		<height>8</height>
+		<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>		
+	</include>
+	
+	<include name="MenuBarItemBottomBorder">
+		<width>193</width>
+		<height>8</height>
+		<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>	
+	</include>
+	
+	<include name="MenuBarItemBigBottomBorder">
+		<width>229</width>
+		<height>8</height>
+		<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>	
+	</include>
+	
+	<include name="MenuBarItemViewOptionsBottomBorder">
+		<width>295</width>
+		<height>8</height>
+		<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>	
+	</include>
+	
+	<include name="MenuBarBtn">	
+		<width>180</width>
+		<height>36</height>	
+		<font>MenuBarButtonFont</font>	
+		<textcolor>ButtonColor</textcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textoffsetx>13</textoffsetx>
+		<textwidth>154</textwidth>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>
+	
+	<include name="MenuBarSpinBtn">	
+		<width>180</width>
+		<height>36</height>	
+		<font>MenuBarButtonFont</font>	
+		<textcolor>ButtonColor</textcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<textwidth>135</textwidth>
+		<align>left</align>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>	
+	</include>
+	
+	<include name="MenuBarSpinBigBtn">	
+		<width>190</width>
+		<height>36</height>	
+		<font>MenuBarButtonFont</font>	
+		<textcolor>ButtonColor</textcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<textoffsetx>13</textoffsetx>
+		<textwidth>145</textwidth>
+		<align>left</align>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>	
+	</include>
+	
+	<include name="MenuBarArrowBtn">
+		<width>180</width>
+		<height>36</height>	
+		<font>MenuBarButtonFont</font>	
+		<textcolor>ButtonColor</textcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<align>left</align>
+		<textoffsetx>13</textoffsetx>
+		<textwidth>135</textwidth>
+		<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+		<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+	</include>
+	
+	<include name="MenuBarArrowBigBtn">
+		<width>216</width>
+		<height>36</height>	
+		<font>MenuBarButtonFont</font>	
+		<textcolor>ButtonColor</textcolor>
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<align>left</align>
+		<textoffsetx>13</textoffsetx>
+		<textwidth>171</textwidth>
+		<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+		<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>
+	</include>
+
+	<include name="MenuBarSettingsBtn">	
+		<width>180</width>
+		<height>36</height>	
+		<font>MenuBarButtonFont</font>	
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<textwidth>160</textwidth>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>
+	
+	<include name="MenuBarRadioBtn">
+		<width>180</width>
+		<height>36</height>
+		<font>MenuBarButtonFont</font>	
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<textcolor>ButtonColor</textcolor>
+		<disabledcolor>DisabledColor</disabledcolor>
+		<textwidth>135</textwidth>
+		<textoffsetx>13</textoffsetx>
+		<radioposx>153</radioposx>
+		<radioposy>-</radioposy>
+		<radiowidth>14</radiowidth>
+		<radioheight>14</radioheight>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>
+	
+	<include name="MenuBarRadioBigBtn">
+		<width>190</width>
+		<height>36</height>
+		<font>MenuBarButtonFont</font>	
+		<focusedcolor>ButtonFocusColor</focusedcolor>
+		<textcolor>ButtonColor</textcolor>
+		<disabledcolor>DisabledColor</disabledcolor>
+		<textwidth>145</textwidth>
+		<textoffsetx>13</textoffsetx>
+		<radioposx>163</radioposx>
+		<radioposy>-</radioposy>
+		<radiowidth>14</radiowidth>
+		<radioheight>14</radioheight>	
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>
+
+	<include name="ViewOptionsHelperBtn">
+		<width>1</width>
+		<height>1</height>
+		<onfocus>SetFocus(184)</onfocus>
+		<onfocus>ActivateWindow(3017)</onfocus>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</include>
+
+	<include name="DefaultMenuBar">
+		<control type="group" id="850">
+			<control type="togglebutton" id="185">
+				<description>Menu Bar Options</description>
+				<posx>10</posx>
+				<posy>3</posy>
+				<width>30</width>
+				<height>30</height>
+				<texturefocus>menu-bar-options-focus.png</texturefocus>
+				<texturenofocus>menu-bar-options-nofocus.png</texturenofocus>
+				<alttexturefocus>menu-bar-options-focus2.png</alttexturefocus>
+				<alttexturenofocus>menu-bar-options-nofocus2.png</alttexturenofocus>
+				<usealttexture>Skin.HasSetting(ShowMediaExtraOptions)</usealttexture>
+				<enable>!Window.IsVisible(Programs)</enable>
+				<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
+				<pulseonselect>false</pulseonselect>
+				<onup>600</onup>
+				<ondown>500</ondown>
+				<onleft>-</onleft>
+				<onright>184</onright>
+			</control>
+			
+			<control type="button" id="184">
+				<description>View Mode Options</description>
+				<posx>40</posx>
+				<posy>3</posy>
+				<width>30</width>
+				<height>30</height>
+				<texturefocus>menu-bar-view-options-focus.png</texturefocus>
+				<texturenofocus>menu-bar-view-options-nofocus.png</texturenofocus>
+				<onclick>SetFocus(188)</onclick>
+				<pulseonselect>false</pulseonselect>
+				<onup>600</onup>
+				<ondown>500</ondown>
+				<onleft>185</onleft>
+				<onright>564</onright>
+			</control>
+			
+			<control type="group" id="564">	
+				<control type="group">      				
+					<include>MenuBarOptions</include>
+					<include>MenuBarOptionsSwitchAnim</include>
+					<visible>!Skin.HasSetting(ShowMediaExtraOptions) | Window.IsVisible(Programs)</visible>
+				</control>
+				
+				<control type="group">   			
+					<include>MenuBarExtraOptions</include>
+					<include>MenuBarOptionsSwitchAnim</include>
+					<visible>Skin.HasSetting(ShowMediaExtraOptions)</visible>
+				</control>		
+			</control>
+		</control>
+	</include>	
+	
+	<include name="MenuBarOptions">
+		<control type="grouplist" id="212">
+			<posx>80</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>184</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<control type="image" id="350">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="400">
+				<description>View As</description>
+				<include>MenuBarArrowBigBtn</include>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
+				<onclick>ActivateWindow(3002)</onclick>
+				<onclick>SetFocus(500)</onclick>
+			</control>	
+			<control type="image" id="351">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="401">
+				<description>Sort By</description>
+				<include>MenuBarArrowBigBtn</include>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(3)][/UPPERCASE]</label>
+				<enable>!Container.SortDirection(None)</enable>
+				<onclick>ActivateWindow(3003)</onclick>
+				<onclick>SetFocus(500)</onclick>
+			</control>
+			<control type="image" id="352">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="402">
+				<description>Video Library</description>
+				<include>MenuBarArrowBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<onclick>ActivateWindow(3004)</onclick>
+				<onclick>SetFocus(500)</onclick>
+				<enable>Substring(Container.FolderPath,videodb,Left)</enable>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="image" id="353">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="button" id="436">
+				<description>Music Library</description>
+				<include>MenuBarArrowBigBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<onclick>ActivateWindow(3004)</onclick>
+				<onclick>SetFocus(500)</onclick>
+				<enable>Substring(Container.FolderPath,musicdb,Left)</enable>
+				<visible>Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="image" id="369">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="button" id="403">			
+				<description>Search</description>
+				<include>MenuBarArrowBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[137][/UPPERCASE]</label>
+				<onclick>ActivateWindow(3005)</onclick>
+				<onclick>SetFocus(500)</onclick>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>
+            <control type="image" id="354">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>	
+			<control type="button" id="404">			
+				<description>Favourites</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
+				<onclick>ActivateWindow(Favourites)</onclick>
+			</control>
+			<control type="image" id="355">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="405">			
+				<description>Video Settings</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+				<onclick>ActivateWindow(VideosSettings)</onclick>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)</visible>
+			</control>
+			<control type="image" id="356">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)</visible>
+			</control>
+			<control type="button" id="406">			
+				<description>Music Settings</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+				<onclick>ActivateWindow(MusicSettings)</onclick>
+				<visible>Window.IsVisible(MusicLibrary) | Window.IsVisible(MusicFiles)</visible>
+			</control>
+			<control type="image" id="357">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(MusicLibrary) | Window.IsVisible(MusicFiles)</visible>
+			</control>
+			<control type="button" id="407">			
+				<description>Picture Settings</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+				<onclick>ActivateWindow(PicturesSettings)</onclick>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+			<control type="image" id="358">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+		</control>
+		
+		<control type="button" id="2">
+			<visible>false</visible>
+		</control>
+		
+		<control type="button" id="3">
+			<visible>false</visible>
+		</control>
+	</include>
+	
+	<include name="MenuBarExtraOptions">
+		<control type="grouplist" id="212">
+			<posx>80</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<onup>600</onup>
+			<ondown>500</ondown>
+			<onleft>184</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<control type="image" id="99">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="radiobutton" id="162">
+				<description>Library</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(MusicLibrary)</onclick>
+				<selected>Window.IsVisible(MusicLibrary)</selected>
+				<visible>Window.IsVisible(MusicFiles)</visible>
+			</control>
+			<control type="radiobutton" id="163">
+				<description>Library</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(MusicFiles)</onclick>
+				<selected>Window.IsVisible(MusicLibrary)</selected>
+				<visible>Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="radiobutton" id="164">
+				<description>Library</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(VideoLibrary)</onclick>
+				<selected>Window.IsVisible(VideoLibrary)</selected>
+				<enable>Library.HasContent(Movies) | Library.HasContent(TVShows)</enable>
+				<visible>Window.IsVisible(VideoFiles)</visible>
+			</control>
+			<control type="radiobutton" id="165">
+				<description>Library</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(VideoFiles)</onclick>
+				<selected>Window.IsVisible(VideoLibrary)</selected>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="image" id="247">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles) | Window.IsVisible(MusicLibrary) | Window.IsVisible(MusicFiles)</visible>
+			</control>
+			<control type="radiobutton" id="17">
+				<description>Flatten</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20411][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="image" id="102">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="radiobutton" id="7">
+				<description>Stacking</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[346][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoFiles)</visible>
+			</control>
+			<control type="image" id="103">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoFiles)</visible>
+			</control>
+			<control type="radiobutton" id="14">
+				<description>Hide Watched</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20367][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="image" id="104">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary)</visible>
+			</control>
+			<control type="radiobutton" id="16">
+				<description>Party Mode</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[589][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="image" id="105">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="radiobutton" id="19">
+				<description>Filter</description>
+				<include>MenuBarRadioBigBtn</include>
+				<textureradiofocus>-</textureradiofocus>
+				<textureradionofocus>-</textureradionofocus>
+				<label>[UPPERCASE]$LOCALIZE[587][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="image" id="101">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoLibrary) | Window.IsVisible(MusicLibrary)</visible>
+			</control>
+			<control type="radiobutton" id="405">			
+				<description>Shuffle</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[191][/UPPERCASE]</label>
+				<onclick>PlayerControl(Random)</onclick>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)</visible>
+			</control>
+			<control type="image" id="109">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)</visible>
+			</control>
+			<control type="button" id="26">			
+				<description>Repeat</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[486][/UPPERCASE]</label>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)</visible>
+			</control>
+			<control type="image" id="110">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)</visible>
+			</control>
+			<control type="button" id="21">			
+				<description>Save</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[190][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)</visible>
+			</control>
+			<control type="image" id="111">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)</visible>
+			</control>
+			<control type="button" id="22">			
+				<description>Clear</description>
+				<include>MenuBarBtn</include>
+				<align>center</align>
+				<label>[UPPERCASE]$LOCALIZE[192][/UPPERCASE]</label>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(Scripts)</visible>
+			</control>
+			<control type="image" id="112">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(Scripts)</visible>
+			</control>
+			<control type="button" id="6">
+				<description>SlideShow</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[108][/UPPERCASE]</label>
+				<enable>!IsEmpty(Container.FolderPath)</enable>
+				<visible>Window.IsVisible(Pictures)</visible>
+				<onleft>185</onleft>
+			</control>
+			<control type="image" id="107">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+			<control type="button" id="7">
+				<description>Recursive SlideShow</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[361][/UPPERCASE]</label>
+				<enable>!IsEmpty(Container.FolderPath)</enable>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+			<control type="image" id="108">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+			<control type="radiobutton" id="9">
+				<description>Randomize</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13319][/UPPERCASE]</label>
+				<enable>!IsEmpty(Container.FolderPath)</enable>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+			<control type="image" id="106">
+				<include>MenuBarSeparator</include>
+				<visible>Window.IsVisible(Pictures)</visible>
+			</control>
+		</control>		
+	</include>
+	
+	<include name="SettingsMenuBar">
+		<control type="grouplist" id="850">
+			<description>Settings Menu Bar</description>
+			<posx>4</posx>
+			<width>1272</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<onup>600</onup>
+			<ondown>9001</ondown>
+			<orientation>horizontal</orientation>
+			<control type="button" id="101">
+				<description>Appearance</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(AppearanceSettings)</onclick>	
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="104">
+				<description>Music</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(MusicSettings)</onclick>	
+			</control>
+			<control type="image" id="119">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="105">
+				<description>Videos</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[10006][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(VideosSettings)</onclick>	
+			</control>
+			<control type="image" id="120">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="103">
+				<description>Pictures</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(PicturesSettings)</onclick>	
+			</control>
+			<control type="image" id="118">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="106">
+				<description>Weather</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[400][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(WeatherSettings)</onclick>	
+			</control>
+			<control type="image" id="121">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="107">
+				<description>Network</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(NetworkSettings)</onclick>	
+			</control>
+			<control type="image" id="122">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="108">
+				<description>System</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
+				<onclick>ReplaceWindow(SystemSettings)</onclick>	
+			</control>
+		</control>	
+	</include>
+	
+	<include name="MyWeatherMenuBar">
+		<control type="grouplist" id="850">
+			<description>Weather Menu Bar</description>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<onup>600</onup>
+			<ondown>9001</ondown>
+			<orientation>horizontal</orientation>
+			<control type="spincontrolex" id="3">
+				<description>Select Location</description>
+				<include>MenuBarSpinBigBtn</include>
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="2">
+				<description>Refresh</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[103][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="117">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="4">
+				<description>Settings</description>
+				<include>MenuBarBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+				<onclick>ActivateWindow(WeatherSettings)</onclick>
+			</control>
+			<control type="image" id="118">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>	
+	</include>
+	
+	<include name="ProfileSettingsMenuBar">
+		<control type="grouplist" id="850">
+			<description>Profiles Menu Bar</description>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<onup>600</onup>
+			<ondown>2</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<control type="radiobutton" id="4">
+				<description>Enable Login Screen</description>
+				<include>MenuBarRadioBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20096][/UPPERCASE]</label>
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="VideoInfoMenuBar">
+		<control type="grouplist" id="987">
+			<description>Video Info Menu Bar</description>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<onup>600</onup>
+			<ondown>961</ondown>
+			<control type="button" id="5">
+				<description>Cast/Plot</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="8">
+				<description>Play</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[208][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="117">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="6">
+				<description>Refresh</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="118">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="10">
+				<description>Get Thumb</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
+			</control>
+			<control type="image" id="119">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="12">
+				<description>Get Fanart</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20413][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="120">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="11">
+				<description>Play Trailer</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="121">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>		
+	</include>
+	
+	<include name="SongInfoMenuBar">
+		<control type="grouplist" id="987">
+			<description>Video Info Menu Bar</description>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<onup>600</onup>
+			<ondown>961</ondown>
+			<control type="button" id="12">
+				<description>Album Info</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[10523][/UPPERCASE]</label>
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="13">
+				<description>Get Thumb</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
+			</control>
+			<control type="image" id="119">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="14">
+				<description>Decrease Rating</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE] -</label>
+				<onclick>DecreaseRating</onclick>	
+			</control>
+			<control type="image" id="120">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="15">
+				<description>Increase Rating</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE] +</label>
+				<onclick>IncreaseRating</onclick>
+			</control>
+			<control type="image" id="121">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="10">
+				<description>OK</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="122">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="11">
+				<description>Cancel</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="123">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>		
+	</include>
+	
+	<include name="AlbumInfoMenuBar">	
+		<control type="grouplist" id="987">
+			<description>Music Info Menu Bar</description>
+			<width>ScreenWidth</width>
+			<height>34</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<onup>600</onup>
+			<ondown>961</ondown>
+			<control type="button" id="5">
+				<description>Tracks</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
+			</control>	
+			<control type="image" id="116">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="6">
+				<description>Refresh</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="118">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="10">
+				<description>Get Thumb</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
+			</control>
+			<control type="image" id="119">
+				<include>MenuBarSeparator</include>
+			</control>
+			<control type="button" id="12">
+				<description>Get Fanart</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[20413][/UPPERCASE]</label>
+			</control>
+			<control type="image" id="120">
+				<include>MenuBarSeparator</include>
+			</control>
+		</control>		
+	</include>
+</includes>

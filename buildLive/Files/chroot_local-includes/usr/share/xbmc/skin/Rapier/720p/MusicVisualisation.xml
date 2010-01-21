@@ -1,0 +1,65 @@
+<window id="2006">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<control type="visualisation" id="2">
+			<description>Visualization</description>
+			<include>ScreenSize</include>
+			<visible>!Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
+		</control>
+
+		<control type="image">
+			<description>Artist Fanart</description>
+			<include>ScreenSize</include>
+			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<aspectratio aligny="top">scale</aspectratio>
+			<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
+		</control>
+		
+		<control type="group">
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<include>FSMediaInfoBackground</include>
+		
+			<control type="grouplist">
+				<posx>10</posx>
+				<posy>10</posy>
+				<itemgap>40</itemgap>
+				<control type="label">
+					<description>Row 1</description>
+					<width>1260</width>
+					<font>HeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$LOCALIZE[445] | $INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>			
+				</control>
+				<control type="label">
+					<description>Row 2</description>
+					<width>1260</width>
+					<font>HeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+					<visible>Visualisation.Locked</visible>
+				</control>
+				<control type="label">
+					<description>Unlocked Row 2</description>
+					<width>1260</width>
+					<font>HeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+					<visible>!Visualisation.Locked</visible>
+				</control>
+				<control type="label">
+					<description>Row 3</description>
+					<width>1260</width>
+					<font>HeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$LOCALIZE[13388] | $INFO[Visualisation.Preset]</label>
+				</control>
+			</control>
+		</control>
+	</controls>	
+</window>

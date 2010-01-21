@@ -1,0 +1,638 @@
+<includes>
+<!--//// COMMON /////////////////////////////////////////////////////////////////////////////////-->
+
+	<include name="BackgroundOpenCloseAnim"> 
+		<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
+		<animation effect="fade" start="100" end="40" time="600">WindowClose</animation> 	
+	</include>
+	
+	<include name="BackgroundDimAnim"> 
+		<animation effect="fade" end="60" condition="!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)">Conditional</animation>
+	</include>
+
+	<include name="DialogBackgroundDimAnim"> 
+		<animation effect="fade" end="60" condition="true">Conditional</animation> 
+	</include>
+	
+	<include name="SettingsBackgroundDimAnim"> 
+		<animation effect="fade" start="100" end="40" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="DialogOpenCloseAnim">
+		<animation type="WindowOpen">
+			<effect type="fade" end="100" time="150"/>
+			<effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/>
+		</animation>	
+		<animation type="WindowClose">
+			<effect type="fade" end="0" time="150" />
+			<effect type="slide" end="0,45" time="200" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="BottomPaneFadeAnim">
+		<animation effect="fade" end="75" condition="true">Conditional</animation> 
+	</include>
+	
+	<include name="BottomPaneOverlayFadeAnim">
+		<animation effect="fade" end="50" condition="true">Conditional</animation> 
+	</include>
+	
+	<include name="BottomPaneTopHighlightFadeAnim">
+		<animation effect="fade" end="15" condition="true">Conditional</animation> 
+	</include>
+	
+	<include name="BottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,74" time="200" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
+	</include>
+	
+	<include name="InfoPaneSpecificCloseAnim">
+		<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
+	</include>
+	
+	<include name="ControlsOpenCloseAnim">
+		<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+	</include>
+	
+	<include name="VizSelectDialogOpenCloseAnim">
+		<animation effect="fade" end="100" time="200">Visible</animation>
+		<animation effect="fade" end="0" time="200">Hidden</animation>
+		<animation effect="fade" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" end="0" time="200">WindowClose</animation> 
+	</include>
+	
+	<include name="NotificationOpenCloseAnim">
+		<animation effect="fade" end="100" time="200">Visible</animation>
+		<animation effect="fade" end="0" time="200">Hidden</animation> 
+		<animation effect="fade" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" end="0" time="200">WindowClose</animation> 
+	</include>
+	
+	<include name="WeatherNotificationOpenCloseAnim">
+		<animation effect="fade" end="100" time="200">Visible</animation>
+		<animation effect="fade" end="0" time="200">Hidden</animation> 
+		<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
+		<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
+	</include>
+	
+	<include name="BreadCrumbOpenCloseAnim">
+		<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+	</include>
+	
+	<include name="BreadCrumbAltOpenCloseAnim">
+		<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings) + !Window.Previous(VideoLibrary) + !Window.Previous(VideoFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(MusicFiles)">WindowOpen</animation>
+	</include>
+	
+	<include name="BreadCrumbVisibleAnim">
+		<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">Visible</animation>
+	</include>
+	
+	<include name="BreadCrumbOpenCloseAnim2">
+		<animation effect="slide" start="-440,0" time="300" delay="150" tween="cubic" easing="out">WindowOpen</animation>
+	</include>
+	
+	<include name="BreadCrumbVisibleAnim2">
+		<animation effect="slide" start="-440,0" time="300" delay="150" tween="cubic" easing="out">Visible</animation>
+	</include>
+	
+	<include name="BreadCrumbAltOpenCloseAnim2">
+		<animation effect="slide" start="-440,0" time="300" delay="150" tween="cubic" easing="out" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation>
+	</include>
+	
+	<include name="BreadCrumbOpenCloseAnim3">
+		<animation effect="slide" start="-660,0" time="450" delay="150" tween="cubic" easing="out">WindowOpen</animation>
+	</include>
+	
+	<include name="SettingsItemOpenCloseAnim">
+	</include>
+	
+	<include name="BackgroundSettingsItemOpenCloseAnim">
+	</include>
+	
+	<include name="ControlAreaBackgroundFadeAnim">
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="CustomImagePreviewFadeInAnim">
+		<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
+	</include>
+	
+	<include name="MediaPlayingPulseAnim">
+		<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="SystemTrayPulseAnim">
+		<animation effect="fade" start="80" time="600" pulse="true" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="TopBarStatusIconFadeAnim">
+		<animation effect="fade" end="50" condition="true">conditional</animation>
+	</include>
+	
+	<include name="SystemTrayPlayDiscIconFadeAnim">
+		<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(344)">conditional</animation>
+	</include>
+	
+	<include name="SystemTrayEjectIconFadeAnim">
+		<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(346)">conditional</animation>
+	</include>
+	
+	<include name="SystemTrayShutdownIconFadeAnim">
+		<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(345)">conditional</animation>
+	</include>
+	
+	<include name="SystemTrayButtonFocusAnim">
+		<animation effect="zoom" end="115" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="115" end="100" center="auto" time="100">Unfocus</animation>
+	</include>
+	
+	<include name="SettingsCatInactiveDimAnim">
+		<animation effect="fade" start="0" end="50">Visible</animation>
+	</include>
+	
+	<include name="CustomBackgroundAnim">
+		<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="FanartBackgroundAnim">
+		<animation effect="zoom" start="110" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" end="-20,-20" delay="4000" time="8000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" end="40,0" delay="10000" time="6000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
+	</include>
+
+<!--//// HOME ///////////////////////////////////////////////////////////////////////////////////-->
+	
+	<include name="HomeMenuOpenCloseAnim">
+		<animation effect="fade" end="100" time="650">WindowOpen</animation> 
+		<animation effect="fade" end="0" time="650">WindowClose</animation>	
+	</include>
+	
+	<include name="HomeMenuFocusAnim">
+		<animation effect="fade" start="30" end="100" time="650">Focus</animation>
+		<animation effect="fade" start="100" end="30" time="650">Unfocus</animation>
+	</include>
+
+	<include name="HomeMenuCategoryFocusAnim"> 
+		<animation effect="zoom" start="80" end="100" center="auto" time="150" delay="100">Visible</animation>
+		<animation effect="zoom" start="100" end="90" center="auto" time="150" delay="100" condition="!Control.HasFocus(850)">Conditional</animation>
+		<animation effect="zoom" start="100" end="120" center="auto" condition="true">Conditional</animation>
+		<animation effect="fade" start="100" end="30" time="650" condition="!Control.HasFocus(850)">Conditional</animation>
+	</include>
+	
+	<include name="HomeMenuCategoryFocusAnim2"> 
+		<animation effect="zoom" start="100" end="120" center="auto" condition="true">Conditional</animation>
+	</include>
+
+	<include name="HomeMenuIconAnim">
+		<animation type="Visible">
+			<effect type="fade" end="100" time="250"/>
+			<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+		</animation> 
+	</include>
+
+	<include name="HomeMenuIconOpenCloseAnim">
+		<animation effect="fade" start="0" end="100" time="250" condition="Control.HasFocus(100)">Conditional</animation>
+		<animation effect="fade" end="0" time="250">WindowClose</animation>
+	</include>
+
+	<include name="HomeSubMenuBarOpenCloseAnim">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,27" time="250"/>
+			<effect type="fade" end="100" time="250"/>
+		</animation>
+		
+		<animation type="WindowClose">
+			<effect type="slide" end="0,27" time="250"/>
+			<effect type="fade" end="0" time="250"/>
+		</animation>
+	</include>
+
+	<include name="HomeSubMenuOpenCloseAnim">
+		<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+		<animation effect="fade" end="0" time="100">WindowClose</animation>
+	</include>
+	
+	<include name="HomeSubMenuFocusAnim">
+		<animation effect="fade" start="30" time="600" pulse="true" condition="Control.HasFocus(110)">Conditional</animation>
+	</include>
+	
+	<include name="HomeSubMenuSlideAnim">
+		<animation effect="slide" end="90,0" condition="StringCompare(Container(110).NumItems,6)">Conditional</animation>
+		<animation effect="slide" end="180,0" condition="StringCompare(Container(110).NumItems,5)">Conditional</animation>
+		<animation effect="slide" end="270,0" condition="StringCompare(Container(110).NumItems,4)">Conditional</animation>
+		<animation effect="slide" end="360,0" condition="StringCompare(Container(110).NumItems,3)">Conditional</animation>
+		<animation effect="slide" end="450,0" condition="StringCompare(Container(110).NumItems,2)">Conditional</animation>
+		<animation effect="slide" end="540,0" condition="StringCompare(Container(110).NumItems,1)">Conditional</animation>
+	</include>
+	
+	<include name="HomeSubMenuFocusSlideAnim">
+		<animation effect="slide" time="200" end="180,0" start="0" condition="Container(110).HasFocus(2)">Conditional</animation>
+		<animation effect="slide" time="200" end="360,0" start="0" condition="Container(110).HasFocus(3)">Conditional</animation>
+		<animation effect="slide" time="200" end="540,0" start="0" condition="Container(110).HasFocus(4)">Conditional</animation>
+		<animation effect="slide" time="200" end="720,0" start="0" condition="Container(110).HasFocus(5)">Conditional</animation>
+		<animation effect="slide" time="200" end="900,0" start="0" condition="Container(110).HasFocus(6)">Conditional</animation>	
+		<animation effect="slide" time="200" end="1080,0" start="0" condition="Container(110).HasFocus(7)">Conditional</animation>
+		<animation effect="fade" start="30" time="600" condition="Container(110).HasFocus(1) | Container(110).HasFocus(2) | Container(110).HasFocus(3)
+		| Container(110).HasFocus(4) | Container(110).HasFocus(5) | Container(110).HasFocus(6) | Container(110).HasFocus(7)" pulse="true">Conditional</animation>
+	</include>
+
+	<include name="NowPlayingOpenCloseAnim">
+		<animation effect="slide" start="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowOpen</animation>
+		<animation effect="slide" end="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowClose</animation>
+	</include>
+	
+	<include name="NowPlayingPlayerControlsOpenCloseAnim">
+		<animation effect="slide" start="-700,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="-700,0" time="300" tween="cubic" easing="out">WindowClose</animation>
+	</include>
+	
+	<include name="HomeMenuPaneOpenCloseAnim">
+		<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,114" time="250" delay="350" tween="circle" easing="out">WindowClose</animation>
+	</include>
+	
+	<include name="HomeMenuPaneSpecificCloseAnim">
+		<animation effect="slide" end="0,114" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput)">Conditional</animation>
+	</include>
+	
+	<include name="MenuBarRSSFeedsOpenCloseAnim">
+		<animation effect="slide" start="0,-43" time="250" delay="250">WindowOpen</animation>
+		<animation effect="slide" end="0,-43" time="250">WindowClose</animation>
+		<animation effect="slide" start="0,-43" time="250">Visible</animation>
+		<animation effect="slide" end="0,-43" time="250">Hidden</animation>
+	</include>
+
+<!--//// MEDIA /////////////////////////////////////////////////////////////////////////////-->	
+
+	<include name="BackgroundProgramsDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimProgramsCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundPicturesDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimPicturesCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundMusicDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundVideosDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimVideosCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundMoviesDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimMoviesCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundTVShowsDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimTVShowsCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundGeneralDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimGeneralCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundSystemDimAnim"> 
+		<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundFanartDimAnim"> 
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="BackgroundMediaNowPlayingDimAnim">
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
+	</include>
+
+	<include name="MenuOpenCloseAnim">
+		<animation type="WindowOpen">
+			<effect type="fade" end="100" time="250"/>
+			<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+		</animation>	
+		<animation type="WindowClose">
+			<effect type="fade" end="0" time="150"/>
+			<effect type="slide" end="0,-35" time="100" tween="circle" easing="out"/>
+		</animation>
+	</include>
+	
+	<include name="MoviesWrapInfoView3DStyleBottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,210" time="300" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,210" time="300" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" end="0,210" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation)">Conditional</animation>
+	</include>
+
+	<include name="MoviesWrapInfoViewFlatStyleBottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,180" time="300" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,180" time="300" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" end="0,180" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation)">Conditional</animation>
+	</include>
+	
+	<include name="MoviesWrapInfoViewSmallFlatStyleBottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,140" time="250" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,140" time="250" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" end="0,140" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation)">Conditional</animation>
+	</include>
+	
+	<include name="MusicWrapInfoView3DStyleBottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,190" time="300" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,190" time="300" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" end="0,190" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation)">Conditional</animation>
+	</include>
+	
+	<include name="MusicWrapInfoViewFlatStyleBottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,159" time="300" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,159" time="300" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" end="0,159" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation)">Conditional</animation>
+	</include>
+	
+	<include name="MusicWrapInfoViewSmallFlatStyleBottomPaneOpenCloseAnim">
+		<animation effect="slide" start="0,140" time="250" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,140" time="250" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" end="0,140" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation)">Conditional</animation>
+	</include>
+
+	<include name="BigIconViewItemFocusAnim">
+		<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="112" end="100" center="auto" time="100">UnFocus</animation>
+	</include>
+	
+	<include name="DVDThumbViewItemFocusAnim">
+		<animation effect="zoom" end="112" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="112" end="100" center="auto" time="100">UnFocus</animation>
+	</include>
+	
+	<include name="AlbumThumbViewItemFocusAnim">
+		<animation effect="zoom" end="114" center="auto" time="100">Focus</animation>
+		<animation effect="zoom" start="114" end="100" center="auto" time="100">UnFocus</animation>
+	</include>
+	
+	<include name="ThumbnailViewItemCoverDimAnim">
+		<animation effect="fade" end="30" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="WideIconViewItemFocusAnim">
+		<animation effect="zoom" end="102" center="auto" time="70">Focus</animation>
+		<animation effect="zoom" start="102" end="100" center="auto" time="70">UnFocus</animation>
+	</include>
+	
+	<include name="WideIconViewItemBackgroundFadeAnim">
+		<animation effect="fade" end="50" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="WideIconViewItemBackgroundFocusFadeAnim">
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="ListViewItemBackgroundFadeAnim">
+		<animation effect="fade" end="70" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="SettingsItemBackgroundFadeAnim">
+		<animation effect="fade" end="50" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="MoviesWrapInfoViewSmallFlatStyleFocusAnim">
+		<animation effect="zoom" end="120" center="36,25" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="MusicWrapInfoViewSmallFlatStyleFocusAnim">
+		<animation effect="zoom" end="120" center="36,25" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="PlayerControlsOpenCloseAnim">
+		<animation effect="slide" start="0,74" time="200" delay="250" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
+	</include>
+
+	<include name="MediaInfoFadeInAnim">
+		<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+	</include>
+	
+	<include name="ViewsScreenFullFadeAnim"> 
+		<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(ScriptsDebugInfo)">Conditional</animation> 
+	</include>
+	
+	<include name="MediaPartialFadeAnim"> 
+		<animation effect="fade" start="100" end="40" time="150" condition="Window.IsActive(ContextMenu)">Conditional</animation> 
+	</include>
+
+	<include name="MenuBarOpenCloseAnim">
+		<animation effect="slide" start="0,-38" time="250" delay="250">WindowOpen</animation>
+		<animation effect="slide" end="0,-38" time="250">WindowClose</animation>
+		<animation effect="slide" start="0,-38" time="250">Visible</animation>
+		<animation effect="slide" end="0,-38" time="250">Hidden</animation>
+		<animation effect="slide" end="0,-38" condition="Skin.HasSetting(HideMenuBar)">Conditional</animation>
+		<animation effect="slide" end="0,38" time="250" condition="Skin.HasSetting(HideMenuBar) + ControlGroup(850).HasFocus">Conditional</animation>
+	</include>
+	
+	<include name="MenuBarOpenCloseAnim2">
+		<animation effect="slide" start="0,-38" time="250" delay="250">WindowOpen</animation>
+		<animation effect="slide" end="0,-38" time="250">WindowClose</animation>
+		<animation effect="slide" start="0,-38" time="250">Visible</animation>
+		<animation effect="slide" end="0,-38" time="250">Hidden</animation>
+	</include>
+
+	<include name="MenuBarSettingsOpenCloseAnim">
+		<animation effect="slide" start="0,-38" time="250" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation>
+	</include>
+		
+	<include name="MenuBarOptionsSwitchAnim">
+		<animation effect="slide" start="0,-38" time="350">Visible</animation>
+		<animation effect="slide" end="0,-38" time="350">Hidden</animation>
+	</include>
+	
+	<include name="FSMediaInfoOpenCloseAnim">
+		<animation effect="slide" start="0,-148" time="250" tween="circle" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="0,-148" time="250" tween="circle" easing="out">WindowClose</animation>
+		<animation effect="slide" start="0,-148" time="250" tween="circle" easing="out">Visible</animation>
+		<animation effect="slide" end="0,-148" time="250" tween="circle" easing="out">Hidden</animation>
+	</include>
+
+	<include name="InfoPaneHiddenSlideAnim">
+		<animation effect="slide" end="0,71" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
+	</include>
+	
+	<include name="InfoPaneHiddenSlideAnim2">
+		<animation effect="slide" end="0,25" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
+	</include>
+	
+	<include name="CodecInfoOpenCloseAnim">
+		<animation effect="slide" start="-1280,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
+		<animation effect="slide" end="-1280,0" time="300" tween="cubic" easing="out">WindowClose</animation>
+		<animation effect="slide" start="-1280,0" time="300" tween="cubic" easing="out">Visible</animation>
+		<animation effect="slide" end="-1280,0" time="300" tween="cubic" easing="out">Hidden</animation>
+	</include>
+
+	<include name="MediaViewOpenCloseAnim">
+		<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+		<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+	</include>
+	
+	<include name="MediaPlayingNotificationOpenCloseAnim">
+		<animation effect="fade" end="100" time="200">Visible</animation>
+		<animation effect="fade" end="0" time="200">Hidden</animation> 
+	</include>
+
+	<include name="MediaPlayingNotificationShiftAnim">
+		<animation effect="slide" end="-275,0" condition="[Window.IsActive(133) | Window.IsActive(112)] + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug)">Conditional</animation>
+	</include>
+	
+	<include name="MediaPlayingNotificationShiftAnim2">
+		<animation effect="slide" end="-405,0" condition="[Window.IsActive(133) | Window.IsActive(112)] + [Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)]">Conditional</animation>
+	</include>
+	
+	<include name="MediaPlayingNotificationShiftAnim3">
+		<animation effect="slide" end="-130,0" condition="!Window.IsActive(133) + !Window.IsActive(112) + [Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)]">Conditional</animation>
+	</include>
+	
+	<include name="MediaFlagFadeAnim">
+		<animation effect="fade" end="80" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="FanartViewFocusAnim">
+		<animation effect="zoom" end="115" center="58,157" time="150">Focus</animation>
+		<animation effect="zoom" start="115" end="100" center="58,157" time="150">UnFocus</animation>
+	</include>
+	
+	<include name="MoviesWrapInfoViewFlatStyleFocusAnim">
+		<animation effect="zoom" end="104" center="auto" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="MusicWrapInfoViewFlatStyleFocusAnim">
+		<animation effect="zoom" end="105" center="auto" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="WallViewItemBackgroundFadeAnim">
+		<animation effect="fade" end="30" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="WallViewItemCoverDimAnim">
+		<animation effect="fade" end="30" condition="true">Conditional</animation>
+	</include>
+	
+	<include name="MoviesWallViewTopLeftCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="18,27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MoviesWallViewTopEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="0,27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MoviesWallViewTopRightCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="-18,27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MoviesWallViewLeftEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="18,0" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MoviesWallViewMidRowFocusAnim">
+		<animation effect="zoom" start="111" end="140" center="auto" time="200">Focus</animation>
+	</include>
+
+	<include name="MoviesWallViewRightEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="-18,0" time="200"/>
+		</animation>
+	</include>
+
+	<include name="MoviesWallViewBottomLeftCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="18,-27" time="200"/>
+		</animation>
+	</include>	
+	
+	<include name="MoviesWallViewBottomEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="0,-27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MoviesWallViewBottomRightCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="-18,-27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MusicWallViewTopLeftCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="27,27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MusicWallViewTopEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="0,27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MusicWallViewTopRightCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="-27,27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MusicWallViewLeftEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="27,0" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MusicWallViewMidRowFocusAnim">
+		<animation effect="zoom" start="111" end="140" center="auto" time="200">Focus</animation>
+	</include>
+
+	<include name="MusicWallViewRightEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="-27,0" time="200"/>
+		</animation>
+	</include>
+
+	<include name="MusicWallViewBottomLeftCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="27,-27" time="200"/>
+		</animation>
+	</include>	
+	
+	<include name="MusicWallViewBottomEdgeFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="0,-27" time="200"/>
+		</animation>
+	</include>
+	
+	<include name="MusicWallViewBottomRightCornerFocusAnim">
+		<animation type="Focus">
+			<effect type="zoom" start="111" end="140" center="auto" time="200"/>
+			<effect type="slide" start="0,0" end="-27,-27" time="200"/>
+		</animation>
+	</include>
+</includes>

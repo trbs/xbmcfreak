@@ -1,0 +1,42 @@
+<window id="107">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="390" y="180">true</origin>
+	</coordinates>
+	
+	<controls>
+		<include>KaiToastDialogBox</include>
+		
+		<control type="image">
+			<posx>DialogMarginOffsetX</posx>
+			<posy>21</posy>
+			<width>128</width>
+			<height>128</height>
+			<texture>notification.png</texture>
+		</control>
+		
+		<control type="label" id="401">
+			<description>Line 1</description>
+			<posx>178</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>282</width>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<scroll>yes</scroll>
+		</control>
+		
+		<control type="label" id="402">
+			<description>Line 2</description>
+			<posx>178</posx>
+			<posy>89</posy>
+			<width>282</width>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<scroll>yes</scroll>
+		</control>
+	</controls>
+</window>

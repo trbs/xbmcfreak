@@ -1,0 +1,85 @@
+<!--Alaska-->
+
+<window id="123">
+	<defaultcontrol always="true">5</defaultcontrol>
+
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+
+	<coordinates>
+		<system>1</system>
+		<posx>236</posx>
+		<posy>10</posy>
+	</coordinates>
+
+	<controls>
+		<control type="label">
+			<include>DialogID</include>
+			<label>VideoOSDSettings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="group">
+			<visible>!Window.IsVisible(145)</visible>
+
+			<control type="image">
+				<description>Panel</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>544</height>
+				<texture>favourites/favourites_panel.png</texture>
+				<colordiffuse>FavListPanel</colordiffuse>
+			</control>
+
+			<control type="label" id="2">
+				<description>Settings</description>
+				<posx>750</posx>
+				<posy>435</posy>
+				<width>700</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>Objects_DialogLabelDark</include>
+			</control>
+
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>50</posx>
+				<posy>40</posy>
+				<width>700</width>
+				<height>350</height>
+				<itemgap>2</itemgap>
+				<orientation>vertical</orientation>
+				<pagecontrol>60</pagecontrol>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+			<control type="button" id="7">
+				<description>Button</description>
+				<height>30</height>
+				<width>555</width>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Radio Button</description>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Spin Controlex</description>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+			<control type="sliderex" id="10">
+				<description>Slider</description>
+				<texturefocus border="1">ButtonFo.png</texturefocus>
+				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+			</control>
+		</control>
+
+		<!-- <include>Object_DebugGrid</include> -->
+	</controls>
+
+</window>

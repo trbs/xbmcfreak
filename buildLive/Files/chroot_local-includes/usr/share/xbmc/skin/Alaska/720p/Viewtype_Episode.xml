@@ -1,0 +1,208 @@
+<!--Alaska-->
+
+<includes>
+
+	<include name="Viewtype_Episode">
+
+		<!-- Browser -->
+
+		<control type="fixedlist" id="51">
+			<viewtype label="Episode">list</viewtype>
+			<posx>267</posx>
+			<posy>110</posy>
+			<width>980</width>
+			<height>467</height>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<orientation>vertical</orientation>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<onleft>7000</onleft>
+			<onright>7000</onright>
+			<focusposition>2</focusposition>
+			<movement>3</movement>
+			<visible>Container.Content(episodes)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_EpisodeFloat</include>
+			<include>Animation_HiddenByInfo</include>
+			<itemlayout width="980" height="60">
+				<control type="label">
+					<posx>125</posx>
+					<posy>0</posy>
+					<width>830</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>0</posy>
+					<width>80</width>
+					<height>60</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Episode]</label>
+					<font>Font_EpisodeNumber</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>8</posy>
+					<width>830</width>
+					<height>60</height>
+					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<font>Font_EpisodeTitleNF</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>31</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>AIRED: $INFO[ListItem.Date][COLOR EpisodeWatched] - $LOCALIZE[16102][/COLOR]</label>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>31</posy>
+					<width>633</width>
+					<height>60</height>
+					<align>left</align>
+					<label>AIRED: $INFO[ListItem.Date]</label>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>EpisodeNumber</textcolor>
+					<visible>!IsEmpty(ListItem.Title) + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout width="980" height="164">
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>253</width>
+					<height>139</height>
+					<texture diffuse="episodematte.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>278</width>
+					<height>164</height>
+					<texture>episodeframe.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="label">
+					<posx>292</posx>
+					<posy>-13</posy>
+					<width>686</width>
+					<height>164</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>292</posx>
+					<posy>12</posy>
+					<width>686</width>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Title]</label>
+					<font>Font_EpisodeLabelF</font>
+					<textcolor>EpisodeLabelF</textcolor>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="image">
+					<posx>14</posx>
+					<posy>14</posy>
+					<width>24</width>
+					<height>24</height>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<texture>OverlayWatchedBackground.png</texture>
+					<colordiffuse>WatchedIconBackFO</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>14</posx>
+					<posy>14</posy>
+					<width>24</width>
+					<height>24</height>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<!-- Browser label and flags -->
+
+		<control type="textbox">
+			<posx>559</posx>
+			<posy>157</posy>
+			<width>633</width>
+			<height>102</height>
+			<align>left</align>
+			<info>Container(51).ListItem.Plot</info>
+			<animation type="Focus" reversible="false">
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<autoscroll time="3200" delay="6000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
+			<font>Font_EpisodePlot</font>
+			<textcolor>EpisodePlot</textcolor>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_EpisodePlot</include>
+			<include>Animation_EpisodeFloat</include>
+			<include>Animation_HiddenByInfo</include>
+		</control>
+
+		<control type="group">
+			<control type="image">
+				<posx>37</posx>
+				<posy>135</posy>
+				<width>506</width>
+				<height>278</height>
+				<fadetime>200</fadetime>
+				<texture diffuse="episodematte.png">$INFO[ListItem.Icon]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<posx>12</posx>
+				<posy>110</posy>
+				<width>556</width>
+				<height>328</height>
+				<fadetime>200</fadetime>
+				<texture>episodeframe.png</texture>
+			</control>
+			<visible>Control.IsVisible(51) + Window.IsActive(2003)</visible>
+		</control>
+
+	</include>
+
+</includes>

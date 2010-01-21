@@ -1,0 +1,568 @@
+<includes>
+	<include name="HomeSubMenuBarImage">
+		<control type="image">
+			<posy>-3</posy>
+			<width>ScreenWidth</width>
+			<height>38</height>
+			<texture flipy="true" border="0,0,0,6">menu-bar-background.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>		
+	</include>
+	
+	<include name="HomeSubMenuMarker">
+		<control type="image">
+			<description>Sub Menu Marker</description>
+			<posy>-1</posy>
+			<width>180</width>
+			<height>36</height>
+			<texture border="0,0,0,2">button-submenu-focus.png</texture>
+			<include>HomeSubMenuFocusSlideAnim</include>
+		</control>
+	</include>
+	
+	<include name="HomeMenuPaneImage">
+		<control type="image">
+			<width>ScreenWidth</width>
+			<height>114</height>
+			<texture border="0,7,0,0">bottom-bar-background.png</texture>
+			<include condition="!Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuBasicVisibleCondition</include>
+			<include condition="Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuAdvancedVisibleCondition</include>
+		</control>		
+	</include>
+
+	<include name="HomeMenuPaneOverlay">
+		<control type="image">
+			<posy>6</posy>
+			<width>ScreenWidth</width>
+			<height>108</height>
+			<texture>bottom-bar-overlay.png</texture>
+			<include condition="!Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuBasicVisibleCondition</include>
+			<include condition="Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuAdvancedVisibleCondition</include>
+		</control>	
+	</include>
+
+	<include name="HomeSubMenuCoverTopImage">
+		<control type="image">
+			<width>ScreenWidth</width>
+			<height>28</height>
+			<texture border="0,7,0,0">home-submenu-cover-top.png</texture>	
+		</control>		
+	</include>
+
+	<include name="HomeSubMenuCoverTopOverlay">
+		<control type="image">
+			 <description>Bottom Pane Overlay</description>
+			 <posy>6</posy>
+			 <width>ScreenWidth</width>
+			 <height>22</height>
+			 <texture>home-submenu-cover-top-overlay.png</texture>
+		</control>	
+	</include>
+	
+	<include name="HomeSubMenuCoverBottomImage">
+		<control type="image">
+			<posy>28</posy>
+			<width>ScreenWidth</width>
+			<height>86</height>
+			<texture>home-submenu-cover-bottom.png</texture>
+			<include condition="!Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuBasicVisibleCondition2</include>
+			<include condition="Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuAdvancedVisibleCondition2</include>
+		</control>	
+	</include>
+
+	<include name="HomeSubMenuCoverBottomOverlay">
+		<control type="image">
+			<posy>28</posy>
+			<width>ScreenWidth</width>
+			<height>86</height>
+			<texture>home-submenu-cover-bottom-overlay.png</texture>
+			<include condition="!Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuBasicVisibleCondition2</include>
+			<include condition="Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuAdvancedVisibleCondition2</include>
+		</control>		
+	</include>
+	
+	<include name="HomeMenuCategoryFocusPos">
+		<posx>20</posx>
+		<posy>0</posy>
+	</include>
+	
+	<include name="HomeMenuCategoryFocusPos2">
+		<posx>490</posx>
+		<posy>17</posy>
+	</include>
+	
+	<include name="HomeMenuCategoryFocusDim">
+		<width>300</width>
+		<height>96</height>		
+	</include>
+	
+	<include name="HomeMenuIconDim">	
+		<width>256</width>
+		<height>256</height>			
+	</include>
+	
+	<include name="HomeMenuBasicVisibleCondition">
+		<visible>!Window.IsVisible(3006) + !Window.IsVisible(3007)</visible>
+	</include>
+	
+	<include name="HomeMenuBasicVisibleCondition2">
+		<visible>Window.IsVisible(3006) | Window.IsVisible(3007)</visible>
+	</include>
+	
+	<include name="HomeMenuAdvancedVisibleCondition">
+		<visible>!Window.IsVisible(3006) + !Window.IsVisible(3007) + !Window.IsVisible(3011) + !Window.IsVisible(3012) 
+		+ !Window.IsVisible(3013) + !Window.IsVisible(3014) + !Window.IsVisible(3015) + !Window.IsVisible(3016)</visible>
+	</include>
+	
+	<include name="HomeMenuAdvancedVisibleCondition2">
+		<visible>Window.IsVisible(3006) | Window.IsVisible(3007) | Window.IsVisible(3011) | Window.IsVisible(3012) 
+		| Window.IsVisible(3013) | Window.IsVisible(3014) | Window.IsVisible(3015) | Window.IsVisible(3016)</visible>
+	</include>
+
+	<include name="HomeMenuBasic">
+		<control type="wraplist" id="850">
+			<description>Home Menu</description>
+			<posx>130</posx>
+			<posy>15</posy>
+			<width>1020</width>
+			<height>96</height>
+			<focusposition>1</focusposition>
+			<scrolltime>250</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<itemgap>0</itemgap>
+			<preloaditems>2</preloaditems>
+			<onup>600</onup>
+			<include>HomeMenuOpenCloseAnim</include>	
+			<include>HomeMenuFocusAnim</include>
+			<itemlayout width="340">
+				<control type="image">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>64</height>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+					<animation effect="fade" start="100" end="30" time="650" condition="true">Conditional</animation>
+					<animation effect="fade" start="100" end="30" time="650" condition="Window.IsActive(3006) | Window.IsActive(3007)">Conditional</animation>
+				</control>
+			</itemlayout>	
+			<focusedlayout width="340">	
+			</focusedlayout>	
+			<content>
+				<item id="1">
+					<description>Music Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-music-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(MusicCustomBG)]</thumb>
+					<onclick>ActivateWindow(Music)</onclick>
+					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
+				</item>
+				<item id="2">
+					<description>Videos Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-videos-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(VideosCustomBG)]</thumb>
+					<onclick>ActivateWindow(VideoFiles)</onclick>	
+					<visible>!Skin.HasSetting(HideVideosCategory)</visible>
+				</item>
+				<item id="3">
+					<description>Movies Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-movies-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(MoviesCustomBG)]</thumb>
+					<onclick>ActivateWindow(VideoLibrary,MovieTitles,Return)</onclick>  
+					<visible>!Skin.HasSetting(HideMoviesCategory) + Library.HasContent(Movies)</visible>
+				</item>
+				<item id="4">
+					<description>TV Shows Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-tvshows-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(TVShowsCustomBG)]</thumb>
+					<onclick>ActivateWindow(VideoLibrary,TVShowTitles,Return)</onclick>
+					<visible>!Skin.HasSetting(HideTVShowsCategory) + Library.HasContent(TVShows)</visible>
+				</item>
+				<item id="5">
+					<description>Programs Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-programs-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(ProgramsCustomBG)]</thumb>
+					<onclick>ActivateWindow(Programs)</onclick>	
+					<visible>!Skin.HasSetting(HideProgramsCategory)</visible>
+				</item>
+				<item id="6">
+					<description>Pictures Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-pictures-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(PicturesCustomBG)]</thumb>
+					<onclick>ActivateWindow(Pictures)</onclick>
+					<visible>!Skin.HasSetting(HidePicturesCategory)</visible>
+				</item>
+				<item id="7">
+					<description>General Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-general-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(GeneralCustomBG)]</thumb>
+					<onclick>ActivateWindow(3006)</onclick>		
+					<visible>!Skin.HasSetting(HideGeneralCategory)</visible>
+				</item>	
+				<item id="8">
+					<description>System Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-system-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(SystemCustomBG)]</thumb>
+					<onclick>ActivateWindow(3007)</onclick>         			
+				</item>					
+			</content>					
+		</control>
+	</include>
+	
+	<include name="HomeMenuAdvanced">
+		<control type="wraplist" id="850">
+			<description>Home Menu</description>
+			<posx>130</posx>
+			<posy>15</posy>
+			<width>1020</width>
+			<height>96</height>
+			<focusposition>1</focusposition>
+			<scrolltime>250</scrolltime>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<itemgap>0</itemgap>
+			<preloaditems>2</preloaditems>
+			<onup>600</onup>
+			<include>HomeMenuOpenCloseAnim</include>	
+			<include>HomeMenuFocusAnim</include>
+			<itemlayout width="340">
+				<control type="image">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>64</height>
+					<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" start="100" end="30" time="650" condition="true">Conditional</animation>
+					<animation effect="fade" start="100" end="30" time="650" condition="Window.IsActive(3006) | Window.IsActive(3007) | Window.IsActive(3011)
+					| Window.IsActive(3012) | Window.IsActive(3013) | Window.IsActive(3014) | Window.IsActive(3015) | Window.IsActive(3016)">Conditional</animation>
+				</control>
+			</itemlayout>	
+			<focusedlayout width="340">
+			</focusedlayout>	
+			<content>
+				<item id="1">
+					<description>Music Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-music-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(MusicCustomBG)]</thumb>
+					<onclick>ActivateWindow(3013)</onclick>
+					<visible>!Skin.HasSetting(HideMusicCategory)</visible>
+				</item>
+				<item id="2">
+					<description>Videos Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-videos-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(VideosCustomBG)]</thumb>
+					<onclick>ActivateWindow(3014)</onclick>	
+					<visible>!Skin.HasSetting(HideVideosCategory)</visible>
+				</item>
+				<item id="3">
+					<description>Movies Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-movies-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(MoviesCustomBG)]</thumb>
+					<onclick>ActivateWindow(3015)</onclick>  
+					<visible>!Skin.HasSetting(HideMoviesCategory) + Library.HasContent(Movies)</visible>
+				</item>
+				<item id="4">
+					<description>TV Shows Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-tvshows-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(TVShowsCustomBG)]</thumb>
+					<onclick>ActivateWindow(3016)</onclick>
+					<visible>!Skin.HasSetting(HideTVShowsCategory) + Library.HasContent(TVShows)</visible>
+				</item>
+				<item id="5">
+					<description>Programs Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-programs-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(ProgramsCustomBG)]</thumb>
+					<onclick>ActivateWindow(3012)</onclick>	
+					<visible>!Skin.HasSetting(HideProgramsCategory)</visible>
+				</item>
+				<item id="6">
+					<description>Pictures Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-pictures-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(PicturesCustomBG)]</thumb>
+					<onclick>ActivateWindow(3011)</onclick>
+					<visible>!Skin.HasSetting(HidePicturesCategory)</visible>
+				</item>
+				<item id="7">
+					<description>General Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-general-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(GeneralCustomBG)]</thumb>
+					<onclick>ActivateWindow(3006)</onclick>		
+					<visible>!Skin.HasSetting(HideGeneralCategory)</visible>
+				</item>	
+				<item id="8">
+					<description>System Category</description>
+					<icon>special://skin/images/homecategories/nofocus/$INFO[System.Language]-system-text-nofocus.png</icon>
+					<thumb>$INFO[Skin.String(SystemCustomBG)]</thumb>
+					<onclick>ActivateWindow(3007)</onclick>         			
+				</item>					
+			</content>					
+		</control>
+	</include>
+	
+	<include name="HomeMenuCategoryFocusImages">
+		<control type="group">
+			<posx>470</posx>
+			<posy>17</posy>
+			<include condition="!Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuBasicVisibleCondition</include>
+			<include condition="Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuAdvancedVisibleCondition</include>
+
+			<control type="image">
+				<Description>Music Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-music-text-focus.png</texture>
+				<visible>Container(850).HasFocus(1)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>	
+	
+			<control type="image">
+				<Description>Videos Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-videos-text-focus.png</texture>
+				<visible>Container(850).HasFocus(2)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>	
+	
+			<control type="image">
+				<Description>Movies Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-movies-text-focus.png</texture>
+				<visible>Container(850).HasFocus(3)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>
+			
+			<control type="image">
+				<Description>TV Shows Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-tvshows-text-focus.png</texture>
+				<visible>Container(850).HasFocus(4)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>
+			
+			<control type="image">
+				<Description>Programs Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-programs-text-focus.png</texture>
+				<visible>Container(850).HasFocus(5)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>
+			
+			<control type="image">
+				<Description>Pictures Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-pictures-text-focus.png</texture>
+				<visible>Container(850).HasFocus(6)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>	
+		
+			<control type="image">
+				<Description>General Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-general-text-focus.png</texture>
+				<visible>Container(850).HasFocus(7)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>	
+			
+			<control type="image">
+				<Description>System Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-system-text-focus.png</texture>
+				<visible>Container(850).HasFocus(8)</visible>
+				<include>HomeMenuCategoryFocusAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="HomeCategoryIcons">
+		<control type="group">		
+		 	<posx>512</posx>
+			<posy>315</posy>		
+			<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(111) + !Window.IsActive(NumericInput)</visible>
+			<include>HomeMenuIconOpenCloseAnim</include>
+
+			<control type="image">
+				<description>Music Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-music-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(1)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Videos Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-videos-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(2)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Movies Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-movies-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(3)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>TV Shows Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-tvshows-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(4)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Programs Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-programs-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(5)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Pictures Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-pictures-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(6)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>General Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-general-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(7)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>System Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture>home-settings-icon.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(8)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>					
+		</control>
+	</include>
+	
+	<include name="HomeCustomCategoryIcons">
+		<control type="group">		
+		 	<posx>512</posx>
+			<posy>315</posy>		
+			<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(111) + !Window.IsActive(NumericInput)</visible>
+			<include>HomeMenuIconOpenCloseAnim</include>
+
+			<control type="image">
+				<description>Music Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-music-icon.png">$INFO[Skin.String(MusicCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(1)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Videos Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-videos-icon.png">$INFO[Skin.String(VideosCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(2)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Movies Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-movies-icon.png">$INFO[Skin.String(MoviesCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(3)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>TV Shows Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-tvshows-icon.png">$INFO[Skin.String(TVShowsCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(4)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Programs Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-programs-icon.png">$INFO[Skin.String(ProgramsCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(5)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Pictures Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-pictures-icon.png">$INFO[Skin.String(PicturesCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(6)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>General Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-general-icon.png">$INFO[Skin.String(GeneralCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(7)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>System Icon</description>
+				<include>HomeMenuIconDim</include>
+				<texture fallback="home-settings-icon.png">$INFO[Skin.String(SystemCategoryIconPath)]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Container(850).HasFocus(8)</visible>
+				<include>HomeMenuIconAnim</include>
+			</control>					
+		</control>
+	</include>
+	
+	<include name="HomeNavButtons">
+		<control type="button" id="101">
+			<description>Navigation Move Left</description>
+			<posx>10</posx>
+			<posy>40</posy>
+			<width>28</width>
+			<height>28</height>
+			<texturefocus>arrow-scroll-left-focus2.png</texturefocus>
+			<texturenofocus>arrow-scroll-left-nofocus2.png</texturenofocus>
+			<onclick>Control.Message(850,movedown)</onclick>
+		</control>
+		
+		<control type="button" id="102">
+			<description>Navigation Move Right</description>
+			<posx>1242</posx>
+			<posy>40</posy>
+			<width>28</width>
+			<height>28</height>
+			<texturefocus flipx="true">arrow-scroll-left-focus2.png</texturefocus>
+			<texturenofocus flipx="true">arrow-scroll-left-nofocus2.png</texturenofocus>
+			<onclick>Control.Message(850,moveup)</onclick>
+		</control>
+	</include>
+</includes>

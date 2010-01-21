@@ -1,0 +1,12 @@
+#!/bin/bash
+xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
+sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
+sed -i "s/USER=xbmc/USER=$xbmcUser/g" /etc/default/sabnzbdplus
+mkdir /home/$xbmcUser/Downloads
+mkdir /home/$xbmcUser/Music
+mkdir /home/$xbmcUser/Pictures
+mkdir "/home/$xbmcUser/TV Shows"
+mkdir /home/$xbmcUser/Videos
+chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R
+chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/XOT-Uzg.v3/ -R
+rm -f /usr/share/xbmc/runonce

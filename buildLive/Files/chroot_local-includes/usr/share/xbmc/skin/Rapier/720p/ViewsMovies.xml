@@ -1,0 +1,1442 @@
+<includes>
+	<include name="MoviesWideIconView">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">55</defaultcontrol>
+			<visible>Control.IsVisible(55)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>WideIconViewScrollbar</include>
+				
+			<control type="panel" id="55">
+				<viewtype label="31108">Wide Icon</viewtype>
+				<posx>40</posx>
+				<posy>92</posy>
+				<width>1200</width>
+				<height>548</height>
+				<pagecontrol>150</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<onup>55</onup>
+				<ondown>55</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				<itemlayout height="137" width="600">
+					<control type="image">
+						<description>Background</description>
+						<width>590</width>
+						<height>133</height>	
+						<texture border="5">button-nofocus.png</texture>
+						<include>WideIconViewItemBackgroundFadeAnim</include>
+					</control>	
+					<control type="image">
+						<description>Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>80</width>
+						<height>114</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="7">item-shadow-border.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>80</width>
+						<height>114</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>97</posx>
+						<posy>14</posy>
+						<width>480</width>
+						<font>MediaInfoHeadFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					</control>
+					<control type="label">
+						<description>Genre</description>
+						<posx>97</posx>
+						<posy>33</posy>
+						<width>480</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>	
+					</control>
+					<control type="label">
+						<description>Director</description>
+						<posx>97</posx>
+						<posy>65</posy>
+						<width>480</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Director,$LOCALIZE[20339]: ,][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Duration Time</description>
+						<posx>97</posx>
+						<posy>107</posy>
+						<width>360</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Rating</description>
+						<posx>577</posx>
+						<posy>107</posy>
+						<width>110</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>[UPPERCASE]$INFO[ListItem.Rating,$LOCALIZE[563]: ,][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>45</posx>
+						<posy>87</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+						<visible>!Skin.HasSetting(HideMoviesWideIconOverlay)</visible>
+					</control>	
+				</itemlayout>															
+				<focusedlayout height="137" width="600">	
+					<control type="image">
+						<description>Background</description>
+						<width>590</width>
+						<height>133</height>	
+						<texture border="5">button-focus2.png</texture>
+						<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>80</width>
+						<height>114</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="7">item-shadow-border.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>80</width>
+						<height>114</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>97</posx>
+						<posy>14</posy>
+						<width>480</width>
+						<font>MediaInfoHeadFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Genre</description>
+						<posx>97</posx>
+						<posy>33</posy>
+						<width>480</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Director</description>
+						<posx>97</posx>
+						<posy>65</posy>
+						<width>480</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Director,$LOCALIZE[20339]: ,][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Duration Time</description>
+						<posx>97</posx>
+						<posy>107</posy>
+						<width>360</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Duration]</label>
+					</control>
+					<control type="label">
+						<description>Rating</description>
+						<posx>577</posx>
+						<posy>107</posy>
+						<width>110</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>[UPPERCASE]$INFO[ListItem.Rating,$LOCALIZE[563]: ,][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>45</posx>
+						<posy>87</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+						<visible>!Skin.HasSetting(HideMoviesWideIconOverlay)</visible>
+					</control>	
+				</focusedlayout>			
+			</control>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="Container.Row(0) + !Control.HasFocus(150)">Conditional</animation>
+				<animation effect="slide" end="0,135" condition="Container.Row(3) + !Control.HasFocus(150)">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,55)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(55)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>	
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="MoviesListInfoView">
+		<control type="group" id="500">			    
+			<defaultcontrol always="true">58</defaultcontrol>
+			<visible>Control.IsVisible(58)</visible>
+			<include>InfoPaneHiddenSlideAnim</include>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>ListMediaControlAreaBackground</include>
+			<include>ListInfoViewScrollbar</include>	
+
+			<control type="list" id="58">	
+				<viewtype label="31111">List Info</viewtype>
+				<posx>730</posx>
+				<posy>348</posy>
+				<width>520</width>
+				<height>289</height>
+				<pagecontrol>150</pagecontrol>
+				<onup>58</onup>
+				<ondown>58</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>	
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				<itemlayout height="36">
+					<control type="image">
+						<width>520</width>
+						<height>36</height>	
+						<texture border="0,2,0,0">button-list-nofocus.png</texture>
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>	
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>					
+					<control type="label">
+						<posx>35</posx>
+						<width>420</width>
+						<height>36</height>
+						<font>ListFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>492</posx>
+						<width>100</width>
+						<height>36</height>
+						<font>ListFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label2</info>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>493</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Overlay</info>
+					</control>	
+				</itemlayout>		
+				<focusedlayout height="36">	
+					<control type="image">
+						<posy>1</posy>
+						<width>520</width>
+						<height>36</height>	
+						<texture border="5,2,0,0">button-list-focus.png</texture>
+						<visible>Control.HasFocus(58)</visible>
+					</control>
+					<control type="image">
+						<posy>1</posy>
+						<width>520</width>
+						<height>36</height>	
+						<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+						<visible>!Control.HasFocus(58)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<width>420</width>
+						<height>36</height>
+						<font>ListFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>492</posx>
+						<width>100</width>
+						<height>36</height>
+						<font>ListFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label2</info>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>493</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Overlay</info>
+					</control>	
+				</focusedlayout>		
+			</control>	
+				
+			<control type="group">
+				<posy>344</posy>
+				<posx>20</posx>
+				<visible>!IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
+				<include>ControlsOpenCloseAnim</include>
+				
+				<control type="grouplist">
+					<itemgap>25</itemgap>
+					<control type="label">
+						<description>Genre</description>
+						<include>MovieListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[515][/UPPERCASE]</label>
+					</control>					
+					<control type="label">
+						<description>Director</description>
+						<include>MovieListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[20339][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Writer</description>
+						<include>MovieListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[20417][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Year</description>
+						<include>MovieListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
+					</control>					
+					<control type="label">
+						<description>Runtime</description>
+						<include>MovieListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[2050][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Rating</description>
+						<include>MovieListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE]</label>
+					</control>
+				</control>
+	
+				<control type="grouplist">
+					<posx>170</posx>
+					<itemgap>25</itemgap>
+					<control type="label">
+						<description>Genre Value</description>
+						<include>MovieListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Genre]</label>
+					</control>
+					<control type="label">
+						<description>Director Value</description>
+						<include>MovieListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Director]</label>
+					</control>
+					<control type="label">
+						<description>Writer Value</description>
+						<include>MovieListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Writer]</label>
+					</control>
+					<control type="label">
+						<description>Year Value</description>
+						<include>MovieListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Year]</label>
+					</control>	
+					<control type="label">
+						<description>Runtime Value</description>
+						<include>MovieListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Duration]</label>
+					</control>	
+					<control type="label">
+						<description>Rating Value</description>
+						<include>MovieListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.RatingAndVotes]</label>
+					</control>
+				</control>
+
+				<control type="group">
+					<visible>!Skin.HasSetting(UseMoviesListInfoFullPlot) + !IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideMoviesListInfoPlot)</visible> 
+
+					<control type="image">
+						<posy>160</posy>
+						<width>475</width>
+						<height>2</height>
+						<texture>separator3.png</texture>				
+					</control>
+					
+					<control type="textbox">
+						<description>Plot</description>
+						<posy>170</posy>
+						<width>475</width>
+						<height>130</height>
+						<font>MediaInfoFont2</font>
+						<textcolor>MediaInfoColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.PlotOutline]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</autoscroll>
+					</control>	
+				</control>
+				
+				<control type="group">
+					<visible>Skin.HasSetting(UseMoviesListInfoFullPlot) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideMoviesListInfoPlot)</visible> 
+
+					<control type="image">
+						<posy>160</posy>
+						<width>475</width>
+						<height>2</height>
+						<texture>separator3.png</texture>				
+					</control>
+					
+					<control type="textbox">
+						<description>Plot</description>
+						<posy>170</posy>
+						<width>475</width>
+						<height>130</height>
+						<font>MediaInfoFont2</font>
+						<textcolor>MediaInfoColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</autoscroll>
+					</control>	
+				</control>
+			</control>
+
+			<control type="group">					
+				<posx>516</posx>
+				<posy>344</posy>
+				
+				<control type="image">
+					<description>Cover</description>
+					<width>203</width>
+					<height>289</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio aligny="top">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>		
+				</control>
+				
+				<control type="image">
+					<description>Default Cover Background</description>
+					<width>203</width>
+					<height>289</height>
+					<texture border="3">item-noshadow-background.png</texture>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+
+				<control type="image">
+					<description>Default Cover</description>
+					<width>203</width>
+					<height>289</height>
+					<bordersize>30</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>IsEmpty(ListItem.Thumb)</visible>		
+				</control>					
+			</control>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,58)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>
+		</control>	
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<include name="MoviesListInfoView2">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">66</defaultcontrol>
+			<visible>Control.IsVisible(66)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>ListInfo2ViewScrollbar</include>
+			
+			<control type="group">
+				<description>Media Info Area</description>
+				<posx>40</posx>
+				<posy>92</posy>
+				
+				<control type="image">
+					<description>Default Background</description>
+					<width>560</width>
+					<height>315</height>
+					<texture border="9">item-background.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+					<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+				</control>	
+						
+				<control type="largeimage">
+					<description>Fanart</description>
+					<width>560</width>
+					<height>315</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>	
+				</control>
+				
+				<control type="group">
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<include>ControlsOpenCloseAnim</include>
+					
+					<control type="image">
+						<description>Genre Background</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>550</width>
+						<height>30</height>
+						<texture>background-dim.png</texture>
+						<visible>!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+						<animation effect="fade" end="30" condition="true">Conditional</animation>
+					</control>	
+					
+					<control type="label">
+						<description>Genre</description>
+						<posx>10</posx>
+						<posy>20</posy>
+						<width>540</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					</control>
+
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>5</posx>
+						<posy>335</posy>
+						<width>380</width>
+						<include>ListInfoView2CatLabel</include>
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[20339]:[/COLOR][/UPPERCASE] $INFO[ListItem.Director]</label>
+						<visible>!IsEmpty(ListItem.Director)</visible>
+					</control>
+
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>555</posx>
+						<posy>335</posy>
+						<width>160</width>
+						<include>ListInfoView2CatLabel</include>
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 2</description>
+						<posx>5</posx>
+						<posy>355</posy>
+						<width>380</width>
+						<include>ListInfoView2CatLabel</include>				
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[20417]:[/COLOR][/UPPERCASE] $INFO[ListItem.Writer]</label>
+						<visible>!IsEmpty(ListItem.Writer)</visible>
+					</control>
+
+					<control type="label">
+						<description>Media Info Row 2</description>
+						<posx>555</posx>
+						<posy>355</posy>
+						<width>160</width>
+						<include>ListInfoView2CatLabel</include>			
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[2050]:[/COLOR][/UPPERCASE] $INFO[ListItem.Duration]</label>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Duration)</visible>
+					</control>
+					
+					<control type="group">
+						<visible>!Skin.HasSetting(UseMoviesListInfo2FullPlot) + !IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideMoviesListInfo2Plot)</visible>
+						
+						<control type="image">
+							<posx>5</posx>
+							<posy>375</posy>
+							<width>550</width>
+							<height>2</height>
+							<texture>separator3.png</texture>
+						</control>
+						
+						<control type="textbox">
+							<description>Plot</description>
+							<posx>5</posx>
+							<posy>390</posy>
+							<width>550</width>
+							<height>150</height>
+							<font>MediaInfoFont2</font>
+							<textcolor>MediaInfoColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>justify</align>
+							<label>$INFO[ListItem.PlotOutline]</label>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfo2Plot)</autoscroll>
+							<include>ControlsOpenCloseAnim</include>
+						</control>
+					</control>
+					
+					<control type="group">
+						<visible>Skin.HasSetting(UseMoviesListInfo2FullPlot) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideMoviesListInfo2Plot)</visible>
+						
+						<control type="image">
+							<posx>5</posx>
+							<posy>375</posy>
+							<width>550</width>
+							<height>2</height>
+							<texture>separator3.png</texture>
+						</control>
+						
+						<control type="textbox">
+							<description>Plot</description>
+							<posx>5</posx>
+							<posy>390</posy>
+							<width>550</width>
+							<height>150</height>
+							<font>MediaInfoFont2</font>
+							<textcolor>MediaInfoColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>justify</align>
+							<label>$INFO[ListItem.Plot]</label>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfo2Plot)</autoscroll>
+							<include>ControlsOpenCloseAnim</include>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<include condition="Skin.String(MoviesListInfo2Style,1)">MoviesListInfo2ClassicStyle</include>
+			<include condition="Skin.String(MoviesListInfo2Style,) | Skin.String(MoviesListInfo2Style,2)">MoviesListInfo2BannerStyle</include>
+			<include condition="Skin.String(MoviesListInfo2Style,3)">MoviesListInfo2IconStyle</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,66)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(66)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<include name="MoviesWrapListInfoView">
+		<control type="group" id="500">	
+		    <defaultcontrol always="true">53</defaultcontrol>
+			<visible>Control.IsVisible(53)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+
+			<control type="group">
+				<description>Media Info Dialog Box Area</description>
+				<visible>!Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</visible>
+
+				<control type="image">
+					<description>Media Info Background</description>
+					<posx>90</posx>
+					<posy>110</posy>
+					<width>1100</width>
+					<height>392</height>
+					<texture border="25">item-focus-background.png</texture>
+					<animation effect="fade" end="70" condition="true">Conditional</animation>
+				</control>
+				
+				<control type="group">	
+					<description>DVD Case Area</description>
+					<posx>120</posx>
+					<posy>140</posy>
+
+					<control type="image">
+						<description>DVD Case</description>
+						<posx>0</posx>
+						<posy>2</posy>
+						<width>271</width>
+						<height>328</height>
+						<texture border="45,10,10,10">dvd-case.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideMoviesWrapListInfoCase)</visible>
+					</control>
+
+					<control type="image">
+						<description>Cover</description>
+						<posx>35</posx>
+						<posy>6</posy>
+						<width>230</width>
+						<height>320</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+					</control>
+
+					<control type="image">
+						<description>DVD Case Gloss</description>
+						<posx>32</posx>
+						<posy>2</posy>
+						<width>238</width>
+						<height>328</height>
+						<texture border="16,8,16,8">dvd-case-gloss.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideMoviesWrapListInfoCase)</visible>
+					</control>
+					
+					<control type="image">
+						<posx>200</posx>
+						<posy>270</posy>
+						<width>48</width>
+						<height>48</height>
+						<info>ListItem.Overlay</info>
+						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesWrapListInfoOverlay)]</visible>
+					</control>	
+					
+					<control type="image">
+						<posx>285</posx>
+						<posy>75</posy>
+						<width>100</width>
+						<height>68</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>special://skin/images/studios/$INFO[ListItem.Studio].png</texture>
+						<visible>!Container.OnNext + !Container.OnPrevious + !Skin.HasSetting(HideStudioFlags)</visible>
+					</control>	
+				</control>
+
+				<control type="group">				
+					<description>Media Info Area</description>
+					<posx>480</posx>
+					<posy>102</posy>
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<include>ControlsOpenCloseAnim</include>
+				
+					<control type="label">
+						<description>Title</description>
+						<posx>DialogMarginOffsetX</posx>
+						<posy>30</posy>
+						<width>640</width>
+						<font>FSMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>
+						<scroll>yes</scroll>
+					</control>	
+					
+					<control type="group">			
+						<posx>DialogMarginOffsetX</posx>
+						<visible>!IsEmpty(ListItem.Title)</visible>	
+						
+						<control type="label">
+							<description>Genre</description>
+							<posy>80</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[515][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Director</description>
+							<posy>105</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[20339][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Writer</description>
+							<posy>130</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[20417][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Runtime</description>
+							<posy>155</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[2050][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Rating</description>
+							<posy>180</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE]</label>
+						</control>			
+					</control>
+					
+					<control type="group">			
+						<posx>250</posx>
+						<visible>!IsEmpty(ListItem.Title)</visible>	
+						
+						<control type="label">
+							<description>Genre Value</description>
+							<posy>80</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Genre]</label>
+						</control>
+
+						<control type="label">
+							<description>Director Value</description>
+							<posy>105</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Director]</label>
+						</control>
+
+						<control type="label">
+							<description>Writer Value</description>
+							<posy>130</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Writer]</label>
+						</control>
+		
+						<control type="label">
+							<description>Runtime Value</description>
+							<posy>155</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Duration]</label>
+						</control>
+		
+						<control type="label">
+							<description>Rating Value</description>
+							<posy>180</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.RatingAndVotes]</label>
+						</control>				
+					</control>
+					
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>DialogMarginOffsetX</posx>
+						<posy>215</posy>
+						<width>640</width>
+						<height>110</height>
+						<font>MediaInfoFont2</font>
+						<textcolor>MediaInfoColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.PlotOutline]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesWrapListInfoPlot)</autoscroll>
+						<visible>!Skin.HasSetting(UseMoviesWrapListInfoFullPlot) + !IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideMoviesWrapListInfoPlot)</visible>
+					</control>
+					
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>DialogMarginOffsetX</posx>
+						<posy>215</posy>
+						<width>640</width>
+						<height>110</height>
+						<font>MediaInfoFont2</font>
+						<textcolor>MediaInfoColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesWrapListInfoPlot)</autoscroll>
+						<visible>Skin.HasSetting(UseMoviesWrapListInfoFullPlot) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideMoviesWrapListInfoPlot)</visible>
+					</control>
+					
+					<include condition="!System.Platform.Xbox">WrapInfoViewMediaFlag</include>
+					<include condition="System.Platform.Xbox">WrapInfoViewMediaFlagXbox</include>
+				</control>
+			</control>
+
+			<include condition="Skin.String(MoviesWrapListInfoStyle,) | Skin.String(MoviesWrapListInfoStyle,1)">MoviesWrapInfo3DStyle</include>
+			<include condition="Skin.String(MoviesWrapListInfoStyle,2)">MoviesWrapInfoFlatStyle</include>
+			<include condition="Skin.String(MoviesWrapListInfoStyle,3)">MoviesWrapInfoSmallFlatStyle</include>
+			
+			<include>WrapInfoViewScrollbar</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,53)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(53)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+	
+	<include name="WrapInfoViewMediaFlag">
+		<control type="grouplist">
+			<description>Media Flags Area</description>
+			<posx>DialogMarginOffsetX</posx>
+			<posy>338</posy>
+			<width>640</width>
+			<height>60</height>
+			<itemgap>0</itemgap>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<visible>!Container.OnNext + !Container.OnPrevious + !Skin.HasSetting(HideMediaFlags)</visible>
+			<include>VideoMediaFlags</include>
+			<include>AudioMediaFlags</include>
+			<include>AspectMediaFlags</include>
+			<include>RatingMediaFlags</include>
+		</control>
+	</include>
+	
+	<include name="WrapInfoViewMediaFlagXbox">
+		<control type="grouplist">
+			<description>Media Flags Area</description>
+			<posx>DialogMarginOffsetX</posx>
+			<posy>338</posy>
+			<width>640</width>
+			<height>60</height>
+			<itemgap>0</itemgap>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<visible>!Container.OnNext + !Container.OnPrevious + Skin.HasSetting(ShowMediaFlagsXbox)</visible>
+			<include>VideoMediaFlags</include>
+			<include>AudioMediaFlags</include>
+			<include>AspectMediaFlags</include>
+			<include>RatingMediaFlags</include>
+		</control>
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<include name="MoviesFanartView">
+		<control type="group" id="500">	
+		    <defaultcontrol always="true">59</defaultcontrol>
+			<visible>Control.IsVisible(59)</visible>
+			<include>InfoPaneHiddenSlideAnim</include>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>FanartViewScrollbar</include>
+
+			<control type="wraplist" id="59">
+				<viewtype label="31110">Fanart</viewtype>
+				<posy>475</posy>
+				<width>ScreenWidth</width>
+				<height>190</height>
+				<include condition="Skin.HasSetting(ChangeMoviesFanartViewFocusPos)">FanartViewFocusPos</include>
+				<include condition="!Skin.HasSetting(ChangeMoviesFanartViewFocusPos)">FanartViewFocusPos2</include>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				<itemlayout width="116">
+					<control type="image">
+						<description>Cover</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>115</width>
+						<height>165</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="9">item-background.png</bordertexture>
+						<bordersize>9</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover Background</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>115</width>
+						<height>165</height>
+						<texture border="9">item-background.png</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>115</width>
+						<height>165</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<posx>70</posx>
+						<posy>123</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesFanartViewOverlay)]</visible>
+					</control>	
+					<control type="image">
+						<posx>9</posx>
+						<posy>9</posy>
+						<width>97</width>
+						<height>147</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<animation effect="fade" end="30" condition="true">Conditional</animation>
+					</control>
+				</itemlayout>	
+				<focusedlayout width="116">
+					<control type="image">
+						<description>Cover</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>115</width>
+						<height>165</height>
+						<bordertexture border="9">item-background2.png</bordertexture>
+						<bordersize>9</bordersize>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<include>FanartViewFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover Background</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>115</width>
+						<height>165</height>
+						<texture border="9">item-background2.png</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>FanartViewFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>115</width>
+						<height>165</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>FanartViewFocusAnim</include>
+					</control>
+					<control type="image">
+						<posx>70</posx>
+						<posy>123</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesFanartViewOverlay)]</visible>
+						<include>FanartViewFocusAnim</include>
+					</control>	
+				</focusedlayout>					
+			</control>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,59)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(59)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>	
+		</control>
+	</include>
+	
+	<include name="FanartViewFocusPos">
+		<posx>7</posx>
+		<focusposition>0</focusposition>
+	</include>
+	
+	<include name="FanartViewFocusPos2">
+		<posx>2</posx>
+		<focusposition>5</focusposition>
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<include name="MoviesWallView">
+		<control type="group" id="500">	
+		    <defaultcontrol always="true">69</defaultcontrol>
+			<visible>Control.IsVisible(69)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			
+			<control type="panel" id="69">
+				<viewtype label="31113">Wall</viewtype>
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>1280</width>
+				<height>675</height>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>100</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				<itemlayout width="160" height="214" condition="!Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Default Cover Background</description>
+						<posy>33</posy>
+						<width>160</width>
+						<height>214</height>
+						<texture border="5">item-noshadow-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>WallViewItemBackgroundFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posy>33</posy>
+						<width>160</width>
+						<height>214</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posy>33</posy>
+						<width>160</width>
+						<height>214</height>
+						<bordersize>25</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Cover Dim</description>
+						<posy>33</posy>
+						<width>160</width>
+						<height>214</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb) + !Skin.HasSetting(DoNotDimMoviesWallCover)</visible>
+						<animation effect="fade" end="30" condition="true">Conditional</animation>
+					</control>
+				</itemlayout>
+				<itemlayout height="225" width="160" condition="Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Default Cover Background</description>
+						<width>160</width>
+						<height>225</height>
+						<texture border="5">item-noshadow-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>WallViewItemBackgroundFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<width>160</width>
+						<height>225</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<width>160</width>
+						<height>225</height>
+						<bordersize>25</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Cover Dim</description>
+						<width>160</width>
+						<height>225</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb) + !Skin.HasSetting(DoNotDimMoviesWallCover)</visible>
+						<animation effect="fade" end="30" condition="true">Conditional</animation>
+					</control>
+				</itemlayout>					
+				<focusedlayout width="160" height="214" condition="!Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Top Left Corner Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)</visible>
+						<include>MoviesWallViewTopLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Edge Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(7) + Container.Row(0)</visible>
+						<include>MoviesWallViewTopEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Right Corner Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(7) + Container.Row(0)</visible>
+						<include>MoviesWallViewTopRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Left Edge Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1)</visible>
+						<include>MoviesWallViewLeftEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Mid Row Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(7)</visible>
+						<include>MoviesWallViewMidRowFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Right Edge Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(7) + Container.Row(1)</visible>
+						<include>MoviesWallViewRightEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Left Corner Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2)</visible>
+						<include>MoviesWallViewBottomLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Edge Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(7) + Container.Row(2)</visible>
+						<include>MoviesWallViewBottomEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Right Corner Cover</description>
+						<include>MovieWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(7) + Container.Row(2)</visible>
+						<include>MoviesWallViewBottomRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover Background</description>
+						<posy>33</posy>
+						<width>160</width>
+						<height>214</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="5">item-noshadow-background2.png</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posy>33</posy>
+						<width>160</width>
+						<height>214</height>
+						<bordersize>25</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</focusedlayout>
+				<focusedlayout width="160" height="225" condition="Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Top Left Corner Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)</visible>
+						<include>MoviesWallViewTopLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Edge Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(7) + Container.Row(0)</visible>
+						<include>MoviesWallViewTopEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Right Corner Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(7) + Container.Row(0)</visible>
+						<include>MoviesWallViewTopRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Left Edge Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1)</visible>
+						<include>MoviesWallViewLeftEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Mid Row Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(7)</visible>
+						<include>MoviesWallViewMidRowFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Right Edge Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(7) + Container.Row(1)</visible>
+						<include>MoviesWallViewRightEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Left Corner Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2)</visible>
+						<include>MoviesWallViewBottomLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Edge Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + ! Container.Column(0) + !Container.Column(7) + Container.Row(2)</visible>
+						<include>MoviesWallViewBottomEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Right Corner Cover</description>
+						<include>MovieWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(7) + Container.Row(2)</visible>
+						<include>MoviesWallViewBottomRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover Background</description>
+						<width>160</width>
+						<height>225</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="5">item-noshadow-background2.png</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<width>160</width>
+						<height>225</height>
+						<bordersize>25</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<include>WallViewScrollbar</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,69)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(69)</visible>
+			</control>
+
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>	
+
+			<control type="group" id="659">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+				<visible>Control.HasFocus(69) + System.IdleTime(2)</visible>
+				<animation effect="slide" start="0,74" time="300">Visible</animation>
+			</control>	
+		</control>
+	</include>
+	
+	<include name="MovieWallCoverImage">
+		<posy>33</posy>
+		<width>160</width>
+		<height>214</height>
+		<bordersize>9</bordersize>
+		<bordertexture border="9">item-background2.png</bordertexture>
+		<texture background="true">$INFO[ListItem.Thumb]</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="MovieWallCoverImage2">
+		<width>160</width>
+		<height>225</height>
+		<bordersize>9</bordersize>
+		<bordertexture border="9">item-background2.png</bordertexture>
+		<texture background="true">$INFO[ListItem.Thumb]</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+</includes>

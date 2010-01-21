@@ -1,0 +1,109 @@
+<includes> 
+	<include name="GeneralSkinSettings"> <!-- 1024 -->
+		<control type="grouplist" id="900">		
+			<description>General Content Area</description>
+			<posx>385</posx>
+			<posy>140</posy>
+			<width>800</width>
+			<height>456</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>	
+			<onup>900</onup>
+			<ondown>900</ondown>
+			<onleft>850</onleft>
+			<visible>Skin.String(SkinSettingsCategory,1)</visible>
+			<control type="radiobutton" id="1015">
+				<description>Change Top Bar Colour</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[31028]</label>
+				<selected>Skin.HasSetting(ExpandTopBarColorSettings)</selected>
+				<onclick>Skin.Reset(ExpandScrollbarToggleSettings)</onclick>
+				<onclick>Skin.Reset(ExpandWeatherSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandTopBarColorSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="1016">
+					<description>Default Colour</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31032]</label>
+					<selected>Skin.String(TopBarColor,) | Skin.String(TopBarColor,1)</selected>
+					<onclick>Skin.SetString(TopBarColor,1)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="1017">
+					<description>Colour 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31029]</label>
+					<selected>Skin.String(TopBarColor,2)</selected>
+					<onclick>Skin.SetString(TopBarColor,2)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="1018">
+					<description>Colour 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31030]</label>
+					<selected>Skin.String(TopBarColor,3)</selected>
+					<onclick>Skin.SetString(TopBarColor,3)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="1019">
+					<description>Colour 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31031]</label>
+					<selected>Skin.String(TopBarColor,4)</selected>
+					<onclick>Skin.SetString(TopBarColor,4)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="1020">
+				<description>Weather</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[8]</label>
+				<selected>Skin.HasSetting(ExpandWeatherSettings)</selected>
+				<onclick>Skin.Reset(ExpandTopBarColorSettings)</onclick>
+				<onclick>Skin.Reset(ExpandScrollbarToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandWeatherSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="1021">
+					<description>Show Weather Notification</description>	
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31026]</label>
+					<selected>Skin.HasSetting(ShowWeatherNotification)</selected>
+					<onclick>Skin.ToggleSetting(ShowWeatherNotification)</onclick>
+					<visible>Skin.HasSetting(ExpandWeatherSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="1022">
+					<description>Weather Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllWeatherNotification)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllWeatherNotification)</onclick>
+					<visible>Skin.HasSetting(ExpandWeatherSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="1023">
+				<description>Hide Bottom Info Pane</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31021]</label>
+				<selected>Skin.HasSetting(HideInfoPane)</selected>
+				<onclick>Skin.ToggleSetting(HideInfoPane)</onclick>
+			</control>
+			<control type="radiobutton" id="1024">
+				<description>Do Not Dim Screen</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31027]</label>
+				<selected>Skin.HasSetting(DoNotDimScreen)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimScreen)</onclick>
+				<!--<include>SettingsItemOpenCloseAnim</include>-->
+			</control>
+		</control>
+	</include>
+</includes>

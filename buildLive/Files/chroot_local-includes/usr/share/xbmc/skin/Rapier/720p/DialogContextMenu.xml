@@ -1,0 +1,45 @@
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="125" y="300">Window.IsVisible(MusicPlaylistEditor)</origin>
+		<origin x="460" y="180">true</origin>
+	</coordinates>	
+
+	<controls>	
+		<control type="group">	
+			<control type="image" id="997">
+				<description>Context Menu Top</description>
+				<posy>-43</posy>
+				<width>360</width>
+				<height>43</height>
+				<texture border="40,40,40,0">special://skin/images/skin/context-menu-top.png</texture>
+			</control>
+			
+			<control type="image" id="999">
+				<description>Context Menu Middle</description>
+				<posy>0</posy>
+				<width>360</width>
+				<height>2</height>
+				<texture border="40,2,40,2">special://skin/images/skin/context-menu-middle.png</texture>
+			</control>
+			
+			<control type="image" id="998">
+				<description>Context Menu Bottom</description>
+				<posy>0</posy>
+				<width>360</width>
+				<height>41</height>
+				<texture border="40,0,40,40">special://skin/images/skin/context-menu-bottom.png</texture>
+			</control>
+
+			<control type="button" id="1000">
+				<description>Button Template</description>
+				<posx>DialogMarginOffsetX</posx>
+				<include>ContextMenuBtn</include>
+			</control>			
+		</control>		
+	</controls>	
+</window>

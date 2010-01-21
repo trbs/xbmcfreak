@@ -1,0 +1,301 @@
+<!--Alaska-->
+
+<includes>
+	<include name="PosterMediaFlagsVars">
+		<posy>0</posy>
+		<height>35</height>
+		<colordiffuse>FlagDiffuse</colordiffuse>
+	</include>
+
+	<include name="PosterMediaFlagsVars2">
+		<posx>55</posx>
+		<width>60</width>
+		<height>35</height>
+		<colordiffuse>FlagDiffuse</colordiffuse>
+	</include>
+
+	<include name="PosterMediaFlags">
+		<control type="group">
+			<include>Animation_SlideUpFadeOut</include>
+			<include>Animation_HiddenByInfo</include>
+			<posx>628</posx>
+			<posy>622</posy>
+			<width>418</width>
+			<animation effect="slide" start="0,0" end="0,30" time="200" condition="!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home) + !Window.IsVisible(2006)">Conditional</animation>
+			<visible>![Skin.HasSetting(nolanguagepanel) + Skin.HasSetting(noyearpanel) + Skin.HasSetting(nostudiopanel) + Skin.HasSetting(noratingpanel) + Skin.HasSetting(novideopanel) + Skin.HasSetting(noaudiopanel)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+
+			<!-- Language Panel -->
+
+			<control type="group">
+				<visible>!Skin.HasSetting(nolanguagepanel)</visible>
+				<animation effect="slide" start="0,0" end="84,0" condition="Skin.HasSetting(noyearpanel) | IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="98,0" condition="Skin.HasSetting(noratingpanel) | IsEmpty(ListItem.Rating)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="170,0" condition="Skin.HasSetting(novideopanel) | IsEmpty(ListItem.VideoResolution)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(noaudiopanel) | IsEmpty(ListItem.AudioChannels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(nostudiopanel) | IsEmpty(ListItem.Studio) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<control type="image">
+					<width>58</width>
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/frame_lang.png</texture>
+					<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.AudioLanguage]</label>
+					<posx>8</posx>
+					<posy>-1</posy>
+					<width>42</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_PosterRating</font>
+					<textcolor>FlagText</textcolor>
+					<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+				</control>
+			</control>
+
+			<!-- Year Panel -->
+
+			<control type="group">
+				<posx>68</posx>
+				<visible>!Skin.HasSetting(noyearpanel)</visible>
+				<animation effect="slide" start="0,0" end="98,0" condition="Skin.HasSetting(noratingpanel) | IsEmpty(ListItem.Rating)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="170,0" condition="Skin.HasSetting(novideopanel) | IsEmpty(ListItem.VideoResolution)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(noaudiopanel) | IsEmpty(ListItem.AudioChannels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(nostudiopanel) | IsEmpty(ListItem.Studio) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<control type="image">
+					<width>72</width>
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/frame_year.png</texture>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.Year]</label>
+					<posx>8</posx>
+					<posy>-1</posy>
+					<width>56</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_PosterRating</font>
+					<textcolor>FlagText2</textcolor>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+				</control>
+			</control>
+
+			<!-- Rating Panel -->
+
+			<control type="group" id="600">
+				<posx>150</posx>
+				<visible>!Skin.HasSetting(noratingpanel)</visible>
+				<animation effect="slide" start="0,0" end="170,0" condition="Skin.HasSetting(novideopanel) | IsEmpty(ListItem.VideoResolution)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(noaudiopanel) | IsEmpty(ListItem.AudioChannels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(nostudiopanel) | IsEmpty(ListItem.Studio) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<control type="image" id="601">
+					<width>88</width>
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/frame_imdb.png</texture>
+					<visible>!IsEmpty(ListItem.Rating)</visible>
+				</control>
+				<control type="label" id="602">
+					<label>$INFO[ListItem.Rating]</label>
+					<posx>30</posx>
+					<posy>-1</posy>
+					<width>56</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_PosterRating</font>
+					<textcolor>FlagText2</textcolor>
+					<visible>!IsEmpty(ListItem.Rating)</visible>
+				</control>
+			</control>
+
+			<!-- Video Panel -->
+
+			<control type="group">
+				<posx>248</posx>
+				<visible>!Skin.HasSetting(novideopanel)</visible>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(noaudiopanel) | IsEmpty(ListItem.AudioChannels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(nostudiopanel) | IsEmpty(ListItem.Studio) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<control type="image">
+					<width>161</width>
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/frame_aspect.png</texture>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[ListItem.VideoResolution]</label>
+					<posx>3</posx>
+					<posy>-1</posy>
+					<width>50</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_Res</font>
+					<textcolor>FlagText</textcolor>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="label">
+					<label fallback="?">$INFO[ListItem.VideoAspect]</label>
+					<posx>120</posx>
+					<width>35</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_Aspect</font>
+					<textcolor>FlagText</textcolor>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<include>PosterMediaFlagsVars2</include>
+					<texture fallback="empty">$INFO[Listitem.VideoCodec,flags/VideoCodec/,.png]</texture>
+					<visible>!substring(listitem.filename,hdtv) + !substring(listitem.filename,dvd) + !substring(listitem.filename,bluray) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,.iso,Right) + !substring(listitem.filename,.ifo,Right) + !substring(listitem.filename,sdtv)</visible>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<include>PosterMediaFlagsVars2</include>
+					<texture>flags/Source/sdtv.png</texture>
+					<visible>substring(listitem.filename,sdtv)</visible>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<include>PosterMediaFlagsVars2</include>
+					<texture>flags/Source/hdtv.png</texture>
+					<visible>substring(listitem.filename,hdtv)</visible>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<include>PosterMediaFlagsVars2</include>
+					<texture>flags/Source/hddvd.png</texture>
+					<visible>substring(listitem.filename,hddvd) | substring(listitem.filename,hd-dvd)</visible>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<include>PosterMediaFlagsVars2</include>
+					<texture>flags/Source/bluray.png</texture>
+					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,bdrip)</visible>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+				<control type="image">
+					<include>PosterMediaFlagsVars2</include>
+					<texture>flags/Source/dvd.png</texture>
+					<visible>[substring(listitem.filename,dvd) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,hd-dvd) + !substring(listitem.filename,bluray)] | [substring(listitem.filename,.iso,Right) + !substring(listitem.filename,bluray)] | substring(listitem.filename,.ifo,Right)</visible>
+					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				</control>
+			</control>
+
+			<!-- Audio Panel -->
+
+			<control type="group">
+				<posx>419</posx>
+				<visible>!Skin.HasSetting(noaudiopanel)</visible>
+				<animation effect="slide" start="0,0" end="108,0" condition="Skin.HasSetting(nostudiopanel) | IsEmpty(ListItem.Studio) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<control type="image">
+					<width>100</width>
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/frame_audio.png</texture>
+					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				</control>
+				<control type="label">
+					<label fallback="?">$INFO[ListItem.AudioChannels,,.0]</label>
+					<posx>65</posx>
+					<width>33</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_Channels</font>
+					<textcolor>FlagText</textcolor>
+					<visible>!substring(ListItem.AudioChannels,6) + !substring(ListItem.AudioChannels,8)</visible>
+					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				</control>
+				<control type="label">
+					<label>5.1</label>
+					<posx>65</posx>
+					<width>33</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_Channels</font>
+					<textcolor>FlagText</textcolor>
+					<visible>!IsEmpty(ListItem.AudioChannels) + substring(ListItem.AudioChannels,6)</visible>
+				</control>
+				<control type="label">
+					<label>7.1</label>
+					<posx>65</posx>
+					<width>33</width>
+					<include>PosterMediaFlagsVars</include>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_Channels</font>
+					<textcolor>FlagText</textcolor>
+					<visible>!IsEmpty(ListItem.AudioChannels) + substring(ListItem.AudioChannels,8)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<include>PosterMediaFlagsVars2</include>
+					<texture fallback="empty">$INFO[Listitem.AudioCodec,flags/AudioCodec/,.png]</texture>
+					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				</control>
+			</control>
+
+			<!-- Studio Panel -->
+
+			<control type="group">
+				<posx>530</posx>
+				<posy>-30</posy>
+				<animation effect="fade" start="100" end="0" condition="Skin.HasSetting(nostudiopanel) | IsEmpty(ListItem.Studio) | StringCompare(Control.GetLabel(3500),empty)">Conditional</animation>
+				<visible>!Skin.HasSetting(nostudiopanel) | !IsEmpty(ListItem.Studio)</visible>
+				<control type="image">
+					<width>92</width>
+					<height>63</height>
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/frame_studio.png</texture>
+				</control>
+				<control type="image" id="3500">
+					<posx>2</posx>
+					<posy>2</posy>
+					<width>88</width>
+					<height>59</height>
+					<include>PosterMediaFlagsVars</include>
+					<texture fallback="empty">special://skin/extras/studios/$INFO[ListItem.Studio,,.png]</texture>
+				</control>
+			</control>
+
+			<!-- Waiting for border diffuse to be implimented in to XBMC -->
+
+			<!--control type="group">
+				<posx>1161</posx>
+				<posy>514</posy>
+				<visible>!Skin.HasSetting(nostudiopanel) + !Control.IsVisible(50)</visible>
+				<include>FlagsSlideAnimations</include>
+				<control type="image" id="779">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>92</width>
+					<height>62</height>
+					<texture fallback="none">special://skin/extras/studios/$INFO[ListItem.Studio,,.png]</texture>
+					<bordertexture border="2">flags/frame_studio.png</bordertexture>
+					<bordersize>2</bordersize>
+					<colordiffuse>FlagDiffuse</colordiffuse>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>784</posx>
+				<posy>118</posy>
+				<visible>!Skin.HasSetting(nostudiopanel) + Control.IsVisible(50)</visible>
+				<control type="image" id="779">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>92</width>
+					<height>62</height>
+					<texture fallback="none">special://skin/extras/studios/$INFO[ListItem.Studio,,.png]</texture>
+					<bordertexture border="2">flags/frame_studio.png</bordertexture>
+					<bordersize>2</bordersize>
+					<colordiffuse>FlagDiffuse</colordiffuse>
+				</control>
+			</control-->
+
+		</control>
+	</include>
+</includes>

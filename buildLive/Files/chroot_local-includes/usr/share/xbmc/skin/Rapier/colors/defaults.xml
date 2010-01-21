@@ -1,0 +1,36 @@
+<colors>
+	<color name="DefaultColor">ffEFEFEF</color>
+	<color name="DefaultColor2">ffcdcdcd</color>
+	<color name="DefaultColor3">ff03a5ff</color>
+	<color name="DefaultColor4">ff198ECF</color>
+	<color name="SelectedColor">ffffffff</color>
+	<color name="SelectedColor2">ff03a5ff</color>
+	<color name="DisabledColor">ff5f5f5f</color>
+	<color name="ShadowColor">ff000000</color>
+	<color name="ButtonColor">ffbcbcbc</color>
+	<color name="ButtonFocusColor">ffffffff</color>
+	<color name="MenuItemColor">ffCFCFCF</color>
+	<color name="MenuItemColor2">ff198ECF</color>
+	<color name="MenuItemColor3">ffBF0008</color>
+	<color name="MenuItemFocusColor">ffffffff</color>
+	<color name="BreadCrumbColor">ff5F5F5F</color>
+	<color name="BreadCrumbColor2">ff6F6F6F</color>
+	<color name="InfoPaneColor">ffAFAFAF</color>
+	<color name="InfoPaneColor2">ff11628F</color>
+	<color name="InfoPaneColor3">ff7c7c7c</color>
+	<color name="MediaInfoColor">ffffffff</color>
+	<color name="MediaInfoHeadColor">ff03a5ff</color>
+	<color name="MediaInfoHeadColor2">ffa7a7a7</color>
+	<color name="MediaInfoItemColor">ff198ECF</color>
+	<color name="MediaInfoItemColor2">ffBFBFBF</color>
+	<color name="DialogHeadColor">ff03a5ff</color>
+	<color name="TopBarStatusColor">ff6F6F6F</color>
+	<color name="TopBarStatusColor2">ff03a5ff</color>
+	<color name="LoginScreenInfoSeparatorColor">ff6f6f6f</color>
+	<color name="ProgressColor">ffb8b8b8</color>
+	<color name="ProgressColor2">ffd03737</color>
+	<color name="HomeMenuColor">ff767676</color>
+	<color name="HomeMenuFocusColor">ffe2e2e2</color>
+	<color name="SettingsContentColor">ffBFBFBF</color>
+	<color name="SettingsContentNoteColor">ffd03737</color>
+</colors>

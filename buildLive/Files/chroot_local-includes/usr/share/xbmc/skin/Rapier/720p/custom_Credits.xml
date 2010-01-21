@@ -1,0 +1,136 @@
+<window type="window" id="3010">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<control type="group">					
+    		<include>BackgroundSystem</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>   
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+		
+		<control type="group">
+			<include>ControlsOpenCloseAnim</include>
+		
+			<control type="image">
+				<posx>180</posx>
+				<posy>110</posy>
+				<width>920</width>
+				<height>550</height>
+				<texture border="25">item-focus-background.png</texture>
+				<animation effect="fade" end="70" condition="true">Conditional</animation>
+			</control>
+				
+			<control type="label">
+				<description>Skin Name</description>
+				<posx>200</posx>
+				<posy>130</posy>
+				<width>880</width>
+				<font>CreditsHeadFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>Rapier 3.06</label>
+				<align>center</align>
+			</control>
+			
+			<control type="label">
+				<description>Skin Developer</description>
+				<posx>200</posx>
+				<posy>180</posy>
+				<width>880</width>
+				<font>CreditsHeadFont2</font>
+				<textcolor>DefaultColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>By Scarfa | [COLOR=SettingsContentNoteColor]trizinn@gmail.com[/COLOR]</label>
+				<align>center</align>
+			</control>
+
+			<control type="grouplist">
+				<description>Contributions</description>
+				<posx>200</posx>
+				<posy>250</posy>
+				<width>880</width>
+				<itemgap>50</itemgap>
+				<control type="label">
+					<width>880</width>
+					<font>CreditsContentHeadFont</font>
+					<textcolor>DefaultColor4</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Contributions</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<width>880</width>
+					<font>CreditsContentFont</font>
+					<textcolor>DefaultColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Background created by Spyro94 | [COLOR=SettingsContentNoteColor]http://spyro94.deviantart.com[/COLOR]</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<width>880</width>
+					<font>CreditsContentFont</font>
+					<textcolor>DefaultColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Icons created by Evan Brooks</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<width>880</width>
+					<font>CreditsContentFont</font>
+					<textcolor>DefaultColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Home window icons created by Arcanthur</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<width>880</width>
+					<font>CreditsContentFont</font>
+					<textcolor>DefaultColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Studio icons provided by the XBMC community</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<width>880</width>
+					<font>CreditsContentHeadFont</font>
+					<textcolor>DefaultColor4</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>Special Thanks</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<description>Special Thanks</description>
+					<width>880</width>
+					<font>CreditsContentFont</font>
+					<textcolor>DefaultColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<wrapmultiline>true</wrapmultiline>
+					<label>Thanks to the XBMC team for creating and maintaining such a wonderful program that has given me so much joy for a number of years. Thanks also to the skinners before me who paved the way with their awesome skins.</label>
+				</control>
+			</control>
+		</control>
+
+		<include>DialogPopUpScreenDim</include>
+		
+		<control type="group">	
+			<description>Top Bar Area</description>		
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbCredits</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>
+		
+		<!--
+		<control type="group">
+			<description>Bottom Bar Area</description>
+			<posy>BottomPaneOffsetY</posy>	
+			<include>InfoPaneImage</include>
+			<include>InfoPaneSkinCreditsDetails</include>
+		</control>
+		-->
+	</controls>
+</window>

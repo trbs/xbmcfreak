@@ -1,0 +1,323 @@
+<!--Alaska-->
+
+<window id="4">
+	<defaultcontrol always="true">410</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+		<control type="button" id="410">
+			<onfocus>Dialog.Close(2003)</onfocus>
+			<onfocus>Dialog.Close(106)</onfocus>
+			<onfocus>SetFocus(60)</onfocus>
+		</control>
+
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<control type="panel" id="60">
+			<posx>200</posx>
+			<posy>200</posy>
+			<width>600</width>
+			<height>600</height>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<onup>60</onup>
+			<ondown>60</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="536">icon</viewtype>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_SettingsFloat</include>
+			<include>Animation_ZoomInZoomOut</include>
+			<itemlayout height="200" width="200">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>settings/button.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<animation effect="zoom" start="80" end="80" center="100,100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<animation effect="zoom" start="80" end="80" center="100,100" time="0" condition="true">Conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="200" width="200">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>settings/button.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="80" end="100" center="100,100" time="300" tween="cubic" easing="in" />
+						<effect type="fade" start="40" end="100" time="300" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" start="80" end="100" center="100,100" time="300" tween="cubic" easing="in" />
+						<effect type="fade" start="40" end="100" time="300" />
+					</animation>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Video</description>
+					<label>3</label>
+					<icon>special://skin/media/settings/settings_video.png</icon>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+				</item>
+				<item id="2">
+					<description>Music</description>
+					<label>2</label>
+					<icon>special://skin/media/settings/settings_music.png</icon>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+				</item>
+				<item id="3">
+					<description>Pictures</description>
+					<label>1</label>
+					<icon>special://skin/media/settings/settings_pictures.png</icon>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+				</item>
+				<!--item id="4">
+					<description>Programs</description>
+					<label>0</label>
+					<icon>special://skin/media/settings/settings_programs.png</icon>
+					<onclick>ActivateWindow(ProgramsSettings)</onclick>
+				</item-->
+				<item id="4">
+					<description>Profiles</description>
+					<label>13200</label>
+					<icon>special://skin/media/settings/settings_profiles.png</icon>
+					<onclick>ActivateWindow(Profiles)</onclick>
+				</item>
+				<item id="5">
+					<description>Weather</description>
+					<label>8</label>
+					<icon>special://skin/media/settings/settings_weather.png</icon>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+				</item>
+				<item id="6">
+					<description>Network</description>
+					<label>705</label>
+					<icon>special://skin/media/settings/settings_network.png</icon>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+				</item>
+				<item id="7">
+					<description>System</description>
+					<label>13000</label>
+					<icon>special://skin/media/settings/settings_system.png</icon>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+				</item>
+				<item id="8">
+					<description>Appearence</description>
+					<label>480</label>
+					<icon>special://skin/media/settings/settings_appearance.png</icon>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+				</item>
+				<item id="9">
+					<description>Alaska</description>
+					<!-- LOC -->
+					<label>Alaska</label>
+					<icon>special://skin/media/settings/settings_alaska.png</icon>
+					<onclick>ActivateWindow(56)</onclick>
+				</item>
+			</content>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="backdrops/mask_1.png">common/white.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="backdrops/mask_1.png">backdrops/filter.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		</control>
+
+		<control type="group">
+			<description>Video</description>
+			<posx>130</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(1)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>3</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Adjust how XBMC handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options</label>
+			</control>
+		</control>
+		<!--control type="group">
+			<description>Programs</description>
+			<posx>130</posx>
+			<posy>180</posy>
+			<visible>Container(60).HasFocus(4)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>0</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Select browsing options for applications and games</label>
+			</control>
+		</control-->
+		<control type="group">
+			<description>Profiles</description>
+			<posx>130</posx>
+			<posy>180</posy>
+			<visible>Container(60).HasFocus(4)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>13200</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Allowing individual users to save their own configurations. rss feeds, view settings and media libraries can be separately stored</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>System</description>
+			<posx>130</posx>
+			<posy>150</posy>
+			<visible>Container(60).HasFocus(7)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>13000</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Control core hardware and software functions. Includes autorun options, audio and video hardware setup, and parental master lock functions</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Music</description>
+			<posx>85</posx>
+			<posy>210</posy>
+			<visible>Container(60).HasFocus(2)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>2</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Adjust how XBMC handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Weather</description>
+			<posx>85</posx>
+			<posy>180</posy>
+			<visible>Container(60).HasFocus(5)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>8</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Set up region information for XBMC's optional Weather displays</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Appearence</description>
+			<posx>85</posx>
+			<posy>150</posy>
+			<visible>Container(60).HasFocus(8)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>480</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Pictures</description>
+			<posx>880</posx>
+			<posy>410</posy>
+			<visible>Container(60).HasFocus(3)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>1</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Adjust how XBMC displays personal image collections. Includes screenshot grabbing, special effects and advanced display options</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Network</description>
+			<posx>880</posx>
+			<posy>380</posy>
+			<visible>Container(60).HasFocus(6)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>705</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Set up XBMC's network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration</label>
+			</control>
+		</control>
+		<control type="group">
+			<description>Alaska</description>
+			<posx>880</posx>
+			<posy>350</posy>
+			<visible>Container(60).HasFocus(9)</visible>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsHeadingVars</include>
+				<label>Alaska</label>
+			</control>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Choose from a variety of advanced settings and customisation options to make the Alaska UI your own</label>
+			</control>
+		</control>
+		<include>Global_ContextFilter</include>
+		<include>Global_Time</include>
+		<include>Setting_Heading</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>Settings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,210 @@
+-------------------------
+Rapier v3.06 (03-Jan-10)
+-------------------------
+
+* home: fixed when favourites dialog is activated via remote or keyboard and the current focused category is anything other than general, the general focus image appears and overlaps the current focus image
+* general: replaced fonts that caused an increase in cpu usage making the skin sluggish in some areas
+* gui: readjusted some layouts to look good with the newly added fonts
+* general: new setting to show the database path, useful for editing submenu buttons
+
+-------------------------
+Rapier v3.0 (02-Jan-10)
+-------------------------
+
+* views: fixed studio icon not showing for movies wrap info view
+* views: new sort by runtime option in menu bar for movies
+* general: fixed after reloading the skin via shutdown menu, the menu will not appear again until xbmc is restarted
+* general: updated breadcrumbs, they now more acurately reflect what node you are in
+* gui: updated breadcrumb graphics
+* gui: updated top bar graphics
+* gui: updated menu bar graphics
+* gui: modified bottom panel graphics
+* gui: modified player control panel graphics
+* gui: modified info panel label colours
+* gui: fixed context menu texture alignment problem
+* gui: updated dialog box graphics
+* gui: updated radio button graphics
+* gui: updated button graphics
+* gui: updated fullscreen player seek bar graphics
+* gui: modified some navigation sounds
+* home: modified the order of the menu categories, videos now has the default focus
+* general: fixed BackgroundDim include causing warnings in debug log
+* general: modified dimensions of background art, visualisation, and video to conform to 16:9 aspect ratio
+* views: modified cover border size for some views
+* fullscreen player: new show finish time for videos
+* fullscreen player: rearranged some labels
+* home: new option for advanced home menu, clicking a category will bring up a sub menu with more options
+* home: new option to customize the category sub menus
+* home: removed sliding focus animation from sub menus
+* gui: updated fonts for better unicode support
+* views: updated layout and graphics for wide icon view
+* views: modified item focus animation for movies fanart view
+* views: new option to toggle fanart for episodes node
+* music: fixed shuffle and repeat menu bar button not working in playlist window
+* movies: updated media flag video source detection
+* views: fixed no option to sort by playlist when in playlist nodes
+* gui: moved file browser dialog scrollbar to the right side
+* fullscreen player: updated slider dialog 
+* views: fixed library radio button text not showing in the newer svn builds
+* fullscreen player: updated player control osd graphics
+* home: new localized menu categories for all available languages
+* home: modified the way a menu category has focus
+* views: new view option to use posters instead of banners for tv show covers
+* general: new music karaoke functionality
+* general: new option to use artist fanart for background instead of visualization when music is playing
+* general: new toggle background dim when video is playing
+* views: new 3 view styles for wrap info view: 3d wrap list, flat list, and small flat list
+* gui: modified control area panel graphics
+* views: modified movies wrap info view media labels
+* views: modified item focus animation for wrap info view small wrap list style
+* views: new wrap info view for albums
+* fullscreen player: fixed positioning of visualization select control
+* home: removed icon shake animation when submenu is opening
+* general: removed program button in settings
+* general: fixed text not showing up in some scripts
+* gui: new option to change the top bar from 4 differen't selections
+* general: fixed menu bar is hidden in weather window when option to hide the media menu bar is selected in skin settings
+* gui: removed 2 default background colour styles red and green
+* gui: new default background image added to selection along with 2 colour styles black and blue
+* gui: new option to change default background from 4 differen't selections
+* home: new play disc button shows on the system tray when a disc is detected
+* home: increased system tray area width
+* views: fixed hide label option wasn't working for big icon view
+* gui: updated buttons for settings and skin settings windows
+* home: new option to use custom icons for each category
+* general: new system info window
+* general: new busy dialog
+* general: new mpaa rating flags for all movie views and when looking up movie information
+* gui: updated no focus button graphics
+* music: new singles library option on top menu bar
+* views: removed view options from skin settings window
+* views: new view options drop down menu in media windows, shows context-sensitive settings for each view
+* views: new list info 2 view for albums, movies, tv shows, and episodes
+* views: new 3 view styles for list info 2: classic list, banner list, and icon panel
+* views: new view option to use full plot instead of plot outline for movies
+* views: new wall view for movies and albums
+* views: new view option to disable cover dim for thumbnails view
+* general: moved 'hide bottom pane white highlight' option from general to home section
+* views: new view option to hide list shadow for wrap info view
+* general: updated info panel labels in settings window
+* gui: fixed 'add source' dialog bottom option buttons not positioned properly when in windows other than video files
+* general: decreased screen dim when dialog or pop down menu is visible
+* music: updated star rating graphics
+* music: decreased size of star rating image in info panel and song info window
+* general: modified settings profile window view
+* music: fixed music now playing window default menu bar does not slide up when looking up song information
+* general: new option to animate the custom backgrounds
+* views: new view option to animate the fanart
+* gui: updated player control focus buttons to be more noticeable
+* gui: decreased the size of play, pause, and stop player control buttons
+* gui: modified font styles, sizes, and colours
+* general: added dialog boxes around information in weather window
+* general: removed screen dim from weather window
+* general: redesigned the credits window
+* player: new rating flag for movies
+* views: fixed sort order option in menu bar could not be reached
+* views: increased width of some menu bar buttons
+* general: fixed avatar alignment issues in login screen window
+* gui: new skin theme colours available red, green, and orange
+
+-------------------------
+Rapier v2.0 (02-Oct-09)
+-------------------------
+
+* gui: updated top options bar graphics
+* gui: updated top options bar drop down menu graphics
+* gui: updated top bar graphics
+* gui: updated top bar eject and shutdown menu button graphics
+* gui: updated all sound and video media flag icons
+* gui: modified bottom pane overlay transparency
+* gui: updated bottom pane top highlight
+* fullscreen player: updated the settings buttons graphics
+* fullscreen player: modified made the settings buttons 5 px bigger
+* fullscreen player: fixed: opensubtitles_osd script podnapisi logo doesn't show if service is selected
+* skin settings: modified if movies/tvshows has no content in library disable option to hide the categories
+* skin setttings: fixed when image path is focused and the background image preview is shown and then when focus is given to a button in the categories area the preview image is still there
+* settings: modified some label2 descriptions on bottom info pane
+* general: modified when system tray is selected the shutdown menu button now is the default focus
+* gui: modified system tray pulses when eject or power options button has focus
+* general: new clicking weather notification on top bar activates the weather window
+* views: updated plot now auto scrolls by default
+* skin settings: new option to disable auto scrolling of plot for movies wrap list info, tv shows list info, and episodes list info views
+* home: fixed when general or system category is selected the adjacent items may show a category that was previously hidden via skin settings
+* general: updated media flag support for differen't naming conventions
+* home: fixed rss feeds menu bar being hidden also when the option to hide the menu bar is enabled
+* general: fixed opensubtitles_osd settings dialog not showing the header labels for the differen't sections
+* general: updated file browser icon view now shows labels
+* general: modified file browser icon view shows the background first even if thumbs are still loading
+* general: updated names and deleted some studio icons
+* wraplist info view: updated focused position shows a reflection on item when it doesn't have focus anymore
+* general: modified height of weather image on top bar
+* wide icon view: updated zoom animation is applied on focused item
+* skin settings: new option to hide the dvd case for wraplist info view
+* list view: updated thumb cover border graphics
+* fullsceen player: new show codec information for video player
+* fullscreen player: new view mode information for video player
+* fullscreen player: updated codec information background graphics
+* home: modifed hide bottom menu pane when numeric keypad is visible
+* general: fixed when clear key is focused pressing left does nothing
+* general: modified increased height of favourites dialog
+* general: new when dvd disc is inserted, show play disc button in the shutdown menu
+* gui: updated shutdown menu background to have a variable height based on the number of items
+* views: fixed library drop down menu not showing in certain nodes in video and music library
+* fullscreen player: modified some osd label colours
+* views: updated when the bottom info pane is hidden, all view containers shift down by a fixed amount
+* music videos: fixed background not showing when there is music video content
+* general: new dim screen when a dialog or options drop down menu is visible
+* skin settings: new option to not dim the screen when a dialog  or options drop down menu is visible
+* home: fixed category icon is still visible when numeric keypad dialog is shown
+* list view: fixed list container background dim texture showing the top edge because of incorrect positioning
+* big icon view: modified border graphics and changed the animation behaviour when an item has focus
+* gui: fixed moved some images out of textures.xpr and into images folder to fix texture scaling issues when using certain resolutions
+* general: modified moved all external images out of the media folder and into images folder
+* wide icon view: new watched overlay for movies and episodes content
+* skin settings: new option to toggle watched overlay for wide icon view
+* views: modified bottom info pane label2
+* list info view: modified some labels for tv shows
+* general: modified tv shows wide icon reflection in information window
+* skin settings: new option to hide tv show cover for list view
+* skin settings: new option to hide episodes cover for list view
+* gui: new navigation and startup sounds
+
+-------------------------
+Rapier v1.60 (22-Sept-09)
+-------------------------
+
+* filemanager: fixed mislabeled free memory text
+* fullscreen player: fixed system time alignment
+* wraplist info view: modified scrollbar position moved to the bottom
+* wraplist info view: fixed scrollbar receiving focus on window open
+* home: fixed rss feed alignment
+* views: modified view container now gets focus after closing a menu on the top options menu bar 
+* gui: modified top bar eject and power button is now more noticeable when focused
+* general: modified numeric keypad enter key is the default focus when keypad is open
+* skin settings: fixed mislabeled text in bottom info pane
+* gui: fixed keyboard width of input box was incorrect
+* skin settings: modified some labels to be more concise
+* fanart view: new option to switch the item focus position between center and left hand side, default is now center position
+* fullscreen player: new zoom amount panel
+* tv shows: fix going back out of tv shows then going back in would make the fanart go all black
+* general: new option for separate custom backgrounds for videos/movies/tv shows
+* general: modified media sections custom background now only shows when there is media content
+* skin settings: new option to only show the top menu bar when it has focus
+* skin settings: new option to show navigation buttons on the home screen for mouse users
+* general: fix volume and now playing notification not shifting when music scan notification is visible
+* general: new show weather on the top bar
+* skin settings: new option to show the weather in home window only or all windows
+* fullscreen player: new integration of OpenSubtitles_OSD script
+* skin settings: new toggle showing of the OpenSubtitles_OSD button in fullscreen player
+* skin settings: new scrollbar for each view can now each be hidden separately
+* skin settings: new scripts category added
+* general: modified top menu bar library button was disabled for certain levels in media sections
+* gui: fixed width of menu bar popup menu for search was incorrect
+* home: modified when activating shutdown menu the bottom menu bar and category icon goes hidden
+* general: modified allow media flags to show on the Xbox if supported
+
+------------------------
+Rapier v1.0 (17-Sept-09)
+------------------------
+
+Initial release

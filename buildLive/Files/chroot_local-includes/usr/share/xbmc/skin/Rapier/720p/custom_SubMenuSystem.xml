@@ -1,0 +1,108 @@
+<window type="dialog" id="3007">
+	<defaultcontrol always="true">110</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="0" y="572">true</origin>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<include>HomeSubMenuBarImage</include>
+			<include>HomeSubMenuBarOpenCloseAnim</include>
+			
+			<control type="group">
+				<posx>10</posx>
+				<include>HomeSubMenuSlideAnim</include>
+				
+				<control type="list" id="110">
+					<description>System Menu Bar</description>
+					<width>1260</width>
+					<height>34</height>
+					<ondown>Dialog.Close(3007)</ondown>
+					<orientation>horizontal</orientation>
+					<include>HomeSubMenuOpenCloseAnim</include>
+					<itemlayout width="180">
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>		
+					</itemlayout>
+					<focusedlayout width="180">
+						<control type="image">
+							<posy>-1</posy>
+							<width>180</width>
+							<height>36</height>
+							<texture border="0,0,0,2">button-submenu-focus.png</texture>
+							<include>HomeSubMenuFocusAnim</include>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>					
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Settings</description>
+							<label>$LOCALIZE[5]</label>
+							<onclick>Dialog.Close(3007)</onclick>
+							<onclick>ActivateWindow(AppearanceSettings)</onclick>		
+						</item>
+						<item id="2">
+							<description>Skin Settings</description>
+							<label>$LOCALIZE[20077]</label>
+							<onclick>Dialog.Close(3007)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>		
+						</item>
+						<item id="3">
+							<description>Profiles</description>
+							<label>$LOCALIZE[13200]</label>
+							<onclick>Dialog.Close(3007)</onclick>
+							<onclick>ActivateWindow(Profiles)</onclick>		
+						</item>
+						<item id="4">
+							<description>System Info</description>
+							<label>$LOCALIZE[130]</label>
+							<onclick>Dialog.Close(3007)</onclick>
+							<onclick>ActivateWindow(SystemInfo)</onclick>		
+						</item>
+						<item id="5">
+							<description>Credits</description>
+							<label>$LOCALIZE[470]</label>
+							<onclick>Dialog.Close(3007)</onclick>
+							<onclick>ActivateWindow(3010)</onclick>		
+						</item>
+					</content>						
+				</control>
+			</control>
+		</control>
+		
+		<control type="group">	
+			<description>Bottom Bar Area</description>	
+			<posy>34</posy>	
+			<include>HomeSubMenuCoverTopImage</include>		
+			<include>HomeSubMenuCoverTopOverlay</include>
+			
+			<control type="image">
+				<Description>System Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos2</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-system-text-focus.png</texture>
+				<include>HomeMenuCategoryFocusAnim2</include>
+			</control>	
+		</control>
+	</controls>
+</window>

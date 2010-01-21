@@ -1,0 +1,534 @@
+<includes>
+	<include name="TVShowsWideIconView">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">56</defaultcontrol>
+			<visible>Control.IsVisible(56)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>WideIconViewScrollbar</include>
+			
+			<include condition="!Skin.HasSetting(UseTVShowsPosterCover)">TVShowsWideIconBannerStyle</include>
+			<include condition="Skin.HasSetting(UseTVShowsPosterCover)">TVShowsWideIconPosterStyle</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="Container.Row(0) + !Control.HasFocus(150)">Conditional</animation>
+				<animation effect="slide" end="0,135" condition="Container.Row(3) + !Control.HasFocus(150)">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,56)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(56)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="EpisodesWideIconView">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">57</defaultcontrol>
+			<visible>Control.IsVisible(57)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>WideIconViewScrollbar</include>
+	
+			<control type="panel" id="57">
+				<viewtype label="31108">Wide Icon</viewtype>
+				<posx>40</posx>
+				<posy>92</posy>
+				<width>1200</width>
+				<height>548</height>
+				<pagecontrol>150</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<onup>57</onup>
+				<ondown>57</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+				<itemlayout height="137" width="600">				
+					<control type="image">
+						<description>Background</description>
+						<width>590</width>
+						<height>133</height>	
+						<texture border="5">button-nofocus.png</texture>
+						<include>WideIconViewItemBackgroundFadeAnim</include>
+					</control>	
+					<control type="image">
+						<description>Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>200</width>
+						<height>114</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="7">item-shadow-border.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>200</width>
+						<height>114</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>217</posx>
+						<posy>14</posy>
+						<width>360</width>
+						<font>MediaInfoHeadFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					</control>
+					<control type="label">
+						<description>First Aired</description>
+						<posx>217</posx>
+						<posy>33</posy>
+						<width>360</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Premiered][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Rating</description>
+						<posx>577</posx>
+						<posy>107</posy>
+						<width>110</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>[UPPERCASE]$INFO[ListItem.Rating,$LOCALIZE[563]: ,][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>30</posx>
+						<posy>87</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+						<visible>!Skin.HasSetting(HideEpisodesWideIconOverlay)</visible>
+					</control>	
+				</itemlayout>															
+				<focusedlayout height="137" width="600">	
+					<control type="image">
+						<description>Background</description>
+						<width>590</width>
+						<height>133</height>	
+						<texture border="5">button-focus2.png</texture>
+						<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>200</width>
+						<height>114</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>keep</aspectratio>
+						<bordertexture border="7">item-shadow-border.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>200</width>
+						<height>114</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>217</posx>
+						<posy>14</posy>
+						<width>360</width>
+						<font>MediaInfoHeadFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					</control>
+					<control type="label">
+						<description>First Aired</description>
+						<posx>217</posx>
+						<posy>33</posy>
+						<width>360</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Premiered][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<description>Rating</description>
+						<posx>577</posx>
+						<posy>107</posy>
+						<width>110</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>[UPPERCASE]$INFO[ListItem.Rating,$LOCALIZE[563]: ,][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>30</posx>
+						<posy>87</posy>
+						<width>32</width>
+						<height>32</height>
+						<info>ListItem.Overlay</info>
+						<visible>!Skin.HasSetting(HideEpisodesWideIconOverlay)</visible>
+					</control>	
+				</focusedlayout>			
+			</control>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="Container.Row(0) + !Control.HasFocus(150)">Conditional</animation>
+				<animation effect="slide" end="0,135" condition="Container.Row(3) + !Control.HasFocus(150)">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,57)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(57)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="TVShowsListInfoView">
+		<control type="group" id="500">			    
+			<defaultcontrol always="true">61</defaultcontrol>
+			<visible>Control.IsVisible(61)</visible>
+			<include>InfoPaneHiddenSlideAnim</include>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>ListMediaControlAreaBackground</include>
+			<include>ListInfoViewScrollbar</include>	
+			
+			<include condition="!Skin.HasSetting(UseTVShowsPosterCover)">TVShowsListInfoBannerStyle</include>
+			<include condition="Skin.HasSetting(UseTVShowsPosterCover)">TVShowsListInfoPosterStyle</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,61)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(61)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>
+		</control>	
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="TVShowsListInfoView2">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">65</defaultcontrol>
+			<visible>Control.IsVisible(65)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>ListInfo2ViewScrollbar</include>
+			
+			<control type="group">
+				<description>Media Info Area</description>
+				<posx>40</posx>
+				<posy>92</posy>
+				
+				<control type="image">
+					<description>Default Background</description>
+					<width>560</width>
+					<height>315</height>
+					<texture border="9">item-background.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+					<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+				</control>	
+						
+				<control type="largeimage">
+					<description>Fanart</description>
+					<width>560</width>
+					<height>315</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>	
+				</control>
+				
+				<control type="group">
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<include>ControlsOpenCloseAnim</include>
+					
+					<control type="image">
+						<description>Genre Background</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>550</width>
+						<height>30</height>
+						<texture>background-dim.png</texture>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>	
+					
+					<control type="label">
+						<description>Genre</description>
+						<posx>10</posx>
+						<posy>20</posy>
+						<width>540</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>5</posx>
+						<posy>335</posy>
+						<width>270</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>555</posx>
+						<posy>335</posy>
+						<width>270</width>
+						<include>ListInfoView2CatLabel</include>			
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[20416]:[/COLOR][/UPPERCASE] $INFO[ListItem.Premiered]</label>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Premiered)</visible>
+					</control>
+					
+					<control type="group">
+						<visible>!IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideTVShowsListInfo2Plot)</visible>
+						
+						<control type="image">
+							<posx>5</posx>
+							<posy>355</posy>
+							<width>550</width>
+							<height>2</height>
+							<texture>separator3.png</texture>
+						</control>
+						
+						<control type="textbox">
+							<description>Plot</description>
+							<posx>5</posx>
+							<posy>370</posy>
+							<width>550</width>
+							<height>170</height>
+							<font>MediaInfoFont2</font>
+							<textcolor>MediaInfoColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>justify</align>
+							<label>$INFO[ListItem.Plot]</label>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfo2Plot)</autoscroll>
+							<include>ControlsOpenCloseAnim</include>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<include condition="Skin.String(TVShowsListInfo2Style,1)">TVShowsListInfo2ClassicStyle</include>
+			<include condition="[Skin.String(TVShowsListInfo2Style,2) | Skin.String(TVShowsListInfo2Style,)] + !Skin.HasSetting(UseTVShowsPosterCover)">TVShowsListInfo2BannerStyle</include>
+			<include condition="[Skin.String(TVShowsListInfo2Style,2) | Skin.String(TVShowsListInfo2Style,)] + Skin.HasSetting(UseTVShowsPosterCover)">TVShowsListInfo2PosterBannerStyle</include>
+			<include condition="Skin.String(TVShowsListInfo2Style,3)">TVShowsListInfo2IconStyle</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,65)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(65)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="EpisodesListInfoView2">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">68</defaultcontrol>
+			<visible>Control.IsVisible(68)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>ListInfo2ViewScrollbar</include>
+			
+			<control type="group">
+				<description>Media Info Area</description>
+				<posx>40</posx>
+				<posy>92</posy>
+				
+				<control type="image">
+					<description>Default Background</description>
+					<width>560</width>
+					<height>315</height>
+					<texture border="9">item-background.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+					<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+				</control>	
+						
+				<control type="largeimage">
+					<description>Fanart</description>
+					<width>560</width>
+					<height>315</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>	
+				</control>
+				
+				<control type="group">
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<include>ControlsOpenCloseAnim</include>
+					
+					<control type="image">
+						<description>Genre Background</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>550</width>
+						<height>30</height>
+						<texture>background-dim.png</texture>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>	
+					
+					<control type="label">
+						<description>Genre</description>
+						<posx>10</posx>
+						<posy>20</posy>
+						<width>540</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>5</posx>
+						<posy>335</posy>
+						<width>270</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>555</posx>
+						<posy>335</posy>
+						<width>270</width>
+						<include>ListInfoView2CatLabel</include>			
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[20416]:[/COLOR][/UPPERCASE] $INFO[ListItem.Premiered]</label>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Premiered)</visible>
+					</control>
+					
+					<control type="group">
+						<visible>!IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideEpisodesListInfo2Plot)</visible>
+						
+						<control type="image">
+							<posx>5</posx>
+							<posy>355</posy>
+							<width>550</width>
+							<height>2</height>
+							<texture>separator3.png</texture>
+						</control>
+						
+						<control type="textbox">
+							<description>Plot</description>
+							<posx>5</posx>
+							<posy>370</posy>
+							<width>550</width>
+							<height>170</height>
+							<font>MediaInfoFont2</font>
+							<textcolor>MediaInfoColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>justify</align>
+							<label>$INFO[ListItem.Plot]</label>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollEpisodesListInfo2Plot)</autoscroll>
+							<include>ControlsOpenCloseAnim</include>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<include condition="Skin.String(EpisodesListInfo2Style,1)">EpisodesListInfo2ClassicStyle</include>
+			<include condition="Skin.String(EpisodesListInfo2Style,2) | Skin.String(EpisodesListInfo2Style,)">EpisodesListInfo2BannerStyle</include>
+			<include condition="Skin.String(EpisodesListInfo2Style,3)">EpisodesListInfo2IconStyle</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,68)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(68)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+</includes>

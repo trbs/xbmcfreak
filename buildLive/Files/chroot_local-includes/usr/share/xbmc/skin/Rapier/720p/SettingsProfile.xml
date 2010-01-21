@@ -1,0 +1,108 @@
+<window id="34">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<control type="group"> 	
+    		<include>BackgroundSystem</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>
+			<include>FullControlAreaBackground</include>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+		
+		<include>CommonScrollbar</include>
+		
+		<control type="panel" id="2">
+			<viewtype label="31103">Icon</viewtype>
+			<posx>40</posx>
+			<posy>85</posy>
+			<width>1200</width>
+			<height>555</height>
+			<pagecontrol>150</pagecontrol>	
+			<preloaditems>2</preloaditems>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<itemlayout height="180" width="200">		
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true" fallback="unknown-user.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>DefaultFont2</font>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor2</selectedcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="180" width="200">
+				<control type="image">
+					<description>Background</description>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>189</width>
+					<height>195</height>
+					<texture border="15">item-round-background2.png</texture>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true" fallback="unknown-user.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>DefaultFont2</font>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor2</selectedcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<include>DialogPopUpScreenDim</include>
+		
+		<control type="group">	
+			<description>Menu Bar Area</description>
+			<posy>MenuBarOffsetY</posy>		
+			<include>MenuBarImage</include>
+			<include>ProfileSettingsMenuBar</include>
+			<include>MenuBarOpenCloseAnim2</include>
+		</control>
+		
+		<control type="group">	
+			<description>Top Bar Area</description>		
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbProfilesSettings</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>
+		
+		<control type="group">
+			<description>Bottom Bar Area</description>
+			<posy>BottomPaneOffsetY</posy>
+			<include>InfoPaneImage</include>	
+			<include>InfoPaneProfileDetails</include>
+		</control>	
+	</controls>
+</window>

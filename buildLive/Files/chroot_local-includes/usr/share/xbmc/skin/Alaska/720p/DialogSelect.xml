@@ -1,0 +1,93 @@
+<!--Empty-->
+
+<window id="2000">
+	<defaultcontrol always="true">3</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>360</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>
+
+		<control type="image" id="0">
+			<description>Back Panel</description>
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>620</width>
+			<height>500</height>
+			<texture>favourites/favourites_panel.png</texture>
+			<colordiffuse>FavListPanel</colordiffuse>
+		</control>
+
+		<control type="label">
+			<include>DialogID</include>
+			<label>DialogSelect.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="list" id="3">
+			<posx>20</posx>
+			<posy>50</posy>
+			<width>340</width>
+			<height>382</height>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<itemlayout height="32">
+				<control type="image">
+					<width>340</width>
+					<height>30</height>
+					<texture>ButtonNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<width>330</width>
+					<height>30</height>
+					<info>ListItem.Label</info>
+					<scroll>false</scroll>
+				</control>
+			</itemlayout>
+			<focusedlayout height="32">
+				<control type="image">
+					<width>340</width>
+					<height>30</height>
+					<texture>ButtonFo.png</texture>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<width>330</width>
+					<height>30</height>
+					<textcolor>TextFocused</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="label" id="2">
+			<description>Number Of Files</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>140</width>
+			<label>-</label>
+		</control>
+
+		<control type="button" id="5">
+			<description>Manual</description>
+			<posx>400</posx>
+			<posy>10</posy>
+			<label>$LOCALIZE[368]</label>
+			<align>right</align>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+
+</window>

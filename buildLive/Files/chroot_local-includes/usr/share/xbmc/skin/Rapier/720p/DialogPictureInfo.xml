@@ -1,0 +1,93 @@
+<window id="139">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="390" y="180">true</origin>
+	</coordinates>
+	
+	<controls>		
+		<include>PictureInfoDialogBox</include>
+
+		<control type="label" id="1">
+			<include>DialogTitle2</include>
+			<label>$LOCALIZE[13406]</label>
+		</control>
+		
+		<control type="panel" id="5">
+			<posx>DialogMarginOffsetX</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>420</width>
+			<height>195</height>
+			<viewtype label="">list</viewtype>
+			<pagecontrol>101</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<onleft>101</onleft>
+			<onright>101</onright>
+			<itemlayout height="40" width="420">	
+				<control type="image">
+					<width>420</width>
+					<height>35</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>		
+				<control type="label">
+					<posx>5</posx>
+					<width>170</width>
+					<height>35</height>
+					<font>HeadFont2</font>
+					<textcolor>MediaInfoItemColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>175</posx>
+					<width>240</width>
+					<height>35</height>
+					<font>HeadFont2</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label2</info>
+				</control>		
+			</itemlayout>				
+			<focusedlayout height="40" width="420">
+				<control type="image">
+					<width>420</width>
+					<height>35</height>
+					<texture border="5">button-alt-focus.png</texture>
+				</control>									
+				<control type="label">
+					<posx>5</posx>
+					<width>170</width>
+					<height>35</height>
+					<font>HeadFont2</font>
+					<textcolor>MediaInfoItemColor</textcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>175</posx>
+					<width>240</width>
+					<height>35</height>
+					<font>HeadFont2</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<aligny>center</aligny>
+					<info>ListItem.Label2</info>
+				</control>		
+			</focusedlayout>
+		</control>
+					
+		<control type="spincontrol" id="101">
+			<description>Next Page</description>
+			<posx>422</posx>
+			<posy>278</posy>
+			<align>right</align>
+			<onup>5</onup>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,39 @@
+<window id="104">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>NotificationOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="623" y="4">Window.IsActive(133) | Window.IsActive(112)</origin>
+		<origin x="898" y="4">true</origin>
+	</coordinates>
+	
+	<controls>
+		<control type="image">
+			<width>125</width>
+			<height>35</height>
+			<texture border="8">special://skin/images/skin/top-bar-status-background.png</texture>
+		</control>
+
+		<control type="image">
+			<posx>8</posx>
+			<posy>2</posy>
+			<width>31</width>
+			<height>31</height>
+			<texture>volume.png</texture>
+			<include>TopBarStatusIconFadeAnim</include>
+		</control>
+		
+		<control type="label">
+			<posx>117</posx>
+			<width>80</width>
+			<height>35</height>
+			<font>VolumeFont</font>
+			<textcolor>TopBarStatusColor</textcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>$INFO[Player.Volume]</label>
+		</control>
+	</controls>
+</window>

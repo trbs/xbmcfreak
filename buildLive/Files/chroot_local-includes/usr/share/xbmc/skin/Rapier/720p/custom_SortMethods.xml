@@ -1,0 +1,184 @@
+<window type="dialog" id="3003">
+	<defaultcontrol always="true">200</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<control type="grouplist" id="200">
+			<description>Sort By Menu</description>
+			<posx>294</posx>
+			<posy>75</posy>
+			<width>229</width>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<include>MenuOpenCloseAnim</include>
+			<control type="image">
+				<include>MenuBarItemBigTopBorder</include>
+			</control>
+			<control type="togglebutton" id="23">
+				<description>Order By</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[21429] $LOCALIZE[21430]</label>
+				<altlabel>$LOCALIZE[21429] $LOCALIZE[21431]</altlabel>
+				<alttexturefocus border="6,0,11,0">menu-bar-item-focus.png</alttexturefocus>
+				<alttexturenofocus border="4,0,9,0">menu-bar-item-nofocus.png</alttexturenofocus>
+				<onclick>Container.SortDirection</onclick>
+				<visible>!Container.SortDirection(None)</visible>
+			</control>
+			<control type="button" id="1">
+				<description>Name</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[551]</label>
+				<onclick>Container.SetSortMethod(1)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>!Container.Content(Albums) + ![Window.IsActive(VideoLibrary) + Container.Content(Movies)] + !IsEmpty(Container.FolderPath)</visible>
+			</control>
+			<control type="button" id="17">
+				<description>Title</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[551]</label>
+				<onclick>Container.SetSortMethod(23)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="2">
+				<description>Type</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[564]</label>
+				<onclick>Container.SetSortMethod(6)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>IsEmpty(Container.FolderPath)</visible>
+			</control>
+			<control type="button" id="14">
+				<description>Title</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[556]</label>
+				<onclick>Container.SetSortMethod(9)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Songs)</visible>
+			</control>
+			<control type="button" id="3">
+				<description>Rating</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[563]</label>
+				<onclick>Container.SetSortMethod(17)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>[Window.IsActive(MusicLibrary) | Window.IsActive(VideoLibrary)] + [Container.Content(Songs) | Container.Content(Movies) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="button" id="4">
+				<description>Episodes</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[20360]</label>
+				<onclick>Container.SetSortMethod(7)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(TVShows)</visible>
+			</control>
+			<control type="button" id="5">
+				<description>Episode</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[20359]</label>
+				<onclick>Container.SetSortMethod(20)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Episodes)</visible>
+			</control>
+			<control type="button" id="6">
+				<description>Prod Code</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[20368]</label>
+				<onclick>Container.SetSortMethod(22)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Episodes)</visible>
+			</control>
+			<control type="button" id="7">
+				<description>Date</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[552]</label>
+				<onclick>Container.SetSortMethod(3)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(MusicFiles) | Window.IsActive(VideoFiles) | Window.IsActive(Scripts) | Container.Content(Episodes)] + !IsEmpty(Container.FolderPath)</visible>
+			</control>
+			<control type="button" id="8">
+				<description>Size</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[553]</label>
+				<onclick>Container.SetSortMethod(4)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(MusicFiles) | Window.IsActive(VideoFiles) | Window.IsActive(Scripts)] + !IsEmpty(Container.FolderPath)</visible>
+			</control>
+			<control type="button" id="9">
+				<description>File</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[561]</label>
+				<onclick>Container.SetSortMethod(5)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>[Window.IsActive(Pictures) | Window.IsActive(Programs) | Window.IsActive(MusicFiles) | Window.IsActive(VideoFiles) | Window.IsActive(Scripts)] + !IsEmpty(Container.FolderPath)</visible>
+			</control>
+			<control type="button" id="10">
+				<description>Album</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[558]</label>
+				<onclick>Container.SetSortMethod(13)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+			</control>
+			<control type="button" id="11">
+				<description>Artist</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[557]</label>
+				<onclick>Container.SetSortMethod(11)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+			</control>
+			<control type="button" id="12">
+				<description>Year</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[562]</label>
+				<onclick>Container.SetSortMethod(16)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>[Window.IsActive(MusicLibrary) | Window.IsActive(VideoLibrary)] + [Container.Content(Albums) | Container.Content(Movies) | Container.Content(TVShows)]</visible>
+			</control>
+			<control type="button" id="18">
+				<description>Runtime</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[2050]</label>
+				<onclick>Container.SetSortMethod(27)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="13">
+				<description>Track</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[554]</label>
+				<onclick>Container.SetSortMethod(7)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Songs)</visible>
+			</control>
+			<control type="button" id="15">
+				<description>Time</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[555]</label>
+				<onclick>Container.SetSortMethod(8)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Container.Content(Songs)</visible>
+			</control>
+			<control type="button" id="16">
+				<description>Usage</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[565]</label>
+				<onclick>Container.SetSortMethod(18)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Window.IsActive(Programs) + !IsEmpty(Container.FolderPath)</visible>
+			</control>
+			<control type="button" id="18">
+				<description>Playlist</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[559]</label>
+				<onclick>Container.SetSortMethod(19)</onclick>
+				<onclick>Dialog.Close(3003)</onclick>
+				<visible>Substring(Container.FolderPath,special://profile/playlists/,Left)</visible>
+			</control>
+			<control type="image">
+				<include>MenuBarItemBigBottomBorder</include>
+			</control>
+		</control>	
+	</controls>
+</window>

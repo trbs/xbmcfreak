@@ -1,0 +1,62 @@
+<window id="11">
+	<defaultcontrol>8</defaultcontrol>
+	
+	<controls>
+		<include>BackgroundVideoPlaying</include>
+		
+		<control type="mover" id="8">
+			<description>Top Left</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texturefocus border="6">calibrate-topleft-focus.png</texturefocus>
+			<texturenofocus border="6">calibrate-topleft-nofocus.png</texturenofocus>
+		</control>
+		
+		<control type="mover" id="9">
+			<description>Bottom Right</description>
+			<posx>700</posx>
+			<posy>500</posy>
+			<texturefocus border="6">calibrate-bottomright-focus.png</texturefocus>
+			<texturenofocus border="6">calibrate-bottomright-nofocus.png</texturenofocus>
+		</control>
+		
+		<control type="mover" id="10">
+			<description>Subtitle</description>
+			<posx>200</posx>
+			<posy>500</posy>
+			<texturefocus border="6">calibrate-subtitles-focus.png</texturefocus>
+			<texturenofocus border="6">calibrate-subtitles-nofocus.png</texturenofocus>
+		</control>
+		
+		<control type="resize" id="11">
+			<description>Pixel Aspect Ratio</description>
+			<posx>0</posx>
+			<posy>270</posy>
+			<width>288</width>
+			<height>288</height>
+			<texturefocus border="6">calibrate-pixelratio-focus.png</texturefocus>
+			<texturenofocus border="6">calibrate-pixelratio-nofocus.png</texturenofocus>
+		</control>
+		
+		<control type="group">	
+			<posy>50</posy>
+			
+			<control type="label" id="2">
+				<description>Coordinates</description>
+				<width>ScreenWidth</width>
+				<font>ScreenCalibrationFont</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>	
+			</control>
+			
+			<control type="label" id="3">
+				<description>Help Information</description>
+				<posy>40</posy>
+				<width>ScreenWidth</width>
+				<font>ScreenCalibrationFont</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>center</align>		
+			</control>	
+		</control>
+	</controls>	
+</window>

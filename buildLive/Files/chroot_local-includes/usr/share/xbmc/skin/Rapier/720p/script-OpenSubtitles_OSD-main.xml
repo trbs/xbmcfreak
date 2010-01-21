@@ -1,0 +1,254 @@
+<window>
+	<defaultcontrol>101</defaultcontrol>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>30</posx>
+		<posy>70</posy>
+	</coordinates>
+
+	<controls>
+		<include>OpenSubtitlesOSDDialogBox</include>
+		
+		<control type="label">
+			<posx>DialogMarginOffsetX</posx>
+			<posy>DialogHeadingOffsetY</posy>
+			<width>630</width>
+			<font>DialogHeadFont</font>
+			<textcolor>DialogHeadColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31301]</label>
+		</control>
+			
+		<control type="group">
+		  <!-- ** Required ** Do not change <id> or <type> -->
+			<control type="image">
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<width>630</width>
+				<height>60</height>
+				<texture border="5">button-nofocus.png</texture>
+			</control>
+			
+			<control type="group" id="110">
+				<control type="image" >
+					<description>page header tab icon</description>
+					<posx>45</posx>
+					<posy>64</posy>
+					<width>250</width>
+					<height>50</height>
+					<texture>opensubtitles/logo_opensubtitles.png</texture>      
+				</control>
+			</control>
+			
+			<control type="group" id="111">
+				<control type="image" >
+					<description>page header tab icon</description>
+					<posx>45</posx>
+					<posy>64</posy>
+					<width>250</width>
+					<height>50</height>
+					<texture>opensubtitles/Sublight_logo.png</texture>        
+				</control>
+			</control>
+		
+			<control type="group" id="112">
+				<control type="image" >
+					<description>page header tab icon</description>
+					<posx>45</posx>
+					<posy>64</posy>
+					<width>250</width>
+					<height>40</height>
+					<texture>opensubtitles/podnapisi.png</texture>
+					<visible>!Control.IsVisible(111) + !Control.IsVisible(110)</visible>
+				</control>
+			</control>
+				
+			<control type="label" id="300">
+				<description>textarea</description>
+				<posx>310</posx>	
+				<posy>477</posy>
+				<width>178</width>
+				<height>46</height>
+				<font>ButtonFont</font>
+				<textcolor>ButtonColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>    
+          
+			<control type="label" id="301">
+				<description>textarea</description>
+				<posx>380</posx>
+				<posy>477</posy>
+				<width>178</width>
+				<height>46</height>
+				<font>ButtonFont</font>
+				<textcolor>ButtonColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<aligny>center</aligny>
+				<focusedcolor>SelectedColor</focusedcolor>
+			</control>   
+             
+			<control type="image">
+				<posx>318</posx>
+				<posy>493</posy>
+				<width>54</width>
+				<height>14</height>
+				<texture>opensubtitles/icon_sync.png</texture>
+				<visible>True</visible>			
+			</control> 
+		
+			<control type="label" id="100">
+				<description>textarea</description>
+				<posx>295</posx>
+				<posy>72</posy>
+				<width>370</width>
+				<height>50</height>
+				<font>OpenSubtitlesSearchFont</font>
+				<textcolor>DefaultColor4</textcolor>
+				<aligny>top</aligny>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+
+		  <!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="120">
+				<posx>DialogMarginOffsetX</posx>
+				<posy>132</posy>
+				<width>630</width>
+				<height>333</height>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>121</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<onleft>120</onleft>
+				<onright>121</onright>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<itemlayout height="37">
+				<control type="image">
+					<width>630</width>
+					<height>35</height>
+					<texture border="5">button-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>11</posy>
+					<width>26</width>
+					<height>17</height>
+					<texture>special://skin/images/$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<width>90</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<aligny>center</aligny>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>			  
+				<control type="image">
+					<posx>135</posx>
+					<posy>16</posy>
+					<width>27</width>
+					<height>7</height>
+					<texture>opensubtitles/icon_sync.png</texture>
+					<visible>ListItem.property(sync)</visible>		
+				</control>   		  
+					<control type="label">
+					<posx>180</posx>
+					<posy>0</posy>
+					<width>345</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<aligny>center</aligny>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<posx>535</posx>
+					<posy>11</posy>
+					<width>90</width>
+					<height>17</height>
+					<texture>opensubtitles/info_window_icon_rating_star_$INFO[ListItem.ActualIcon].png</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="37">
+				<control type="image">
+					<width>630</width>
+					<height>35</height>
+					<texture border="5">button-alt-focus.png</texture>
+					<visible>!Control.HasFocus(120)</visible>
+				</control>
+				<control type="image">
+					<width>630</width>
+					<height>35</height>
+					<texture border="5">button-focus.png</texture>
+					<visible>Control.HasFocus(120)</visible>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>11</posy>
+					<width>26</width>
+					<height>17</height>
+					<texture>special://skin/images/$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<width>90</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<aligny>center</aligny>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="image">
+					<posx>135</posx>
+					<posy>16</posy>
+					<width>27</width>
+					<height>7</height>
+					<texture>opensubtitles/icon_sync.png</texture>
+					<visible>ListItem.property(sync)</visible>
+					<colordiffuse>DefaultColor</colordiffuse>
+				</control>   
+				<control type="label">
+					<posx>180</posx>
+					<posy>0</posy>
+					<width>345</width>
+					<height>35</height>
+					<font>DefaultFont</font>
+					<aligny>center</aligny>
+					<textcolor>DefaultColor</textcolor>
+					<selectedcolor>SelectedColor</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<posx>535</posx>
+					<posy>11</posy>
+					<width>90</width>
+					<height>17</height>
+					<texture>opensubtitles/info_window_icon_rating_star_$INFO[ListItem.ActualIcon].png</texture>
+				</control>
+			</focusedlayout>
+		</control>
+		
+		<control type="spincontrol" id="121">
+			<description>Next Page</description>
+			<posx>632</posx>
+			<posy>488</posy>
+			<onup>120</onup>
+		</control>
+	</control>
+	</controls>
+</window>

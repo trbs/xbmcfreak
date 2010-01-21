@@ -1,0 +1,209 @@
+<window id="135">
+	<defaultcontrol always="true">987</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<include>FullControlAreaBackground</include>
+		
+		<control type="group" id="505">		
+			<description>Menu Bar Area</description>		
+			<posy>MenuBarOffsetY</posy>	
+			<include>MenuBarImage</include>
+			<include>SongInfoMenuBar</include>
+			<include>MenuBarOpenCloseAnim2</include>
+			<visible>!Window.IsActive(MusicInformation)</visible>
+		</control>
+		
+		<control type="group">	
+			<description>Top Bar Area</description>
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbSongInfo</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>
+				
+		<control type="group" id="961">	
+			<posx>110</posx>
+			<posy>100</posy>
+			<visible>!Window.IsActive(MusicInformation)</visible>
+			<include>ControlsOpenCloseAnim</include>
+
+			<control type="group">
+				<posx>DialogMarginOffsetX</posx>
+				<posy>45</posy>
+				
+				<control type="image">
+					<description>Song Cover Image</description>
+					<width>300</width>
+					<height>300</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Default Song Cover Image</description>
+					<width>300</width>
+					<height>300</height>
+					<texture>defaultAudioBig.png</texture>
+					<aspectratio align="left">stretch</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Song Cover Image Reflection</description>
+					<posy>300</posy>
+					<width>300</width>
+					<height>300</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="reflection.png"/>
+					<aspectratio align="left" aligny="top">stretch</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>	
+			</control>
+			
+			<control type="image">
+				<description>Star Rating</description>
+				<posx>120</posx>
+				<posy>370</posy>
+				<width>140</width>
+				<height>40</height>
+				<info>ListItem.Rating</info>
+				<aspectratio align="left">keep</aspectratio>
+			</control>
+			
+			<control type="group">		
+				<control type="group">	
+					<posx>361</posx>
+					<posy>35</posy>
+
+					<control type="label">
+						<description>Title</description>
+						<width>660</width>
+						<font>FSMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Title] $INFO[ListItem.Year,(,)]</label>	
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="image">
+						<posy>34</posy>
+						<width>660</width>
+						<height>1</height>
+						<texture>separator.png</texture>
+					</control>
+					
+					<control type="label">
+						<description>Genre</description>
+						<posy>34</posy>
+						<width>600</width>
+						<font>FSMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<info>ListItem.Genre</info>		
+					</control>
+				</control>
+				
+				<control type="list" id="901">
+					<posx>361</posx>
+					<posy>105</posy>
+					<width>660</width>
+					<height>210</height>
+					<onup>987</onup>
+					<ondown>50</ondown>
+					<onleft>987</onleft>
+					<onright>61</onright>
+					<itemlayout width="660" height="35">
+						<control type="label">
+							<posx>5</posx>
+							<width>130</width>
+							<height>35</height>
+							<font>FSMediaInfoCatFont</font>
+							<aligny>center</aligny>
+							<textcolor>MediaInfoItemColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>
+						<control type="label">
+							<posx>150</posx>
+							<width>505</width>
+							<height>35</height>
+							<font>FSMediaInfoCatValueFont</font>
+							<aligny>center</aligny>
+							<textcolor>MediaInfoItemColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label fallback="31000">$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>	
+					<focusedlayout width="660" height="35">
+						<control type="image">
+							<width>660</width>
+							<height>35</height>
+							<texture border="5">button-alt-focus.png</texture>
+							<visible>Control.HasFocus(901)</visible>
+						</control>	
+						<control type="label">
+							<posx>5</posx>
+							<width>130</width>
+							<height>35</height>
+							<font>FSMediaInfoCatFont</font>
+							<aligny>center</aligny>
+							<textcolor>MediaInfoItemColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>
+						<control type="label">
+							<posx>150</posx>
+							<width>505</width>
+							<height>35</height>
+							<font>FSMediaInfoCatValueFont</font>
+							<aligny>center</aligny>
+							<textcolor>MediaInfoItemColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label fallback="31000">$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Artist</description>
+							<label>$LOCALIZE[557]</label>
+							<label2>$INFO[ListItem.Artist]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="2">
+							<description>Album</description>
+							<label>$LOCALIZE[558]</label>
+							<label2>$INFO[ListItem.Album]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="3">
+							<description>Track</description>
+							<label>$LOCALIZE[554]</label>
+							<label2>$INFO[ListItem.TrackNumber]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="4">
+							<description>Rating</description>
+							<label>$LOCALIZE[563]</label>
+							<label2>$INFO[ListItem.Rating]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="5">
+							<description>File Path</description>
+							<label>$LOCALIZE[21801]</label>
+							<label2>$INFO[ListItem.FileNameAndPath]</label2>
+							<onclick>-</onclick>
+						</item>
+						<item id="6">
+							<description>Comment</description>
+							<label>$LOCALIZE[569]</label>
+							<label2>$INFO[ListItem.Comment]</label2>
+							<onclick>-</onclick>
+						</item>
+					</content>
+				</control>
+			</control>		
+		</control>
+	</controls>		
+</window>

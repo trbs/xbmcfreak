@@ -1,0 +1,383 @@
+<!--Alaska-->
+
+<includes>
+	<include name="Viewtype_MusicWall">
+
+		<control type="group">
+			<posx>13</posx>
+			<posy>225</posy>
+			<visible>Control.IsVisible(50)</visible>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_MusicWallFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<control type="image">
+				<posx>-100</posx>
+				<posy>-100</posy>
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$INFO[Container.ListItemPosition(-9).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>-100</posx>
+				<posy>-100</posy>
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$INFO[Container.ListItemPosition(-8).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>-100</posx>
+				<posy>-100</posy>
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$INFO[Container.ListItemPosition(-7).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>6</posx>
+				<posy>6</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(-6).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>6</posx>
+				<posy>186</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(-5).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>6</posx>
+				<posy>366</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(-4).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>186</posx>
+				<posy>6</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(-3).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>186</posx>
+				<posy>186</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(-2).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>186</posx>
+				<posy>366</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(-1).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>906</posx>
+				<posy>6</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(9).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>906</posx>
+				<posy>186</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(10).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>906</posx>
+				<posy>366</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(11).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1086</posx>
+				<posy>6</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(12).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1086</posx>
+				<posy>186</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(13).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1086</posx>
+				<posy>366</posy>
+				<width>162</width>
+				<height>162</height>
+				<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[Container.ListItemPosition(14).Icon]</texture>
+				<bordertexture border="1">wall/musicwallframeNF.png</bordertexture>
+				<bordersize>1</bordersize>
+				<colordiffuse>WallIconDiffuse</colordiffuse>
+				<aspectratio stretchdiffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1300</posx>
+				<posy>1300</posy>
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$INFO[Container.ListItemPosition(15).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>1300</posx>
+				<posy>1300</posy>
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$INFO[Container.ListItemPosition(16).Icon]</texture>
+			</control>
+			<control type="image">
+				<posx>1300</posx>
+				<posy>1300</posy>
+				<width>1</width>
+				<height>1</height>
+				<texture background="true">$INFO[Container.ListItemPosition(17).Icon]</texture>
+			</control>
+		</control>
+		
+		<!-- Browser -->
+		<control type="panel" id="50">
+			<viewtype label="Wall">icon</viewtype>
+			<posx>373</posx>
+			<posy>225</posy>
+			<width>540</width>
+			<height>540</height>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<orientation>horizontal</orientation>
+			<onup>7000</onup>
+			<ondown>7000</ondown>
+			<preloaditems>2</preloaditems>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_MusicWallFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<itemlayout width="180" height="180">
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>wall/musicwallmatte.png</texture>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>162</width>
+					<height>162</height>
+					<fadetime>200</fadetime>
+					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="2">wall/musicwallframeNF.png</bordertexture>
+					<bordersize>1</bordersize>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
+					<aspectratio stretchdiffuse="false">stretch</aspectratio>
+				</control>				
+			</itemlayout>
+			<focusedlayout width="180" height="180">
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>wall/musicwallmatte.png</texture>
+					<colordiffuse>BackgroundColor</colordiffuse>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />						
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />					
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />	
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />					
+					</animation>					
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<fadetime>200</fadetime>
+					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />						
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />						
+					</animation>					
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>	
+					<aspectratio stretchdiffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>7</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>wall/musicwallframeNF.png</texture>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>					
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>						
+				</control>
+				<control type="image">
+					<posx>-7</posx>
+					<posy>-7</posy>
+					<width>188</width>
+					<height>188</height>
+					<texture>wall/musicwallframeF.png</texture>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="fade" start="0" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,-14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="200" />
+					</animation>							
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="fade" start="0" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,14" time="400" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="50" end="120" time="400" tween="back" easing="out" />
+					</animation>						
+				</control>				
+			</focusedlayout>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="backdrops/mask_5.png">common/white.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>backdrops/filter.png</texture>
+			<colordiffuse>BackgroundFilterColor</colordiffuse>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+
+		<control type="image">
+			<posx>10</posx>
+			<posy>311</posy>
+			<width>11</width>
+			<height>10</height>
+			<visible>Control.IsVisible(50)</visible>
+			<texture>common/white.png</texture>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+		</control>
+
+		<control type="image">
+			<posx>5</posx>
+			<posy>306</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Control.IsVisible(50)</visible>
+			<texture flipx="true">wall/WallArrow.png</texture>
+			<colordiffuse>WallArrowDiffuse</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+		</control>
+
+		<control type="image">
+			<posx>1260</posx>
+			<posy>311</posy>
+			<width>11</width>
+			<height>10</height>
+			<visible>Control.IsVisible(50)</visible>
+			<texture>common/white.png</texture>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+		</control>
+
+		<control type="image">
+			<posx>1255</posx>
+			<posy>306</posy>
+			<width>20</width>
+			<height>20</height>
+			<visible>Control.IsVisible(50)</visible>
+			<texture>wall/WallArrow.png</texture>
+			<colordiffuse>WallArrowDiffuse</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+		</control>
+
+	</include>
+
+</includes>

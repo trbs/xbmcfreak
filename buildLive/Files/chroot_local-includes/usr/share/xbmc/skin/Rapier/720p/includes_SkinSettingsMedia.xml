@@ -1,0 +1,141 @@
+<includes> 
+	<include name="MediaSkinSettings"> <!-- 3012 -->
+		<control type="grouplist" id="902">		
+			<description>Media Content Area</description>
+			<posx>385</posx>
+			<posy>140</posy>
+			<width>800</width>
+			<height>456</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>	
+			<onup>902</onup>
+			<ondown>902</ondown>
+			<onleft>850</onleft>
+			<visible>Skin.String(SkinSettingsCategory,3)</visible>
+			<control type="radiobutton" id="3000">
+				<description>Music Playing</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[31405]</label>
+				<selected>Skin.HasSetting(ExpandMusicPlayingSettings)</selected>
+				<onclick>Skin.Reset(ExpandMusicViewsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesViewsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsViewsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideoPlayingSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandMusicPlayingSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="3001">
+					<description>Enable Music Visualization / Artist Fanart In The Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31409]</label>
+					<selected>!Skin.HasSetting(DisableMusicPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(DisableMusicPlayingBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicPlayingSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="3002">
+					<description>Toggle Visualization / Artist Fanart For Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31407]</label>
+					<altlabel>             $LOCALIZE[31408]</altlabel>
+					<usealttexture>Skin.HasSetting(UseFanartForMusicPlayingBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(UseFanartForMusicPlayingBG)</onclick>
+					<enable>!Skin.HasSetting(DisableMusicPlayingBG)</enable>
+					<visible>Skin.HasSetting(ExpandMusicPlayingSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="3003">
+					<description>Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060]</label>
+					<selected>!Skin.HasSetting(DoNotDimMusicPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(DoNotDimMusicPlayingBG)</onclick>
+					<enable>!Skin.HasSetting(DisableMusicPlayingBG)</enable>
+					<visible>Skin.HasSetting(ExpandMusicPlayingSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="3012">
+					<description>Animate Fanart</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31063]</label>
+					<selected>Skin.HasSetting(AnimateFanartMusicPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(AnimateFanartMusicPlayingBG)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<enable>!Skin.HasSetting(DisableMusicPlayingBG) + Skin.HasSetting(UseFanartForMusicPlayingBG)</enable>
+					<visible>Skin.HasSetting(ExpandMusicPlayingSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="3004">
+				<description>Video Playing</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[31406]</label>
+				<selected>Skin.HasSetting(ExpandMusicPlayingSettings)</selected>
+				<onclick>Skin.Reset(ExpandMusicViewsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesViewsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsViewsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicPlayingSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandVideoPlayingSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="3005">
+					<description>Enable Video Playing In The Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31410]</label>
+					<selected>!Skin.HasSetting(DisableVideoPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(DisableVideoPlayingBG)</onclick>
+					<visible>Skin.HasSetting(ExpandVideoPlayingSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="3006">
+					<description>Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060]</label>
+					<selected>!Skin.HasSetting(DoNotDimVideoPlayingBG)</selected>
+					<onclick>Skin.ToggleSetting(DoNotDimVideoPlayingBG)</onclick>
+					<enable>!Skin.HasSetting(DisableVideoPlayingBG)</enable>
+					<visible>Skin.HasSetting(ExpandVideoPlayingSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="3007">
+				<description>Hide Top Media Menu Bar</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31400]</label>
+				<selected>Skin.HasSetting(HideMenuBar)</selected>
+				<onclick>Skin.ToggleSetting(HideMenuBar)</onclick>
+				<!--<include>SettingsItemOpenCloseAnim</include>-->
+			</control>
+			<control type="radiobutton" id="3008">
+				<description>Hide Media Flags</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31048]</label>
+				<selected>Skin.HasSetting(HideMediaFlags)</selected>
+				<onclick>Skin.ToggleSetting(HideMediaFlags)</onclick>
+				<visible>!System.Platform.Xbox</visible>
+				<!--<include>SettingsItemOpenCloseAnim</include>-->
+			</control>
+			<control type="radiobutton" id="3009">
+				<description>Hide Media Flags</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31048]</label>
+				<selected>!Skin.HasSetting(ShowMediaFlagsXbox)</selected>
+				<onclick>Skin.ToggleSetting(ShowMediaFlagsXbox)</onclick>
+				<visible>System.Platform.Xbox</visible>
+				<!--<include>SettingsItemOpenCloseAnim</include>-->
+			</control>
+			<control type="radiobutton" id="3010">
+				<description>Hide Studio Flags</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31049]</label>
+				<selected>Skin.HasSetting(HideStudioFlags)</selected>
+				<onclick>Skin.ToggleSetting(HideStudioFlags)</onclick>
+				<!--<include>SettingsItemOpenCloseAnim</include>-->
+			</control>
+			<control type="radiobutton" id="3011">
+				<description>Do Not Dim Screen</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31027]</label>
+				<selected>Skin.HasSetting(DoNotDimViewsScreen)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimViewsScreen)</onclick>
+				<!--<include>SettingsItemOpenCloseAnim</include>-->
+			</control>
+		</control>
+	</include>
+</includes>

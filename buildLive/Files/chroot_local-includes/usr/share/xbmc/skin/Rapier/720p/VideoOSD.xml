@@ -1,0 +1,179 @@
+<window type="dialog" id="2901">
+	<defaultcontrol>107</defaultcontrol>
+	<include>BottomPaneOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>646</posy>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(SliderDialog)">Conditional</animation>
+	
+			<include>PlayerControlsPaneImage</include>
+
+			<control type="grouplist" id="201">
+				<description>Player Settings Controls</description>
+				<posx>39</posx>
+				<posy>21</posy>
+				<width>300</width>
+				<height>35</height>
+				<itemgap>10</itemgap>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<onleft>-</onleft>
+				<onright>106</onright>
+				<orientation>horizontal</orientation>	
+				<control type="button" id="100">
+					<description>Exit Fullscreen</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-exit-fullscreen-focus.png</texturefocus>
+					<texturenofocus>osd-exit-fullscreen-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Dialog.Close(VideoOSD,true)</onclick>
+					<onclick>FullScreen</onclick>
+					<onleft>109</onleft>
+				</control>		
+				<control type="button" id="101">
+					<description>Bookmarks</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-bookmarks-focus.png</texturefocus>
+					<texturenofocus>osd-bookmarks-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>ActivateWindow(VideoBookmarks)</onclick>
+				</control>
+				<control type="button" id="115">
+					<description>TVShow Subtitles</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-subtitles-focus.png</texturefocus>
+					<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+					<onclick>RunScript(special://home/scripts/OpenSubtitles_OSD/default.py, [TV]$INFO[VideoPlayer.Season] $INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVshowtitle][/TV])</onclick>
+					<pulseonselect>false</pulseonselect>
+					<visible>Skin.HasSetting(ShowOpenSubtitlesOSDBtn) + !IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				</control>
+				<control type="button" id="116">
+					<description>Movie Subtitles</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-subtitles-focus.png</texturefocus>
+					<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+					<onclick>RunScript(special://home/scripts/OpenSubtitles_OSD/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
+					<pulseonselect>false</pulseonselect>
+					<visible>Skin.HasSetting(ShowOpenSubtitlesOSDBtn) + !IsEmpty(VideoPlayer.Title) + IsEmpty(VideoPlayer.TVShowTitle)</visible>
+				</control>
+				<control type="button" id="102">
+					<description>Audio</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-audio-settings-focus.png</texturefocus>
+					<texturenofocus>osd-audio-settings-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+				</control>		
+				<control type="button" id="103">
+					<description>Video</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-video-settings-focus.png</texturefocus>
+					<texturenofocus>osd-video-settings-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+				</control>
+				<control type="button" id="114">
+					<description>DVD Menu</description>
+					<width>35</width>
+					<height>35</height>
+					<texturefocus>osd-dvd-focus.png</texturefocus>
+					<texturenofocus>osd-dvd-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(ShowVideoMenu)</onclick>
+					<visible>VideoPlayer.HasMenu</visible>
+					<onright>106</onright>
+				</control>
+			</control>
+		
+			<control type="grouplist" id="202">
+				<description>Player Controls</description>
+				<posx>485</posx>
+				<posy>14</posy>
+				<width>310</width>
+				<height>50</height>
+				<itemgap>10</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>	
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<onleft>114</onleft>
+				<onright>-</onright>
+				<control type="button" id="106">
+					<description>Skip Prev</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-skip-prev-focus.png</texturefocus>
+					<texturenofocus>osd-skip-prev-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="105">
+					<description>Rewind</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-rewind-focus.png</texturefocus>
+					<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="button" id="104">
+					<description>Stop</description>
+					<posy>2</posy>
+					<width>46</width>
+					<height>46</height>
+					<texturefocus>osd-stop-focus.png</texturefocus>
+					<texturenofocus>osd-stop-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="togglebutton" id="107">
+					<description>Pause/Play</description>
+					<posy>2</posy>
+					<width>46</width>
+					<height>46</height>
+					<texturefocus>osd-pause-focus.png</texturefocus>
+					<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+					<alttexturefocus>osd-play-focus.png</alttexturefocus>
+					<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="108">
+					<description>Forward</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-forward-focus.png</texturefocus>
+					<texturenofocus>osd-forward-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>		
+				<control type="button" id="109">
+					<description>Skip Next</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-skip-next-focus.png</texturefocus>
+					<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

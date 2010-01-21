@@ -1,0 +1,122 @@
+<window id="2007">
+	<defaultcontrol>2</defaultcontrol>
+	
+	<controls>
+		<control type="group">		
+			<visible>Player.ShowInfo + Player.HasAudio</visible>
+			<include>FSMediaInfoBackground</include>
+			<include>FSMediaInfoOpenCloseAnim</include>
+			
+			<control type="image">
+				<description>Cover</description>
+				<posx>20</posx>
+				<posy>5</posy>
+				<width>130</width>
+				<height>130</height>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			
+			<control type="group">			
+				<posx>170</posx>
+	
+				<control type="label">
+					<description>Title/Year</description>
+					<posy>5</posy>
+					<width>980</width>
+					<font>SeekBarMediaInfoHeadFont</font>
+					<textcolor>MediaInfoHeadColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[MusicPlayer.Title] $INFO[MusicPlayer.Year,(,)]</label>
+					<scroll>yes</scroll>
+				</control>
+				
+				<control type="label">
+					<description>System Time</description>
+					<posx>1090</posx>
+					<posy>10</posy>
+					<width>130</width>
+					<font>SeekBarMediaInfoFont</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<info>System.Time</info>
+				</control>
+					
+				<control type="label">
+					<description>Artist/Album</description>
+					<posy>35</posy>
+					<width>900</width>
+					<font>SeekBarMediaInfoHeadFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[MusicPlayer.Artist,$LOCALIZE[557]: ] $INFO[MusicPlayer.Album,| $LOCALIZE[558]: ]</label>
+				</control>
+				
+				<control type="image">
+					<description>Star Rating</description>
+					<posy>65</posy>
+					<width>160</width>
+					<height>25</height>
+					<info>MusicPlayer.Rating</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+
+				<control type="label">
+					<description>Playlist Pos No</description>
+					<posx>1090</posx>
+					<posy>55</posy>
+					<font>SeekBarMediaInfoFont</font>
+					<textcolor>MediaInfoItemColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<label>$INFO[MusicPlayer.PlaylistPosition,$LOCALIZE[554]: ] $INFO[MusicPlayer.PlaylistLength,/ ]</label>
+					<visible>!MusicPartyMode.Enabled</visible>
+				</control>
+				
+				<control type="label">
+					<description>Next Track</description>
+					<posx>1090</posx>
+					<posy>78</posy>
+					<width>535</width>
+					<font>SeekBarMediaInfoFont</font>
+					<textcolor>MediaInfoItemColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<label>$INFO[MusicPlayer.offset(1).Artist,$LOCALIZE[209]: ] $INFO[MusicPlayer.offset(1).Title,- ]</label>
+				</control>
+
+				<control type="label">
+					<description>Elapsed/Duration Time</description>
+					<posy>100</posy>
+					<font>SeekBarMediaInfoProgressFont</font>
+					<textcolor>ProgressColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[MusicPlayer.Time] $INFO[Player.Duration,/ ]</label>
+				</control>
+				
+				<include>RewindSpeedLabels</include>
+				<include>FastForwardSpeedLabels</include>
+
+				<control type="label">
+					<description>Party Mode</description>
+					<posx>1090</posx>
+					<posy>100</posy>
+					<font>SeekBarMediaInfoProgressFont</font>
+					<textcolor>ProgressColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<label>$LOCALIZE[589]</label>
+					<visible>MusicPartyMode.Enabled</visible>
+				</control>
+					
+				<control type="progress">
+					<description>Progressbar</description>
+					<posy>119</posy>
+					<width>1090</width>
+					<info>Player.Progress</info>
+				</control>
+			</control>			
+		</control>
+	</controls>
+</window>

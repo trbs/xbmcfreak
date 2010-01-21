@@ -1,0 +1,967 @@
+<window type="dialog" id="3017">
+	<defaultcontrol always="true">900</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<control type="grouplist" id="900"> <!-- 1034 -->
+			<description>Music View Options Menu</description>
+			<posx>10</posx>
+			<posy>75</posy>
+			<width>316</width>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible>
+			<include>MenuOpenCloseAnim</include>
+			<control type="image">
+				<include>MenuBarItemViewOptionsTopBorder</include>
+			</control>
+			<control type="radiobutton" id="1000">
+				<description>Icon Hide Label</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMusicIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicIconLabel)</onclick>
+				<visible>Skin.String(CurrentViewMode,50) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1001">
+				<description>Big Icon Hide Label</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMusicBigIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicBigIconLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,51) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1003">
+				<description>Thumbnail Hide Label</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMusicThumbnailLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicThumbnailLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,63) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1032">
+				<description>Thumbnail Do Not Dim Cover</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31424]</label>
+				<selected>Skin.HasSetting(DoNotDimMusicThumbnailCover)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimMusicThumbnailCover)</onclick>	
+				<visible>Skin.String(CurrentViewMode,63) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1004">
+				<description>List Hide Cover</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31045]</label>
+				<selected>Skin.HasSetting(HideMusicListCover)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicListCover)</onclick>
+				<visible>Skin.String(CurrentViewMode,52)</visible>
+			</control>
+			<control type="radiobutton" id="1005">
+				<description>List Hide Fanart</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideMusicListFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicListFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,52) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1006">
+				<description>List Info 2 Use List Style 1 (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31418]</label>
+				<selected>Skin.String(MusicListInfo2Style,1)</selected>
+				<onclick>Skin.SetString(MusicListInfo2Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(67)</onclick>
+				<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1007">
+				<description>List Info 2 Use List Style 2 (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31417]</label>
+				<selected>Skin.String(MusicListInfo2Style,2) | Skin.String(MusicListInfo2Style,)</selected>
+				<onclick>Skin.SetString(MusicListInfo2Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(67)</onclick>
+				<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1008">
+				<description>List Info 2 Use List Style 3 (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31419]</label>
+				<selected>Skin.String(MusicListInfo2Style,3)</selected>
+				<onclick>Skin.SetString(MusicListInfo2Style,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(67)</onclick>
+				<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1009">
+				<description>List Info 2 Hide Description (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31041]</label>
+				<selected>Skin.HasSetting(HideAlbumsListInfo2Description)</selected>
+				<onclick>Skin.ToggleSetting(HideAlbumsListInfo2Description)</onclick>
+				<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1010">
+				<description>List Info 2 Do Not Auto Scroll Description (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31416]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollAlbumsListInfo2Description)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollAlbumsListInfo2Description)</onclick>
+				<enable>!Skin.HasSetting(HideAlbumsListInfo2Description)</enable>
+				<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1011">
+				<description>List Info Hide Fanart</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideMusicListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,62) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1012">
+				<description>Wrap List Info Use Wrap Style 1 (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31413]</label>
+				<selected>Skin.String(MusicWrapListStyle,1) | Skin.String(MusicWrapListStyle,)</selected>
+				<onclick>Skin.SetString(MusicWrapListStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1013">
+				<description>Wrap List Info Use Wrap Style 2 (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31411]</label>
+				<selected>Skin.String(MusicWrapListStyle,2)</selected>
+				<onclick>Skin.SetString(MusicWrapListStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1014">
+				<description>Wrap List Info Use Wrap Style 3 (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31412]</label>
+				<selected>Skin.String(MusicWrapListStyle,3)</selected>
+				<onclick>Skin.SetString(MusicWrapListStyle,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1015">
+				<description>Wrap List Info Hide Media Info Dialog (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31414]</label>
+				<selected>Skin.HasSetting(HideMusicWrapListMediaInfoDialog)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicWrapListMediaInfoDialog)</onclick>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1016">
+				<description>Wrap List Info Hide Album Case (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31415]</label>
+				<selected>Skin.HasSetting(HideMusicWrapListInfoCase)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicWrapListInfoCase)</onclick>
+				<enable>!Skin.HasSetting(HideMusicWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1017">
+				<description>Wrap List Info Hide Description (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31041]</label>
+				<selected>Skin.HasSetting(HideMusicWrapListInfoDescription)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicWrapListInfoDescription)</onclick>
+				<enable>!Skin.HasSetting(HideMusicWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1018">
+				<description>Wrap List Info Do Not Auto Scroll Description (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31416]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollMusicWrapListInfoDescription)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollMusicWrapListInfoDescription)</onclick>
+				<enable>!Skin.HasSetting(HideMusicWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1019">
+				<description>Wrap List Info Hide Wrap List Shadow (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31421]</label>
+				<selected>Skin.HasSetting(HideMusicWrapListInfoShadow)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicWrapListInfoShadow)</onclick>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums) + ![Skin.String(MusicWrapListStyle,) | Skin.String(MusicWrapListStyle,1)]</visible>
+			</control>
+			<control type="radiobutton" id="1020">
+				<description>Wrap List Info Hide Fanart (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideMusicWrapListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideMusicWrapListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,64) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1033">
+				<description>Wall Do Not Dim Cover (Albums)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31424]</label>
+				<selected>Skin.HasSetting(DoNotDimMusicWallCover)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimMusicWallCover)</onclick>	
+				<visible>Skin.String(CurrentViewMode,70) + Container.Content(Albums)</visible>
+			</control>
+			<control type="radiobutton" id="1021">
+				<description>Do Not Dim Fanart (Global)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31047]</label>
+				<selected>Skin.HasSetting(DoNotDimMusicFanart)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimMusicFanart)</onclick>
+				<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,62) | Skin.String(CurrentViewMode,64)] 
+				+ [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1022">
+				<description>Animate Fanart (Global)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31063]</label>
+				<selected>Skin.HasSetting(AnimateMusicFanart)</selected>
+				<onclick>Skin.ToggleSetting(AnimateMusicFanart)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,62) | Skin.String(CurrentViewMode,64)] 
+				+ [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+			</control>
+			<control type="radiobutton" id="1023">
+				<description>Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,50)</visible>
+			</control>
+			<control type="radiobutton" id="1024">
+				<description>Big Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideBigIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideBigIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,51)</visible>
+			</control>
+			<control type="radiobutton" id="1025">
+				<description>Wide Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideWideIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideWideIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,60)</visible>
+			</control>
+			<control type="radiobutton" id="1026">
+				<description>Thumbnail Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideThumbnailViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideThumbnailViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,63)</visible>
+			</control>
+			<control type="radiobutton" id="1027">
+				<description>List Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,52)</visible>
+			</control>
+			<control type="radiobutton" id="1028">
+				<description>List Info Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,62)</visible>
+			</control>
+			<control type="radiobutton" id="1030">
+				<description>List Info 2 Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfo2ViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfo2ViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,67)</visible>
+			</control>
+			<control type="radiobutton" id="1031">
+				<description>Wrap Info Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWrapInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,64)</visible>
+			</control>
+			<control type="radiobutton" id="1034">
+				<description>Wall Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWallViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWallViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,70)</visible>
+			</control>
+			<control type="image">
+				<include>MenuBarItemViewOptionsBottomBorder</include>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="900"> <!-- 2070 -->
+			<description>Videos View Options Menu</description>
+			<posx>10</posx>
+			<posy>75</posy>
+			<width>300</width>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<visible>Window.IsActive(VideoFiles) | Window.IsActive(VideoLibrary)</visible>
+			<include>MenuOpenCloseAnim</include>
+			<control type="image">
+				<include>MenuBarItemViewOptionsTopBorder</include>
+			</control>
+			<control type="radiobutton" id="2000">
+				<description>Icon Hide Label (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMoviesIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesIconLabel)</onclick>
+				<visible>Skin.String(CurrentViewMode,50) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2001">
+				<description>Big Icon Hide Label (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideMoviesBigIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesBigIconLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,51) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2002">
+				<description>Wide Icon Hide Overlay (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideMoviesWideIconOverlay)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWideIconOverlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,55) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2003">
+				<description>Thumbnail Hide Overlay (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideMoviesThumbnailOverlay)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesThumbnailOverlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,54) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2068">
+				<description>Thumbnail Do Not Dim Cover (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31424]</label>
+				<selected>Skin.HasSetting(DoNotDimMoviesThumbnailCover)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimMoviesThumbnailCover)</onclick>	
+				<visible>Skin.String(CurrentViewMode,54) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2004">
+				<description>List Hide Cover (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31045]</label>
+				<selected>Skin.HasSetting(HideMoviesListCover)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesListCover)</onclick>	
+				<visible>Skin.String(CurrentViewMode,52) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2005">
+				<description>List Hide Fanart (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideMoviesListFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesListFanart)</onclick>	
+				<visible>Skin.String(CurrentViewMode,52) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2006">
+				<description>List Info Hide Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideMoviesListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesListInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,58) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2007">
+				<description>List Info Use Full Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31420]</label>
+				<selected>Skin.HasSetting(UseMoviesListInfoFullPlot)</selected>
+				<onclick>Skin.ToggleSetting(UseMoviesListInfoFullPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,58) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2008">
+				<description>List Info Do Not Auto Scroll Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollMoviesListInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,58) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2009">
+				<description>List Info Hide Fanart (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideMoviesListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,58) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2010">
+				<description>List Info 2 Use List Style 1 (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31418]</label>
+				<selected>Skin.String(MoviesListInfo2Style,1)</selected>
+				<onclick>Skin.SetString(MoviesListInfo2Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(66)</onclick>
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2011">
+				<description>List Info 2 Use List Style 2 (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31417]</label>
+				<selected>Skin.String(MoviesListInfo2Style,2) | Skin.String(MoviesListInfo2Style,)</selected>
+				<onclick>Skin.SetString(MoviesListInfo2Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(66)</onclick>
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2012">
+				<description>List Info 2 Use List Style 3 (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31419]</label>
+				<selected>Skin.String(MoviesListInfo2Style,3)</selected>
+				<onclick>Skin.SetString(MoviesListInfo2Style,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(66)</onclick>
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2013">
+				<description>List Info 2 Hide Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideMoviesListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesListInfo2Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2014">
+				<description>List Info 2 Use Full Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31420]</label>
+				<selected>Skin.HasSetting(UseMoviesListInfo2FullPlot)</selected>
+				<onclick>Skin.ToggleSetting(UseMoviesListInfo2FullPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2015">
+				<description>List Info 2 Do Not Auto Scroll Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollMoviesListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollMoviesListInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(HideMoviesListInfo2Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2016">
+				<description>List Info 2 Hide Overlay (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideMoviesListInfo2Overlay)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesListInfo2Overlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2017">
+				<description>Wrap List Info Use Wrap Style 1 (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31413]</label>
+				<selected>Skin.String(MoviesWrapListInfoStyle,1) | Skin.String(MoviesWrapListInfoStyle,)</selected>
+				<onclick>Skin.SetString(MoviesWrapListInfoStyle,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2018">
+				<description>Wrap List Info Use Wrap Style 2 (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31411]</label>
+				<selected>Skin.String(MoviesWrapListInfoStyle,2)</selected>
+				<onclick>Skin.SetString(MoviesWrapListInfoStyle,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2019">
+				<description>Wrap List Info Use Wrap Style 3 (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31412]</label>
+				<selected>Skin.String(MoviesWrapListInfoStyle,3)</selected>
+				<onclick>Skin.SetString(MoviesWrapListInfoStyle,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2020">
+				<description>Wrap List Info Hide Media Info Dialog (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31414]</label>
+				<selected>Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWrapListMediaInfoDialog)</onclick>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2021">
+				<description>Wrap List Info Hide DVD Case (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31402]</label>
+				<selected>Skin.HasSetting(HideMoviesWrapListInfoCase)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoCase)</onclick>
+				<enable>!Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2022">
+				<description>Wrap List Info Hide Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideMoviesWrapListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoPlot)</onclick>
+				<enable>!Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2023">
+				<description>Wrap List Info Use Full Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31420]</label>
+				<selected>Skin.HasSetting(UseMoviesWrapListInfoFullPlot)</selected>
+				<onclick>Skin.ToggleSetting(UseMoviesWrapListInfoFullPlot)</onclick>
+				<enable>!Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2024">
+				<description>Wrap List Info Do Not Auto Scroll Plot (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollMoviesWrapListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollMoviesWrapListInfoPlot)</onclick>
+				<enable>!Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2025">
+				<description>Wrap List Info Hide Overlay (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideMoviesWrapListInfoOverlay)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoOverlay)</onclick>
+				<enable>!Skin.HasSetting(HideMoviesWrapListMediaInfoDialog)</enable>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2026">
+				<description>Wrap List Info Hide Wrap List Shadow (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31421]</label>
+				<selected>Skin.HasSetting(HideMoviesWrapListInfoShadow)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoShadow)</onclick>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies) + ![Skin.String(MoviesWrapListInfoStyle,) | Skin.String(MoviesWrapListInfoStyle,1)]</visible>
+			</control>
+			<control type="radiobutton" id="2027">
+				<description>Wrap List Info Hide Fanart (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideMoviesWrapListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2028">
+				<description>Fanart Change Focus Position To The Center (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31050]</label>
+				<selected>Skin.HasSetting(ChangeMoviesFanartViewFocusPos)</selected>
+				<onclick>Skin.ToggleSetting(ChangeMoviesFanartViewFocusPos)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Skin.String(CurrentViewMode,59) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2029">
+				<description>Fanart Hide Overlay (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideMoviesFanartViewOverlay)</selected>
+				<onclick>Skin.ToggleSetting(HideMoviesFanartViewOverlay)</onclick>
+				<visible>Skin.String(CurrentViewMode,59) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2069">
+				<description>Wall Do Not Dim Cover (Movies)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31424]</label>
+				<selected>Skin.HasSetting(DoNotDimMoviesWallCover)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimMoviesWallCover)</onclick>	
+				<visible>Skin.String(CurrentViewMode,69) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2030">
+				<description>Do Not Dim Fanart (Movies) (Global)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31047]</label>
+				<selected>Skin.HasSetting(DoNotDimMoviesFanart)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimMoviesFanart)</onclick>
+				<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,53)
+				| Skin.String(CurrentViewMode,59) | Skin.String(CurrentViewMode,64)] + Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2031">
+				<description>Animate Fanart (Movies) (Global)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31063]</label>
+				<selected>Skin.HasSetting(AnimateMoviesFanart)</selected>
+				<onclick>Skin.ToggleSetting(AnimateMoviesFanart)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,53)
+				| Skin.String(CurrentViewMode,59) | Skin.String(CurrentViewMode,64)] + Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="radiobutton" id="2032">
+				<description>Icon Hide Label (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideTVShowsIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsIconLabel)</onclick>
+				<visible>Skin.String(CurrentViewMode,50) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2033">
+				<description>Big Icon Hide Label (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31042]</label>
+				<selected>Skin.HasSetting(HideTVShowsBigIconLabel)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsBigIconLabel)</onclick>	
+				<visible>Skin.String(CurrentViewMode,51) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2034">
+				<description>Wide Icon Hide Overlay (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideEpisodesWideIconOverlay)</selected>
+				<onclick>Skin.ToggleSetting(HideEpisodesWideIconOverlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,57) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2035">
+				<description>List Hide Cover (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31045]</label>
+				<selected>Skin.HasSetting(HideTVShowsListCover)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsListCover)</onclick>	
+				<visible>Skin.String(CurrentViewMode,52) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2036">
+				<description>List Hide Cover (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31045]</label>
+				<selected>Skin.HasSetting(HideEpisodesListCover)</selected>
+				<onclick>Skin.ToggleSetting(HideEpisodesListCover)</onclick>
+				<visible>Skin.String(CurrentViewMode,52) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2037">
+				<description>List Hide Fanart (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideTVShowsListFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsListFanart)</onclick>	
+				<visible>Skin.String(CurrentViewMode,52) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="radiobutton" id="2038">
+				<description>List Info Hide Cover (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31045]</label>
+				<selected>Skin.HasSetting(HideEpisodesListInfoCover)</selected>
+				<onclick>Skin.ToggleSetting(HideEpisodesListInfoCover)</onclick>
+				<visible>Skin.String(CurrentViewMode,61) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2039">
+				<description>List Info Hide Plot (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideTVShowsListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsListInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,61) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2040">
+				<description>List Info Do Not Auto Scroll Plot (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollTVShowsListInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,61) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2041">
+				<description>List Info Hide Plot (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideEpisodesListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(HideEpisodesListInfoPlot)</onclick>
+				<visible>Skin.String(CurrentViewMode,61) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2042">
+				<description>List Info Do Not Auto Scroll Plot (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollEpisodesListInfoPlot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollEpisodesListInfoPlot)</onclick>
+				<visible>[Skin.String(CurrentViewMode,61) | Skin.String(CurrentViewMode,65)] + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2043">
+				<description>List Info Hide Fanart (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31043]</label>
+				<selected>Skin.HasSetting(HideTVShowsListInfoFanart)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsListInfoFanart)</onclick>
+				<visible>Skin.String(CurrentViewMode,61) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="radiobutton" id="2044">
+				<description>List Info 2 Use List Style 1 (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31418]</label>
+				<selected>Skin.String(TVShowsListInfo2Style,1)</selected>
+				<onclick>Skin.SetString(TVShowsListInfo2Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(65)</onclick>
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2045">
+				<description>List Info 2 Use List Style 2 (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31417]</label>
+				<selected>Skin.String(TVShowsListInfo2Style,2) | Skin.String(TVShowsListInfo2Style,)</selected>
+				<onclick>Skin.SetString(TVShowsListInfo2Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(65)</onclick>
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2046">
+				<description>List Info 2 Use List Style 3 (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31419]</label>
+				<selected>Skin.String(TVShowsListInfo2Style,3)</selected>
+				<onclick>Skin.SetString(TVShowsListInfo2Style,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(65)</onclick>
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2047">
+				<description>List Info 2 Hide Plot (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideTVShowsListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsListInfo2Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2048">
+				<description>List Info 2 Do Not Auto Scroll Plot (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollTVShowsListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollTVShowsListInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(HideTVShowsListInfo2Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2049">
+				<description>List Info 2 Hide Overlay (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideTVShowsListInfo2Overlay)</selected>
+				<onclick>Skin.ToggleSetting(HideTVShowsListInfo2Overlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,65) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="radiobutton" id="2050">
+				<description>List Info 2 Use List Style 1 (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31418]</label>
+				<selected>Skin.String(EpisodesListInfo2Style,1)</selected>
+				<onclick>Skin.SetString(EpisodesListInfo2Style,1)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(68)</onclick>
+				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2051">
+				<description>List Info 2 Use List Style 2 (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31417]</label>
+				<selected>Skin.String(EpisodesListInfo2Style,) | Skin.String(EpisodesListInfo2Style,2)</selected>
+				<onclick>Skin.SetString(EpisodesListInfo2Style,2)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(68)</onclick>
+				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2052">
+				<description>List Info 2 Use List Style 3 (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor2]$LOCALIZE[31423][/COLOR] | $LOCALIZE[31419]</label>
+				<selected>Skin.String(EpisodesListInfo2Style,3)</selected>
+				<onclick>Skin.SetString(EpisodesListInfo2Style,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<onclick>Container.SetViewMode(68)</onclick>
+				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2053">
+				<description>List Info 2 Hide Plot (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31044]</label>
+				<selected>Skin.HasSetting(HideEpisodesListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(HideEpisodesListInfo2Plot)</onclick>
+				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2054">
+				<description>List Info 2 Do Not Auto Scroll Plot (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31401]</label>
+				<selected>Skin.HasSetting(DoNotAutoScrollEpisodesListInfo2Plot)</selected>
+				<onclick>Skin.ToggleSetting(DoNotAutoScrollEpisodesListInfo2Plot)</onclick>
+				<enable>!Skin.HasSetting(HideEpisodesListInfo2Plot)</enable>
+				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2055">
+				<description>List Info 2 Hide Overlay (Episodes)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>$LOCALIZE[31046]</label>
+				<selected>Skin.HasSetting(HideEpisodesListInfo2Overlay)</selected>
+				<onclick>Skin.ToggleSetting(HideEpisodesListInfo2Overlay)</onclick>	
+				<visible>Skin.String(CurrentViewMode,68) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2056">
+				<description>Do Not Dim Fanart (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31047]</label>
+				<selected>Skin.HasSetting(DoNotDimTVShowsFanart)</selected>
+				<onclick>Skin.ToggleSetting(DoNotDimTVShowsFanart)</onclick>
+				<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,61)] 
+				+ [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="radiobutton" id="2057">
+				<description>Animate Fanart (TV Shows)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31063]</label>
+				<selected>Skin.HasSetting(AnimateTVShowsFanart)</selected>
+				<onclick>Skin.ToggleSetting(AnimateTVShowsFanart)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,61)] 
+				+ [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="radiobutton" id="2058">
+				<description>Use Poster For Covers (TV Shows) (Global)</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31404]</label>
+				<selected>Skin.HasSetting(UseTVShowsPosterCover)</selected>
+				<onclick>Skin.ToggleSetting(UseTVShowsPosterCover)</onclick>
+				<onclick>Dialog.Close(3017)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+			</control>
+			<control type="radiobutton" id="2059">
+				<description>Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,50)</visible>
+			</control>
+			<control type="radiobutton" id="2060">
+				<description>Big Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideBigIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideBigIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,51)</visible>
+			</control>
+			<control type="radiobutton" id="2061">
+				<description>Wide Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideWideIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideWideIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,55) | Skin.String(CurrentViewMode,56) | Skin.String(CurrentViewMode,57)</visible>
+			</control>
+			<control type="radiobutton" id="2062">
+				<description>Thumbnail Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideThumbnailViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideThumbnailViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,54)</visible>
+			</control>
+			<control type="radiobutton" id="2063">
+				<description>List Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,52)</visible>
+			</control>
+			<control type="radiobutton" id="2064">
+				<description>List Info Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,61)</visible>
+			</control>
+			<control type="radiobutton" id="2065">
+				<description>List Info 2 Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListInfo2ViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListInfo2ViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,65) | Skin.String(CurrentViewMode,68)</visible>
+			</control>
+			<control type="radiobutton" id="2066">
+				<description>Wrap Info Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWrapInfoViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWrapInfoViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,53)</visible>
+			</control>
+			<control type="radiobutton" id="2067">
+				<description>Fanart Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowFanartViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowFanartViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,59)</visible>
+			</control>
+			<control type="radiobutton" id="2070">
+				<description>Wall Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>!Skin.HasSetting(ShowWallViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(ShowWallViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,69)</visible>
+			</control>
+			<control type="image">
+				<include>MenuBarItemViewOptionsBottomBorder</include>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="900"> <!-- 3002 -->
+			<description>Other View Options Menu</description>
+			<posx>10</posx>
+			<posy>75</posy>
+			<width>300</width>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<visible>Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(Scripts) | Window.IsActive(VideoPlaylist) | Window.IsActive(MusicPlaylist)</visible>
+			<include>MenuOpenCloseAnim</include>
+			<control type="image">
+				<include>MenuBarItemViewOptionsTopBorder</include>
+			</control>
+			<control type="radiobutton" id="3000">
+				<description>Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,50)</visible>
+			</control>
+			<control type="radiobutton" id="3001">
+				<description>Big Icon Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideBigIconViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideBigIconViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,51)</visible>
+			</control>
+			<control type="radiobutton" id="3002">
+				<description>List Hide Scrollbar</description>
+				<include>MenuBarItemViewOptionsRadioBtn</include>
+				<label>[COLOR=MenuItemColor3]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+				<selected>Skin.HasSetting(HideListViewScrollbar)</selected>
+				<onclick>Skin.ToggleSetting(HideListViewScrollbar)</onclick>
+				<visible>Skin.String(CurrentViewMode,52)</visible>
+			</control>
+			<control type="image">
+				<include>MenuBarItemViewOptionsBottomBorder</include>
+			</control>
+		</control>
+	</controls>
+</window>

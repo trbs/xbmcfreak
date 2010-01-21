@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!--  string id's 31000 thru 31999 are reserved for skins  -->
+
+<strings>
+
+<string id="31000">Unavailable</string>
+<string id="31300">Last Updated</string>
+<string id="31301">OpenSubtitles_OSD</string>
+<string id="31302">Plugins</string>
+<string id="31303">Recently Added</string>
+<string id="31304">Information</string>
+<string id="31305">Emulators</string>
+<string id="31306">Apps</string>
+<string id="31307">Backgrounds</string>
+<string id="31308">Comics</string>
+<string id="31200">Fast Forward</string>
+<string id="31201">Rewind</string>
+
+<!-- view types -->
+<string id="31103">Icon</string>
+<string id="31104">Big Icon</string>
+<string id="31105">List</string>
+<string id="31106">Wrap Info</string>
+<string id="31107">Thumbnail</string>
+<string id="31108">Wide Icon</string>
+<string id="31110">Fanart</string>
+<string id="31111">List Info</string>
+<string id="31112">List Info 2</string>
+<string id="31113">Wall</string>
+
+<!-- skin settings -->
+<string id="31013">Media</string>
+<string id="31014">Reset Settings</string>
+<string id="31999">Reset Skin Settings To Default (Press To Confirm)</string>
+
+<!-- skin settings general -->
+<string id="31021">Hide Bottom Info Pane</string>
+<string id="31024">Hide Bottom Pane White Highlight</string>
+<string id="31025">Hide Scrollbar</string>
+<string id="31026">Show Weather on Top Bar</string>
+<string id="31027">Do Not Dim The Screen When A Dialog Is Visible</string>
+<string id="31028">Change Top Bar Colour</string>
+<string id="31029">Grey</string>
+<string id="31030">Black</string>
+<string id="31031">Blue</string>
+<string id="31032">White</string>
+<string id="31034">Smooth</string>
+<string id="31035">Stripe</string>
+
+<!-- skin settings media -->
+<string id="31041">Hide Description</string>
+<string id="31042">Hide Labels</string>
+<string id="31043">Hide Fanart</string>
+<string id="31044">Hide Plot</string>
+<string id="31045">Hide Cover</string>
+<string id="31046">Hide Overlay</string>
+<string id="31047">Do Not Dim Fanart</string>
+<string id="31048">Hide Media Flags</string>
+<string id="31049">Hide Studio Flags</string>
+<string id="31050">Change Focus Position</string>
+<string id="31400">Hide Top Options Menu Bar (Only Show When Selected)</string>
+<string id="31401">Do Not Scroll Plot</string>
+<string id="31402">Hide DVD Case</string>
+<string id="31404">Use Poster Covers</string>
+<string id="31405">Music Playing</string>
+<string id="31406">Video Playing</string>
+<string id="31407">Use Visualization For Background</string>
+<string id="31408">Use Artist Fanart For Background</string>
+<string id="31409">Enable Music Visualization / Artist Fanart In The Background</string>
+<string id="31410">Enable Video Playing In The Background</string>
+<string id="31411">Flat Wrap</string>
+<string id="31412">Small Flat Wrap</string>
+<string id="31413">3D Wrap</string>
+<string id="31414">Hide Media Info Dialog</string>
+<string id="31415">Hide Album Case</string>
+<string id="31416">Do Not Scroll Description</string>
+<string id="31417">Banner List</string>
+<string id="31418">Classic List</string>
+<string id="31419">Icon Panel</string>
+<string id="31420">Show Full Plot</string>
+<string id="31421">Hide Wrap List Shadow</string>
+<string id="31422">All</string>
+<string id="31423">Style</string>
+<string id="31424">Do Not Dim Cover</string>
+
+<!-- skin settings backgrounds -->
+<string id="31051">Apply To Home Window Only</string>
+<string id="31052">Apply To All</string>
+<string id="31061">Windows</string>
+<string id="31053">Custom Backgrounds</string>
+<string id="31054">Image Path</string>
+<string id="31055">Multi Image Path</string>
+<string id="31056">Use Single Image For Background</string>
+<string id="31057">Use Multi Image For Background</string>
+<string id="31060">Dim Background</string>
+<string id="31062">Does Not Apply To Home Window</string>
+<string id="31063">Animate Fanart</string>
+<string id="31064">Animate Background</string>
+
+<!-- skin settings home -->
+<string id="31070">Hide Categories</string>
+<string id="31071">Hide Now Playing For Music</string>
+<string id="31072">Hide Now Playing For Videos</string>
+<string id="31074">Hide Category Icons</string>
+<string id="31075">Show Navigation Buttons (For Mouse Users)</string>
+<string id="31076">Basic Home Menu</string>
+<string id="31077">Advanced Home Menu</string>
+<string id="31078">Custom Category Icons</string>
+<string id="31079">Use Custom Category Icons</string>
+<string id="31080">Icon Path</string>
+<string id="31088">Edit Submenu Button 1</string>
+<string id="31089">Edit Submenu Button 2</string>
+<string id="31090">Edit Submenu Button 3</string>
+<string id="31091">Edit Submenu Button 4</string>
+<string id="31092">Edit Submenu Button 5</string>
+<string id="31093">Edit Submenu Button 6</string>
+<string id="31094">Edit Submenu Button 7</string>
+<string id="31095">Parameter Field Must Be A Custom Source, Built In Category, Or Special Path For Videos</string>
+<string id="31096">Parameter</string>
+<string id="31097">Parameter Field Must Be In The format "Window,Directory,Return"</string>
+<string id="31098">"Directory" And "Return" Parameter Is Optional</string>
+<string id="31099">Parameter Field Must Be A Built In Category Or Special Path For Video Library</string>
+<string id="31100">Parameter Field Must Be A Custom Source, Built In Category, Or Special Path For Music</string>
+<string id="31101">Parameter Field Must Be A Custom Source, Built In Category, Or Special Path For Pictures</string>
+<string id="31102">Parameter Field Must Be A Custom Source, Built In Category, Or Special Path For Programs</string>
+<string id="31600">This Button Takes A Custom Source</string>
+<string id="31601">This Button Takes A Built In Category Or Special Database Path</string>
+<string id="31081">Show Database Path In Info Panel (Find Out The Path To A Library Folder)</string>
+
+<!-- skin settings -->
+<string id="31210">General, Home, Media, Backgrounds, Scripts</string>
+<!-- skin settings scripts -->
+<string id="31500">Show OpenSubtitles_OSD Button (Script Must Be Installed)</string>
+
+</strings>

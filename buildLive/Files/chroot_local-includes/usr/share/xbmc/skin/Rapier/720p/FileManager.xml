@@ -1,0 +1,331 @@
+<window id="3">
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<control type="group">		
+			<include>BackgroundGeneral</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>
+			<include>FullControlAreaBackground</include>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+		
+		<control type="group">		
+			<posy>MenuBarOffsetY</posy>
+			<include>MenuBarImage</include>
+			<include>FileManagerDividerPaneImage</include>
+			
+			<control type="label" id="101">
+				<description>Path Left</description>
+				<posx>80</posx>
+				<width>450</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<aligny>center</aligny>
+				<scroll>yes</scroll>
+			</control>	
+			
+			<control type="label" id="102">
+				<description>Path Right</description>
+				<posx>750</posx>
+				<width>450</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<aligny>center</aligny>
+				<scroll>yes</scroll>
+			</control>
+
+			<control type="label">
+				<description>Num Objects Left</description>
+				<posx>535</posx>
+				<width>210</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(20).NumItems] $LOCALIZE[127]</label>
+				<visible>Control.HasFocus(20)</visible>
+			</control>	
+		
+			<control type="label">
+				<description>Num Objects Right</description>
+				<posx>535</posx>
+				<width>210</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(21).NumItems] $LOCALIZE[127]</label>
+				<visible>Control.HasFocus(21)</visible>
+			</control>					
+		</control>
+
+		<control type="group">
+			<include>FileManagerScrollbar</include>
+			<include>MediaViewOpenCloseAnim</include>
+
+			<control type="list" id="20">
+				<description>Left List</description>
+				<posx>80</posx>
+				<posy>92</posy>
+				<width>450</width>
+				<height>540</height>
+				<pagecontrol>150</pagecontrol>
+				<onup>20</onup>
+				<ondown>20</ondown>
+				<onleft>150</onleft>
+				<onright>21</onright>
+				<itemlayout width="340" height="36">
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>		
+				<focusedlayout width="340" height="36">	
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-focus.png</texture>
+						<visible>Control.HasFocus(20)</visible>
+					</control>
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-alt-focus.png</texture>
+						<visible>!Control.HasFocus(20)</visible>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>	
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>		
+			</control>
+				
+			<control type="list" id="21">
+				<description>Right List</description>
+				<posx>750</posx>
+				<posy>92</posy>
+				<width>450</width>
+				<height>540</height>	
+				<pagecontrol>151</pagecontrol>
+				<onup>21</onup>
+				<ondown>21</ondown>
+				<onleft>20</onleft>
+				<onright>151</onright>
+				<itemlayout width="340" height="36">
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>		
+				<focusedlayout width="340" height="36">	
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-focus.png</texture>
+						<visible>Control.HasFocus(21)</visible>
+					</control>
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-alt-focus.png</texture>
+						<visible>!Control.HasFocus(21)</visible>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>	
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>		
+			</control>
+			
+			<control type="group">
+				<description>Info Area</description>
+				<posx>540</posx>
+				<posy>85</posy>
+				<width>200</width>
+				
+				<control type="image">
+					<posx>10</posx>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Container(20).ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>10</posx>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Container(21).ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				
+				<control type="grouplist">
+					<posy>185</posy>
+					<width>200</width>
+					<control type="label">
+						<description>CPU Freq</description>
+						<include>PLSongInfoLabel</include>
+						<label>CPU</label>
+					</control>
+					<control type="textbox">
+						<description>CPU Freq Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[System.CpuFrequency]</label>
+					</control>
+					<control type="label">
+						<description>Free Memory</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[158]</label>
+					</control>
+					<control type="textbox">
+						<description>Free Memory Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[System.FreeMemory]</label>
+					</control>
+					<control type="label">
+						<description>Free Space (C)</description>
+						<include>PLSongInfoLabel</include>
+						<label>C:</label>
+						<visible>!IsEmpty(System.Freespace(C))</visible>
+					</control>
+					<control type="textbox">
+						<description>Free Space Value (C)</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[System.Freespace(C)]</label>
+						<visible>!IsEmpty(System.Freespace(C))</visible>
+					</control>
+					<control type="label">
+						<description>Free Space (D)</description>
+						<include>PLSongInfoLabel</include>
+						<label>D:</label>
+						<visible>!IsEmpty(System.Freespace(D))</visible>
+					</control>
+					<control type="textbox">
+						<description>Free Space Value (D)</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[System.Freespace(D)]</label>
+						<visible>!IsEmpty(System.Freespace(D))</visible>
+					</control>
+					<control type="label">
+						<description>Free Space (E)</description>
+						<include>PLSongInfoLabel</include>
+						<label>E:</label>
+						<visible>!IsEmpty(System.Freespace(E))</visible>
+					</control>
+					<control type="textbox">
+						<description>Free Space Value (E)</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[System.Freespace(E)]</label>
+						<visible>!IsEmpty(System.Freespace(E))</visible>
+					</control>
+					<control type="label">
+						<description>Free Space (F)</description>
+						<include>PLSongInfoLabel</include>
+						<label>F:</label>
+						<visible>!IsEmpty(System.Freespace(F))</visible>
+					</control>
+					<control type="textbox">
+						<description>Free Space Value (F)</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[System.Freespace(F)]</label>
+						<visible>!IsEmpty(System.Freespace(F))</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+
+		<include>DialogPopUpScreenDim</include>
+		
+		<control type="group">	
+			<description>Top Bar Area</description>
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbFileManager</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>			
+		</control>
+		
+		<control type="group">
+			<description>Bottom Bar Area</description>
+			<posy>BottomPaneOffsetY</posy>	
+			<include>InfoPaneImage</include>
+			<include>InfoPaneFileManagerDetails</include>
+		</control>
+	</controls>	
+</window>

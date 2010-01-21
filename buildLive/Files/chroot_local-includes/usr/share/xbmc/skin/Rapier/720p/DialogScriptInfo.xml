@@ -1,0 +1,39 @@
+<window id="2004">
+	<defaultcontrol always="true">61</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="40" y="120">true</origin>
+	</coordinates>	
+	
+	<controls>
+		<include>ScriptInfoDialogBox</include>
+		
+		<control type="label">
+			<include>DialogTitle</include>
+			<width>1120</width>
+			<label>$LOCALIZE[262]</label>
+		</control>
+		
+		<control type="textbox" id="5">
+			<description>Text Area</description>
+			<posx>DialogMarginOffsetX</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>1096</width>
+			<height>489</height>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<align>justify</align>
+			<pagecontrol>61</pagecontrol>
+		</control>
+		
+		<control type="scrollbar" id="61">
+			<posx>1146</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<height>489</height>
+			<visible>!Skin.HasSetting(HideScrollbar)</visible>
+		</control>	
+	</controls>
+</window>

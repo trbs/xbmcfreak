@@ -1,0 +1,4801 @@
+<includes>
+	<include name="TVShowsWideIconBannerStyle">
+		<control type="panel" id="56">
+			<viewtype label="31108">Wide Icon</viewtype>
+			<posx>40</posx>
+			<posy>92</posy>
+			<width>1200</width>
+			<height>548</height>
+			<pagecontrol>150</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+			<itemlayout height="137" width="600">	
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>127</height>	
+					<texture border="9">item-background.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="label">
+					<description>Title</description>
+					<posx>12</posx>
+					<posy>15</posy>
+					<width>560</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<width>590</width>
+					<height>127</height>
+					<bordersize>12</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<width>590</width>
+					<height>127</height>
+					<bordersize>20</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Dim</description>
+					<width>590</width>
+					<height>127</height>
+					<bordersize>12</bordersize>
+					<texture>background-dim.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="137" width="600">	
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>127</height>	
+					<texture border="9">item-background2.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<posx>12</posx>
+					<posy>15</posy>
+					<width>560</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<width>590</width>
+					<height>127</height>
+					<bordersize>12</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<width>590</width>
+					<height>127</height>
+					<bordersize>20</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+			</focusedlayout>			
+		</control>
+	</include>
+	
+	<include name="TVShowsWideIconPosterStyle">
+		<control type="panel" id="56">
+			<viewtype label="31108">Wide Icon</viewtype>
+			<posx>40</posx>
+			<posy>92</posy>
+			<width>1200</width>
+			<height>548</height>
+			<pagecontrol>150</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<onup>66</onup>
+			<ondown>66</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+			<itemlayout height="137" width="600">
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>133</height>	
+					<texture border="5">button-nofocus.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>7</posx>
+					<posy>12</posy>
+					<width>80</width>
+					<height>114</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>7</posx>
+					<posy>12</posy>
+					<width>80</width>
+					<height>114</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<posx>97</posx>
+					<posy>14</posy>
+					<width>480</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+				</control>
+				<control type="label">
+					<description>Genre</description>
+					<posx>97</posx>
+					<posy>33</posy>
+					<width>480</width>
+					<font>MediaInfoHeadFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>	
+				</control>
+				<control type="label">
+					<description>First Aired</description>
+					<posx>97</posx>
+					<posy>65</posy>
+					<width>480</width>
+					<font>MediaInfoFont</font>
+					<textcolor>MediaInfoItemColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Episodes</description>
+					<posx>97</posx>
+					<posy>107</posy>
+					<width>360</width>
+					<font>MediaInfoFont</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Episode] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102]] $INFO[ListItem.Property(UnWatchedEpisodes),- , $LOCALIZE[16101])][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Rating</description>
+					<posx>577</posx>
+					<posy>107</posy>
+					<width>110</width>
+					<font>MediaInfoFont</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<label>[UPPERCASE]$INFO[ListItem.Rating,$LOCALIZE[563]: ,][/UPPERCASE]</label>
+				</control>	
+			</itemlayout>															
+			<focusedlayout height="137" width="600">	
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>133</height>	
+					<texture border="5">button-focus2.png</texture>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>7</posx>
+					<posy>12</posy>
+					<width>80</width>
+					<height>114</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>7</posx>
+					<posy>12</posy>
+					<width>80</width>
+					<height>114</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<posx>97</posx>
+					<posy>14</posy>
+					<width>480</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Genre</description>
+					<posx>97</posx>
+					<posy>33</posy>
+					<width>480</width>
+					<font>MediaInfoHeadFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>First Aired</description>
+					<posx>97</posx>
+					<posy>65</posy>
+					<width>480</width>
+					<font>MediaInfoFont</font>
+					<textcolor>MediaInfoItemColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Episodes</description>
+					<posx>97</posx>
+					<posy>107</posy>
+					<width>360</width>
+					<font>MediaInfoFont</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Episode] $INFO[ListItem.Property(WatchedEpisodes),(, $LOCALIZE[16102]] $INFO[ListItem.Property(UnWatchedEpisodes),- , $LOCALIZE[16101])][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Rating</description>
+					<posx>577</posx>
+					<posy>107</posy>
+					<width>110</width>
+					<font>MediaInfoFont</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<label>[UPPERCASE]$INFO[ListItem.Rating,$LOCALIZE[563]: ,][/UPPERCASE]</label>
+				</control>
+			</focusedlayout>			
+		</control>
+	</include>
+	
+	<include name="TVShowsListInfoBannerStyle">
+		<control type="list" id="61">	
+			<viewtype label="31111">List Info</viewtype>
+			<posx>730</posx>
+			<posy>348</posy>
+			<width>520</width>
+			<height>289</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>61</onup>
+			<ondown>61</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Episodes)]</visible>
+			<itemlayout height="36">
+				<control type="image">
+					<width>520</width>
+					<height>36</height>	
+					<texture border="0,2,0,0">button-list-nofocus.png</texture>
+					<animation effect="fade" end="70" condition="true">Conditional</animation>
+				</control>	
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>					
+				<control type="label">
+					<posx>35</posx>
+					<width>420</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>492</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Episode</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>493</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="36">	
+				<control type="image">
+					<posy>1</posy>
+					<width>520</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-focus.png</texture>
+					<visible>Control.HasFocus(61)</visible>
+				</control>
+				<control type="image">
+					<posy>1</posy>
+					<width>520</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+					<visible>!Control.HasFocus(61)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<width>420</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>492</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Episode</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>493</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</focusedlayout>		
+		</control>	
+			
+		<control type="group">
+			<posy>344</posy>
+			<posx>20</posx>
+			<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
+			<include>ControlsOpenCloseAnim</include>
+
+			<control type="grouplist">
+				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<description>Genre</description>
+					<include>TVShowsListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[515][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Year</description>
+					<include>TVShowsListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>First Aired</description>
+					<include>TVShowsListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[20416][/UPPERCASE]</label>
+				</control>	
+				<control type="label">
+					<description>Rating</description>
+					<include>TVShowsListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE]</label>
+				</control>	
+			</control>
+
+			<control type="grouplist">
+				<posx>130</posx>
+				<itemgap>25</itemgap>
+				<control type="label">
+					<description>Genre Value</description>
+					<include>TVShowsListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<description>Year Value</description>
+					<include>TVShowsListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Year]</label>
+				</control>
+				<control type="label">
+					<description>First Aired Value</description>
+					<include>TVShowsListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Premiered]</label>
+				</control>
+				<control type="label">
+					<description>Rating Value</description>
+					<include>TVShowsListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Rating]</label>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideTVShowsListInfoPlot) + !Container.OnNext + !Container.OnPrevious</visible>
+				
+				<control type="image">
+					<posy>110</posy>
+					<width>700</width>
+					<height>2</height>
+					<texture>separator3.png</texture>
+				</control>
+				
+				<control type="textbox">
+					<description>Plot</description>
+					<posy>122</posy>
+					<width>700</width>
+					<height>170</height>
+					<font>MediaInfoFont2</font>
+					<textcolor>MediaInfoColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>justify</align>
+					<label>$INFO[ListItem.Plot]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
+					<include>ControlsOpenCloseAnim</include>
+				</control>	
+			</control>
+		</control>
+
+		<control type="textbox">
+			<description>Plot</description>
+			<posy>344</posy>
+			<posx>20</posx>
+			<width>389</width>
+			<height>289</height>
+			<font>MediaInfoFont2</font>
+			<textcolor>MediaInfoColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<align>justify</align>
+			<label>$INFO[ListItem.Plot]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollEpisodesListInfoPlot)</autoscroll>
+			<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Plot) + !Container.OnNext + !Container.OnPrevious + !Skin.HasSetting(HideEpisodesListInfoPlot)</visible>
+			<include>ControlsOpenCloseAnim</include>
+		</control>		
+
+		<control type="group">					
+			<posx>295</posx>
+			<posy>344</posy>
+			<visible>Container.Content(TVShows)</visible>
+			
+			<control type="image">
+				<description>Cover</description>
+				<width>425</width>
+				<height>100</height>
+				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>
+			</control>
+			
+			<control type="image">
+				<description>Default Cover Background</description>
+				<width>425</width>
+				<height>100</height>
+				<texture border="3">item-noshadow-background.png</texture>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<animation effect="fade" end="50" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="image">
+				<description>Default Cover</description>
+				<width>425</width>
+				<height>100</height>
+				<bordersize>5</bordersize>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>		
+			</control>										
+		</control>
+		
+		<control type="group">
+			<posx>430</posx>
+			<posy>344</posy>
+			<visible>Container.Content(Episodes) + !Skin.HasSetting(HideEpisodesListInfoCover)</visible>
+			
+			<control type="image">
+				<description>Cover</description>
+				<width>289</width>
+				<height>289</height>
+				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<aspectratio aligny="top">keep</aspectratio>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>
+			</control>
+			
+			<control type="image">
+				<description>Default Cover Background</description>
+				<posx>86</posx>
+				<posy>0</posy>
+				<width>203</width>
+				<height>289</height>
+				<texture border="3">item-noshadow-background.png</texture>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<animation effect="fade" end="50" condition="true">Conditional</animation>
+			</control>
+		
+			<control type="image">
+				<description>Default Cover</description>
+				<posx>86</posx>
+				<posy>0</posy>
+				<width>203</width>
+				<height>289</height>
+				<bordersize>30</bordersize>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>		
+			</control>				
+		</control>
+	</include>
+	
+	<include name="TVShowsListInfoPosterStyle">
+		<control type="list" id="61">	
+			<viewtype label="31111">List Info</viewtype>
+			<posx>730</posx>
+			<posy>348</posy>
+			<width>520</width>
+			<height>289</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>65</onup>
+			<ondown>65</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Episodes)]</visible>
+			<itemlayout height="36">
+				<control type="image">
+					<width>520</width>
+					<height>36</height>	
+					<texture border="0,2,0,0">button-list-nofocus.png</texture>
+					<animation effect="fade" end="70" condition="true">Conditional</animation>
+				</control>	
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>					
+				<control type="label">
+					<posx>35</posx>
+					<width>420</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>492</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Episode</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>493</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="36">	
+				<control type="image">
+					<posy>1</posy>
+					<width>520</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-focus.png</texture>
+					<visible>Control.HasFocus(65)</visible>
+				</control>
+				<control type="image">
+					<posy>1</posy>
+					<width>520</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+					<visible>!Control.HasFocus(65)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<width>420</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>492</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Episode</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>493</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</focusedlayout>		
+		</control>	
+			
+		<control type="group">
+			<posx>20</posx>
+			<posy>344</posy>
+			<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Title) + !Container.OnNext + !Container.OnPrevious</visible>
+			<include>ControlsOpenCloseAnim</include>
+
+			<control type="grouplist">
+				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<description>Genre</description>
+					<include>TVShowsPosterListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[515][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>Year</description>
+					<include>TVShowsPosterListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<description>First Aired</description>
+					<include>TVShowsPosterListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[20416][/UPPERCASE]</label>
+				</control>	
+				<control type="label">
+					<description>Rating</description>
+					<include>TVShowsPosterListInfoViewCatLabel</include>
+					<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE]</label>
+				</control>	
+			</control>
+
+			<control type="grouplist">
+				<posx>170</posx>
+				<itemgap>25</itemgap>
+				<control type="label">
+					<description>Genre Value</description>
+					<include>TVShowsPosterListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<description>Year Value</description>
+					<include>TVShowsPosterListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Year]</label>
+				</control>
+				<control type="label">
+					<description>First Aired Value</description>
+					<include>TVShowsPosterListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Premiered]</label>
+				</control>
+				<control type="label">
+					<description>Rating Value</description>
+					<include>TVShowsPosterListInfoViewCatValueLabel</include>
+					<label fallback="31000">$INFO[ListItem.Rating]</label>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideTVShowsListInfoPlot)</visible>
+				
+				<control type="image">
+					<posy>110</posy>
+					<width>475</width>
+					<height>2</height>
+					<texture>separator3.png</texture>				
+				</control>
+				
+				<control type="textbox">
+					<description>Plot</description>
+					<posy>122</posy>
+					<width>475</width>
+					<height>170</height>
+					<font>MediaInfoFont2</font>
+					<textcolor>MediaInfoColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>justify</align>
+					<label>$INFO[ListItem.Plot]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
+					<include>ControlsOpenCloseAnim</include>
+				</control>	
+			</control>
+		</control>
+
+		<control type="textbox">
+			<description>Plot</description>
+			<posx>20</posx>
+			<posy>344</posy>
+			<width>389</width>
+			<height>289</height>
+			<font>MediaInfoFont2</font>
+			<textcolor>MediaInfoColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<align>justify</align>
+			<label>$INFO[ListItem.Plot]</label>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollEpisodesListInfoPlot)</autoscroll>
+			<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Plot) + !Container.OnNext + !Container.OnPrevious + !Skin.HasSetting(HideEpisodesListInfoPlot)</visible>
+			<include>ControlsOpenCloseAnim</include>
+		</control>		
+
+		<control type="group">					
+			<posx>516</posx>
+			<posy>344</posy>
+			<visible>Container.Content(TVShows)</visible>
+			
+			<control type="image">
+				<description>Cover</description>
+				<width>203</width>
+				<height>289</height>
+				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<aspectratio aligny="top">keep</aspectratio>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>		
+			</control>
+			
+			<control type="image">
+				<description>Default Cover Background</description>
+				<width>203</width>
+				<height>289</height>
+				<texture border="3">item-noshadow-background.png</texture>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<animation effect="fade" end="50" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="image">
+				<description>Default Cover</description>
+				<width>203</width>
+				<height>289</height>
+				<bordersize>30</bordersize>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>		
+			</control>							
+		</control>
+		
+		<control type="group">
+			<posx>430</posx>
+			<posy>344</posy>
+			<visible>Container.Content(Episodes) + !Skin.HasSetting(HideEpisodesListInfoCover)</visible>
+			
+			<control type="image">
+				<description>Cover</description>
+				<width>289</width>
+				<height>289</height>
+				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<aspectratio aligny="top">keep</aspectratio>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.Thumb)</visible>
+			</control>
+			
+			<control type="image">
+				<description>Default Cover Background</description>
+				<posx>86</posx>
+				<posy>0</posy>
+				<width>203</width>
+				<height>289</height>
+				<texture border="3">item-noshadow-background.png</texture>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<animation effect="fade" end="50" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="image">
+				<description>Default Cover</description>
+				<posx>86</posx>
+				<posy>0</posy>
+				<width>203</width>
+				<height>289</height>
+				<bordersize>30</bordersize>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>IsEmpty(ListItem.Thumb)</visible>		
+			</control>
+		</control>
+	</include>
+	
+	<include name="Movie3DWrapCoverImage">
+		<width>116</width>
+		<height>165</height>
+		<bordertexture border="9">item-background.png</bordertexture>
+        <bordersize>9</bordersize>
+	</include>
+	
+	<include name="Movie3DWrapCoverImageReflection">
+		<width>116</width>
+		<height>165</height>
+		<texture flipy="true" diffuse="reflection.png"/> 
+		<bordertexture flipy="true" border="9" diffuse="reflection.png">item-background.png</bordertexture>
+		<bordersize>9</bordersize>
+	</include>
+	
+	<include name="Music3DWrapCoverImage">
+		<width>142</width>
+		<height>142</height>
+		<bordertexture border="9">item-background.png</bordertexture>
+        <bordersize>9</bordersize>
+	</include>
+	
+	<include name="Music3DWrapCoverImageReflection">
+		<width>142</width>
+		<height>142</height>
+		<texture flipy="true" diffuse="reflection.png"/> 
+		<bordertexture flipy="true" border="9" diffuse="reflection.png">item-background.png</bordertexture>
+		<bordersize>9</bordersize>
+	</include>
+	
+	<include name="MoviesWrapInfo3DStyle">
+		<control type="group">
+			<include>MediaViewOpenCloseAnim</include>
+			<include>MoviesWrapInfoView3DStyleBottomPaneOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim</include>
+
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>580</posy>
+		
+				<control type="image">
+					<description>Bottom Pane Background</description>
+					<width>ScreenWidth</width>
+					<height>140</height>
+					<texture border="0,6,0,0">bottom-info-background.png</texture>
+				</control>
+				
+				<control type="image">
+					<description>Bottom Pane Overlay</description>
+					<posx>0</posx>
+					<posy>6</posy>
+					<width>ScreenWidth</width>
+					<height>134</height>
+					<texture>bottom-bar-overlay.png</texture>
+				</control>	
+			</control>
+			
+			<control type="group" id="2001">
+				<description>3D Wrap List</description>
+				<posy>520</posy>
+				<camera x="640" y="520"/>
+				<visible>Control.IsVisible(53) + Container.OnNext</visible>
+				<animation effect="slide" end="-60,0" time="350" reversible="false">Hidden</animation>
+				
+				<control type="group">
+					<posx>87</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
+					<animation effect="rotatey" center="120" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-9).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-9).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>147</posx>
+					<animation effect="rotatey" center="180" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>207</posx>
+					<animation effect="rotatey" center="240" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>267</posx>
+					<animation effect="rotatey" center="300" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>327</posx>
+					<animation effect="rotatey" center="360" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-5).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>387</posx>
+					<animation effect="rotatey" center="420" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-4).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>447</posx>
+					<animation effect="rotatey" center="480" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-3).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>507</posx>
+					<animation effect="rotatey" center="540" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1136</posx>
+					<visible>!Container.OnNext</visible>
+					<animation effect="fade" start="0" end="100" delay="0" time="400" reversible="false">Visible</animation>
+					<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1076</posx>
+					<animation effect="rotatey" center="1160" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1016</posx>
+					<animation effect="rotatey" center="1100" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>956</posx>
+					<animation effect="rotatey" center="1040" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(5).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>896</posx>
+					<animation effect="rotatey" center="980" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(4).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>836</posx>
+					<animation effect="rotatey" center="920" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(3).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>776</posx>
+					<animation effect="rotatey" center="860" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>716</posx>
+					<animation effect="rotatey" center="800" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(1).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container.OnNext</visible>
+					<animation effect="slide" end="-15,0" time="350" reversible="false">Hidden</animation>
+					
+					<control type="group">
+						<posx>582</posx>
+						<visible>Container.OnNext</visible>
+						<animation effect="rotatey" center="615" start="0" end="-60" time="350" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+						
+						<control type="image">
+							<include>Movie3DWrapCoverImage</include>
+							<info>Container(53).ListItem(-1).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>154</posy>
+							<include>Movie3DWrapCoverImageReflection</include>
+							<info>Container(53).ListItem(-1).Icon</info>
+						</control>
+					</control>
+					
+					<control type="group">
+						<posx>656</posx>
+						<visible>Container.OnNext</visible>
+						<animation effect="rotatey" center="740" start="0" end="-60" time="350" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+						<animation effect="rotatey" center="740" start="60" end="60" condition="true">Conditional</animation>
+						
+						<control type="image">
+							<include>Movie3DWrapCoverImage</include>
+							<info>Container(53).ListItem(0).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>154</posy>
+							<include>Movie3DWrapCoverImageReflection</include>
+							<info>Container(53).ListItem(0).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+
+			<control type="group" id="2002">
+				<posy>520</posy>
+				<camera x="640" y="520"/>
+				<visible>Control.IsVisible(53) + Container.OnPrevious</visible>
+				<animation effect="slide" end="60,0" time="350" reversible="false">Hidden</animation>
+
+				<control type="group">
+					<posx>27</posx>
+					<visible>!Container.OnPrevious</visible>
+					<animation effect="fade" start="0" end="100" time="400" reversible="false">Visible</animation>
+					<animation effect="rotatey" center="60" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>87</posx>
+					<animation effect="rotatey" center="120" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>147</posx>
+					<animation effect="rotatey" center="180" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>207</posx>
+					<animation effect="rotatey" center="240" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-5).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>267</posx>
+					<animation effect="rotatey" center="300" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-4).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>327</posx>
+					<animation effect="rotatey" center="360" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-3).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>387</posx>
+					<animation effect="rotatey" center="420" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>447</posx>
+					<animation effect="rotatey" center="480" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-1).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1076</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
+					<animation effect="rotatey" center="1160" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(9).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(9).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1016</posx>
+					<animation effect="rotatey" center="1100" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>956</posx>
+					<animation effect="rotatey" center="1040" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>896</posx>
+					<animation effect="rotatey" center="980" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>836</posx>
+					<animation effect="rotatey" center="920" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(5).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>776</posx>
+					<animation effect="rotatey" center="860" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(4).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>716</posx>
+					<animation effect="rotatey" center="800" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(3).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>656</posx>
+					<animation effect="rotatey" center="740" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container.OnPrevious</visible>
+					<animation effect="slide" end="15,0" time="350" reversible="false">Hidden</animation>
+					
+					<control type="group">
+						<posx>507</posx>
+						<visible>Container.OnPrevious</visible>
+						<animation effect="rotatey" center="540" start="0" end="60" time="350" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+						<animation effect="rotatey" center="540" start="-60" end="-60" condition="true">Conditional</animation>
+						
+						<control type="image">
+							<include>Movie3DWrapCoverImage</include>
+							<info>Container(53).ListItem(0).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>154</posy>
+							<include>Movie3DWrapCoverImageReflection</include>
+							<info>Container(53).ListItem(0).Icon</info>
+						</control>
+					</control>
+					
+					<control type="group">
+						<posx>582</posx>
+						<visible>Container.OnPrevious</visible>
+						<animation effect="rotatey" center="665" start="0" end="60" time="350" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+						
+						<control type="image">
+							<include>Movie3DWrapCoverImage</include>
+							<info>Container(53).ListItem(1).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>154</posy>
+							<include>Movie3DWrapCoverImageReflection</include>
+							<info>Container(53).ListItem(1).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group" id="2000">
+				<posy>520</posy>
+				<camera x="640" y="520"/>
+				<visible>Control.IsVisible(53) + !Control.IsVisible(2001)  + !Control.IsVisible(2002)</visible>
+				
+					
+				<control type="group">
+					<posx>87</posx>
+					<animation effect="rotatey" center="120" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>147</posx>
+					<animation effect="rotatey" center="180" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>207</posx>
+					<animation effect="rotatey" center="240" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>267</posx>
+					<animation effect="rotatey" center="300" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-5).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>327</posx>
+					<animation effect="rotatey" center="360" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-4).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>387</posx>
+					<animation effect="rotatey" center="420" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-3).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>447</posx>
+					<animation effect="rotatey" center="480" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>507</posx>
+					<animation effect="rotatey" center="540" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(-1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(-1).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>1076</posx>
+					<animation effect="rotatey" center="1160" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1016</posx>
+					<animation effect="rotatey" center="1100" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>956</posx>
+					<animation effect="rotatey" center="1040" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>896</posx>
+					<animation effect="rotatey" center="980" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(5).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>836</posx>
+					<animation effect="rotatey" center="920" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(4).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>776</posx>
+					<animation effect="rotatey" center="860" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(3).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>716</posx>
+					<animation effect="rotatey" center="800" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(2).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>656</posx>
+					<animation effect="rotatey" center="740" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Movie3DWrapCoverImage</include>
+						<info>Container(53).ListItem(1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<include>Movie3DWrapCoverImageReflection</include>
+						<info>Container(53).ListItem(1).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>582</posx>
+					<visible>Control.HasFocus(53)</visible>
+					
+					<control type="image">
+						<width>116</width>
+						<height>165</height>
+						<info>Container(53).ListItem(0).Icon</info>
+						<bordertexture border="9">item-background2.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<width>116</width>
+						<height>165</height>
+						<info>Container(53).ListItem(0).Icon</info>
+						<texture flipy="true" diffuse="reflection.png"/> 
+						<bordertexture flipy="true" border="9" diffuse="reflection.png">item-background2.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>582</posx>
+					<visible>!Control.HasFocus(53)</visible>
+					
+					<control type="image">
+						<width>116</width>
+						<height>165</height>
+						<info>Container(53).ListItem(0).Icon</info>
+						<bordertexture border="9">item-background.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+					
+					<control type="image">
+						<posy>154</posy>
+						<width>116</width>
+						<height>165</height>
+						<info>Container(53).ListItem(0).Icon</info>
+						<texture flipy="true" diffuse="reflection.png"/> 
+						<bordertexture flipy="true" border="9" diffuse="reflection.png">item-background.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+				</control>
+			</control>
+
+			<control type="wraplist" id="53">
+				<viewtype label="31106">Wrap Info</viewtype>
+				<posx>90</posx>
+				<posy>526</posy>
+				<width>1100</width>
+				<height>155</height>
+				<focusposition>8</focusposition>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				<itemlayout height="62" width="62">
+				</itemlayout>
+				<focusedlayout height="155" width="108">
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+	
+	<include name="MoviesWrapInfoFlatStyle">
+        <control type="group">
+            <include>MediaViewOpenCloseAnim</include>
+			<include>MoviesWrapInfoViewFlatStyleBottomPaneOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim</include>
+
+			<control type="image">
+				<description>Bottom Pane Background</description>
+				<posy>540</posy>
+				<width>ScreenWidth</width>
+				<height>180</height>
+				<texture border="0,6,0,0">bottom-info-background.png</texture>
+				<include>BottomPaneFadeAnim</include>
+			</control>	
+
+            <control type="wraplist" id="53">
+                <viewtype label="31106">Wrap Info</viewtype>
+                <posx>-31</posx>
+                <posy>545</posy>
+                <width>1342</width>
+                <height>165</height>
+                <focusposition>5</focusposition>
+                <pagecontrol>150</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+                <onup>850</onup>
+                <ondown>150</ondown>
+                <visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+                <itemlayout width="122">
+					<control type="image">
+                        <description>Background</description>
+                        <width>122</width>
+                        <height>165</height>
+                        <texture border="9">item-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Cover</description>
+                        <width>122</width>
+                        <height>165</height>
+						<bordersize>9</bordersize>
+                        <texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Default Cover</description>
+                        <width>122</width>
+                        <height>165</height>
+						<bordersize>9</bordersize>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+                        <visible>IsEmpty(ListItem.Thumb)</visible>
+                    </control>
+                    <control type="image">
+						<description>Cover Dim</description>
+                        <width>122</width>
+                        <height>165</height>
+						<bordersize>9</bordersize>
+                        <texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        <animation effect="fade" end="50" condition="true">Conditional</animation>
+                    </control>
+                </itemlayout>    
+                <focusedlayout width="122">
+					 <control type="image">
+                        <description>Background</description>
+                        <width>122</width>
+                        <height>165</height>
+                        <texture border="12">item-background2.png</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>Control.HasFocus(53)</visible>
+						<include>MoviesWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+					<control type="image">
+                        <description>Background</description>
+                        <width>122</width>
+                        <height>165</height>
+                        <texture border="12">item-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!Control.HasFocus(53)</visible>
+						<include>MoviesWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+                    <control type="image">
+                        <description>Cover</description>
+                        <width>122</width>
+                        <height>165</height>
+                        <bordersize>12</bordersize>
+                        <texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+						<include>MoviesWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>		
+                    <control type="image">
+                        <description>Default Cover</description>
+                        <width>122</width>
+                        <height>165</height>
+						<bordersize>12</bordersize>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+                        <visible>IsEmpty(ListItem.Thumb)</visible>
+                        <include>MoviesWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+                </focusedlayout>                    
+            </control>
+			
+			<control type="image">
+				<description>Bottom Pane Overlay</description>
+				<posy>546</posy>
+				<width>ScreenWidth</width>
+				<height>174</height>
+				<texture>bottom-bar-overlay.png</texture>
+				<visible>!Skin.HasSetting(HideMoviesWrapListInfoShadow)</visible>
+			</control>	
+        </control>
+    </include>
+	
+	<include name="MoviesWrapInfoSmallFlatStyle">
+		<control type="group">		
+			<posy>580</posy>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>MoviesWrapInfoViewSmallFlatStyleBottomPaneOpenCloseAnim</include>
+		
+			<control type="image">
+				<description>Bottom Pane Background</description>
+				<width>ScreenWidth</width>
+				<height>140</height>
+				<texture border="0,6,0,0">bottom-info-background.png</texture>
+				<include>BottomPaneFadeAnim</include>
+			</control>
+
+			<control type="wraplist" id="53">
+				<viewtype label="31106">Wrap Info</viewtype>
+				<posx>-25</posx>
+				<posy>13</posy>
+				<width>1330</width>
+				<height>125</height>
+				<visible>true</visible>
+				<focusposition>9</focusposition>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				<itemlayout width="70">
+					<control type="image">
+						<description>Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<bordersize>10</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Reflection</description>
+						<posx>1</posx>
+						<posy>97</posy>
+						<width>68</width>
+						<height>96</height>
+						<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Cover Dim</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>
+				</itemlayout>	
+				<focusedlayout width="70">
+					<control type="image">
+						<description>Background</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<texture border="5">item-noshadow-background2.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>Control.HasFocus(53)</visible>
+						<include>MoviesWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Background</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<texture border="5">item-noshadow-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Control.HasFocus(53)</visible>
+						<include>MoviesWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<bordersize>4</bordersize>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<include>MoviesWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>68</width>
+						<height>96</height>
+						<bordersize>4</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>MoviesWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+				</focusedlayout>					
+			</control>
+				
+			<control type="image">
+				<description>Bottom Pane Overlay</description>
+				<posx>0</posx>
+				<posy>6</posy>
+				<width>ScreenWidth</width>
+				<height>134</height>
+				<texture>bottom-bar-overlay.png</texture>
+				<visible>!Skin.HasSetting(HideMoviesWrapListInfoShadow)</visible>
+			</control>	
+		</control>
+	</include>
+
+	<include name="MusicWrapInfo3DStyle">
+		<control type="group">
+			<include>MediaViewOpenCloseAnim</include>
+			<include>MusicWrapInfoView3DStyleBottomPaneOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim</include>
+
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>580</posy>
+		
+				<control type="image">
+					<description>Bottom Pane Background</description>
+					<width>ScreenWidth</width>
+					<height>140</height>
+					<texture border="0,6,0,0">bottom-info-background.png</texture>
+				</control>
+				
+				<control type="image">
+					<description>Bottom Pane Overlay</description>
+					<posy>6</posy>
+					<width>ScreenWidth</width>
+					<height>134</height>
+					<texture>bottom-bar-overlay.png</texture>
+				</control>	
+			</control>
+
+			<control type="group" id="2001">
+				<description>3D Wrap List</description>
+				<posy>540</posy>
+				<camera x="640" y="545"/>
+				<visible>Control.IsVisible(64) + Container.OnNext</visible>
+				<animation effect="slide" end="-70,0" time="350" reversible="false">Hidden</animation>
+				
+				<control type="group">
+					<posx>84</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
+					<animation effect="rotatey" center="53" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>154</posx>
+					<animation effect="rotatey" center="123" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>224</posx>
+					<animation effect="rotatey" center="193" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>294</posx>
+					<animation effect="rotatey" center="263" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-5).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>364</posx>
+					<animation effect="rotatey" center="333" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-4).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>434</posx>
+					<animation effect="rotatey" center="403" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-3).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>504</posx>
+					<animation effect="rotatey" center="473" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-2).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>1124</posx>
+					<visible>!Container.OnNext</visible>
+					<animation effect="fade" start="0" end="100" delay="0" time="400" reversible="false">Visible</animation>
+					<animation effect="rotatey" center="1295" start="60" end="60" time="0" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1054</posx>
+					<animation effect="rotatey" center="1225" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>984</posx>
+					<animation effect="rotatey" center="1155" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(5).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>914</posx>
+					<animation effect="rotatey" center="1085" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(4).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>844</posx>
+					<animation effect="rotatey" center="1015" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(3).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>774</posx>
+					<animation effect="rotatey" center="945" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>704</posx>
+					<animation effect="rotatey" center="875" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(1).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container.OnNext</visible>
+					<animation effect="slide" end="5,0" time="350" reversible="false">Hidden</animation>
+					
+					<control type="group">
+						<posx>569</posx>
+						<visible>Container.OnNext</visible>
+						<animation effect="rotatey" center="538" start="0" end="-60" time="350" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+						
+						<control type="image">
+							<include>Music3DWrapCoverImage</include>
+							<info>Container(64).ListItem(-1).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>131</posy>
+							<include>Music3DWrapCoverImageReflection</include>
+							<info>Container(64).ListItem(-1).Icon</info>
+						</control>
+					</control>
+					
+					<control type="group">
+						<posx>634</posx>
+						<visible>Container.OnNext</visible>
+						<animation effect="rotatey" center="805" start="0" end="-60" time="350" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+						<animation effect="rotatey" center="805" start="60" end="60" condition="true">Conditional</animation>
+						
+						<control type="image">
+							<include>Music3DWrapCoverImage</include>
+							<info>Container(64).ListItem(0).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>131</posy>
+							<include>Music3DWrapCoverImageReflection</include>
+							<info>Container(64).ListItem(0).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+
+			<control type="group" id="2002">
+				<posy>540</posy>
+				<camera x="640" y="545"/>
+				<visible>Control.IsVisible(64) + Container.OnPrevious</visible>
+				<animation effect="slide" end="70,0" time="350" reversible="false">Hidden</animation>
+
+				<control type="group">
+					<posx>14</posx>
+					<visible>!Container.OnPrevious</visible>
+					<animation effect="fade" start="0" end="100" time="400" reversible="false">Visible</animation>
+					<animation effect="rotatey" center="-17" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>84</posx>
+					<animation effect="rotatey" center="53" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>154</posx>
+					<animation effect="rotatey" center="123" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-5).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>224</posx>
+					<animation effect="rotatey" center="193" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-4).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>294</posx>
+					<animation effect="rotatey" center="263" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-3).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>364</posx>
+					<animation effect="rotatey" center="333" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>434</posx>
+					<animation effect="rotatey" center="403" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-1).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>1054</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="fade" start="100" end="0" time="400" reversible="false">Hidden</animation>
+					<animation effect="rotatey" center="1225" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(8).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(8).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>984</posx>
+					<animation effect="rotatey" center="1155" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>914</posx>
+					<animation effect="rotatey" center="1085" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>844</posx>
+					<animation effect="rotatey" center="1015" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(5).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>774</posx>
+					<animation effect="rotatey" center="945" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(4).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>704</posx>
+					<animation effect="rotatey" center="875" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(3).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>634</posx>
+					<animation effect="rotatey" center="805" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container.OnPrevious</visible>
+					<animation effect="slide" end="-5,0" time="350" reversible="false">Hidden</animation>
+					
+					<control type="group">
+						<posx>504</posx>
+						<visible>Container.OnPrevious</visible>
+						<animation effect="rotatey" center="473" start="0" end="60" time="350" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+						<animation effect="rotatey" center="473" start="-60" end="-60" condition="true">Conditional</animation>
+						
+						<control type="image">
+							<include>Music3DWrapCoverImage</include>
+							<info>Container(64).ListItem(0).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>131</posy>
+							<include>Music3DWrapCoverImageReflection</include>
+							<info>Container(64).ListItem(0).Icon</info>
+						</control>
+					</control>
+					
+					<control type="group">
+						<posx>569</posx>
+						<visible>Container.OnPrevious</visible>
+						<animation effect="rotatey" center="742" start="0" end="60" time="350" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+						
+						<control type="image">
+							<include>Music3DWrapCoverImage</include>
+							<info>Container(64).ListItem(1).Icon</info>
+						</control>
+					
+						<control type="image">
+							<posy>131</posy>
+							<include>Music3DWrapCoverImageReflection</include>
+							<info>Container(64).ListItem(1).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group" id="2000">
+				<posy>540</posy>
+				<camera x="640" y="545"/>
+				<visible>Control.IsVisible(64) + !Control.IsVisible(2001)  + !Control.IsVisible(2002)</visible>
+				
+				<control type="group">
+					<posx>84</posx>
+					<animation effect="rotatey" center="53" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>154</posx>
+					<animation effect="rotatey" center="123" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>224</posx>
+					<animation effect="rotatey" center="193" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-5).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>294</posx>
+					<animation effect="rotatey" center="263" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-4).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>364</posx>
+					<animation effect="rotatey" center="333" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-3).Icon</info>
+					</control>
+				</control>		
+				
+				<control type="group">
+					<posx>434</posx>
+					<animation effect="rotatey" center="403" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-2).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>504</posx>
+					<animation effect="rotatey" center="473" start="-60" end="-60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(-1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(-1).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>1054</posx>
+					<animation effect="rotatey" center="1225" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(7).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(7).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>984</posx>
+					<animation effect="rotatey" center="1155" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(6).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(6).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>914</posx>
+					<animation effect="rotatey" center="1085" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(5).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(5).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>844</posx>
+					<animation effect="rotatey" center="1015" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(4).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(4).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>774</posx>
+					<animation effect="rotatey" center="945" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(3).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(3).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>704</posx>
+					<animation effect="rotatey" center="875" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(2).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(2).Icon</info>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>634</posx>
+					<animation effect="rotatey" center="805" start="60" end="60" condition="true">Conditional</animation>
+					
+					<control type="image">
+						<include>Music3DWrapCoverImage</include>
+						<info>Container(64).ListItem(1).Icon</info>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<include>Music3DWrapCoverImageReflection</include>
+						<info>Container(64).ListItem(1).Icon</info>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>569</posx>
+					<visible>Control.HasFocus(64)</visible>
+					
+					<control type="image">
+						<width>142</width>
+						<height>142</height>
+						<info>Container(64).ListItem(0).Icon</info>
+						<bordertexture border="9">item-background2.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<width>142</width>
+						<height>142</height>
+						<info>Container(64).ListItem(0).Icon</info>
+						<texture flipy="true" diffuse="reflection.png"/> 
+						<bordertexture flipy="true" border="9" diffuse="reflection.png">item-background2.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+				</control>
+				
+				<control type="group">
+					<posx>569</posx>
+					<visible>!Control.HasFocus(64)</visible>
+					
+					<control type="image">
+						<width>142</width>
+						<height>142</height>
+						<info>Container(64).ListItem(0).Icon</info>
+						<bordertexture border="9">item-background.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+					
+					<control type="image">
+						<posy>131</posy>
+						<width>142</width>
+						<height>142</height>
+						<info>Container(64).ListItem(0).Icon</info>
+						<texture flipy="true" diffuse="reflection.png"/> 
+						<bordertexture flipy="true" border="9" diffuse="reflection.png">item-background.png</bordertexture>
+						<bordersize>9</bordersize>
+					</control>
+				</control>
+			</control>
+			
+			<control type="wraplist" id="64">
+				<viewtype label="31106">Wrap Info</viewtype>
+				<posx>90</posx>
+				<posy>546</posy>
+				<width>1100</width>
+				<height>132</height>
+				<focusposition>8</focusposition>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+				<itemlayout height="60" width="60">
+				</itemlayout>
+				<focusedlayout height="132" width="140">
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+	
+	<include name="MusicWrapInfoFlatStyle">
+        <control type="group">
+			<include>MediaViewOpenCloseAnim</include>
+			<include>MusicWrapInfoViewFlatStyleBottomPaneOpenCloseAnim</include>
+            <include>InfoPaneHiddenSlideAnim</include>
+
+			<control type="image">
+				<description>Bottom Pane Background</description>
+				<posy>561</posy>
+				<width>ScreenWidth</width>
+				<height>159</height>
+				<texture border="0,6,0,0">bottom-info-background.png</texture>
+				<include>BottomPaneFadeAnim</include>
+			</control>	
+
+            <control type="wraplist" id="64">
+                <viewtype label="31106">Wrap Info</viewtype>
+                <posx>1</posx>
+                <posy>567</posy>
+                <width>1278</width>
+                <height>142</height>
+                <focusposition>4</focusposition>
+                <pagecontrol>150</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <orientation>horizontal</orientation>
+                <preloaditems>2</preloaditems>
+                <onup>850</onup>
+                <ondown>150</ondown>
+                <visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+                <itemlayout width="142">
+					<control type="image">
+                        <description>Background</description>
+                        <width>142</width>
+                        <height>142</height>
+                        <texture border="9">item-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Cover</description>
+                        <width>142</width>
+                        <height>142</height>
+						<bordersize>9</bordersize>
+                        <texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Default Cover</description>
+                        <width>142</width>
+                        <height>142</height>
+						<bordersize>9</bordersize>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+                        <visible>IsEmpty(ListItem.Thumb)</visible>
+                    </control>
+                    <control type="image">
+						<description>Cover Dim</description>
+                        <width>142</width>
+                        <height>142</height>
+						<bordersize>9</bordersize>
+                        <texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        <animation effect="fade" end="50" condition="true">Conditional</animation>
+                    </control>
+                </itemlayout>    
+                <focusedlayout width="142">
+					 <control type="image">
+                        <description>Background</description>
+                        <width>142</width>
+                        <height>142</height>
+                        <texture border="9">item-background2.png</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>Control.HasFocus(64)</visible>
+                        <include>MusicWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+					 <control type="image">
+                        <description>Background</description>
+                        <width>142</width>
+                        <height>142</height>
+                        <texture border="9">item-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!Control.HasFocus(64)</visible>
+                        <include>MusicWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+                    <control type="image">
+                        <description>Cover</description>
+                        <width>142</width>
+                        <height>142</height>
+						<bordersize>12</bordersize>
+                        <texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+                        <visible>!IsEmpty(ListItem.Thumb)</visible>
+                        <include>MusicWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+                    <control type="image">
+                        <description>Default Cover</description>
+                        <width>142</width>
+                        <height>142</height>
+						<bordersize>12</bordersize>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<aspectratio>keep</aspectratio>
+                        <visible>IsEmpty(ListItem.Thumb)</visible>
+                        <include>MusicWrapInfoViewFlatStyleFocusAnim</include>
+                    </control>
+                </focusedlayout>                    
+            </control>
+			
+			<control type="image">
+				<description>Bottom Pane Overlay</description>
+				<posy>567</posy>
+				<width>ScreenWidth</width>
+				<height>153</height>
+				<texture>bottom-bar-overlay.png</texture>
+				<visible>!Skin.HasSetting(HideMusicWrapListInfoShadow)</visible>
+			</control>	
+        </control>
+    </include>
+	
+	<include name="MusicWrapInfoSmallFlatStyle">
+		<control type="group">		
+			<posy>580</posy>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>MusicWrapInfoViewSmallFlatStyleBottomPaneOpenCloseAnim</include>
+		
+			<control type="image">
+				<description>Bottom Pane Background</description>
+				<width>ScreenWidth</width>
+				<height>140</height>
+				<texture border="0,6,0,0">bottom-info-background.png</texture>
+				<include>BottomPaneFadeAnim</include>
+			</control>
+
+			<control type="wraplist" id="64">
+				<viewtype label="31106">Wrap Info</viewtype>
+				<posx>3</posx>
+				<posy>13</posy>
+				<width>1274</width>
+				<height>125</height>
+				<visible>true</visible>
+				<focusposition>6</focusposition>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+				<itemlayout width="98">
+					<control type="image">
+						<description>Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<bordersize>10</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Reflection</description>
+						<posx>1</posx>
+						<posy>97</posy>
+						<width>96</width>
+						<height>96</height>
+						<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Cover Dim</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>
+				</itemlayout>	
+				<focusedlayout width="98">
+					<control type="image">
+						<description>Background</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<texture border="5">item-noshadow-background2.png</texture>
+						<visible>Control.HasFocus(64)</visible>
+						<include>MusicWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Background</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<texture border="5">item-noshadow-background.png</texture>
+						<visible>!Control.HasFocus(64)</visible>
+						<include>MusicWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<bordersize>4</bordersize>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<include>MusicWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>96</width>
+						<height>96</height>
+						<bordersize>4</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>MusicWrapInfoViewSmallFlatStyleFocusAnim</include>
+					</control>
+				</focusedlayout>					
+			</control>
+				
+			<control type="image">
+				<description>Bottom Pane Overlay</description>
+				<posx>0</posx>
+				<posy>6</posy>
+				<width>ScreenWidth</width>
+				<height>134</height>
+				<texture>bottom-bar-overlay.png</texture>
+				<visible>!Skin.HasSetting(HideMusicWrapListInfoShadow)</visible>
+			</control>	
+		</control>
+	</include>
+	
+	<include name="MoviesListInfo2ClassicStyle">
+		<control type="image">
+			<include>ScreenSize</include>
+			<texture>listview-background-dim.png</texture>
+		</control>
+			
+		<control type="list" id="66">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>650</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>541</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>66</onup>
+			<ondown>66</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="36">
+				<control type="image">
+					<width>600</width>
+					<height>36</height>	
+					<texture border="0,2,0,0">button-list-nofocus.png</texture>
+					<include>ListViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>					
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>				
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="36">	
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-focus.png</texture>
+					<visible>Control.HasFocus(66)</visible>
+				</control>
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+					<visible>!Control.HasFocus(66)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="MoviesListInfo2BannerStyle">
+		<control type="list" id="66">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>546</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>66</onup>
+			<ondown>66</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="91">
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-nofocus.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>								
+				<control type="label">
+					<description>Title</description>
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>490</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>55</posy>
+					<width>490</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="91">	
+				<control type="image">
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-focus2.png</texture>
+					<visible>Control.HasFocus(66)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<width>590</width>
+					<height>87</height>	
+					<texture border="5">button-focus3.png</texture>
+					<visible>!Control.HasFocus(66)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>				
+				<control type="label">
+					<description>Title</description>
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>490</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>55</posy>
+					<width>490</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideMoviesListInfo2Overlay)</visible>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="MoviesListInfo2IconStyle">
+		<control type="panel" id="66">
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>90</posy>
+			<width>600</width>
+			<height>555</height>
+			<pagecontrol>150</pagecontrol>	
+			<preloaditems>2</preloaditems>
+			<onup>66</onup>
+			<ondown>66</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<itemlayout height="185" width="200">		
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="185" width="200">
+				<control type="image">
+					<description>Background</description>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>189</width>
+					<height>185</height>
+					<texture border="15">item-round-background2.png</texture>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>	
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<include name="TVShowsListInfo2ClassicStyle">
+		<control type="image">
+			<include>ScreenSize</include>
+			<texture>listview-background-dim.png</texture>
+		</control>
+			
+		<control type="list" id="65">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>650</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>541</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>65</onup>
+			<ondown>65</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="36">
+				<control type="image">
+					<width>600</width>
+					<height>36</height>	
+					<texture border="0,2,0,0">button-list-nofocus.png</texture>
+					<include>ListViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>					
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>				
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="36">	
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-focus.png</texture>
+					<visible>Control.HasFocus(65)</visible>
+				</control>
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+					<visible>!Control.HasFocus(65)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+
+	<include name="TVShowsListInfo2BannerStyle">
+		<control type="list" id="65">
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>92</posy>
+			<width>600</width>
+			<height>548</height>
+			<pagecontrol>150</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<onup>65</onup>
+			<ondown>65</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+			<itemlayout height="137" width="600">	
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>127</height>	
+					<texture border="9">item-background.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="label">
+					<description>Title</description>
+					<posx>12</posx>
+					<posy>15</posy>
+					<width>560</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<width>590</width>
+					<height>127</height>	
+					<bordersize>12</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<width>590</width>
+					<height>127</height>	
+					<bordersize>20</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Dim</description>
+					<width>590</width>
+					<height>127</height>	
+					<bordersize>12</bordersize>
+					<texture>background-dim.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="137" width="600">	
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>127</height>	
+					<texture border="9">item-background2.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>Control.HasFocus(65)</visible>
+				</control>
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>127</height>	
+					<texture border="9">item-background.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!Control.HasFocus(65)</visible>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<posx>12</posx>
+					<posy>15</posy>
+					<width>560</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<width>590</width>
+					<height>127</height>	
+					<bordersize>12</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<width>590</width>
+					<height>127</height>	
+					<bordersize>20</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+			</focusedlayout>			
+		</control>
+	</include>
+	
+	<include name="TVShowsListInfo2PosterBannerStyle">
+		<control type="list" id="65">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>546</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>65</onup>
+			<ondown>65</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="91">
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-nofocus.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>								
+				<control type="label">
+					<description>Title</description>
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>490</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>55</posy>
+					<width>490</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="91">	
+				<control type="image">
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-focus2.png</texture>
+					<visible>Control.HasFocus(65)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<width>590</width>
+					<height>87</height>	
+					<texture border="5">button-focus3.png</texture>
+					<visible>!Control.HasFocus(65)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>				
+				<control type="label">
+					<description>Title</description>
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>490</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>55</posy>
+					<width>490</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideTVShowsListInfo2Overlay)</visible>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="TVShowsListInfo2IconStyle">
+		<control type="panel" id="65">
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>90</posy>
+			<width>600</width>
+			<height>555</height>
+			<pagecontrol>150</pagecontrol>	
+			<preloaditems>2</preloaditems>
+			<onup>65</onup>
+			<ondown>65</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<itemlayout height="185" width="200">		
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="185" width="200">
+				<control type="image">
+					<description>Background</description>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>189</width>
+					<height>185</height>
+					<texture border="15">item-round-background2.png</texture>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>	
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<include name="EpisodesListInfo2ClassicStyle">
+		<control type="image">
+			<include>ScreenSize</include>
+			<texture>listview-background-dim.png</texture>
+		</control>
+			
+		<control type="list" id="68">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>650</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>541</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>68</onup>
+			<ondown>68</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="36">
+				<control type="image">
+					<width>600</width>
+					<height>36</height>	
+					<texture border="0,2,0,0">button-list-nofocus.png</texture>
+					<include>ListViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>					
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>				
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="36">	
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-focus.png</texture>
+					<visible>Control.HasFocus(68)</visible>
+				</control>
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+					<visible>!Control.HasFocus(68)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="EpisodesListInfo2BannerStyle">
+		<control type="list" id="68">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>546</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>68</onup>
+			<ondown>68</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="91">
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-nofocus.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>140</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>140</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>								
+				<control type="label">
+					<description>Title</description>
+					<posx>150</posx>
+					<posy>5</posy>
+					<width>430</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>55</posy>
+					<width>430</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="91">	
+				<control type="image">
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-focus2.png</texture>
+					<visible>Control.HasFocus(68)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<width>590</width>
+					<height>87</height>	
+					<texture border="5">button-focus3.png</texture>
+					<visible>!Control.HasFocus(68)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>140</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>140</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>				
+				<control type="label">
+					<description>Title</description>
+					<posx>150</posx>
+					<posy>5</posy>
+					<width>430</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>55</posy>
+					<width>430</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+					<visible>!Skin.HasSetting(HideEpisodesListInfo2Overlay)</visible>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="EpisodesListInfo2IconStyle">
+		<control type="panel" id="68">
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>90</posy>
+			<width>600</width>
+			<height>555</height>
+			<pagecontrol>150</pagecontrol>	
+			<preloaditems>2</preloaditems>
+			<onup>68</onup>
+			<ondown>68</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<itemlayout height="185" width="200">		
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="185" width="200">
+				<control type="image">
+					<description>Background</description>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>189</width>
+					<height>185</height>
+					<texture border="15">item-round-background2.png</texture>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>	
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<include name="MusicListInfo2ClassicStyle">
+		<control type="image">
+			<include>ScreenSize</include>
+			<texture>listview-background-dim.png</texture>
+		</control>
+			
+		<control type="list" id="67">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>650</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>541</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>67</onup>
+			<ondown>67</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="36">
+				<control type="image">
+					<width>600</width>
+					<height>36</height>	
+					<texture border="0,2,0,0">button-list-nofocus.png</texture>
+					<include>ListViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>					
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>				
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="36">	
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-focus.png</texture>
+					<visible>Control.HasFocus(67)</visible>
+				</control>
+				<control type="image">
+					<posy>1</posy>
+					<width>600</width>
+					<height>36</height>	
+					<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+					<visible>!Control.HasFocus(67)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<width>500</width>
+					<height>36</height>
+					<font>ListFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>572</posx>
+					<width>100</width>
+					<height>36</height>
+					<font>ListFont2</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>right</align>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>573</posx>
+					<posy>6</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="MusicListInfo2BannerStyle">
+		<control type="list" id="67">	
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>97</posy>
+			<width>600</width>
+			<height>546</height>
+			<pagecontrol>150</pagecontrol>
+			<onup>67</onup>
+			<ondown>67</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>				
+			<itemlayout height="91">
+				<control type="image">
+					<description>Background</description>
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-nofocus.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>								
+				<control type="label">
+					<description>Title</description>
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>490</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>55</posy>
+					<width>490</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</itemlayout>		
+			<focusedlayout height="91">	
+				<control type="image">
+					<width>590</width>
+					<height>87</height>
+					<texture border="5">button-focus2.png</texture>
+					<visible>Control.HasFocus(67)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<width>590</width>
+					<height>87</height>	
+					<texture border="5">button-focus3.png</texture>
+					<visible>!Control.HasFocus(67)</visible>
+					<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+				</control>
+				<control type="image">
+					<description>Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>80</width>
+					<height>80</height>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>				
+				<control type="label">
+					<description>Title</description>
+					<posx>90</posx>
+					<posy>5</posy>
+					<width>490</width>
+					<font>MediaInfoHeadFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>55</posy>
+					<width>490</width>
+					<font>MediaInfoCatFont</font>
+					<textcolor>MediaInfoHeadColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<aligny>center</aligny>				
+					<info>ListItem.Label2</info>
+				</control>
+				<control type="image">
+					<description>Overlay</description>
+					<posx>560</posx>
+					<posy>44</posy>
+					<width>23</width>
+					<height>23</height>
+					<info>ListItem.Overlay</info>
+				</control>	
+			</focusedlayout>		
+		</control>				
+	</include>
+	
+	<include name="MusicListInfo2IconStyle">
+		<control type="panel" id="67">
+			<viewtype label="31112">List Info 2</viewtype>
+			<posx>640</posx>
+			<posy>90</posy>
+			<width>600</width>
+			<height>555</height>
+			<pagecontrol>150</pagecontrol>	
+			<preloaditems>2</preloaditems>
+			<onup>67</onup>
+			<ondown>67</ondown>
+			<onleft>850</onleft>
+			<onright>150</onright>
+			<itemlayout height="185" width="200">		
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>DefaultColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>															
+			<focusedlayout height="185" width="200">
+				<control type="image">
+					<description>Background</description>
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>189</width>
+					<height>185</height>
+					<texture border="15">item-round-background2.png</texture>
+				</control>	
+				<control type="image">
+					<description>Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<description>Default Cover</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>150</width>
+					<height>122</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>	
+				<control type="label">
+					<posx>100</posx>
+					<posy>150</posy>
+					<width>150</width>
+					<font>IconFont</font>
+					<textcolor>SelectedColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

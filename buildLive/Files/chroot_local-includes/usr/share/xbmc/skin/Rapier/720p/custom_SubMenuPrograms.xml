@@ -1,0 +1,162 @@
+<window type="dialog" id="3012">
+	<defaultcontrol always="true">110</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="0" y="572">true</origin>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<include>HomeSubMenuBarImage</include>
+			<include>HomeSubMenuBarOpenCloseAnim</include>
+			
+			<control type="group">
+				<posx>10</posx>
+				<include>HomeSubMenuSlideAnim</include>
+				
+				<control type="list" id="110">
+					<description>Programs Menu Bar</description>
+					<width>1260</width>
+					<height>34</height>
+					<ondown>Dialog.Close(3012)</ondown>
+					<orientation>horizontal</orientation>
+					<include>HomeSubMenuOpenCloseAnim</include>
+					<itemlayout width="180">
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>		
+					</itemlayout>
+					<focusedlayout width="180">
+						<control type="image">
+							<posy>-1</posy>
+							<width>180</width>
+							<height>36</height>
+							<texture border="0,0,0,2">button-submenu-focus.png</texture>
+							<include>HomeSubMenuFocusAnim</include>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>					
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Files</description>
+							<label>$LOCALIZE[1214]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs)</onclick>
+							<visible>!Skin.HasSetting(CustomizeProgramsSubMenuItem1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem1CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem1CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem1) + !IsEmpty(Skin.String(ProgramsSubMenuItem1CustomLabel))</visible>
+						</item>
+						<item id="2">
+							<description>Apps</description>
+							<label>$LOCALIZE[31306]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,Apps,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeProgramsSubMenuItem2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem2CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem2CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem2) + !IsEmpty(Skin.String(ProgramsSubMenuItem2CustomLabel))</visible>
+						</item>
+						<item id="3">
+							<description>Games</description>
+							<label>$LOCALIZE[15016]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,Games,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeProgramsSubMenuItem3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem3CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem3CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem3) + !IsEmpty(Skin.String(ProgramsSubMenuItem3CustomLabel))</visible>
+						</item>
+						<item id="4">
+							<description>Emulators</description>
+							<label>$LOCALIZE[31305]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,Emulators,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeProgramsSubMenuItem4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem4CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem4CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem4) + !IsEmpty(Skin.String(ProgramsSubMenuItem4CustomLabel))</visible>
+						</item>
+						<item id="5">
+							<description>Plugins</description>
+							<label>$LOCALIZE[31302]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,Program plugins,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeProgramsSubMenuItem5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem5CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem5CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem5) + !IsEmpty(Skin.String(ProgramsSubMenuItem5CustomLabel))</visible>
+						</item>
+						<item id="6">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem6CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem6CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem6) + !IsEmpty(Skin.String(ProgramsSubMenuItem6CustomLabel))</visible>
+						</item>
+						<item id="7">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(ProgramsSubMenuItem7CustomLabel)]</label>
+							<onclick>Dialog.Close(3012)</onclick>
+							<onclick>ActivateWindow(Programs,$INFO[Skin.String(ProgramsSubMenuItem7CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeProgramsSubMenuItem7) + !IsEmpty(Skin.String(ProgramsSubMenuItem7CustomLabel))</visible>
+						</item>
+					</content>						
+				</control>
+			</control>
+		</control>
+				
+		<control type="group">	
+			<description>Bottom Bar Area</description>	
+			<posy>34</posy>	
+			<include>HomeSubMenuCoverTopImage</include>		
+			<include>HomeSubMenuCoverTopOverlay</include>
+			
+			<control type="image">
+				<Description>Programs Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos2</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-programs-text-focus.png</texture>
+				<include>HomeMenuCategoryFocusAnim2</include>
+			</control>	
+		</control>
+	</controls>
+</window>
