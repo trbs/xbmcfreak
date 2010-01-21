@@ -10,4 +10,5 @@ mkdir /home/$xbmcUser/Videos
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/XOT-Uzg.v3/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/BluRay/ -R
+ldconfig
 rm -f /usr/share/xbmc/runonce
