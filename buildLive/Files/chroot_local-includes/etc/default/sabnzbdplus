@@ -17,8 +17,8 @@ USER=xbmc
 CONFIG=
 
 # [optional] hostname/ip and port number to listen on:
-HOST=
-PORT=8000
+HOST=0.0.0.0
+PORT=9000
 
 # [optional] extra command line options, if any:
 EXTRAOPTS=
