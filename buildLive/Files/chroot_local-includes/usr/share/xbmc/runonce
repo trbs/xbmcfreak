@@ -1,14 +1,29 @@
 #!/bin/bash
+
+#get current user
 xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
-sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
+
+#configure sabnzbd
 sed -i "s/USER=xbmc/USER=$xbmcUser/g" /etc/default/sabnzbdplus
+tar zxvf /usr/share/xbmc/sabnzbd.tar.gz --directory=/home/$xbmcUser/
+chown $xbmcUser:$xbmcUser /home/$xbmcUser/.sabnzbd/
+/etc/init.d/sabnzbdplus restart
+
+#configure samba
+sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
 mkdir /home/$xbmcUser/Downloads
 mkdir /home/$xbmcUser/Music
 mkdir /home/$xbmcUser/Pictures
 mkdir "/home/$xbmcUser/TV Shows"
 mkdir /home/$xbmcUser/Videos
+
+#fix user rights
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/XOT-Uzg.v3/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/BluRay/ -R
+
+#reload modules for makemkv
 ldconfig
+
+#remove runonce
 rm -f /usr/share/xbmc/runonce
