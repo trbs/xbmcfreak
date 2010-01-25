@@ -22,3 +22,5 @@ wget lynx lftp ftp zip
 sabnzbdplus
 lm-sensors
 transmission-cli transmission-daemon transmission-common
+wireless-tools wpasupplicant
+libid3tag0 mt-daapd

@@ -6,6 +6,7 @@ xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
 #configure sabnzbd
 sed -i "s/USER=xbmc/USER=$xbmcUser/g" /etc/default/sabnzbdplus
 tar zxvf /usr/share/xbmc/sabnzbd.tar.gz --directory=/home/$xbmcUser/
+sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/xbmc/.sabnzbd/sabnzbd.ini
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/.sabnzbd/
 /etc/init.d/sabnzbdplus restart
 
@@ -17,10 +18,17 @@ mkdir /home/$xbmcUser/Pictures
 mkdir "/home/$xbmcUser/TV Shows"
 mkdir /home/$xbmcUser/Videos
 
+#copy asroundrc
+cp /usr/share/xbmc/asoundrc /home/$xbmcUser/.asoundrc
+
 #fix user rights
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/XOT-Uzg.v3/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/BluRay/ -R
+chown $xbmcUser:$xbmcUser /usr/share/xbmc/web
+
+#mt-daapd
+update-rc.d avahi-daemon defaults
 
 #reload modules for makemkv
 ldconfig
