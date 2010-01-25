@@ -24,3 +24,5 @@ lm-sensors
 transmission-cli transmission-daemon transmission-common
 wireless-tools wpasupplicant
 libid3tag0 mt-daapd
+apache2
+python-software-properties

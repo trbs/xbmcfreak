@@ -329,6 +329,8 @@ Arguments ()
 			noxscreensaver)
 				NOXSCREENSAVER="Yes"
 				export NOXSCREENSAVER
+				NOPRESEED="Yes"
+				export NOPRESEED
 				;;
 
 			persistent)
