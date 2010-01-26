@@ -1,85 +1,97 @@
 <!--Alaska-->
-
 <window id="123">
 	<defaultcontrol always="true">5</defaultcontrol>
-
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-
-	<coordinates>
-		<system>1</system>
-		<posx>236</posx>
-		<posy>10</posy>
-	</coordinates>
-
 	<controls>
-		<control type="label">
-			<include>DialogID</include>
-			<label>VideoOSDSettings.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="group">
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
 			<visible>!Window.IsVisible(145)</visible>
-
 			<control type="image">
 				<description>Panel</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>800</width>
-				<height>544</height>
-				<texture>favourites/favourites_panel.png</texture>
-				<colordiffuse>FavListPanel</colordiffuse>
+				<posx>192</posx>
+				<posy>94</posy>
+				<width>896</width>
+				<height>504</height>
+				<texture border="100">common/common_panel_1.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
-
+			<control type="image">
+				<posx>234</posx>
+				<posy>184</posy>
+				<width>812</width>
+				<height>2</height>
+				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
+			</control>
 			<control type="label" id="2">
 				<description>Settings</description>
-				<posx>750</posx>
-				<posy>435</posy>
-				<width>700</width>
-				<height>60</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<include>Objects_DialogLabelDark</include>
+				<posx>260</posx>
+				<posy>138</posy>
+				<width>760</width>
+				<height>34</height>
+				<align>center</align>
+				<include>DialogHeader</include>
 			</control>
-
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
-				<posx>50</posx>
-				<posy>40</posy>
-				<width>700</width>
-				<height>350</height>
+				<posx>260</posx>
+				<posy>210</posy>
+				<width>760</width>
+				<height>380</height>
 				<itemgap>2</itemgap>
 				<orientation>vertical</orientation>
-				<pagecontrol>60</pagecontrol>
-				<onleft>28</onleft>
-				<onright>28</onright>
-				<onup>28</onup>
-				<ondown>28</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
 			</control>
 			<control type="button" id="7">
-				<description>Button</description>
-				<height>30</height>
-				<width>555</width>
+				<description>Default Button</description>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>8</textoffsetx>
+				<textcolor>PanelListItem</textcolor>
+				<focusedcolor>PanelListItemFocused</focusedcolor>
+				<font>Font_PanelItemLabel</font>
 			</control>
 			<control type="radiobutton" id="8">
-				<description>Radio Button</description>
-				<texturefocus border="1">ButtonFo.png</texturefocus>
-				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+				<description>Default Radio Button</description>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>8</textoffsetx>
+				<textcolor>PanelListItem</textcolor>
+				<focusedcolor>PanelListItemFocused</focusedcolor>
+				<font>Font_PanelItemLabel</font>
 			</control>
 			<control type="spincontrolex" id="9">
-				<description>Spin Controlex</description>
-				<texturefocus border="1">ButtonFo.png</texturefocus>
-				<texturenofocus border="1">ButtonNF.png</texturenofocus>
+				<description>Default Spin Control</description>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>8</textoffsetx>
+				<textcolor>PanelListItem</textcolor>
+				<focusedcolor>PanelListItemFocused</focusedcolor>
+				<font>Font_PanelItemLabel</font>
+				<textureup>ArrowUpNF.png</textureup>
+				<texturedown>ArrowDownNF.png</texturedown>
+				<textureupfocus>ArrowUpFo.png</textureupfocus>
+				<texturedownfocus>ArrowDownFo.png</texturedownfocus>
 			</control>
 			<control type="sliderex" id="10">
 				<description>Slider</description>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>8</textoffsetx>
+				<textcolor>PanelListItem</textcolor>
+				<focusedcolor>PanelListItemFocused</focusedcolor>
+				<font>Font_PanelItemLabel</font>
 				<texturefocus border="1">ButtonFo.png</texturefocus>
 				<texturenofocus border="1">ButtonNF.png</texturenofocus>
 			</control>
 		</control>
-
-		<!-- <include>Object_DebugGrid</include> -->
+		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
-
 </window>

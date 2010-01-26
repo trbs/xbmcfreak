@@ -1,5 +1,4 @@
 <includes>
-
 	<default type="button">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -11,13 +10,12 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<texturefocus>ButtonFo.png</texturefocus>
 		<texturenofocus>ButtonNF.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="label">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -25,12 +23,11 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<scroll>false</scroll>
 		<scrollspeed>40</scrollspeed>
 	</default>
-
 	<default type="image">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -40,7 +37,6 @@
 		<aligny>center</aligny>
 		<texture>-</texture>
 	</default>
-
 	<default type="togglebutton">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -52,7 +48,7 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<texturenofocus>arrowupnf.png</texturenofocus>
 		<texturefocus>arrowupfo.png</texturefocus>
@@ -61,7 +57,6 @@
 		<colordiffuse>ButtonFilterColor</colordiffuse>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="radiobutton">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -73,7 +68,7 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<texturefocus>ButtonFo.png</texturefocus>
 		<texturenofocus>ButtonNF.png</texturenofocus>
@@ -84,7 +79,6 @@
 		<radiowidth>20</radiowidth>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="spincontrolex">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -96,7 +90,7 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<texturenofocus>ButtonNF.png</texturenofocus>
 		<texturefocus>ButtonFo.png</texturefocus>
@@ -108,7 +102,6 @@
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="spincontrol">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -123,12 +116,11 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="sliderex">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -146,10 +138,9 @@
 		<font>Font_Settings</font>
 		<textcolor>Text</textcolor>
 		<focusedcolor>TextFocused</focusedcolor>
-		<selectedcolor>TextFocused</selectedcolor>
+		<selectedcolor>TextSelected</selectedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
 	</default>
-
 	<default type="slider">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -159,5 +150,4 @@
 		<textureslidernib>SeekBarSlider.png</textureslidernib>
 		<textureslidernibfocus>SeekBarSlider.png</textureslidernibfocus>
 	</default>
-
 </includes>

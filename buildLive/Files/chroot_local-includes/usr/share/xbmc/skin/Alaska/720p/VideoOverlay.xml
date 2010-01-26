@@ -1,31 +1,24 @@
 <!--Alaska-->
-
 <window id="2004">
 	<defaultcontrol>-</defaultcontrol>
 	<animation type="WindowOpen">
-		<effect type="slide" start="-600,0" end="0,0" time="600" tween="cubic" easing="out" delay="800" />
-		<effect type="fade" start="0" end="100" time="600" delay="800" />
+		<effect type="slide" start="-600,0" end="0,0" time="600" tween="cubic" easing="out" />
+		<effect type="fade" start="0" end="100" time="600" />
 	</animation>
 	<animation type="WindowClose">
 		<effect type="slide" start="0,0" end="-200,0" time="600" tween="cubic" easing="out" />
 		<effect type="fade" start="100" end="0" time="600" />
 	</animation>
 	<controls>
-
-		<control type="label">
-			<include>WindowID</include>
-			<label>VideoOverlay.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="group">
 			<animation effect="slide" start="0,0" end="0,30" time="200" condition="!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home) + !Window.IsVisible(2006)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-32" time="200" condition="Window.IsActive(PlayerControls) + [!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home) + !Window.IsVisible(2006)]">Conditional</animation>
 			<posx>30</posx>
-			<posy>490</posy>
+			<posy>480</posy>
 			<control type="image">
-				<width>292</width>
-				<height>166</height>
-				<texture>common/white.png</texture>
+				<width>330</width>
+				<height>186</height>
+				<texture>common/black.png</texture>
 				<bordertexture border="8">common/thumb_border.png</bordertexture>
 				<bordersize>8</bordersize>
 				<aspectratio>scale</aspectratio>
@@ -34,24 +27,53 @@
 				<description>Video Preview</description>
 				<posx>8</posx>
 				<posy>8</posy>
-				<width>276</width>
-				<height>150</height>
+				<width>314</width>
+				<height>170</height>
 			</control>
-			<control type="label">
-				<posx>300</posx>
-				<posy>86</posy>
-				<width>288</width>
-				<height>60</height>
+			<control type="image">
+				<posx>8</posx>
+				<posy>156</posy>
+				<width>314</width>
+				<height>22</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>OSDNowPlayingBack</colordiffuse>
+			</control>
+			<control type="fadelabel">
+				<posx>12</posx>
+				<posy>156</posy>
+				<width>306</width>
+				<height>22</height>
+				<aligny>center</aligny>
+				<font>Font_NowPlaying</font>
+				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR]$INFO[VideoPlayer.Title, ][COLOR OSDNowPlaying]$INFO[VideoPlayer.Episode,    $LOCALIZE[20359] ][/COLOR]$INFO[VideoPlayer.TVShowTitle,    ][/B]</label>
+				<textcolor>OSDNowPlayingTitle</textcolor>
+				<scrollout>true</scrollout>
+				<pauseatend>1800</pauseatend>
+				<scrollspeed>40</scrollspeed>
+				<scroll>true</scroll>
+				<visible>![substring(VideoPlayer.Title,aspx) | substring(VideoPlayer.Title,flv)]</visible>
+			</control>
+			<control type="fadelabel">
+				<posx>12</posx>
+				<posy>156</posy>
+				<width>306</width>
+				<height>22</height>
 				<aligny>center</aligny>
 				<font>Font_ListDetail</font>
-				<label>$LOCALIZE[13350][CR][B][COLOR=NowPlayingTrack]$INFO[VideoPlayer.Title][/COLOR][/B][CR][COLOR=NowPlayingAlbum]$INFO[VideoPlayer.TVShowTitle][/COLOR]</label>
-				<textcolor>NowPlayingArtist</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350] [/COLOR]$LOCALIZE[20338] $LOCALIZE[20410][/B]</label>
+				<textcolor>OSDNowPlayingTitle</textcolor>
+				<scrollout>true</scrollout>
+				<pauseatend>1800</pauseatend>
+				<scrollspeed>40</scrollspeed>
+				<scroll>true</scroll>
+				<visible>substring(VideoPlayer.Title,aspx) | substring(VideoPlayer.Title,flv)</visible>
 			</control>
 		</control>
-
 		<include>Object_DebugGrid</include>
-
+		<control type="group">
+			<posy>700</posy>
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

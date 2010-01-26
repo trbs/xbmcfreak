@@ -28,6 +28,7 @@ chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/BluRay/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/web
 
 #mt-daapd
+sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/mt-daapd.conf
 update-rc.d avahi-daemon defaults
 
 #reload modules for makemkv

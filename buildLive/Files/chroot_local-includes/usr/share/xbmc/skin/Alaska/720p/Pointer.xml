@@ -1,35 +1,35 @@
-<!--Empty-->
-
+<!--Alaska-->
 <window id="105">
 	<defaultcontrol>1</defaultcontrol>
-
 	<controls>
-
 		<control type="image" id="1">
 			<description>Pointer</description>
-			<width>30</width>
-			<height>30</height>
-			<texture>PointerNF.png</texture>
+			<width>120</width>
+			<height>120</height>
+			<texture>no_mouse.png</texture>
 		</control>
 		<control type="image" id="2">
 			<description>Pointer Focus</description>
-			<width>30</width>
-			<height>30</height>
-			<texture>PointerFo.png</texture>
+			<width>120</width>
+			<height>120</height>
+			<texture>no_mouse.png</texture>
 		</control>
 		<control type="image" id="3">
 			<description>Pointer Drag</description>
-			<width>30</width>
-			<height>30</height>
-			<texture>PointerDrag.png</texture>
+			<width>120</width>
+			<height>120</height>
+			<texture>no_mouse.png</texture>
 		</control>
 		<control type="image" id="4">
 			<description>pointer_click</description>
-			<width>30</width>
-			<height>30</height>
-			<texture>PointerClick.png</texture>
+			<width>120</width>
+			<height>120</height>
+			<texture>no_mouse.png</texture>
 		</control>
-
+		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
-
 </window>

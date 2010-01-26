@@ -1,5 +1,4 @@
 <!--Alaska-->
-
 <window id="2006">
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -12,27 +11,15 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>common/white.png</texture>
-			<colordiffuse>BackgroundColor</colordiffuse>
-			<animation effect="fade" start="100" end="0" time="400" >WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="200" delay="0">WindowClose</animation>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>backdrops/filter_2.png</texture>
-			<colordiffuse>BackgroundFilterColor</colordiffuse>
-			<animation effect="fade" start="100" end="0" time="400" >WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="200" delay="0">WindowClose</animation>
-		</control>
-
 		<control type="group">
+			<include>Animation_SlideDownFadeOut</include>
 			<visible>Player.ShowInfo | Window.IsActive(120) | player.paused</visible>
-			<posx>0</posx>
-			<posy>560</posy>
-			<width>1280</width>
-			<height>151</height>
+			<include>OSDHeading</include>
+			<include>OSDSeekbar</include>
+		</control>
+		<control type="group">
+			<visible>!Window.IsActive(120) + [Player.ShowInfo | player.paused]</visible>
+			<posy>630</posy>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
@@ -41,99 +28,105 @@
 				<effect type="slide" start="0,0" end="0,300" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="100" end="0" time="600" />
 			</animation>
-			<include>OSD_Back</include>
-			<control type="progress" id="23">
-				<texturebg>osd/osd_progress_back.png</texturebg>
-				<lefttexture>osd/osd_progress_left.png</lefttexture>
-				<midtexture>osd/osd_progress_mid.png</midtexture>
-				<righttexture>osd/osd_progress_right.png</righttexture>
-				<colordiffuse>OSDProgressBar</colordiffuse>
-				<info>Player.Progress</info>
-				<posx>30</posx>
-				<posy>115</posy>
-				<width>1220</width>
-				<height>19</height>
-			</control>
-		</control>
-		<control type="group">
-			<visible>!Window.IsVisible(musicoverlay) + [Window.IsActive(120) | Player.ShowInfo | player.paused]</visible>
 			<animation type="Visible">
-				<effect type="slide" start="-300,0" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="600" />
 			</animation>
-			<animation type="Hidden" condition="!Window.IsVisible(2903)">
-				<effect type="slide" start="0,0" end="-300,0" time="600" tween="cubic" easing="out" />
+			<animation type="Hidden">
+				<effect type="slide" start="0,0" end="0,300" time="600" tween="cubic" easing="out" />
 				<effect type="fade" start="100" end="0" time="600" />
 			</animation>
-			<posx>30</posx>
-			<posy>490</posy>
 			<control type="image">
-				<posx>2</posx>
-				<posy>2</posy>
-				<width>162</width>
-				<height>162</height>
-				<texture>$INFO[MusicPlayer.Cover]</texture>
-				<bordertexture border="8">common/thumb_border.png</bordertexture>
-				<bordersize>8</bordersize>
-				<animation type="Conditional" condition="Window.IsActive(2006) | Window.IsActive(120)">
-					<effect type="zoom" center="35,180" start="100" end="155" time="400" tween="cubic" easing="out" />
-					<effect type="slide" start="0,0" end="12,5" time="400" tween="cubic" easing="out" />
-				</animation>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>165</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>OSDBackground</colordiffuse>
 			</control>
-		</control>
-		<control type="group">
-			<visible>Window.IsActive(120) | Player.ShowInfo | player.paused</visible>
-			<posx>0</posx>
-			<posy>578</posy>
-			<width>1280</width>
-			<height>151</height>
-			<animation type="WindowOpen">
-				<effect type="zoom" time="400" center="640,480" start="90" end="100" tween="cubic" easing="out" delay="500" />
-				<effect type="fade" time="400" start="0" end="100" delay="500" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="zoom" time="200" center="640,480" start="100" end="90" tween="cubic" easing="in" />
-				<effect type="fade" time="200" start="100" end="0" />
-			</animation>
-			<animation type="Visible">
-				<effect type="zoom" time="400" center="640,480" start="90" end="100" tween="cubic" easing="out" delay="500" />
-				<effect type="fade" time="400" start="0" end="100" delay="500" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="zoom" time="200" center="640,480" start="100" end="90" tween="cubic" easing="in" />
-				<effect type="fade" time="200" start="100" end="0" />
-			</animation>
 			<control type="label">
-				<posx>290</posx>
+				<description>Current Track</description>
+				<posx>250</posx>
 				<posy>10</posy>
-				<width>550</width>
-				<height>40</height>
-				<textcolor>OSDPlayingArtist</textcolor>
-				<font>Font_PosterTitle</font>
-				<label>$INFO[MusicPlayer.Artist] [COLOR OSDPlayingAlbum]$INFO[MusicPlayer.Album][/COLOR]</label>
+				<width>800</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>$INFO[MusicPlayer.Title,[B]$LOCALIZE[143] [/B]]</label>
+				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(-1).Title)">Conditional</animation>
+				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
 			<control type="label">
-				<posx>290</posx>
-				<posy>50</posy>
-				<width>550</width>
-				<height>75</height>
-				<aligny>top</aligny>
-				<textcolor>OSDPlayingTrack</textcolor>
-				<font>Font_NowPlayingTrack</font>
-				<label>$INFO[MusicPlayer.Title]</label>
+				<description>Previous Track</description>
+				<posx>250</posx>
+				<posy>32</posy>
+				<width>800</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>$INFO[MusicPlayer.offset(-1).Title,[B]$LOCALIZE[210]: [/B]]</label>
+				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
-		</control>
-		<control type="label" id="0">
-			<posx>-320</posx>
-			<posy>180</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[112]</label>
-			<font>Font_MainMenu</font>
-			<textcolor>22ffffff</textcolor>
-			<visible>player.paused</visible>
+			<control type="label">
+				<description>Next Track</description>
+				<posx>250</posx>
+				<posy>54</posy>
+				<width>800</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>$INFO[MusicPlayer.offset(1).Title,[B]$LOCALIZE[209]: [/B]]</label>
+			</control>
+			<control type="label">
+				<description>Rating Info</description>
+				<posx>1250</posx>
+				<posy>10</posy>
+				<width>360</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>$INFO[MusicPlayer.Rating,[B]$LOCALIZE[563]: [/B]]</label>
+				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.Year)">Conditional</animation>
+				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.BitRate)">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>Year Info</description>
+				<posx>1250</posx>
+				<posy>32</posy>
+				<width>360</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>$INFO[MusicPlayer.Year,[B]$LOCALIZE[40124] [/B]]</label>
+				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.BitRate)">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>Track Info</description>
+				<posx>1250</posx>
+				<posy>54</posy>
+				<width>360</width>
+				<height>18</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>$INFO[MusicPlayer.PlaylistPosition,[B]$LOCALIZE[554]: [/B]]$INFO[MusicPlayer.PlaylistLength,/]</label>
+			</control>
 		</control>
 		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

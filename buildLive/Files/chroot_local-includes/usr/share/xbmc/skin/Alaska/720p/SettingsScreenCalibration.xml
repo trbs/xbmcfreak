@@ -1,15 +1,8 @@
 <!--Alaska-->
-
 <window id="11">
 	<defaultcontrol>8</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="label">
-			<posx>100</posx>
-			<include>DialogID</include>
-			<label>SettingsScreenCalibration.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
 		<control type="videowindow" id="20">
 			<description>videowindow</description>
 			<include>Dimensions_Fullscreen</include>
@@ -63,5 +56,9 @@
 			<font>Font_ProgressDialog</font>
 		</control>
 		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

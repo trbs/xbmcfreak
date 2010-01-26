@@ -1,5 +1,4 @@
 <!--Alaska-->
-
 <window id="2001">
 	<defaultcontrol always="true">7050</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -12,21 +11,15 @@
 		<effect type="fade" time="200" center="640,360" start="100" end="0" />
 	</animation>
 	<controls>
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogAlbumInfo.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<!-- invisible button to trigger view options -->
 		<control type="button" id="7050">
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onup>7001</onup>
 			<ondown>7001</ondown>
-			<onclick/>
+			<onclick />
 		</control>
 		<control type="image">
 			<description>Cover image</description>
@@ -146,7 +139,7 @@
 			</control>
 			<control type="label">
 				<visible>Container.Content(albums)</visible>
-				<label>[B]$LOCALIZE[175]:[/B] $INFO[ListItem.Property(AlbumMoods)]</label>
+				<label>[B]$LOCALIZE[563]:[/B] $INFO[ListItem.Rating]</label>
 				<posx>0</posx>
 				<posy>135</posy>
 				<width>620</width>
@@ -154,7 +147,6 @@
 				<font>Font_Date</font>
 				<textcolor>InfoGenre</textcolor>
 			</control>
-
 			<control type="textbox" id="4">
 				<visible>!Control.IsVisible(50)</visible>
 				<posy>165</posy>
@@ -212,7 +204,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
+						<textcolor>ListTitleFO</textcolor>
 						<info>ListItem.Label2</info>
 					</control>
 					<control type="label">
@@ -223,7 +215,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
+						<textcolor>ListTitleFO</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
@@ -254,7 +246,7 @@
 				<textcolor>MenuValue</textcolor>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(5)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 			<control type="button" id="6">
@@ -263,27 +255,25 @@
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 			<control type="button" id="10">
 				<description>Thumb</description>
-				<!-- LOC -->
-				<label>Thumb</label>
+				<label>$LOCALIZE[40112]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 			<control type="button" id="12">
 				<description>Get Fanart</description>
-				<!-- LOC -->
-				<label>Fanart</label>
+				<label>$LOCALIZE[20445]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 		</control>
@@ -308,44 +298,44 @@
 				<font>Font_MenuLabel</font>
 				<textcolor>MenuValue</textcolor>
 				<aligny>bottom</aligny>
-				<!-- LOC -->
-				<label>View</label>
+				<label>$LOCALIZE[40113]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(5)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 			<!-- refresh -->
 			<control type="button" id="7041">
 				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>Information</label>
+				<label>$LOCALIZE[40114]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 			<!-- Fanart -->
 			<control type="button" id="7042">
 				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>Get</label>
+				<label>$LOCALIZE[40115]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 			<!-- Thumb -->
 			<control type="button" id="7043">
 				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>Get</label>
+				<label>$LOCALIZE[40115]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="fade" start="100" end="75" time="200" />
 				</animation>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

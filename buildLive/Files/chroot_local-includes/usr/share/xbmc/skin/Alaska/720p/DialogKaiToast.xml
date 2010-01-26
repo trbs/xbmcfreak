@@ -1,7 +1,6 @@
 <!--Alaska-->
 <window id="107">
 	<defaultcontrol>402</defaultcontrol>
-
 	<animation type="WindowOpen" reversible="false">
 		<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
 		<effect type="fade" delay="200" start="0" end="100" time="300" />
@@ -10,15 +9,7 @@
 		<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
 		<effect type="fade" start="100" end="0" time="300" />
 	</animation>
-
 	<controls>
-
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogKaiToast.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="group">
 			<posx>880</posx>
 			<posy>90</posy>
@@ -41,7 +32,6 @@
 				<texture>dialogs/notification.png</texture>
 				<colordiffuse>ButtonFilterColor</colordiffuse>
 			</control>
-
 			<control type="label" id="401">
 				<description>heading</description>
 				<posx>310</posx>
@@ -53,7 +43,6 @@
 				<font>Font_ProgressDialog</font>
 				<label>-</label>
 			</control>
-
 			<control type="label" id="402">
 				<description>Line 1</description>
 				<posx>310</posx>
@@ -66,9 +55,10 @@
 				<label>-</label>
 			</control>
 		</control>
-
 		<include>Object_DebugGrid</include>
-
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
-
 </window>

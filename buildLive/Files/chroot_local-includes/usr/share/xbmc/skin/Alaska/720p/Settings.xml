@@ -1,16 +1,14 @@
 <!--Alaska-->
-
 <window id="4">
 	<defaultcontrol always="true">410</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-
 		<control type="button" id="410">
 			<onfocus>Dialog.Close(2003)</onfocus>
 			<onfocus>Dialog.Close(106)</onfocus>
+			<onfocus>Dialog.Close(134)</onfocus>
 			<onfocus>SetFocus(60)</onfocus>
 		</control>
-
 		<include>Global_Background</include>
 		<include>Global_Filter</include>
 		<control type="panel" id="60">
@@ -43,7 +41,7 @@
 					<width>200</width>
 					<height>200</height>
 					<texture>$INFO[ListItem.Icon]</texture>
-					<colordiffuse>FFFFFFFF</colordiffuse>
+					<colordiffuse>white</colordiffuse>
 					<animation effect="zoom" start="80" end="80" center="100,100" time="0" condition="true">Conditional</animation>
 				</control>
 			</itemlayout>
@@ -57,7 +55,7 @@
 					<colordiffuse>ButtonFilterColor</colordiffuse>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" start="80" end="100" center="100,100" time="300" tween="cubic" easing="in" />
-						<effect type="fade" start="40" end="100" time="300" />
+						<effect type="fade" start="0" end="100" time="300" />
 					</animation>
 				</control>
 				<control type="image">
@@ -68,7 +66,7 @@
 					<texture>$INFO[ListItem.Icon]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" start="80" end="100" center="100,100" time="300" tween="cubic" easing="in" />
-						<effect type="fade" start="40" end="100" time="300" />
+						<effect type="fade" start="0" end="100" time="300" />
 					</animation>
 				</control>
 			</focusedlayout>
@@ -91,12 +89,7 @@
 					<icon>special://skin/media/settings/settings_pictures.png</icon>
 					<onclick>ActivateWindow(PicturesSettings)</onclick>
 				</item>
-				<!--item id="4">
-					<description>Programs</description>
-					<label>0</label>
-					<icon>special://skin/media/settings/settings_programs.png</icon>
-					<onclick>ActivateWindow(ProgramsSettings)</onclick>
-				</item-->
+				<!--item id="4"><description>Programs</description><label>0</label><icon>special://skin/media/settings/settings_programs.png</icon><onclick>ActivateWindow(ProgramsSettings)</onclick></item-->
 				<item id="4">
 					<description>Profiles</description>
 					<label>13200</label>
@@ -129,26 +122,22 @@
 				</item>
 				<item id="9">
 					<description>Alaska</description>
-					<!-- LOC -->
-					<label>Alaska</label>
+					<label>$LOCALIZE[40210]</label>
 					<icon>special://skin/media/settings/settings_alaska.png</icon>
 					<onclick>ActivateWindow(56)</onclick>
 				</item>
 			</content>
 		</control>
-
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="backdrops/mask_1.png">common/white.png</texture>
+			<texture diffuse="backdrops/mask_settings.png">common/white.png</texture>
 			<colordiffuse>BackgroundColor</colordiffuse>
 		</control>
-
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="backdrops/mask_1.png">backdrops/filter.png</texture>
+			<texture diffuse="backdrops/mask_settings.png">backdrops/filter.png</texture>
 			<colordiffuse>BackgroundFilterColor</colordiffuse>
 		</control>
-
 		<control type="group">
 			<description>Video</description>
 			<posx>130</posx>
@@ -162,25 +151,10 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Adjust how XBMC handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options</label>
+				<label>$LOCALIZE[40211]</label>
 			</control>
 		</control>
-		<!--control type="group">
-			<description>Programs</description>
-			<posx>130</posx>
-			<posy>180</posy>
-			<visible>Container(60).HasFocus(4)</visible>
-			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_CommonFadeNoHide</include>
-			<control type="label">
-				<include>SettingsHeadingVars</include>
-				<label>0</label>
-			</control>
-			<control type="label">
-				<include>SettingsDetailVars</include>
-				<label>Select browsing options for applications and games</label>
-			</control>
-		</control-->
+		<!--control type="group"><description>Programs</description><posx>130</posx><posy>180</posy><visible>Container(60).HasFocus(4)</visible><include>Animation_ZoomedByMenu</include><include>Animation_CommonFadeNoHide</include><control type="label"><include>SettingsHeadingVars</include><label>0</label></control><control type="label"><include>SettingsDetailVars</include><label>Select browsing options for applications and games</label></control></control-->
 		<control type="group">
 			<description>Profiles</description>
 			<posx>130</posx>
@@ -194,7 +168,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Allowing individual users to save their own configurations. rss feeds, view settings and media libraries can be separately stored</label>
+				<label>$LOCALIZE[40212]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -210,7 +184,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Control core hardware and software functions. Includes autorun options, audio and video hardware setup, and parental master lock functions</label>
+				<label>$LOCALIZE[40213]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -226,7 +200,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Adjust how XBMC handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup</label>
+				<label>$LOCALIZE[40214]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -242,7 +216,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Set up region information for XBMC's optional Weather displays</label>
+				<label>$LOCALIZE[40215]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -258,7 +232,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings</label>
+				<label>$LOCALIZE[40216]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -274,7 +248,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Adjust how XBMC displays personal image collections. Includes screenshot grabbing, special effects and advanced display options</label>
+				<label>$LOCALIZE[40217]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -290,7 +264,7 @@
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Set up XBMC's network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration</label>
+				<label>$LOCALIZE[40218]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -302,11 +276,11 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>Alaska</label>
+				<label>$LOCALIZE[40210]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Choose from a variety of advanced settings and customisation options to make the Alaska UI your own</label>
+				<label>$LOCALIZE[40219]</label>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>
@@ -314,9 +288,8 @@
 		<include>Setting_Heading</include>
 		<include>Global_RSS</include>
 		<include>Object_DebugGrid</include>
-		<control type="label">
-			<include>WindowID</include>
-			<label>Settings.xml</label>
+		<control type="group">
+			<include>Debug</include>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
 	</controls>

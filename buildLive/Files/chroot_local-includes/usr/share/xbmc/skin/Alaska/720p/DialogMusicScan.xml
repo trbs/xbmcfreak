@@ -1,5 +1,4 @@
 <!--Alaska-->
-
 <window id="112">
 	<defaultcontrol>1111</defaultcontrol>
 	<animation type="WindowOpen" reversible="false">
@@ -11,23 +10,15 @@
 		<effect type="fade" start="100" end="0" time="300" />
 	</animation>
 	<controls>
-
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogMusicScan.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="button" id="1111">
 			<posx>-10</posx>
 			<posy>-10</posy>
 			<height>1</height>
 			<width>1</width>
-			<texturefocus/>
-			<texturenofocus/>
+			<texturefocus />
+			<texturenofocus />
 			<onfocus>Skin.SetBool(LibraryUpdated)</onfocus>
 		</control>
-
 		<control type="group">
 			<animation effect="slide" end="0,-200" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(2005) | Window.IsVisible(2006) | Window.IsVisible(2007)">Conditional</animation>
 			<animation effect="slide" end="0,-76" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(104) | Window.IsVisible(113)">Conditional</animation>
@@ -113,5 +104,9 @@
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

@@ -1,87 +1,99 @@
-<!--Empty-->
-
+<!--Alaska-->
 <window id="2008">
 	<defaultcontrol>450</defaultcontrol>
-
-	<coordinates>
-		<system>1</system>
-		<posx>360</posx>
-		<posy>120</posy>
-	</coordinates>
-
 	<controls>
-
-		<control type="image" id="0">
-			<description>Back Panel</description>
-			<posx>-30</posx>
-			<posy>-30</posy>
-			<width>620</width>
-			<height>500</height>
-			<texture>favourites/favourites_panel.png</texture>
-			<colordiffuse>FavListPanel</colordiffuse>
+		<control type="group">
+			<include>Animation_ZoomOutZoomIn</include>
+			<control type="image" id="0">
+				<description>Back Panel</description>
+				<posx>322</posx>
+				<posy>94</posy>
+				<width>636</width>
+				<height>504</height>
+				<texture border="100">common/common_panel_1.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>364</posx>
+				<posy>168</posy>
+				<width>552</width>
+				<height>2</height>
+				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>364</posx>
+				<posy>504</posy>
+				<width>552</width>
+				<height>2</height>
+				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>440</posx>
+				<posy>128</posy>
+				<width>400</width>
+				<height>34</height>
+				<align>center</align>
+				<label>$INFO[ListItem.Label]</label>
+				<include>DialogHeader</include>
+			</control>
+			<control type="label">
+				<description>bottom label</description>
+				<posx>405</posx>
+				<posy>524</posy>
+				<width>460</width>
+				<align>center</align>
+				<include>DialogLabelLargeNF</include>
+				<label>$LOCALIZE[40240]</label>
+			</control>
+			<control type="label">
+				<description>bottom label</description>
+				<posx>405</posx>
+				<posy>552</posy>
+				<width>460</width>
+				<align>center</align>
+				<include>DialogLabelLargeNF</include>
+				<label>$LOCALIZE[40241]</label>
+			</control>
+			<control type="list" id="450">
+				<posx>400</posx>
+				<posy>194</posy>
+				<width>480</width>
+				<height>290</height>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<itemlayout height="32">
+					<control type="label">
+						<posx>240</posx>
+						<width>480</width>
+						<height>30</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+						<scroll>false</scroll>
+						<include>DialogLabelNF</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="32">
+					<control type="label">
+						<posx>240</posx>
+						<width>480</width>
+						<height>30</height>
+						<align>center</align>
+						<textcolor>TextFocused</textcolor>
+						<info>ListItem.Label</info>
+						<include>DialogLabelNF</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<include>Object_DebugGrid</include>
+			<control type="group">
+				<include>Debug</include>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
 		</control>
-
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogFileStacking.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
-		<control type="list" id="450">
-			<posx>10</posx>
-			<posy>40</posy>
-			<width>520</width>
-			<height>382</height>
-			<onleft>450</onleft>
-			<onright>450</onright>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<itemlayout height="32">
-				<control type="image">
-					<width>500</width>
-					<height>30</height>
-					<texture>ButtonNF.png</texture>
-				</control>
-				<control type="image">
-					<posy>2</posy>
-					<width>26</width>
-					<height>26</height>
-					<info>ListItem.Icon</info>
-					<texture>ButtonCDNF.png</texture>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<width>465</width>
-					<height>30</height>
-					<info>ListItem.Label</info>
-					<scroll>false</scroll>
-				</control>
-			</itemlayout>
-			<focusedlayout height="32">
-				<control type="image">
-					<width>500</width>
-					<height>30</height>
-					<texture>ButtonFo.png</texture>
-				</control>
-				<control type="image">
-					<posy>2</posy>
-					<width>26</width>
-					<height>26</height>
-					<info>ListItem.Icon</info>
-					<texture>ButtonCDNF.png</texture>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-					<width>465</width>
-					<height>30</height>
-					<textcolor>TextFocused</textcolor>
-					<info>ListItem.Label</info>
-				</control>
-			</focusedlayout>
-		</control>
-
-		<include>Object_DebugGrid</include>
-
 	</controls>
-
 </window>

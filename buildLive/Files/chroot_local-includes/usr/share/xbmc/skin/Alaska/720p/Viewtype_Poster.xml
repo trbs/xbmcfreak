@@ -1,548 +1,194 @@
 <!--Alaska-->
-
 <includes>
-	<include name="Viewtype_Poster">
-
-		<!-- Poster Wrap View -->
-
-		<control type="wraplist" id="50">
-			<posx>-20</posx>
-			<posy>65</posy>
-			<height>515</height>
-			<width>1320</width>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onup>7000</onup>
-			<ondown>7000</ondown>
-			<viewtype label="Poster">list</viewtype>
-			<orientation>horizontal</orientation>
-			<focusposition>3</focusposition>
-			<scrolltime>200</scrolltime>
-			<preloaditems>2</preloaditems>
-			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
-			<visible>![Container.Content(episodes) | Container.Content(seasons)]</visible>
-			<itemlayout width="168" height="245">
-				<control type="image">
-					<posx>1</posx>
-					<posy>132</posy>
-					<width>162</width>
-					<height>239</height>
-					<texture>postermatteNF.png</texture>
-					<colordiffuse>BackgroundColor</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>131</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>!Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>131</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>130</posy>
-					<width>164</width>
-					<height>243</height>
-					<texture>posterframeNF.png</texture>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>373</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture background="true" flipy="true" diffuse="postermatteNF_reflect.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>!Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>373</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture flipy="true" diffuse="postermatteNF_reflect.png" fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-			</itemlayout>
-			<focusedlayout width="328" height="515">
-				<control type="image">
-					<posx>2</posx>
-					<posy>20</posy>
-					<width>320</width>
-					<height>476</height>
-					<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="160,238" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>
-					<visible>!Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<posy>20</posy>
-					<width>320</width>
-					<height>476</height>
-					<texture diffuse="postermatte.png" fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="160,238" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>
-					<visible>Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>-18</posx>
-					<posy>0</posy>
-					<width>359</width>
-					<height>515</height>
-					<texture>posterframeF.png</texture>
-					<include>Animation_PosterInfoSlide</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>									
-			</focusedlayout>
-		</control>
-
-		<!-- Poster Fixed View -->
-
-		<control type="fixedlist" id="57">
-			<posx>-20</posx>
-			<posy>65</posy>
-			<height>515</height>
-			<width>1320</width>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onup>7000</onup>
-			<ondown>7000</ondown>
-			<viewtype label="Poster">list</viewtype>
-			<orientation>horizontal</orientation>
-			<focusposition>3</focusposition>
-			<scrolltime>200</scrolltime>
-			<preloaditems>2</preloaditems>
-			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
-			<visible>Container.Content(seasons)</visible>
-			<itemlayout width="168" height="245">
-				<control type="image">
-					<posx>1</posx>
-					<posy>132</posy>
-					<width>162</width>
-					<height>239</height>
-					<texture>postermatteNF.png</texture>
-					<colordiffuse>BackgroundColor</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>131</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>!Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>131</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>130</posy>
-					<width>164</width>
-					<height>243</height>
-					<texture>posterframeNF.png</texture>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>373</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture background="true" flipy="true" diffuse="postermatteNF_reflect.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>!Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>373</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture flipy="true" diffuse="postermatteNF_reflect.png" fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>IconDiffuse</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<visible>Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>4</posx>
-					<posy>134</posy>
-					<width>26</width>
-					<height>26</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-			</itemlayout>
-			<focusedlayout width="328" height="515">
-				<control type="image">
-					<posx>2</posx>
-					<posy>20</posy>
-					<width>320</width>
-					<height>476</height>
-					<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="160,238" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>
-					<visible>!Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<posy>20</posy>
-					<width>320</width>
-					<height>476</height>
-					<texture diffuse="postermatte.png" fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="160,238" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>
-					<visible>Container.Content(Genres)</visible>
-				</control>
-				<control type="image">
-					<posx>-18</posx>
-					<posy>0</posy>
-					<width>359</width>
-					<height>515</height>
-					<texture>posterframeF.png</texture>
-					<include>Animation_PosterInfoSlide</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="180,258" start="51" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-				</control>									
-			</focusedlayout>
-		</control>
-		<!-- Browser label and flags -->
-		<control type="group">
-			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(54)</visible>
-			<posx>840</posx>
-			<posy>460</posy>
-			<animation effect="slide" end="-20,-36" condition="Control.IsVisible(54)">Conditional</animation>
-			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_HiddenByInfo</include>
-			<control type="label">
-				<posx>5</posx>
-				<posy>0</posy>
+	<include name="PosterView">
+		<itemlayout width="170" height="246">
+			<control type="image">
+				<posx>4</posx>
+				<posy>132</posy>
+				<width>162</width>
+				<height>240</height>
+				<texture>poster/postermatteNF.png</texture>
+				<colordiffuse>BackgroundColor</colordiffuse>
+				<include>Animation_HiddenByInfo</include>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>132</posy>
+				<width>162</width>
+				<height>240</height>
+				<texture background="true" diffuse="poster/postermatteNF.png">$INFO[ListItem.Icon]</texture>
+				<fadetime>200</fadetime>
+				<colordiffuse>IconDiffuse</colordiffuse>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<include>Animation_HiddenByInfo</include>
+				<visible>!Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>132</posy>
+				<width>162</width>
+				<height>240</height>
+				<texture diffuse="poster/postermatteNF.png" fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
+				<fadetime>200</fadetime>
+				<colordiffuse>IconDiffuse</colordiffuse>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<include>Animation_HiddenByInfo</include>
+				<visible>Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>2</posx>
+				<posy>130</posy>
+				<width>166</width>
+				<height>244</height>
+				<texture>poster/posterframeNF.png</texture>
+				<include>Animation_HiddenByInfo</include>
+			</control>
+			<include condition="Skin.HasSetting(movieoverlays)">PosterMovieOverlaysNF</include>
+			<include condition="Skin.HasSetting(tvoverlays)">PosterTVOverlaysNF</include>
+			<control type="image">
+				<posx>4</posx>
+				<posy>374</posy>
+				<width>162</width>
+				<height>240</height>
+				<texture background="true" flipy="true" diffuse="poster/postermatteNF_reflect.png">$INFO[ListItem.Icon]</texture>
+				<fadetime>200</fadetime>
+				<colordiffuse>IconDiffuse</colordiffuse>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<include>Animation_HiddenByInfo</include>
+				<visible>!Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>374</posy>
+				<width>162</width>
+				<height>240</height>
+				<texture flipy="true" diffuse="poster/postermatteNF_reflect.png" fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
+				<fadetime>200</fadetime>
+				<colordiffuse>IconDiffuse</colordiffuse>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<include>Animation_HiddenByInfo</include>
+				<visible>Container.Content(Genres)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout width="328" height="596">
+			<control type="image">
+				<posx>4</posx>
+				<posy>20</posy>
+				<width>320</width>
+				<height>476</height>
+				<texture background="true" diffuse="poster/postermatteFO.png">$INFO[ListItem.Icon]</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<include>Animation_PosterInfoSlide</include>
+				<animation type="Focus" reversible="false">
+					<effect type="zoom" center="164,258" start="60" end="100" time="600" tween="back" easing="out" />
+					<effect type="fade" start="80" end="100" time="600" />
+				</animation>
+				<visible>!Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>4</posx>
+				<posy>20</posy>
+				<width>320</width>
+				<height>476</height>
+				<texture diffuse="poster/postermatteFO.png" fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<include>Animation_PosterInfoSlide</include>
+				<animation type="Focus" reversible="false">
+					<effect type="zoom" center="164,258" start="60" end="100" time="600" tween="back" easing="out" />
+					<effect type="fade" start="80" end="100" time="600" />
+				</animation>
+				<visible>Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>2</posx>
+				<posy>18</posy>
+				<width>324</width>
+				<height>480</height>
+				<texture>poster/posterframeFO.png</texture>
+				<include>Animation_PosterInfoSlide</include>
+				<animation type="Focus" reversible="false">
+					<effect type="zoom" center="164,258" start="60" end="100" time="600" tween="back" easing="out" />
+					<effect type="fade" start="80" end="100" time="600" />
+				</animation>
+			</control>
+			<control type="textbox">
+				<posx>346</posx>
+				<posy>380</posy>
 				<width>404</width>
-				<height>50</height>
-				<aligny>center</aligny>
+				<height>200</height>
+				<aligny>top</aligny>
 				<font>Font_PosterTitle</font>
 				<textcolor>PosterTitle</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<wrapmultiline>true</wrapmultiline>
 				<visible>!Container.Content(seasons)</visible>
+				<include>Animation_HiddenByInfo</include>
 			</control>
-			<control type="label">
-				<posx>5</posx>
-				<posy>0</posy>
+			<control type="textbox">
+				<posx>346</posx>
+				<posy>380</posy>
 				<width>404</width>
-				<height>50</height>
-				<aligny>center</aligny>
+				<height>200</height>
+				<aligny>top</aligny>
 				<font>Font_PosterTitle</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>$INFO[ListItem.TVShowTitle]</label>
-				<wrapmultiline>true</wrapmultiline>
+				<label>$INFO[ListItem.Label]</label>
 				<visible>Container.Content(seasons)</visible>
+				<include>Animation_HiddenByInfo</include>
 			</control>
-			<control type="label">
-				<posx>5</posx>
-				<posy>42</posy>
-				<width>420</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>Font_ListDetail</font>
-				<textcolor>ListTrackF</textcolor>
-				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<visible>Container.Content(seasons)</visible>
-			</control>
-			<control type="label">
-				<posx>5</posx>
-				<posy>42</posy>
-				<width>420</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>Font_ListDetail</font>
-				<textcolor>ListTrackF</textcolor>
-				<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
-				<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
-			</control>
-			<control type="label">
-				<posx>5</posx>
-				<posy>62</posy>
-				<width>420</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>Font_ListDetail</font>
-				<textcolor>ListTrackF</textcolor>
-				<label>$INFO[ListItem.Episode,[B]Episodes: [/B]]</label>
-				<visible>!IsEmpty(ListItem.Episode) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
-			</control>
-			<control type="label">
-				<posx>5</posx>
-				<posy>82</posy>
-				<width>420</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>Font_ListDetail</font>
-				<textcolor>ListTrackF</textcolor>
-				<label>$INFO[ListItem.Premiered,[B]Premiered: [/B]]</label>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
+			<include condition="Skin.HasSetting(movieoverlays)">PosterMovieOverlaysFO</include>
+			<include condition="Skin.HasSetting(tvoverlays)">PosterTVOverlaysFO</include>
+		</focusedlayout>
+	</include>
+	<include name="Viewtype_Poster">
+		<!-- Poster Wrap View -->
+		<control type="wraplist" id="50">
+			<posx>-34</posx>
+			<posy>66</posy>
+			<height>596</height>
+			<width>1320</width>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>7000</onup>
+			<ondown>7777</ondown>
+			<viewtype label="POSTER[CR]WRAP">list</viewtype>
+			<orientation>horizontal</orientation>
+			<focusposition>3</focusposition>
+			<scrolltime>200</scrolltime>
+			<preloaditems>2</preloaditems>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Genres) | Window.IsVisible(28)</visible>
+			<include>PosterView</include>
+		</control>
+		<!-- Poster Fixed View -->
+		<control type="fixedlist" id="57">
+			<posx>-34</posx>
+			<posy>66</posy>
+			<height>596</height>
+			<width>1320</width>
+			<onleft>57</onleft>
+			<onright>57</onright>
+			<onup>7000</onup>
+			<ondown>7777</ondown>
+			<viewtype label="POSTER[CR]FIXED">list</viewtype>
+			<orientation>horizontal</orientation>
+			<focusposition>3</focusposition>
+			<scrolltime>200</scrolltime>
+			<preloaditems>2</preloaditems>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Genres) | Window.IsVisible(28)</visible>
+			<include>PosterView</include>
 		</control>
 	</include>
-
 	<!-- Square View -->
-
 	<include name="Viewtype_SquarePoster">
 		<control type="wraplist" id="54">
-			<viewtype label="Square">icon</viewtype>
+			<viewtype label="POSTER[CR]SQUARE">icon</viewtype>
 			<posx>-110</posx>
 			<posy>150</posy>
 			<width>1400</width>
-			<height>300</height>
+			<height>600</height>
 			<pagecontrol>61</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<orientation>horizontal</orientation>
@@ -552,15 +198,15 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<onup>7000</onup>
-			<ondown>7000</ondown>
-			<visible>!Container.Content(episodes)</visible>
+			<ondown>7777</ondown>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(studios) | Container.Content(albums) | Window.IsVisible(28)</visible>
 			<itemlayout width="200" height="200">
 				<control type="image">
 					<posx>2</posx>
 					<posy>52</posy>
 					<width>196</width>
 					<height>196</height>
-					<texture>common/thumb_matte.png</texture>
+					<texture>square/squarematteNF.png</texture>
 					<colordiffuse>BackgroundColor</colordiffuse>
 					<include>Animation_HiddenByInfo</include>
 				</control>
@@ -569,7 +215,7 @@
 					<posy>52</posy>
 					<width>196</width>
 					<height>196</height>
-					<texture background="true" diffuse="common/thumb_matte.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="square/squarematteNF.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<colordiffuse>IconDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -580,77 +226,45 @@
 					<posy>252</posy>
 					<width>196</width>
 					<height>196</height>
-					<texture background="true" flipy="true" diffuse="postermatteNF_reflect.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" flipy="true" diffuse="square/squarematteNF_reflect.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<colordiffuse>IconDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_HiddenByInfo</include>
-				</control>					
+				</control>
 				<control type="image">
 					<posx>47</posx>
 					<posy>120</posy>
 					<width>110</width>
 					<height>75</height>
-					<texture>$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
+					<texture>$INFO[ListItem.Label,studios/,.png]</texture>
 					<colordiffuse>IconDiffuse</colordiffuse>
 					<visible>Container.Content(studios)</visible>
 					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
-					<posx>6</posx>
-					<posy>56</posy>
-					<width>28</width>
-					<height>28</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackNF</colordiffuse>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>square/squareframeNF.png</texture>
 					<include>Animation_HiddenByInfo</include>
 				</control>
-				<control type="image">
-					<posx>6</posx>
-					<posy>56</posy>
-					<width>28</width>
-					<height>28</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(tvshows)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>6</posx>
-					<posy>56</posy>
-					<width>28</width>
-					<height>28</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>6</posx>
-					<posy>56</posy>
-					<width>28</width>
-					<height>28</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
+				<include condition="Skin.HasSetting(movieoverlays)">SquareMovieOverlaysNF</include>
+				<include condition="Skin.HasSetting(tvoverlays)">SquareTVOverlaysNF</include>
 			</itemlayout>
 			<focusedlayout width="300" height="300">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>300</height>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<aspectratio>scale</aspectratio>
-					<bordertexture border="8">common/thumb_border.png</bordertexture>
-					<bordersize>8</bordersize>
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>288</width>
+					<height>288</height>
+					<texture background="true" diffuse="square/squarematteFO.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_SquareInfoSlide</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="150,150" start="67" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="60" end="100" time="600" />
+						<effect type="zoom" center="150,150" start="70" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="80" end="100" time="600" />
 					</animation>
 				</control>
 				<control type="image">
@@ -658,221 +272,54 @@
 					<posy>105</posy>
 					<width>170</width>
 					<height>115</height>
-					<texture>$INFO[ListItem.Label,special://skin/extras/studios/,.png]</texture>
+					<texture>$INFO[ListItem.Label,studios/,.png]</texture>
 					<colordiffuse>ButtonFilterColor</colordiffuse>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="150,150" start="67" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="60" end="100" time="600" />
+						<effect type="zoom" center="150,150" start="70" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="80" end="100" time="600" />
 					</animation>
 					<visible>Container.Content(studios)</visible>
 					<include>Animation_SquareInfoSlide</include>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>10</posy>
-					<width>38</width>
-					<height>38</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
+					<posx>-6</posx>
+					<posy>-6</posy>
+					<width>312</width>
+					<height>312</height>
+					<texture>square/squareframeFO.png</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="150,150" start="67" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="60" end="100" time="600" />
+						<effect type="zoom" center="150,150" start="70" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="80" end="100" time="600" />
 					</animation>
-				</control>
-				<control type="image">
-					<posx>10</posx>
-					<posy>10</posy>
-					<width>38</width>
-					<height>38</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(tvshows)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="150,150" start="67" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="60" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>10</posx>
-					<posy>10</posy>
-					<width>38</width>
-					<height>38</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="150,150" start="67" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="60" end="100" time="600" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>10</posx>
-					<posy>10</posy>
-					<width>38</width>
-					<height>38</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="150,150" start="67" end="100" time="600" tween="back" easing="out" />
-						<effect type="fade" start="60" end="100" time="600" />
-					</animation>
-				</control>
-			</focusedlayout>
-		</control>
-		<!-- label -->
-		<control type="group">
-			<visible>Control.IsVisible(54)</visible>
-			<posx>810</posx>
-			<posy>418</posy>
-			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_HiddenByInfo</include>
-			<include>Animation_HiddenByMusicInfo</include>
-			<!-- Artist -->
-			<control type="group">
-				<visible>Container.Content(artists)</visible>
-				<control type="fadelabel">
-					<posx>0</posx>
-					<posy>10</posy>
-					<width>440</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<scrollout>false</scrollout>
-					<pauseatend>600</pauseatend>
-					<scrollspeed>20</scrollspeed>
-					<font>Font_ListTitleBig</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<include>Animation_SquareInfoSlide</include>
 				</control>
 				<control type="textbox">
-					<posx>0</posx>
-					<posy>35</posy>
-					<width>440</width>
-					<height>100</height>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label fallback="31425">$INFO[ListItem.Property(description)]</label>
-				</control>
-			</control>
-			<!-- Album -->
-			<control type="group">
-				<visible>Container.Content(albums)</visible>
-				<control type="fadelabel">
-					<posx>0</posx>
-					<posy>5</posy>
-					<width>440</width>
-					<height>90</height>
-					<aligny>center</aligny>
-					<scrollout>false</scrollout>
-					<pauseatend>600</pauseatend>
-					<scrollspeed>20</scrollspeed>
-					<font>Font_ListTitleBigger</font>
-					<textcolor>ListTitleF</textcolor>
+					<posx>320</posx>
+					<posy>260</posy>
+					<width>404</width>
+					<height>200</height>
+					<aligny>top</aligny>
+					<font>Font_PosterTitle</font>
+					<textcolor>PosterTitle</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Album)</visible>
+					<visible>!Container.Content(seasons)</visible>
+					<include>Animation_HiddenByInfo</include>
 				</control>
-				<control type="fadelabel">
-					<posx>0</posx>
-					<posy>15</posy>
-					<width>440</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<scrollout>false</scrollout>
-					<pauseatend>600</pauseatend>
-					<scrollspeed>20</scrollspeed>
-					<font>Font_ListTitleBig</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Album]</label>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>50</posy>
-					<width>440</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
-					<visible>!IsEmpty(ListItem.Album)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>75</posy>
-					<width>121</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating]</texture>
-					<colordiffuse>StarDiffuse</colordiffuse>
-					<visible>!IsEmpty(ListItem.Album)</visible>
-				</control>
-			</control>
-			<!-- Song -->
-			<control type="group">
-				<visible>Container.Content(songs) |  Window.IsActive(500) | Window.IsActive(501) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]</visible>
-				<control type="label">
-					<posx>0</posx>
-					<posy>5</posy>
-					<width>440</width>
-					<height>90</height>
-					<aligny>center</aligny>
-					<font>Font_ListTitleBigger</font>
-					<textcolor>ListTitleF</textcolor>
+				<control type="textbox">
+					<posx>346</posx>
+					<posy>380</posy>
+					<width>404</width>
+					<height>200</height>
+					<aligny>top</aligny>
+					<font>Font_PosterTitle</font>
+					<textcolor>PosterTitle</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>Container.Content(seasons)</visible>
+					<include>Animation_HiddenByInfo</include>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>15</posy>
-					<width>440</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListTitleBig</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.TrackNumber]. $INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title)</visible>
-					<animation effect="slide" start="0,-10" end="0,-10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>35</posy>
-					<width>440</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Album,[B]Album: [/B]]</label>
-					<visible>[Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]] + !IsEmpty(ListItem.Title)</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>45</posy>
-					<width>440</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Artist,[B]Artist: [/B]]</label>
-					<visible>!IsEmpty(ListItem.Title)</visible>
-					<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>65</posy>
-					<width>440</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Duration,[B]Duration: [/B]]</label>
-					<visible>!IsEmpty(ListItem.Title)</visible>
-					<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-				</control>
-			</control>
+				<include condition="Skin.HasSetting(movieoverlays)">SquareMovieOverlaysFO</include>
+				<include condition="Skin.HasSetting(tvoverlays)">SquareTVOverlaysFO</include>
+			</focusedlayout>
 		</control>
 	</include>
 </includes>

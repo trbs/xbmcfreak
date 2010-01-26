@@ -1,52 +1,43 @@
 <!--Alaska-->
-
 <window type="dialog" id="134">
 	<defaultcontrol always="true">450</defaultcontrol>
-
 	<controls>
-		<control type="label">
-			<include>WindowID</include>
-			<label>DialogFavourites.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
 		<include>Animation_ZoomedByMenu</include>
-			<include>Animation_ZoomInZoomOut</include>
-
+		<include>Animation_ZoomInZoomOut</include>
 		<control type="image">
 			<description>Panel</description>
-			<posx>240</posx>
-			<posy>72</posy>
-			<width>800</width>
-			<height>544</height>
-			<texture>favourites/favourites_panel.png</texture>
-			<colordiffuse>FavListPanel</colordiffuse>
+			<posx>222</posx>
+			<posy>94</posy>
+			<width>836</width>
+			<height>504</height>
+			<texture border="100">common/common_panel_3.png</texture>
+			<colordiffuse>PanelDiffuse</colordiffuse>
 		</control>
-
 		<control type="image">
-			<posx>270</posx>
-			<posy>514</posy>
-			<width>740</width>
+			<posx>264</posx>
+			<posy>504</posy>
+			<width>752</width>
 			<height>2</height>
 			<texture>common/divider.png</texture>
+			<colordiffuse>PanelDiffuseDivider</colordiffuse>
 		</control>
-
 		<control type="label">
 			<description>Favourites Label</description>
 			<posx>990</posx>
-			<posy>516</posy>
+			<posy>508</posy>
 			<width>500</width>
 			<height>60</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<textcolor>DialogLargeLabel</textcolor>
-			<shadowcolor>DialogLargeLabelAccent</shadowcolor>
+			<textcolor>PanelListLabel</textcolor>
+			<font>Font_PanelLabel</font>
 			<label>$LOCALIZE[1036]</label>
-			<font>Font_FavouritesLabel</font>
 		</control>
-
 		<control type="list" id="450">
 			<posx>260</posx>
-			<posy>114</posy>
+			<posy>122</posy>
 			<width>781</width>
 			<height>375</height>
 			<onleft>-</onleft>
@@ -59,41 +50,43 @@
 				<control type="label">
 					<posx>30</posx>
 					<posy>15</posy>
-					<width>721</width>
+					<width>690</width>
 					<height>30</height>
-					<textcolor>FavListItem</textcolor>
-					<selectedcolor>FavListItemSelected</selectedcolor>
+					<textcolor>PanelListItem</textcolor>
 					<aligny>center</aligny>
-					<font>Font_FavouritesItemLabel</font>
+					<font>Font_PanelItemLabel</font>
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
 			<focusedlayout height="40">
-				<control type="image">
-					<posx>10</posx>
-					<posy>-2</posy>
-					<width>740</width>
-					<height>66</height>
-					<texture>favourites/focus_bar.png</texture>
-					<colordiffuse>FavListItemSelected</colordiffuse>
-				</control>
-
 				<control type="label">
 					<posx>30</posx>
 					<posy>16</posy>
-					<width>721</width>
+					<width>690</width>
 					<height>30</height>
-					<textcolor>TextSelected</textcolor>
-					<shadowcolor>FM_ListFocusedAccent</shadowcolor>
-					<selectedcolor>FavListItemFocusedSelected</selectedcolor>
-
+					<textcolor>PanelListItemFocused</textcolor>
 					<aligny>center</aligny>
-					<font>Font_FavouritesFocusedItemLabel</font>
+					<font>Font_PanelFocusedItemLabel</font>
 					<info>ListItem.Label</info>
 				</control>
-
 			</focusedlayout>
 		</control>
-
+		<!-- Heading -->
+		<control type="group">
+			<posx>30</posx>
+			<posy>30</posy>
+			<include>Animation_SlideDownFadeOut</include>
+			<control type="label">
+				<label>1036</label>
+				<include>Global_HeadingSectionVars</include>
+			</control>
+		</control>
+		<include>Global_Time</include>
+		<include>Global_RSS</include>
+		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

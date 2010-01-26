@@ -1,482 +1,601 @@
 <!--Alaska-->
-
 <includes>
 	<include name="Viewtype_Files">
-
 		<!-- Browser -->
-
 		<control type="fixedlist" id="55">
-			<posx>-200</posx>
-			<posy>90</posy>
-			<height>485</height>
-			<width>1680</width>
+			<posx>0</posx>
+			<posy>94</posy>
+			<height>530</height>
+			<width>790</width>
 			<onup>55</onup>
 			<ondown>55</ondown>
 			<onleft>7000</onleft>
 			<onright>60</onright>
-			<scrolltime>0</scrolltime>
+			<scrolltime>160</scrolltime>
 			<viewtype label="Files">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>3</focusposition>
+			<focusposition>6</focusposition>
 			<pagecontrol>60</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_HiddenByMusicInfo</include>
-			<itemlayout width="1210" height="46">
+			<itemlayout width="870" height="39">
 				<control type="label">
-					<posx>720</posx>
+					<posx>770</posx>
 					<posy>0</posy>
-					<width>680</width>
+					<width>740</width>
 					<height>46</height>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
-					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
-				</control>
-				<control type="label">
-					<posx>720</posx>
-					<posy>0</posy>
-					<width>700</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_ListTitleNF</font>
-					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500)]</visible>
+					<scroll>false</scroll>
+					<visible>![Window.IsVisible(1) | Window.IsVisible(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="label">
-					<posx>720</posx>
+					<posx>770</posx>
 					<posy>0</posy>
-					<width>720</width>
+					<width>740</width>
 					<height>46</height>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
+					<scroll>false</scroll>
+					<animation effect="fade" end="60" condition="true">Conditional</animation>
+					<visible>Window.IsVisible(1)</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title) + [Window.IsActive(25) | Window.IsActive(502)]</visible>
+					<scroll>false</scroll>
+					<visible>Window.IsVisible(502) + !Container.Content(songs)</visible>
 				</control>
 				<control type="label">
-					<posx>720</posx>
+					<posx>770</posx>
 					<posy>0</posy>
-					<width>680</width>
+					<width>740</width>
 					<height>46</height>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Tracknumber]$INFO[ListItem.Title,. ]</label>
+					<visible>Window.IsVisible(502) + Container.Content(songs)</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+					<visible>Container.Content(movies) + [!Skin.HasSetting(movieoverlays) | [Skin.HasSetting(movieoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + ![stringcompare(ListItem.Title,Window(0).Property(LatestMovie.1.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.2.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.3.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.4.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.5.Title))]]]</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Label,, ][COLOR EpisodeWatchedNF]&#134;[/COLOR]</label>
+					<scroll>false</scroll>
+					<visible>Container.Content(movies) + Skin.HasSetting(movieoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Label,, ][COLOR EpisodeWatchedNF]&#135;[/COLOR]</label>
+					<scroll>false</scroll>
+					<visible>Container.Content(movies) + Skin.HasSetting(movieoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + [stringcompare(ListItem.Title,Window(0).Property(LatestMovie.1.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.2.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.3.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.4.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.5.Title))]s</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
+					<scroll>false</scroll>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!Skin.HasSetting(tvoverlays) | [Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + ![stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]]]</visible>
 				</control>
 				<control type="label">
-					<posx>720</posx>
+					<posx>770</posx>
 					<posy>0</posy>
-					<width>680</width>
+					<width>740</width>
 					<height>46</height>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Title,,  ][COLOR EpisodeWatchedNF]&#134;[/COLOR]</label>
+					<scroll>false</scroll>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
 					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. ]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
+					<scroll>false</scroll>
+					<visible>Container.Content(episodes) + [!Skin.HasSetting(tvoverlays) | [Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + ![stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]]]</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. , ][COLOR EpisodeWatchedNF]&#134;[/COLOR]</label>
+					<scroll>false</scroll>
+					<visible>Container.Content(episodes) + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				<control type="label">
+					<posx>770</posx>
+					<posy>0</posy>
+					<width>740</width>
+					<height>46</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font_ListTitleNF</font>
+					<textcolor>Text</textcolor>
+					<selectedcolor>ListSelectedNF</selectedcolor>
+					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. , ][COLOR EpisodeWatchedNF]&#135;[/COLOR]</label>
+					<scroll>false</scroll>
+					<visible>Container.Content(episodes) + Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + [stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout width="720" height="120">
-				<control type="group">
-					<visible>Skin.HasSetting(File_View_Focus_Line) + Control.IsVisible(55)</visible>
-					<posx>0</posx>
-					<posy>0</posy>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByInfo</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1680</width>
-						<height>120</height>
-						<texture>common/TextFocused.png</texture>
-						<colordiffuse>11000000</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1680</width>
-						<height>2</height>
-						<texture>common/line_1.png</texture>
-						<colordiffuse>55ffffff</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>120</posy>
-						<width>1680</width>
-						<height>2</height>
-						<texture>common/line_1.png</texture>
-						<colordiffuse>55ffffff</colordiffuse>
-					</control>
-				</control>
-				<control type="image">
-					<posx>230</posx>
-					<posy>-118</posy>
-					<width>440</width>
-					<height>360</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<bordertexture border="8">common/thumb_border.png</bordertexture>
-					<bordersize>8</bordersize>
-					<include>Animation_HiddenByMusicInfo</include>
-					<visible>![Window.IsActive(25) + Container.Content(Genres)]</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="450,75" start="80" end="94" time="200" tween="cubic" easing="out" />
-						<effect type="fade" start="60" end="100" time="200" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>230</posx>
-					<posy>-118</posy>
-					<width>440</width>
-					<height>360</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<bordertexture border="8">common/thumb_border.png</bordertexture>
-					<bordersize>8</bordersize>
-					<include>Animation_HiddenByMusicInfo</include>
-					<visible>Window.IsActive(25) + Container.Content(Genres)</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="450,75" start="80" end="94" time="200" tween="cubic" easing="out" />
-						<effect type="fade" start="60" end="100" time="200" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>650</posx>
-					<posy>40</posy>
-					<width>36</width>
-					<height>36</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>WatchedIconBackFO</colordiffuse>
-					<include>Animation_HiddenByMusicInfo</include>
-				</control>
-				<control type="image">
-					<posx>650</posx>
-					<posy>40</posy>
-					<width>36</width>
-					<height>36</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByMusicInfo</include>
-				</control>
-				<control type="image">
-					<posx>652</posx>
-					<posy>80</posy>
-					<width>30</width>
-					<height>30</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<texture>OverlayWatchedBackground.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
-					<include>Animation_HiddenByMusicInfo</include>
-					<animation effect="slide" end="4,-42" time="0" condition="Container.Content(episodes)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>652</posx>
-					<posy>80</posy>
-					<width>30</width>
-					<height>30</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_HiddenByMusicInfo</include>
-					<animation effect="slide" end="4,-42" time="0" condition="Container.Content(episodes)">Conditional</animation>
-				</control>
-				<control type="label">
-					<posx>690</posx>
-					<posy>0</posy>
-					<width>720</width>
-					<height>120</height>
+			<focusedlayout width="870" height="62">
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
 					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
 					<font>Font_ListTitleBigger</font>
-					<textcolor>ListTitleF</textcolor>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>Container.Content(files) | [IsEmpty(ListItem.Title) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs) + !Window.IsActive(1)]</visible>
+					<visible>![Window.IsVisible(1) | Window.IsVisible(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
-				<control type="label">
-					<posx>690</posx>
-					<posy>0</posy>
-					<width>720</width>
-					<height>120</height>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
 					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
 					<font>Font_ListTitleBigger</font>
-					<textcolor>ListTitleF</textcolor>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
+					<visible>Window.IsVisible(1)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Duration)">Conditional</animation>
+					<visible>Window.IsVisible(502) + !Container.Content(songs)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Tracknumber]$INFO[ListItem.Title,. ]</label>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Duration)">Conditional</animation>
+					<visible>Window.IsVisible(502) + Container.Content(songs)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>36</posy>
+					<width>740</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]$INFO[ListItem.Duration, - ]</label>
+					<visible>Window.IsVisible(502) + !IsEmpty(ListItem.Duration)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>Container.Content(movies) + [!Skin.HasSetting(movieoverlays) | [Skin.HasSetting(movieoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + ![stringcompare(ListItem.Title,Window(0).Property(LatestMovie.1.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.2.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.3.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.4.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.5.Title))]]]</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Duration)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Label,, ][COLOR EpisodeWatchedFO]&#134;[/COLOR]</label>
+					<visible>Container.Content(movies) + Skin.HasSetting(movieoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Duration)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Label,, ][COLOR EpisodeWatchedFO]&#135;[/COLOR]</label>
+					<visible>Container.Content(movies) + Skin.HasSetting(movieoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + [stringcompare(ListItem.Title,Window(0).Property(LatestMovie.1.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.2.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.3.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.4.Title)) | stringcompare(ListItem.Title,Window(0).Property(LatestMovie.5.Title))]s</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Duration)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>36</posy>
+					<width>740</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Genre]$INFO[ListItem.Duration, - ]</label>
+					<visible>Container.Content(movies) + !IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Duration) + substring(listitem.Duration,hrs)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>36</posy>
+					<width>740</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Genre]$INFO[ListItem.Duration, - ]</label>
+					<visible>Container.Content(movies) + !IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Duration) + !substring(listitem.Duration,hrs) + substring(listitem.Duration,min)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>36</posy>
+					<width>740</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Genre]$INFO[ListItem.Duration, - ] MINS</label>
+					<visible>Container.Content(movies) + !IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Duration) + !substring(listitem.Duration,min)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
 					<label>$INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!Skin.HasSetting(tvoverlays) | [Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + ![stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]]]</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Date)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Title,, ][COLOR EpisodeWatchedFO]&#134;[/COLOR]</label>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Date)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Title,, ][COLOR EpisodeWatchedFO]&#135;[/COLOR]</label>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + [stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Date)">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>690</posx>
-					<posy>4</posy>
-					<width>720</width>
-					<height>25</height>
+					<posx>770</posx>
+					<posy>36</posy>
+					<width>200</width>
+					<height>30</height>
+					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_ListTitleBig</font>
-					<textcolor>ListTitleF</textcolor>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$LOCALIZE[40242] $INFO[ListItem.Date]</label>
+					<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.Premiered)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
 					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. ]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
-					<animation effect="slide" start="0,46" end="0,46" time="0" condition="IsEmpty(ListItem.Plot)">Conditional</animation>
+					<visible>Container.Content(episodes) + [!Skin.HasSetting(tvoverlays) | [Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + ![stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]]]</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Date)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. , ][COLOR EpisodeWatchedFO]&#134;[/COLOR]</label>
+					<visible>Container.Content(episodes) + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Date)">Conditional</animation>
+				</control>
+				<control type="fadelabel">
+					<posx>30</posx>
+					<posy>8</posy>
+					<width>740</width>
+					<height>50</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. , ][COLOR EpisodeWatchedFO]&#135;[/COLOR]</label>
+					<visible>Container.Content(episodes) + Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png) + [stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.1.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.2.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.3.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.4.EpisodeTitle)) | stringcompare(ListItem.Title,Window(0).Property(LatestEpisode.5.EpisodeTitle))]</visible>
+					<animation effect="slide" end="0,-10" condition="!IsEmpty(ListItem.Date)">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>690</posx>
-					<posy>20</posy>
-					<width>720</width>
-					<height>25</height>
+					<posx>770</posx>
+					<posy>36</posy>
+					<width>200</width>
+					<height>30</height>
+					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Genre]</label>
-					<visible>!IsEmpty(ListItem.Genre) + Window.IsActive(25) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-				</control>
-				<control type="textbox">
-					<posx>690</posx>
-					<posy>34</posy>
-					<width>700</width>
-					<height>78</height>
-					<font>Font_EpisodePlot</font>
-					<textcolor>EpisodePlot</textcolor>
-					<info>ListItem.Plot</info>
-					<autoscroll time="3200" delay="6000" repeat="6000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(25) + Container.Content(episodes)</visible>
-				</control>
-				<control type="image">
-					<posx>690</posx>
-					<posy>80</posy>
-					<width>121</width>
-					<height>25</height>
-					<texture>$INFO[ListItem.StarRating]</texture>
-					<colordiffuse>StarDiffuse</colordiffuse>
-					<visible>Window.IsActive(25) + Container.Content(tvshows)</visible>
-				</control>
-				<control type="label">
-					<posx>690</posx>
-					<posy>80</posy>
-					<width>720</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Duration,[B]Runtime:[/B] ]</label>
-					<visible>substring(listitem.Duration,min) + !IsEmpty(listitem.Duration) + Container.Content(movies)</visible>
-					<visible>!IsEmpty(listitem.Duration)</visible>
-				</control>
-				<control type="label">
-					<posx>690</posx>
-					<posy>80</posy>
-					<width>720</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Duration,[B]Runtime:[/B] ] mins</label>
-					<visible>!substring(listitem.Duration,min) + !IsEmpty(listitem.Duration) + Container.Content(movies)</visible>
-				</control>
-				<!-- Programs -->
-				<control type="group">
-					<visible>Window.IsActive(1)</visible>
-					<control type="label">
-						<posx>690</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<animation effect="slide" start="0,-15" end="0,-15" time="0" condition="!IsEmpty(ListItem.Label2)">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>75</posy>
-						<width>720</width>
-						<height>25</height>
-						<font>Font_ListTitleBig</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</control>
-				<!-- Music -->
-				<!-- Artist -->
-				<control type="group">
-					<visible>Container.Content(artists)</visible>
-					<control type="label">
-						<posx>690</posx>
-						<posy>10</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBig</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="textbox">
-						<posx>690</posx>
-						<posy>35</posy>
-						<width>720</width>
-						<height>60</height>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label fallback="31425">$INFO[ListItem.Property(description)]</label>
-					</control>
-				</control>
-				<!-- Album -->
-				<control type="group">
-					<visible>Container.Content(albums)</visible>
-					<control type="label">
-						<posx>690</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Album)</visible>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Album]</label>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>20</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]:[/B] ]</label>
-						<visible>!IsEmpty(ListItem.Album)</visible>
-					</control>
-					<control type="image">
-						<posx>690</posx>
-						<posy>80</posy>
-						<width>121</width>
-						<height>25</height>
-						<texture>$INFO[ListItem.StarRating]</texture>
-						<colordiffuse>StarDiffuse</colordiffuse>
-						<visible>!IsEmpty(ListItem.Album)</visible>
-					</control>
-				</control>
-				<!-- Song -->
-				<control type="group">
-					<visible>Container.Content(songs) | Window.IsActive(500)</visible>
-					<control type="label">
-						<posx>690</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-						<animation effect="slide" start="0,-10" end="0,-10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>20</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Album,[B]Album:[/B] ]</label>
-						<visible>[Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]] + !IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>20</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Artist,[B]Artist:[/B] ]</label>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>80</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Duration,[B]Duration:[/B] ]</label>
-						<visible>substring(listitem.Duration,min) + !IsEmpty(listitem.Duration)</visible>
-						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>690</posx>
-						<posy>80</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Duration,[B]Duration:[/B] ] mins</label>
-						<visible>!substring(listitem.Duration,min) + !IsEmpty(listitem.Duration)</visible>
-						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
+					<font>Font_EpisodeDetailNF</font>
+					<textcolor>ListTitleFO</textcolor>
+					<selectedcolor>ListSelectedFO</selectedcolor>
+					<label>$LOCALIZE[40234] $INFO[ListItem.Date]</label>
+					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Date)</visible>
 				</control>
 			</focusedlayout>
-		</control>		
-
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="backdrops/mask_3.png">common/white.png</texture>
-			<colordiffuse>BackgroundColor</colordiffuse>
-			<visible>Control.IsVisible(55)</visible>
 		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="backdrops/mask_3.png">backdrops/filter.png</texture>
-			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<posx>820</posx>
+			<posy>122</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>390</width>
+				<height>482</height>
+				<aspectratio align="left" aligny="center">keep</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>390</width>
+				<height>482</height>
+				<aspectratio align="left" aligny="center">keep</aspectratio>
+				<texture fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>Window.IsActive(25) + Container.Content(Genres)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>390</width>
+				<height>482</height>
+				<aspectratio align="left" aligny="center">keep</aspectratio>
+				<texture fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>Window.IsActive(502) + Container.Content(Genres)</visible>
+			</control>
 		</control>
-
 		<!-- Scroll Bar -->
-
 		<control type="scrollbar" id="60">
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
-			<posx>1280</posx>
-			<posy>100</posy>
-			<width>25</width>
-			<height>460</height>
+			<posx>784</posx>
+			<posy>102</posy>
+			<width>26</width>
+			<height>526</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(55) + Control.HasFocus(60)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
 			<onleft>55</onleft>
-			<showonepage>false</showonepage>
+			<onright>7000</onright>
+			<showonepage>true</showonepage>
 			<orientation>vertical</orientation>
-			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-50,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60)">Conditional</animation>
 		</control>
-
+		<!-- Info Screen Image -->
+		<control type="group">
+			<visible>Control.IsVisible(55)</visible>
+			<control type="image">
+				<posx>30</posx>
+				<posy>108</posy>
+				<width>540</width>
+				<height>482</height>
+				<aspectratio align="right" aligny="top">keep</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<animation type="Conditional" condition="Window.IsActive(2003)">
+					<effect type="zoom" center="auto" start="40" end="100" time="400" tween="cubic" easing="out" />
+					<effect type="fade" start="80" end="100" time="400" />
+				</animation>
+				<visible>Control.IsVisible(55) + Window.IsActive(2003)</visible>
+			</control>
+		</control>
 	</include>
 </includes>

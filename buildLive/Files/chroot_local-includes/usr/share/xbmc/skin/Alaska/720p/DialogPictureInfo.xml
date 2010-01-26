@@ -1,71 +1,120 @@
 <!--Alaska-->
-
 <window id="139">
 	<defaultcontrol>5</defaultcontrol>
-	<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 	<controls>
-		<!--control type="group">
-			<include>Animation_CommonFade</include>
-		</control-->
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<colordiffuse>BackgroundColor</colordiffuse>
-			<texture diffuse="backdrops/mask_2.png">common/white.png</texture>
+		<control type="group">
+			<include>Animation_ZoomOutZoomIn</include>
+			<control type="image">
+				<description>Panel</description>
+				<posx>222</posx>
+				<posy>94</posy>
+				<width>836</width>
+				<height>504</height>
+				<texture border="100">common/common_panel_3.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>264</posx>
+				<posy>504</posy>
+				<width>752</width>
+				<height>2</height>
+				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>990</posx>
+				<posy>508</posy>
+				<width>692</width>
+				<height>60</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>PanelListLabel</textcolor>
+				<label>$LOCALIZE[13406]</label>
+				<font>Font_PanelLabel</font>
+			</control>
+			<control type="list" id="5">
+				<posx>260</posx>
+				<posy>122</posy>
+				<width>781</width>
+				<height>375</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<pagecontrol>-</pagecontrol>
+				<focusposition>4</focusposition>
+				<movement>4</movement>
+				<itemlayout height="40">
+					<control type="label">
+						<posx>30</posx>
+						<posy>15</posy>
+						<width>180</width>
+						<height>30</height>
+						<textcolor>PanelListItem</textcolor>
+						<aligny>center</aligny>
+						<font>Font_PanelItemLabel</font>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>730</posx>
+						<posy>15</posy>
+						<width>510</width>
+						<height>30</height>
+						<textcolor>PanelListItem</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>Font_PanelItemLabel</font>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="label">
+						<posx>30</posx>
+						<posy>15</posy>
+						<width>180</width>
+						<height>30</height>
+						<textcolor>PanelListItemFocused</textcolor>
+						<aligny>center</aligny>
+						<font>Font_PanelItemLabel</font>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>730</posx>
+						<posy>15</posy>
+						<width>510</width>
+						<height>30</height>
+						<textcolor>PanelListItemFocused</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>Font_PanelItemLabel</font>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<posx>632</posx>
+				<posy>122</posy>
+				<height>16</height>
+				<width>16</width>
+				<texture>arrowupfo.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<visible>Container(5).HasPrevious</visible>
+			</control>
+			<control type="image">
+				<posx>632</posx>
+				<posy>484</posy>
+				<height>16</height>
+				<width>16</width>
+				<texture>arrowdownfo.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<visible>Container(5).HasNext</visible>
+			</control>
+			<include>Object_DebugGrid</include>
+			<control type="group">
+				<include>Debug</include>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
 		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>backdrops/mask_2.png</texture>
-			<colordiffuse>BackgroundFilterColor</colordiffuse>
-		</control>
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogPictureInfo.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-		<control type="list" id="5">
-			<posx>380</posx>
-			<posy>170</posy>
-			<width>520</width>
-			<height>380</height>
-			<onleft>450</onleft>
-			<onright>450</onright>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<itemlayout height="32">
-				<control type="label">
-					<posx>5</posx>
-					<width>465</width>
-					<height>30</height>
-					<info>ListItem.Label</info>
-					<scroll>false</scroll>
-				</control>
-				<control type="label">
-					<posx>487</posx>
-					<width>465</width>
-					<height>30</height>
-					<align>right</align>
-					<info>ListItem.Label2</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="32">
-				<control type="label">
-					<posx>5</posx>
-					<width>465</width>
-					<height>30</height>
-					<textcolor>Text</textcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="label">
-					<posx>487</posx>
-					<width>465</width>
-					<height>30</height>
-					<align>right</align>
-					<textcolor>Text</textcolor>
-					<info>ListItem.Label2</info>
-				</control>
-			</focusedlayout>
-		</control>
-		<include>Object_DebugGrid</include>
 	</controls>
 </window>

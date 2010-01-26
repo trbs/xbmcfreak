@@ -1,16 +1,10 @@
 <!--Alaska-->
-
 <window id="2005">
 	<controls>
-		<control type="label">
-			<include>WindowID</include>
-			<label>VideoFullScreen.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-	<!-- codec infos -->
+		<!-- codec infos -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>140</posy>
 			<width>1280</width>
 			<height>125</height>
 			<visible>Control.IsVisible(10)</visible>
@@ -36,17 +30,7 @@
 				<width>1290</width>
 				<height>165</height>
 				<texture flipx="true">common/white.png</texture>
-				<colordiffuse>BackgroundColor</colordiffuse>
-				<aspectratio aligny="bottom">scale</aspectratio>
-			</control>
-			<control type="image">
-				<posx>-5</posx>
-				<posy>0</posy>
-				<width>1290</width>
-				<height>165</height>
-				<texture flipx="true">backdrops/filter_2.png</texture>
-				<colordiffuse>BackgroundColorDiffuse</colordiffuse>
-				<aspectratio aligny="bottom">scale</aspectratio>
+				<colordiffuse>OSDBackground</colordiffuse>
 			</control>
 			<control type="label" id="10">
 				<description>row 1 label</description>
@@ -79,7 +63,7 @@
 				<font>Font_Date</font>
 			</control>
 		</control>
-	<!-- Buffering Dialog -->
+		<!-- Buffering Dialog -->
 		<control type="label" id="24">
 			<description>buffering label</description>
 			<posx>210</posx>
@@ -91,5 +75,9 @@
 			<font>Font_Date</font>
 		</control>
 		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

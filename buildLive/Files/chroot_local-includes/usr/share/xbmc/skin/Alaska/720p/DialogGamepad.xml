@@ -1,64 +1,55 @@
-﻿<!--Empty-->
-
+<!--Alaska-->
 <window id="110">
 	<defaultcontrol>0</defaultcontrol>
-
-	<coordinates>
-		<system>1</system>
-		<posx>360</posx>
-		<posy>120</posy>
-	</coordinates>
-
 	<controls>
-
-		<control type="image" id="0">
-			<description>Back Panel</description>
-			<posx>-30</posx>
-			<posy>-30</posy>
-			<width>620</width>
-			<height>500</height>
-			<texture>favourites/favourites_panel.png</texture>
-			<colordiffuse>FavListPanel</colordiffuse>
+		<control type="group">
+			<include>Animation_ZoomOutZoomIn</include>
+			<control type="image" id="0">
+				<description>Back Panel</description>
+				<posx>322</posx>
+				<posy>134</posy>
+				<width>636</width>
+				<height>304</height>
+				<texture border="100">common/common_panel_1.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
+			</control>
+			<control type="label" id="1">
+				<description>Heading</description>
+				<posy>200</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>1280</width>
+				<align>center</align>
+			</control>
+			<control type="label" id="2">
+				<description>Line 1</description>
+				<posy>250</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>1280</width>
+				<align>center</align>
+			</control>
+			<control type="label" id="3">
+				<description>Line 2</description>
+				<posy>300</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>1280</width>
+				<align>center</align>
+			</control>
+			<control type="label" id="4">
+				<description>Line 3</description>
+				<posy>350</posy>
+				<include>DialogLabel</include>
+				<label>-</label>
+				<width>1280</width>
+				<align>center</align>
+			</control>
+			<include>Object_DebugGrid</include>
+			<control type="group">
+				<include>Debug</include>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
 		</control>
-
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogGamepad.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
-		<control type="label" id="1">
-			<description>heading</description>
-			<posx>10</posx>
-			<posy>40</posy>
-			<width>500</width>
-			<label>-</label>
-		</control>
-
-		<control type="label" id="2">
-			<description>Line 1</description>
-			<posx>10</posx>
-			<posy>72</posy>
-			<width>500</width>
-			<label>-</label>
-		</control>
-		<control type="label" id="3">
-			<description>Line 2</description>
-			<posx>10</posx>
-			<posy>104</posy>
-			<width>500</width>
-			<label>-</label>
-		</control>
-		<control type="label" id="4">
-			<description>Line 3</description>
-			<posx>10</posx>
-			<posy>136</posy>
-			<width>500</width>
-			<label>-</label>
-		</control>
-
-		<include>Object_DebugGrid</include>
-
 	</controls>
-
 </window>

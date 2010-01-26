@@ -1,5 +1,4 @@
 <!--Alaska-->
-
 <window id="3">
 	<defaultcontrol>20</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -17,19 +16,34 @@
 				<height>592</height>
 				<posx>-20</posx>
 				<posy>0</posy>
-				<texture border="100">filemanager/filemanager_panel.png</texture>
-				<colordiffuse>FMListPanel</colordiffuse>
+				<texture border="100">common/common_panel_2.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
-			<control type="label" id="101">
-				<posx>590</posx>
-				<posy>525</posy>
+			<control type="fadelabel" id="101">
+				<posx>35</posx>
+				<posy>520</posy>
 				<width>555</width>
-				<height>60</height>
+				<height>50</height>
 				<font>Font_ListTitleBigger</font>
 				<align>right</align>
-				<scroll>true</scroll>
-				<textcolor>FM_ListTitle</textcolor>
-				<shadowcolor>FM_ListTitleAccent</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>800</pauseatend>
+				<scrollspeed>38</scrollspeed>
+				<textcolor>PanelListItemFocused</textcolor>
+				<visible>Control.HasFocus(20)</visible>
+			</control>
+			<control type="fadelabel" id="101">
+				<posx>35</posx>
+				<posy>520</posy>
+				<width>555</width>
+				<height>50</height>
+				<font>Font_ListTitleBigger</font>
+				<align>right</align>
+				<scrollout>false</scrollout>
+				<pauseatend>800</pauseatend>
+				<scrollspeed>38</scrollspeed>
+				<textcolor>PanelListItem</textcolor>
+				<visible>Control.HasFocus(21)</visible>
 			</control>
 			<control type="image">
 				<posx>22</posx>
@@ -37,6 +51,7 @@
 				<width>576</width>
 				<height>2</height>
 				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
 			</control>
 			<control type="list" id="20">
 				<viewtype label="31752">list</viewtype>
@@ -54,10 +69,9 @@
 						<posy>0</posy>
 						<width>480</width>
 						<height>39</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelItemLabel</font>
 						<aligny>center</aligny>
-						<textcolor>FM_ListUnfocused</textcolor>
-						<selectedcolor>FM_ListUnfocusSelected</selectedcolor>
+						<textcolor>PanelListItem</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
@@ -65,47 +79,59 @@
 						<posy>0</posy>
 						<width>100</width>
 						<height>38</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelItemLabel</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>FM_ListUnfocused</textcolor>
-						<selectedcolor>FM_ListUnfocusSelected</selectedcolor>
+						<textcolor>PanelListItem</textcolor>
 						<label>[UPPERCASE]$INFO[ListItem.label2][/UPPERCASE]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40">
-					<control type="image">
-						<posx>8</posx>
-						<posy>-6</posy>
-						<width>570</width>
-						<height>50</height>
-						<visible>Control.HasFocus(20)</visible>
-						<texture>favourites/focus_bar.png</texture>
-						<colordiffuse>FM_Focusbar</colordiffuse>
-					</control>
 					<control type="label">
 						<posx>23</posx>
 						<posy>0</posy>
-						<width>480</width>
+						<width>410</width>
 						<height>38</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelFocusedItemLabel</font>
 						<aligny>center</aligny>
-						<textcolor>FM_ListFocused</textcolor>
-						<shadowcolor>FM_ListFocusedAccent</shadowcolor>
-						<selectedcolor>FM_ListFocusSelected</selectedcolor>
+						<textcolor>PanelListItemFocused</textcolor>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(20)</visible>
 					</control>
 					<control type="label">
 						<posx>560</posx>
 						<posy>0</posy>
-						<width>100</width>
+						<width>120</width>
 						<height>38</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelFocusedItemLabel</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>FM_ListFocused</textcolor>
-						<selectedcolor>FM_ListFocused</selectedcolor>
+						<textcolor>PanelListItemFocused</textcolor>
 						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>Control.HasFocus(20)</visible>
+					</control>
+					<control type="label">
+						<posx>23</posx>
+						<posy>0</posy>
+						<width>410</width>
+						<height>38</height>
+						<font>Font_PanelFocusedItemLabel</font>
+						<aligny>center</aligny>
+						<textcolor>PanelListItemSelected</textcolor>
+						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(21)</visible>
+					</control>
+					<control type="label">
+						<posx>560</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>38</height>
+						<font>Font_PanelFocusedItemLabel</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>PanelListItemSelected</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>Control.HasFocus(21)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -121,19 +147,34 @@
 				<height>592</height>
 				<posx>-20</posx>
 				<posy>0</posy>
-				<texture border="100">filemanager/filemanager_panel.png</texture>
-				<colordiffuse>FMListPanel</colordiffuse>
+				<texture border="100">common/common_panel_2.png</texture>
+				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
-			<control type="label" id="102">
-				<posx>590</posx>
-				<posy>525</posy>
+			<control type="fadelabel" id="101">
+				<posx>35</posx>
+				<posy>520</posy>
 				<width>555</width>
-				<height>60</height>
+				<height>50</height>
 				<font>Font_ListTitleBigger</font>
 				<align>right</align>
-				<scroll>true</scroll>
-				<textcolor>FM_ListTitle</textcolor>
-				<shadowcolor>FM_ListTitleAccent</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>800</pauseatend>
+				<scrollspeed>38</scrollspeed>
+				<textcolor>PanelListItemFocused</textcolor>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			<control type="fadelabel" id="101">
+				<posx>35</posx>
+				<posy>520</posy>
+				<width>555</width>
+				<height>50</height>
+				<font>Font_ListTitleBigger</font>
+				<align>right</align>
+				<scrollout>false</scrollout>
+				<pauseatend>800</pauseatend>
+				<scrollspeed>38</scrollspeed>
+				<textcolor>PanelListItem</textcolor>
+				<visible>Control.HasFocus(20)</visible>
 			</control>
 			<control type="image">
 				<posx>22</posx>
@@ -141,6 +182,7 @@
 				<width>576</width>
 				<height>2</height>
 				<texture>common/divider.png</texture>
+				<colordiffuse>PanelDiffuseDivider</colordiffuse>
 			</control>
 			<control type="list" id="21">
 				<viewtype label="31752">list</viewtype>
@@ -158,10 +200,9 @@
 						<posy>0</posy>
 						<width>480</width>
 						<height>39</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelItemLabel</font>
 						<aligny>center</aligny>
-						<textcolor>FM_ListUnfocused</textcolor>
-						<selectedcolor>FM_ListUnfocusSelected</selectedcolor>
+						<textcolor>PanelListItem</textcolor>
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
@@ -169,52 +210,63 @@
 						<posy>0</posy>
 						<width>100</width>
 						<height>38</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelItemLabel</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>FM_ListUnfocused</textcolor>
-						<selectedcolor>FM_ListUnfocusSelected</selectedcolor>
+						<textcolor>PanelListItem</textcolor>
 						<label>[UPPERCASE]$INFO[ListItem.label2][/UPPERCASE]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40">
-					<control type="image">
-						<posx>8</posx>
-						<posy>-6</posy>
-						<width>570</width>
-						<height>50</height>
-						<visible>Control.HasFocus(21)</visible>
-						<texture>favourites/focus_bar.png</texture>
-						<colordiffuse>FM_Focusbar</colordiffuse>
-					</control>
 					<control type="label">
 						<posx>23</posx>
 						<posy>0</posy>
-						<width>480</width>
+						<width>410</width>
 						<height>38</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelFocusedItemLabel</font>
 						<aligny>center</aligny>
-						<textcolor>FM_ListFocused</textcolor>
-						<shadowcolor>FM_ListFocusedAccent</shadowcolor>
-						<selectedcolor>FM_ListFocusSelected</selectedcolor>
+						<textcolor>PanelListItemFocused</textcolor>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(21)</visible>
 					</control>
 					<control type="label">
 						<posx>560</posx>
 						<posy>0</posy>
-						<width>100</width>
+						<width>120</width>
 						<height>38</height>
-						<font>Font_FavouritesItemLabel</font>
+						<font>Font_PanelFocusedItemLabel</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>FM_ListFocused</textcolor>
-						<selectedcolor>FM_ListFocused</selectedcolor>
-						<label>[UPPERCASE]$INFO[ListItem.label2][/UPPERCASE]</label>
+						<textcolor>PanelListItemFocused</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>Control.HasFocus(21)</visible>
+					</control>
+					<control type="label">
+						<posx>23</posx>
+						<posy>0</posy>
+						<width>410</width>
+						<height>38</height>
+						<font>Font_PanelFocusedItemLabel</font>
+						<aligny>center</aligny>
+						<textcolor>PanelListItemSelected</textcolor>
+						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(20)</visible>
+					</control>
+					<control type="label">
+						<posx>560</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>38</height>
+						<font>Font_PanelFocusedItemLabel</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>PanelListItemSelected</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>Control.HasFocus(20)</visible>
 					</control>
 				</focusedlayout>
 			</control>
 		</control>
-		<include>Object_DebugGrid</include>	
 		<include>Global_ContextFilter</include>
 		<!-- Heading -->
 		<control type="group">
@@ -232,9 +284,9 @@
 		</control>
 		<include>Global_Time</include>
 		<include>Global_RSS</include>
-		<control type="label">
-			<include>WindowID</include>
-			<label>FileManager.xml</label>
+		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
 	</controls>

@@ -1,38 +1,27 @@
 <!--Alaska-->
-
 <window id="145">
 	<defaultcontrol>11</defaultcontrol>
-	<animation type="WindowOpen" reversible="false">
-		<effect type="zoom" start="80" end="100" center="1580,49" delay="200" easing="out" tween="back" time="300" />
-		<effect type="fade" delay="200" start="0" end="100" time="300" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="zoom" start="100" end="80" center="1580,49" easing="in" tween="back" time="300" />
-		<effect type="fade" start="100" end="0" time="300" />
-	</animation>
 	<controls>
-
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogSlider.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
+		<control type="button" id="711">
+			<onfocus>SetFocus(11)</onfocus>
+			<onfocus>Dialog.Close(145)</onfocus>
 		</control>
-
 		<control type="group">
-			<posx>880</posx>
-			<posy>12</posy>
-			<width>707</width>
+			<include>Animation_ZoomOutZoomIn</include>
+			<posx>498</posx>
+			<posy>560</posy>
+			<width>300</width>
 			<height>183</height>
 			<control type="image">
-				<posx>100</posx>
+				<posx>0</posx>
 				<posy>-2</posy>
-				<width>322</width>
+				<width>286</width>
 				<height>74</height>
-				<texture border="37,0,0,0">dialogs/back.png</texture>
+				<texture border="37,0,37,0">dialogs/back.png</texture>
 				<colordiffuse>DialogBackground</colordiffuse>
 			</control>
 			<control type="image">
-				<posx>324</posx>
+				<posx>224</posx>
 				<posy>12</posy>
 				<width>46</width>
 				<height>46</height>
@@ -41,7 +30,7 @@
 			</control>
 			<control type="slider" id="11">
 				<description>Slider</description>
-				<posx>328</posx>
+				<posx>228</posx>
 				<posy>27</posy>
 				<width>38</width>
 				<height>13</height>
@@ -54,23 +43,22 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" start="100" end="0" time="10" />
 				</animation>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<onup>711</onup>
+				<ondown>711</ondown>
 				<onleft>11</onleft>
 				<onright>11</onright>
 			</control>
 			<control type="image">
-				<posx>322</posx>
+				<posx>222</posx>
 				<posy>10</posy>
 				<width>50</width>
 				<height>50</height>
 				<texture>dialogs/slider.png</texture>
 				<colordiffuse>ButtonFilterColor</colordiffuse>
 			</control>
-
 			<control type="label" id="10">
 				<description>Heading Label</description>
-				<posx>310</posx>
+				<posx>210</posx>
 				<posy>15</posy>
 				<width>627</width>
 				<height>51</height>
@@ -78,9 +66,8 @@
 				<align>right</align>
 				<font>Font_ProgressDialog</font>
 			</control>
-
 			<control type="label" id="12">
-				<posx>310</posx>
+				<posx>210</posx>
 				<posy>35</posy>
 				<width>627</width>
 				<height>51</height>
@@ -89,8 +76,10 @@
 				<font>Font_Date</font>
 			</control>
 		</control>
-
 		<include>Object_DebugGrid</include>
-
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

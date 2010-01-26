@@ -1,5 +1,4 @@
 <!--Alaska-->
-
 <window id="2004">
 	<zorder>2</zorder>
 	<defaultcontrol>-</defaultcontrol>
@@ -12,69 +11,62 @@
 		<effect type="fade" start="100" end="0" time="600" />
 	</animation>
 	<controls>
-		<control type="label">
-			<include>WindowID</include>
-			<label>MusicOverlay.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
 		<control type="group">
-			<visible>[[[Player.ShowInfo | Player.Paused] + Window.IsActive(2006)] | Window.IsActive(120)] | ![Window.IsActive(2006) | Window.IsActive(3)]</visible>
 			<posx>30</posx>
-			<posy>492</posy>
-			<animation effect="slide" start="0,0" end="0,30" time="600" condition="[!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home)] + !Window.IsVisible(2006)">Conditional</animation>
-			<animation type="Visible">
-				<effect type="slide" start="-300,0" end="0,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="600" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="-300,0" time="600" tween="cubic" easing="out" />
-				<effect type="fade" start="100" end="0" time="600" />
-			</animation>
+			<posy>460</posy>
+			<visible>[[[Player.ShowInfo | Player.Paused] + Window.IsActive(2006)] | Window.IsActive(120)] | ![Window.IsActive(2006) | Window.IsActive(3)]</visible>
+			<animation effect="slide" start="0,0" end="0,30" time="600" condition="[!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-32" time="200" condition="Window.IsActive(PlayerControls) + [!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home)]">Conditional</animation>
+			<include>Animation_OSDHide</include>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>168</width>
-				<height>168</height>
+				<width>206</width>
+				<height>206</height>
 				<texture>$INFO[MusicPlayer.Cover]</texture>
 				<bordertexture border="8">common/thumb_border.png</bordertexture>
 				<bordersize>8</bordersize>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<animation type="Conditional" condition="Window.IsActive(2006) | Window.IsActive(120)">
-					<effect type="zoom" center="35,180" start="100" end="155" time="400" tween="cubic" easing="out" />
-					<effect type="slide" start="0,0" end="12,5" time="400" tween="cubic" easing="out" />
+				<aspectratio aligny="top">scale</aspectratio>
+				<animation type="Visible">
+					<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
+					<effect type="fade" start="0" end="100" time="600" />
 				</animation>
+				<animation type="Hidden">
+					<effect type="slide" start="0,0" end="0,300" time="600" tween="cubic" easing="out" />
+					<effect type="fade" start="100" end="0" time="600" />
+				</animation>
+				<visible>!Window.IsActive(120)</visible>
 			</control>
-			<control type="label">
-				<visible>![!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home)] + !Window.IsVisible(2006)</visible>
-				<posx>175</posx>
-				<posy>98</posy>
-				<width>420</width>
-				<height>60</height>
-				<aligny>center</aligny>
-				<font>Font_ListDetail</font>
-				<label>$LOCALIZE[13350][CR][B][COLOR=NowPlayingTrack]$INFO[MusicPlayer.Title][/COLOR][/B][CR][B]$INFO[MusicPlayer.Artist][/B][CR][COLOR=NowPlayingAlbum]$INFO[MusicPlayer.Album][/COLOR]</label>
-				<textcolor>NowPlayingArtist</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+			<control type="image">
+				<posx>8</posx>
+				<posy>176</posy>
+				<width>190</width>
+				<height>22</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>OSDNowPlayingBack</colordiffuse>
+				<visible>!Window.IsActive(2006)</visible>
 			</control>
-			<control type="label">
-				<visible>[!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home)] + !Window.IsVisible(2006)</visible>
-				<posx>175</posx>
-				<posy>78</posy>
-				<width>420</width>
-				<height>80</height>
+			<control type="fadelabel">
+				<posx>12</posx>
+				<posy>176</posy>
+				<width>180</width>
+				<height>22</height>
 				<aligny>center</aligny>
-				<font>Font_ListDetail</font>
-				<label>$LOCALIZE[13350][CR][B][COLOR=NowPlayingTrack]$INFO[MusicPlayer.Title][/COLOR][/B][CR][B]$INFO[MusicPlayer.Artist][/B][CR][COLOR=NowPlayingAlbum]$INFO[MusicPlayer.Album][/COLOR]</label>
-				<textcolor>NowPlayingArtist</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<animation effect="slide" start="0,0" end="0,-40" time="200" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+				<font>Font_NowPlaying</font>
+				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR][COLOR OSDNowPlaying][/COLOR]$INFO[MusicPlayer.Title, ]$INFO[MusicPlayer.Artist,[COLOR OSDNowPlaying]    $LOCALIZE[557]: [/COLOR]]$INFO[MusicPlayer.Album,[COLOR OSDNowPlaying]    $LOCALIZE[558]: [/COLOR]][/B]</label>
+				<textcolor>OSDNowPlayingTitle</textcolor>
+				<scrollout>true</scrollout>
+				<pauseatend>1800</pauseatend>
+				<scrollspeed>40</scrollspeed>
+				<scroll>true</scroll>
+				<visible>!Window.IsActive(2006)</visible>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>
+		<control type="group">
+			<posy>700</posy>
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

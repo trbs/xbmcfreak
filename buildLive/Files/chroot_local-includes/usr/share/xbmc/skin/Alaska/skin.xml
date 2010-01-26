@@ -1,13 +1,19 @@
 <skin>
-  <defaultresolution>720p</defaultresolution>
-  <defaultresolutionwide>720p</defaultresolutionwide>
-  <version>2.11</version>
-  <effectslowdown>1</effectslowdown>
-  <zoom>1.0</zoom>
-
-<credits>
-	<skinname>Alaska</skinname>
-    	<name>by Duncan Harris</name>
-</credits>
+	<defaultresolution>720p</defaultresolution>
+	<defaultresolutionwide>720p</defaultresolutionwide>
+	<version>2.2</version>
+	<effectslowdown>1</effectslowdown>
+	<zoom>1.0</zoom>
+	<credits>
+		<skinname>Alaska</skinname>
+		<name>Initial Code/Graphicsn - Duncan Harris</name>
+		<name>Lead Code/Graphics - Kevin Goffe</name>
+		<name>Code/Graphics - ccMatrix</name>
+		<name>Code/Graphics - CF2009</name>
+		<name>Support - Rocky5</name>
+		<name>Support - XBMCG33K</name>
+		<name>Support/Localisation tool - Equinox</name>
+		<name>Special thanks to Jonathan Marshall for adding extra skin functions</name>
+	</credits>
 </skin>
 
