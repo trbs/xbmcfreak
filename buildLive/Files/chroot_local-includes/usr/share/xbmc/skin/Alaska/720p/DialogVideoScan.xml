@@ -101,6 +101,17 @@
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
 				<label>-</label>
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<posx>310</posx>
+				<posy>35</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(405)][/UPPERCASE]</label>
 				<scroll>true</scroll>
 			</control>
 		</control>

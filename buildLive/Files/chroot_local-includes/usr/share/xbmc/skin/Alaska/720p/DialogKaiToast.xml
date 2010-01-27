@@ -42,6 +42,19 @@
 				<align>right</align>
 				<font>Font_ProgressDialog</font>
 				<label>-</label>
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<description>heading</description>
+				<posx>310</posx>
+				<posy>15</posy>
+				<width>627</width>
+				<height>51</height>
+				<textcolor>Time</textcolor>
+				<align>right</align>
+				<font>Font_ProgressDialog</font>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(401)][/UPPERCASE]</label>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="402">
 				<description>Line 1</description>
@@ -53,6 +66,19 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<label>-</label>
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<description>Line 1</description>
+				<posx>310</posx>
+				<posy>35</posy>
+				<width>627</width>
+				<height>51</height>
+				<textcolor>Date</textcolor>
+				<align>right</align>
+				<font>Font_Date</font>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(401)][/UPPERCASE]</label>
+				<scroll>true</scroll>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>

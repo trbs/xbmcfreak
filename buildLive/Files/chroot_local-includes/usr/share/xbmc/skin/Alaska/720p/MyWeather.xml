@@ -37,7 +37,7 @@
 				<height>300</height>
 				<!-- label -->
 				<control type="label">
-					<label>$LOCALIZE[40207]</label>
+					<label>[UPPERCASE]$LOCALIZE[40207][/UPPERCASE]</label>
 					<width>225</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -60,7 +60,7 @@
 				</control>
 				<!-- current temp -->
 				<control type="label">
-					<label>$LOCALIZE[40207]</label>
+					<label>[UPPERCASE]$LOCALIZE[40207][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>115</width>
@@ -70,7 +70,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<width>115</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -81,7 +81,7 @@
 				</control>
 				<!-- Feels Like -->
 				<control type="label">
-					<label>402</label>
+					<label>[UPPERCASE]$LOCALIZE[402][/UPPERCASE]</label>
 					<posx>115</posx>
 					<posy>100</posy>
 					<width>115</width>
@@ -91,7 +91,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<width>115</width>
 					<height>20</height>
 					<posx>115</posx>
@@ -102,7 +102,7 @@
 				</control>
 				<!-- Uv Index -->
 				<control type="label">
-					<label>[COLOR Date]$LOCALIZE[403]: [/COLOR] $INFO[Window.Property(Current.UVIndex)]</label>
+					<label>[UPPERCASE][COLOR Date]$LOCALIZE[403]: [/COLOR] $INFO[Window.Property(Current.UVIndex)][/UPPERCASE]</label>
 					<width>225</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -113,7 +113,7 @@
 				</control>
 				<!-- Dew Point -->
 				<control type="label">
-					<label>[COLOR Date]$LOCALIZE[405]: [/COLOR] $INFO[Window.Property(Current.DewPoint)]</label>
+					<label>[UPPERCASE][COLOR Date]$LOCALIZE[405]: [/COLOR] $INFO[Window.Property(Current.DewPoint)][/UPPERCASE]</label>
 					<width>225</width>
 					<height>20</height>
 					<posx>2</posx>
@@ -124,7 +124,7 @@
 				</control>
 				<!-- Humidity -->
 				<control type="label">
-					<label>[COLOR Date]$LOCALIZE[406]: [/COLOR] $INFO[Window.Property(Current.Humidity)]</label>
+					<label>[UPPERCASE][COLOR Date]$LOCALIZE[406]: [/COLOR] $INFO[Window.Property(Current.Humidity)][/UPPERCASE]</label>
 					<width>225</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -135,7 +135,7 @@
 				</control>
 				<!-- Wind -->
 				<control type="label">
-					<label>[COLOR Date]$LOCALIZE[404]: [/COLOR] $INFO[Window.Property(Current.Wind)]</label>
+					<label>[UPPERCASE][COLOR Date]$LOCALIZE[404]: [/COLOR] $INFO[Window.Property(Current.Wind)][/UPPERCASE]</label>
 					<width>245</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -192,7 +192,7 @@
 				</control>
 				<!-- high temp -->
 				<control type="label">
-					<label>$LOCALIZE[393]</label>
+					<label>[UPPERCASE]$LOCALIZE[393][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -202,7 +202,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day0.HighTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day0.HighTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -213,7 +213,7 @@
 				</control>
 				<!-- low temp -->
 				<control type="label">
-					<label>$LOCALIZE[391]</label>
+					<label>[UPPERCASE]$LOCALIZE[391][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -223,7 +223,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day0.LowTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -280,7 +280,7 @@
 				</control>
 				<!-- high temp -->
 				<control type="label">
-					<label>$LOCALIZE[393]</label>
+					<label>[UPPERCASE]$LOCALIZE[393][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -290,7 +290,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day1.HighTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day1.HighTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -301,7 +301,7 @@
 				</control>
 				<!-- low temp -->
 				<control type="label">
-					<label>$LOCALIZE[391]</label>
+					<label>[UPPERCASE]$LOCALIZE[391][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -311,7 +311,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day1.LowTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -368,7 +368,7 @@
 				</control>
 				<!-- high temp -->
 				<control type="label">
-					<label>$LOCALIZE[393]</label>
+					<label>[UPPERCASE]$LOCALIZE[393][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -378,7 +378,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day2.HighTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day2.HighTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -389,7 +389,7 @@
 				</control>
 				<!-- low temp -->
 				<control type="label">
-					<label>$LOCALIZE[391]</label>
+					<label>[UPPERCASE]$LOCALIZE[391][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -399,7 +399,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day2.LowTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -456,7 +456,7 @@
 				</control>
 				<!-- high temp -->
 				<control type="label">
-					<label>$LOCALIZE[393]</label>
+					<label>[UPPERCASE]$LOCALIZE[393][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -466,7 +466,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day3.HighTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day3.HighTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>5</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -477,7 +477,7 @@
 				</control>
 				<!-- low temp -->
 				<control type="label">
-					<label>$LOCALIZE[391]</label>
+					<label>[UPPERCASE]$LOCALIZE[391][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>100</posy>
 					<width>80</width>
@@ -487,7 +487,7 @@
 					<textcolor>Date</textcolor>
 				</control>
 				<control type="label">
-					<label>$INFO[Window.Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$INFO[Window.Property(Day3.LowTemp)] $INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<posx>100</posx>
 					<posy>120</posy>
 					<width>80</width>
@@ -506,7 +506,7 @@
 			<posy>330</posy>
 			<!-- refresh -->
 			<control type="button" id="2">
-				<label>184</label>
+				<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(2)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -515,7 +515,7 @@
 			</control>
 			<!-- settings -->
 			<control type="button" id="4">
-				<label>8</label>
+				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<onclick>ActivateWindow(weathersettings)</onclick>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(4)">
@@ -539,7 +539,7 @@
 				<texturedownfocus>-</texturedownfocus>
 			</control>
 			<control type="textbox" id="7001">
-				<label>$INFO[Weather.Location]</label>
+				<label>[UPPERCASE]$INFO[Weather.Location][/UPPERCASE]</label>
 				<posx>0</posx>
 				<posy>30</posy>
 				<width>280</width>
@@ -555,7 +555,7 @@
 				<visible>!ControlGroup(7000).HasFocus(3)</visible>
 			</control>
 			<control type="textbox" id="7001">
-				<label>$INFO[Weather.Location]</label>
+				<label>[UPPERCASE]$INFO[Weather.Location][/UPPERCASE]</label>
 				<posx>0</posx>
 				<posy>30</posy>
 				<width>280</width>
@@ -577,7 +577,7 @@
 			<posy>300</posy>
 			<control type="button" id="7041">
 				<include>WindowMenuLabel</include>
-				<label>8</label>
+				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(2)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -585,7 +585,7 @@
 			</control>
 			<control type="button" id="7042">
 				<include>WindowMenuLabel</include>
-				<label>5</label>
+				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(4)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -600,7 +600,7 @@
 				<font>Font_MenuLabel</font>
 				<textcolor>MenuValue</textcolor>
 				<aligny>bottom</aligny>
-				<label>396</label>
+				<label>[UPPERCASE]$LOCALIZE[396][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -613,11 +613,11 @@
 			<posy>30</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
-				<label>$LOCALIZE[8]: $INFO[Weather.Location]</label>
+				<label>[UPPERCASE]$LOCALIZE[8]: $INFO[Weather.Location][/UPPERCASE]</label>
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label">
-				<label>[B]$LOCALIZE[40208][/B] $INFO[Window.Property(Updated)]</label>
+				<label>[UPPERCASE][B]$LOCALIZE[40208][/B] $INFO[Window.Property(Updated)][/UPPERCASE]</label>
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>

@@ -16,6 +16,7 @@
 		<include>Viewtype_Files</include>
 		<include>Viewtype_List</include>
 		<include>Viewtype_Poster</include>
+		<include>Viewtype_SquarePoster</include>
 		<include>Viewtype_Episode</include>
 		<include>Global_ContextFilter</include>
 		<control type="grouplist" id="7000">
@@ -31,7 +32,7 @@
 			<orientation>horizontal</orientation>
 			<control type="button" id="20">
 				<include>WindowMenuButton</include>
-				<label>$INFO[Container.ViewMode]</label>
+				<label>[UPPERCASE]$INFO[Container.ViewMode][/UPPERCASE]</label>
 				<onclick>Container.NextViewMode</onclick>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -40,7 +41,7 @@
 			</control>
 			<control type="button" id="3">
 				<include>WindowMenuButton</include>
-				<label>346</label>
+				<label>[UPPERCASE]$LOCALIZE[346][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -48,8 +49,8 @@
 			</control>
 			<control type="togglebutton" id="21">
 				<include>WindowMenuButton</include>
-				<label>584</label>
-				<altlabel>585</altlabel>
+				<label>[UPPERCASE]$LOCALIZE[584][/UPPERCASE]</label>
+				<altlabel>$LOCALIZE[585]</altlabel>
 				<onclick>Container.SortDirection</onclick>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(21)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -58,7 +59,7 @@
 			</control>
 			<control type="button" id="7">
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[40199]</label>
+				<label>[UPPERCASE]$LOCALIZE[40199][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(7)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -78,7 +79,7 @@
 			<orientation>horizontal</orientation>
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40183]</label>
+				<label>[UPPERCASE]$LOCALIZE[40183][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -86,7 +87,7 @@
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40184]</label>
+				<label>[UPPERCASE]$LOCALIZE[40184][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(3)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -94,7 +95,7 @@
 			</control>
 			<control type="button" id="43">
 				<include>WindowMenuLabel</include>
-				<label>580</label>
+				<label>[UPPERCASE]$LOCALIZE[580][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(21)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -102,7 +103,7 @@
 			</control>
 			<control type="button" id="42">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[744]</label>
+				<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(7)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />

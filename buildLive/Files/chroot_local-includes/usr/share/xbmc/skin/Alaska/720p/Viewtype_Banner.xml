@@ -1,9 +1,8 @@
-<!--Alaska-->
 <includes>
 	<include name="Viewtype_Banner">
 		<!-- Browser -->
 		<control type="fixedlist" id="58">
-			<viewtype label="Banner">list</viewtype>
+			<viewtype label="BANNER">list</viewtype>
 			<animation effect="slide" start="50,0" end="50,0" time="0" condition="Player.HasVideo">Conditional</animation>
 			<posx>250</posx>
 			<posy>80</posy>
@@ -30,7 +29,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListTitleNF</selectedcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					<animation effect="slide" end="-50,0" condition="Skin.HasSetting(NoStars)">Conditional</animation>
 					<visible>!Skin.HasSetting(tvoverlays)</visible>
 				</control>
@@ -43,7 +42,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListTitleNF</selectedcolor>
-					<label>$INFO[ListItem.Label][COLOR EpisodeWatchedNF] &#134;[/COLOR]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][COLOR EpisodeWatchedNF] &#134;[/COLOR][/UPPERCASE]</label>
 					<animation effect="slide" end="-50,0" condition="Skin.HasSetting(NoStars)">Conditional</animation>
 					<visible>Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
@@ -56,7 +55,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListTitleNF</selectedcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					<animation effect="slide" end="-50,0" condition="Skin.HasSetting(NoStars)">Conditional</animation>
 					<visible>Skin.HasSetting(tvoverlays) + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>

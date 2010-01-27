@@ -85,7 +85,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>0</label>
+					<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
 					<visible>!ControlGroup(3100).HasFocus()</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(1) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -136,7 +136,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>3</label>
+					<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
 					<visible>!ControlGroup(3200).HasFocus()</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(2) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -216,7 +216,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>2</label>
+					<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
 					<visible>![ControlGroup(3300).HasFocus() | ControlGroup(3310).HasFocus()]</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(3) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -295,7 +295,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>342</label>
+					<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
 					<visible>![ControlGroup(3400).HasFocus() | ControlGroup(3410).HasFocus()])</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(4) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -374,7 +374,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>20343</label>
+					<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
 					<visible>![ControlGroup(3500).HasFocus() | ControlGroup(3510).HasFocus()]</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(5) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -428,7 +428,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>1</label>
+					<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
 					<visible>!ControlGroup(3600).HasFocus()</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(6) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -524,13 +524,13 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>8</label>
+					<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
 					<visible>!Skin.HasSetting(homeweather) + !ControlGroup(3700).HasFocus()</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(7) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>$LOCALIZE[40207] $LOCALIZE[401] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+					<label>[UPPERCASE]$LOCALIZE[40207] $LOCALIZE[401] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 					<visible>Skin.HasSetting(homeweather) + !ControlGroup(3700).HasFocus()</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(7) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -609,7 +609,7 @@
 				<include>Home_MainMenuPanel</include>
 				<control type="fadelabel">
 					<include>Home_MainMenuLabel</include>
-					<label>5</label>
+					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 					<visible>!ControlGroup(3800).HasFocus()</visible>
 					<animation effect="slide" end="16,0" condition="!Container(300).HasFocus(8) | ![Control.IsVisible(398) | Control.IsVisible(399)]">Conditional</animation>
 				</control>
@@ -964,19 +964,19 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3101">
-				<label>15016</label>
+				<label>[UPPERCASE]$LOCALIZE[15016][/UPPERCASE]</label>
 				<onclick>ActivateWindow(1,plugin://programs/Launcher/)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidegames)</visible>
 			</control>
 			<control type="button" id="3102">
-				<label>247</label>
+				<label>[UPPERCASE]$LOCALIZE[247][/UPPERCASE]</label>
 				<onclick>ActivateWindow(Scripts)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidescripts)</visible>
 			</control>
 			<control type="button" id="3103">
-				<label>1036</label>
+				<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
 				<onclick>ActivateWindow(Favourites)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidefavs)</visible>
@@ -997,37 +997,37 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3201">
-				<label>1037</label>
+				<label>[UPPERCASE]$LOCALIZE[1037][/UPPERCASE]</label>
 				<onclick>ActivateWindow(24,plugin://video/)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideplugins)</visible>
 			</control>
 			<control type="button" id="3202">
-				<label>20389</label>
+				<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,musicvideotitles,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicvids)</visible>
 			</control>
 			<control type="button" id="3203">
-				<label>20012</label>
+				<label>[UPPERCASE]$LOCALIZE[20012][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,Playlists,Return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidevideoplaylists)</visible>
 			</control>
 			<control type="button" id="3204">
-				<label>10017</label>
+				<label>[UPPERCASE]$LOCALIZE[10017][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideosSettings)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidevideosettings)</visible>
 			</control>
 			<control type="button" id="3205">
-				<label>341</label>
+				<label>[UPPERCASE]$LOCALIZE[341][/UPPERCASE]</label>
 				<onclick>PlayDVD()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.HasMediaDVD</visible>
 			</control>
 			<control type="button" id="3206">
-				<label>$LOCALIZE[13391] $LOCALIZE[427]</label>
+				<label>[UPPERCASE]$LOCALIZE[13391] $LOCALIZE[427][/UPPERCASE]</label>
 				<onclick>EjectTray()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.HasMediaDVD</visible>
@@ -1048,13 +1048,13 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3301">
-				<label>$LOCALIZE[40171]</label>
+				<label>[UPPERCASE]$LOCALIZE[40171][/UPPERCASE]</label>
 				<onclick>ActivateWindow(MusicLibrary,recentlyaddedalbums,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicnew)</visible>
 			</control>
 			<control type="button" id="3302">
-				<label>589</label>
+				<label>[UPPERCASE]$LOCALIZE[589][/UPPERCASE]</label>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onclick>PlayerControl(Partymode(music))</onclick>
@@ -1062,37 +1062,37 @@
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidepartymode)</visible>
 			</control>
 			<control type="button" id="3303">
-				<label>135</label>
+				<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
 				<onclick>ActivateWindow(MusicLibrary,genres,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicgenres)</visible>
 			</control>
 			<control type="button" id="3304">
-				<label>133</label>
+				<label>[UPPERCASE]$LOCALIZE[133][/UPPERCASE]</label>
 				<onclick>ActivateWindow(MusicLibrary,artists,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicartists)</visible>
 			</control>
 			<control type="button" id="3305">
-				<label>652</label>
+				<label>[UPPERCASE]$LOCALIZE[652][/UPPERCASE]</label>
 				<onclick>ActivateWindow(MusicLibrary,years,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicyears)</visible>
 			</control>
 			<control type="button" id="3306">
-				<label>1038</label>
+				<label>[UPPERCASE]$LOCALIZE[1038][/UPPERCASE]</label>
 				<onclick>ActivateWindow(501,plugin://music/)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicplugins)</visible>
 			</control>
 			<control type="button" id="3307">
-				<label>20011</label>
+				<label>[UPPERCASE]$LOCALIZE[20011][/UPPERCASE]</label>
 				<onclick>ActivateWindow(MusicLibrary,Playlists,Return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicplaylists)</visible>
 			</control>
 			<control type="button" id="3308">
-				<label>10015</label>
+				<label>[UPPERCASE]$LOCALIZE[10015][/UPPERCASE]</label>
 				<onclick>ActivateWindow(MusicSettings)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemusicsettings)</visible>
@@ -1132,27 +1132,27 @@
 			</control>
 		</control>
 		<control type="fadelabel" id="3316">
-			<label fallback="empty">$INFO[Window.Property(LatestSong.5.Album)]$INFO[Window.Property(LatestSong.5.Title), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestSong.5.Album)]$INFO[Window.Property(LatestSong.5.Title), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3310).HasFocus(3311) + ControlGroup(3310).HasFocus() + Container(300).HasFocus(3)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3317">
-			<label fallback="empty">$INFO[Window.Property(LatestSong.4.Album)]$INFO[Window.Property(LatestSong.4.Title), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestSong.4.Album)]$INFO[Window.Property(LatestSong.4.Title), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3310).HasFocus(3312) + ControlGroup(3310).HasFocus() + Container(300).HasFocus(3)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3318">
-			<label fallback="empty">$INFO[Window.Property(LatestSong.3.Album)]$INFO[Window.Property(LatestSong.3.Title), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestSong.3.Album)]$INFO[Window.Property(LatestSong.3.Title), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3310).HasFocus(3313) + ControlGroup(3310).HasFocus() + Container(300).HasFocus(3)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3319">
-			<label fallback="empty">$INFO[Window.Property(LatestSong.2.Album)]$INFO[Window.Property(LatestSong.2.Title), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestSong.2.Album)]$INFO[Window.Property(LatestSong.2.Title), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3310).HasFocus(3314) + ControlGroup(3310).HasFocus() + Container(300).HasFocus(3)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3320">
-			<label fallback="40188">$INFO[Window.Property(LatestSong.1.Album)]$INFO[Window.Property(LatestSong.1.Title), - ]</label>
+			<label fallback="[UPPERCASE]$LOCALIZE[40118][/UPPERCASE]">[UPPERCASE]$INFO[Window.Property(LatestSong.1.Album)]$INFO[Window.Property(LatestSong.1.Title), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3310).HasFocus(3315) + ControlGroup(3310).HasFocus() + Container(300).HasFocus(3)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
@@ -1170,43 +1170,43 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3401">
-				<label>$LOCALIZE[40172]</label>
+				<label>[UPPERCASE]$LOCALIZE[40172][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,recentlyaddedmovies,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemovienew)</visible>
 			</control>
 			<control type="button" id="3402">
-				<label>20388</label>
+				<label>[UPPERCASE]$LOCALIZE[20388][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,moviestudios,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemoviestudios)</visible>
 			</control>
 			<control type="button" id="3403">
-				<label>135</label>
+				<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,moviegenres,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemoviegenres)</visible>
 			</control>
 			<control type="button" id="3404">
-				<label>344</label>
+				<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,movieactors,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemovieactors)</visible>
 			</control>
 			<control type="button" id="3405">
-				<label>345</label>
+				<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,movieyears,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemovieyears)</visible>
 			</control>
 			<control type="button" id="3406">
-				<label>744</label>
+				<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoFiles)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemoviefiles)</visible>
 			</control>
 			<control type="button" id="3407">
-				<label>10017</label>
+				<label>[UPPERCASE]$LOCALIZE[10017][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideosSettings)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidemoviesettings)</visible>
@@ -1246,27 +1246,27 @@
 			</control>
 		</control>
 		<control type="fadelabel" id="3416">
-			<label fallback="empty">$INFO[Window.Property(LatestMovie.5.Title)]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestMovie.5.Title)][/UPPERCASE]</label>
 			<visible>ControlGroup(3410).HasFocus(3411) + ControlGroup(3410).HasFocus() + Container(300).HasFocus(4)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3417">
-			<label fallback="empty">$INFO[Window.Property(LatestMovie.4.Title)]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestMovie.4.Title)][/UPPERCASE]</label>
 			<visible>ControlGroup(3410).HasFocus(3412) + ControlGroup(3410).HasFocus() + Container(300).HasFocus(4)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3418">
-			<label fallback="empty">$INFO[Window.Property(LatestMovie.3.Title)]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestMovie.3.Title)][/UPPERCASE]</label>
 			<visible>ControlGroup(3410).HasFocus(3413) + ControlGroup(3410).HasFocus() + Container(300).HasFocus(4)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3419">
-			<label fallback="empty">$INFO[Window.Property(LatestMovie.2.Title)]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestMovie.2.Title)][/UPPERCASE]</label>
 			<visible>ControlGroup(3410).HasFocus(3414) + ControlGroup(3410).HasFocus() + Container(300).HasFocus(4)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3420">
-			<label fallback="40188">$INFO[Window.Property(LatestMovie.1.Title)]</label>
+			<label fallback="[UPPERCASE]$LOCALIZE[40118][/UPPERCASE]">[UPPERCASE]$INFO[Window.Property(LatestMovie.1.Title)][/UPPERCASE]</label>
 			<visible>ControlGroup(3410).HasFocus(3415) + ControlGroup(3410).HasFocus() + Container(300).HasFocus(4)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
@@ -1284,37 +1284,37 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3501">
-				<label>$LOCALIZE[40173]</label>
+				<label>[UPPERCASE]$LOCALIZE[40173][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,recentlyaddedepisodes,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidetvnew)</visible>
 			</control>
 			<control type="button" id="3502">
-				<label>135</label>
+				<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,tvshowgenres,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidetvgenres)</visible>
 			</control>
 			<control type="button" id="3503">
-				<label>344</label>
+				<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,tvshowactors,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidetvactors)</visible>
 			</control>
 			<control type="button" id="3504">
-				<label>345</label>
+				<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoLibrary,tvshowyears,return)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidetvyears)</visible>
 			</control>
 			<control type="button" id="3505">
-				<label>744</label>
+				<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideoFiles)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidetvfiles)</visible>
 			</control>
 			<control type="button" id="3506">
-				<label>10017</label>
+				<label>[UPPERCASE]$LOCALIZE[10017][/UPPERCASE]</label>
 				<onclick>ActivateWindow(VideosSettings)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidetvsettings)</visible>
@@ -1354,27 +1354,27 @@
 			</control>
 		</control>
 		<control type="fadelabel" id="3516">
-			<label fallback="empty">$INFO[Window.Property(LatestEpisode.5.ShowTitle)]$INFO[Window.Property(LatestEpisode.5.EpisodeNo), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestEpisode.5.ShowTitle)]$INFO[Window.Property(LatestEpisode.5.EpisodeNo), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3510).HasFocus(3511) + ControlGroup(3510).HasFocus() + Container(300).HasFocus(5)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3517">
-			<label fallback="empty">$INFO[Window.Property(LatestEpisode.4.ShowTitle)]$INFO[Window.Property(LatestEpisode.4.EpisodeNo), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestEpisode.4.ShowTitle)]$INFO[Window.Property(LatestEpisode.4.EpisodeNo), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3510).HasFocus(3512) + ControlGroup(3510).HasFocus() + Container(300).HasFocus(5)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3518">
-			<label fallback="empty">$INFO[Window.Property(LatestEpisode.3.ShowTitle)]$INFO[Window.Property(LatestEpisode.3.EpisodeNo), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestEpisode.3.ShowTitle)]$INFO[Window.Property(LatestEpisode.3.EpisodeNo), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3510).HasFocus(3513) + ControlGroup(3510).HasFocus() + Container(300).HasFocus(5)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3519">
-			<label fallback="empty">$INFO[Window.Property(LatestEpisode.2.ShowTitle)]$INFO[Window.Property(LatestEpisode.2.EpisodeNo), - ]</label>
+			<label fallback="empty">[UPPERCASE]$INFO[Window.Property(LatestEpisode.2.ShowTitle)]$INFO[Window.Property(LatestEpisode.2.EpisodeNo), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3510).HasFocus(3514) + ControlGroup(3510).HasFocus() + Container(300).HasFocus(5)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
 		<control type="fadelabel" id="3520">
-			<label fallback="40188">$INFO[Window.Property(LatestEpisode.1.ShowTitle)]$INFO[Window.Property(LatestEpisode.1.EpisodeNo), - ]</label>
+			<label fallback="[UPPERCASE]$LOCALIZE[40118][/UPPERCASE]">[UPPERCASE]$INFO[Window.Property(LatestEpisode.1.ShowTitle)]$INFO[Window.Property(LatestEpisode.1.EpisodeNo), - ][/UPPERCASE]</label>
 			<visible>ControlGroup(3510).HasFocus(3515) + ControlGroup(3510).HasFocus() + Container(300).HasFocus(5)</visible>
 			<include>Home_MainMenuLabel</include>
 		</control>
@@ -1392,7 +1392,7 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3601">
-				<label>10012</label>
+				<label>[UPPERCASE]$LOCALIZE[10012][/UPPERCASE]</label>
 				<onclick>ActivateWindow(PicturesSettings)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidepicturesettings)</visible>
@@ -1414,30 +1414,30 @@
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3701">
 				<onclick>ActivateWindow(2600)</onclick>
-				<label>$LOCALIZE[33006] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+				<label>[UPPERCASE]$LOCALIZE[33006] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideday0)</visible>
 			</control>
 			<control type="button" id="3702">
 				<onclick>ActivateWindow(2600)</onclick>
-				<label>$LOCALIZE[33007] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+				<label>[UPPERCASE]$LOCALIZE[33007] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideday1)</visible>
 			</control>
 			<control type="button" id="3703">
 				<onclick>ActivateWindow(2600)</onclick>
-				<label>$INFO[Window(Weather).Property(Day2.Title)] $INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
+				<label>[UPPERCASE]$INFO[Window(Weather).Property(Day2.Title)] $INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideday2)</visible>
 			</control>
 			<control type="button" id="3704">
 				<onclick>ActivateWindow(2600)</onclick>
-				<label>$INFO[Window(Weather).Property(Day3.Title)] $INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
+				<label>[UPPERCASE]$INFO[Window(Weather).Property(Day3.Title)] $INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits][/UPPERCASE]</label>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideday3)</visible>
 			</control>
 			<control type="button" id="3705">
-				<label>10014</label>
+				<label>[UPPERCASE]$LOCALIZE[10014][/UPPERCASE]</label>
 				<onclick>ActivateWindow(WeatherSettings)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideweathersettings)</visible>
@@ -1458,48 +1458,48 @@
 			<onright>999</onright>
 			<scrolltime>0</scrolltime>
 			<control type="button" id="3801">
-				<label>13012</label>
+				<label>[UPPERCASE]$LOCALIZE[13012][/UPPERCASE]</label>
 				<onclick>Quit()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidequit)</visible>
 			</control>
 			<control type="button" id="3802">
-				<label>13005</label>
+				<label>[UPPERCASE]$LOCALIZE[13005][/UPPERCASE]</label>
 				<onclick>Shutdown()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.CanPowerdown</visible>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideshutdown)</visible>
 			</control>
 			<control type="button" id="3803">
-				<label>13013</label>
+				<label>[UPPERCASE]$LOCALIZE[13013][/UPPERCASE]</label>
 				<onclick>Reset()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.CanReboot</visible>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidereset)</visible>
 			</control>
 			<control type="button" id="3804">
-				<label>13011</label>
+				<label>[UPPERCASE]$LOCALIZE[13011][/UPPERCASE]</label>
 				<onclick>Suspend()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.CanSuspend</visible>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidesuspend)</visible>
 			</control>
 			<control type="button" id="3805">
-				<label>13010</label>
+				<label>[UPPERCASE]$LOCALIZE[13010][/UPPERCASE]</label>
 				<onclick>Hibernate()</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.CanHibernate</visible>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidehibernate)</visible>
 			</control>
 			<control type="button" id="3806">
-				<label>20126</label>
+				<label>[UPPERCASE]$LOCALIZE[20126][/UPPERCASE]</label>
 				<onclick>System.LogOff</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible>System.HasLoginScreen</visible>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hidelogoff)</visible>
 			</control>
 			<control type="button" id="3807">
-				<label>130</label>
+				<label>[UPPERCASE]$LOCALIZE[130][/UPPERCASE]</label>
 				<onclick>ActivateWindow(7)</onclick>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideinfo)</visible>

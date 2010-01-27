@@ -20,7 +20,7 @@
 			<posy>330</posy>
 			<control type="button" id="20">
 				<include>WindowMenuButton</include>
-				<label>$INFO[Container.ViewMode]</label>
+				<label>[UPPERCASE]$INFO[Container.ViewMode][/UPPERCASE]</label>
 				<onclick>Container.NextViewMode</onclick>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -40,7 +40,7 @@
 			<posy>300</posy>
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40183]</label>
+				<label>[UPPERCASE]$LOCALIZE[40183][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(20)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />

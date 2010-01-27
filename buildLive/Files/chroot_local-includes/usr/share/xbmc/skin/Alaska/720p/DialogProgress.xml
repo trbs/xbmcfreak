@@ -68,8 +68,20 @@
 				<height>51</height>
 				<align>right</align>
 				<font>Font_Date</font>
-				<textcolor>Date</textcolor>
+				<textcolor>clear</textcolor>
 				<label>-</label>
+				<scroll>true</scroll>
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<posx>310</posx>
+				<posy>35</posy>
+				<width>627</width>
+				<height>51</height>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
 				<scroll>true</scroll>
 			</control>
 		</control>
@@ -77,7 +89,7 @@
 			<description>Cancel</description>
 			<posx>-190</posx>
 			<posy>-390</posy>
-			<label>$LOCALIZE[222]</label>
+			<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
 			<texturefocus border="1">-</texturefocus>
 			<texturenofocus border="1">-</texturenofocus>
 			<onleft>10</onleft>

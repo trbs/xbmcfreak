@@ -54,7 +54,7 @@
 				<align>left</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>$INFO[MusicPlayer.Title,[B]$LOCALIZE[143] [/B]]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Title,[B]$LOCALIZE[143] [/B]][/UPPERCASE]</label>
 				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(-1).Title)">Conditional</animation>
 				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
@@ -68,7 +68,7 @@
 				<align>left</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>$INFO[MusicPlayer.offset(-1).Title,[B]$LOCALIZE[210]: [/B]]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.offset(-1).Title,[B]$LOCALIZE[210]: [/B]][/UPPERCASE]</label>
 				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
 			<control type="label">
@@ -81,7 +81,7 @@
 				<align>left</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>$INFO[MusicPlayer.offset(1).Title,[B]$LOCALIZE[209]: [/B]]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.offset(1).Title,[B]$LOCALIZE[209]: [/B]][/UPPERCASE]</label>
 			</control>
 			<control type="label">
 				<description>Rating Info</description>
@@ -93,7 +93,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>$INFO[MusicPlayer.Rating,[B]$LOCALIZE[563]: [/B]]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Rating,[B]$LOCALIZE[563]: [/B]][/UPPERCASE]</label>
 				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.Year)">Conditional</animation>
 				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.BitRate)">Conditional</animation>
 			</control>
@@ -107,7 +107,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>$INFO[MusicPlayer.Year,[B]$LOCALIZE[40124] [/B]]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Year,[B]$LOCALIZE[40124] [/B]][/UPPERCASE]</label>
 				<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.BitRate)">Conditional</animation>
 			</control>
 			<control type="label">
@@ -120,7 +120,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>$INFO[MusicPlayer.PlaylistPosition,[B]$LOCALIZE[554]: [/B]]$INFO[MusicPlayer.PlaylistLength,/]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.PlaylistPosition,[B]$LOCALIZE[554]: [/B]]$INFO[MusicPlayer.PlaylistLength,/][/UPPERCASE]</label>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>

@@ -1,4 +1,3 @@
-<!--Alaska-->
 <includes>
 	<include name="PosterView">
 		<itemlayout width="170" height="246">
@@ -111,6 +110,18 @@
 					<effect type="fade" start="80" end="100" time="600" />
 				</animation>
 			</control>
+			<control type="label">
+				<posx>346</posx>
+				<posy>80</posy>
+				<width>428</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_Date</font>
+				<textcolor>PosterTitle</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]][/UPPERCASE]</label>
+				<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+				<include>Animation_HiddenByInfo</include>
+			</control>
 			<control type="textbox">
 				<posx>346</posx>
 				<posy>380</posy>
@@ -119,7 +130,7 @@
 				<aligny>top</aligny>
 				<font>Font_PosterTitle</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>$INFO[ListItem.Label]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 				<visible>!Container.Content(seasons)</visible>
 				<include>Animation_HiddenByInfo</include>
 			</control>
@@ -131,7 +142,7 @@
 				<aligny>top</aligny>
 				<font>Font_PosterTitle</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>$INFO[ListItem.Label]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 				<visible>Container.Content(seasons)</visible>
 				<include>Animation_HiddenByInfo</include>
 			</control>
@@ -157,7 +168,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Genres) | Window.IsVisible(28)</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Genres) | Window.IsVisible(28) | !IsEmpty(Container.PluginName)</visible>
 			<include>PosterView</include>
 		</control>
 		<!-- Poster Fixed View -->
@@ -177,7 +188,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Genres) | Window.IsVisible(28)</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(Genres) | Window.IsVisible(28) | !IsEmpty(Container.PluginName)</visible>
 			<include>PosterView</include>
 		</control>
 	</include>
@@ -199,7 +210,7 @@
 			<include>Animation_HiddenByMusicInfo</include>
 			<onup>7000</onup>
 			<ondown>7777</ondown>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(studios) | Container.Content(albums) | Window.IsVisible(28)</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(studios) | Container.Content(albums) | Window.IsVisible(28) | !IsEmpty(Container.PluginName)</visible>
 			<itemlayout width="200" height="200">
 				<control type="image">
 					<posx>2</posx>
@@ -293,6 +304,18 @@
 					</animation>
 					<include>Animation_SquareInfoSlide</include>
 				</control>
+				<control type="label">
+					<posx>320</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>Font_Date</font>
+					<textcolor>PosterTitle</textcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]][/UPPERCASE]</label>
+					<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(music)</visible>
+				<include>Animation_HiddenByInfo</include>
+				</control>
 				<control type="textbox">
 					<posx>320</posx>
 					<posy>260</posy>
@@ -301,7 +324,7 @@
 					<aligny>top</aligny>
 					<font>Font_PosterTitle</font>
 					<textcolor>PosterTitle</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					<visible>!Container.Content(seasons)</visible>
 					<include>Animation_HiddenByInfo</include>
 				</control>
@@ -313,7 +336,7 @@
 					<aligny>top</aligny>
 					<font>Font_PosterTitle</font>
 					<textcolor>PosterTitle</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					<visible>Container.Content(seasons)</visible>
 					<include>Animation_HiddenByInfo</include>
 				</control>

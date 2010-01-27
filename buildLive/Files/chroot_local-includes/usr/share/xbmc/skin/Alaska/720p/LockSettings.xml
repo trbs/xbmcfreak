@@ -10,7 +10,7 @@
 				<posy>94</posy>
 				<width>636</width>
 				<height>504</height>
-				<texture border="100">common/common_panel_1.png</texture>
+				<texture border="100">common/common_panel.png</texture>
 				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
 			<control type="image">
@@ -36,7 +36,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>$LOCALIZE[20043]</label>
+				<label>[UPPERCASE]$LOCALIZE[20043][/UPPERCASE]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="grouplist" id="5">
@@ -82,7 +82,7 @@
 				<posy>536</posy>
 				<width>260</width>
 				<include>DialogLabelLargeNF</include>
-				<label>$LOCALIZE[186]</label>
+				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
 				<onleft>29</onleft>
 				<onright>29</onright>
 				<onup>5</onup>
@@ -95,7 +95,7 @@
 				<width>260</width>
 				<align>right</align>
 				<include>DialogLabelLargeNF</include>
-				<label>$LOCALIZE[222]</label>
+				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
 				<onleft>28</onleft>
 				<onright>28</onright>
 				<onup>5</onup>

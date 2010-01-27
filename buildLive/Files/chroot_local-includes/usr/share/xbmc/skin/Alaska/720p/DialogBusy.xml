@@ -10,7 +10,7 @@
 			<posy>40</posy>
 			<include>DialogID</include>
 			<align>right</align>
-			<label>$LOCALIZE[40116]</label>
+			<label>[UPPERCASE]$LOCALIZE[40116][/UPPERCASE]</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
 		<include>Object_DebugGrid</include>

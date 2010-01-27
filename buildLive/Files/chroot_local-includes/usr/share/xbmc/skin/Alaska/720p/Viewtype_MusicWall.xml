@@ -1,4 +1,3 @@
-<!--Alaska-->
 <includes>
 	<include name="Viewtype_MusicWall">
 		<control type="group">
@@ -120,7 +119,7 @@
 		</control>
 		<!-- Browser -->
 		<control type="panel" id="50">
-			<viewtype label="Wall">icon</viewtype>
+			<viewtype label="WALL">icon</viewtype>
 			<posx>193</posx>
 			<posy>225</posy>
 			<width>900</width>

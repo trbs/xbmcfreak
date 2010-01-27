@@ -50,7 +50,7 @@
 				<textcolor>Time</textcolor>
 				<align>right</align>
 				<font>Font_ProgressDialog</font>
-				<label>13376</label>
+				<label>[UPPERCASE]$LOCALIZE[13376][/UPPERCASE]</label>
 			</control>
 			<control type="label">
 				<posx>310</posx>
@@ -60,7 +60,7 @@
 				<textcolor>Date</textcolor>
 				<align>right</align>
 				<font>Font_Date</font>
-				<label>$LOCALIZE[40133]</label>
+				<label>[UPPERCASE]$LOCALIZE[40133][/UPPERCASE]</label>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>

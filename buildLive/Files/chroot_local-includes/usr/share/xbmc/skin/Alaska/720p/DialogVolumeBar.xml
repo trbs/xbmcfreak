@@ -71,7 +71,7 @@
 					<textcolor>Time</textcolor>
 					<align>right</align>
 					<font>Font_ProgressDialog</font>
-					<label>13376</label>
+					<label>[UPPERCASE]$LOCALIZE[13376][/UPPERCASE]</label>
 				</control>
 				<control type="label">
 					<posx>310</posx>
@@ -81,7 +81,7 @@
 					<textcolor>Date</textcolor>
 					<align>right</align>
 					<font>Font_Date</font>
-					<label>$INFO[player.volume]</label>
+					<label>[UPPERCASE]$INFO[player.volume][/UPPERCASE]</label>
 				</control>
 			</control>
 			<control type="group">
@@ -120,7 +120,7 @@
 					<textcolor>Time</textcolor>
 					<align>right</align>
 					<font>Font_ProgressDialog</font>
-					<label>13376</label>
+					<label>[UPPERCASE]$LOCALIZE[13376][/UPPERCASE]</label>
 				</control>
 				<control type="label">
 					<posx>310</posx>
@@ -130,14 +130,14 @@
 					<textcolor>Date</textcolor>
 					<align>right</align>
 					<font>Font_Date</font>
-					<label>$LOCALIZE[29802]</label>
+					<label>[UPPERCASE]$LOCALIZE[29802][/UPPERCASE]</label>
 				</control>
 			</control>
-			<include>Object_DebugGrid</include>
-			<control type="group">
-				<include>Debug</include>
-				<visible>Skin.HasSetting(debugmode)</visible>
-			</control>
+		</control>
+		<include>Object_DebugGrid</include>
+		<control type="group">
+			<include>Debug</include>
+			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
 	</controls>
 </window>

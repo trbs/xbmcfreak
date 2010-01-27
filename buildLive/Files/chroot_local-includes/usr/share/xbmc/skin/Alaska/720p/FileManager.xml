@@ -16,7 +16,7 @@
 				<height>592</height>
 				<posx>-20</posx>
 				<posy>0</posy>
-				<texture border="100">common/common_panel_2.png</texture>
+				<texture border="100">common/common_panel.png</texture>
 				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
 			<control type="fadelabel" id="101">
@@ -147,7 +147,7 @@
 				<height>592</height>
 				<posx>-20</posx>
 				<posy>0</posy>
-				<texture border="100">common/common_panel_2.png</texture>
+				<texture border="100">common/common_panel.png</texture>
 				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
 			<control type="fadelabel" id="101">
@@ -274,11 +274,11 @@
 			<posy>30</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
-				<label>7</label>
+				<label>[UPPERCASE]$LOCALIZE[7][/UPPERCASE]</label>
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label">
-				<label>$INFO[listitem.filenameandpath]</label>
+				<label>[UPPERCASE]$INFO[listitem.filenameandpath][/UPPERCASE]</label>
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>

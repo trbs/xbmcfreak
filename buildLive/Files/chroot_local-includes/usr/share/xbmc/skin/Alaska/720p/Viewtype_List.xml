@@ -1,4 +1,3 @@
-<!--Alaska-->
 <includes>
 	<include name="Viewtype_List">
 		<!-- Browser -->
@@ -11,7 +10,7 @@
 			<ondown>53</ondown>
 			<onleft>7000</onleft>
 			<onright>7000</onright>
-			<viewtype label="List">list</viewtype>
+			<viewtype label="LIST">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>4</focusposition>
 			<include>Animation_ZoomInZoomOut</include>
@@ -29,7 +28,7 @@
 					<font>Font_ListTrackNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.TrackNumber]</label>
+					<label>[UPPERCASE]$INFO[ListItem.TrackNumber][/UPPERCASE]</label>
 					<visible>Container.Content(songs) + !Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
@@ -41,7 +40,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.Title]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 					<visible>Container.Content(songs) + !Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
@@ -53,7 +52,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					<visible>IsEmpty(ListItem.Title) + !Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
@@ -65,7 +64,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</label>
+					<label>[UPPERCASE]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/UPPERCASE]</label>
 					<visible>Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
@@ -77,7 +76,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</label>
+					<label>[UPPERCASE]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/UPPERCASE]</label>
 					<visible>!IsEmpty(ListItem.Title) + !Window.IsVisible(1) + !Container.Content(songs)</visible>
 				</control>
 				<control type="label">
@@ -89,7 +88,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label]$INFO[ListItem.Label2, - ][/UPPERCASE]</label>
 					<animation effect="fade" end="60" condition="true">Conditional</animation>
 					<visible>Window.IsVisible(1)</visible>
 				</control>
@@ -103,7 +102,7 @@
 					<font>Font_ListDetailNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]$INFO[ListItem.Duration, - ]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]$INFO[ListItem.Duration, - ][/UPPERCASE]</label>
 					<visible>!IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
 				</control>
 			</itemlayout>
@@ -155,7 +154,7 @@
 					<font>Font_ListTitle</font>
 					<textcolor>ListTitleFO</textcolor>
 					<selectedcolor>ListSelectedFO</selectedcolor>
-					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</label>
+					<label>[UPPERCASE]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/UPPERCASE]</label>
 					<visible>!IsEmpty(ListItem.Title) + !Window.IsVisible(1)</visible>
 				</control>
 				<control type="label">
@@ -169,7 +168,7 @@
 					<font>Font_ListTitleBig</font>
 					<textcolor>ListTitleFO</textcolor>
 					<selectedcolor>ListSelectedFO</selectedcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
@@ -181,7 +180,7 @@
 					<font>Font_ListTitleBig</font>
 					<textcolor>ListTitleFO</textcolor>
 					<selectedcolor>ListSelectedFO</selectedcolor>
-					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label]$INFO[ListItem.Label2, - ][/UPPERCASE]</label>
 					<visible>Window.IsVisible(1)</visible>
 				</control>
 				<control type="label">
@@ -193,7 +192,7 @@
 					<font>Font_ListDetail</font>
 					<textcolor>ListTitleFO</textcolor>
 					<selectedcolor>ListSelectedFO</selectedcolor>
-					<label>$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]$INFO[ListItem.Duration, - ]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Artist]$INFO[ListItem.Album, - ]$INFO[ListItem.Duration, - ][/UPPERCASE]</label>
 					<visible>!IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
 				</control>
 				<control type="image">

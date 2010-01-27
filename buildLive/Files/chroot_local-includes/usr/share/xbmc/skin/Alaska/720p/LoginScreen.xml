@@ -28,7 +28,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 				</control>
 			</itemlayout>
 			<focusedlayout width="828" height="104">
@@ -63,7 +63,7 @@
 					<aligny>center</aligny>
 					<font>Font_ListTitleBig</font>
 					<textcolor>TextFocused</textcolor>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 				</control>
 				<control type="label">
 					<posx>120</posx>
@@ -73,7 +73,7 @@
 					<aligny>center</aligny>
 					<font>Font_ListTitle</font>
 					<textcolor>ListTitleFO</textcolor>
-					<label>$INFO[ListItem.Label2]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
 				</control>
 			</focusedlayout>
 		</control>
@@ -90,7 +90,7 @@
 			<orientation>horizontal</orientation>
 			<control type="button" id="104">
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[40176]</label>
+				<label>[UPPERCASE]$LOCALIZE[40176][/UPPERCASE]</label>
 				<onclick>XBMC.Quit()</onclick>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(104)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -103,7 +103,7 @@
 			<posy>300</posy>
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
-				<label>13012</label>
+				<label>[UPPERCASE]$LOCALIZE[13012][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(104)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />

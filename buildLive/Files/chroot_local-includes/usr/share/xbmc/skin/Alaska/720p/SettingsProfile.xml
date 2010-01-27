@@ -14,7 +14,7 @@
 					<posy>94</posy>
 					<width>896</width>
 					<height>504</height>
-					<texture border="100">common/common_panel_3.png</texture>
+					<texture border="100">common/common_panel.png</texture>
 					<colordiffuse>PanelDiffuse</colordiffuse>
 				</control>
 				<control type="image">
@@ -77,7 +77,7 @@
 					<radioheight>32</radioheight>
 					<textcolor>PanelListItemFocused</textcolor>
 					<font>Font_PanelLabel</font>
-					<label>$LOCALIZE[20096]</label>
+					<label>[UPPERCASE]$LOCALIZE[20096][/UPPERCASE]</label>
 					<visible>!Control.HasFocus(2)</visible>
 				</control>
 				<control type="label" id="4">
@@ -94,7 +94,7 @@
 					<radioheight>32</radioheight>
 					<textcolor>PanelListItem</textcolor>
 					<font>Font_PanelLabel</font>
-					<label>$LOCALIZE[20096]</label>
+					<label>[UPPERCASE]$LOCALIZE[20096][/UPPERCASE]</label>
 					<visible>Control.HasFocus(2)</visible>
 				</control>
 				<control type="list" id="2">
@@ -116,7 +116,7 @@
 							<font>Font_PanelItemLabel</font>
 							<textcolor>PanelListItem</textcolor>
 							<selectedcolor>ListSelectedNF</selectedcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout width="828" height="104">
@@ -152,7 +152,7 @@
 							<aligny>center</aligny>
 							<font>Font_ListTitleBig</font>
 							<textcolor>TextFocused</textcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 						</control>
 						<control type="label">
 							<posx>120</posx>
@@ -162,7 +162,7 @@
 							<aligny>center</aligny>
 							<font>Font_ListTitle</font>
 							<textcolor>ListTitleFO</textcolor>
-							<label>$INFO[ListItem.Label2]</label>
+							<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
 						</control>
 					</focusedlayout>
 				</control>

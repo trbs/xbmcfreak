@@ -101,6 +101,18 @@
 				<textcolor>Date</textcolor>
 				<label>-</label>
 				<scroll>true</scroll>
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<posx>310</posx>
+				<posy>35</posy>
+				<width>370</width>
+				<height>51</height>
+				<align>right</align>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<label>[UPPERCASE]$INFO[Control.GetLabel(402)][/UPPERCASE]</label>
+				<scroll>true</scroll>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>

@@ -40,7 +40,7 @@
 					<visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[ListItem.SubtitleLanguage]</label>
+					<label>[UPPERCASE]$INFO[ListItem.SubtitleLanguage][/UPPERCASE]</label>
 					<posx>36</posx>
 					<posy>-1</posy>
 					<width>56</width>
@@ -66,7 +66,7 @@
 					<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[ListItem.AudioLanguage]</label>
+					<label>[UPPERCASE]$INFO[ListItem.AudioLanguage][/UPPERCASE]</label>
 					<posx>30</posx>
 					<posy>-1</posy>
 					<width>56</width>
@@ -91,7 +91,7 @@
 					<visible>!IsEmpty(ListItem.Year)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[ListItem.Year]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 					<posx>8</posx>
 					<posy>-1</posy>
 					<width>56</width>
@@ -115,7 +115,7 @@
 					<visible>!IsEmpty(ListItem.Rating)</visible>
 				</control>
 				<control type="label" id="602">
-					<label>$INFO[ListItem.Rating]</label>
+					<label>[UPPERCASE]$INFO[ListItem.Rating][/UPPERCASE]</label>
 					<posx>29</posx>
 					<posy>-1</posy>
 					<width>56</width>
@@ -138,7 +138,7 @@
 					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[ListItem.VideoResolution]</label>
+					<label>[UPPERCASE]$INFO[ListItem.VideoResolution][/UPPERCASE]</label>
 					<posx>3</posx>
 					<posy>-1</posy>
 					<width>50</width>
@@ -148,9 +148,9 @@
 					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 				</control>
 				<control type="label">
-					<label fallback="?">$INFO[ListItem.VideoAspect]</label>
+					<label fallback="?">[UPPERCASE]$INFO[ListItem.VideoAspect][/UPPERCASE]</label>
 					<posx>120</posx>
-					<width>35</width>
+					<width>36</width>
 					<include>PosterMediaFlagsVars</include>
 					<font>Font_Flags_Small</font>
 					<textcolor>FlagText</textcolor>
@@ -215,7 +215,7 @@
 					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 				</control>
 				<control type="label">
-					<label>5.1</label>
+					<label>[UPPERCASE]5.1[/UPPERCASE]</label>
 					<posx>65</posx>
 					<width>33</width>
 					<include>PosterMediaFlagsVars</include>
@@ -224,7 +224,7 @@
 					<visible>!IsEmpty(ListItem.AudioChannels) + substring(ListItem.AudioChannels,6)</visible>
 				</control>
 				<control type="label">
-					<label>7.1</label>
+					<label>[UPPERCASE]7.1[/UPPERCASE]</label>
 					<posx>65</posx>
 					<width>33</width>
 					<include>PosterMediaFlagsVars</include>

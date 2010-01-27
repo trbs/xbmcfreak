@@ -58,7 +58,7 @@
 				<aligny>center</aligny>
 				<font>Font_InfoYear</font>
 				<textcolor>InfoYear</textcolor>
-				<label>$INFO[ListItem.Duration,, mins]</label>
+				<label>[UPPERCASE]$INFO[ListItem.Duration,, mins][/UPPERCASE]</label>
 				<visible>!substring(listitem.Duration,min)</visible>
 				<visible>!IsEmpty(listitem.Duration)</visible>
 			</control>
@@ -70,7 +70,7 @@
 				<aligny>center</aligny>
 				<font>Font_InfoDetails</font>
 				<textcolor>InfoYear</textcolor>
-				<label>[B]$LOCALIZE[2050][CR]$LOCALIZE[13205][/B]</label>
+				<label>[UPPERCASE][B]$LOCALIZE[2050][CR]$LOCALIZE[13205][/B][/UPPERCASE]</label>
 				<visible>IsEmpty(listitem.Duration)</visible>
 			</control>
 			<control type="label">
@@ -195,7 +195,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<!--LOC-->
-				<label>$LOCALIZE[40146]</label>
+				<label>[UPPERCASE]$LOCALIZE[40146][/UPPERCASE]</label>
 			</control>
 			<control type="label">
 				<posx>155</posx>
@@ -205,7 +205,7 @@
 				<aligny>center</aligny>
 				<font>Font_InfoDetails</font>
 				<textcolor>InfoPlot</textcolor>
-				<label fallback="161">$INFO[ListItem.Director]</label>
+				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Director][/UPPERCASE]</label>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -216,7 +216,7 @@
 				<font>Font_InfoDetails</font>
 				<textcolor>InfoDetails</textcolor>
 				<!--LOC-->
-				<label>$LOCALIZE[40147]</label>
+				<label>[UPPERCASE]$LOCALIZE[40147][/UPPERCASE]</label>
 			</control>
 			<control type="label">
 				<posx>155</posx>
@@ -226,7 +226,7 @@
 				<aligny>center</aligny>
 				<font>Font_InfoDetails</font>
 				<textcolor>InfoPlot</textcolor>
-				<label fallback="161">$INFO[ListItem.Writer]</label>
+				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Writer][/UPPERCASE]</label>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -237,7 +237,7 @@
 				<font>Font_InfoDetails</font>
 				<textcolor>InfoDetails</textcolor>
 				<!--LOC-->
-				<label>$LOCALIZE[40148]</label>
+				<label>[UPPERCASE]$LOCALIZE[40148][/UPPERCASE]</label>
 			</control>
 			<control type="textbox">
 				<posx>155</posx>
@@ -247,7 +247,7 @@
 				<align>left</align>
 				<font>Font_InfoDetails</font>
 				<textcolor>InfoPlot</textcolor>
-				<label fallback="161">$INFO[ListItem.CastAndRole]</label>
+				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.CastAndRole][/UPPERCASE]</label>
 			</control>
 			<control type="textbox">
 				<visible>!Control.IsVisible(50)</visible>
@@ -256,7 +256,7 @@
 				<height>218</height>
 				<font>Font_InfoPlot</font>
 				<textcolor>InfoPlot</textcolor>
-				<label fallback="161">$INFO[ListItem.Plot]</label>
+				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">$INFO[ListItem.Plot]</label>
 				<autoscroll time="4000" delay="12000" repeat="8000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
 			<control type="panel" id="50">
@@ -326,7 +326,7 @@
 			<!-- Cast/Review -->
 			<control type="button" id="5">
 				<description>Cast/Review</description>
-				<label>206</label>
+				<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(5)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -336,7 +336,7 @@
 			<!-- refresh -->
 			<control type="button" id="6">
 				<description>Refresh</description>
-				<label>184</label>
+				<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -346,7 +346,7 @@
 			<!-- Fanart -->
 			<control type="button" id="12">
 				<description>Get Fanart</description>
-				<label>$LOCALIZE[20445]</label>
+				<label>[UPPERCASE]$LOCALIZE[20445][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -356,7 +356,7 @@
 			<!-- Thumb -->
 			<control type="button" id="10">
 				<description>Thumb</description>
-				<label>$LOCALIZE[40112]</label>
+				<label>[UPPERCASE]$LOCALIZE[40112][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -366,7 +366,7 @@
 			<!-- Play Trailer -->
 			<control type="button" id="11">
 				<description>Play Trailer</description>
-				<label>20410</label>
+				<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
 				<include>WindowMenuButton</include>
 				<enable>!IsEmpty(ListItem.Trailer)</enable>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(11)">
@@ -389,7 +389,7 @@
 			<!-- Cast/Review -->
 			<control type="button" id="7040">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40113]</label>
+				<label>[UPPERCASE]$LOCALIZE[40113][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(5)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -398,7 +398,7 @@
 			<!-- refresh -->
 			<control type="button" id="7041">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40114]</label>
+				<label>[UPPERCASE]$LOCALIZE[40114][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -407,7 +407,7 @@
 			<!-- Fanart -->
 			<control type="button" id="7042">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40115]</label>
+				<label>[UPPERCASE]$LOCALIZE[40115][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -416,7 +416,7 @@
 			<!-- Thumb -->
 			<control type="button" id="7043">
 				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[40115]</label>
+				<label>[UPPERCASE]$LOCALIZE[40115][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -425,7 +425,7 @@
 			<!-- Play Trailer -->
 			<control type="button" id="7044">
 				<include>WindowMenuLabel</include>
-				<label>208</label>
+				<label>[UPPERCASE]$LOCALIZE[208][/UPPERCASE]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(11)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />

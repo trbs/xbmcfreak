@@ -187,5 +187,33 @@
 	<string id="40250">CURRENT SELECTED</string>
 	<string id="40251">CURRENT PLAYLIST</string>
 	<string id="40252">CREATE</string>
+	<string id="40253">HIDDEN</string>
+	<string id="40254">Reset Home Movie Artwork Folder</string>
+	<string id="40255">Reset Home Movie Artwork Image</string>
+	<string id="40256">Reset Home TV Artwork Folder</string>
+	<string id="40257">Reset Home TV Artwork Image</string>
+	<string id="40258">Reset Home Music Artwork Folder</string>
+	<string id="40259">Reset Home Music Artwork Image</string>
+	<string id="40260">Reset Home Videos Artwork Folder</string>
+	<string id="40261">Reset Home Videos Artwork Image</string>
+	<string id="40262">Reset Home Pictures Artwork Folder</string>
+	<string id="40263">Reset Home Pictures Artwork Image</string>
+	<string id="40264">Reset Home Weather Artwork Folder</string>
+	<string id="40265">Reset Home Weather Artwork Image</string>
+	<string id="40266">Reset Home Programs Artwork Folder</string>
+	<string id="40267">Reset Home Programs Artwork Image</string>
+	<string id="40268">Reset Home Games Artwork Folder</string>
+	<string id="40269">Reset Home Games Artwork Image</string>
+	<string id="40270">Reset Home Scripts Artwork Folder</string>
+	<string id="40271">Reset Home Scripts Artwork Image</string>
+	<string id="40272">Reset Home PlayDisc Artwork Folder</string>
+	<string id="40273">Reset Home PlayDisc Artwork Image</string>
+	<string id="40274">Reset Home Shutdown Artwork Folder</string>
+	<string id="40275">Reset Home Shutdown Artwork Image</string>
+	<string id="40276">Reset Home Settings Artwork Folder</string>
+	<string id="40277">Reset Home Settings Artwork Image</string>
+	<string id="40278">OPEN PLAYLIST</string>
+	<string id="40279">SAVE PLAYLIST</string>
+	<string id="40280">CLOSE PLAYLIST</string>
 	
 </strings>

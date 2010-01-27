@@ -45,7 +45,7 @@
 				<height>22</height>
 				<aligny>center</aligny>
 				<font>Font_NowPlaying</font>
-				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR]$INFO[VideoPlayer.Title, ][COLOR OSDNowPlaying]$INFO[VideoPlayer.Episode,    $LOCALIZE[20359] ][/COLOR]$INFO[VideoPlayer.TVShowTitle,    ][/B]</label>
+				<label>[UPPERCASE][B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR]$INFO[VideoPlayer.Title, ][COLOR OSDNowPlaying]$INFO[VideoPlayer.Episode,    $LOCALIZE[20359] ][/COLOR]$INFO[VideoPlayer.TVShowTitle,    ][/B][/UPPERCASE]</label>
 				<textcolor>OSDNowPlayingTitle</textcolor>
 				<scrollout>true</scrollout>
 				<pauseatend>1800</pauseatend>
@@ -60,7 +60,7 @@
 				<height>22</height>
 				<aligny>center</aligny>
 				<font>Font_ListDetail</font>
-				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350] [/COLOR]$LOCALIZE[20338] $LOCALIZE[20410][/B]</label>
+				<label>[UPPERCASE][B][COLOR OSDNowPlaying]$LOCALIZE[13350] [/COLOR]$LOCALIZE[20338] $LOCALIZE[20410][/B][/UPPERCASE]</label>
 				<textcolor>OSDNowPlayingTitle</textcolor>
 				<scrollout>true</scrollout>
 				<pauseatend>1800</pauseatend>

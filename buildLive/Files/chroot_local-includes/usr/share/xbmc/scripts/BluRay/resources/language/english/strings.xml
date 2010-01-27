@@ -1,0 +1,14 @@
+<strings>
+    <string id="50000">Use local or remote MakeMKV</string>
+    <string id="60001">Local</string>
+    <string id="60002">Remote</string>
+    <string id="50001">MakeMKV location</string>
+    <string id="50002">Autoplay main feature</string>
+    <string id="51000">Stream location</string>
+    <string id="51001">IP address</string>
+    <string id="51002">Port number</string>
+    <!-- Selection list -->
+    <string id="50003">Select your source</string>
+    <string id="100">Disc</string>
+    <string id="101">Browse</string>
+</strings>

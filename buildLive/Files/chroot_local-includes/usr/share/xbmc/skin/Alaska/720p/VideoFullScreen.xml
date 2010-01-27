@@ -4,10 +4,9 @@
 		<!-- codec infos -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>140</posy>
+			<posy>100</posy>
 			<width>1280</width>
 			<height>125</height>
-			<visible>Control.IsVisible(10)</visible>
 			<animation type="Visible">
 				<effect type="fade" time="400" start="0" end="100" />
 				<effect type="slide" time="400" start="0,-125" end="0,0" easing="out" tween="cubic" />
@@ -66,13 +65,14 @@
 		<!-- Buffering Dialog -->
 		<control type="label" id="24">
 			<description>buffering label</description>
-			<posx>210</posx>
-			<posy>520</posy>
-			<label>15107</label>
-			<width>291</width>
+			<posx>0</posx>
+			<posy>350</posy>
+			<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE]</label>
+			<width>1280</width>
 			<align>center</align>
-			<textcolor>ListTitleNF</textcolor>
-			<font>Font_Date</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<font>Font_Time</font>
 		</control>
 		<include>Object_DebugGrid</include>
 		<control type="group">

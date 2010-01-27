@@ -10,7 +10,7 @@
 				<posy>94</posy>
 				<width>836</width>
 				<height>504</height>
-				<texture border="100">common/common_panel_3.png</texture>
+				<texture border="100">common/common_panel.png</texture>
 				<colordiffuse>PanelDiffuse</colordiffuse>
 			</control>
 			<control type="image">
@@ -30,7 +30,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>PanelListLabel</textcolor>
-				<label>$LOCALIZE[13406]</label>
+				<label>[UPPERCASE]$LOCALIZE[13406][/UPPERCASE]</label>
 				<font>Font_PanelLabel</font>
 			</control>
 			<control type="list" id="5">
