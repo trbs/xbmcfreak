@@ -5,6 +5,7 @@ xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
 
 #configure torrent-transmission
 sed -i "s/USER=debian-transmission/USER=$xbmcUser/g" /etc/init.d/transmission-daemon
+chown -hR $xbmcUser:$xbmcUser /var/lib/transmission-daemon
 
 #configure sabnzbd
 sed -i "s/USER=xbmc/USER=$xbmcUser/g" /etc/default/sabnzbdplus
