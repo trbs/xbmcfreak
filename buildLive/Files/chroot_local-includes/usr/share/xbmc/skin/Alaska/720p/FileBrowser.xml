@@ -34,7 +34,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>Text</textcolor>
 					<selectedcolor>ListSelectedNF</selectedcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<scroll>false</scroll>
 				</control>
 			</itemlayout>
@@ -52,7 +52,7 @@
 					<scroll>true</scroll>
 					<font>Font_ListTitleBigger</font>
 					<textcolor>ListTitleFO</textcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<animation effect="slide" end="0,-12" condition="!IsEmpty(ListItem.Size)">Conditional</animation>
 				</control>
 				<control type="fadelabel">
@@ -68,7 +68,7 @@
 					<scroll>true</scroll>
 					<font>Font_EpisodeDetailNF</font>
 					<textcolor>ListTitleFO</textcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Size]</label>
 					<visible>!IsEmpty(ListItem.Size)</visible>
 				</control>
 			</focusedlayout>
@@ -104,7 +104,7 @@
 			<posy>330</posy>
 			<control type="button" id="413">
 				<description>Ok</description>
-				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+				<label>$LOCALIZE[186]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(413)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -113,7 +113,7 @@
 			</control>
 			<control type="button" id="414">
 				<description>Cancel</description>
-				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+				<label>$LOCALIZE[222]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(414)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -122,7 +122,7 @@
 			</control>
 			<control type="button" id="415">
 				<description>Create Folder</description>
-				<label>[UPPERCASE]$LOCALIZE[119][/UPPERCASE]</label>
+				<label>$LOCALIZE[119]</label>
 				<include>WindowMenuButton</include>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(415)">
 					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
@@ -144,7 +144,7 @@
 			<!-- ok -->
 			<control type="button" id="7040">
 				<include>WindowMenuLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[424][/UPPERCASE]</label>
+				<label>$LOCALIZE[424]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(413)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -153,7 +153,7 @@
 			<!-- cancel -->
 			<control type="button" id="7041">
 				<include>WindowMenuLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[424][/UPPERCASE]</label>
+				<label>$LOCALIZE[424]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(414)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -162,7 +162,7 @@
 			<!-- new folder -->
 			<control type="button" id="7042">
 				<include>WindowMenuLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[40252][/UPPERCASE]</label>
+				<label>$LOCALIZE[40252]</label>
 				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(415)">
 					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
 					<effect type="fade" start="100" end="75" time="200" />
@@ -179,7 +179,7 @@
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label">
-				<label>[UPPERCASE]$INFO[ListItem.path][/UPPERCASE]</label>
+				<label>$INFO[ListItem.path]</label>
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>

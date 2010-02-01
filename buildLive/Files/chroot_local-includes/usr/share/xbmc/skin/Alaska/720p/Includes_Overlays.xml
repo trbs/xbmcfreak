@@ -109,7 +109,7 @@
 				<effect type="zoom" center="164,258" start="60" end="100" time="600" tween="back" easing="out" />
 				<effect type="fade" start="80" end="100" time="600" />
 			</animation>
-			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Window.IsVisible(2003)</visible>
 		</control>
 		<control type="image">
 			<posx>4</posx>
@@ -123,7 +123,7 @@
 				<effect type="zoom" center="164,258" start="60" end="100" time="600" tween="back" easing="out" />
 				<effect type="fade" start="80" end="100" time="600" />
 			</animation>
-			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Window.IsVisible(2003)</visible>
 		</control>
 	</include>
 	<include name="PosterTVOverlaysFO">
@@ -247,7 +247,7 @@
 				<effect type="zoom" center="191,263" start="70" end="100" time="400" tween="back" easing="out" />
 				<effect type="fade" start="80" end="100" time="400" />
 			</animation>
-			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Window.IsVisible(2003)</visible>
 		</control>
 		<control type="image">
 			<posx>2</posx>
@@ -262,7 +262,7 @@
 				<effect type="zoom" center="191,263" start="70" end="100" time="400" tween="back" easing="out" />
 				<effect type="fade" start="80" end="100" time="400" />
 			</animation>
-			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Window.IsVisible(2003)</visible>
 		</control>
 	</include>
 	<include name="LandscapeTVOverlaysNF">
@@ -498,7 +498,7 @@
 				<effect type="zoom" center="150,150" start="70" end="100" time="600" tween="back" easing="out" />
 				<effect type="fade" start="80" end="100" time="600" />
 			</animation>
-			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Window.IsVisible(2003)</visible>
 		</control>
 		<control type="image">
 			<posx>6</posx>
@@ -513,7 +513,7 @@
 				<effect type="zoom" center="150,150" start="70" end="100" time="600" tween="back" easing="out" />
 				<effect type="fade" start="80" end="100" time="600" />
 			</animation>
-			<visible>!IsEmpty(ListItem.Trailer)</visible>
+			<visible>!IsEmpty(ListItem.Trailer) + !Window.IsVisible(2003)</visible>
 		</control>
 	</include>
 	<include name="SquareTVOverlaysFO">

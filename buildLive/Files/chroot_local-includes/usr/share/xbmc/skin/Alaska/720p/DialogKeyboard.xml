@@ -66,7 +66,7 @@
 					<posy>0</posy>
 					<width>200</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[20177][/UPPERCASE]</label>
+					<label>$LOCALIZE[20177]</label>
 					<onleft>57</onleft>
 					<onright>48</onright>
 					<onup>307</onup>
@@ -199,7 +199,7 @@
 					<posy>50</posy>
 					<width>200</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[20178][/UPPERCASE]</label>
+					<label>$LOCALIZE[20178]</label>
 					<onleft>74</onleft>
 					<onright>65</onright>
 					<onup>300</onup>
@@ -335,7 +335,7 @@
 					<posy>100</posy>
 					<width>200</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[20179][/UPPERCASE]</label>
+					<label>$LOCALIZE[20179]</label>
 					<onleft>84</onleft>
 					<onright>75</onright>
 					<onup>302</onup>
@@ -471,7 +471,7 @@
 					<posy>150</posy>
 					<width>200</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[20180][/UPPERCASE]</label>
+					<label>$LOCALIZE[20180]</label>
 					<onleft>8</onleft>
 					<onright>85</onright>
 					<onup>303</onup>
@@ -559,7 +559,7 @@
 					<posy>150</posy>
 					<width>200</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[20181][/UPPERCASE]</label>
+					<label>$LOCALIZE[20181]</label>
 					<onleft>90</onleft>
 					<onright>304</onright>
 					<onup>81</onup>
@@ -572,7 +572,7 @@
 					<posy>200</posy>
 					<width>200</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[1006][/UPPERCASE]</label>
+					<label>$LOCALIZE[1006]</label>
 					<onleft>306</onleft>
 					<onright>32</onright>
 					<onup>304</onup>
@@ -585,7 +585,7 @@
 					<posy>200</posy>
 					<width>300</width>
 					<height>50</height>
-					<label>[UPPERCASE]$LOCALIZE[20182][/UPPERCASE]</label>
+					<label>$LOCALIZE[20182]</label>
 					<include>KeyboardButtonsCaps</include>
 					<onleft>307</onleft>
 					<onright>305</onright>

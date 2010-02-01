@@ -92,14 +92,14 @@
 		<control type="group">
 			<animation effect="slide" end="400,0" time="400" easing="inout" tween="cubic" condition="[Window.IsVisible(104) + [Window.IsVisible(101) | Window.IsVisible(112) | Window.IsVisible(133)]] | [Window.IsVisible(113) + [Window.IsVisible(101) | Window.IsVisible(112) | Window.IsVisible(133)]] | [Window.IsVisible(112) + [Window.IsVisible(101) | Window.IsVisible(133)]] | [[Window.IsVisible(101) + Window.IsVisible(133)]]">Conditional</animation>
 			<posx>1252</posx>
-			<posy>30</posy>
+			<posy>26</posy>
 			<control type="group">
 				<visible>!Skin.HasSetting(ShowGlobalTemp)</visible>
 				<control type="label">
 					<width>300</width>
 					<font>Font_Time</font>
 					<textcolor>Time</textcolor>
-					<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR][/UPPERCASE]</label>
+					<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR]</label>
 					<align>right</align>
 					<visible>substring(system.time,AM,right)</visible>
 				</control>
@@ -107,7 +107,7 @@
 					<width>300</width>
 					<font>Font_Time</font>
 					<textcolor>Time</textcolor>
-					<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR][/UPPERCASE]</label>
+					<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR]</label>
 					<align>right</align>
 					<visible>substring(system.time,PM,right)</visible>
 				</control>
@@ -126,7 +126,7 @@
 					<width>300</width>
 					<font>Font_Time</font>
 					<textcolor>Time</textcolor>
-					<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR] $INFO[Weather.Temperature][/UPPERCASE]</label>
+					<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR] $INFO[Weather.Temperature]</label>
 					<align>right</align>
 					<visible>substring(system.time,AM,right)</visible>
 				</control>
@@ -134,7 +134,7 @@
 					<width>300</width>
 					<font>Font_Time</font>
 					<textcolor>Time</textcolor>
-					<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR] $INFO[Weather.Temperature][/UPPERCASE]</label>
+					<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR] $INFO[Weather.Temperature]</label>
 					<align>right</align>
 					<visible>substring(system.time,PM,right)</visible>
 				</control>
@@ -142,23 +142,24 @@
 					<width>300</width>
 					<font>Font_Time</font>
 					<textcolor>Time</textcolor>
-					<label>[UPPERCASE]$INFO[System.Time(hh:mm)] $INFO[Weather.Temperature][/UPPERCASE]</label>
+					<label>$INFO[System.Time(hh:mm)] $INFO[Weather.Temperature]</label>
 					<align>right</align>
 					<visible>![substring(system.time,PM,right) | substring(system.time,AM,right)]</visible>
 				</control>
 			</control>
 			<control type="label">
 				<posx>-2</posx>
-				<posy>40</posy>
+				<posy>44</posy>
 				<width>300</width>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>[UPPERCASE]$INFO[System.Date][/UPPERCASE]</label>
+				<label>$INFO[System.Date]</label>
 				<align>right</align>
 			</control>
 		</control>
 	</include>
 	<include name="Global_HeadingSectionVars">
+		<posy>-4</posy>
 		<width>960</width>
 		<font>Font_Time</font>
 		<textcolor>Time</textcolor>
@@ -188,20 +189,21 @@
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<description>Programs</description>
-				<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
+				<label>$LOCALIZE[0]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(1) + !Window.IsActive(134) + IsEmpty(Container.PluginName)</visible>
 			</control>
 			<control type="label">
 				<description>Scripts</description>
-				<label>[UPPERCASE]$LOCALIZE[247][/UPPERCASE]</label>
+				<label>$LOCALIZE[247]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(20) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Movies</description>
-				<label>[UPPERCASE][COLOR Clear]$LOCALIZE[342][/COLOR]$INFO[ListItem.SortLetter,: ][/UPPERCASE]</label>
+				<label>[COLOR Clear]$LOCALIZE[342][/COLOR]$INFO[ListItem.SortLetter,: ]</label>
 				<width>960</width>
+				<posy>-4</posy>
 				<font>Font_Time</font>
 				<textcolor>Time</textcolor>
 				<align>left</align>
@@ -210,113 +212,113 @@
 			</control>
 			<control type="label">
 				<description>Movies</description>
-				<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
+				<label>$LOCALIZE[342]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(25) + Container.Content(movies) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Name of Plugin</description>
-				<label>[UPPERCASE]$INFO[Container.PluginName][/UPPERCASE]</label>
+				<label>$INFO[Container.PluginName]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>!IsEmpty(Container.PluginName) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Plugins</description>
-				<label>[UPPERCASE]$LOCALIZE[40157][/UPPERCASE]</label>
+				<label>$LOCALIZE[40157]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>IsEmpty(Container.PluginName) + Container.Content(plugins) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Pictures</description>
-				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+				<label>$LOCALIZE[1]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[Window.IsActive(2007) | [Window.IsActive(2) + ![substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]]] + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Pictures</description>
-				<label>[UPPERCASE]$LOCALIZE[1]: $INFO[ListItem.Label][/UPPERCASE]</label>
+				<label>$LOCALIZE[1]: $INFO[ListItem.Label]</label>
 				<include>Global_HeadingSectionVars</include>
-				<visible>[Window.IsActive(2) + [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]] + !Window.IsActive(134)</visible>
+				<visible>[Window.IsActive(2) + [Control.IsVisible(59) | [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]]] + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Tv Shows</description>
-				<label>[UPPERCASE]$LOCALIZE[20343]$INFO[ListItem.SortLetter,: ][/UPPERCASE]</label>
+				<label>$LOCALIZE[20343]$INFO[ListItem.SortLetter,: ]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Container.Scrolling + Window.IsActive(25) + Container.Content(tvshows) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Tv Shows</description>
-				<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+				<label>$LOCALIZE[20343]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>!Container.Scrolling + Window.IsActive(25) + Container.Content(tvshows) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Tv Shows</description>
-				<label>[UPPERCASE]$LOCALIZE[20343]: $INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
+				<label>$LOCALIZE[20343]: $INFO[ListItem.TVShowTitle]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(25) + [Container.Content(seasons) | Container.Content(episodes)] + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[[Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(songs) + !Container.Content(albums)] + !Window.IsActive(134) + !Control.IsVisible(50) + IsEmpty(Container.PluginName) + !Container.Content(plugins)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2]: $INFO[ListItem.Label][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Label]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[[Window.IsActive(501) | Window.IsActive(502)] + !Container.Content(songs) + !Container.Content(albums)] + !Window.IsActive(134) + Control.IsVisible(50)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2]: $INFO[ListItem.Artist][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Artist]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[Window.IsActive(501) | Window.IsActive(502)] + Container.Content(albums) + !Window.IsActive(134) + !Control.IsVisible(50)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2]: $INFO[ListItem.Artist] - $INFO[ListItem.Album][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]: $INFO[ListItem.Artist] - $INFO[ListItem.Album]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(502) + Container.Content(albums) + !Window.IsActive(134) + Control.IsVisible(50)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[Window.IsActive(501) | Window.IsActive(502)] + Container.Content(songs) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2] $LOCALIZE[559][/UPPERCASE]</label>
+				<label>$LOCALIZE[2] $LOCALIZE[559]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(500) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Video</description>
-				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+				<label>$LOCALIZE[3]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[Window.IsActive(24)| [Window.IsActive(25) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies)]] + IsEmpty(Container.PluginName) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Login</description>
-				<label>[UPPERCASE]$LOCALIZE[20096][/UPPERCASE]</label>
+				<label>$LOCALIZE[20096]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(29)</visible>
 			</control>
 			<control type="label">
 				<description>Playlist</description>
-				<label>[UPPERCASE]$LOCALIZE[157] $LOCALIZE[559][/UPPERCASE]</label>
+				<label>$LOCALIZE[157] $LOCALIZE[559]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>Window.IsActive(28)</visible>
 			</control>
 			<control type="label">
-				<label>[UPPERCASE]$INFO[Container.NumItems,, ITEMS][/UPPERCASE]</label>
+				<label>$INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>!Container.Content(episodes) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
-				<label>[UPPERCASE]$INFO[ListItem.Season,SEASON ]$INFO[Container.NumItems, - , EPISODES][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Season,SEASON ]$INFO[Container.NumItems, - , EPISODES]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Container.Content(episodes) + !Window.IsActive(134)</visible>
 			</control>
@@ -408,84 +410,84 @@
 			<content>
 				<item id="1">
 					<description>Videos</description>
-					<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+					<label>$LOCALIZE[3]</label>
 					<icon>homeicons/videosicon.png</icon>
 					<onclick>ActivateWindow(VideoFiles)</onclick>
 					<visible>!Skin.HasSetting(novideos)</visible>
 				</item>
 				<item id="2">
 					<description>Music</description>
-					<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+					<label>$LOCALIZE[2]</label>
 					<icon>homeicons/musicicon.png</icon>
 					<onclick>ActivateWindow(Music)</onclick>
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="3">
 					<description>Movies</description>
-					<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
+					<label>$LOCALIZE[342]</label>
 					<icon>homeicons/moviesicon.png</icon>
 					<onclick>ActivateWindow(VideoLibrary,movietitles)</onclick>
 					<visible>!Skin.HasSetting(nomovies)</visible>
 				</item>
 				<item id="4">
 					<description>TV Shows</description>
-					<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+					<label>$LOCALIZE[20343]</label>
 					<icon>homeicons/tvshowsicon.png</icon>
 					<onclick>ActivateWindow(VideoLibrary,tvshowtitles)</onclick>
 					<visible>!Skin.HasSetting(notvshows)</visible>
 				</item>
 				<item id="5">
 					<description>Pictures</description>
-					<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+					<label>$LOCALIZE[1]</label>
 					<icon>homeicons/picturesicon.png</icon>
 					<onclick>ActivateWindow(Pictures)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 				</item>
 				<item id="6">
 					<description>Weather</description>
-					<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+					<label>$LOCALIZE[8]</label>
 					<icon>homeicons/weathericon.png</icon>
 					<onclick>ActivateWindow(2600)</onclick>
 					<visible>!Skin.HasSetting(noweather)</visible>
 				</item>
 				<item id="7">
 					<description>Games</description>
-					<label>[UPPERCASE]$LOCALIZE[15016][/UPPERCASE]</label>
+					<label>$LOCALIZE[15016]</label>
 					<icon>homeicons/gamesicon.png</icon>
 					<onclick>ActivateWindow(1,plugin://programs/Launcher/)</onclick>
 					<visible>!Skin.HasSetting(noprograms) + Skin.HasSetting(launcherforgames)</visible>
 				</item>
 				<item id="7">
 					<description>Programs</description>
-					<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
+					<label>$LOCALIZE[0]</label>
 					<icon>homeicons/programsicon.png</icon>
 					<onclick>ActivateWindow(Programs)</onclick>
 					<visible>!Skin.HasSetting(noprograms) + !Skin.HasSetting(launcherforgames)</visible>
 				</item>
 				<item id="8">
 					<description>Settings</description>
-					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+					<label>$LOCALIZE[5]</label>
 					<icon>homeicons/settingsicon.png</icon>
 					<onclick>ActivateWindow(4)</onclick>
 					<visible>!Skin.HasSetting(nosettings)</visible>
 				</item>
 				<item id="9">
 					<description>Scripts</description>
-					<label>[UPPERCASE]$LOCALIZE[247][/UPPERCASE]</label>
+					<label>$LOCALIZE[247]</label>
 					<icon>homeicons/scriptsicon.png</icon>
 					<onclick>ActivateWindow(20)</onclick>
 					<visible>!Skin.HasSetting(noscripts)</visible>
 				</item>
 				<item id="10">
 					<description>Shutdown</description>
-					<label>[UPPERCASE]$LOCALIZE[13005][/UPPERCASE]</label>
+					<label>$LOCALIZE[13005]</label>
 					<icon>homeicons/shutdownicon.png</icon>
 					<onclick>Shutdown()</onclick>
 					<visible>!Skin.HasSetting(noshutdown)</visible>
 				</item>
 				<item id="11">
 					<description>Play Disc</description>
-					<label>[UPPERCASE]$LOCALIZE[341][/UPPERCASE]</label>
+					<label>$LOCALIZE[341]</label>
 					<icon>homeicons/playdiscicon.png</icon>
 					<onclick>PlayDVD</onclick>
 					<visible>System.HasMediadvd</visible>
@@ -558,103 +560,103 @@
 			<content>
 				<item id="1">
 					<description>Videos</description>
-					<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/videos.jpg</icon>
+					<label>$LOCALIZE[3]</label>
+					<icon>backdrops/videos.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomVideosImage)]</thumb>
 					<onclick>ActivateWindow(VideoFiles)</onclick>
 					<visible>!Skin.HasSetting(novideos)</visible>
 				</item>
 				<item id="2">
 					<description>Music</description>
-					<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/music.jpg</icon>
+					<label>$LOCALIZE[2]</label>
+					<icon>backdrops/music.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMusicImage)]</thumb>
 					<onclick>ActivateWindow(Music)</onclick>
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="3">
 					<description>Movies</description>
-					<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/movies.jpg</icon>
+					<label>$LOCALIZE[342]</label>
+					<icon>backdrops/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMoviesImage)]</thumb>
 					<onclick>ActivateWindow(VideoLibrary,movietitles)</onclick>
 					<visible>!Skin.HasSetting(nomovies)</visible>
 				</item>
 				<item id="4">
 					<description>TV Shows</description>
-					<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/tvshows.jpg</icon>
+					<label>$LOCALIZE[20343]</label>
+					<icon>backdrops/tvshows.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomTVShowsImage)]</thumb>
 					<onclick>ActivateWindow(VideoLibrary,tvshowtitles)</onclick>
 					<visible>!Skin.HasSetting(notvshows)</visible>
 				</item>
 				<item id="5">
 					<description>Pictures</description>
-					<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/pictures.jpg</icon>
+					<label>$LOCALIZE[1]</label>
+					<icon>backdrops/pictures.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomPicturesImage)]</thumb>
 					<onclick>ActivateWindow(Pictures)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 				</item>
 				<item id="6">
 					<description>Weather</description>
-					<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/weather.jpg</icon>
+					<label>$LOCALIZE[8]</label>
+					<icon>backdrops/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomWeatherImage)]</thumb>
 					<onclick>ActivateWindow(2600)</onclick>
 					<visible>!Skin.HasSetting(noweather) + !Skin.HasSetting(homeweather)</visible>
 				</item>
 				<item id="6">
 					<description>Weather</description>
-					<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+					<label>$LOCALIZE[8]</label>
 					<icon>weather/$INFO[Window(Weather).Property(Current.FanartCode)]</icon>
 					<onclick>ActivateWindow(2600)</onclick>
 					<visible>!Skin.HasSetting(noweather) + Skin.HasSetting(homeweather)</visible>
 				</item>
 				<item id="7">
 					<description>Programs</description>
-					<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/programs.jpg</icon>
+					<label>$LOCALIZE[0]</label>
+					<icon>backdrops/programs.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomProgramsImage)]</thumb>
 					<onclick>ActivateWindow(Programs)</onclick>
 					<visible>!Skin.HasSetting(noprograms) + !Skin.HasSetting(launcherforgames)</visible>
 				</item>
 				<item id="7">
 					<description>Games</description>
-					<label>[UPPERCASE]$LOCALIZE[15016][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/games.jpg</icon>
+					<label>$LOCALIZE[15016]</label>
+					<icon>backdrops/games.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomGamesImage)]</thumb>
 					<onclick>ActivateWindow(1,plugin://programs/Launcher/)</onclick>
 					<visible>!Skin.HasSetting(noprograms) + Skin.HasSetting(launcherforgames)</visible>
 				</item>
 				<item id="8">
 					<description>Settings</description>
-					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/settings.jpg</icon>
+					<label>$LOCALIZE[5]</label>
+					<icon>backdrops/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsImage)]</thumb>
 					<onclick>ActivateWindow(4)</onclick>
 					<visible>!Skin.HasSetting(nosettings)</visible>
 				</item>
 				<item id="9">
 					<description>Scripts</description>
-					<label>[UPPERCASE]$LOCALIZE[247][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/scripts.jpg</icon>
+					<label>$LOCALIZE[247]</label>
+					<icon>backdrops/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsImage)]</thumb>
 					<onclick>ActivateWindow(20)</onclick>
 					<visible>!Skin.HasSetting(noscripts)</visible>
 				</item>
 				<item id="10">
 					<description>Shutdown</description>
-					<label>[UPPERCASE]$LOCALIZE[13005][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/shutdown.jpg</icon>
+					<label>$LOCALIZE[13005]</label>
+					<icon>backdrops/shutdown.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomShutdownImage)]</thumb>
 					<onclick>Shutdown()</onclick>
 					<visible>!Skin.HasSetting(noshutdown)</visible>
 				</item>
 				<item id="11">
 					<description>Play Disc</description>
-					<label>[UPPERCASE]$LOCALIZE[341][/UPPERCASE]</label>
-					<icon>special://skin/media/backdrops/playdisc.jpg</icon>
+					<label>$LOCALIZE[341]</label>
+					<icon>backdrops/playdisc.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomPlayDiscImage)]</thumb>
 					<onclick>PlayDVD</onclick>
 					<visible>System.HasMediadvd</visible>
@@ -665,7 +667,7 @@
 				<posy>330</posy>
 				<width>1920</width>
 				<align>center</align>
-				<label>[UPPERCASE]$INFO[Container(300).ListItem.Label][/UPPERCASE]</label>
+				<label>$INFO[Container(300).ListItem.Label]</label>
 				<font>Font_MainMenu</font>
 				<textcolor>MainMenu</textcolor>
 				<include>Animation_ZoomOutZoomIn</include>
@@ -697,75 +699,75 @@
 			</animation>
 			<control type="label">
 				<description>Settings</description>
-				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+				<label>$LOCALIZE[5]</label>
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label">
 				<description>Settings Menu</description>
-				<label>[UPPERCASE]$LOCALIZE[33061][/UPPERCASE]</label>
+				<label>$LOCALIZE[33061]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(4)</visible>
 			</control>
 			<control type="label">
 				<description>Video</description>
-				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+				<label>$LOCALIZE[3]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(17)</visible>
 			</control>
 			<control type="label">
 				<description>Picture</description>
-				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+				<label>$LOCALIZE[1]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(12)</visible>
 			</control>
 			<control type="label">
 				<description>Appearance</description>
-				<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
+				<label>$LOCALIZE[480]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(19)</visible>
 			</control>
 			<control type="label">
 				<description>Network</description>
-				<label>[UPPERCASE]$LOCALIZE[705][/UPPERCASE]</label>
+				<label>$LOCALIZE[705]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(18)</visible>
 			</control>
 			<control type="label">
 				<description>System</description>
-				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
+				<label>$LOCALIZE[13000]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(16)</visible>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(15)</visible>
 			</control>
 			<control type="label">
 				<description>Weather</description>
-				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+				<label>$LOCALIZE[8]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(14)</visible>
 			</control>
 			<control type="label">
 				<description>Profiles</description>
-				<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+				<label>$LOCALIZE[13200]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(34)</visible>
 			</control>
 			<control type="label">
 				<description>Alaska</description>
-				<label>[UPPERCASE]$LOCALIZE[40158][/UPPERCASE]</label>
+				<label>$LOCALIZE[40158]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(56)</visible>
@@ -985,7 +987,7 @@
 			</control>
 			<control type="group">
 				<posx>30</posx>
-				<posy>30</posy>
+				<posy>26</posy>
 				<control type="fadelabel">
 					<description>Title</description>
 					<width>940</width>
@@ -997,7 +999,7 @@
 					<scrollspeed>40</scrollspeed>
 					<scroll>true</scroll>
 					<include>Animation_SlideDownFadeOut</include>
-					<label>[UPPERCASE]$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Title, - ][/UPPERCASE]</label>
+					<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Title, - ]</label>
 					<visible>Player.HasVideo + VideoPlayer.Content(episodes)</visible>
 				</control>
 				<control type="fadelabel">
@@ -1011,7 +1013,7 @@
 					<scrollspeed>40</scrollspeed>
 					<scroll>true</scroll>
 					<include>Animation_SlideDownFadeOut</include>
-					<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+					<label>$INFO[VideoPlayer.Title]</label>
 					<visible>Player.HasVideo + !VideoPlayer.Content(episodes)</visible>
 				</control>
 				<control type="fadelabel">
@@ -1025,9 +1027,9 @@
 					<scrollspeed>40</scrollspeed>
 					<scroll>true</scroll>
 					<include>Animation_SlideDownFadeOut</include>
-					<label>[UPPERCASE]$INFO[MusicPlayer.Title,$LOCALIZE[554]: ][/UPPERCASE]</label>
-					<label>[UPPERCASE]$INFO[MusicPlayer.Artist,$LOCALIZE[557]: ][/UPPERCASE]</label>
-					<label>[UPPERCASE]$INFO[MusicPlayer.Album,$LOCALIZE[558]: ][/UPPERCASE]</label>
+					<label>$INFO[MusicPlayer.Title,$LOCALIZE[554]: ]</label>
+					<label>$INFO[MusicPlayer.Artist,$LOCALIZE[557]: ]</label>
+					<label>$INFO[MusicPlayer.Album,$LOCALIZE[558]: ]</label>
 					<visible>Player.HasAudio</visible>
 				</control>
 			</control>
@@ -1036,68 +1038,68 @@
 				<posy>30</posy>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
+					<label>$LOCALIZE[112]</label>
 					<visible>player.paused</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40159][/UPPERCASE]</label>
+					<label>$LOCALIZE[40159]</label>
 					<visible>player.forwarding2x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40160][/UPPERCASE]</label>
+					<label>$LOCALIZE[40160]</label>
 					<visible>player.forwarding4x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40161][/UPPERCASE]</label>
+					<label>$LOCALIZE[40161]</label>
 					<visible>player.forwarding8x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40162][/UPPERCASE]</label>
+					<label>$LOCALIZE[40162]</label>
 					<visible>player.forwarding16x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40163][/UPPERCASE]</label>
+					<label>$LOCALIZE[40163]</label>
 					<visible>player.forwarding32x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40164][/UPPERCASE]</label>
+					<label>$LOCALIZE[40164]</label>
 					<visible>player.rewinding2x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40165][/UPPERCASE]</label>
+					<label>$LOCALIZE[40165]</label>
 					<visible>player.rewinding4x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40166][/UPPERCASE]</label>
+					<label>$LOCALIZE[40166]</label>
 					<visible>player.rewinding8x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40167][/UPPERCASE]</label>
+					<label>$LOCALIZE[40167]</label>
 					<visible>player.rewinding16x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40168][/UPPERCASE]</label>
+					<label>$LOCALIZE[40168]</label>
 					<visible>player.rewinding32x</visible>
 				</control>
 				<control type="label" id="0">
 					<include>Global_HeadingDetailVars2</include>
-					<label>[UPPERCASE]$LOCALIZE[40244][/UPPERCASE]</label>
+					<label>$LOCALIZE[40244]</label>
 					<visible>Player.Playing</visible>
 				</control>
 			</control>
 			<control type="group">
 				<posx>1252</posx>
-				<posy>30</posy>
+				<posy>26</posy>
 				<include>Animation_SlideDownFadeOut</include>
 				<control type="group">
 					<visible>!Skin.HasSetting(ShowGlobalTemp)</visible>
@@ -1105,7 +1107,7 @@
 						<width>300</width>
 						<font>Font_Time</font>
 						<textcolor>Time</textcolor>
-						<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR][/UPPERCASE]</label>
+						<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR]</label>
 						<align>right</align>
 						<visible>substring(system.time,AM,right)</visible>
 					</control>
@@ -1113,7 +1115,7 @@
 						<width>300</width>
 						<font>Font_Time</font>
 						<textcolor>Time</textcolor>
-						<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR][/UPPERCASE]</label>
+						<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR]</label>
 						<align>right</align>
 						<visible>substring(system.time,PM,right)</visible>
 					</control>
@@ -1132,7 +1134,7 @@
 						<width>300</width>
 						<font>Font_Time</font>
 						<textcolor>Time</textcolor>
-						<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR] $INFO[Weather.Temperature][/UPPERCASE]</label>
+						<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40155][/COLOR] $INFO[Weather.Temperature]</label>
 						<align>right</align>
 						<visible>substring(system.time,AM,right)</visible>
 					</control>
@@ -1140,7 +1142,7 @@
 						<width>300</width>
 						<font>Font_Time</font>
 						<textcolor>Time</textcolor>
-						<label>[UPPERCASE]$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR] $INFO[Weather.Temperature][/UPPERCASE]</label>
+						<label>$INFO[System.Time(hh:mm)] [COLOR TimeAMPM]$LOCALIZE[40156][/COLOR] $INFO[Weather.Temperature]</label>
 						<align>right</align>
 						<visible>substring(system.time,PM,right)</visible>
 					</control>
@@ -1148,18 +1150,18 @@
 						<width>300</width>
 						<font>Font_Time</font>
 						<textcolor>Time</textcolor>
-						<label>[UPPERCASE]$INFO[System.Time(hh:mm)] $INFO[Weather.Temperature][/UPPERCASE]</label>
+						<label>$INFO[System.Time(hh:mm)] $INFO[Weather.Temperature]</label>
 						<align>right</align>
 						<visible>![substring(system.time,PM,right) | substring(system.time,AM,right)]</visible>
 					</control>
 				</control>
 				<control type="label">
 					<posx>-2</posx>
-					<posy>40</posy>
+					<posy>44</posy>
 					<width>600</width>
 					<font>Font_Date</font>
 					<textcolor>Date</textcolor>
-					<label>[UPPERCASE]$LOCALIZE[40243]: $INFO[Player.FinishTime][/UPPERCASE]</label>
+					<label>[B]$LOCALIZE[40243]:[/B] $INFO[Player.FinishTime]</label>
 					<align>right</align>
 				</control>
 			</control>
@@ -1176,7 +1178,8 @@
 				<height>18</height>
 				<aligny>center</aligny>
 				<font>Font_ListDetail</font>
-				<label>[UPPERCASE]$INFO[VideoPlayer.Time][/UPPERCASE]</label>
+				<textcolor>Date</textcolor>
+				<label>$INFO[VideoPlayer.Time]</label>
 				<textcolor>OSDPlayingDuration</textcolor>
 			</control>
 			<control type="progress" id="23">
@@ -1199,7 +1202,8 @@
 				<aligny>center</aligny>
 				<align>right</align>
 				<font>Font_ListDetail</font>
-				<label>[UPPERCASE]$INFO[VideoPlayer.Duration][/UPPERCASE]</label>
+				<textcolor>Date</textcolor>
+				<label>$INFO[VideoPlayer.Duration]</label>
 				<textcolor>OSDPlayingDuration</textcolor>
 			</control>
 		</control>

@@ -46,7 +46,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>[UPPERCASE]$INFO[VideoPlayer.Year,[B]$LOCALIZE[40124] [/B]][/UPPERCASE]</label>
+				<label>$INFO[VideoPlayer.Year,[B]$LOCALIZE[40124] [/B]]</label>
 				<animation effect="slide" end="0,22" condition="IsEmpty(VideoPlayer.Rating)">Conditional</animation>
 				<animation effect="slide" end="0,22" condition="IsEmpty(VideoPlayer.Director)">Conditional</animation>
 			</control>
@@ -60,7 +60,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>[UPPERCASE]$INFO[VideoPlayer.Rating,[B]$LOCALIZE[563]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[VideoPlayer.Rating,[B]$LOCALIZE[563]: [/B]]</label>
 				<animation effect="slide" end="0,22" condition="IsEmpty(VideoPlayer.Director)">Conditional</animation>
 			</control>
 			<control type="label">
@@ -73,7 +73,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>[UPPERCASE]$INFO[VideoPlayer.Director,[B]$LOCALIZE[40125] [/B]][/UPPERCASE]</label>
+				<label>$INFO[VideoPlayer.Director,[B]$LOCALIZE[40125] [/B]]</label>
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>

@@ -54,7 +54,7 @@
 				<width>50</width>
 				<height>50</height>
 				<texture>dialogs/slider.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ProgressFilterColor</colordiffuse>
 			</control>
 			<control type="label" id="10">
 				<description>Heading Label</description>

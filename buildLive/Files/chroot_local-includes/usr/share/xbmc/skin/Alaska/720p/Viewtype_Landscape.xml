@@ -1,16 +1,16 @@
 <includes>
 	<include name="Viewtype_Landscape">
 		<!-- Browser -->
-		<control type="wraplist" id="52">
+		<control type="fixedlist" id="52">
 			<posx>-110</posx>
 			<posy>50</posy>
 			<height>500</height>
 			<width>1400</width>
-			<onleft>300</onleft>
-			<onright>300</onright>
+			<onleft>52</onleft>
+			<onright>52</onright>
 			<onup>7000</onup>
 			<ondown>7777</ondown>
-			<viewtype label="LANDSCAPE">list</viewtype>
+			<viewtype label="40291">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>200</scrolltime>
@@ -45,7 +45,7 @@
 					<posy>131</posy>
 					<width>270</width>
 					<height>152</height>
-					<texture background="true" fallback="special://skin/media/backdrops/movies.jpg" diffuse="landscape/landscapematteNF.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture background="true" fallback="movies.jpg" diffuse="landscape/landscapematteNF.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<fadetime>200</fadetime>
 					<colordiffuse>IconDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -60,8 +60,8 @@
 					<texture>landscape/landscapeframeNF.png</texture>
 					<include>Animation_HiddenByInfo</include>
 				</control>
-				<include condition="Skin.HasSetting(tvoverlays)">LandscapeTVOverlaysNF</include>
-				<include condition="Skin.HasSetting(movieoverlays)">LandscapeMovieOverlaysNF</include>
+				<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">LandscapeTVOverlaysNF</include>
+				<include condition="Skin.HasSetting(movieoverlays) + Window.IsActive(25)">LandscapeMovieOverlaysNF</include>
 				<control type="image">
 					<posx>1</posx>
 					<posy>288</posy>
@@ -79,7 +79,7 @@
 					<posy>288</posy>
 					<width>270</width>
 					<height>152</height>
-					<texture background="true" flipy="true" fallback="special://skin/media/backdrops/movies.jpg" diffuse="landscape/landscapematteNF_reflect.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture background="true" flipy="true" fallback="movies.jpg" diffuse="landscape/landscapematteNF_reflect.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<fadetime>200</fadetime>
 					<colordiffuse>IconDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -108,7 +108,7 @@
 					<posy>76</posy>
 					<width>380</width>
 					<height>214</height>
-					<texture background="true" fallback="special://skin/media/backdrops/movies.jpg" diffuse="landscape/landscapematteFO.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture background="true" fallback="movies.jpg" diffuse="landscape/landscapematteFO.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_LandscapeInfoSlide</include>
@@ -130,8 +130,8 @@
 						<effect type="fade" start="80" end="100" time="400" />
 					</animation>
 				</control>
-				<include condition="Skin.HasSetting(movieoverlays)">LandscapeMovieOverlaysFO</include>
-				<include condition="Skin.HasSetting(tvoverlays)">LandscapeTVOverlaysFO</include>
+				<include condition="Skin.HasSetting(movieoverlays) + Window.IsActive(25)">LandscapeMovieOverlaysFO</include>
+				<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">LandscapeTVOverlaysFO</include>
 			</focusedlayout>
 		</control>
 		<!-- Browser label and flags -->
@@ -153,7 +153,7 @@
 				<scrollspeed>20</scrollspeed>
 				<font>Font_MainMenuLabel</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
@@ -164,7 +164,7 @@
 				<aligny>center</aligny>
 				<font>Font_MainMenuLabel</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>[UPPERCASE][B]$INFO[ListItem.Episode][/B][B]$INFO[ListItem.Title,. ][/B][/UPPERCASE]</label>
+				<label>[B]$INFO[ListItem.Episode][/B][B]$INFO[ListItem.Title,. ][/B]</label>
 				<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
@@ -175,7 +175,7 @@
 				<aligny>center</aligny>
 				<font>Font_MainMenuLabel</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<visible>IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
@@ -186,7 +186,7 @@
 				<aligny>center</aligny>
 				<font>Font_LandScapeTVShow</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Date,[B]$LOCALIZE[20416]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Date,[B]$LOCALIZE[20416]: [/B]]</label>
 				<visible>Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
@@ -197,7 +197,7 @@
 				<aligny>center</aligny>
 				<font>Font_LandScapeTVShow</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
 			<control type="label">
@@ -208,7 +208,7 @@
 				<aligny>center</aligny>
 				<font>Font_LandScapeTVShow</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Episode,[B]$LOCALIZE[20360]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Episode,[B]$LOCALIZE[20360]: [/B]]</label>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
 			<control type="label">
@@ -219,7 +219,7 @@
 				<aligny>center</aligny>
 				<font>Font_LandScapeTVShow</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Premiered,[B]$LOCALIZE[20360]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Premiered,[B]$LOCALIZE[20360]: [/B]]</label>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
 			<control type="textbox">
@@ -245,7 +245,7 @@
 				<scrollspeed>20</scrollspeed>
 				<font>Font_MainMenuLabel</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<visible>Container.Content(movies) | Container.Content(albums) | Container.Content(artists)</visible>
 			</control>
 			<control type="label">
@@ -256,7 +256,7 @@
 				<aligny>center</aligny>
 				<font>Font_ListDetail</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
 				<visible>Container.Content(movies) | Container.Content(albums)</visible>
 			</control>
 			<control type="textbox">

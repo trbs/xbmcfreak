@@ -68,7 +68,7 @@
 			<textcolor>MenuValue</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
-			<label>[UPPERCASE]$LOCALIZE[106][/UPPERCASE]</label>
+			<label>$LOCALIZE[106]</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<onleft>11</onleft>
@@ -88,7 +88,7 @@
 			<textcolor>MenuValue</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
 			<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
-			<label>[UPPERCASE]$LOCALIZE[107][/UPPERCASE]</label>
+			<label>$LOCALIZE[107]</label>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>

@@ -53,7 +53,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[21432][/UPPERCASE]</label>
+				<label>$LOCALIZE[21432]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="label">
@@ -65,7 +65,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[146][/UPPERCASE]</label>
+				<label>$LOCALIZE[146]</label>
 			</control>
 			<control type="spincontrolex" id="22">
 				<description>Set Playlist type</description>
@@ -90,7 +90,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[21433]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[21433]:</label>
 			</control>
 			<control type="edit" id="12">
 				<description>Name Button</description>
@@ -116,7 +116,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[21434]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[21434]:</label>
 			</control>
 			<control type="list" id="10">
 				<description>Rules List Control</description>
@@ -163,7 +163,7 @@
 					<width>345</width>
 					<align>right</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[15019][/UPPERCASE]</label>
+					<label>$LOCALIZE[15019]</label>
 					<onup>17</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -175,7 +175,7 @@
 					<width>345</width>
 					<align>right</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[1210][/UPPERCASE]</label>
+					<label>$LOCALIZE[1210]</label>
 					<onup>13</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -187,7 +187,7 @@
 					<width>345</width>
 					<align>right</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[21435][/UPPERCASE]</label>
+					<label>$LOCALIZE[21435]</label>
 					<onup>14</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -203,7 +203,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[559] $LOCALIZE[33063]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[559] $LOCALIZE[33063]:</label>
 			</control>
 			<control type="spincontrolex" id="16">
 				<posx>310</posx>
@@ -212,7 +212,7 @@
 				<height>34</height>
 				<aligny>center</aligny>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[21424][/UPPERCASE]</label>
+				<label>$LOCALIZE[21424]</label>
 				<onright>16</onright>
 				<onleft>16</onleft>
 				<onup>10</onup>
@@ -225,7 +225,7 @@
 				<height>34</height>
 				<aligny>center</aligny>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[21427][/UPPERCASE]</label>
+				<label>$LOCALIZE[21427]</label>
 				<onright>17</onright>
 				<onleft>17</onleft>
 				<onup>16</onup>
@@ -238,7 +238,7 @@
 				<height>34</height>
 				<aligny>center</aligny>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[21429][/UPPERCASE]</label>
+				<label>$LOCALIZE[21429]</label>
 				<onright>19</onright>
 				<onleft>19</onleft>
 				<onup>17</onup>
@@ -250,7 +250,7 @@
 				<width>690</width>
 				<align>center</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[21431][/UPPERCASE]</label>
+				<label>$LOCALIZE[21431]</label>
 				<altlabel>$LOCALIZE[21430]</altlabel>
 				<onright>18</onright>
 				<onleft>18</onleft>
@@ -269,7 +269,7 @@
 					<width>345</width>
 					<align>center</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+					<label>$LOCALIZE[186]</label>
 					<onup>18</onup>
 					<onleft>21</onleft>
 					<onright>21</onright>
@@ -282,7 +282,7 @@
 					<width>345</width>
 					<align>center</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+					<label>$LOCALIZE[222]</label>
 					<onup>18</onup>
 					<onleft>20</onleft>
 					<onright>20</onright>

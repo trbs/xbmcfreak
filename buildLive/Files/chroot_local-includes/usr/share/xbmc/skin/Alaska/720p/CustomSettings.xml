@@ -31,7 +31,7 @@
 				<width>16</width>
 				<height>32</height>
 				<texture>arrowhomeup.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<visible>!ControlGroup(9010).HasFocus</visible>
 			</control>
 			<control type="image">
@@ -49,7 +49,7 @@
 				<width>16</width>
 				<height>32</height>
 				<texture>arrowhomedown.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<visible>!ControlGroup(9010).HasFocus</visible>
 			</control>
 			<control type="image">
@@ -64,7 +64,7 @@
 			<control type="list" id="9000">
 				<description>List</description>
 				<posx>998</posx>
-				<posy>512</posy>
+				<posy>514</posy>
 				<height>46</height>
 				<itemgap>6</itemgap>
 				<scrolltime>0</scrolltime>
@@ -82,7 +82,7 @@
 						<font>Font_PanelLabel</font>
 						<textcolor>PanelListLabel</textcolor>
 						<align>right</align>
-						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="46" width="700">
@@ -93,6 +93,7 @@
 						<height>46</height>
 						<font>Font_PanelLabel</font>
 						<textcolor>PanelListItemFocused</textcolor>
+						<aligny>center</aligny>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>Control.HasFocus(9000)</visible>
@@ -104,6 +105,7 @@
 						<height>46</height>
 						<font>Font_PanelLabel</font>
 						<textcolor>PanelListItem</textcolor>
+						<aligny>center</aligny>
 						<align>right</align>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(9000)</visible>
@@ -112,33 +114,33 @@
 				<content>
 					<item id="1">
 						<description>General</description>
-						<label>[UPPERCASE]$LOCALIZE[128][/UPPERCASE]</label>
+						<label>$LOCALIZE[128]</label>
 						<onclick>SetFocus(9001)</onclick>
 					</item>
 					<item id="2">
 						<description>Home</description>
-						<label>[UPPERCASE]$LOCALIZE[10000][/UPPERCASE]</label>
+						<label>$LOCALIZE[10000]</label>
 						<onclick>SetFocus(9002)</onclick>
 					</item>
 					<item id="3">
 						<description>Views</description>
-						<label>[UPPERCASE]$LOCALIZE[40001][/UPPERCASE]</label>
+						<label>$LOCALIZE[40001]</label>
 						<onclick>SetFocus(9003)</onclick>
 					</item>
 					<item id="4">
 						<description>Artwork</description>
-						<label>[UPPERCASE]$LOCALIZE[40002][/UPPERCASE]</label>
+						<label>$LOCALIZE[40002]</label>
 						<onclick>SetFocus(9004)</onclick>
 					</item>
 					<item id="5">
 						<description>Sub Menus</description>
-						<label>[UPPERCASE]$LOCALIZE[40003][/UPPERCASE]</label>
+						<label>$LOCALIZE[40003]</label>
 						<onclick>SetFocus(9005)</onclick>
 						<visible>![Skin.HasSetting(home2) | Skin.HasSetting(home3)]</visible>
 					</item>
 					<item id="6">
 						<description>Debug</description>
-						<label>[UPPERCASE]$LOCALIZE[40004][/UPPERCASE]</label>
+						<label>$LOCALIZE[40004]</label>
 						<onclick>SetFocus(9006)</onclick>
 					</item>
 				</content>
@@ -160,50 +162,50 @@
 					<include>Animation_CommonFadeNoHide</include>
 					<control type="radiobutton" id="100">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40005][/UPPERCASE]</label>
+						<label>$LOCALIZE[40005]</label>
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
 					<control type="radiobutton" id="101">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40006][/UPPERCASE]</label>
+						<label>$LOCALIZE[40006]</label>
 						<onclick>Skin.ToggleSetting(ShowGlobalTemp)</onclick>
 						<selected>Skin.HasSetting(ShowGlobalTemp)</selected>
 					</control>
 					<control type="radiobutton" id="102">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40007][/UPPERCASE]</label>
+						<label>$LOCALIZE[40007]</label>
 						<onclick>Skin.ToggleSetting(largeRSS)</onclick>
 						<selected>Skin.HasSetting(largeRSS)</selected>
 					</control>
 					<control type="radiobutton" id="103">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40008][/UPPERCASE]</label>
+						<label>$LOCALIZE[40008]</label>
 						<onclick>Skin.ToggleSetting(RSS_only_on_home)</onclick>
 						<selected>Skin.HasSetting(RSS_only_on_home)</selected>
 					</control>
 					<control type="radiobutton" id="104">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40245][/UPPERCASE]</label>
+						<label>$LOCALIZE[40245]</label>
 						<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
 						<selected>Skin.HasSetting(LyricScript_Enable)</selected>
 					</control>
 					<control type="button" id="105">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40246][/UPPERCASE]</label>
+						<label>$LOCALIZE[40246]</label>
 						<label2>$INFO[Skin.String(LyricScript_Path)]</label2>
 						<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
 						<visible>Skin.HasSetting(LyricScript_Enable)</visible>
 					</control>
 					<control type="radiobutton" id="106">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40247][/UPPERCASE]</label>
+						<label>$LOCALIZE[40247]</label>
 						<onclick>Skin.ToggleSetting(SubtitleDownload_Enable,.py)</onclick>
 						<selected>Skin.HasSetting(SubtitleDownload_Enable)</selected>
 					</control>
 					<control type="button" id="107">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40248][/UPPERCASE]</label>
+						<label>$LOCALIZE[40248]</label>
 						<label2>$INFO[Skin.String(SubtitleScript_Path)]</label2>
 						<onclick>Skin.SetFile(SubtitleScript_Path,.py)</onclick>
 						<visible>Skin.HasSetting(SubtitleDownload_Enable)</visible>
@@ -222,14 +224,14 @@
 					<include>Animation_CommonFadeNoHide</include>
 					<control type="button" id="200">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40009][/UPPERCASE]</label>
+						<label>$LOCALIZE[40009]</label>
 						<onclick>Skin.SetBool(home2)</onclick>
 						<onclick>SetFocus(9000)</onclick>
 						<visible>![Skin.HasSetting(home2) | Skin.HasSetting(home3)]</visible>
 					</control>
 					<control type="button" id="201">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40010][/UPPERCASE]</label>
+						<label>$LOCALIZE[40010]</label>
 						<onclick>Skin.SetBool(home3)</onclick>
 						<onclick>Skin.Reset(home2)</onclick>
 						<onclick>SetFocus(9000)</onclick>
@@ -237,7 +239,7 @@
 					</control>
 					<control type="button" id="202">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40011][/UPPERCASE]</label>
+						<label>$LOCALIZE[40011]</label>
 						<onclick>Skin.Reset(home3)</onclick>
 						<onclick>SetFocus(9000)</onclick>
 						<visible>Skin.HasSetting(home3)</visible>
@@ -245,7 +247,7 @@
 					<control type="radiobutton" id="250">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40012][/UPPERCASE]</label>
+						<label>$LOCALIZE[40012]</label>
 						<onclick>Skin.ToggleSetting(launcherforgames)</onclick>
 						<selected>Skin.HasSetting(launcherforgames)</selected>
 						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
@@ -253,21 +255,21 @@
 					<control type="radiobutton" id="251">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40013][/UPPERCASE]</label>
+						<label>$LOCALIZE[40013]</label>
 						<onclick>Skin.ToggleSetting(noprograms)</onclick>
 						<selected>Skin.HasSetting(noprograms)</selected>
 					</control>
 					<control type="radiobutton" id="253">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40014][/UPPERCASE]</label>
+						<label>$LOCALIZE[40014]</label>
 						<onclick>Skin.ToggleSetting(novideos)</onclick>
 						<selected>Skin.HasSetting(novideos)</selected>
 					</control>
 					<control type="radiobutton" id="254">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40015][/UPPERCASE]</label>
+						<label>$LOCALIZE[40015]</label>
 						<onclick>Skin.ToggleSetting(nomusic)</onclick>
 						<selected>Skin.HasSetting(nomusic)</selected>
 						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
@@ -275,7 +277,7 @@
 					<control type="radiobutton" id="255">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40016][/UPPERCASE]</label>
+						<label>$LOCALIZE[40016]</label>
 						<onclick>Skin.ToggleSetting(nomovies)</onclick>
 						<selected>Skin.HasSetting(nomovies)</selected>
 						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
@@ -283,7 +285,7 @@
 					<control type="radiobutton" id="256">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40017][/UPPERCASE]</label>
+						<label>$LOCALIZE[40017]</label>
 						<onclick>Skin.ToggleSetting(notvshows)</onclick>
 						<selected>Skin.HasSetting(notvshows)</selected>
 						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
@@ -291,28 +293,28 @@
 					<control type="radiobutton" id="257">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40018][/UPPERCASE]</label>
+						<label>$LOCALIZE[40018]</label>
 						<onclick>Skin.ToggleSetting(nopictures)</onclick>
 						<selected>Skin.HasSetting(nopictures)</selected>
 					</control>
 					<control type="radiobutton" id="258">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40019][/UPPERCASE]</label>
+						<label>$LOCALIZE[40019]</label>
 						<onclick>Skin.ToggleSetting(noweather)</onclick>
 						<selected>Skin.HasSetting(noweather)</selected>
 					</control>
 					<control type="radiobutton" id="259">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40020][/UPPERCASE]</label>
+						<label>$LOCALIZE[40020]</label>
 						<onclick>Skin.ToggleSetting(nosettings)</onclick>
 						<selected>Skin.HasSetting(nosettings)</selected>
 					</control>
 					<control type="radiobutton" id="260">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40021][/UPPERCASE]</label>
+						<label>$LOCALIZE[40021]</label>
 						<onclick>Skin.ToggleSetting(noscripts)</onclick>
 						<selected>Skin.HasSetting(noscripts)</selected>
 						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
@@ -320,7 +322,7 @@
 					<control type="radiobutton" id="261">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40022][/UPPERCASE]</label>
+						<label>$LOCALIZE[40022]</label>
 						<onclick>Skin.ToggleSetting(noshutdown)</onclick>
 						<selected>Skin.HasSetting(noshutdown)</selected>
 						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
@@ -339,61 +341,61 @@
 					<include>Animation_CommonFadeNoHide</include>
 					<control type="radiobutton" id="310">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40023][/UPPERCASE]</label>
+						<label>$LOCALIZE[40023]</label>
 						<onclick>Skin.ToggleSetting(nosubtitlepanel)</onclick>
 						<selected>!Skin.HasSetting(nosubtitlepanel)</selected>
 					</control>
 					<control type="radiobutton" id="309">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40024][/UPPERCASE]</label>
+						<label>$LOCALIZE[40024]</label>
 						<onclick>Skin.ToggleSetting(nolanguagepanel)</onclick>
 						<selected>!Skin.HasSetting(nolanguagepanel)</selected>
 					</control>
 					<control type="radiobutton" id="308">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40025][/UPPERCASE]</label>
+						<label>$LOCALIZE[40025]</label>
 						<onclick>Skin.ToggleSetting(noyearpanel)</onclick>
 						<selected>!Skin.HasSetting(noyearpanel)</selected>
 					</control>
 					<control type="radiobutton" id="300">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40026][/UPPERCASE]</label>
+						<label>$LOCALIZE[40026]</label>
 						<onclick>Skin.ToggleSetting(noratingpanel)</onclick>
 						<selected>!Skin.HasSetting(noratingpanel)</selected>
 					</control>
 					<control type="radiobutton" id="301">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40027][/UPPERCASE]</label>
+						<label>$LOCALIZE[40027]</label>
 						<onclick>Skin.ToggleSetting(novideopanel)</onclick>
 						<selected>!Skin.HasSetting(novideopanel)</selected>
 					</control>
 					<control type="radiobutton" id="302">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40028][/UPPERCASE]</label>
+						<label>$LOCALIZE[40028]</label>
 						<onclick>Skin.ToggleSetting(noaudiopanel)</onclick>
 						<selected>!Skin.HasSetting(noaudiopanel)</selected>
 					</control>
 					<control type="radiobutton" id="303">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40029][/UPPERCASE]</label>
+						<label>$LOCALIZE[40029]</label>
 						<onclick>Skin.ToggleSetting(nostudiopanel)</onclick>
 						<selected>!Skin.HasSetting(nostudiopanel)</selected>
 					</control>
 					<control type="radiobutton" id="304">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40030][/UPPERCASE]</label>
+						<label>$LOCALIZE[40030]</label>
 						<onclick>Skin.ToggleSetting(NoStars)</onclick>
 						<selected>!Skin.HasSetting(NoStars)</selected>
 					</control>
 					<control type="radiobutton" id="305">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40031][/UPPERCASE]</label>
+						<label>$LOCALIZE[40031]</label>
 						<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
 						<selected>Skin.HasSetting(movieoverlays)</selected>
 					</control>
 					<control type="radiobutton" id="306">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40032][/UPPERCASE]</label>
+						<label>$LOCALIZE[40032]</label>
 						<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 						<selected>Skin.HasSetting(tvoverlays)</selected>
 					</control>
@@ -411,27 +413,27 @@
 					<include>Animation_CommonFadeNoHide</include>
 					<control type="radiobutton" id="400">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40033][/UPPERCASE]</label>
+						<label>$LOCALIZE[40033]</label>
 						<onclick>Skin.ToggleSetting(hidefanart)</onclick>
 						<selected>Skin.HasSetting(hidefanart)</selected>
 					</control>
 					<control type="radiobutton" id="401">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40034][/UPPERCASE]</label>
+						<label>$LOCALIZE[40034]</label>
 						<onclick>Skin.ToggleSetting(homeweather)</onclick>
 						<selected>Skin.HasSetting(homeweather)</selected>
 						<visible>![Skin.HasSetting(home2) | Skin.HasSetting(home3)]</visible>
 					</control>
 					<control type="radiobutton" id="402">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40035][/UPPERCASE]</label>
+						<label>$LOCALIZE[40035]</label>
 						<onclick>Skin.ToggleSetting(homeweather)</onclick>
 						<selected>Skin.HasSetting(homeweather)</selected>
 						<visible>Skin.HasSetting(home3)</visible>
 					</control>
 					<control type="togglebutton" id="403">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40036][/UPPERCASE]</label>
+						<label>$LOCALIZE[40036]</label>
 						<altlabel>$LOCALIZE[40254]</altlabel>
 						<onclick>Skin.SetPath(CustomMoviesFolder)</onclick>
 						<onclick>Skin.Reset(CustomMoviesImage)</onclick>
@@ -444,7 +446,7 @@
 					</control>
 					<control type="togglebutton" id="404">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40037][/UPPERCASE]</label>
+						<label>$LOCALIZE[40037]</label>
 						<altlabel>$LOCALIZE[40255]</altlabel>
 						<onclick>Skin.SetImage(CustomMoviesImage)</onclick>
 						<onclick>Skin.Reset(CustomMoviesFolder)</onclick>
@@ -457,7 +459,7 @@
 					</control>
 					<control type="togglebutton" id="405">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40038][/UPPERCASE]</label>
+						<label>$LOCALIZE[40038]</label>
 						<altlabel>$LOCALIZE[40256]</altlabel>
 						<onclick>Skin.SetPath(CustomTVShowsFolder)</onclick>
 						<onclick>Skin.Reset(CustomTVShowsImage)</onclick>
@@ -470,7 +472,7 @@
 					</control>
 					<control type="togglebutton" id="406">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40039][/UPPERCASE]</label>
+						<label>$LOCALIZE[40039]</label>
 						<altlabel>$LOCALIZE[40257]</altlabel>
 						<onclick>Skin.SetImage(CustomTVShowsImage)</onclick>
 						<onclick>Skin.Reset(CustomTVShowsFolder)</onclick>
@@ -483,7 +485,7 @@
 					</control>
 					<control type="togglebutton" id="407">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40040][/UPPERCASE]</label>
+						<label>$LOCALIZE[40040]</label>
 						<altlabel>$LOCALIZE[40258]</altlabel>
 						<onclick>Skin.SetPath(CustomMusicFolder)</onclick>
 						<onclick>Skin.Reset(CustomMusicImage)</onclick>
@@ -496,7 +498,7 @@
 					</control>
 					<control type="togglebutton" id="408">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40041][/UPPERCASE]</label>
+						<label>$LOCALIZE[40041]</label>
 						<altlabel>$LOCALIZE[40259]</altlabel>
 						<onclick>Skin.SetImage(CustomMusicImage)</onclick>
 						<onclick>Skin.Reset(CustomMusicFolder)</onclick>
@@ -509,7 +511,7 @@
 					</control>
 					<control type="togglebutton" id="409">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40042][/UPPERCASE]</label>
+						<label>$LOCALIZE[40042]</label>
 						<altlabel>$LOCALIZE[40260]</altlabel>
 						<onclick>Skin.SetPath(CustomVideosFolder)</onclick>
 						<onclick>Skin.Reset(CustomVideosImage)</onclick>
@@ -522,7 +524,7 @@
 					</control>
 					<control type="togglebutton" id="410">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40043][/UPPERCASE]</label>
+						<label>$LOCALIZE[40043]</label>
 						<altlabel>$LOCALIZE[40261]</altlabel>
 						<onclick>Skin.SetImage(CustomVideosImage)</onclick>
 						<onclick>Skin.Reset(CustomVideosFolder)</onclick>
@@ -535,7 +537,7 @@
 					</control>
 					<control type="togglebutton" id="411">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40044][/UPPERCASE]</label>
+						<label>$LOCALIZE[40044]</label>
 						<altlabel>$LOCALIZE[40262]</altlabel>
 						<onclick>Skin.SetPath(CustomPicturesFolder)</onclick>
 						<onclick>Skin.Reset(CustomPicturesImage)</onclick>
@@ -548,7 +550,7 @@
 					</control>
 					<control type="togglebutton" id="412">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40045][/UPPERCASE]</label>
+						<label>$LOCALIZE[40045]</label>
 						<altlabel>$LOCALIZE[40263]</altlabel>
 						<onclick>Skin.SetImage(CustomPicturesImage)</onclick>
 						<onclick>Skin.Reset(CustomPicturesFolder)</onclick>
@@ -561,7 +563,7 @@
 					</control>
 					<control type="togglebutton" id="413">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40046][/UPPERCASE]</label>
+						<label>$LOCALIZE[40046]</label>
 						<altlabel>$LOCALIZE[40264]</altlabel>
 						<onclick>Skin.SetPath(CustomWeatherFolder)</onclick>
 						<onclick>Skin.Reset(CustomWeatherImage)</onclick>
@@ -575,7 +577,7 @@
 					</control>
 					<control type="togglebutton" id="414">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40047][/UPPERCASE]</label>
+						<label>$LOCALIZE[40047]</label>
 						<altlabel>$LOCALIZE[40265]</altlabel>
 						<onclick>Skin.SetImage(CustomWeatherImage)</onclick>
 						<onclick>Skin.Reset(CustomWeatherFolder)</onclick>
@@ -589,7 +591,7 @@
 					</control>
 					<control type="togglebutton" id="415">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40048][/UPPERCASE]</label>
+						<label>$LOCALIZE[40048]</label>
 						<altlabel>$LOCALIZE[40266]</altlabel>
 						<onclick>Skin.SetPath(CustomProgramsFolder)</onclick>
 						<onclick>Skin.Reset(CustomProgramsImage)</onclick>
@@ -602,7 +604,7 @@
 					</control>
 					<control type="togglebutton" id="416">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40049][/UPPERCASE]</label>
+						<label>$LOCALIZE[40049]</label>
 						<altlabel>$LOCALIZE[40267]</altlabel>
 						<onclick>Skin.SetImage(CustomProgramsImage)</onclick>
 						<onclick>Skin.Reset(CustomProgramsFolder)</onclick>
@@ -615,7 +617,7 @@
 					</control>
 					<control type="togglebutton" id="417">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40050][/UPPERCASE]</label>
+						<label>$LOCALIZE[40050]</label>
 						<altlabel>$LOCALIZE[40268]</altlabel>
 						<onclick>Skin.SetPath(CustomGamesFolder)</onclick>
 						<onclick>Skin.Reset(CustomGamesImage)</onclick>
@@ -628,7 +630,7 @@
 					</control>
 					<control type="togglebutton" id="418">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40051][/UPPERCASE]</label>
+						<label>$LOCALIZE[40051]</label>
 						<altlabel>$LOCALIZE[40269]</altlabel>
 						<onclick>Skin.SetImage(CustomGamesImage)</onclick>
 						<onclick>Skin.Reset(CustomGamesFolder)</onclick>
@@ -641,7 +643,7 @@
 					</control>
 					<control type="togglebutton" id="419">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40052][/UPPERCASE]</label>
+						<label>$LOCALIZE[40052]</label>
 						<altlabel>$LOCALIZE[40270]</altlabel>
 						<onclick>Skin.SetPath(CustomScriptsFolder)</onclick>
 						<onclick>Skin.Reset(CustomScriptsImage)</onclick>
@@ -655,7 +657,7 @@
 					</control>
 					<control type="togglebutton" id="420">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40053][/UPPERCASE]</label>
+						<label>$LOCALIZE[40053]</label>
 						<altlabel>$LOCALIZE[40271]</altlabel>
 						<onclick>Skin.SetImage(CustomScriptsImage)</onclick>
 						<onclick>Skin.Reset(CustomScriptsFolder)</onclick>
@@ -669,7 +671,7 @@
 					</control>
 					<control type="togglebutton" id="421">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40054][/UPPERCASE]</label>
+						<label>$LOCALIZE[40054]</label>
 						<altlabel>$LOCALIZE[40272]</altlabel>
 						<onclick>Skin.SetPath(CustomPlayDiscFolder)</onclick>
 						<onclick>Skin.Reset(CustomPlayDiscImage)</onclick>
@@ -683,7 +685,7 @@
 					</control>
 					<control type="togglebutton" id="422">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40055][/UPPERCASE]</label>
+						<label>$LOCALIZE[40055]</label>
 						<altlabel>$LOCALIZE[40273]</altlabel>
 						<onclick>Skin.SetImage(CustomPlayDiscImage)</onclick>
 						<onclick>Skin.Reset(CustomPlayDiscFolder)</onclick>
@@ -697,7 +699,7 @@
 					</control>
 					<control type="togglebutton" id="423">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40056][/UPPERCASE]</label>
+						<label>$LOCALIZE[40056]</label>
 						<altlabel>$LOCALIZE[40274]</altlabel>
 						<onclick>Skin.SetPath(CustomShutdownFolder)</onclick>
 						<onclick>Skin.Reset(CustomShutdownImage)</onclick>
@@ -711,7 +713,7 @@
 					</control>
 					<control type="togglebutton" id="424">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40057][/UPPERCASE]</label>
+						<label>$LOCALIZE[40057]</label>
 						<altlabel>$LOCALIZE[40275]</altlabel>
 						<onclick>Skin.SetImage(CustomShutdownImage)</onclick>
 						<onclick>Skin.Reset(CustomShutdownFolder)</onclick>
@@ -725,7 +727,7 @@
 					</control>
 					<control type="togglebutton" id="425">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40058][/UPPERCASE]</label>
+						<label>$LOCALIZE[40058]</label>
 						<altlabel>$LOCALIZE[40276]</altlabel>
 						<onclick>Skin.SetPath(CustomSettingsFolder)</onclick>
 						<onclick>Skin.Reset(CustomSettingsImage)</onclick>
@@ -738,7 +740,7 @@
 					</control>
 					<control type="togglebutton" id="426">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40059][/UPPERCASE]</label>
+						<label>$LOCALIZE[40059]</label>
 						<altlabel>$LOCALIZE[40277]</altlabel>
 						<onclick>Skin.SetImage(CustomSettingsImage)</onclick>
 						<onclick>Skin.Reset(CustomSettingsFolder)</onclick>
@@ -765,14 +767,14 @@
 					<!-- Hide Latest Added -->
 					<control type="radiobutton" id="580">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40060][/UPPERCASE]</label>
+						<label>$LOCALIZE[40060]</label>
 						<onclick>Skin.ToggleSetting(hidelatestadded)</onclick>
 						<selected>Skin.HasSetting(hidelatestadded)</selected>
 					</control>
 					<!-- Hide Program Items -->
 					<control type="radiobutton" id="500">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40061][/UPPERCASE]</label>
+						<label>$LOCALIZE[40061]</label>
 						<include>ResetItems</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
@@ -782,7 +784,7 @@
 					<control type="radiobutton" id="501">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40062][/UPPERCASE]</label>
+						<label>$LOCALIZE[40062]</label>
 						<onclick>Skin.ToggleSetting(hidegames)</onclick>
 						<selected>Skin.HasSetting(hidegames)</selected>
 						<visible>Skin.HasSetting(programitems)</visible>
@@ -790,7 +792,7 @@
 					<control type="radiobutton" id="502">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40021][/UPPERCASE]</label>
+						<label>$LOCALIZE[40021]</label>
 						<onclick>Skin.ToggleSetting(hidescripts)</onclick>
 						<selected>Skin.HasSetting(hidescripts)</selected>
 						<visible>Skin.HasSetting(programitems)</visible>
@@ -798,7 +800,7 @@
 					<control type="radiobutton" id="503">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40063][/UPPERCASE]</label>
+						<label>$LOCALIZE[40063]</label>
 						<selected>Skin.HasSetting(hidefavs)</selected>
 						<onclick>Skin.ToggleSetting(hidefavs)</onclick>
 						<visible>Skin.HasSetting(programitems)</visible>
@@ -808,7 +810,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40064][/UPPERCASE]</label>
+						<label>$LOCALIZE[40064]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(videoitems)</onclick>
 						<selected>Skin.HasSetting(videoitems)</selected>
@@ -816,7 +818,7 @@
 					<control type="radiobutton" id="511">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40065][/UPPERCASE]</label>
+						<label>$LOCALIZE[40065]</label>
 						<onclick>Skin.ToggleSetting(hideplugins)</onclick>
 						<selected>Skin.HasSetting(hideplugins)</selected>
 						<visible>Skin.HasSetting(videoitems)</visible>
@@ -824,7 +826,7 @@
 					<control type="radiobutton" id="512">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40066][/UPPERCASE]</label>
+						<label>$LOCALIZE[40066]</label>
 						<onclick>Skin.ToggleSetting(hidemusicvids)</onclick>
 						<selected>Skin.HasSetting(hidemusicvids)</selected>
 						<visible>Skin.HasSetting(videoitems)</visible>
@@ -832,7 +834,7 @@
 					<control type="radiobutton" id="513">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40067][/UPPERCASE]</label>
+						<label>$LOCALIZE[40067]</label>
 						<onclick>Skin.ToggleSetting(hidevideoplaylists)</onclick>
 						<selected>Skin.HasSetting(hidevideoplaylists)</selected>
 						<visible>Skin.HasSetting(videoitems)</visible>
@@ -840,7 +842,7 @@
 					<control type="radiobutton" id="514">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40068][/UPPERCASE]</label>
+						<label>$LOCALIZE[40068]</label>
 						<onclick>Skin.ToggleSetting(hidevideosettings)</onclick>
 						<selected>Skin.HasSetting(hidevideosettings)</selected>
 						<visible>Skin.HasSetting(videoitems)</visible>
@@ -850,7 +852,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40069][/UPPERCASE]</label>
+						<label>$LOCALIZE[40069]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(musicitems)</onclick>
 						<selected>Skin.HasSetting(musicitems)</selected>
@@ -858,7 +860,7 @@
 					<control type="radiobutton" id="521">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40070][/UPPERCASE]</label>
+						<label>$LOCALIZE[40070]</label>
 						<onclick>Skin.ToggleSetting(hidemusicnew)</onclick>
 						<selected>Skin.HasSetting(hidemusicnew)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -866,7 +868,7 @@
 					<control type="radiobutton" id="522">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40071][/UPPERCASE]</label>
+						<label>$LOCALIZE[40071]</label>
 						<onclick>Skin.ToggleSetting(hidepartymode)</onclick>
 						<selected>Skin.HasSetting(hidepartymode)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -874,7 +876,7 @@
 					<control type="radiobutton" id="523">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40072][/UPPERCASE]</label>
+						<label>$LOCALIZE[40072]</label>
 						<onclick>Skin.ToggleSetting(hidemusicgenres)</onclick>
 						<selected>Skin.HasSetting(hidemusicgenres)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -882,7 +884,7 @@
 					<control type="radiobutton" id="524">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40073][/UPPERCASE]</label>
+						<label>$LOCALIZE[40073]</label>
 						<onclick>Skin.ToggleSetting(hidemusicartists)</onclick>
 						<selected>Skin.HasSetting(hidemusicartists)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -890,7 +892,7 @@
 					<control type="radiobutton" id="525">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40074][/UPPERCASE]</label>
+						<label>$LOCALIZE[40074]</label>
 						<onclick>Skin.ToggleSetting(hidemusicyears)</onclick>
 						<selected>Skin.HasSetting(hidemusicyears)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -898,7 +900,7 @@
 					<control type="radiobutton" id="526">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40075][/UPPERCASE]</label>
+						<label>$LOCALIZE[40075]</label>
 						<onclick>Skin.ToggleSetting(hidemusicplugins)</onclick>
 						<selected>Skin.HasSetting(hidemusicplugins)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -906,7 +908,7 @@
 					<control type="radiobutton" id="527">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40076][/UPPERCASE]</label>
+						<label>$LOCALIZE[40076]</label>
 						<onclick>Skin.ToggleSetting(hidemusicplaylists)</onclick>
 						<selected>Skin.HasSetting(hidemusicplaylists)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -914,7 +916,7 @@
 					<control type="radiobutton" id="528">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40077][/UPPERCASE]</label>
+						<label>$LOCALIZE[40077]</label>
 						<onclick>Skin.ToggleSetting(hidemusicsettings)</onclick>
 						<selected>Skin.HasSetting(hidemusicsettings)</selected>
 						<visible>Skin.HasSetting(musicitems)</visible>
@@ -924,7 +926,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40078][/UPPERCASE]</label>
+						<label>$LOCALIZE[40078]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(movieitems)</onclick>
 						<selected>Skin.HasSetting(movieitems)</selected>
@@ -932,7 +934,7 @@
 					<control type="radiobutton" id="531">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40079][/UPPERCASE]</label>
+						<label>$LOCALIZE[40079]</label>
 						<onclick>Skin.ToggleSetting(hidemovienew)</onclick>
 						<selected>Skin.HasSetting(hidemovienew)</selected>
 						<visible>Skin.HasSetting(movieitems)</visible>
@@ -940,7 +942,7 @@
 					<control type="radiobutton" id="532">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40080][/UPPERCASE]</label>
+						<label>$LOCALIZE[40080]</label>
 						<onclick>Skin.ToggleSetting(hidemoviestudios)</onclick>
 						<selected>Skin.HasSetting(hidemoviestudios)</selected>
 						<visible>Skin.HasSetting(movieitems)</visible>
@@ -948,7 +950,7 @@
 					<control type="radiobutton" id="533">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40081][/UPPERCASE]</label>
+						<label>$LOCALIZE[40081]</label>
 						<onclick>Skin.ToggleSetting(hidemoviegenres)</onclick>
 						<selected>Skin.HasSetting(hidemoviegenres)</selected>
 						<visible>Skin.HasSetting(movieitems)</visible>
@@ -956,7 +958,7 @@
 					<control type="radiobutton" id="534">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40082][/UPPERCASE]</label>
+						<label>$LOCALIZE[40082]</label>
 						<align>left</align>
 						<textoffsetx>20</textoffsetx>
 						<aligny>center</aligny>
@@ -967,7 +969,7 @@
 					<control type="radiobutton" id="535">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40083][/UPPERCASE]</label>
+						<label>$LOCALIZE[40083]</label>
 						<onclick>Skin.ToggleSetting(hidemovieyears)</onclick>
 						<selected>Skin.HasSetting(hidemovieyears)</selected>
 						<visible>Skin.HasSetting(movieitems)</visible>
@@ -975,7 +977,7 @@
 					<control type="radiobutton" id="536">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40084][/UPPERCASE]</label>
+						<label>$LOCALIZE[40084]</label>
 						<onclick>Skin.ToggleSetting(hidemoviefiles)</onclick>
 						<selected>Skin.HasSetting(hidemoviefiles)</selected>
 						<visible>Skin.HasSetting(movieitems)</visible>
@@ -983,7 +985,7 @@
 					<control type="radiobutton" id="537">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40085][/UPPERCASE]</label>
+						<label>$LOCALIZE[40085]</label>
 						<onclick>Skin.ToggleSetting(hidemoviesettings)</onclick>
 						<selected>Skin.HasSetting(hidemoviesettings)</selected>
 						<visible>Skin.HasSetting(movieitems)</visible>
@@ -993,7 +995,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40086][/UPPERCASE]</label>
+						<label>$LOCALIZE[40086]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(tvitems)</onclick>
 						<selected>Skin.HasSetting(tvitems)</selected>
@@ -1001,7 +1003,7 @@
 					<control type="radiobutton" id="541">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40087][/UPPERCASE]</label>
+						<label>$LOCALIZE[40087]</label>
 						<onclick>Skin.ToggleSetting(hidetvnew)</onclick>
 						<selected>Skin.HasSetting(hidetvnew)</selected>
 						<visible>Skin.HasSetting(tvitems)</visible>
@@ -1009,7 +1011,7 @@
 					<control type="radiobutton" id="542">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40088][/UPPERCASE]</label>
+						<label>$LOCALIZE[40088]</label>
 						<onclick>Skin.ToggleSetting(hidetvgenres)</onclick>
 						<selected>Skin.HasSetting(hidetvgenres)</selected>
 						<visible>Skin.HasSetting(tvitems)</visible>
@@ -1017,7 +1019,7 @@
 					<control type="radiobutton" id="543">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40089][/UPPERCASE]</label>
+						<label>$LOCALIZE[40089]</label>
 						<onclick>Skin.ToggleSetting(hidetvactors)</onclick>
 						<selected>Skin.HasSetting(hidetvactors)</selected>
 						<visible>Skin.HasSetting(tvitems)</visible>
@@ -1025,7 +1027,7 @@
 					<control type="radiobutton" id="544">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40090][/UPPERCASE]</label>
+						<label>$LOCALIZE[40090]</label>
 						<onclick>Skin.ToggleSetting(hidetvyears)</onclick>
 						<selected>Skin.HasSetting(hidetvyears)</selected>
 						<visible>Skin.HasSetting(tvitems)</visible>
@@ -1033,7 +1035,7 @@
 					<control type="radiobutton" id="545">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40091][/UPPERCASE]</label>
+						<label>$LOCALIZE[40091]</label>
 						<onclick>Skin.ToggleSetting(hidetvfiles)</onclick>
 						<selected>Skin.HasSetting(hidetvfiles)</selected>
 						<visible>Skin.HasSetting(tvitems)</visible>
@@ -1041,7 +1043,7 @@
 					<control type="radiobutton" id="546">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40092][/UPPERCASE]</label>
+						<label>$LOCALIZE[40092]</label>
 						<onclick>Skin.ToggleSetting(hidetvsettings)</onclick>
 						<selected>Skin.HasSetting(hidetvsettings)</selected>
 						<visible>Skin.HasSetting(tvitems)</visible>
@@ -1051,7 +1053,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40093][/UPPERCASE]</label>
+						<label>$LOCALIZE[40093]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(pictureitems)</onclick>
 						<selected>Skin.HasSetting(pictureitems)</selected>
@@ -1059,7 +1061,7 @@
 					<control type="radiobutton" id="551">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40094][/UPPERCASE]</label>
+						<label>$LOCALIZE[40094]</label>
 						<onclick>Skin.ToggleSetting(hidepicturesettings)</onclick>
 						<selected>Skin.HasSetting(hidepicturesettings)</selected>
 						<visible>Skin.HasSetting(pictureitems)</visible>
@@ -1069,7 +1071,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40095][/UPPERCASE]</label>
+						<label>$LOCALIZE[40095]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(weatheritems)</onclick>
 						<selected>Skin.HasSetting(weatheritems)</selected>
@@ -1077,7 +1079,7 @@
 					<control type="radiobutton" id="561">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40096][/UPPERCASE]</label>
+						<label>$LOCALIZE[40096]</label>
 						<onclick>Skin.ToggleSetting(hideday0)</onclick>
 						<selected>Skin.HasSetting(hideday0)</selected>
 						<visible>Skin.HasSetting(weatheritems)</visible>
@@ -1085,7 +1087,7 @@
 					<control type="radiobutton" id="562">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40097][/UPPERCASE]</label>
+						<label>$LOCALIZE[40097]</label>
 						<onclick>Skin.ToggleSetting(hideday1)</onclick>
 						<selected>Skin.HasSetting(hideday1)</selected>
 						<visible>Skin.HasSetting(weatheritems)</visible>
@@ -1093,7 +1095,7 @@
 					<control type="radiobutton" id="563">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40098][/UPPERCASE]</label>
+						<label>$LOCALIZE[40098]</label>
 						<onclick>Skin.ToggleSetting(hideday2)</onclick>
 						<selected>Skin.HasSetting(hideday2)</selected>
 						<visible>Skin.HasSetting(weatheritems)</visible>
@@ -1101,7 +1103,7 @@
 					<control type="radiobutton" id="564">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40099][/UPPERCASE]</label>
+						<label>$LOCALIZE[40099]</label>
 						<onclick>Skin.ToggleSetting(hideday3)</onclick>
 						<selected>Skin.HasSetting(hideday3)</selected>
 						<visible>Skin.HasSetting(weatheritems)</visible>
@@ -1109,7 +1111,7 @@
 					<control type="radiobutton" id="565">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40100][/UPPERCASE]</label>
+						<label>$LOCALIZE[40100]</label>
 						<onclick>Skin.ToggleSetting(hideweathersettings)</onclick>
 						<selected>Skin.HasSetting(hideweathersettings)</selected>
 						<visible>Skin.HasSetting(weatheritems)</visible>
@@ -1119,7 +1121,7 @@
 						<include>SettingsLabel</include>
 						<textureradiofocus>arrowdownfo.png</textureradiofocus>
 						<textureradionofocus>arrowdownnf.png</textureradionofocus>
-						<label>[UPPERCASE]$LOCALIZE[40101][/UPPERCASE]</label>
+						<label>$LOCALIZE[40101]</label>
 						<include>ResetItems</include>
 						<onclick>Skin.ToggleSetting(settingitems)</onclick>
 						<selected>Skin.HasSetting(settingitems)</selected>
@@ -1127,7 +1129,7 @@
 					<control type="radiobutton" id="571">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40102][/UPPERCASE]</label>
+						<label>$LOCALIZE[40102]</label>
 						<onclick>Skin.ToggleSetting(hidequit)</onclick>
 						<selected>Skin.HasSetting(hidequit)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1135,7 +1137,7 @@
 					<control type="radiobutton" id="572">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40022][/UPPERCASE]</label>
+						<label>$LOCALIZE[40022]</label>
 						<onclick>Skin.ToggleSetting(hideshutdown)</onclick>
 						<selected>Skin.HasSetting(hideshutdown)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1143,7 +1145,7 @@
 					<control type="radiobutton" id="573">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40103][/UPPERCASE]</label>
+						<label>$LOCALIZE[40103]</label>
 						<onclick>Skin.ToggleSetting(hidereset)</onclick>
 						<selected>Skin.HasSetting(hidereset)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1151,7 +1153,7 @@
 					<control type="radiobutton" id="574">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40104][/UPPERCASE]</label>
+						<label>$LOCALIZE[40104]</label>
 						<onclick>Skin.ToggleSetting(hidesuspend)</onclick>
 						<selected>Skin.HasSetting(hidesuspend)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1159,7 +1161,7 @@
 					<control type="radiobutton" id="575">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40105][/UPPERCASE]</label>
+						<label>$LOCALIZE[40105]</label>
 						<onclick>Skin.ToggleSetting(hidehibernate)</onclick>
 						<selected>Skin.HasSetting(hidehibernate)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1167,7 +1169,7 @@
 					<control type="radiobutton" id="576">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40106][/UPPERCASE]</label>
+						<label>$LOCALIZE[40106]</label>
 						<onclick>Skin.ToggleSetting(hidelogoff)</onclick>
 						<selected>Skin.HasSetting(hidelogoff)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1175,7 +1177,7 @@
 					<control type="radiobutton" id="577">
 						<include>SettingsLabel</include>
 						<textoffsetx>20</textoffsetx>
-						<label>[UPPERCASE]$LOCALIZE[40107][/UPPERCASE]</label>
+						<label>$LOCALIZE[40107]</label>
 						<onclick>Skin.ToggleSetting(hideinfo)</onclick>
 						<selected>Skin.HasSetting(hideinfo)</selected>
 						<visible>Skin.HasSetting(settingitems)</visible>
@@ -1194,13 +1196,13 @@
 					<include>Animation_CommonFadeNoHide</include>
 					<control type="radiobutton" id="600">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40108][/UPPERCASE]</label>
+						<label>$LOCALIZE[40108]</label>
 						<onclick>Skin.ToggleSetting(debugmode)</onclick>
 						<selected>Skin.HasSetting(debugmode)</selected>
 					</control>
 					<control type="radiobutton" id="601">
 						<include>SettingsLabel</include>
-						<label>[UPPERCASE]$LOCALIZE[40109][/UPPERCASE]</label>
+						<label>$LOCALIZE[40109]</label>
 						<onclick>Skin.ToggleSetting(debuggrid)</onclick>
 						<selected>Skin.HasSetting(debuggrid)</selected>
 					</control>
@@ -1212,7 +1214,7 @@
 					<height>20</height>
 					<width>20</width>
 					<texture>arrowdownnf.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<colordiffuse>ArrowFilterColor</colordiffuse>
 					<visible>Container(9000).Hasfocus(2) + !Container(9002).HasPrevious</visible>
 				</control>
 				<control type="image">
@@ -1222,7 +1224,7 @@
 					<height>20</height>
 					<width>20</width>
 					<texture>arrowdownfo.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<colordiffuse>ArrowFilterColor</colordiffuse>
 					<visible>Container(9000).Hasfocus(2) + [Control.HasFocus(200) | Control.HasFocus(201) | Control.HasFocus(202)]</visible>
 				</control>
 				<control type="image">
@@ -1234,7 +1236,7 @@
 					<height>20</height>
 					<width>20</width>
 					<texture>arrowupfo.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<colordiffuse>ArrowFilterColor</colordiffuse>
 					<visible>[Container(9000).Hasfocus(2) + Container(9002).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9003).HasPrevious] | [Container(9000).Hasfocus(4) + Container(9004).HasPrevious] | [Container(9000).Hasfocus(5) + Container(9005).HasPrevious]</visible>
 				</control>
 				<control type="image">
@@ -1246,7 +1248,7 @@
 					<height>20</height>
 					<width>20</width>
 					<texture>arrowdownfo.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<colordiffuse>ArrowFilterColor</colordiffuse>
 					<visible>[Container(9000).Hasfocus(2) + Container(9002).HasNext] | [Container(9000).Hasfocus(3) + Container(9003).HasNext] | [Container(9000).Hasfocus(4) + Container(9004).HasNext] | [Container(9000).Hasfocus(5) + Container(9005).HasNext]</visible>
 				</control>
 			</control>

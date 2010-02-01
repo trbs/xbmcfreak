@@ -49,7 +49,7 @@
 				<width>50</width>
 				<height>50</height>
 				<texture>dialogs/scanprogress.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ProgressFilterColor</colordiffuse>
 			</control>
 			<control type="label" id="1">
 				<description>Heading Label</description>
@@ -81,7 +81,7 @@
 				<align>right</align>
 				<font>Font_Date</font>
 				<textcolor>Date</textcolor>
-				<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
+				<label>$INFO[Control.GetLabel(2)]</label>
 				<scroll>true</scroll>
 			</control>
 		</control>
@@ -89,7 +89,7 @@
 			<description>Cancel</description>
 			<posx>-190</posx>
 			<posy>-390</posy>
-			<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+			<label>$LOCALIZE[222]</label>
 			<texturefocus border="1">-</texturefocus>
 			<texturenofocus border="1">-</texturenofocus>
 			<onleft>10</onleft>

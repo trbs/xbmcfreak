@@ -46,7 +46,7 @@
 			<visible>false</visible>
 		</control-->
 		<control type="button" id="3309">
-			<label>[UPPERCASE]$LOCALIZE[40169][/UPPERCASE]</label>
+			<label>$LOCALIZE[40169]</label>
 			<onclick>ActivateWindow(24,plugin://video/IPlayer/?tvradio=radio)</onclick>
 			<include>Home_MainMenuLabel</include>
 		</control>
@@ -87,7 +87,7 @@
 			<visible>false</visible>
 		</control-->
 		<control type="button" id="3507">
-			<label>[UPPERCASE]$LOCALIZE[40170][/UPPERCASE]</label>
+			<label>$LOCALIZE[40170]</label>
 			<onclick>ActivateWindow(24,plugin://video/IPlayer/?tvradio=tv)</onclick>
 			<include>Home_MainMenuLabel</include>
 		</control>

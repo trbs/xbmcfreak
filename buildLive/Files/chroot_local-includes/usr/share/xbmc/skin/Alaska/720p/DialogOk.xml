@@ -61,7 +61,7 @@
 			<font>Font_MenuValue</font>
 			<textcolor>MenuValue</textcolor>
 			<focusedcolor>MenuValueFO</focusedcolor>
-			<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+			<label>$LOCALIZE[186]</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<onleft>PreviousMenu</onleft>

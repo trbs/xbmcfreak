@@ -2,8 +2,8 @@
 <window id="2004">
 	<defaultcontrol>-</defaultcontrol>
 	<animation type="WindowOpen">
-		<effect type="slide" start="-600,0" end="0,0" time="600" tween="cubic" easing="out" />
-		<effect type="fade" start="0" end="100" time="600" />
+		<effect type="slide" start="-600,0" end="0,0" time="600" tween="cubic" easing="out" delay="400" />
+		<effect type="fade" start="0" end="100" time="600" delay="400" />
 	</animation>
 	<animation type="WindowClose">
 		<effect type="slide" start="0,0" end="-200,0" time="600" tween="cubic" easing="out" />
@@ -45,7 +45,7 @@
 				<height>22</height>
 				<aligny>center</aligny>
 				<font>Font_NowPlaying</font>
-				<label>[UPPERCASE][B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR]$INFO[VideoPlayer.Title, ][COLOR OSDNowPlaying]$INFO[VideoPlayer.Episode,    $LOCALIZE[20359] ][/COLOR]$INFO[VideoPlayer.TVShowTitle,    ][/B][/UPPERCASE]</label>
+				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR]$INFO[VideoPlayer.Title, ][COLOR OSDNowPlaying]$INFO[VideoPlayer.Episode,    $LOCALIZE[20359] ][/COLOR]$INFO[VideoPlayer.TVShowTitle,    ][/B]</label>
 				<textcolor>OSDNowPlayingTitle</textcolor>
 				<scrollout>true</scrollout>
 				<pauseatend>1800</pauseatend>
@@ -60,7 +60,7 @@
 				<height>22</height>
 				<aligny>center</aligny>
 				<font>Font_ListDetail</font>
-				<label>[UPPERCASE][B][COLOR OSDNowPlaying]$LOCALIZE[13350] [/COLOR]$LOCALIZE[20338] $LOCALIZE[20410][/B][/UPPERCASE]</label>
+				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350] [/COLOR]$LOCALIZE[20338] $LOCALIZE[20410][/B]</label>
 				<textcolor>OSDNowPlayingTitle</textcolor>
 				<scrollout>true</scrollout>
 				<pauseatend>1800</pauseatend>

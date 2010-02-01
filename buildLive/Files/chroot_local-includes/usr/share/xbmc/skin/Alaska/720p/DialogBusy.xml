@@ -6,13 +6,6 @@
 		<posy>480</posy>
 	</coordinates>
 	<controls>
-		<control type="label">
-			<posy>40</posy>
-			<include>DialogID</include>
-			<align>right</align>
-			<label>[UPPERCASE]$LOCALIZE[40116][/UPPERCASE]</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
 		<include>Object_DebugGrid</include>
 		<control type="group">
 			<include>Debug</include>

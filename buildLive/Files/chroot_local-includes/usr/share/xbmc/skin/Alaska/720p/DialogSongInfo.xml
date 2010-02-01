@@ -42,7 +42,7 @@
 				<width>600</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[658][/UPPERCASE]</label>
+				<label>$LOCALIZE[658]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="label" id="20">
@@ -51,7 +51,7 @@
 				<posy>218</posy>
 				<width>460</width>
 				<align>left</align>
-				<label>[UPPERCASE]$LOCALIZE[179]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[179]:</label>
 				<include>DialogLabelHeading</include>
 			</control>
 			<control type="label">
@@ -60,7 +60,7 @@
 				<posy>218</posy>
 				<width>460</width>
 				<align>left</align>
-				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+				<label fallback="161">$INFO[ListItem.Title]</label>
 				<include>DialogLabelNF</include>
 			</control>
 			<control type="label">
@@ -70,7 +70,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelHeading</include>
-				<label>[UPPERCASE]$LOCALIZE[558]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[558]:</label>
 			</control>
 			<control type="label">
 				<description>Album</description>
@@ -79,7 +79,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelNF</include>
-				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
+				<label fallback="161">$INFO[ListItem.Album]</label>
 			</control>
 			<control type="label">
 				<description>Artist</description>
@@ -88,7 +88,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelHeading</include>
-				<label>[UPPERCASE]$LOCALIZE[557]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[557]:</label>
 			</control>
 			<control type="label">
 				<description>Artist</description>
@@ -97,7 +97,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelNF</include>
-				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+				<label fallback="161">$INFO[ListItem.Artist]</label>
 			</control>
 			<control type="label">
 				<description>Genre</description>
@@ -106,7 +106,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelHeading</include>
-				<label>[UPPERCASE]$LOCALIZE[515]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[515]:</label>
 			</control>
 			<control type="label">
 				<description>Genre</description>
@@ -115,7 +115,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelNF</include>
-				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				<label fallback="161">$INFO[ListItem.Genre]</label>
 			</control>
 			<control type="label">
 				<description>Year</description>
@@ -124,7 +124,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelHeading</include>
-				<label>[UPPERCASE]$LOCALIZE[562]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[562]:</label>
 			</control>
 			<control type="label">
 				<description>Year</description>
@@ -133,7 +133,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelNF</include>
-				<label fallback="[UPPERCASE]$LOCALIZE[161][/UPPERCASE]">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+				<label fallback="161">$INFO[ListItem.Year]</label>
 			</control>
 			<control type="label">
 				<description>Star Rating</description>
@@ -142,7 +142,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabelHeading</include>
-				<label>[UPPERCASE]$LOCALIZE[563]:[/UPPERCASE]</label>
+				<label>$LOCALIZE[563]:</label>
 			</control>
 			<control type="image">
 				<description>Star Rating</description>
@@ -165,17 +165,17 @@
 				<orientation>vertical</orientation>
 				<control type="button" id="10">
 					<description>Yes</description>
-					<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+					<label>$LOCALIZE[186]</label>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="button" id="11">
 					<description>No</description>
-					<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+					<label>$LOCALIZE[222]</label>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="button" id="13">
 					<description>Get Thumb</description>
-					<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>
+					<label>$LOCALIZE[13405]</label>
 					<include>DialogLabelNF</include>
 				</control>
 			</control>
@@ -186,7 +186,7 @@
 				<width>490</width>
 				<height>22</height>
 				<include>DialogLabelNF</include>
-				<label>[UPPERCASE]$LOCALIZE[40200][/UPPERCASE]</label>
+				<label>$LOCALIZE[40200]</label>
 				<visible>![Control.HasFocus(14) | Control.HasFocus(15)]</visible>
 			</control>
 			<control type="label">
@@ -196,7 +196,7 @@
 				<width>490</width>
 				<height>22</height>
 				<include>DialogLabelFO</include>
-				<label>[UPPERCASE]$LOCALIZE[40200][/UPPERCASE]</label>
+				<label>$LOCALIZE[40200]</label>
 				<visible>Control.HasFocus(14) | Control.HasFocus(15)</visible>
 			</control>
 			<control type="button" id="14">
@@ -208,7 +208,7 @@
 				<onclick>DecreaseRating</onclick>
 				<texturenofocus>arrowdownnf.png</texturenofocus>
 				<texturefocus>arrowdownfo.png</texturefocus>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<onleft>15</onleft>
 				<onright>15</onright>
 				<ondown>10</ondown>
@@ -223,7 +223,7 @@
 				<onclick>IncreaseRating</onclick>
 				<texturenofocus>arrowupnf.png</texturenofocus>
 				<texturefocus>arrowupfo.png</texturefocus>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<onleft>14</onleft>
 				<onright>14</onright>
 				<ondown>10</ondown>

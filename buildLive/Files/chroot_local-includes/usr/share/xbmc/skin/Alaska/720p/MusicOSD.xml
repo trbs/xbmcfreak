@@ -232,9 +232,9 @@
 				</control>
 			</control>
 			<control type="selectbutton" id="503">
-				<posx>410</posx>
+				<posx>370</posx>
 				<posy>-80</posy>
-				<width>460</width>
+				<width>540</width>
 				<height>74</height>
 				<description>Visualisation Select Button</description>
 				<texturebg border="37,0,37,0">dialogs/back.png</texturebg>
@@ -253,22 +253,22 @@
 			<control type="group">
 				<visible>Control.HasFocus(503)</visible>
 				<control type="image">
-					<posx>430</posx>
+					<posx>390</posx>
 					<posy>-50</posy>
 					<width>18</width>
 					<height>18</height>
 					<animation effect="rotate" center="auto" end="-90" time="0" condition="true">Conditional</animation>
 					<texture>arrowdownfo.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<colordiffuse>ArrowFilterColor</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>832</posx>
+					<posx>872</posx>
 					<posy>-50</posy>
 					<width>18</width>
 					<height>18</height>
 					<animation effect="rotate" center="auto" end="90" time="0" condition="true">Conditional</animation>
 					<texture>arrowdownfo.png</texture>
-					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<colordiffuse>ArrowFilterColor</colordiffuse>
 				</control>
 			</control>			
 		</control>

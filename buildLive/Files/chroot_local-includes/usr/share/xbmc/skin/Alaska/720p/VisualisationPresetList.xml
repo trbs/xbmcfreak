@@ -29,7 +29,7 @@
 				<width>760</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[250] - $INFO[Visualisation.Name][/UPPERCASE]</label>
+				<label>$LOCALIZE[250] - $INFO[Visualisation.Name]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="label" id="4">
@@ -38,7 +38,7 @@
 				<posy>260</posy>
 				<width>760</width>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[13389][/UPPERCASE]</label>
+				<label>$LOCALIZE[13389]</label>
 				<include>DialogLabelLarge</include>
 			</control>
 			<control type="list" id="2">
@@ -58,7 +58,7 @@
 						<font>Font_PanelItemLabel</font>
 						<textcolor>PanelListItem</textcolor>
 						<selectedcolor>ListSelectedNF</selectedcolor>
-						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="30" width="760">
@@ -70,7 +70,7 @@
 						<aligny>center</aligny>
 						<font>Font_ListTitleBig</font>
 						<textcolor>TextFocused</textcolor>
-						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
 			</control>

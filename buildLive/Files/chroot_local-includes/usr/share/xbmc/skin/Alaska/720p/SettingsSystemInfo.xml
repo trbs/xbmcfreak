@@ -31,7 +31,7 @@
 				<width>16</width>
 				<height>32</height>
 				<texture>arrowhomeup.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>1014</posx>
@@ -39,7 +39,7 @@
 				<width>16</width>
 				<height>32</height>
 				<texture>arrowhomedown.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 			</control>
 			<control type="grouplist" id="9000">
 				<posx>298</posx>
@@ -52,39 +52,39 @@
 				<control type="button" id="95">
 					<description>Button Default Values</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[20037][/UPPERCASE]</label>
+					<label>$LOCALIZE[20037]</label>
 				</control>
 				<control type="button" id="94">
 					<description>Button Storage</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13277][/UPPERCASE]</label>
+					<label>$LOCALIZE[13277]</label>
 				</control>
 				<control type="button" id="92">
 					<description>Button HDD</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13275][/UPPERCASE]</label>
+					<label>$LOCALIZE[13275]</label>
 					<visible>System.Platform.Xbox</visible>
 				</control>
 				<control type="button" id="93">
 					<description>Button DVD</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13276][/UPPERCASE]</label>
+					<label>$LOCALIZE[13276]</label>
 					<visible>System.Platform.Xbox</visible>
 				</control>
 				<control type="button" id="96">
 					<description>Button Network</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
+					<label>$LOCALIZE[13279]</label>
 				</control>
 				<control type="button" id="97">
 					<description>Button Video</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13280][/UPPERCASE]</label>
+					<label>$LOCALIZE[13280]</label>
 				</control>
 				<control type="button" id="98">
 					<description>Button Hardware</description>
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13281][/UPPERCASE]</label>
+					<label>$LOCALIZE[13281]</label>
 				</control>
 			</control>
 			<control type="group">
@@ -165,12 +165,12 @@
 			</animation>
 			<control type="label">
 				<description>System Info</description>
-				<label>[UPPERCASE]$LOCALIZE[130][/UPPERCASE]</label>
+				<label>$LOCALIZE[130]</label>
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label" id="52">
 				<description>Build Version</description>
-				<label>[UPPERCASE]$LOCALIZE[144][/UPPERCASE]</label>
+				<label>$LOCALIZE[144]</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 			</control>

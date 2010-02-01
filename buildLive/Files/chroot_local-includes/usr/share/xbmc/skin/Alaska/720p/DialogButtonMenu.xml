@@ -25,7 +25,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+				<label>$LOCALIZE[5]</label>
 				<onclick>ActivateWindow(4)</onclick>
 			</control>
 			<control type="button" id="3111">
@@ -38,7 +38,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[40118][/UPPERCASE]</label>
+				<label>$LOCALIZE[40118]</label>
 				<onclick>ActivateWindow(3)</onclick>
 			</control>
 			<control type="button" id="3112">
@@ -51,7 +51,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
+				<label>$LOCALIZE[1036]</label>
 				<onclick>ActivateWindow(Favourites)</onclick>
 			</control>
 			<control type="button" id="3113">
@@ -64,7 +64,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[20126][/UPPERCASE]</label>
+				<label>$LOCALIZE[20126]</label>
 				<onclick>System.LogOff</onclick>
 			</control>
 			<control type="button" id="3114">
@@ -76,7 +76,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[13005][/UPPERCASE]</label>
+				<label>$LOCALIZE[13005]</label>
 				<onclick>ShutDown()</onclick>
 			</control>
 			<control type="button" id="3115">
@@ -90,7 +90,7 @@
 				<align>center</align>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[20144][/UPPERCASE]</label>
+				<label>$LOCALIZE[20144]</label>
 				<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 				<visible>!System.HasAlarm(shutdowntimer)</visible>
 			</control>
@@ -105,7 +105,7 @@
 				<align>center</align>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[20151][/UPPERCASE]</label>
+				<label>$LOCALIZE[20151]</label>
 				<onclick>CancelAlarm(shutdowntimer)</onclick>
 				<visible>System.HasAlarm(shutdowntimer)</visible>
 			</control>
@@ -119,7 +119,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[130][/UPPERCASE]</label>
+				<label>$LOCALIZE[130]</label>
 				<onclick>ActivateWindow(7)</onclick>
 			</control>
 			<control type="button" id="3118">
@@ -132,7 +132,7 @@
 				<animation effect="zoom" start="100" end="116" tween="cubic" time="200" center="auto" reversible="false">Focus</animation>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>[UPPERCASE]$LOCALIZE[20183][/UPPERCASE]</label>
+				<label>$LOCALIZE[20183]</label>
 				<onclick>ReloadSkin()</onclick>
 				<visible>Skin.HasSetting(debugmode)</visible>
 			</control>

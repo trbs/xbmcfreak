@@ -30,7 +30,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<textcolor>PanelListLabel</textcolor>
-				<label>[UPPERCASE]$LOCALIZE[13406][/UPPERCASE]</label>
+				<label>$LOCALIZE[13406]</label>
 				<font>Font_PanelLabel</font>
 			</control>
 			<control type="list" id="5">
@@ -98,7 +98,7 @@
 				<height>16</height>
 				<width>16</width>
 				<texture>arrowupfo.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<visible>Container(5).HasPrevious</visible>
 			</control>
 			<control type="image">
@@ -107,7 +107,7 @@
 				<height>16</height>
 				<width>16</width>
 				<texture>arrowdownfo.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<visible>Container(5).HasNext</visible>
 			</control>
 			<include>Object_DebugGrid</include>

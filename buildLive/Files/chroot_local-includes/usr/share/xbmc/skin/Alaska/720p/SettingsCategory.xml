@@ -31,7 +31,7 @@
 				<width>16</width>
 				<height>32</height>
 				<texture>arrowhomeup.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<visible>!ControlGroup(5).HasFocus + !Window.IsVisible(WeatherSettings)</visible>
 			</control>
 			<control type="image">
@@ -49,7 +49,7 @@
 				<width>16</width>
 				<height>32</height>
 				<texture>arrowhomedown.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
+				<colordiffuse>ArrowFilterColor</colordiffuse>
 				<visible>!ControlGroup(5).HasFocus + !Window.IsVisible(WeatherSettings)</visible>
 			</control>
 			<control type="image">
@@ -143,32 +143,32 @@
 				<visible>Window.IsVisible(VideosSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+					<label>$LOCALIZE[14022]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14086][/UPPERCASE]</label>
+					<label>$LOCALIZE[14086]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[287][/UPPERCASE]</label>
+					<label>$LOCALIZE[287]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14087][/UPPERCASE]</label>
+					<label>$LOCALIZE[14087]</label>
 					<visible>ControlGroup(3).HasFocus(-96)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[21412][/UPPERCASE]</label>
+					<label>$LOCALIZE[21412]</label>
 					<visible>ControlGroup(3).HasFocus(-95)</visible>
 				</control>
 			</control>
@@ -176,32 +176,32 @@
 				<visible>Window.IsVisible(MusicSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+					<label>$LOCALIZE[14022]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14086][/UPPERCASE]</label>
+					<label>$LOCALIZE[14086]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[15221][/UPPERCASE]</label>
+					<label>$LOCALIZE[15221]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[620][/UPPERCASE]</label>
+					<label>$LOCALIZE[620]</label>
 					<visible>ControlGroup(3).HasFocus(-96)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[13327][/UPPERCASE]</label>
+					<label>$LOCALIZE[13327]</label>
 					<visible>ControlGroup(3).HasFocus(-95)</visible>
 				</control>
 			</control>
@@ -209,12 +209,12 @@
 				<visible>Window.IsVisible(PicturesSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[108][/UPPERCASE]</label>
+					<label>$LOCALIZE[108]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 			</control>
@@ -222,7 +222,7 @@
 				<visible>Window.IsVisible(WeatherSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[16000][/UPPERCASE]</label>
+					<label>$LOCALIZE[16000]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 			</control>
@@ -230,12 +230,12 @@
 				<visible>Window.IsVisible(NetworkSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14036][/UPPERCASE]</label>
+					<label>$LOCALIZE[14036]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[798][/UPPERCASE]</label>
+					<label>$LOCALIZE[798]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 			</control>
@@ -243,32 +243,32 @@
 				<visible>Window.IsVisible(SystemSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[21373][/UPPERCASE]</label>
+					<label>$LOCALIZE[21373]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[337][/UPPERCASE]</label>
+					<label>$LOCALIZE[337]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14094][/UPPERCASE]</label>
+					<label>$LOCALIZE[14094]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14095][/UPPERCASE]</label>
+					<label>$LOCALIZE[14095]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14092][/UPPERCASE]</label>
+					<label>$LOCALIZE[14092]</label>
 					<visible>ControlGroup(3).HasFocus(-96)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[12360][/UPPERCASE]</label>
+					<label>$LOCALIZE[12360]</label>
 					<visible>ControlGroup(3).HasFocus(-95)</visible>
 				</control>
 			</control>
@@ -276,22 +276,22 @@
 				<visible>Window.IsVisible(AppearanceSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
+					<label>$LOCALIZE[166]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14090][/UPPERCASE]</label>
+					<label>$LOCALIZE[14090]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelFO</include>
-					<label>[UPPERCASE]$LOCALIZE[12900][/UPPERCASE]</label>
+					<label>$LOCALIZE[12900]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 			</control>
@@ -305,32 +305,32 @@
 				<visible>Window.IsVisible(VideosSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+					<label>$LOCALIZE[14022]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14086][/UPPERCASE]</label>
+					<label>$LOCALIZE[14086]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[287][/UPPERCASE]</label>
+					<label>$LOCALIZE[287]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14087][/UPPERCASE]</label>
+					<label>$LOCALIZE[14087]</label>
 					<visible>ControlGroup(3).HasFocus(-96)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[21412][/UPPERCASE]</label>
+					<label>$LOCALIZE[21412]</label>
 					<visible>ControlGroup(3).HasFocus(-95)</visible>
 				</control>
 			</control>
@@ -338,32 +338,32 @@
 				<visible>Window.IsVisible(MusicSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+					<label>$LOCALIZE[14022]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14086][/UPPERCASE]</label>
+					<label>$LOCALIZE[14086]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[15221][/UPPERCASE]</label>
+					<label>$LOCALIZE[15221]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[620][/UPPERCASE]</label>
+					<label>$LOCALIZE[620]</label>
 					<visible>ControlGroup(3).HasFocus(-96)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[13327][/UPPERCASE]</label>
+					<label>$LOCALIZE[13327]</label>
 					<visible>ControlGroup(3).HasFocus(-95)</visible>
 				</control>
 			</control>
@@ -371,12 +371,12 @@
 				<visible>Window.IsVisible(PicturesSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[108][/UPPERCASE]</label>
+					<label>$LOCALIZE[108]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 			</control>
@@ -384,7 +384,7 @@
 				<visible>Window.IsVisible(WeatherSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[16000][/UPPERCASE]</label>
+					<label>$LOCALIZE[16000]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 			</control>
@@ -392,12 +392,12 @@
 				<visible>Window.IsVisible(NetworkSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14036][/UPPERCASE]</label>
+					<label>$LOCALIZE[14036]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[798][/UPPERCASE]</label>
+					<label>$LOCALIZE[798]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 			</control>
@@ -405,32 +405,32 @@
 				<visible>Window.IsVisible(SystemSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[21373][/UPPERCASE]</label>
+					<label>$LOCALIZE[21373]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[337][/UPPERCASE]</label>
+					<label>$LOCALIZE[337]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14094][/UPPERCASE]</label>
+					<label>$LOCALIZE[14094]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14095][/UPPERCASE]</label>
+					<label>$LOCALIZE[14095]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14092][/UPPERCASE]</label>
+					<label>$LOCALIZE[14092]</label>
 					<visible>ControlGroup(3).HasFocus(-96)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[12360][/UPPERCASE]</label>
+					<label>$LOCALIZE[12360]</label>
 					<visible>ControlGroup(3).HasFocus(-95)</visible>
 				</control>
 			</control>
@@ -438,22 +438,22 @@
 				<visible>Window.IsVisible(AppearanceSettings)</visible>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
+					<label>$LOCALIZE[166]</label>
 					<visible>ControlGroup(3).HasFocus(-100)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14090][/UPPERCASE]</label>
+					<label>$LOCALIZE[14090]</label>
 					<visible>ControlGroup(3).HasFocus(-99)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[14081][/UPPERCASE]</label>
+					<label>$LOCALIZE[14081]</label>
 					<visible>ControlGroup(3).HasFocus(-98)</visible>
 				</control>
 				<control type="label">
 					<include>SettingsCategoryLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[12900][/UPPERCASE]</label>
+					<label>$LOCALIZE[12900]</label>
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 			</control>

@@ -28,7 +28,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[262][/UPPERCASE]</label>
+				<label>$LOCALIZE[262]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="textbox" id="5">

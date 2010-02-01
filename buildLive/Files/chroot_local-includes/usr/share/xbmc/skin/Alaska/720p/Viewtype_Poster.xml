@@ -42,8 +42,8 @@
 				<texture>poster/posterframeNF.png</texture>
 				<include>Animation_HiddenByInfo</include>
 			</control>
-			<include condition="Skin.HasSetting(movieoverlays)">PosterMovieOverlaysNF</include>
-			<include condition="Skin.HasSetting(tvoverlays)">PosterTVOverlaysNF</include>
+			<include condition="Skin.HasSetting(movieoverlays) + Window.IsActive(25)">PosterMovieOverlaysNF</include>
+			<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">PosterTVOverlaysNF</include>
 			<control type="image">
 				<posx>4</posx>
 				<posy>374</posy>
@@ -118,7 +118,7 @@
 				<aligny>center</aligny>
 				<font>Font_Date</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
 				<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
 				<include>Animation_HiddenByInfo</include>
 			</control>
@@ -126,11 +126,11 @@
 				<posx>346</posx>
 				<posy>380</posy>
 				<width>404</width>
-				<height>200</height>
+				<height>206</height>
 				<aligny>top</aligny>
 				<font>Font_PosterTitle</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<visible>!Container.Content(seasons)</visible>
 				<include>Animation_HiddenByInfo</include>
 			</control>
@@ -142,12 +142,12 @@
 				<aligny>top</aligny>
 				<font>Font_PosterTitle</font>
 				<textcolor>PosterTitle</textcolor>
-				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<visible>Container.Content(seasons)</visible>
 				<include>Animation_HiddenByInfo</include>
 			</control>
-			<include condition="Skin.HasSetting(movieoverlays)">PosterMovieOverlaysFO</include>
-			<include condition="Skin.HasSetting(tvoverlays)">PosterTVOverlaysFO</include>
+			<include condition="Skin.HasSetting(movieoverlays) + Window.IsActive(25)">PosterMovieOverlaysFO</include>
+			<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">PosterTVOverlaysFO</include>
 		</focusedlayout>
 	</include>
 	<include name="Viewtype_Poster">
@@ -161,7 +161,7 @@
 			<onright>50</onright>
 			<onup>7000</onup>
 			<ondown>7777</ondown>
-			<viewtype label="POSTER[CR]WRAP">list</viewtype>
+			<viewtype label="40282">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>200</scrolltime>
@@ -181,7 +181,7 @@
 			<onright>57</onright>
 			<onup>7000</onup>
 			<ondown>7777</ondown>
-			<viewtype label="POSTER[CR]FIXED">list</viewtype>
+			<viewtype label="40283">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>200</scrolltime>
@@ -195,7 +195,7 @@
 	<!-- Square View -->
 	<include name="Viewtype_SquarePoster">
 		<control type="wraplist" id="54">
-			<viewtype label="POSTER[CR]SQUARE">icon</viewtype>
+			<viewtype label="40284">icon</viewtype>
 			<posx>-110</posx>
 			<posy>150</posy>
 			<width>1400</width>
@@ -210,7 +210,7 @@
 			<include>Animation_HiddenByMusicInfo</include>
 			<onup>7000</onup>
 			<ondown>7777</ondown>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(studios) | Container.Content(albums) | Window.IsVisible(28) | !IsEmpty(Container.PluginName)</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(studios) | Container.Content(albums) | Window.IsVisible(28) | Window.IsVisible(501) | !IsEmpty(Container.PluginName)</visible>
 			<itemlayout width="200" height="200">
 				<control type="image">
 					<posx>2</posx>
@@ -261,8 +261,8 @@
 					<texture>square/squareframeNF.png</texture>
 					<include>Animation_HiddenByInfo</include>
 				</control>
-				<include condition="Skin.HasSetting(movieoverlays)">SquareMovieOverlaysNF</include>
-				<include condition="Skin.HasSetting(tvoverlays)">SquareTVOverlaysNF</include>
+				<include condition="Skin.HasSetting(movieoverlays) + Window.IsActive(25)">SquareMovieOverlaysNF</include>
+				<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">SquareTVOverlaysNF</include>
 			</itemlayout>
 			<focusedlayout width="300" height="300">
 				<control type="image">
@@ -312,7 +312,7 @@
 					<aligny>center</aligny>
 					<font>Font_Date</font>
 					<textcolor>PosterTitle</textcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]: [/B]]</label>
 					<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(music)</visible>
 				<include>Animation_HiddenByInfo</include>
 				</control>
@@ -324,7 +324,7 @@
 					<aligny>top</aligny>
 					<font>Font_PosterTitle</font>
 					<textcolor>PosterTitle</textcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<visible>!Container.Content(seasons)</visible>
 					<include>Animation_HiddenByInfo</include>
 				</control>
@@ -336,12 +336,12 @@
 					<aligny>top</aligny>
 					<font>Font_PosterTitle</font>
 					<textcolor>PosterTitle</textcolor>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Label]</label>
 					<visible>Container.Content(seasons)</visible>
 					<include>Animation_HiddenByInfo</include>
 				</control>
-				<include condition="Skin.HasSetting(movieoverlays)">SquareMovieOverlaysFO</include>
-				<include condition="Skin.HasSetting(tvoverlays)">SquareTVOverlaysFO</include>
+				<include condition="Skin.HasSetting(movieoverlays) + Window.IsActive(25)">SquareMovieOverlaysFO</include>
+				<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">SquareTVOverlaysFO</include>
 			</focusedlayout>
 		</control>
 	</include>

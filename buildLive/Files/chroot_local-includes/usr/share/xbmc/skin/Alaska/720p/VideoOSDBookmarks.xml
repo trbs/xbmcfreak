@@ -14,7 +14,7 @@
 			<onright>1</onright>
 			<control type="button" id="2">
 				<description>Create</description>
-				<label>[UPPERCASE]$LOCALIZE[294][/UPPERCASE]</label>
+				<label>$LOCALIZE[294]</label>
 				<font>Font_ListTitleNF</font>
 				<textcolor>Text</textcolor>
 				<selectedcolor>TextFocused</selectedcolor>
@@ -25,7 +25,7 @@
 			</control>
 			<control type="button" id="3">
 				<description>Clear</description>
-				<label>[UPPERCASE]$LOCALIZE[296][/UPPERCASE]</label>
+				<label>$LOCALIZE[296]</label>
 				<font>Font_ListTitleNF</font>
 				<textcolor>Text</textcolor>
 				<selectedcolor>TextFocused</selectedcolor>
@@ -77,7 +77,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_Date</font>
-					<label>[UPPERCASE]$INFO[ListItem.label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.label]</label>
 					<textcolor>Text</textcolor>
 				</control>
 			</itemlayout>
@@ -107,7 +107,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_Date</font>
-					<label>[UPPERCASE]$INFO[ListItem.label][/UPPERCASE]</label>
+					<label>$INFO[ListItem.label]</label>
 					<textcolor>TextFocused</textcolor>
 				</control>
 			</focusedlayout>

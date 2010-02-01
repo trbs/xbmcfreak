@@ -11,7 +11,7 @@
 			<height>1</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<label>[UPPERCASE]$INFO[Weather.Conditions][/UPPERCASE]</label>
+			<label>$INFO[Weather.Conditions]</label>
 			<font>-</font>
 			<onfocus>SetFocus(11)</onfocus>
 		</control>
@@ -24,7 +24,7 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=5&amp;albums=True&amp;unplayed=True)</onfocus>
-			<label>[UPPERCASE]$INFO[Window.Property(LatestMovie.1.Title)][/UPPERCASE]</label>
+			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 			<font>-</font>
 			<onfocus>SetFocus(12)</onfocus>
 		</control>

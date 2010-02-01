@@ -36,7 +36,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[20067][/UPPERCASE]</label>
+				<label>$LOCALIZE[20067]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="image" id="2">
@@ -58,7 +58,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[20093][/UPPERCASE]</label>
+				<label>$LOCALIZE[20093]</label>
 			</control>
 			<control type="label" id="1000">
 				<description>profile name Value</description>
@@ -75,7 +75,7 @@
 				<width>460</width>
 				<align>left</align>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[20070][/UPPERCASE]</label>
+				<label>$LOCALIZE[20070]</label>
 			</control>
 			<control type="label" id="1001">
 				<description>profile directory Value</description>
@@ -128,7 +128,7 @@
 				<posy>536</posy>
 				<width>260</width>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+				<label>$LOCALIZE[186]</label>
 				<onleft>29</onleft>
 				<onright>29</onright>
 				<onup>5</onup>
@@ -141,7 +141,7 @@
 				<width>260</width>
 				<align>right</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+				<label>$LOCALIZE[222]</label>
 				<onleft>28</onleft>
 				<onright>28</onright>
 				<onup>5</onup>

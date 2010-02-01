@@ -73,56 +73,56 @@
 			<content>
 				<item id="1">
 					<description>Video</description>
-					<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_video.png</icon>
+					<label>$LOCALIZE[3]</label>
+					<icon>settings/settings_video.png</icon>
 					<onclick>ActivateWindow(VideosSettings)</onclick>
 				</item>
 				<item id="2">
 					<description>Music</description>
-					<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_music.png</icon>
+					<label>$LOCALIZE[2]</label>
+					<icon>settings/settings_music.png</icon>
 					<onclick>ActivateWindow(MusicSettings)</onclick>
 				</item>
 				<item id="3">
 					<description>Pictures</description>
-					<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_pictures.png</icon>
+					<label>$LOCALIZE[1]</label>
+					<icon>settings/settings_pictures.png</icon>
 					<onclick>ActivateWindow(PicturesSettings)</onclick>
 				</item>
 				<item id="4">
 					<description>Profiles</description>
-					<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_profiles.png</icon>
+					<label>$LOCALIZE[13200]</label>
+					<icon>settings/settings_profiles.png</icon>
 					<onclick>ActivateWindow(Profiles)</onclick>
 				</item>
 				<item id="5">
 					<description>Weather</description>
-					<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_weather.png</icon>
+					<label>$LOCALIZE[8]</label>
+					<icon>settings/settings_weather.png</icon>
 					<onclick>ActivateWindow(WeatherSettings)</onclick>
 				</item>
 				<item id="6">
 					<description>Network</description>
-					<label>[UPPERCASE]$LOCALIZE[705][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_network.png</icon>
+					<label>$LOCALIZE[705]</label>
+					<icon>settings/settings_network.png</icon>
 					<onclick>ActivateWindow(NetworkSettings)</onclick>
 				</item>
 				<item id="7">
 					<description>System</description>
-					<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_system.png</icon>
+					<label>$LOCALIZE[13000]</label>
+					<icon>settings/settings_system.png</icon>
 					<onclick>ActivateWindow(SystemSettings)</onclick>
 				</item>
 				<item id="8">
 					<description>Appearence</description>
-					<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
-					<icon>special://skin/media/settings/settings_appearance.png</icon>
+					<label>$LOCALIZE[480]</label>
+					<icon>settings/settings_appearance.png</icon>
 					<onclick>ActivateWindow(AppearanceSettings)</onclick>
 				</item>
 				<item id="9">
 					<description>Alaska</description>
 					<label>$LOCALIZE[40210]</label>
-					<icon>special://skin/media/settings/settings_alaska.png</icon>
+					<icon>settings/settings_alaska.png</icon>
 					<onclick>ActivateWindow(56)</onclick>
 				</item>
 			</content>
@@ -146,7 +146,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+				<label>$LOCALIZE[3]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -162,7 +162,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label>
+				<label>$LOCALIZE[13200]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -178,7 +178,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
+				<label>$LOCALIZE[13000]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -194,7 +194,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+				<label>$LOCALIZE[2]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -210,7 +210,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+				<label>$LOCALIZE[8]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -226,7 +226,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
+				<label>$LOCALIZE[480]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -242,7 +242,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+				<label>$LOCALIZE[1]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>
@@ -258,7 +258,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
-				<label>[UPPERCASE]$LOCALIZE[705][/UPPERCASE]</label>
+				<label>$LOCALIZE[705]</label>
 			</control>
 			<control type="label">
 				<include>SettingsDetailVars</include>

@@ -36,7 +36,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[20043][/UPPERCASE]</label>
+				<label>$LOCALIZE[20043]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="grouplist" id="5">
@@ -82,7 +82,7 @@
 				<posy>536</posy>
 				<width>260</width>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+				<label>$LOCALIZE[186]</label>
 				<onleft>29</onleft>
 				<onright>29</onright>
 				<onup>5</onup>
@@ -95,7 +95,7 @@
 				<width>260</width>
 				<align>right</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+				<label>$LOCALIZE[222]</label>
 				<onleft>28</onleft>
 				<onright>28</onright>
 				<onup>5</onup>

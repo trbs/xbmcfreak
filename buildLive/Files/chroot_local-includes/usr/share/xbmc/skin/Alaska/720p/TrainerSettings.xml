@@ -27,7 +27,7 @@
 			<posx>10</posx>
 			<posy>40</posy>
 			<width>500</width>
-			<label>[UPPERCASE]$LOCALIZE[13390][/UPPERCASE]</label>
+			<label>$LOCALIZE[13390]</label>
 		</control>
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
@@ -61,7 +61,7 @@
 			<description>ok</description>
 			<posx>200</posx>
 			<posy>390</posy>
-			<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+			<label>$LOCALIZE[186]</label>
 			<onleft>29</onleft>
 			<onright>29</onright>
 			<onup>5</onup>
@@ -71,7 +71,7 @@
 			<description>cancel</description>
 			<posx>360</posx>
 			<posy>390</posy>
-			<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+			<label>$LOCALIZE[222]</label>
 			<onleft>28</onleft>
 			<onright>28</onright>
 			<onup>5</onup>

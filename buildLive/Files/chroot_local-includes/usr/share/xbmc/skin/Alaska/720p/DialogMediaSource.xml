@@ -50,7 +50,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogHeader</include>
-				<label>[UPPERCASE]$LOCALIZE[1021][/UPPERCASE]</label>
+				<label>$LOCALIZE[1021]</label>
 			</control>
 			<control type="list" id="10">
 				<posx>298</posx>
@@ -96,7 +96,7 @@
 					<width>150</width>
 					<align>right</align>
 					<include>DialogLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[1024][/UPPERCASE]</label>
+					<label>$LOCALIZE[1024]</label>
 					<onup>14</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -108,7 +108,7 @@
 					<width>150</width>
 					<align>right</align>
 					<include>DialogLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[15019][/UPPERCASE]</label>
+					<label>$LOCALIZE[15019]</label>
 					<onup>11</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -120,7 +120,7 @@
 					<width>150</width>
 					<align>right</align>
 					<include>DialogLabelNF</include>
-					<label>[UPPERCASE]$LOCALIZE[1210][/UPPERCASE]</label>
+					<label>$LOCALIZE[1210]</label>
 					<onup>13</onup>
 					<onleft>10</onleft>
 					<onright>10</onright>
@@ -133,7 +133,7 @@
 				<posy>444</posy>
 				<width>690</width>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[1022][/UPPERCASE]</label>
+				<label>$LOCALIZE[1022]</label>
 			</control>
 			<control type="button" id="12">
 				<description>Name</description>
@@ -154,7 +154,7 @@
 				<posy>536</posy>
 				<width>690</width>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[20333][/UPPERCASE]</label>
+				<label>$LOCALIZE[20333]</label>
 				<onup>12</onup>
 				<onleft>19</onleft>
 				<onright>18</onright>
@@ -167,7 +167,7 @@
 				<width>690</width>
 				<align>center</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+				<label>$LOCALIZE[186]</label>
 				<onup>12</onup>
 				<onleft>20</onleft>
 				<onright>19</onright>
@@ -180,7 +180,7 @@
 				<width>690</width>
 				<align>right</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+				<label>$LOCALIZE[222]</label>
 				<onup>12</onup>
 				<onleft>18</onleft>
 				<onright>20</onright>

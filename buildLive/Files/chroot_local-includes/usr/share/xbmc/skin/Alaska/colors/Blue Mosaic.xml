@@ -18,6 +18,8 @@
 	<color name="BackgroundColor">bb3c95c8</color>
 	<color name="BackgroundFilterColor">bb09679c</color>
 	<color name="ButtonFilterColor">FF0b81c5</color>		<!--  FFad0909 is red, FFc89008 is yellow -->
+	<color name="ArrowFilterColor">FF0b81c5</color>
+	<color name="ProgressFilterColor">FF0b81c5</color>
 
 	<!-- Home 1 Colours -->
 
@@ -47,8 +49,9 @@
 	<!-- Flags -->
 
 	<color name="FlagDiffuse">ddffffff</color>
-	<color name="FlagText">dd102b68</color>					<!--FF3c1212-->
-	<color name="FlagText2">ddffffff</color>
+	<color name="CodecDiffuse">ddffffff</color>
+	<color name="StudioDiffuse">ddffffff</color>
+	<color name="FlagText">ddffffff</color>
 	<color name="StarRatingDiffuse">ddffffff</color>
 
 	<!-- OSD -->

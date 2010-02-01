@@ -45,7 +45,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[21421][/UPPERCASE]</label>
+				<label>$LOCALIZE[21421]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="label">
@@ -57,7 +57,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[21422][/UPPERCASE]</label>
+				<label>$LOCALIZE[21422]</label>
 			</control>
 			<control type="group" id="9001">
 				<control type="spincontrolex" id="15">
@@ -82,7 +82,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$INFO[Control.GetLabel(15)][/UPPERCASE]</label>
+					<label>$INFO[Control.GetLabel(15)]</label>
 					<visible>!Control.HasFocus(15)</visible>
 				</control>
 				<control type="label">
@@ -94,7 +94,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>DialogLabelLargeFO</include>
-					<label>[UPPERCASE]$INFO[Control.GetLabel(15)][/UPPERCASE]</label>
+					<label>$INFO[Control.GetLabel(15)]</label>
 					<visible>Control.HasFocus(15)</visible>
 				</control>
 				<control type="spincontrolex" id="16">
@@ -119,7 +119,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$INFO[Control.GetLabel(16)][/UPPERCASE]</label>
+					<label>$INFO[Control.GetLabel(16)]</label>
 					<visible>!Control.HasFocus(16)</visible>
 				</control>
 				<control type="label">
@@ -131,7 +131,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>DialogLabelLargeFO</include>
-					<label>[UPPERCASE]$INFO[Control.GetLabel(16)][/UPPERCASE]</label>
+					<label>$INFO[Control.GetLabel(16)]</label>
 					<visible>Control.HasFocus(16)</visible>
 				</control>
 			</control>
@@ -154,7 +154,7 @@
 				<width>345</width>
 				<align>right</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[1024][/UPPERCASE]</label>
+				<label>$LOCALIZE[1024]</label>
 				<onup>9001</onup>
 				<onleft>17</onleft>
 				<onright>17</onright>
@@ -168,7 +168,7 @@
 					<width>345</width>
 					<align>center</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+					<label>$LOCALIZE[186]</label>
 					<onup>17</onup>
 					<onleft>19</onleft>
 					<onright>19</onright>
@@ -181,7 +181,7 @@
 					<width>345</width>
 					<align>center</align>
 					<include>DialogLabelLargeNF</include>
-					<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+					<label>$LOCALIZE[222]</label>
 					<onup>17</onup>
 					<onleft>18</onleft>
 					<onright>19</onright>

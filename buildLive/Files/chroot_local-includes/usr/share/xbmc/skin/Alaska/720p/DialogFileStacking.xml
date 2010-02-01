@@ -36,7 +36,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<label>$INFO[ListItem.Label]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="label">
@@ -46,7 +46,7 @@
 				<width>460</width>
 				<align>center</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[40240][/UPPERCASE]</label>
+				<label>$LOCALIZE[40240]</label>
 			</control>
 			<control type="label">
 				<description>bottom label</description>
@@ -55,7 +55,7 @@
 				<width>460</width>
 				<align>center</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[40241][/UPPERCASE]</label>
+				<label>$LOCALIZE[40241]</label>
 			</control>
 			<control type="list" id="450">
 				<posx>400</posx>

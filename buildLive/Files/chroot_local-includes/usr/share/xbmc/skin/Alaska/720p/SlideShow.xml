@@ -39,7 +39,7 @@
 				<height>22</height>
 				<aligny>center</aligny>
 				<font>Font_NowPlaying</font>
-				<label>[UPPERCASE][B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR][COLOR OSDNowPlaying]$INFO[MusicPlayer.TrackNumber,$LOCALIZE[554].][/COLOR]$INFO[MusicPlayer.Title, ]$INFO[MusicPlayer.Artist,[COLOR OSDNowPlaying]    $LOCALIZE[557]: [/COLOR]]$INFO[MusicPlayer.Album,[COLOR OSDNowPlaying]    $LOCALIZE[558]: [/COLOR]][/B][/UPPERCASE]</label>
+				<label>[B][COLOR OSDNowPlaying]$LOCALIZE[13350][/COLOR][COLOR OSDNowPlaying]$INFO[MusicPlayer.TrackNumber,$LOCALIZE[554].][/COLOR]$INFO[MusicPlayer.Title, ]$INFO[MusicPlayer.Artist,[COLOR OSDNowPlaying]    $LOCALIZE[557]: [/COLOR]]$INFO[MusicPlayer.Album,[COLOR OSDNowPlaying]    $LOCALIZE[558]: [/COLOR]][/B]</label>
 				<textcolor>OSDNowPlayingTitle</textcolor>
 				<scrollout>true</scrollout>
 				<pauseatend>1800</pauseatend>

@@ -177,7 +177,7 @@
 	<string id="40240">Select which part of this</string>
 	<string id="40241">stacked file to play.</string>
 	<string id="40242">PREMIERED</string>
-	<string id="40243">ESTIMATED FINISH TIME</string>
+	<string id="40243">FINISH TIME</string>
 	<string id="40244">PLAYING</string>
 	<string id="40245">ENABLE LYRICS IN MUSIC OSD</string>
 	<string id="40246">PATH TO LYRICS SCRIPT -</string>
@@ -215,5 +215,18 @@
 	<string id="40278">OPEN PLAYLIST</string>
 	<string id="40279">SAVE PLAYLIST</string>
 	<string id="40280">CLOSE PLAYLIST</string>
+	<string id="40281">ITEMS</string>
+	<string id="40282">POSTER[CR]WRAP</string>
+	<string id="40283">POSTER[CR]FIXED</string>
+	<string id="40284">POSTER[CR]SQUARE</string>
+	<string id="40285">LIST</string>
+	<string id="40286">BANNER</string>
+	<string id="40287">PANEL</string>
+	<string id="40288">PANEL[CR]WIDE</string>
+	<string id="40289">FILES</string>
+	<string id="40290">EPISODE</string>
+	<string id="40291">LANDSCAPE</string>
+	<string id="40292">WALL</string>
+	<string id="40293">GRID</string>
 	
 </strings>

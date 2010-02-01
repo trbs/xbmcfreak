@@ -44,7 +44,7 @@
 				<width>400</width>
 				<height>34</height>
 				<align>center</align>
-				<label>[UPPERCASE]$LOCALIZE[1007][/UPPERCASE]</label>
+				<label>$LOCALIZE[1007]</label>
 				<include>DialogHeader</include>
 			</control>
 			<control type="spincontrolex" id="10">
@@ -56,7 +56,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[1008][/UPPERCASE]</label>
+				<label>$LOCALIZE[1008]</label>
 				<onup>18</onup>
 				<ondown>11</ondown>
 				<onleft>10</onleft>
@@ -82,7 +82,7 @@
 				<width>150</width>
 				<align>right</align>
 				<include>DialogLabelNF</include>
-				<label>[UPPERCASE]$LOCALIZE[1024][/UPPERCASE]</label>
+				<label>$LOCALIZE[1024]</label>
 				<onup>10</onup>
 				<onleft>11</onleft>
 				<onright>11</onright>
@@ -105,7 +105,7 @@
 				<posx>298</posx>
 				<posy>336</posy>
 				<include>DialogLabelNF</include>
-				<label>[UPPERCASE]$LOCALIZE[1013][/UPPERCASE]</label>
+				<label>$LOCALIZE[1013]</label>
 				<onup>16</onup>
 				<onleft>13</onleft>
 				<onright>13</onright>
@@ -117,7 +117,7 @@
 				<posy>376</posy>
 				<width>690</width>
 				<include>DialogLabelNF</include>
-				<label>[UPPERCASE]$LOCALIZE[1014][/UPPERCASE]</label>
+				<label>$LOCALIZE[1014]</label>
 				<onup>13</onup>
 				<onleft>14</onleft>
 				<onright>14</onright>
@@ -129,7 +129,7 @@
 				<posy>416</posy>
 				<width>690</width>
 				<include>DialogLabelNF</include>
-				<label>[UPPERCASE]$LOCALIZE[15052][/UPPERCASE]</label>
+				<label>$LOCALIZE[15052]</label>
 				<onup>14</onup>
 				<onleft>15</onleft>
 				<onright>15</onright>
@@ -142,7 +142,7 @@
 				<width>345</width>
 				<align>center</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+				<label>$LOCALIZE[186]</label>
 				<onup>15</onup>
 				<onleft>19</onleft>
 				<onright>19</onright>
@@ -155,7 +155,7 @@
 				<width>345</width>
 				<align>center</align>
 				<include>DialogLabelLargeNF</include>
-				<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+				<label>$LOCALIZE[222]</label>
 				<onup>15</onup>
 				<onleft>18</onleft>
 				<onright>18</onright>

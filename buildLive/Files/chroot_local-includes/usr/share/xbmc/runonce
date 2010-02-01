@@ -16,11 +16,27 @@ chown $xbmcUser:$xbmcUser /home/$xbmcUser/.sabnzbd/
 
 #configure samba
 sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
+
+#create shares
+if [ ! -d "/home/$xbmcUser/Downloads" ]; then
 mkdir /home/$xbmcUser/Downloads
+fi
+
+if [ ! -d "/home/$xbmcUser/Music" ]; then
 mkdir /home/$xbmcUser/Music
+fi
+
+if [ ! -d "/home/$xbmcUser/Pictures" ]; then
 mkdir /home/$xbmcUser/Pictures
+fi
+
+if [ ! -d "/home/$xbmcUser/TV Shows" ]; then
 mkdir "/home/$xbmcUser/TV Shows"
+fi
+
+if [ ! -d "/home/$xbmcUser/Videos" ]; then
 mkdir /home/$xbmcUser/Videos
+fi
 
 #copy asroundrc
 cp /usr/share/xbmc/asoundrc /home/$xbmcUser/.asoundrc

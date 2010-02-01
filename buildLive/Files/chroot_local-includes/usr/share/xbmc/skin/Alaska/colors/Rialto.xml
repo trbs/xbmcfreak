@@ -1,0 +1,136 @@
+<colors>
+
+	<!-- Standard Colours -->
+
+	<color name="Black">FF08090D</color>
+	<color name="White">FFFFFFF1</color>
+	<color name="Red">FF660D00</color>
+	<color name="Green">FF00ff00</color>
+	<color name="Blue">FF0000ff</color>
+	<color name="Clear">00FFFFFF</color>
+
+	<!-- SVN Colour Hack - Same as ListTitleFO colour -->
+
+	<color name="FFFFFFFF">FF261E1B</color>
+
+	<!-- Theme Colours -->
+
+	<color name="BackgroundColor">99D4C294</color>
+	<color name="BackgroundFilterColor">FFFFFFFF</color>
+	<color name="ButtonFilterColor">FF660D00</color>
+
+	<!-- Home 1 Colours -->
+
+	<color name="HomeWindowFrameColor">FF261E1B</color>
+	<color name="HomeWindowTextColour">FFBAA570</color>
+	<color name="HomeWindowTextBackgroundColour">ff261E1B</color>
+
+	<!-- Home 2 & 3 Colour -->
+
+	<color name="MainMenu">44261E1B</color>
+
+	<!-- Global Colours -->
+
+	<color name="Time">FF261E1B</color>
+	<color name="TimeAMPM">FF660D00</color>
+	<color name="Date">FF261E1B</color>
+	<color name="RSSBody">FF08090D</color>
+	<color name="RSSHighlight">FF08090D</color>
+	<color name="RSSHeadline">FF261E1B</color>
+	<color name="RSSTitle">FF660D00</color>
+	<color name="NowPlayingTrack">FF261E1B</color>
+	<color name="TextFocused">FF660D00</color>
+	<color name="Text">FF261E1B</color>
+	<color name="TextDisabled">99261E1B</color>
+	<color name="TextSelected">FF660D00</color>
+
+	<!-- Flags -->
+
+	<color name="FlagDiffuse">FF261E1B</color>
+	<color name="FlagText">77BAA570</color>
+	<color name="FlagText2">FF261E1B</color>
+	<color name="StarRatingDiffuse">FF660D00</color>
+
+	<!-- OSD -->
+
+	<color name="OSDNowPlayingBack">aa000000</color>
+	<color name="OSDNowPlaying">FFFFFFF1</color>
+	<color name="OSDNowPlayingTitle">FFBAA570</color>
+	<color name="OSDProgressBar">FFD9D7A3</color>
+	<color name="OSDPlayingDuration">FFBAA570</color>
+	<color name="OSDBackground">bbBAA570</color>
+
+	<!-- Window menu colours -->
+
+	<color name="MenuValue">FF261E1B</color>
+	<color name="MenuValueFO">FF660D00</color>	
+
+	<!-- Poster/Panel/Landscape view colours -->
+
+	<color name="PosterTitle">FF08090D</color>
+	<color name="LandscapeTitle">FF08090D</color>
+	<color name="LandscapeText">FF261E1B</color>
+
+	<!-- Episode view colours -->
+
+	<color name="EpisodeLabelFO">FF08090D</color>	
+	<color name="EpisodePlot">FF261E1B</color>
+	<color name="EpisodeNF">AA261E1B</color>
+	<color name="EpisodeWatchedNF">AA261E1B</color>
+	<color name="EpisodeWatchedFO">FF08090D</color>
+
+	<!-- Info dialog colours -->
+
+	<color name="InfoTitle">FF08090D</color>
+	<color name="InfoPlot">FF261E1B</color>
+	<color name="InfoYear">FF08090D</color>	
+	<color name="InfoGenre">FF08090D</color>		
+	<color name="InfoDetails">FF261E1B</color>
+	<color name="MovieInfoLines">8808090D</color>
+	<color name="InfoRating">FF261E1B</color>
+
+	<!-- Progress dialogs -->
+
+	<color name="ProgressDialog">77D9D7A3</color>
+	<color name="SettingsHeading">ff08090D</color>	
+	<color name="SettingsDetail">ff261E1B</color>		
+
+	<!-- List & File colours -->
+
+	<color name="ListTitleNF">AA261E1B</color>
+	<color name="ListTitleFO">FF08090D</color>
+	<color name="ListSelectedNF">AA660D00</color>
+	<color name="ListSelectedFO">FF660D00</color>
+
+	<!-- Wall colours -->
+
+	<color name="WallIconDiffuse">FFBAA570</color>
+	<color name="WallArrowBackDiffuse">FFFFFFFF</color>
+	<color name="WallArrowDiffuse">FF660D00</color>
+	<color name="IconDiffuse">FFFFFFFF</color>
+	<color name="InfoPanelPictureDiffuse">ddFFFFFF</color>
+
+	<!-- Watched colours -->
+
+	<color name="WatchedIconBackFO">862B2830</color>
+	<color name="WatchedIconBackNF">86FFFFF1</color>
+	<color name="WatchedIconDiffuseFO">86FFFFF1</color>
+	<color name="WatchedIconDiffuseNF">862B2830</color>
+
+	<!-- Dialogs -->
+
+	<color name="DialogBack">FFFFFFFF</color>
+	<color name="DialogBackground">FFBAA570</color>
+
+	<!-- Panels -->
+
+	<color name="PanelDiffuse">FFBAA570</color>
+	<color name="PanelDiffuseDivider">FF261E1B</color>
+	<color name="PanelListTitle">FF08090D</color>
+	<color name="PanelListLabel">FF261E1B</color>
+	<color name="PanelListItem">FF261E1B</color>
+	<color name="PanelListItemSelected">FF6E3E37</color>
+	<color name="PanelListItemDisabled">99261E1B</color>
+	<color name="PanelListItemFocused">FF660D00</color>
+
+</colors>

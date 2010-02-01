@@ -67,7 +67,7 @@
 			<description>buffering label</description>
 			<posx>0</posx>
 			<posy>350</posy>
-			<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE]</label>
+			<label>$LOCALIZE[15107]</label>
 			<width>1280</width>
 			<align>center</align>
 			<textcolor>white</textcolor>

@@ -119,7 +119,7 @@
 		</control>
 		<!-- Browser -->
 		<control type="panel" id="50">
-			<viewtype label="WALL">icon</viewtype>
+			<viewtype label="40292">icon</viewtype>
 			<posx>193</posx>
 			<posy>225</posy>
 			<width>900</width>
