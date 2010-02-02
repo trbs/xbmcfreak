@@ -16,42 +16,42 @@
 	<!-- Theme Colours -->
 	
 	<color name="BackgroundColor">bbffffc0</color>
-	<color name="BackgroundFilterColor">bb250000</color>
-	<color name="ButtonFilterColor">FFc89008</color>		<!--  FFad0909 is red, FFc89008 is yellow -->
-	<color name="ArrowFilterColor">FFc89008</color>
+	<color name="BackgroundFilterColor">dd000e20</color>
+	<color name="ButtonFilterColor">FF0b81c5</color>
+	<color name="ArrowFilterColor">FF0b81c5</color>
 	<color name="ProgressFilterColor">FFc89008</color>
 
 	<!-- Home 1 Colours -->
 
-	<color name="HomeWindowFrameColor">FFE0E0E0</color>
-	<color name="HomeWindowTextColour">cc250000</color>
-	<color name="HomeWindowTextBackgroundColour">FEFFFFFF</color>
+	<color name="HomeWindowFrameColor">aac89008</color>
+	<color name="HomeWindowTextColour">ccc89008</color>
+	<color name="HomeWindowTextBackgroundColour">00FFFFFF</color>
 
 	<!-- Home 2 & 3 Colour -->
 	
-	<color name="MainMenu">198c8c8c</color>
+	<color name="MainMenu">19ffffff</color>
 
 	<!-- Global Colours -->
 
 	<color name="Time">FFc7c7c7</color>
-	<color name="TimeAMPM">FFc89008</color>					<!-- ccb10000 -->
-	<color name="Date">FFf5b522</color>						<!-- ccb10000 is a Red color -->
-	<color name="RSSBody">bbffffff</color>
+	<color name="TimeAMPM">FF0b81c5</color>
+	<color name="Date">FFf5b522</color>
+	<color name="RSSBody">ccffffff</color>
 	<color name="RSSHighlight">bbffffff</color>
 	<color name="RSSHeadline">bbffffff</color>
-	<color name="RSSTitle">ccb10000</color>
-	<color name="NowPlayingTrack">bbffffff</color>			<!-- 66ffffff -->
-	<color name="TextFocused">FFc89008</color>				<!-- FFf5b522 -->
-	<color name="Text">bbFFFFFF</color>
+	<color name="RSSTitle">FF0b81c5</color>
+	<color name="NowPlayingTrack">bbffffff</color>
+	<color name="TextFocused">FFc89008</color>
+	<color name="Text">FFFFFFFF</color>
 	<color name="TextDisabled">FFff5858</color>
 	<color name="TextSelected">FFc89008</color>
 
 	<!-- Flags -->
 
-	<color name="FlagDiffuse">FFc7c7c7</color>
+	<color name="FlagDiffuse">ddc89008</color>
 	<color name="CodecDiffuse">FFc7c7c7</color>
 	<color name="StudioDiffuse">FFc7c7c7</color>
-	<color name="FlagText">FFc7c7c7</color>					<!-- dd250000 -->
+	<color name="FlagText">FFc7c7c7</color>
 	<color name="StarRatingDiffuse">FFc89008</color>
 
 	<!-- OSD -->
@@ -65,7 +65,7 @@
 
 	<!-- Window menu colours -->
 
-	<color name="MenuValue">FFc7c7c7</color>				<!--FFebebeb-->
+	<color name="MenuValue">FFc7c7c7</color>
 	<color name="MenuValueFO">FFc89008</color>
 	
 	<!-- Poster/Panel/Landscape view colours -->
@@ -86,10 +86,10 @@
 
 	<color name="InfoTitle">FFc7c7c7</color>
 	<color name="InfoPlot">FFc7c7c7</color>
-	<color name="InfoYear">FFc89008</color>	
+	<color name="InfoYear">ccc89008</color>	
 	<color name="InfoGenre">FFc7c7c7</color>		
 	<color name="InfoDetails">FFc7c7c7</color>
-	<color name="MovieInfoLines">bb250000</color>
+	<color name="MovieInfoLines">bb0b81c5</color>
 	<color name="InfoRating">FFc7c7c7</color>
 
 	<!-- Progress dialogs -->
@@ -102,21 +102,21 @@
 
 	<color name="ListTitleNF">FFc7c7c7</color>
 	<color name="ListTitleFO">FFc89008</color>
-	<color name="ListSelectedNF">ab907070</color>
-	<color name="ListSelectedFO">FF907070</color>
+	<color name="ListSelectedNF">cca6c1e0</color>
+	<color name="ListSelectedFO">FFa6c1e0</color>
 
 	<!-- Wall colours -->
 
-	<color name="WallIconDiffuse">f9808080</color>			<!-- f9404040 -->
+	<color name="WallIconDiffuse">f9606060</color>
 	<color name="WallArrowBackDiffuse">FFFFFFFF</color>
 	<color name="WallArrowDiffuse">FFc89008</color>
-	<color name="IconDiffuse">f9808080</color>				<!-- f9404040 -->
+	<color name="IconDiffuse">f9606060</color>
 	<color name="InfoPanelPictureDiffuse">ddFFFFFF</color>
 
 	<!-- Watched colours -->
 
-	<color name="WatchedIconBackFO">FF7a0808</color>
-	<color name="WatchedIconBackNF">FF400000</color>
+	<color name="WatchedIconBackFO">FF0d608f</color>
+	<color name="WatchedIconBackNF">860c4c70</color>
 	<color name="WatchedIconDiffuseFO">FFFFFFFF</color>
 	<color name="WatchedIconDiffuseNF">86FFFFFF</color>
 
@@ -127,9 +127,9 @@
 
 	<!-- Panels -->
 
-	<color name="PanelDiffuse">FF400000</color>
+	<color name="PanelDiffuse">FF001e42</color>
 	<color name="PanelDiffuseDivider">bbFFFFFF</color>
-	<color name="PanelListTitle">FFeb7015</color>
+	<color name="PanelListTitle">FF8080ff</color>
 	<color name="PanelListLabel">FFFFFFFF</color>
 	<color name="PanelListItem">FFFFFFFF</color>
 	<color name="PanelListItemSelected">FFf2f032</color>

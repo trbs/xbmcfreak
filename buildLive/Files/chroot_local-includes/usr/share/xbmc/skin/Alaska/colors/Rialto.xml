@@ -47,9 +47,12 @@
 	<!-- Flags -->
 
 	<color name="FlagDiffuse">FF261E1B</color>
+	<color name="CodecDiffuse">FF261E1B</color>
+	<color name="StudioDiffuse">FF261E1B</color>
 	<color name="FlagText">77BAA570</color>
 	<color name="FlagText2">FF261E1B</color>
 	<color name="StarRatingDiffuse">FF660D00</color>
+
 
 	<!-- OSD -->
 

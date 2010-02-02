@@ -51,7 +51,7 @@
 	<color name="FlagDiffuse">ddffffff</color>
 	<color name="CodecDiffuse">ddffffff</color>
 	<color name="StudioDiffuse">ddffffff</color>
-	<color name="FlagText">ddffffff</color>
+	<color name="FlagText">ddffffff</color>					<!--dd102b68-->
 	<color name="StarRatingDiffuse">ddffffff</color>
 
 	<!-- OSD -->
@@ -107,10 +107,10 @@
 
 	<!-- Wall colours -->
 
-	<color name="WallIconDiffuse">aa808080</color>
+	<color name="WallIconDiffuse">f9808080</color>
 	<color name="WallArrowBackDiffuse">FFFFFFFF</color>
 	<color name="WallArrowDiffuse">FFc89008</color>
-	<color name="IconDiffuse">aa808080</color>
+	<color name="IconDiffuse">f9808080</color>
 	<color name="InfoPanelPictureDiffuse">ddFFFFFF</color>
 
 	<!-- Watched colours -->
