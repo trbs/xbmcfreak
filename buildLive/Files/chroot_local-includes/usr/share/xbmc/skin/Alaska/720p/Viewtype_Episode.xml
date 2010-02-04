@@ -119,9 +119,9 @@
 				</control>
 				<include condition="Skin.HasSetting(tvoverlays) + Window.IsActive(25)">EpisodeTVOverlaysFO</include>
 				<control type="fadelabel">
-					<animation effect="slide" end="0,54" condition="IsEmpty(ListItem.Plot)">Conditional</animation>
+					<animation effect="slide" end="0,56" condition="IsEmpty(ListItem.Plot)">Conditional</animation>
 					<posx>292</posx>
-					<posy>12</posy>
+					<posy>10</posy>
 					<width>606</width>
 					<scrollout>false</scrollout>
 					<pauseatend>1800</pauseatend>
@@ -136,9 +136,9 @@
 					<visible>IsEmpty(ListItem.Episode)</visible>
 				</control>
 				<control type="fadelabel">
-					<animation effect="slide" end="0,54" condition="IsEmpty(ListItem.Plot)">Conditional</animation>
+					<animation effect="slide" end="0,56" condition="IsEmpty(ListItem.Plot)">Conditional</animation>
 					<posx>292</posx>
-					<posy>12</posy>
+					<posy>10</posy>
 					<width>606</width>
 					<scrollout>false</scrollout>
 					<pauseatend>1800</pauseatend>
@@ -154,7 +154,7 @@
 				</control>
 				<control type="textbox">
 					<posx>292</posx>
-					<posy>48</posy>
+					<posy>52</posy>
 					<width>610</width>
 					<height>96</height>
 					<align>left</align>

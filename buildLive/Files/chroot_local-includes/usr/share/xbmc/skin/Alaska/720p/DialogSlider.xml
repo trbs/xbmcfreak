@@ -9,7 +9,7 @@
 		<control type="group">
 			<include>Animation_ZoomOutZoomIn</include>
 			<posx>498</posx>
-			<posy>560</posy>
+			<posy>320</posy>
 			<width>300</width>
 			<height>183</height>
 			<control type="image">
