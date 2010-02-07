@@ -57,3 +57,7 @@ ldconfig
 
 #remove runonce
 rm -f /usr/share/xbmc/runonce
+
+#fix permissions makemkv
+chmod 777 /usr/bin/makemkv
+chmod 777 /usr/bin/makemkvcon
