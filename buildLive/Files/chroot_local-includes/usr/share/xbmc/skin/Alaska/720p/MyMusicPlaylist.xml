@@ -17,7 +17,8 @@
 			<onup>53</onup>
 			<ondown>53</ondown>
 			<itemgap>0</itemgap>
-			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+			<include condition="!Skin.HasSetting(ViewLockdown)">allowmenu</include>
+			<include condition="Skin.HasSetting(ViewLockdown)">nomenu</include>
 			<include>Animation_ZoomInMenu</include>
 			<orientation>horizontal</orientation>
 			<control type="button" id="30">
@@ -84,7 +85,8 @@
 			<onup>53</onup>
 			<ondown>53</ondown>
 			<itemgap>0</itemgap>
-			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+			<include condition="!Skin.HasSetting(ViewLockdown)">allowmenu</include>
+			<include condition="Skin.HasSetting(ViewLockdown)">nomenu</include>
 			<include>Animation_ZoomInMenu</include>
 			<orientation>horizontal</orientation>
 			<control type="button" id="7040">

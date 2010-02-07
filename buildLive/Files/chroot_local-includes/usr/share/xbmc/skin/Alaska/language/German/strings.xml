@@ -213,5 +213,17 @@
     <string id="40278">PLAYLISTE ÖFFNEN</string>
     <string id="40279">PLAYLISTE SPEICHERN</string>
     <string id="40280">PLAYLISTE SCHLIESSEN</string>
-	<string id="40281">Elemente</string> 
+	<string id="40281">Elemente</string>
+    <string id="40282">Cover[CR](Endlos)</string>
+	<string id="40283">Cover[CR](Normal)</string>
+	<string id="40284">Cover[CR](Quadrat)</string>
+	<string id="40285">Liste</string>
+	<string id="40286">Banner</string>
+	<string id="40287">Kacheln</string>
+	<string id="40288">Kacheln[CR](Weit)</string>
+	<string id="40289">Dateien</string>
+	<string id="40290">Episoden</string>
+	<string id="40291">Fanart</string>
+	<string id="40292">Fläche</string>
+	<string id="40293">Netz</string>	
 </strings>

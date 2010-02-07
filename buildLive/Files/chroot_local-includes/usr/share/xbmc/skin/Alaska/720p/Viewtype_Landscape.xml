@@ -219,7 +219,7 @@
 				<aligny>center</aligny>
 				<font>Font_LandScapeTVShow</font>
 				<textcolor>LandscapeTitle</textcolor>
-				<label>$INFO[ListItem.Premiered,[B]$LOCALIZE[20360]: [/B]]</label>
+				<label>$INFO[ListItem.Premiered,[B]$LOCALIZE[20416]: [/B]]</label>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
 			<control type="textbox">

@@ -153,7 +153,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>778</width>
-					<height>600</height>
+					<height>320</height>
 					<itemgap>6</itemgap>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
@@ -209,6 +209,20 @@
 						<label2>$INFO[Skin.String(SubtitleScript_Path)]</label2>
 						<onclick>Skin.SetFile(SubtitleScript_Path,.py)</onclick>
 						<visible>Skin.HasSetting(SubtitleDownload_Enable)</visible>
+					</control>
+					<control type="radiobutton" id="108">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[40294]</label>
+						<onclick>Skin.ToggleSetting(ViewLockdown)</onclick>
+						<selected>Skin.HasSetting(ViewLockdown)</selected>
+					</control>
+					<control type="radiobutton" id="109">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[40295]</label>
+						<onclick>Skin.ResetBool(ViewLockdown)</onclick>
+						<onclick>Skin.SetBool(ViewLockdown)</onclick>
+						<onclick>Skin.ToggleSetting(TotalLockdown)</onclick>
+						<selected>Skin.HasSetting(TotalLockdown)</selected>
 					</control>
 				</control>
 				<control type="grouplist" id="9002">
@@ -1237,7 +1251,7 @@
 					<width>20</width>
 					<texture>arrowupfo.png</texture>
 					<colordiffuse>ArrowFilterColor</colordiffuse>
-					<visible>[Container(9000).Hasfocus(2) + Container(9002).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9003).HasPrevious] | [Container(9000).Hasfocus(4) + Container(9004).HasPrevious] | [Container(9000).Hasfocus(5) + Container(9005).HasPrevious]</visible>
+					<visible>[Container(9000).Hasfocus(1) + Container(9001).HasPrevious] | [Container(9000).Hasfocus(2) + Container(9002).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9003).HasPrevious] | [Container(9000).Hasfocus(4) + Container(9004).HasPrevious] | [Container(9000).Hasfocus(5) + Container(9005).HasPrevious]</visible>
 				</control>
 				<control type="image">
 					<include>Animation_CommonFadeNoHide</include>
@@ -1249,7 +1263,7 @@
 					<width>20</width>
 					<texture>arrowdownfo.png</texture>
 					<colordiffuse>ArrowFilterColor</colordiffuse>
-					<visible>[Container(9000).Hasfocus(2) + Container(9002).HasNext] | [Container(9000).Hasfocus(3) + Container(9003).HasNext] | [Container(9000).Hasfocus(4) + Container(9004).HasNext] | [Container(9000).Hasfocus(5) + Container(9005).HasNext]</visible>
+					<visible>[Container(9000).Hasfocus(1) + Container(9001).HasNext] | [Container(9000).Hasfocus(2) + Container(9002).HasNext] | [Container(9000).Hasfocus(3) + Container(9003).HasNext] | [Container(9000).Hasfocus(4) + Container(9004).HasNext] | [Container(9000).Hasfocus(5) + Container(9005).HasNext]</visible>
 				</control>
 			</control>
 		</control>

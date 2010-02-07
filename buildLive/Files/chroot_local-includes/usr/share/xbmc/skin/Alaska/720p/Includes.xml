@@ -1208,4 +1208,13 @@
 			</control>
 		</control>
 	</include>
+	<include name="nomenu"> 
+		<visible>!Skin.HasSetting(ViewLockdown)</visible> 
+	</include> 
+	<include name="allowmenu"> 
+		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible> 
+	</include>
+	<include name="allowmenu_7001">
+		<visible allowhiddenfocus="true">ControlGroup(7001).HasFocus</visible>
+	</include>
 </includes>

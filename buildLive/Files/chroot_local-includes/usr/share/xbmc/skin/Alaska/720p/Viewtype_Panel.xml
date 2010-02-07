@@ -20,8 +20,8 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>Container.Content(albums) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-			<include condition="Window.IsActive(502)">SquarePanel</include>
+			<visible>Window.IsActive(501) | Window.IsActive(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+			<include condition="Window.IsActive(501) | Window.IsActive(502)">SquarePanel</include>
 			<include condition="Window.IsActive(25)">TallPanel</include>
 		</control>
 		<control type="panel" id="59">

@@ -41,7 +41,7 @@
 	<color name="RSSHeadline">FFFFFFFF</color>
 	<color name="RSSTitle">ff009ACD</color>
 	<color name="NowPlayingTrack">ff009ACD</color>
-	<color name="TextFocused">FFFFFFFF</color>
+	<color name="TextFocused">ff009ACD</color>
 	<color name="Text">FFB3B3B3</color>
 	<color name="TextDisabled">FFFFFFFF</color>
 	<color name="TextSelected">FF696969</color>

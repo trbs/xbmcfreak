@@ -228,5 +228,7 @@
 	<string id="40291">LANDSCAPE</string>
 	<string id="40292">WALL</string>
 	<string id="40293">GRID</string>
+	<string id="40294">View Lockdown</string>
+	<string id="40295">Total Lockdown</string>
 	
 </strings>
