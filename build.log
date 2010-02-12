@@ -1225,35 +1225,40 @@ P: Configuring file /etc/hostname
 P: Configuring file /bin/hostname
 P: Configuring file /etc/apt/apt.conf
 P: Configuring file /etc/apt/sources.list
+OK
 Get:1 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
-Hit http://ubuntu.apt-get.eu karmic Release
 Get:2 http://archive.ubuntu.com karmic-security Release.gpg [189B]
 Get:3 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
-Get:4 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Get:4 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:5 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Hit http://ubuntu.apt-get.eu karmic Release
+Get:6 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:7 http://archive.ubuntu.com karmic-security Release [44.1kB]
 Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Get:5 http://archive.ubuntu.com karmic-security Release [44.1kB]
+Get:8 http://archive.ubuntu.com karmic-backports Release [37.1kB]
 Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
+Get:9 http://ppa.launchpad.net karmic/main Packages [16.9kB]
+Get:10 http://archive.ubuntu.com karmic-updates Release [44.1kB]
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
-Get:6 http://archive.ubuntu.com karmic-backports Release [37.1kB]
+Get:11 http://ppa.launchpad.net karmic/main Sources [4239B]
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
-Get:7 http://archive.ubuntu.com karmic-updates Release [44.1kB]
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
-Get:8 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
+Get:12 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
+Get:13 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:14 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
+Get:15 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
-Get:9 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:16 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
+Get:17 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
+Get:18 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
+Get:19 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
+Get:20 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
+Get:21 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
+Get:22 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Get:10 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
-Get:11 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
-Get:12 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
-Get:13 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
-Get:14 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
-Get:15 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
-Get:16 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
-Get:17 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
-Get:18 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
-Get:19 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
-Fetched 568kB in 1s (367kB/s)
+Get:23 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
+Fetched 656kB in 1s (590kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -1298,7 +1303,7 @@ Get:29 http://archive.ubuntu.com karmic-security/main libk5crypto3 1.7dfsg~beta3
 Get:30 http://archive.ubuntu.com karmic-security/main ntpdate 1:4.2.4p6+dfsg-1ubuntu5.1 [66.8kB]
 Get:31 http://archive.ubuntu.com karmic-security/main openssl 0.9.8g-16ubuntu3.1 [398kB]
 Preconfiguring packages ...
-Fetched 18.1MB in 1s (12.9MB/s)
+Fetched 18.1MB in 1s (12.8MB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10856 files and directories currently installed.)
 Preparing to replace gzip 1.3.12-8ubuntu1 (using .../gzip_1.3.12-8ubuntu1.1_i386.deb) ...
 install-info: warning: maintainer scripts should not call install-info anymore,
@@ -1344,8 +1349,8 @@ Unpacking replacement tzdata ...
 Setting up tzdata (2009u-0ubuntu0.9.10) ...
 
 Current default time zone: 'Etc/UTC'
-Local time is now:      Sun Feb  7 11:02:49 UTC 2010.
-Universal Time is now:  Sun Feb  7 11:02:49 UTC 2010.
+Local time is now:      Sun Feb  7 16:04:01 UTC 2010.
+Universal Time is now:  Sun Feb  7 16:04:01 UTC 2010.
 Run 'dpkg-reconfigure tzdata' if you wish to change it.
 
 
@@ -1444,7 +1449,7 @@ Installing new version of config file /etc/rsyslog.conf ...
 All runlevel operations denied by policy
 
 Setting up udev (147~-6.1) ...
-udev start/running, process 25450
+udev start/running, process 28778
 Removing `local diversion of /sbin/udevadm to /sbin/udevadm.upgrade'
 update-initramfs: deferring update (trigger activated)
 
@@ -1472,22 +1477,28 @@ Reading state information...
 ubuntu-keyring is already the newest version.
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 Hit http://ubuntu.apt-get.eu karmic Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-security Release.gpg
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
 Hit http://ubuntu.apt-get.eu karmic Release
+Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-security Release
 Hit http://archive.ubuntu.com karmic-backports Release
 Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
 Hit http://archive.ubuntu.com karmic-updates Release
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
+Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
-Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Ign http://archive.ubuntu.com karmic-security/main Packages/DiffIndex
+Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
-Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
+Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Sources
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
 Ign http://archive.ubuntu.com karmic-security/universe Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-security/multiverse Packages/DiffIndex
@@ -1580,8 +1591,8 @@ Suggested packages:
   gcc-4.4-doc libstdc++6-4.4-dbg gcc-multilib manpages-dev automake1.9 flex
   bison gdb gcc-doc gcc-4.4-multilib libmudflap0-4.4-dev libgcc1-dbg
   libgomp1-dbg libmudflap0-dbg libcloog-ppl0 libppl-c2 libppl7 gettext-doc
-  groff multiboot-doc grub-emu desktop-base genisoimage gnome-device-manager
-  apmd texinfo-doc-nonfree isoquery nas glibc-doc libglide3 libdata-dump-perl
+  groff multiboot-doc grub-emu desktop-base gnome-device-manager apmd
+  texinfo-doc-nonfree isoquery nas glibc-doc libglide3 libdata-dump-perl
   liblcms-utils qt4-qtconfig libstdc++6-4.4-doc libcrypt-ssleay-perl
   libio-socket-ssl-perl fdutils linux-doc-2.6.31 linux-source-2.6.31
   www-browser spell diff-doc ed cpufrequtils libmail-box-perl zip wget lynx
@@ -1636,177 +1647,177 @@ The following NEW packages will be installed:
   xserver-xorg-video-vmware xserver-xorg-video-voodoo xterm
 0 upgraded, 214 newly installed, 0 to remove and 0 not upgraded.
 Need to get 126MB of archives.
-After this operation, 438MB of additional disk space will be used.
-Get:1 http://ubuntu.apt-get.eu karmic/main libxau6 1:1.0.4-2 [13.2kB]
-Get:2 http://ubuntu.apt-get.eu karmic/main libxdmcp6 1:1.0.2-3 [16.9kB]
-Get:3 http://archive.ubuntu.com karmic-updates/main x11-common 1:7.4+3ubuntu10 [315kB]
-Get:4 http://ubuntu.apt-get.eu karmic/main libxcb1 1.4-1 [45.4kB]
-Get:5 http://archive.ubuntu.com karmic-security/main linux-image-2.6.31-19-generic 2.6.31-19.56 [28.8MB]
-Get:6 http://ubuntu.apt-get.eu karmic/main libx11-data 2:1.2.2-1ubuntu1 [218kB]
-Get:7 http://ubuntu.apt-get.eu karmic/main libx11-6 2:1.2.2-1ubuntu1 [829kB]
-Get:8 http://ubuntu.apt-get.eu karmic/main libxext6 2:1.0.99.1-0ubuntu4 [28.9kB]
-Get:9 http://ubuntu.apt-get.eu karmic/main libxmuu1 2:1.0.4-2 [14.3kB]
-Get:10 http://ubuntu.apt-get.eu karmic/main xauth 1:1.0.3-2 [31.2kB]
-Get:11 http://ubuntu.apt-get.eu karmic/main libxfixes3 1:4.0.3-2build1 [10.6kB]
-Get:12 http://ubuntu.apt-get.eu karmic/main libice6 2:1.0.5-1 [52.7kB]
-Get:13 http://ubuntu.apt-get.eu karmic/main libsm6 2:1.1.0-2 [23.3kB]
-Get:14 http://ubuntu.apt-get.eu karmic/main libxt6 1:1.0.5-3ubuntu1 [170kB]
-Get:15 http://ubuntu.apt-get.eu karmic/main wireless-crda 1.10 [15.3kB]
-Get:16 http://ubuntu.apt-get.eu karmic/main libpng12-0 1.2.37-1 [176kB]
-Get:17 http://ubuntu.apt-get.eu karmic/main libxmu6 2:1.0.4-2 [55.8kB]
-Get:18 http://ubuntu.apt-get.eu karmic/main libxpm4 1:3.5.7-2 [42.7kB]
-Get:19 http://ubuntu.apt-get.eu karmic/main libxaw7 2:1.0.6-1 [208kB]
-Get:20 http://ubuntu.apt-get.eu karmic/main libxrender1 1:0.9.4-2ubuntu1 [26.8kB]
-Get:21 http://ubuntu.apt-get.eu karmic/main libxcursor1 1:1.1.9-1build1 [25.5kB]
-Get:22 http://ubuntu.apt-get.eu karmic/main libfreetype6 2.3.9-5 [408kB]
-Get:23 http://ubuntu.apt-get.eu karmic/main defoma 0.11.10-0.2ubuntu1 [101kB]
-Get:24 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-core 2.29-2 [1430kB]
-Get:25 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-extra 2.29-2 [3104kB]
-Get:26 http://ubuntu.apt-get.eu karmic/main ttf-dejavu 2.29-2 [3096B]
-Get:27 http://ubuntu.apt-get.eu karmic/main fontconfig-config 2.6.0-1ubuntu12 [51.6kB]
-Get:28 http://ubuntu.apt-get.eu karmic/main libfontconfig1 2.6.0-1ubuntu12 [92.4kB]
-Get:29 http://ubuntu.apt-get.eu karmic/main libxft2 2.1.13-3ubuntu1 [50.9kB]
-Get:30 http://ubuntu.apt-get.eu karmic/main libxkbfile1 1:1.0.5-1ubuntu2 [74.1kB]
-Get:31 http://ubuntu.apt-get.eu karmic/main libgmp3c2 2:4.3.1+dfsg-1ubuntu3 [331kB]
-Get:32 http://ubuntu.apt-get.eu karmic/main libmpfr1ldbl 2.4.1-1ubuntu1 [411kB]
-Get:33 http://ubuntu.apt-get.eu karmic/main cpp 4:4.4.1-1ubuntu2 [35.9kB]
-Get:34 http://ubuntu.apt-get.eu karmic/main x11-apps 7.4+2 [682kB]
-Get:35 http://ubuntu.apt-get.eu karmic/main x11-session-utils 7.3+1build1 [76.4kB]
-Get:36 http://ubuntu.apt-get.eu karmic/main libfontenc1 1:1.0.4-3 [18.3kB]
-Get:37 http://ubuntu.apt-get.eu karmic/main libdrm2 2.4.14-1ubuntu1 [393kB]
-Get:38 http://ubuntu.apt-get.eu karmic/main libxdamage1 1:1.1.1-4 [10.0kB]
-Get:39 http://ubuntu.apt-get.eu karmic/main libxxf86vm1 1:1.0.2-1ubuntu1 [14.2kB]
-Get:40 http://ubuntu.apt-get.eu karmic/main libgl1-mesa-glx 7.6.0-1ubuntu4 [120kB]
-Get:41 http://ubuntu.apt-get.eu karmic/main libxi6 2:1.2.1-2ubuntu1 [29.9kB]
-Get:42 http://ubuntu.apt-get.eu karmic/main libxinerama1 2:1.0.3-2 [10.2kB]
-Get:43 http://ubuntu.apt-get.eu karmic/main libxtst6 2:1.0.3-1ubuntu2 [13.1kB]
-Get:44 http://ubuntu.apt-get.eu karmic/main libxv1 2:1.0.4-1 [16.2kB]
-Get:45 http://ubuntu.apt-get.eu karmic/main libxxf86dga1 2:1.0.2-1build1 [16.6kB]
-Get:46 http://ubuntu.apt-get.eu karmic/main x11-utils 7.4+1build1 [204kB]
-Get:47 http://ubuntu.apt-get.eu karmic/main libfs6 2:1.0.2-1 [32.9kB]
-Get:48 http://ubuntu.apt-get.eu karmic/main x11-xfs-utils 7.4+1build1 [26.3kB]
-Get:49 http://ubuntu.apt-get.eu karmic/main x11-xkb-utils 7.4+3 [184kB]
-Get:50 http://ubuntu.apt-get.eu karmic/main libxrandr2 2:1.3.0-2 [27.5kB]
-Get:51 http://ubuntu.apt-get.eu karmic/main libxtrap6 2:1.0.0-5build1 [17.8kB]
-Get:52 http://ubuntu.apt-get.eu karmic/main libxxf86misc1 1:1.0.1-3 [7918B]
-Get:53 http://ubuntu.apt-get.eu karmic/main x11-xserver-utils 7.4+2ubuntu3 [191kB]
-Get:54 http://ubuntu.apt-get.eu karmic/main xbitmaps 1.0.1-2ubuntu1 [26.9kB]
-Get:55 http://ubuntu.apt-get.eu karmic/main bsdmainutils 6.1.10ubuntu4 [177kB]
-Get:56 http://ubuntu.apt-get.eu karmic/main gettext-base 0.17-8ubuntu2 [70.4kB]
-Get:57 http://ubuntu.apt-get.eu karmic/main groff-base 1.20.1-5 [1091kB]
-Get:58 http://ubuntu.apt-get.eu karmic/main hdparm 9.15-1ubuntu4 [83.7kB]
-Get:59 http://ubuntu.apt-get.eu karmic/main install-info 4.13a.dfsg.1-4ubuntu1 [145kB]
-Get:60 http://ubuntu.apt-get.eu karmic/main info 4.13a.dfsg.1-4ubuntu1 [211kB]
-Get:61 http://ubuntu.apt-get.eu karmic/main iso-codes 3.10.2-1 [2277kB]
-Get:62 http://ubuntu.apt-get.eu karmic/main libcompress-bzip2-perl 2.09-2 [61.7kB]
-Get:63 http://ubuntu.apt-get.eu karmic/main libfont-afm-perl 1.20-1 [14.3kB]
-Get:64 http://ubuntu.apt-get.eu karmic/main libhtml-tagset-perl 3.20-2 [13.5kB]
-Get:65 http://ubuntu.apt-get.eu karmic/main liburi-perl 1.37+dfsg-1ubuntu1 [88.6kB]
-Get:66 http://ubuntu.apt-get.eu karmic/main libhtml-tree-perl 3.23-1 [209kB]
-Get:67 http://ubuntu.apt-get.eu karmic/main libhtml-format-perl 2.04-2 [39.6kB]
-Get:68 http://ubuntu.apt-get.eu karmic/main libmailtools-perl 2.04-1 [98.0kB]
-Get:69 http://ubuntu.apt-get.eu karmic/main libpci3 1:3.0.0-4ubuntu13 [48.1kB]
-Get:70 http://ubuntu.apt-get.eu karmic/main libwww-perl 5.831-1 [399kB]
-Get:71 http://ubuntu.apt-get.eu karmic/main libwww-perl 5.831-1 [399kB]
-Get:72 http://ubuntu.apt-get.eu karmic/main libxml-parser-perl 2.36-1.1build2 [323kB]
-Get:73 http://ubuntu.apt-get.eu karmic/main man-db 2.5.6-2 [1098kB]
-Get:74 http://ubuntu.apt-get.eu karmic/main nano 2.0.9-2 [299kB]
-Get:75 http://ubuntu.apt-get.eu karmic/main pciutils 1:3.0.0-4ubuntu13 [181kB]
-Get:76 http://ubuntu.apt-get.eu karmic/main powermgmt-base 1.30+nmu1 [11.4kB]
-Get:77 http://ubuntu.apt-get.eu karmic/main usbutils 0.82-0ubuntu1 [170kB]
-Get:78 http://ubuntu.apt-get.eu karmic/main uuid-runtime 2.16-1ubuntu5 [59.6kB]
-Get:79 http://ubuntu.apt-get.eu karmic/main m4 1.4.13-2 [241kB]
-Get:80 http://ubuntu.apt-get.eu karmic/main autoconf 2.64-1ubuntu1 [558kB]
-Get:81 http://ubuntu.apt-get.eu karmic/main autotools-dev 20090427.1 [63.7kB]
-Get:82 http://ubuntu.apt-get.eu karmic/main automake 1:1.11-1 [559kB]
-Get:83 http://ubuntu.apt-get.eu karmic/main gcc 4:4.4.1-1ubuntu2 [5078B]
-Get:84 http://ubuntu.apt-get.eu karmic/main g++ 4:4.4.1-1ubuntu2 [1446B]
-Get:85 http://ubuntu.apt-get.eu karmic/main patch 2.5.9-5 [100kB]
-Get:86 http://ubuntu.apt-get.eu karmic/main dpkg-dev 1.15.4ubuntu2 [573kB]
-Get:87 http://ubuntu.apt-get.eu karmic/main build-essential 11.4 [7172B]
-Get:88 http://ubuntu.apt-get.eu karmic/main html2text 1.3.2a-14 [101kB]
-Get:89 http://archive.ubuntu.com karmic-security/main libexpat1 2.0.1-4ubuntu1.1 [138kB]
-Get:90 http://ubuntu.apt-get.eu karmic/main libcroco3 0.6.1-2 [91.1kB]
-Get:91 http://ubuntu.apt-get.eu karmic/main gettext 0.17-8ubuntu2 [1732kB]
+After this operation, 440MB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net karmic/main linux-libc-dev 2.6.32-12.17~ricotz1 [762kB]
+Get:2 http://ppa.launchpad.net karmic/main libdbus-glib-1-2 0.82-2~ricotz1 [70.1kB]
+Get:3 http://ppa.launchpad.net karmic/main grub-common 1.98~20100128-1ubuntu3~9.10~ricotz1 [1533kB]
+Get:4 http://ubuntu.apt-get.eu karmic/main libxau6 1:1.0.4-2 [13.2kB]
+Get:5 http://ubuntu.apt-get.eu karmic/main libxdmcp6 1:1.0.2-3 [16.9kB]
+Get:6 http://ubuntu.apt-get.eu karmic/main libxcb1 1.4-1 [45.4kB]
+Get:7 http://archive.ubuntu.com karmic-updates/main x11-common 1:7.4+3ubuntu10 [315kB]
+Get:8 http://archive.ubuntu.com karmic-security/main linux-image-2.6.31-19-generic 2.6.31-19.56 [28.8MB]
+Get:9 http://ubuntu.apt-get.eu karmic/main libx11-data 2:1.2.2-1ubuntu1 [218kB]
+Get:10 http://ubuntu.apt-get.eu karmic/main libx11-6 2:1.2.2-1ubuntu1 [829kB]
+Get:11 http://ppa.launchpad.net karmic/main grub-pc 1.98~20100128-1ubuntu3~9.10~ricotz1 [613kB]
+Get:12 http://ubuntu.apt-get.eu karmic/main libxext6 2:1.0.99.1-0ubuntu4 [28.9kB]
+Get:13 http://ubuntu.apt-get.eu karmic/main libxmuu1 2:1.0.4-2 [14.3kB]
+Get:14 http://ubuntu.apt-get.eu karmic/main xauth 1:1.0.3-2 [31.2kB]
+Get:15 http://ubuntu.apt-get.eu karmic/main libxfixes3 1:4.0.3-2build1 [10.6kB]
+Get:16 http://ubuntu.apt-get.eu karmic/main libice6 2:1.0.5-1 [52.7kB]
+Get:17 http://ubuntu.apt-get.eu karmic/main libsm6 2:1.1.0-2 [23.3kB]
+Get:18 http://ubuntu.apt-get.eu karmic/main libxt6 1:1.0.5-3ubuntu1 [170kB]
+Get:19 http://ubuntu.apt-get.eu karmic/main wireless-crda 1.10 [15.3kB]
+Get:20 http://ubuntu.apt-get.eu karmic/main libpng12-0 1.2.37-1 [176kB]
+Get:21 http://ubuntu.apt-get.eu karmic/main libxmu6 2:1.0.4-2 [55.8kB]
+Get:22 http://ubuntu.apt-get.eu karmic/main libxpm4 1:3.5.7-2 [42.7kB]
+Get:23 http://ubuntu.apt-get.eu karmic/main libxaw7 2:1.0.6-1 [208kB]
+Get:24 http://ubuntu.apt-get.eu karmic/main libxrender1 1:0.9.4-2ubuntu1 [26.8kB]
+Get:25 http://ubuntu.apt-get.eu karmic/main libxcursor1 1:1.1.9-1build1 [25.5kB]
+Get:26 http://ubuntu.apt-get.eu karmic/main libfreetype6 2.3.9-5 [408kB]
+Get:27 http://ubuntu.apt-get.eu karmic/main defoma 0.11.10-0.2ubuntu1 [101kB]
+Get:28 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-core 2.29-2 [1430kB]
+Get:29 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-extra 2.29-2 [3104kB]
+Get:30 http://ubuntu.apt-get.eu karmic/main ttf-dejavu 2.29-2 [3096B]
+Get:31 http://ubuntu.apt-get.eu karmic/main fontconfig-config 2.6.0-1ubuntu12 [51.6kB]
+Get:32 http://ubuntu.apt-get.eu karmic/main libfontconfig1 2.6.0-1ubuntu12 [92.4kB]
+Get:33 http://ubuntu.apt-get.eu karmic/main libxft2 2.1.13-3ubuntu1 [50.9kB]
+Get:34 http://ubuntu.apt-get.eu karmic/main libxkbfile1 1:1.0.5-1ubuntu2 [74.1kB]
+Get:35 http://ubuntu.apt-get.eu karmic/main libgmp3c2 2:4.3.1+dfsg-1ubuntu3 [331kB]
+Get:36 http://ubuntu.apt-get.eu karmic/main libmpfr1ldbl 2.4.1-1ubuntu1 [411kB]
+Get:37 http://ubuntu.apt-get.eu karmic/main cpp 4:4.4.1-1ubuntu2 [35.9kB]
+Get:38 http://ubuntu.apt-get.eu karmic/main x11-apps 7.4+2 [682kB]
+Get:39 http://ubuntu.apt-get.eu karmic/main x11-session-utils 7.3+1build1 [76.4kB]
+Get:40 http://ubuntu.apt-get.eu karmic/main libfontenc1 1:1.0.4-3 [18.3kB]
+Get:41 http://ubuntu.apt-get.eu karmic/main libdrm2 2.4.14-1ubuntu1 [393kB]
+Get:42 http://ubuntu.apt-get.eu karmic/main libxdamage1 1:1.1.1-4 [10.0kB]
+Get:43 http://ubuntu.apt-get.eu karmic/main libxxf86vm1 1:1.0.2-1ubuntu1 [14.2kB]
+Get:44 http://ubuntu.apt-get.eu karmic/main libgl1-mesa-glx 7.6.0-1ubuntu4 [120kB]
+Get:45 http://ubuntu.apt-get.eu karmic/main libxi6 2:1.2.1-2ubuntu1 [29.9kB]
+Get:46 http://ubuntu.apt-get.eu karmic/main libxinerama1 2:1.0.3-2 [10.2kB]
+Get:47 http://ubuntu.apt-get.eu karmic/main libxtst6 2:1.0.3-1ubuntu2 [13.1kB]
+Get:48 http://ubuntu.apt-get.eu karmic/main libxv1 2:1.0.4-1 [16.2kB]
+Get:49 http://ubuntu.apt-get.eu karmic/main libxxf86dga1 2:1.0.2-1build1 [16.6kB]
+Get:50 http://ubuntu.apt-get.eu karmic/main x11-utils 7.4+1build1 [204kB]
+Get:51 http://ubuntu.apt-get.eu karmic/main libfs6 2:1.0.2-1 [32.9kB]
+Get:52 http://ubuntu.apt-get.eu karmic/main x11-xfs-utils 7.4+1build1 [26.3kB]
+Get:53 http://ubuntu.apt-get.eu karmic/main x11-xkb-utils 7.4+3 [184kB]
+Get:54 http://ubuntu.apt-get.eu karmic/main libxrandr2 2:1.3.0-2 [27.5kB]
+Get:55 http://ubuntu.apt-get.eu karmic/main libxtrap6 2:1.0.0-5build1 [17.8kB]
+Get:56 http://ubuntu.apt-get.eu karmic/main libxxf86misc1 1:1.0.1-3 [7918B]
+Get:57 http://ubuntu.apt-get.eu karmic/main x11-xserver-utils 7.4+2ubuntu3 [191kB]
+Get:58 http://ubuntu.apt-get.eu karmic/main xbitmaps 1.0.1-2ubuntu1 [26.9kB]
+Get:59 http://ubuntu.apt-get.eu karmic/main bsdmainutils 6.1.10ubuntu4 [177kB]
+Get:60 http://ubuntu.apt-get.eu karmic/main gettext-base 0.17-8ubuntu2 [70.4kB]
+Get:61 http://ubuntu.apt-get.eu karmic/main groff-base 1.20.1-5 [1091kB]
+Get:62 http://ubuntu.apt-get.eu karmic/main hdparm 9.15-1ubuntu4 [83.7kB]
+Get:63 http://ubuntu.apt-get.eu karmic/main install-info 4.13a.dfsg.1-4ubuntu1 [145kB]
+Get:64 http://ubuntu.apt-get.eu karmic/main info 4.13a.dfsg.1-4ubuntu1 [211kB]
+Get:65 http://ubuntu.apt-get.eu karmic/main iso-codes 3.10.2-1 [2277kB]
+Get:66 http://ubuntu.apt-get.eu karmic/main libcompress-bzip2-perl 2.09-2 [61.7kB]
+Get:67 http://ubuntu.apt-get.eu karmic/main libfont-afm-perl 1.20-1 [14.3kB]
+Get:68 http://ubuntu.apt-get.eu karmic/main libhtml-tagset-perl 3.20-2 [13.5kB]
+Get:69 http://ubuntu.apt-get.eu karmic/main liburi-perl 1.37+dfsg-1ubuntu1 [88.6kB]
+Get:70 http://ubuntu.apt-get.eu karmic/main libhtml-tree-perl 3.23-1 [209kB]
+Get:71 http://ubuntu.apt-get.eu karmic/main libhtml-format-perl 2.04-2 [39.6kB]
+Get:72 http://ubuntu.apt-get.eu karmic/main libmailtools-perl 2.04-1 [98.0kB]
+Get:73 http://ubuntu.apt-get.eu karmic/main libpci3 1:3.0.0-4ubuntu13 [48.1kB]
+Get:74 http://ubuntu.apt-get.eu karmic/main libwww-perl 5.831-1 [399kB]
+Get:75 http://ubuntu.apt-get.eu karmic/main libwww-perl 5.831-1 [399kB]
+Get:76 http://ubuntu.apt-get.eu karmic/main libxml-parser-perl 2.36-1.1build2 [323kB]
+Get:77 http://ubuntu.apt-get.eu karmic/main man-db 2.5.6-2 [1098kB]
+Get:78 http://ubuntu.apt-get.eu karmic/main nano 2.0.9-2 [299kB]
+Get:79 http://ubuntu.apt-get.eu karmic/main pciutils 1:3.0.0-4ubuntu13 [181kB]
+Get:80 http://ubuntu.apt-get.eu karmic/main powermgmt-base 1.30+nmu1 [11.4kB]
+Get:81 http://ubuntu.apt-get.eu karmic/main usbutils 0.82-0ubuntu1 [170kB]
+Get:82 http://ubuntu.apt-get.eu karmic/main uuid-runtime 2.16-1ubuntu5 [59.6kB]
+Get:83 http://ubuntu.apt-get.eu karmic/main m4 1.4.13-2 [241kB]
+Get:84 http://ubuntu.apt-get.eu karmic/main autoconf 2.64-1ubuntu1 [558kB]
+Get:85 http://ubuntu.apt-get.eu karmic/main autotools-dev 20090427.1 [63.7kB]
+Get:86 http://ubuntu.apt-get.eu karmic/main automake 1:1.11-1 [559kB]
+Get:87 http://ubuntu.apt-get.eu karmic/main gcc 4:4.4.1-1ubuntu2 [5078B]
+Get:88 http://ubuntu.apt-get.eu karmic/main g++ 4:4.4.1-1ubuntu2 [1446B]
+Get:89 http://ubuntu.apt-get.eu karmic/main patch 2.5.9-5 [100kB]
+Get:90 http://ubuntu.apt-get.eu karmic/main dpkg-dev 1.15.4ubuntu2 [573kB]
+Get:91 http://archive.ubuntu.com karmic-security/main libexpat1 2.0.1-4ubuntu1.1 [138kB]
 Get:92 http://archive.ubuntu.com karmic-updates/main cpp-4.4 4.4.1-4ubuntu9 [3544kB]
-Get:93 http://ubuntu.apt-get.eu karmic/main intltool-debian 0.35.0+20060710.1 [31.6kB]
-Get:94 http://ubuntu.apt-get.eu karmic/main po-debconf 1.0.16 [224kB]
-Get:95 http://ubuntu.apt-get.eu karmic/main debhelper 7.3.15ubuntu3 [440kB]
-Get:96 http://ubuntu.apt-get.eu karmic/main fdupes 1.50-PR2-2 [19.3kB]
-Get:97 http://ubuntu.apt-get.eu karmic/main intltool 0.41.0-0ubuntu1 [52.5kB]
-Get:98 http://ubuntu.apt-get.eu karmic/main cdbs 0.4.59ubuntu4 [1026kB]
-Get:99 http://ubuntu.apt-get.eu karmic/main libck-connector0 0.3.1-0ubuntu2 [53.8kB]
-Get:100 http://ubuntu.apt-get.eu karmic/main libdbus-glib-1-2 0.80-4ubuntu1 [70.2kB]
-Get:101 http://ubuntu.apt-get.eu karmic/main libeggdbus-1-0 0.5-1 [97.2kB]
-Get:102 http://ubuntu.apt-get.eu karmic/main libpolkit-gobject-1-0 0.94-1ubuntu1 [42.5kB]
-Get:103 http://ubuntu.apt-get.eu karmic/main dbus 1.2.16-0ubuntu9 [189kB]
-Get:104 http://ubuntu.apt-get.eu karmic/main consolekit 0.3.1-0ubuntu2 [99.9kB]
-Get:105 http://ubuntu.apt-get.eu karmic/main libcurl3 7.19.5-1ubuntu2 [212kB]
-Get:106 http://ubuntu.apt-get.eu karmic/main curl 7.19.5-1ubuntu2 [196kB]
-Get:107 http://archive.ubuntu.com karmic-security/main libhtml-parser-perl 3.61-1ubuntu0.1 [112kB]
-Get:108 http://ubuntu.apt-get.eu karmic/main update-inetd 4.31 [16.9kB]
-Get:109 http://ubuntu.apt-get.eu karmic/main cvs 1:1.12.13-12ubuntu1 [1685kB]
-Get:110 http://archive.ubuntu.com karmic-updates/main binutils 2.20-0ubuntu2 [1599kB]
-Get:111 http://ubuntu.apt-get.eu karmic/main dh-make 0.48 [42.3kB]
-Get:112 http://ubuntu.apt-get.eu karmic/main dkms 2.1.0.1-0ubuntu1 [62.1kB]
-Get:113 http://ubuntu.apt-get.eu karmic/main fakeroot 1.12.4ubuntu1 [126kB]
-Get:114 http://ubuntu.apt-get.eu karmic/main fontconfig 2.6.0-1ubuntu12 [137kB]
-Get:115 http://archive.ubuntu.com karmic-updates/main libc-dev-bin 2.10.1-0ubuntu16 [207kB]
-Get:116 http://archive.ubuntu.com karmic-security/main linux-libc-dev 2.6.31-19.56 [743kB]
-Get:117 http://ubuntu.apt-get.eu karmic/main libhal1 0.5.13-1ubuntu8 [104kB]
-Get:118 http://archive.ubuntu.com karmic-updates/main libc6-dev 2.10.1-0ubuntu16 [4761kB]
-Get:119 http://ubuntu.apt-get.eu karmic/main libhal-storage1 0.5.13-1ubuntu8 [24.3kB]
-Get:120 http://ubuntu.apt-get.eu karmic/main hal-info 20090716-0ubuntu1 [43.9kB]
-Get:121 http://ubuntu.apt-get.eu karmic/main hal 0.5.13-1ubuntu8 [378kB]
-Get:122 http://ubuntu.apt-get.eu karmic/main libaudio2 1.9.2-1 [84.6kB]
-Get:123 http://ubuntu.apt-get.eu karmic/main libdrm-intel1 2.4.14-1ubuntu1 [391kB]
-Get:124 http://archive.ubuntu.com karmic-updates/main libgomp1 4.4.1-4ubuntu9 [24.2kB]
-Get:125 http://archive.ubuntu.com karmic-updates/main gcc-4.4 4.4.1-4ubuntu9 [2976kB]
-Get:126 http://ubuntu.apt-get.eu karmic/main libdrm-radeon1 2.4.14-1ubuntu1 [382kB]
-Get:127 http://ubuntu.apt-get.eu karmic/main libjpeg62 6b-14build1 [92.7kB]
-Get:128 http://archive.ubuntu.com karmic-updates/main libstdc++6-4.4-dev 4.4.1-4ubuntu9 [1490kB]
-Get:129 http://ubuntu.apt-get.eu karmic/main liblcms1 1.18.dfsg-1ubuntu1 [103kB]
-Get:130 http://ubuntu.apt-get.eu karmic/main libsys-hostname-long-perl 1.4-2 [11.4kB]
-Get:131 http://ubuntu.apt-get.eu karmic/main libmail-sendmail-perl 0.79.16-1 [26.5kB]
-Get:132 http://ubuntu.apt-get.eu karmic/main libmng1 1.0.9-1build1 [209kB]
-Get:133 http://archive.ubuntu.com karmic-updates/main g++-4.4 4.4.1-4ubuntu9 [4701kB]
-Get:134 http://ubuntu.apt-get.eu karmic/main libpam-ck-connector 0.3.1-0ubuntu2 [8164B]
-Get:135 http://ubuntu.apt-get.eu karmic/main libpixman-1-0 0.14.0-1 [159kB]
-Get:136 http://ubuntu.apt-get.eu karmic/main libqtcore4 4.5.3really4.5.2-0ubuntu1 [1505kB]
-Get:137 http://ubuntu.apt-get.eu karmic/main libtiff4 3.8.2-13 [131kB]
-Get:138 http://archive.ubuntu.com karmic-updates/main linux-firmware 1.25 [5714kB]
-Get:139 http://ubuntu.apt-get.eu karmic/main libqtgui4 4.5.3really4.5.2-0ubuntu1 [3617kB]
-Get:140 http://ubuntu.apt-get.eu karmic/main libx86-1 1.1+ds1-4 [8888B]
-Get:141 http://ubuntu.apt-get.eu karmic/main libxfont1 1:1.4.0-1ubuntu1 [152kB]
-Get:142 http://ubuntu.apt-get.eu karmic/main libxvmc1 2:1.0.4-2ubuntu2 [20.2kB]
-Get:143 http://ubuntu.apt-get.eu karmic/main localechooser-data 2.12ubuntu2 [26.4kB]
-Get:144 http://ubuntu.apt-get.eu karmic/main os-prober 1.35 [22.1kB]
-Get:145 http://archive.ubuntu.com karmic-security/main linux-image-generic 2.6.31.19.32 [3380B]
-Get:146 http://archive.ubuntu.com karmic-security/main linux-generic 2.6.31.19.32 [3372B]
-Get:147 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19 2.6.31-19.56 [9531kB]
-Get:148 http://ubuntu.apt-get.eu karmic/main pm-utils 1.2.5-2ubuntu7 [92.7kB]
-Get:149 http://ubuntu.apt-get.eu karmic/main libpciaccess0 0.10.6-2ubuntu1 [29.5kB]
-Get:150 http://ubuntu.apt-get.eu karmic/main radeontool 1.5+git76606164-0ubuntu2 [56.3kB]
-Get:151 http://ubuntu.apt-get.eu karmic/main smartdimmer 0.8b4-1ubuntu2 [36.7kB]
-Get:152 http://ubuntu.apt-get.eu karmic/main unzip 6.0-1 [181kB]
-Get:153 http://ubuntu.apt-get.eu karmic/main vbetool 1.1-2 [10.9kB]
-Get:154 http://ubuntu.apt-get.eu karmic/main xfonts-encodings 1:1.0.2-3 [584kB]
-Get:155 http://ubuntu.apt-get.eu karmic/main xfonts-utils 1:7.4+1ubuntu1 [92.0kB]
-Get:156 http://ubuntu.apt-get.eu karmic/main xfonts-100dpi 1:1.0.0-4build1 [3908kB]
-Get:157 http://ubuntu.apt-get.eu karmic/main xfonts-75dpi 1:1.0.0-4build1 [3472kB]
-Get:158 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19-generic 2.6.31-19.56 [674kB]
-Get:159 http://archive.ubuntu.com karmic-security/main linux-headers-generic 2.6.31.19.32 [3368B]
-Get:160 http://archive.ubuntu.com karmic-updates/universe xlibmesa-glu 1:7.4+3ubuntu10 [954B]
-Get:161 http://archive.ubuntu.com karmic-security/main xserver-common 2:1.6.4-2ubuntu4.1 [74.8kB]
-Get:162 http://archive.ubuntu.com karmic-security/main xserver-xorg-core 2:1.6.4-2ubuntu4.1 [2215kB]
-Get:163 http://ubuntu.apt-get.eu karmic/main xfonts-base 1:1.0.0-6 [6133kB]
-Get:164 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-intel 2:2.9.0-1ubuntu2.1 [600kB]
-Get:165 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-all 1:7.4+3ubuntu10 [1166B]
-Get:166 http://archive.ubuntu.com karmic-updates/main xserver-xorg-input-all 1:7.4+3ubuntu10 [1028B]
-Get:167 http://archive.ubuntu.com karmic-updates/main xserver-xorg 1:7.4+3ubuntu10 [29.0kB]
-Get:168 http://archive.ubuntu.com karmic-updates/main xorg 1:7.4+3ubuntu10 [1282B]
-Get:169 http://archive.ubuntu.com karmic-security/main grub-common 1.97~beta4-1ubuntu4.1 [994kB]
-Get:170 http://archive.ubuntu.com karmic-security/main grub-pc 1.97~beta4-1ubuntu4.1 [434kB]
+Get:93 http://ubuntu.apt-get.eu karmic/main build-essential 11.4 [7172B]
+Get:94 http://ubuntu.apt-get.eu karmic/main html2text 1.3.2a-14 [101kB]
+Get:95 http://ubuntu.apt-get.eu karmic/main libcroco3 0.6.1-2 [91.1kB]
+Get:96 http://ubuntu.apt-get.eu karmic/main gettext 0.17-8ubuntu2 [1732kB]
+Get:97 http://archive.ubuntu.com karmic-security/main libhtml-parser-perl 3.61-1ubuntu0.1 [112kB]
+Get:98 http://ubuntu.apt-get.eu karmic/main intltool-debian 0.35.0+20060710.1 [31.6kB]
+Get:99 http://ubuntu.apt-get.eu karmic/main po-debconf 1.0.16 [224kB]
+Get:100 http://archive.ubuntu.com karmic-updates/main binutils 2.20-0ubuntu2 [1599kB]
+Get:101 http://ubuntu.apt-get.eu karmic/main debhelper 7.3.15ubuntu3 [440kB]
+Get:102 http://ubuntu.apt-get.eu karmic/main fdupes 1.50-PR2-2 [19.3kB]
+Get:103 http://ubuntu.apt-get.eu karmic/main intltool 0.41.0-0ubuntu1 [52.5kB]
+Get:104 http://ubuntu.apt-get.eu karmic/main cdbs 0.4.59ubuntu4 [1026kB]
+Get:105 http://archive.ubuntu.com karmic-updates/main libc-dev-bin 2.10.1-0ubuntu16 [207kB]
+Get:106 http://archive.ubuntu.com karmic-updates/main libc6-dev 2.10.1-0ubuntu16 [4761kB]
+Get:107 http://ubuntu.apt-get.eu karmic/main libck-connector0 0.3.1-0ubuntu2 [53.8kB]
+Get:108 http://ubuntu.apt-get.eu karmic/main libeggdbus-1-0 0.5-1 [97.2kB]
+Get:109 http://ubuntu.apt-get.eu karmic/main libpolkit-gobject-1-0 0.94-1ubuntu1 [42.5kB]
+Get:110 http://ubuntu.apt-get.eu karmic/main dbus 1.2.16-0ubuntu9 [189kB]
+Get:111 http://ubuntu.apt-get.eu karmic/main consolekit 0.3.1-0ubuntu2 [99.9kB]
+Get:112 http://ubuntu.apt-get.eu karmic/main libcurl3 7.19.5-1ubuntu2 [212kB]
+Get:113 http://ubuntu.apt-get.eu karmic/main curl 7.19.5-1ubuntu2 [196kB]
+Get:114 http://ubuntu.apt-get.eu karmic/main update-inetd 4.31 [16.9kB]
+Get:115 http://ubuntu.apt-get.eu karmic/main cvs 1:1.12.13-12ubuntu1 [1685kB]
+Get:116 http://archive.ubuntu.com karmic-updates/main libgomp1 4.4.1-4ubuntu9 [24.2kB]
+Get:117 http://archive.ubuntu.com karmic-updates/main gcc-4.4 4.4.1-4ubuntu9 [2976kB]
+Get:118 http://ubuntu.apt-get.eu karmic/main dh-make 0.48 [42.3kB]
+Get:119 http://ubuntu.apt-get.eu karmic/main dkms 2.1.0.1-0ubuntu1 [62.1kB]
+Get:120 http://ubuntu.apt-get.eu karmic/main fakeroot 1.12.4ubuntu1 [126kB]
+Get:121 http://ubuntu.apt-get.eu karmic/main fontconfig 2.6.0-1ubuntu12 [137kB]
+Get:122 http://ubuntu.apt-get.eu karmic/main libhal1 0.5.13-1ubuntu8 [104kB]
+Get:123 http://ubuntu.apt-get.eu karmic/main libhal-storage1 0.5.13-1ubuntu8 [24.3kB]
+Get:124 http://ubuntu.apt-get.eu karmic/main hal-info 20090716-0ubuntu1 [43.9kB]
+Get:125 http://ubuntu.apt-get.eu karmic/main hal 0.5.13-1ubuntu8 [378kB]
+Get:126 http://archive.ubuntu.com karmic-updates/main libstdc++6-4.4-dev 4.4.1-4ubuntu9 [1490kB]
+Get:127 http://ubuntu.apt-get.eu karmic/main libaudio2 1.9.2-1 [84.6kB]
+Get:128 http://ubuntu.apt-get.eu karmic/main libdrm-intel1 2.4.14-1ubuntu1 [391kB]
+Get:129 http://archive.ubuntu.com karmic-updates/main g++-4.4 4.4.1-4ubuntu9 [4701kB]
+Get:130 http://ubuntu.apt-get.eu karmic/main libdrm-radeon1 2.4.14-1ubuntu1 [382kB]
+Get:131 http://ubuntu.apt-get.eu karmic/main libjpeg62 6b-14build1 [92.7kB]
+Get:132 http://ubuntu.apt-get.eu karmic/main liblcms1 1.18.dfsg-1ubuntu1 [103kB]
+Get:133 http://ubuntu.apt-get.eu karmic/main libsys-hostname-long-perl 1.4-2 [11.4kB]
+Get:134 http://ubuntu.apt-get.eu karmic/main libmail-sendmail-perl 0.79.16-1 [26.5kB]
+Get:135 http://ubuntu.apt-get.eu karmic/main libmng1 1.0.9-1build1 [209kB]
+Get:136 http://ubuntu.apt-get.eu karmic/main libpam-ck-connector 0.3.1-0ubuntu2 [8164B]
+Get:137 http://ubuntu.apt-get.eu karmic/main libpixman-1-0 0.14.0-1 [159kB]
+Get:138 http://ubuntu.apt-get.eu karmic/main libqtcore4 4.5.3really4.5.2-0ubuntu1 [1505kB]
+Get:139 http://ubuntu.apt-get.eu karmic/main libtiff4 3.8.2-13 [131kB]
+Get:140 http://ubuntu.apt-get.eu karmic/main libqtgui4 4.5.3really4.5.2-0ubuntu1 [3617kB]
+Get:141 http://archive.ubuntu.com karmic-updates/main linux-firmware 1.25 [5714kB]
+Get:142 http://ubuntu.apt-get.eu karmic/main libx86-1 1.1+ds1-4 [8888B]
+Get:143 http://ubuntu.apt-get.eu karmic/main libxfont1 1:1.4.0-1ubuntu1 [152kB]
+Get:144 http://ubuntu.apt-get.eu karmic/main libxvmc1 2:1.0.4-2ubuntu2 [20.2kB]
+Get:145 http://ubuntu.apt-get.eu karmic/main localechooser-data 2.12ubuntu2 [26.4kB]
+Get:146 http://ubuntu.apt-get.eu karmic/main os-prober 1.35 [22.1kB]
+Get:147 http://ubuntu.apt-get.eu karmic/main pm-utils 1.2.5-2ubuntu7 [92.7kB]
+Get:148 http://ubuntu.apt-get.eu karmic/main libpciaccess0 0.10.6-2ubuntu1 [29.5kB]
+Get:149 http://ubuntu.apt-get.eu karmic/main radeontool 1.5+git76606164-0ubuntu2 [56.3kB]
+Get:150 http://ubuntu.apt-get.eu karmic/main smartdimmer 0.8b4-1ubuntu2 [36.7kB]
+Get:151 http://ubuntu.apt-get.eu karmic/main unzip 6.0-1 [181kB]
+Get:152 http://ubuntu.apt-get.eu karmic/main vbetool 1.1-2 [10.9kB]
+Get:153 http://ubuntu.apt-get.eu karmic/main xfonts-encodings 1:1.0.2-3 [584kB]
+Get:154 http://archive.ubuntu.com karmic-security/main linux-image-generic 2.6.31.19.32 [3380B]
+Get:155 http://archive.ubuntu.com karmic-security/main linux-generic 2.6.31.19.32 [3372B]
+Get:156 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19 2.6.31-19.56 [9531kB]
+Get:157 http://ubuntu.apt-get.eu karmic/main xfonts-utils 1:7.4+1ubuntu1 [92.0kB]
+Get:158 http://ubuntu.apt-get.eu karmic/main xfonts-100dpi 1:1.0.0-4build1 [3908kB]
+Get:159 http://ubuntu.apt-get.eu karmic/main xfonts-75dpi 1:1.0.0-4build1 [3472kB]
+Get:160 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19-generic 2.6.31-19.56 [674kB]
+Get:161 http://ubuntu.apt-get.eu karmic/main xfonts-base 1:1.0.0-6 [6133kB]
+Get:162 http://archive.ubuntu.com karmic-security/main linux-headers-generic 2.6.31.19.32 [3368B]
+Get:163 http://archive.ubuntu.com karmic-updates/universe xlibmesa-glu 1:7.4+3ubuntu10 [954B]
+Get:164 http://archive.ubuntu.com karmic-security/main xserver-common 2:1.6.4-2ubuntu4.1 [74.8kB]
+Get:165 http://archive.ubuntu.com karmic-security/main xserver-xorg-core 2:1.6.4-2ubuntu4.1 [2215kB]
+Get:166 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-intel 2:2.9.0-1ubuntu2.1 [600kB]
+Get:167 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-all 1:7.4+3ubuntu10 [1166B]
+Get:168 http://archive.ubuntu.com karmic-updates/main xserver-xorg-input-all 1:7.4+3ubuntu10 [1028B]
+Get:169 http://archive.ubuntu.com karmic-updates/main xserver-xorg 1:7.4+3ubuntu10 [29.0kB]
+Get:170 http://archive.ubuntu.com karmic-updates/main xorg 1:7.4+3ubuntu10 [1282B]
 Get:171 http://ubuntu.apt-get.eu karmic/main xfonts-scalable 1:1.0.0-7 [341kB]
 Get:172 http://ubuntu.apt-get.eu karmic/main xinit 1.1.1-1 [33.6kB]
 Get:173 http://ubuntu.apt-get.eu karmic/main xinput 1.4.2-1 [15.3kB]
@@ -1853,7 +1864,7 @@ Get:213 http://ubuntu.apt-get.eu karmic/main user-setup 1.27ubuntu11 [139kB]
 Get:214 http://ubuntu.apt-get.eu karmic/main casper 1.206 [70.2kB]
 Get:215 http://ubuntu.apt-get.eu karmic/main mesa-utils 7.6.0-1ubuntu4 [48.0kB]
 Preconfiguring packages ...
-Fetched 126MB in 7s (15.9MB/s)
+Fetched 126MB in 7s (16.4MB/s)
 Selecting previously deselected package x11-common.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10858 files and directories currently installed.)
 Unpacking x11-common (from .../x11-common_1%3a7.4+3ubuntu10_all.deb) ...
@@ -2033,7 +2044,7 @@ Unpacking binutils (from .../binutils_2.20-0ubuntu2_i386.deb) ...
 Selecting previously deselected package libc-dev-bin.
 Unpacking libc-dev-bin (from .../libc-dev-bin_2.10.1-0ubuntu16_i386.deb) ...
 Selecting previously deselected package linux-libc-dev.
-Unpacking linux-libc-dev (from .../linux-libc-dev_2.6.31-19.56_i386.deb) ...
+Unpacking linux-libc-dev (from .../linux-libc-dev_2.6.32-12.17~ricotz1_i386.deb) ...
 Selecting previously deselected package libc6-dev.
 Unpacking libc6-dev (from .../libc6-dev_2.10.1-0ubuntu16_i386.deb) ...
 Selecting previously deselected package libgomp1.
@@ -2075,7 +2086,7 @@ Unpacking cdbs (from .../cdbs_0.4.59ubuntu4_all.deb) ...
 Selecting previously deselected package libck-connector0.
 Unpacking libck-connector0 (from .../libck-connector0_0.3.1-0ubuntu2_i386.deb) ...
 Selecting previously deselected package libdbus-glib-1-2.
-Unpacking libdbus-glib-1-2 (from .../libdbus-glib-1-2_0.80-4ubuntu1_i386.deb) ...
+Unpacking libdbus-glib-1-2 (from .../libdbus-glib-1-2_0.82-2~ricotz1_i386.deb) ...
 Selecting previously deselected package libeggdbus-1-0.
 Unpacking libeggdbus-1-0 (from .../libeggdbus-1-0_0.5-1_i386.deb) ...
 Selecting previously deselected package libpolkit-gobject-1-0.
@@ -2100,6 +2111,10 @@ Selecting previously deselected package fakeroot.
 Unpacking fakeroot (from .../fakeroot_1.12.4ubuntu1_i386.deb) ...
 Selecting previously deselected package fontconfig.
 Unpacking fontconfig (from .../fontconfig_2.6.0-1ubuntu12_i386.deb) ...
+Selecting previously deselected package grub-common.
+Unpacking grub-common (from .../grub-common_1.98~20100128-1ubuntu3~9.10~ricotz1_i386.deb) ...
+Selecting previously deselected package grub-pc.
+Unpacking grub-pc (from .../grub-pc_1.98~20100128-1ubuntu3~9.10~ricotz1_i386.deb) ...
 Selecting previously deselected package libhal1.
 Unpacking libhal1 (from .../libhal1_0.5.13-1ubuntu8_i386.deb) ...
 Selecting previously deselected package libhal-storage1.
@@ -2287,10 +2302,6 @@ Selecting previously deselected package user-setup.
 Unpacking user-setup (from .../user-setup_1.27ubuntu11_all.deb) ...
 Selecting previously deselected package casper.
 Unpacking casper (from .../archives/casper_1.206_i386.deb) ...
-Selecting previously deselected package grub-common.
-Unpacking grub-common (from .../grub-common_1.97~beta4-1ubuntu4.1_i386.deb) ...
-Selecting previously deselected package grub-pc.
-Unpacking grub-pc (from .../grub-pc_1.97~beta4-1ubuntu4.1_i386.deb) ...
 Selecting previously deselected package mesa-utils.
 Unpacking mesa-utils (from .../mesa-utils_7.6.0-1ubuntu4_i386.deb) ...
 Setting up libxau6 (1:1.0.4-2) ...
@@ -2457,7 +2468,7 @@ update-alternatives: using /usr/bin/automake-1.11 to provide /usr/bin/automake (
 Setting up binutils (2.20-0ubuntu2) ...
 
 Setting up libc-dev-bin (2.10.1-0ubuntu16) ...
-Setting up linux-libc-dev (2.6.31-19.56) ...
+Setting up linux-libc-dev (2.6.32-12.17~ricotz1) ...
 Setting up libc6-dev (2.10.1-0ubuntu16) ...
 Setting up libgomp1 (4.4.1-4ubuntu9) ...
 
@@ -2480,7 +2491,7 @@ Setting up intltool (0.41.0-0ubuntu1) ...
 Setting up cdbs (0.4.59ubuntu4) ...
 Setting up libck-connector0 (0.3.1-0ubuntu2) ...
 
-Setting up libdbus-glib-1-2 (0.80-4ubuntu1) ...
+Setting up libdbus-glib-1-2 (0.82-2~ricotz1) ...
 
 Setting up libeggdbus-1-0 (0.5-1) ...
 
@@ -2525,6 +2536,13 @@ Updating fontconfig cache for /usr/share/fonts/truetype/ttf-dejavu
 Cleaning up old fontconfig caches... done.
 Regenerating fonts cache... done.
 
+Setting up grub-common (1.98~20100128-1ubuntu3~9.10~ricotz1) ...
+All runlevel operations denied by policy
+
+Setting up grub-pc (1.98~20100128-1ubuntu3~9.10~ricotz1) ...
+
+Creating config file /etc/default/grub with new version
+
 Setting up libhal1 (0.5.13-1ubuntu8) ...
 
 Setting up libhal-storage1 (0.5.13-1ubuntu8) ...
@@ -2532,7 +2550,7 @@ Setting up libhal-storage1 (0.5.13-1ubuntu8) ...
 Setting up hal-info (20090716-0ubuntu1) ...
 Setting up hal (0.5.13-1ubuntu8) ...
 All runlevel operations denied by policy
-hal start/running, process 9138
+hal start/running, process 12675
 
 Setting up libaudio2 (1.9.2-1) ...
 
@@ -2618,13 +2636,6 @@ Setting up user-setup (1.27ubuntu11) ...
 
 Setting up casper (1.206) ...
 update-initramfs: deferring update (trigger activated)
-
-Setting up grub-common (1.97~beta4-1ubuntu4.1) ...
-All runlevel operations denied by policy
-
-Setting up grub-pc (1.97~beta4-1ubuntu4.1) ...
-
-Creating config file /etc/default/grub with new version
 
 Setting up mesa-utils (7.6.0-1ubuntu4) ...
 Setting up xserver-xorg-core (2:1.6.4-2ubuntu4.1) ...
@@ -2796,7 +2807,7 @@ Writing inode tables:  0/10 1/10 2/10 3/10 4/10 5/10
 Creating journal (4096 blocks): done
 Writing superblocks and filesystem accounting information: done
 
-This filesystem will be automatically checked every 32 mounts or
+This filesystem will be automatically checked every 25 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 Reading package lists...
 Building dependency tree...
@@ -3798,43 +3809,48 @@ OK
 Reading package lists...
 Building dependency tree...
 OK
+OK
 Get:1 file: ./ Release.gpg [315B]
 Get:2 file: ./ Release [754B]
 Ign file: ./ Packages
 Ign file: ./ Packages
 Get:3 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
-Get:4 http://archive.ubuntu.com karmic-security Release.gpg [189B]
-Get:5 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
-Get:6 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Get:4 http://ppa.launchpad.net karmic Release.gpg [307B]
 Hit http://ubuntu.apt-get.eu karmic Release
-Get:7 http://archive.ubuntu.com karmic-security Release [44.1kB]
-Get:8 http://archive.ubuntu.com karmic-backports Release [37.1kB]
-Get:9 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:5 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:6 http://archive.ubuntu.com karmic-security Release.gpg [189B]
 Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Get:10 http://archive.ubuntu.com karmic-updates Release [44.1kB]
+Get:7 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
+Get:8 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Get:9 http://ppa.launchpad.net karmic Release [66.0kB]
 Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
-Get:11 http://ppa.launchpad.net karmic Release [66.0kB]
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
-Get:12 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
+Get:10 http://archive.ubuntu.com karmic-security Release [44.1kB]
+Get:11 http://archive.ubuntu.com karmic-backports Release [37.1kB]
+Get:12 http://ppa.launchpad.net karmic Release [66.0kB]
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
-Get:13 http://ppa.launchpad.net karmic/main Packages [5993B]
-Get:14 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:13 http://archive.ubuntu.com karmic-updates Release [44.1kB]
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Get:15 http://ppa.launchpad.net karmic/main Sources [1525B]
-Get:16 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
-Get:17 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
-Get:18 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
-Get:19 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
-Get:20 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
-Get:21 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
-Get:22 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
-Get:23 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
-Get:24 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
-Get:25 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
-Fetched 642kB in 1s (403kB/s)
+Get:14 http://ppa.launchpad.net karmic/main Packages [16.9kB]
+Get:15 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
+Get:16 http://ppa.launchpad.net karmic/main Sources [4239B]
+Get:17 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:18 http://ppa.launchpad.net karmic/main Packages [5993B]
+Get:19 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
+Get:20 http://ppa.launchpad.net karmic/main Sources [1525B]
+Get:21 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
+Get:22 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
+Get:23 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
+Get:24 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
+Get:25 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
+Get:26 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
+Get:27 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
+Get:28 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
+Get:29 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
+Fetched 729kB in 1s (486kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -3879,7 +3895,7 @@ Get:29 http://archive.ubuntu.com karmic-security/main libk5crypto3 1.7dfsg~beta3
 Get:30 http://archive.ubuntu.com karmic-security/main ntpdate 1:4.2.4p6+dfsg-1ubuntu5.1 [66.8kB]
 Get:31 http://archive.ubuntu.com karmic-security/main openssl 0.9.8g-16ubuntu3.1 [398kB]
 Preconfiguring packages ...
-Fetched 18.1MB in 1s (13.2MB/s)
+Fetched 18.1MB in 1s (10.9MB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10856 files and directories currently installed.)
 Preparing to replace gzip 1.3.12-8ubuntu1 (using .../gzip_1.3.12-8ubuntu1.1_i386.deb) ...
 install-info: warning: maintainer scripts should not call install-info anymore,
@@ -3925,8 +3941,8 @@ Unpacking replacement tzdata ...
 Setting up tzdata (2009u-0ubuntu0.9.10) ...
 
 Current default time zone: 'Etc/UTC'
-Local time is now:      Sun Feb  7 11:13:25 UTC 2010.
-Universal Time is now:  Sun Feb  7 11:13:25 UTC 2010.
+Local time is now:      Sun Feb  7 16:14:58 UTC 2010.
+Universal Time is now:  Sun Feb  7 16:14:58 UTC 2010.
 Run 'dpkg-reconfigure tzdata' if you wish to change it.
 
 
@@ -4025,7 +4041,7 @@ Installing new version of config file /etc/rsyslog.conf ...
 All runlevel operations denied by policy
 
 Setting up udev (147~-6.1) ...
-udev start/running, process 7955
+udev start/running, process 11380
 Removing `local diversion of /sbin/udevadm to /sbin/udevadm.upgrade'
 update-initramfs: deferring update (trigger activated)
 
@@ -4062,25 +4078,31 @@ Hit http://archive.ubuntu.com karmic-security Release.gpg
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
 Hit http://ubuntu.apt-get.eu karmic Release
-Hit http://ppa.launchpad.net karmic Release
+Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-security Release
-Hit http://archive.ubuntu.com karmic-backports Release
 Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic Release
+Hit http://archive.ubuntu.com karmic-backports Release
 Hit http://archive.ubuntu.com karmic-updates Release
 Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
-Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic Release
 Ign http://archive.ubuntu.com karmic-security/main Packages/DiffIndex
-Hit http://ppa.launchpad.net karmic/main Packages
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/universe Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/multiverse Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/restricted Packages/DiffIndex
@@ -4129,43 +4151,43 @@ The following extra packages will be installed:
   acpid alsa-base apache2-mpm-worker apache2-utils apache2.2-bin
   apache2.2-common avahi-daemon bind9-host binutils busybox consolekit cpp
   cpp-4.4 cron cryptsetup dbus defoma ethtool finger fontconfig
-  fontconfig-config fuse-utils gcc gcc-4.4 geoip-database grub-common hal-info
-  hdparm iso-codes javascript-common language-pack-en-base laptop-mode-tools
-  libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasound2
-  libaudio2 libavahi-client3 libavahi-common-data libavahi-common3
-  libavahi-core6 libavcodec52 libavformat52 libavutil49 libbind9-50 libbsd0
-  libc-dev-bin libc6-dev libcdio7 libck-connector0 libcpufreq0 libcups2
-  libcurl3 libdaemon0 libdb4.6 libdbus-glib-1-2 libdirectfb-1.2-0 libdns53
-  libdrm-intel1 libdrm-radeon1 libdrm2 libedit2 libeggdbus-1-0 libenca0
-  libevent-1.4-2 libexpat1 libfaac0 libfaad0 libflac8 libfontconfig1
-  libfontenc1 libfreetype6 libfs6 libftdi1 libfuse2 libgeoip1 libgif4
-  libgl1-mesa-glx libglew1.5 libglu1-mesa libgmp3c2 libgomp1 libgsm1
-  libhal-storage1 libhal1 libice6 libimlib2 libisc50 libisccc50 libisccfg50
-  libiw29 libjasper1 libjpeg62 libjs-jquery libjs-prototype
-  libjs-scriptaculous liblcms1 liblircclient0 liblwres50 liblzo2-2 libmad0
-  libmikmod2 libmms0 libmng1 libmpfr1ldbl libmysqlclient16 libnl1 libnss-mdns
-  libntfs-3g54 libogg0 liboil0.3 libpam-ck-connector libpci3 libpciaccess0
-  libpcsclite1 libpixman-1-0 libpng12-0 libpolkit-dbus2 libpolkit-gobject-1-0
-  libpolkit-grant2 libpolkit2 libpulse0 libpython2.6 libqt3-mt libsamplerate0
-  libschroedinger-1.0-0 libsdl-image1.2 libsdl-mixer1.2 libsdl1.2debian
-  libsdl1.2debian-alsa libsensors4 libsm6 libsmbclient libsmpeg0 libsndfile1
-  libspeex1 libsysfs2 libtag1-vanilla libtag1c2a libtagc0 libtalloc1
-  libtheora0 libtidy-0.99-0 libtiff4 libts-0.0-0 libusplash0 libvorbis0a
-  libvorbisenc2 libvorbisfile3 libwbclient0 libwrap0 libx11-6 libx11-data
-  libx86-1 libxau6 libxaw7 libxcb1 libxcursor1 libxdamage1 libxdmcp6 libxext6
-  libxfixes3 libxfont1 libxft2 libxi6 libxinerama1 libxkbfile1 libxmu6
-  libxmuu1 libxpm4 libxrandr2 libxrender1 libxt6 libxtrap6 libxtst6 libxv1
-  libxvmc1 libxxf86dga1 libxxf86misc1 libxxf86vm1 linux-firmware
-  linux-headers-2.6.31-19 linux-headers-2.6.31-19-generic
-  linux-image-2.6.31-19-generic linux-image-generic linux-libc-dev
-  linux-sound-base logrotate lsof lynx-cur menu mysql-common openbsd-inetd
-  openssh-client os-prober par2 patch pciutils policykit powermgmt-base
-  proftpd-basic psmisc python-chardet python-cheetah python-cherrypy
-  python-configobj python-feedparser python-gnupginterface python-libxml2
-  python-openssl python-qt3 python-sip4 python-support python-utidylib
-  python-yenc python2.5 python2.5-minimal radeontool samba-common
-  samba-common-bin setserial smartdimmer ssl-cert tcpd toshset tsconf
-  ttf-dejavu ttf-dejavu-core ttf-dejavu-extra ttf-liberation
+  fontconfig-config fuse-utils gcc gcc-4.4 geoip-database gettext-base
+  grub-common hal-info hdparm iso-codes javascript-common
+  language-pack-en-base laptop-mode-tools libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libasound2 libaudio2
+  libavahi-client3 libavahi-common-data libavahi-common3 libavahi-core6
+  libavcodec52 libavformat52 libavutil49 libbind9-50 libbsd0 libc-dev-bin
+  libc6-dev libcdio7 libck-connector0 libcpufreq0 libcups2 libcurl3 libdaemon0
+  libdb4.6 libdbus-glib-1-2 libdirectfb-1.2-0 libdns53 libdrm-intel1
+  libdrm-radeon1 libdrm2 libedit2 libeggdbus-1-0 libenca0 libevent-1.4-2
+  libexpat1 libfaac0 libfaad0 libflac8 libfontconfig1 libfontenc1 libfreetype6
+  libfs6 libftdi1 libfuse2 libgeoip1 libgif4 libgl1-mesa-glx libglew1.5
+  libglu1-mesa libgmp3c2 libgomp1 libgsm1 libhal-storage1 libhal1 libice6
+  libimlib2 libisc50 libisccc50 libisccfg50 libiw29 libjasper1 libjpeg62
+  libjs-jquery libjs-prototype libjs-scriptaculous liblcms1 liblircclient0
+  liblwres50 liblzo2-2 libmad0 libmikmod2 libmms0 libmng1 libmpfr1ldbl
+  libmysqlclient16 libnl1 libnss-mdns libntfs-3g54 libogg0 liboil0.3
+  libpam-ck-connector libpci3 libpciaccess0 libpcsclite1 libpixman-1-0
+  libpng12-0 libpolkit-dbus2 libpolkit-gobject-1-0 libpolkit-grant2 libpolkit2
+  libpulse0 libpython2.6 libqt3-mt libsamplerate0 libschroedinger-1.0-0
+  libsdl-image1.2 libsdl-mixer1.2 libsdl1.2debian libsdl1.2debian-alsa
+  libsensors4 libsm6 libsmbclient libsmpeg0 libsndfile1 libspeex1 libsysfs2
+  libtag1-vanilla libtag1c2a libtagc0 libtalloc1 libtheora0 libtidy-0.99-0
+  libtiff4 libts-0.0-0 libusplash0 libvorbis0a libvorbisenc2 libvorbisfile3
+  libwbclient0 libwrap0 libx11-6 libx11-data libx86-1 libxau6 libxaw7 libxcb1
+  libxcursor1 libxdamage1 libxdmcp6 libxext6 libxfixes3 libxfont1 libxft2
+  libxi6 libxinerama1 libxkbfile1 libxmu6 libxmuu1 libxpm4 libxrandr2
+  libxrender1 libxt6 libxtrap6 libxtst6 libxv1 libxvmc1 libxxf86dga1
+  libxxf86misc1 libxxf86vm1 linux-firmware linux-headers-2.6.31-19
+  linux-headers-2.6.31-19-generic linux-image-2.6.31-19-generic
+  linux-image-generic linux-libc-dev linux-sound-base logrotate lsof lynx-cur
+  menu mysql-common openbsd-inetd openssh-client os-prober par2 patch pciutils
+  policykit powermgmt-base proftpd-basic psmisc python-chardet python-cheetah
+  python-cherrypy python-configobj python-feedparser python-gnupginterface
+  python-libxml2 python-openssl python-qt3 python-sip4 python-support
+  python-utidylib python-yenc python2.5 python2.5-minimal radeontool
+  samba-common samba-common-bin setserial smartdimmer ssl-cert tcpd toshset
+  tsconf ttf-dejavu ttf-dejavu-core ttf-dejavu-extra ttf-liberation
   unattended-upgrades update-inetd usbutils user-setup usplash
   usplash-theme-ubuntu usplash-theme-xbmc-pulsating-logo
   usplash-theme-xbmc-spinner-black usplash-theme-xbmc-spinner-black-silver
@@ -4224,34 +4246,35 @@ The following NEW packages will be installed:
   apache2-utils apache2.2-bin apache2.2-common avahi-daemon bind9-host
   binutils busybox consolekit cpp cpp-4.4 cpufrequtils cron cryptsetup curl
   dbus defoma dkms dosfstools ethtool fakeroot finger fluxbox fontconfig
-  fontconfig-config ftp fuse-utils gcc gcc-4.4 genext2fs geoip-database grub
-  grub-common hal hal-info hdparm hfsprogs iso-codes javascript-common
-  language-pack-en language-pack-en-base laptop-mode-tools lftp libapr1
-  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasound2 libaudio2
-  libavahi-client3 libavahi-common-data libavahi-common3 libavahi-core6
-  libavcodec52 libavformat52 libavutil49 libbind9-50 libbsd0 libc-dev-bin
-  libc6-dev libcdio7 libck-connector0 libcpufreq0 libcups2 libcurl3 libdaemon0
-  libdb4.6 libdbus-glib-1-2 libdirectfb-1.2-0 libdns53 libdrm-intel1
-  libdrm-radeon1 libdrm2 libedit2 libeggdbus-1-0 libenca0 libevent-1.4-2
-  libexpat1 libfaac0 libfaad0 libflac8 libfontconfig1 libfontenc1 libfreetype6
-  libfs6 libftdi1 libfuse2 libgeoip1 libgif4 libgl1-mesa-dri libgl1-mesa-glx
-  libglew1.5 libglu1-mesa libgmp3c2 libgomp1 libgsm1 libhal-storage1 libhal1
-  libice6 libid3tag0 libimlib2 libisc50 libisccc50 libisccfg50 libiw29
-  libjasper1 libjpeg62 libjs-jquery libjs-prototype libjs-scriptaculous
-  liblcms1 liblircclient0 liblwres50 liblzo2-2 libmad0 libmikmod2 libmms0
-  libmng1 libmpfr1ldbl libmysqlclient16 libnl1 libnss-mdns libntfs-3g54
-  libogg0 liboil0.3 libpam-ck-connector libpci3 libpciaccess0 libpcsclite1
-  libpixman-1-0 libpng12-0 libpolkit-dbus2 libpolkit-gobject-1-0
-  libpolkit-grant2 libpolkit2 libpulse0 libpython2.6 libqt3-mt libsamplerate0
-  libschroedinger-1.0-0 libsdl-image1.2 libsdl-mixer1.2 libsdl1.2debian
-  libsdl1.2debian-alsa libsensors4 libsm6 libsmbclient libsmpeg0 libsndfile1
-  libspeex1 libsysfs2 libtag1-vanilla libtag1c2a libtagc0 libtalloc1
-  libtheora0 libtidy-0.99-0 libtiff4 libts-0.0-0 libusplash0 libvorbis0a
-  libvorbisenc2 libvorbisfile3 libwbclient0 libwrap0 libx11-6 libx11-data
-  libx86-1 libxau6 libxaw7 libxcb1 libxcursor1 libxdamage1 libxdmcp6 libxext6
-  libxfixes3 libxfont1 libxft2 libxi6 libxinerama1 libxkbfile1 libxmu6
-  libxmuu1 libxpm4 libxrandr2 libxrender1 libxt6 libxtrap6 libxtst6 libxv1
-  libxvmc1 libxxf86dga1 libxxf86misc1 libxxf86vm1 linux-firmware linux-generic
+  fontconfig-config ftp fuse-utils gcc gcc-4.4 genext2fs geoip-database
+  gettext-base grub grub-common hal hal-info hdparm hfsprogs iso-codes
+  javascript-common language-pack-en language-pack-en-base laptop-mode-tools
+  lftp libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libasound2
+  libaudio2 libavahi-client3 libavahi-common-data libavahi-common3
+  libavahi-core6 libavcodec52 libavformat52 libavutil49 libbind9-50 libbsd0
+  libc-dev-bin libc6-dev libcdio7 libck-connector0 libcpufreq0 libcups2
+  libcurl3 libdaemon0 libdb4.6 libdbus-glib-1-2 libdirectfb-1.2-0 libdns53
+  libdrm-intel1 libdrm-radeon1 libdrm2 libedit2 libeggdbus-1-0 libenca0
+  libevent-1.4-2 libexpat1 libfaac0 libfaad0 libflac8 libfontconfig1
+  libfontenc1 libfreetype6 libfs6 libftdi1 libfuse2 libgeoip1 libgif4
+  libgl1-mesa-dri libgl1-mesa-glx libglew1.5 libglu1-mesa libgmp3c2 libgomp1
+  libgsm1 libhal-storage1 libhal1 libice6 libid3tag0 libimlib2 libisc50
+  libisccc50 libisccfg50 libiw29 libjasper1 libjpeg62 libjs-jquery
+  libjs-prototype libjs-scriptaculous liblcms1 liblircclient0 liblwres50
+  liblzo2-2 libmad0 libmikmod2 libmms0 libmng1 libmpfr1ldbl libmysqlclient16
+  libnl1 libnss-mdns libntfs-3g54 libogg0 liboil0.3 libpam-ck-connector
+  libpci3 libpciaccess0 libpcsclite1 libpixman-1-0 libpng12-0 libpolkit-dbus2
+  libpolkit-gobject-1-0 libpolkit-grant2 libpolkit2 libpulse0 libpython2.6
+  libqt3-mt libsamplerate0 libschroedinger-1.0-0 libsdl-image1.2
+  libsdl-mixer1.2 libsdl1.2debian libsdl1.2debian-alsa libsensors4 libsm6
+  libsmbclient libsmpeg0 libsndfile1 libspeex1 libsysfs2 libtag1-vanilla
+  libtag1c2a libtagc0 libtalloc1 libtheora0 libtidy-0.99-0 libtiff4
+  libts-0.0-0 libusplash0 libvorbis0a libvorbisenc2 libvorbisfile3
+  libwbclient0 libwrap0 libx11-6 libx11-data libx86-1 libxau6 libxaw7 libxcb1
+  libxcursor1 libxdamage1 libxdmcp6 libxext6 libxfixes3 libxfont1 libxft2
+  libxi6 libxinerama1 libxkbfile1 libxmu6 libxmuu1 libxpm4 libxrandr2
+  libxrender1 libxt6 libxtrap6 libxtst6 libxv1 libxvmc1 libxxf86dga1
+  libxxf86misc1 libxxf86vm1 linux-firmware linux-generic
   linux-headers-2.6.31-19 linux-headers-2.6.31-19-generic
   linux-headers-generic linux-image-2.6.31-19-generic linux-image-generic
   linux-libc-dev linux-sound-base lirc live-initramfs lm-sensors logrotate
@@ -4290,372 +4313,373 @@ The following NEW packages will be installed:
   xserver-xorg-video-sisusb xserver-xorg-video-tdfx xserver-xorg-video-trident
   xserver-xorg-video-tseng xserver-xorg-video-v4l xserver-xorg-video-vesa
   xserver-xorg-video-vmware xserver-xorg-video-voodoo xterm zip
-0 upgraded, 362 newly installed, 0 to remove and 0 not upgraded.
-Need to get 206MB/206MB of archives.
-After this operation, 687MB of additional disk space will be used.
-Get:1 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-pulsating-logo 2.0 [215kB]
-Get:2 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-spinner-black 2.0 [71.8kB]
-Get:3 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-spinner-black-silver 2.0 [107kB]
-Get:4 http://archive.ubuntu.com karmic-security/main libfuse2 2.7.4-1.1ubuntu4.3 [129kB]
-Get:5 http://archive.ubuntu.com karmic-security/main fuse-utils 2.7.4-1.1ubuntu4.3 [21.3kB]
-Get:6 http://archive.ubuntu.com karmic-updates/main x11-common 1:7.4+3ubuntu10 [315kB]
-Get:7 http://ubuntu.apt-get.eu karmic/main libntfs-3g54 1:2009.4.4-1ubuntu4 [113kB]
-Get:8 http://ubuntu.apt-get.eu karmic/main ntfs-3g 1:2009.4.4-1ubuntu4 [26.9kB]
-Get:9 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-spinner-blue 2.0 [3083kB]
+0 upgraded, 363 newly installed, 0 to remove and 0 not upgraded.
+Need to get 207MB/207MB of archives.
+After this operation, 690MB of additional disk space will be used.
+Get:1 http://ppa.launchpad.net karmic/main linux-sound-base 1.0.22.1+dfsg-0ubuntu3~ricotz1 [34.4kB]
+Get:2 http://ppa.launchpad.net karmic/main alsa-base 1.0.22.1+dfsg-0ubuntu3~ricotz1 [273kB]
+Get:3 http://ubuntu.apt-get.eu karmic/main libntfs-3g54 1:2009.4.4-1ubuntu4 [113kB]
+Get:4 http://ubuntu.apt-get.eu karmic/main ntfs-3g 1:2009.4.4-1ubuntu4 [26.9kB]
+Get:5 http://archive.ubuntu.com karmic-security/main libfuse2 2.7.4-1.1ubuntu4.3 [129kB]
+Get:6 http://archive.ubuntu.com karmic-security/main fuse-utils 2.7.4-1.1ubuntu4.3 [21.3kB]
+Get:7 http://archive.ubuntu.com karmic-updates/main x11-common 1:7.4+3ubuntu10 [315kB]
+Get:8 http://ubuntu.apt-get.eu karmic/main libxau6 1:1.0.4-2 [13.2kB]
+Get:9 http://ubuntu.apt-get.eu karmic/main libxdmcp6 1:1.0.2-3 [16.9kB]
 Get:10 http://archive.ubuntu.com karmic-security/main linux-image-2.6.31-19-generic 2.6.31-19.56 [28.8MB]
-Get:11 http://ubuntu.apt-get.eu karmic/main libxau6 1:1.0.4-2 [13.2kB]
-Get:12 http://ubuntu.apt-get.eu karmic/main libxdmcp6 1:1.0.2-3 [16.9kB]
-Get:13 http://ubuntu.apt-get.eu karmic/main libxcb1 1.4-1 [45.4kB]
-Get:14 http://ubuntu.apt-get.eu karmic/main libx11-data 2:1.2.2-1ubuntu1 [218kB]
+Get:11 http://ppa.launchpad.net karmic/main libasound2 1.0.22-0ubuntu2~9.10~ricotz1 [395kB]
+Get:12 http://ubuntu.apt-get.eu karmic/main libxcb1 1.4-1 [45.4kB]
+Get:13 http://ubuntu.apt-get.eu karmic/main libx11-data 2:1.2.2-1ubuntu1 [218kB]
+Get:14 http://ppa.launchpad.net karmic/main alsa-utils 1.0.22-0ubuntu1~9.10~ricotz1 [1104kB]
 Get:15 http://ubuntu.apt-get.eu karmic/main libx11-6 2:1.2.2-1ubuntu1 [829kB]
-Get:16 http://ppa.launchpad.net karmic/main xbmc-bin 1:9.11-karmic1 [15.3MB]
-Get:17 http://ubuntu.apt-get.eu karmic/main libxext6 2:1.0.99.1-0ubuntu4 [28.9kB]
-Get:18 http://ubuntu.apt-get.eu karmic/main libxmuu1 2:1.0.4-2 [14.3kB]
-Get:19 http://ubuntu.apt-get.eu karmic/main xauth 1:1.0.3-2 [31.2kB]
-Get:20 http://ubuntu.apt-get.eu karmic/main language-pack-en-base 1:9.10+20091022 [698kB]
-Get:21 http://ubuntu.apt-get.eu karmic/main language-pack-en 1:9.10+20091022 [2002B]
-Get:22 http://ubuntu.apt-get.eu karmic/main libxfixes3 1:4.0.3-2build1 [10.6kB]
-Get:23 http://ubuntu.apt-get.eu karmic/main libice6 2:1.0.5-1 [52.7kB]
-Get:24 http://ubuntu.apt-get.eu karmic/main libsm6 2:1.1.0-2 [23.3kB]
-Get:25 http://ubuntu.apt-get.eu karmic/main libxt6 1:1.0.5-3ubuntu1 [170kB]
-Get:26 http://ubuntu.apt-get.eu karmic/main wireless-crda 1.10 [15.3kB]
-Get:27 http://ubuntu.apt-get.eu karmic/main libevent-1.4-2 1.4.11-stable-1 [60.4kB]
-Get:28 http://ubuntu.apt-get.eu karmic/main libpng12-0 1.2.37-1 [176kB]
-Get:29 http://ubuntu.apt-get.eu karmic/main libxmu6 2:1.0.4-2 [55.8kB]
-Get:30 http://ubuntu.apt-get.eu karmic/main libxpm4 1:3.5.7-2 [42.7kB]
-Get:31 http://ubuntu.apt-get.eu karmic/main libxaw7 2:1.0.6-1 [208kB]
-Get:32 http://ubuntu.apt-get.eu karmic/main libxrender1 1:0.9.4-2ubuntu1 [26.8kB]
-Get:33 http://ubuntu.apt-get.eu karmic/main libxcursor1 1:1.1.9-1build1 [25.5kB]
-Get:34 http://ubuntu.apt-get.eu karmic/main libfreetype6 2.3.9-5 [408kB]
-Get:35 http://ubuntu.apt-get.eu karmic/main defoma 0.11.10-0.2ubuntu1 [101kB]
-Get:36 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-core 2.29-2 [1430kB]
-Get:37 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-extra 2.29-2 [3104kB]
-Get:38 http://ubuntu.apt-get.eu karmic/main ttf-dejavu 2.29-2 [3096B]
-Get:39 http://ubuntu.apt-get.eu karmic/main fontconfig-config 2.6.0-1ubuntu12 [51.6kB]
-Get:40 http://ubuntu.apt-get.eu karmic/main libfontconfig1 2.6.0-1ubuntu12 [92.4kB]
-Get:41 http://ubuntu.apt-get.eu karmic/main libxft2 2.1.13-3ubuntu1 [50.9kB]
-Get:42 http://ubuntu.apt-get.eu karmic/main libxkbfile1 1:1.0.5-1ubuntu2 [74.1kB]
-Get:43 http://ubuntu.apt-get.eu karmic/main libgmp3c2 2:4.3.1+dfsg-1ubuntu3 [331kB]
-Get:44 http://ubuntu.apt-get.eu karmic/main libmpfr1ldbl 2.4.1-1ubuntu1 [411kB]
-Get:45 http://ubuntu.apt-get.eu karmic/main cpp 4:4.4.1-1ubuntu2 [35.9kB]
-Get:46 http://ubuntu.apt-get.eu karmic/main x11-apps 7.4+2 [682kB]
-Get:47 http://ubuntu.apt-get.eu karmic/main x11-session-utils 7.3+1build1 [76.4kB]
-Get:48 http://ubuntu.apt-get.eu karmic/main libfontenc1 1:1.0.4-3 [18.3kB]
-Get:49 http://ubuntu.apt-get.eu karmic/main libdrm2 2.4.14-1ubuntu1 [393kB]
-Get:50 http://ubuntu.apt-get.eu karmic/main libxdamage1 1:1.1.1-4 [10.0kB]
-Get:51 http://ubuntu.apt-get.eu karmic/main libxxf86vm1 1:1.0.2-1ubuntu1 [14.2kB]
-Get:52 http://ubuntu.apt-get.eu karmic/main libgl1-mesa-glx 7.6.0-1ubuntu4 [120kB]
-Get:53 http://ppa.launchpad.net karmic/main xbmc-data 1:9.11-karmic1 [4996kB]
-Get:54 http://ubuntu.apt-get.eu karmic/main libxi6 2:1.2.1-2ubuntu1 [29.9kB]
-Get:55 http://ubuntu.apt-get.eu karmic/main libxinerama1 2:1.0.3-2 [10.2kB]
-Get:56 http://ubuntu.apt-get.eu karmic/main libxtst6 2:1.0.3-1ubuntu2 [13.1kB]
-Get:57 http://ubuntu.apt-get.eu karmic/main libxv1 2:1.0.4-1 [16.2kB]
-Get:58 http://ubuntu.apt-get.eu karmic/main libxxf86dga1 2:1.0.2-1build1 [16.6kB]
-Get:59 http://ubuntu.apt-get.eu karmic/main x11-utils 7.4+1build1 [204kB]
-Get:60 http://ubuntu.apt-get.eu karmic/main libfs6 2:1.0.2-1 [32.9kB]
-Get:61 http://ubuntu.apt-get.eu karmic/main x11-xfs-utils 7.4+1build1 [26.3kB]
-Get:62 http://ubuntu.apt-get.eu karmic/main x11-xkb-utils 7.4+3 [184kB]
-Get:63 http://ubuntu.apt-get.eu karmic/main libxrandr2 2:1.3.0-2 [27.5kB]
-Get:64 http://ubuntu.apt-get.eu karmic/main libxtrap6 2:1.0.0-5build1 [17.8kB]
-Get:65 http://ubuntu.apt-get.eu karmic/main libxxf86misc1 1:1.0.1-3 [7918B]
-Get:66 http://ubuntu.apt-get.eu karmic/main x11-xserver-utils 7.4+2ubuntu3 [191kB]
-Get:67 http://ubuntu.apt-get.eu karmic/main xbitmaps 1.0.1-2ubuntu1 [26.9kB]
-Get:68 http://ubuntu.apt-get.eu karmic/main libgeoip1 1.4.6.dfsg-5 [106kB]
-Get:69 http://ubuntu.apt-get.eu karmic/main cron 3.0pl1-106ubuntu3 [86.0kB]
-Get:70 http://ubuntu.apt-get.eu karmic/main dosfstools 3.0.3-1 [89.5kB]
-Get:71 http://ubuntu.apt-get.eu karmic/main ftp 0.17-19 [54.0kB]
-Get:72 http://ubuntu.apt-get.eu karmic/main geoip-database 1.4.6.dfsg-5 [597kB]
-Get:73 http://ppa.launchpad.net karmic/main xbmc-skin-confluence 1:9.11-karmic1 [14.4MB]
-Get:74 http://ubuntu.apt-get.eu karmic/main hdparm 9.15-1ubuntu4 [83.7kB]
-Get:75 http://ubuntu.apt-get.eu karmic/main iso-codes 3.10.2-1 [2277kB]
-Get:76 http://ubuntu.apt-get.eu karmic/main libbsd0 0.1.4-1 [32.8kB]
-Get:77 http://ubuntu.apt-get.eu karmic/main libedit2 2.11-20080614-1 [68.4kB]
-Get:78 http://ubuntu.apt-get.eu karmic/main libjs-jquery 1.3.3-1ubuntu1 [39.0kB]
-Get:79 http://ubuntu.apt-get.eu karmic/main libpci3 1:3.0.0-4ubuntu13 [48.1kB]
-Get:80 http://ubuntu.apt-get.eu karmic/main logrotate 3.7.8-4ubuntu1 [44.4kB]
-Get:81 http://ubuntu.apt-get.eu karmic/main lsof 4.81.dfsg.1-1 [278kB]
-Get:82 http://ubuntu.apt-get.eu karmic/main nano 2.0.9-2 [299kB]
-Get:83 http://archive.ubuntu.com karmic-security/main transmission-common 1.75-0ubuntu2.2 [176kB]
-Get:84 http://ubuntu.apt-get.eu karmic/main openssh-client 1:5.1p1-6ubuntu2 [790kB]
-Get:85 http://archive.ubuntu.com karmic-security/universe transmission-daemon 1.75-0ubuntu2.2 [178kB]
-Get:86 http://ubuntu.apt-get.eu karmic/main pciutils 1:3.0.0-4ubuntu13 [181kB]
-Get:87 http://ubuntu.apt-get.eu karmic/main powermgmt-base 1.30+nmu1 [11.4kB]
-Get:88 http://archive.ubuntu.com karmic-security/main libexpat1 2.0.1-4ubuntu1.1 [138kB]
-Get:89 http://archive.ubuntu.com karmic-updates/main cpp-4.4 4.4.1-4ubuntu9 [3544kB]
-Get:90 http://ubuntu.apt-get.eu karmic/main psmisc 22.7-1 [47.8kB]
-Get:91 http://ubuntu.apt-get.eu karmic/main python-apt 0.7.13.2ubuntu4 [339kB]
-Get:92 http://ubuntu.apt-get.eu karmic/main python-support 1.0.3ubuntu1 [31.5kB]
-Get:93 http://ubuntu.apt-get.eu karmic/main python-gnupginterface 0.3.2-9ubuntu2 [19.0kB]
-Get:94 http://ubuntu.apt-get.eu karmic/main usbutils 0.82-0ubuntu1 [170kB]
-Get:95 http://ubuntu.apt-get.eu karmic/main uuid-runtime 2.16-1ubuntu5 [59.6kB]
-Get:96 http://archive.ubuntu.com karmic-security/main python2.5-minimal 2.5.4-1ubuntu6.1 [1190kB]
-Get:97 http://ubuntu.apt-get.eu karmic/main wget 1.11.4-2ubuntu2 [249kB]
-Get:98 http://ubuntu.apt-get.eu karmic/universe acpi 1.4-2 [16.1kB]
-Get:99 http://archive.ubuntu.com karmic-security/main libisc50 1:9.6.1.dfsg.P1-3ubuntu0.3 [153kB]
-Get:100 http://archive.ubuntu.com karmic-security/main libdns53 1:9.6.1.dfsg.P1-3ubuntu0.3 [602kB]
-Get:101 http://ubuntu.apt-get.eu karmic/main laptop-mode-tools 1.47-1ubuntu2 [108kB]
-Get:102 http://ppa.launchpad.net karmic/main xbmc-web-pm3 1:9.11-karmic1 [3080kB]
-Get:103 http://archive.ubuntu.com karmic-security/main libisccc50 1:9.6.1.dfsg.P1-3ubuntu0.3 [27.6kB]
-Get:104 http://archive.ubuntu.com karmic-security/main libisccfg50 1:9.6.1.dfsg.P1-3ubuntu0.3 [44.9kB]
-Get:105 http://ubuntu.apt-get.eu karmic/main acpid 1.0.6-9ubuntu8 [33.0kB]
-Get:106 http://ubuntu.apt-get.eu karmic/main finger 0.17-13 [18.8kB]
-Get:107 http://archive.ubuntu.com karmic-security/main libbind9-50 1:9.6.1.dfsg.P1-3ubuntu0.3 [33.5kB]
-Get:108 http://archive.ubuntu.com karmic-security/main liblwres50 1:9.6.1.dfsg.P1-3ubuntu0.3 [45.7kB]
-Get:109 http://ubuntu.apt-get.eu karmic/main pm-utils 1.2.5-2ubuntu7 [92.7kB]
-Get:110 http://ubuntu.apt-get.eu karmic/main acpi-support 0.129 [34.3kB]
-Get:111 http://ppa.launchpad.net karmic/main xbmc 1:9.11-karmic1 [37.8kB]
-Get:112 http://ppa.launchpad.net karmic/main xbmc-standalone 1:9.11-karmic1 [38.0kB]
-Get:113 http://ppa.launchpad.net karmic/main xbmc-live 1:9.11-karmic1 [46.7kB]
-Get:114 http://ppa.launchpad.net karmic/main xbmc-ppa-keyring 2009.06.03 [3390B]
-Get:115 http://archive.ubuntu.com karmic-security/main bind9-host 1:9.6.1.dfsg.P1-3ubuntu0.3 [63.1kB]
-Get:116 http://ubuntu.apt-get.eu karmic/main linux-sound-base 1.0.20+dfsg-1ubuntu5 [32.8kB]
-Get:117 http://ubuntu.apt-get.eu karmic/main alsa-base 1.0.20+dfsg-1ubuntu5 [270kB]
-Get:118 http://archive.ubuntu.com karmic-updates/main libpython2.6 2.6.4-0ubuntu3 [967kB]
-Get:119 http://ubuntu.apt-get.eu karmic/main alsa-utils 1.0.20-2ubuntu6 [1079kB]
-Get:120 http://archive.ubuntu.com karmic-updates/main libasound2 1.0.20-3ubuntu6.1 [391kB]
-Get:121 http://archive.ubuntu.com karmic-security/main apache2.2-bin 2.2.12-1ubuntu2.1 [1309kB]
-Get:122 http://ubuntu.apt-get.eu karmic/main libapr1 1.3.8-1 [116kB]
-Get:123 http://archive.ubuntu.com karmic-security/main apache2-utils 2.2.12-1ubuntu2.1 [155kB]
-Get:124 http://ubuntu.apt-get.eu karmic/main libaprutil1 1.3.9+dfsg-1ubuntu1 [91.1kB]
-Get:125 http://ubuntu.apt-get.eu karmic/main libaprutil1-dbd-sqlite3 1.3.9+dfsg-1ubuntu1 [27.5kB]
-Get:126 http://archive.ubuntu.com karmic-security/main apache2.2-common 2.2.12-1ubuntu2.1 [285kB]
-Get:127 http://ubuntu.apt-get.eu karmic/main libaprutil1-ldap 1.3.9+dfsg-1ubuntu1 [25.2kB]
-Get:128 http://ubuntu.apt-get.eu karmic/main libdaemon0 0.13-3 [14.7kB]
-Get:129 http://archive.ubuntu.com karmic-security/main apache2-mpm-worker 2.2.12-1ubuntu2.1 [2314B]
-Get:130 http://archive.ubuntu.com karmic-security/main apache2 2.2.12-1ubuntu2.1 [1424B]
-Get:131 http://archive.ubuntu.com karmic-updates/main libavahi-common-data 0.6.25-1ubuntu5.1 [34.0kB]
-Get:132 http://archive.ubuntu.com karmic-updates/main libavahi-common3 0.6.25-1ubuntu5.1 [23.5kB]
-Get:133 http://archive.ubuntu.com karmic-updates/main libavahi-core6 0.6.25-1ubuntu5.1 [115kB]
-Get:134 http://ubuntu.apt-get.eu karmic/main dbus 1.2.16-0ubuntu9 [189kB]
-Get:135 http://archive.ubuntu.com karmic-updates/main avahi-daemon 0.6.25-1ubuntu5.1 [60.3kB]
-Get:136 http://ubuntu.apt-get.eu karmic/universe busybox 1:1.13.3-1ubuntu7 [368kB]
-Get:137 http://archive.ubuntu.com karmic-updates/main binutils 2.20-0ubuntu2 [1599kB]
-Get:138 http://ubuntu.apt-get.eu karmic/main libck-connector0 0.3.1-0ubuntu2 [53.8kB]
-Get:139 http://archive.ubuntu.com karmic-updates/main cryptsetup 2:1.0.6+20090405.svn49-1ubuntu7.2 [112kB]
-Get:140 http://ubuntu.apt-get.eu karmic/main libdbus-glib-1-2 0.80-4ubuntu1 [70.2kB]
-Get:141 http://archive.ubuntu.com karmic-updates/main libgomp1 4.4.1-4ubuntu9 [24.2kB]
-Get:142 http://archive.ubuntu.com karmic-updates/main gcc-4.4 4.4.1-4ubuntu9 [2976kB]
-Get:143 http://ubuntu.apt-get.eu karmic/main libeggdbus-1-0 0.5-1 [97.2kB]
-Get:144 http://ubuntu.apt-get.eu karmic/main libpolkit-gobject-1-0 0.94-1ubuntu1 [42.5kB]
-Get:145 http://ubuntu.apt-get.eu karmic/main consolekit 0.3.1-0ubuntu2 [99.9kB]
-Get:146 http://archive.ubuntu.com karmic-security/main grub-common 1.97~beta4-1ubuntu4.1 [994kB]
-Get:147 http://ubuntu.apt-get.eu karmic/universe libcpufreq0 005-1 [14.1kB]
-Get:148 http://ubuntu.apt-get.eu karmic/universe cpufrequtils 005-1 [32.3kB]
-Get:149 http://archive.ubuntu.com karmic-updates/main libavahi-client3 0.6.25-1ubuntu5.1 [54.0kB]
-Get:150 http://archive.ubuntu.com karmic-security/main libvorbis0a 1.2.0.dfsg-6ubuntu0.1 [102kB]
-Get:151 http://archive.ubuntu.com karmic-security/main libvorbisenc2 1.2.0.dfsg-6ubuntu0.1 [78.1kB]
-Get:152 http://archive.ubuntu.com karmic-updates/main libc-dev-bin 2.10.1-0ubuntu16 [207kB]
-Get:153 http://ubuntu.apt-get.eu karmic/main watershed 4 [10.6kB]
-Get:154 http://ubuntu.apt-get.eu karmic/main libcurl3 7.19.5-1ubuntu2 [212kB]
-Get:155 http://archive.ubuntu.com karmic-security/main linux-libc-dev 2.6.31-19.56 [743kB]
-Get:156 http://archive.ubuntu.com karmic-updates/main libc6-dev 2.10.1-0ubuntu16 [4761kB]
-Get:157 http://ubuntu.apt-get.eu karmic/main curl 7.19.5-1ubuntu2 [196kB]
-Get:158 http://ubuntu.apt-get.eu karmic/main gcc 4:4.4.1-1ubuntu2 [5078B]
-Get:159 http://ubuntu.apt-get.eu karmic/main dkms 2.1.0.1-0ubuntu1 [62.1kB]
-Get:160 http://ubuntu.apt-get.eu karmic/main ethtool 6+20090307-1 [68.4kB]
-Get:161 http://ubuntu.apt-get.eu karmic/main fakeroot 1.12.4ubuntu1 [126kB]
-Get:162 http://ubuntu.apt-get.eu karmic/universe menu 2.1.41ubuntu1 [438kB]
-Get:163 http://ubuntu.apt-get.eu karmic/main libgif4 4.1.6-6 [39.4kB]
-Get:164 http://ubuntu.apt-get.eu karmic/main libid3tag0 0.15.1b-10build1 [35.4kB]
+Get:16 http://ubuntu.apt-get.eu karmic/main libxext6 2:1.0.99.1-0ubuntu4 [28.9kB]
+Get:17 http://ubuntu.apt-get.eu karmic/main libxmuu1 2:1.0.4-2 [14.3kB]
+Get:18 http://ubuntu.apt-get.eu karmic/main xauth 1:1.0.3-2 [31.2kB]
+Get:19 http://ubuntu.apt-get.eu karmic/main language-pack-en-base 1:9.10+20091022 [698kB]
+Get:20 http://ppa.launchpad.net karmic/main libdbus-glib-1-2 0.82-2~ricotz1 [70.1kB]
+Get:21 http://ppa.launchpad.net karmic/main grub-common 1.98~20100128-1ubuntu3~9.10~ricotz1 [1533kB]
+Get:22 http://ubuntu.apt-get.eu karmic/main language-pack-en 1:9.10+20091022 [2002B]
+Get:23 http://ubuntu.apt-get.eu karmic/main libxfixes3 1:4.0.3-2build1 [10.6kB]
+Get:24 http://ubuntu.apt-get.eu karmic/main libice6 2:1.0.5-1 [52.7kB]
+Get:25 http://ubuntu.apt-get.eu karmic/main libsm6 2:1.1.0-2 [23.3kB]
+Get:26 http://ppa.launchpad.net karmic/main linux-libc-dev 2.6.32-12.17~ricotz1 [762kB]
+Get:27 http://ubuntu.apt-get.eu karmic/main libxt6 1:1.0.5-3ubuntu1 [170kB]
+Get:28 http://ubuntu.apt-get.eu karmic/main wireless-crda 1.10 [15.3kB]
+Get:29 http://ubuntu.apt-get.eu karmic/main libevent-1.4-2 1.4.11-stable-1 [60.4kB]
+Get:30 http://ppa.launchpad.net karmic/main libpulse0 1:0.9.22~0.9.21+stable-queue-32-g8478-0ubuntu5~9.10~ricotz1 [242kB]
+Get:31 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-pulsating-logo 2.0 [215kB]
+Get:32 http://ubuntu.apt-get.eu karmic/main libpng12-0 1.2.37-1 [176kB]
+Get:33 http://ubuntu.apt-get.eu karmic/main libxmu6 2:1.0.4-2 [55.8kB]
+Get:34 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-spinner-black 2.0 [71.8kB]
+Get:35 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-spinner-black-silver 2.0 [107kB]
+Get:36 http://ubuntu.apt-get.eu karmic/main libxpm4 1:3.5.7-2 [42.7kB]
+Get:37 http://ppa.launchpad.net karmic/main usplash-theme-xbmc-spinner-blue 2.0 [3083kB]
+Get:38 http://ubuntu.apt-get.eu karmic/main libxaw7 2:1.0.6-1 [208kB]
+Get:39 http://ubuntu.apt-get.eu karmic/main libxrender1 1:0.9.4-2ubuntu1 [26.8kB]
+Get:40 http://ubuntu.apt-get.eu karmic/main libxcursor1 1:1.1.9-1build1 [25.5kB]
+Get:41 http://ubuntu.apt-get.eu karmic/main libfreetype6 2.3.9-5 [408kB]
+Get:42 http://ubuntu.apt-get.eu karmic/main defoma 0.11.10-0.2ubuntu1 [101kB]
+Get:43 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-core 2.29-2 [1430kB]
+Get:44 http://ppa.launchpad.net karmic/main xbmc-bin 1:9.11-karmic1 [15.3MB]
+Get:45 http://ubuntu.apt-get.eu karmic/main ttf-dejavu-extra 2.29-2 [3104kB]
+Get:46 http://ubuntu.apt-get.eu karmic/main ttf-dejavu 2.29-2 [3096B]
+Get:47 http://ubuntu.apt-get.eu karmic/main fontconfig-config 2.6.0-1ubuntu12 [51.6kB]
+Get:48 http://ubuntu.apt-get.eu karmic/main libfontconfig1 2.6.0-1ubuntu12 [92.4kB]
+Get:49 http://ubuntu.apt-get.eu karmic/main libxft2 2.1.13-3ubuntu1 [50.9kB]
+Get:50 http://ubuntu.apt-get.eu karmic/main libxkbfile1 1:1.0.5-1ubuntu2 [74.1kB]
+Get:51 http://ubuntu.apt-get.eu karmic/main libgmp3c2 2:4.3.1+dfsg-1ubuntu3 [331kB]
+Get:52 http://ubuntu.apt-get.eu karmic/main libmpfr1ldbl 2.4.1-1ubuntu1 [411kB]
+Get:53 http://ubuntu.apt-get.eu karmic/main cpp 4:4.4.1-1ubuntu2 [35.9kB]
+Get:54 http://ubuntu.apt-get.eu karmic/main x11-apps 7.4+2 [682kB]
+Get:55 http://ubuntu.apt-get.eu karmic/main x11-session-utils 7.3+1build1 [76.4kB]
+Get:56 http://ubuntu.apt-get.eu karmic/main libfontenc1 1:1.0.4-3 [18.3kB]
+Get:57 http://ubuntu.apt-get.eu karmic/main libdrm2 2.4.14-1ubuntu1 [393kB]
+Get:58 http://ubuntu.apt-get.eu karmic/main libxdamage1 1:1.1.1-4 [10.0kB]
+Get:59 http://ubuntu.apt-get.eu karmic/main libxxf86vm1 1:1.0.2-1ubuntu1 [14.2kB]
+Get:60 http://ubuntu.apt-get.eu karmic/main libgl1-mesa-glx 7.6.0-1ubuntu4 [120kB]
+Get:61 http://ubuntu.apt-get.eu karmic/main libxi6 2:1.2.1-2ubuntu1 [29.9kB]
+Get:62 http://ubuntu.apt-get.eu karmic/main libxinerama1 2:1.0.3-2 [10.2kB]
+Get:63 http://ubuntu.apt-get.eu karmic/main libxtst6 2:1.0.3-1ubuntu2 [13.1kB]
+Get:64 http://ubuntu.apt-get.eu karmic/main libxv1 2:1.0.4-1 [16.2kB]
+Get:65 http://ubuntu.apt-get.eu karmic/main libxxf86dga1 2:1.0.2-1build1 [16.6kB]
+Get:66 http://ubuntu.apt-get.eu karmic/main x11-utils 7.4+1build1 [204kB]
+Get:67 http://ubuntu.apt-get.eu karmic/main libfs6 2:1.0.2-1 [32.9kB]
+Get:68 http://ubuntu.apt-get.eu karmic/main x11-xfs-utils 7.4+1build1 [26.3kB]
+Get:69 http://ubuntu.apt-get.eu karmic/main x11-xkb-utils 7.4+3 [184kB]
+Get:70 http://ubuntu.apt-get.eu karmic/main libxrandr2 2:1.3.0-2 [27.5kB]
+Get:71 http://ubuntu.apt-get.eu karmic/main libxtrap6 2:1.0.0-5build1 [17.8kB]
+Get:72 http://ubuntu.apt-get.eu karmic/main libxxf86misc1 1:1.0.1-3 [7918B]
+Get:73 http://ubuntu.apt-get.eu karmic/main x11-xserver-utils 7.4+2ubuntu3 [191kB]
+Get:74 http://ubuntu.apt-get.eu karmic/main xbitmaps 1.0.1-2ubuntu1 [26.9kB]
+Get:75 http://ubuntu.apt-get.eu karmic/main libgeoip1 1.4.6.dfsg-5 [106kB]
+Get:76 http://ubuntu.apt-get.eu karmic/main cron 3.0pl1-106ubuntu3 [86.0kB]
+Get:77 http://ubuntu.apt-get.eu karmic/main dosfstools 3.0.3-1 [89.5kB]
+Get:78 http://ubuntu.apt-get.eu karmic/main ftp 0.17-19 [54.0kB]
+Get:79 http://ubuntu.apt-get.eu karmic/main geoip-database 1.4.6.dfsg-5 [597kB]
+Get:80 http://ubuntu.apt-get.eu karmic/main gettext-base 0.17-8ubuntu2 [70.4kB]
+Get:81 http://ubuntu.apt-get.eu karmic/main hdparm 9.15-1ubuntu4 [83.7kB]
+Get:82 http://ubuntu.apt-get.eu karmic/main iso-codes 3.10.2-1 [2277kB]
+Get:83 http://ppa.launchpad.net karmic/main xbmc-data 1:9.11-karmic1 [4996kB]
+Get:84 http://ubuntu.apt-get.eu karmic/main libbsd0 0.1.4-1 [32.8kB]
+Get:85 http://ubuntu.apt-get.eu karmic/main libedit2 2.11-20080614-1 [68.4kB]
+Get:86 http://ubuntu.apt-get.eu karmic/main libjs-jquery 1.3.3-1ubuntu1 [39.0kB]
+Get:87 http://ubuntu.apt-get.eu karmic/main libpci3 1:3.0.0-4ubuntu13 [48.1kB]
+Get:88 http://ubuntu.apt-get.eu karmic/main logrotate 3.7.8-4ubuntu1 [44.4kB]
+Get:89 http://ubuntu.apt-get.eu karmic/main lsof 4.81.dfsg.1-1 [278kB]
+Get:90 http://ubuntu.apt-get.eu karmic/main nano 2.0.9-2 [299kB]
+Get:91 http://ubuntu.apt-get.eu karmic/main openssh-client 1:5.1p1-6ubuntu2 [790kB]
+Get:92 http://archive.ubuntu.com karmic-security/main transmission-common 1.75-0ubuntu2.2 [176kB]
+Get:93 http://archive.ubuntu.com karmic-security/universe transmission-daemon 1.75-0ubuntu2.2 [178kB]
+Get:94 http://archive.ubuntu.com karmic-security/main libexpat1 2.0.1-4ubuntu1.1 [138kB]
+Get:95 http://ubuntu.apt-get.eu karmic/main pciutils 1:3.0.0-4ubuntu13 [181kB]
+Get:96 http://archive.ubuntu.com karmic-updates/main cpp-4.4 4.4.1-4ubuntu9 [3544kB]
+Get:97 http://ubuntu.apt-get.eu karmic/main powermgmt-base 1.30+nmu1 [11.4kB]
+Get:98 http://ubuntu.apt-get.eu karmic/main psmisc 22.7-1 [47.8kB]
+Get:99 http://ppa.launchpad.net karmic/main xbmc-skin-confluence 1:9.11-karmic1 [14.4MB]
+Get:100 http://ubuntu.apt-get.eu karmic/main python-apt 0.7.13.2ubuntu4 [339kB]
+Get:101 http://ubuntu.apt-get.eu karmic/main python-support 1.0.3ubuntu1 [31.5kB]
+Get:102 http://ubuntu.apt-get.eu karmic/main python-gnupginterface 0.3.2-9ubuntu2 [19.0kB]
+Get:103 http://ubuntu.apt-get.eu karmic/main usbutils 0.82-0ubuntu1 [170kB]
+Get:104 http://archive.ubuntu.com karmic-security/main python2.5-minimal 2.5.4-1ubuntu6.1 [1190kB]
+Get:105 http://archive.ubuntu.com karmic-security/main libisc50 1:9.6.1.dfsg.P1-3ubuntu0.3 [153kB]
+Get:106 http://archive.ubuntu.com karmic-security/main libdns53 1:9.6.1.dfsg.P1-3ubuntu0.3 [602kB]
+Get:107 http://ubuntu.apt-get.eu karmic/main uuid-runtime 2.16-1ubuntu5 [59.6kB]
+Get:108 http://ubuntu.apt-get.eu karmic/main wget 1.11.4-2ubuntu2 [249kB]
+Get:109 http://ubuntu.apt-get.eu karmic/universe acpi 1.4-2 [16.1kB]
+Get:110 http://ubuntu.apt-get.eu karmic/main laptop-mode-tools 1.47-1ubuntu2 [108kB]
+Get:111 http://archive.ubuntu.com karmic-security/main libisccc50 1:9.6.1.dfsg.P1-3ubuntu0.3 [27.6kB]
+Get:112 http://ubuntu.apt-get.eu karmic/main acpid 1.0.6-9ubuntu8 [33.0kB]
+Get:113 http://archive.ubuntu.com karmic-security/main libisccfg50 1:9.6.1.dfsg.P1-3ubuntu0.3 [44.9kB]
+Get:114 http://archive.ubuntu.com karmic-security/main libbind9-50 1:9.6.1.dfsg.P1-3ubuntu0.3 [33.5kB]
+Get:115 http://archive.ubuntu.com karmic-security/main liblwres50 1:9.6.1.dfsg.P1-3ubuntu0.3 [45.7kB]
+Get:116 http://ubuntu.apt-get.eu karmic/main finger 0.17-13 [18.8kB]
+Get:117 http://ubuntu.apt-get.eu karmic/main pm-utils 1.2.5-2ubuntu7 [92.7kB]
+Get:118 http://archive.ubuntu.com karmic-security/main bind9-host 1:9.6.1.dfsg.P1-3ubuntu0.3 [63.1kB]
+Get:119 http://ubuntu.apt-get.eu karmic/main acpi-support 0.129 [34.3kB]
+Get:120 http://archive.ubuntu.com karmic-updates/main libpython2.6 2.6.4-0ubuntu3 [967kB]
+Get:121 http://ubuntu.apt-get.eu karmic/main libapr1 1.3.8-1 [116kB]
+Get:122 http://ubuntu.apt-get.eu karmic/main libaprutil1 1.3.9+dfsg-1ubuntu1 [91.1kB]
+Get:123 http://ubuntu.apt-get.eu karmic/main libaprutil1-dbd-sqlite3 1.3.9+dfsg-1ubuntu1 [27.5kB]
+Get:124 http://ubuntu.apt-get.eu karmic/main libaprutil1-ldap 1.3.9+dfsg-1ubuntu1 [25.2kB]
+Get:125 http://ubuntu.apt-get.eu karmic/main libdaemon0 0.13-3 [14.7kB]
+Get:126 http://archive.ubuntu.com karmic-security/main apache2.2-bin 2.2.12-1ubuntu2.1 [1309kB]
+Get:127 http://ubuntu.apt-get.eu karmic/main dbus 1.2.16-0ubuntu9 [189kB]
+Get:128 http://ppa.launchpad.net karmic/main xbmc-web-pm3 1:9.11-karmic1 [3080kB]
+Get:129 http://archive.ubuntu.com karmic-security/main apache2-utils 2.2.12-1ubuntu2.1 [155kB]
+Get:130 http://ubuntu.apt-get.eu karmic/universe busybox 1:1.13.3-1ubuntu7 [368kB]
+Get:131 http://archive.ubuntu.com karmic-security/main apache2.2-common 2.2.12-1ubuntu2.1 [285kB]
+Get:132 http://ubuntu.apt-get.eu karmic/main libck-connector0 0.3.1-0ubuntu2 [53.8kB]
+Get:133 http://archive.ubuntu.com karmic-security/main apache2-mpm-worker 2.2.12-1ubuntu2.1 [2314B]
+Get:134 http://archive.ubuntu.com karmic-security/main apache2 2.2.12-1ubuntu2.1 [1424B]
+Get:135 http://archive.ubuntu.com karmic-updates/main libavahi-common-data 0.6.25-1ubuntu5.1 [34.0kB]
+Get:136 http://archive.ubuntu.com karmic-updates/main libavahi-common3 0.6.25-1ubuntu5.1 [23.5kB]
+Get:137 http://archive.ubuntu.com karmic-updates/main libavahi-core6 0.6.25-1ubuntu5.1 [115kB]
+Get:138 http://archive.ubuntu.com karmic-updates/main avahi-daemon 0.6.25-1ubuntu5.1 [60.3kB]
+Get:139 http://archive.ubuntu.com karmic-updates/main binutils 2.20-0ubuntu2 [1599kB]
+Get:140 http://ppa.launchpad.net karmic/main xbmc 1:9.11-karmic1 [37.8kB]
+Get:141 http://ppa.launchpad.net karmic/main xbmc-standalone 1:9.11-karmic1 [38.0kB]
+Get:142 http://ppa.launchpad.net karmic/main xbmc-live 1:9.11-karmic1 [46.7kB]
+Get:143 http://ppa.launchpad.net karmic/main xbmc-ppa-keyring 2009.06.03 [3390B]
+Get:144 http://ubuntu.apt-get.eu karmic/main libeggdbus-1-0 0.5-1 [97.2kB]
+Get:145 http://ubuntu.apt-get.eu karmic/main libpolkit-gobject-1-0 0.94-1ubuntu1 [42.5kB]
+Get:146 http://archive.ubuntu.com karmic-updates/main cryptsetup 2:1.0.6+20090405.svn49-1ubuntu7.2 [112kB]
+Get:147 http://archive.ubuntu.com karmic-updates/main libgomp1 4.4.1-4ubuntu9 [24.2kB]
+Get:148 http://archive.ubuntu.com karmic-updates/main gcc-4.4 4.4.1-4ubuntu9 [2976kB]
+Get:149 http://ubuntu.apt-get.eu karmic/main consolekit 0.3.1-0ubuntu2 [99.9kB]
+Get:150 http://ubuntu.apt-get.eu karmic/universe libcpufreq0 005-1 [14.1kB]
+Get:151 http://ubuntu.apt-get.eu karmic/universe cpufrequtils 005-1 [32.3kB]
+Get:152 http://ubuntu.apt-get.eu karmic/main watershed 4 [10.6kB]
+Get:153 http://ubuntu.apt-get.eu karmic/main libcurl3 7.19.5-1ubuntu2 [212kB]
+Get:154 http://ubuntu.apt-get.eu karmic/main curl 7.19.5-1ubuntu2 [196kB]
+Get:155 http://archive.ubuntu.com karmic-updates/main libavahi-client3 0.6.25-1ubuntu5.1 [54.0kB]
+Get:156 http://archive.ubuntu.com karmic-security/main libvorbis0a 1.2.0.dfsg-6ubuntu0.1 [102kB]
+Get:157 http://archive.ubuntu.com karmic-security/main libvorbisenc2 1.2.0.dfsg-6ubuntu0.1 [78.1kB]
+Get:158 http://archive.ubuntu.com karmic-updates/main libc-dev-bin 2.10.1-0ubuntu16 [207kB]
+Get:159 http://ubuntu.apt-get.eu karmic/main gcc 4:4.4.1-1ubuntu2 [5078B]
+Get:160 http://ubuntu.apt-get.eu karmic/main dkms 2.1.0.1-0ubuntu1 [62.1kB]
+Get:161 http://archive.ubuntu.com karmic-updates/main libc6-dev 2.10.1-0ubuntu16 [4761kB]
+Get:162 http://ubuntu.apt-get.eu karmic/main ethtool 6+20090307-1 [68.4kB]
+Get:163 http://ubuntu.apt-get.eu karmic/main fakeroot 1.12.4ubuntu1 [126kB]
+Get:164 http://ubuntu.apt-get.eu karmic/universe menu 2.1.41ubuntu1 [438kB]
 Get:165 http://archive.ubuntu.com karmic-security/main libcups2 1.4.1-5ubuntu2.1 [212kB]
-Get:166 http://archive.ubuntu.com karmic-updates/main libpulse0 1:0.9.19-0ubuntu4.1 [235kB]
-Get:167 http://ubuntu.apt-get.eu karmic/main libjpeg62 6b-14build1 [92.7kB]
-Get:168 http://ubuntu.apt-get.eu karmic/main libtiff4 3.8.2-13 [131kB]
-Get:169 http://archive.ubuntu.com karmic-security/main libvorbisfile3 1.2.0.dfsg-6ubuntu0.1 [22.5kB]
-Get:170 http://ubuntu.apt-get.eu karmic/main libimlib2 1.4.2-5 [216kB]
-Get:171 http://archive.ubuntu.com karmic-security/main libwbclient0 2:3.4.0-3ubuntu5.4 [102kB]
-Get:172 http://ubuntu.apt-get.eu karmic/universe fluxbox 1.1.1-2 [1095kB]
-Get:173 http://archive.ubuntu.com karmic-security/main libsmbclient 2:3.4.0-3ubuntu5.4 [1652kB]
-Get:174 http://ubuntu.apt-get.eu karmic/main fontconfig 2.6.0-1ubuntu12 [137kB]
-Get:175 http://ubuntu.apt-get.eu karmic/main genext2fs 1.4.1-2.1build1 [23.3kB]
-Get:176 http://archive.ubuntu.com karmic-updates/main linux-firmware 1.25 [5714kB]
-Get:177 http://ubuntu.apt-get.eu karmic/main grub 0.97-29ubuntu59 [407kB]
-Get:178 http://ubuntu.apt-get.eu karmic/main libhal1 0.5.13-1ubuntu8 [104kB]
-Get:179 http://ubuntu.apt-get.eu karmic/main libhal-storage1 0.5.13-1ubuntu8 [24.3kB]
-Get:180 http://ubuntu.apt-get.eu karmic/main hal-info 20090716-0ubuntu1 [43.9kB]
-Get:181 http://ubuntu.apt-get.eu karmic/main hal 0.5.13-1ubuntu8 [378kB]
-Get:182 http://ubuntu.apt-get.eu karmic/universe hfsprogs 332.14-7 [133kB]
-Get:183 http://ubuntu.apt-get.eu karmic/universe wwwconfig-common 0.2.1 [22.8kB]
-Get:184 http://ubuntu.apt-get.eu karmic/universe javascript-common 6 [3766B]
-Get:185 http://ubuntu.apt-get.eu karmic/main lftp 3.7.15-1ubuntu2 [402kB]
-Get:186 http://ubuntu.apt-get.eu karmic/main libaudio2 1.9.2-1 [84.6kB]
-Get:187 http://archive.ubuntu.com karmic-security/main linux-image-generic 2.6.31.19.32 [3380B]
-Get:188 http://archive.ubuntu.com karmic-security/main linux-generic 2.6.31.19.32 [3372B]
-Get:189 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19 2.6.31-19.56 [9531kB]
-Get:190 http://ubuntu.apt-get.eu karmic/main libavutil49 4:0.5+svn20090706-2ubuntu2 [92.2kB]
-Get:191 http://ubuntu.apt-get.eu karmic/main libgsm1 1.0.13-1 [28.2kB]
-Get:192 http://ubuntu.apt-get.eu karmic/main liboil0.3 0.3.16-1ubuntu1 [148kB]
-Get:193 http://ubuntu.apt-get.eu karmic/main libschroedinger-1.0-0 1.0.8-2 [211kB]
-Get:194 http://ubuntu.apt-get.eu karmic/main libspeex1 1.2~rc1-1 [113kB]
-Get:195 http://ubuntu.apt-get.eu karmic/main libogg0 1.1.4~dfsg-1 [16.9kB]
-Get:196 http://ubuntu.apt-get.eu karmic/main libtheora0 1.0-2.1build1 [290kB]
-Get:197 http://ubuntu.apt-get.eu karmic/main libavcodec52 4:0.5+svn20090706-2ubuntu2 [3971kB]
-Get:198 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19-generic 2.6.31-19.56 [674kB]
-Get:199 http://archive.ubuntu.com karmic-security/main linux-headers-generic 2.6.31.19.32 [3368B]
-Get:200 http://archive.ubuntu.com karmic-security/main python2.5 2.5.4-1ubuntu6.1 [2915kB]
-Get:201 http://ubuntu.apt-get.eu karmic/main libavformat52 4:0.5+svn20090706-2ubuntu2 [707kB]
-Get:202 http://ubuntu.apt-get.eu karmic/main libcdio7 0.78.2+dfsg1-3 [142kB]
-Get:203 http://ubuntu.apt-get.eu karmic/main libdb4.6 4.6.21-13ubuntu2 [605kB]
-Get:204 http://ubuntu.apt-get.eu karmic/main libsysfs2 2.1.0-5 [23.1kB]
-Get:205 http://ubuntu.apt-get.eu karmic/main tsconf 1.0-7 [12.7kB]
-Get:206 http://ubuntu.apt-get.eu karmic/main libts-0.0-0 1.0-7 [28.6kB]
-Get:207 http://ubuntu.apt-get.eu karmic/main libdirectfb-1.2-0 1.2.7-2ubuntu1 [731kB]
-Get:208 http://archive.ubuntu.com karmic-security/main samba-common 2:3.4.0-3ubuntu5.4 [387kB]
-Get:209 http://archive.ubuntu.com karmic-security/main samba 2:3.4.0-3ubuntu5.4 [6241kB]
-Get:210 http://ubuntu.apt-get.eu karmic/main libdrm-intel1 2.4.14-1ubuntu1 [391kB]
-Get:211 http://ubuntu.apt-get.eu karmic/main libdrm-radeon1 2.4.14-1ubuntu1 [382kB]
-Get:212 http://ubuntu.apt-get.eu karmic/main libenca0 1.9-7 [75.2kB]
-Get:213 http://ubuntu.apt-get.eu karmic/multiverse libfaac0 1.26-0.1ubuntu2 [61.4kB]
-Get:214 http://ubuntu.apt-get.eu karmic/universe libfaad0 2.6.1-3.1 [167kB]
-Get:215 http://ubuntu.apt-get.eu karmic/main libflac8 1.2.1-2build1 [150kB]
-Get:216 http://ubuntu.apt-get.eu karmic/main libftdi1 0.16-2 [17.5kB]
-Get:217 http://ubuntu.apt-get.eu karmic/main libglu1-mesa 7.6.0-1ubuntu4 [184kB]
-Get:218 http://ubuntu.apt-get.eu karmic/universe libglew1.5 1.5.1-4ubuntu1 [92.9kB]
-Get:219 http://ubuntu.apt-get.eu karmic/main libiw29 29-2ubuntu6 [35.3kB]
-Get:220 http://ubuntu.apt-get.eu karmic/main libjasper1 1.900.1-6 [152kB]
-Get:221 http://ubuntu.apt-get.eu karmic/universe libjs-prototype 1.6.0.3-1 [33.4kB]
-Get:222 http://ubuntu.apt-get.eu karmic/universe libjs-scriptaculous 1.8.2-1 [126kB]
-Get:223 http://ubuntu.apt-get.eu karmic/main liblcms1 1.18.dfsg-1ubuntu1 [103kB]
-Get:224 http://ubuntu.apt-get.eu karmic/main liblzo2-2 2.03-1 [64.5kB]
-Get:225 http://ubuntu.apt-get.eu karmic/main libmad0 0.15.1b-4 [74.5kB]
-Get:226 http://ubuntu.apt-get.eu karmic/main libmikmod2 3.1.11-a-6ubuntu4 [155kB]
-Get:227 http://ubuntu.apt-get.eu karmic/universe libmms0 0.4-2 [28.7kB]
-Get:228 http://ubuntu.apt-get.eu karmic/main libmng1 1.0.9-1build1 [209kB]
-Get:229 http://ubuntu.apt-get.eu karmic/main mysql-common 5.1.37-1ubuntu5 [69.5kB]
-Get:230 http://ubuntu.apt-get.eu karmic/main libmysqlclient16 5.1.37-1ubuntu5 [1903kB]
-Get:231 http://archive.ubuntu.com karmic-security/main samba-common-bin 2:3.4.0-3ubuntu5.4 [4787kB]
-Get:232 http://ubuntu.apt-get.eu karmic/main libnl1 1.1-5 [145kB]
-Get:233 http://ubuntu.apt-get.eu karmic/main libnss-mdns 0.10-3ubuntu3 [25.0kB]
-Get:234 http://ubuntu.apt-get.eu karmic/main libpam-ck-connector 0.3.1-0ubuntu2 [8164B]
-Get:235 http://ubuntu.apt-get.eu karmic/main libpcsclite1 1.5.3-1ubuntu1 [46.8kB]
-Get:236 http://ubuntu.apt-get.eu karmic/main libpixman-1-0 0.14.0-1 [159kB]
-Get:237 http://ubuntu.apt-get.eu karmic/main libpolkit2 0.9-4ubuntu1 [109kB]
-Get:238 http://ubuntu.apt-get.eu karmic/main libpolkit-dbus2 0.9-4ubuntu1 [24.2kB]
-Get:239 http://ubuntu.apt-get.eu karmic/main libpolkit-grant2 0.9-4ubuntu1 [20.8kB]
-Get:240 http://ubuntu.apt-get.eu karmic/main libsndfile1 1.0.20-1ubuntu1 [238kB]
-Get:241 http://ubuntu.apt-get.eu karmic/main libwrap0 7.6.q-16 [30.5kB]
-Get:242 http://ubuntu.apt-get.eu karmic/main libqt3-mt 3:3.3.8-b-5ubuntu3 [3282kB]
-Get:243 http://archive.ubuntu.com karmic-security/universe transmission-cli 1.75-0ubuntu2.2 [365kB]
-Get:244 http://archive.ubuntu.com karmic-security/main xserver-common 2:1.6.4-2ubuntu4.1 [74.8kB]
-Get:245 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-intel 2:2.9.0-1ubuntu2.1 [600kB]
-Get:246 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-all 1:7.4+3ubuntu10 [1166B]
-Get:247 http://archive.ubuntu.com karmic-updates/main xserver-xorg-input-all 1:7.4+3ubuntu10 [1028B]
-Get:248 http://archive.ubuntu.com karmic-updates/main xserver-xorg 1:7.4+3ubuntu10 [29.0kB]
-Get:249 http://archive.ubuntu.com karmic-security/main xserver-xorg-core 2:1.6.4-2ubuntu4.1 [2215kB]
-Get:250 http://ubuntu.apt-get.eu karmic/main libsamplerate0 0.1.7-2 [1348kB]
-Get:251 http://archive.ubuntu.com karmic-updates/universe xlibmesa-glu 1:7.4+3ubuntu10 [954B]
-Get:252 http://archive.ubuntu.com karmic-updates/main xorg 1:7.4+3ubuntu10 [1282B]
-Get:253 http://ubuntu.apt-get.eu karmic/main libsdl1.2debian-alsa 1.2.13-4ubuntu4 [218kB]
-Get:254 http://ubuntu.apt-get.eu karmic/main libsdl1.2debian 1.2.13-4ubuntu4 [21.8kB]
-Get:255 http://ubuntu.apt-get.eu karmic/main libsdl-image1.2 1.2.7-1 [32.2kB]
-Get:256 http://ubuntu.apt-get.eu karmic/main libsmpeg0 0.4.5+cvs20030824-2.2 [102kB]
-Get:257 http://ubuntu.apt-get.eu karmic/main libsdl-mixer1.2 1.2.8-6build1 [99.1kB]
-Get:258 http://ubuntu.apt-get.eu karmic/main libsensors4 1:3.0.2-2ubuntu4 [63.0kB]
-Get:259 http://ubuntu.apt-get.eu karmic/main libtalloc1 1.4.0~git20090718-1 [19.3kB]
-Get:260 http://ubuntu.apt-get.eu karmic/main libtag1-vanilla 1.6-2ubuntu2 [227kB]
-Get:261 http://ubuntu.apt-get.eu karmic/main libtag1c2a 1.6-2ubuntu2 [7922B]
-Get:262 http://ubuntu.apt-get.eu karmic/main libtagc0 1.6-2ubuntu2 [13.4kB]
-Get:263 http://ubuntu.apt-get.eu karmic/main libtidy-0.99-0 20081224cvs-1 [137kB]
-Get:264 http://ubuntu.apt-get.eu karmic/main libx86-1 1.1+ds1-4 [8888B]
-Get:265 http://ubuntu.apt-get.eu karmic/main libusplash0 0.5.49 [101kB]
-Get:266 http://ubuntu.apt-get.eu karmic/main libxfont1 1:1.4.0-1ubuntu1 [152kB]
-Get:267 http://ubuntu.apt-get.eu karmic/main libxvmc1 2:1.0.4-2ubuntu2 [20.2kB]
-Get:268 http://ubuntu.apt-get.eu karmic/main user-setup 1.27ubuntu11 [139kB]
-Get:269 http://ubuntu.apt-get.eu karmic/universe mt-daapd 0.9~r1696.dfsg-13build1 [277kB]
-Get:270 http://ubuntu.apt-get.eu karmic/main openssh-server 1:5.1p1-6ubuntu2 [286kB]
-Get:271 http://ubuntu.apt-get.eu karmic/main os-prober 1.35 [22.1kB]
-Get:272 http://ubuntu.apt-get.eu karmic/main patch 2.5.9-5 [100kB]
-Get:273 http://ubuntu.apt-get.eu karmic/main policykit 0.9-4ubuntu1 [67.8kB]
-Get:274 http://ubuntu.apt-get.eu karmic/main update-inetd 4.31 [16.9kB]
-Get:275 http://ubuntu.apt-get.eu karmic/main tcpd 7.6.q-16 [78.9kB]
-Get:276 http://ubuntu.apt-get.eu karmic/main openbsd-inetd 0.20080125-2ubuntu1 [37.2kB]
-Get:277 http://ubuntu.apt-get.eu karmic/universe proftpd-basic 1.3.2-3 [799kB]
-Get:278 http://ubuntu.apt-get.eu karmic/universe python-chardet 1.0.1-1.1 [172kB]
-Get:279 http://ubuntu.apt-get.eu karmic/main python-cheetah 2.0.1-2ubuntu6 [200kB]
-Get:280 http://ubuntu.apt-get.eu karmic/universe python-cherrypy 2.3.0-2 [245kB]
-Get:281 http://ubuntu.apt-get.eu karmic/main python-configobj 4.5.3-1 [258kB]
-Get:282 http://ubuntu.apt-get.eu karmic/universe python-feedparser 4.1-14 [114kB]
-Get:283 http://ubuntu.apt-get.eu karmic/main python-libxml2 2.7.5.dfsg-1ubuntu1 [374kB]
-Get:284 http://ubuntu.apt-get.eu karmic/main python-openssl 0.9-1 [104kB]
-Get:285 http://ubuntu.apt-get.eu karmic/main python-sip4 4.9.1-snapshot-20091015-0ubuntu1 [165kB]
-Get:286 http://ubuntu.apt-get.eu karmic/main python-qt3 3.18.1-1ubuntu1 [4754kB]
-Get:287 http://ubuntu.apt-get.eu karmic/main unattended-upgrades 0.52ubuntu1 [19.3kB]
-Get:288 http://ubuntu.apt-get.eu karmic/main python-software-properties 0.75.4 [27.9kB]
-Get:289 http://ubuntu.apt-get.eu karmic/main python-utidylib 0.2-3.2ubuntu1 [8544B]
-Get:290 http://ubuntu.apt-get.eu karmic/main libpciaccess0 0.10.6-2ubuntu1 [29.5kB]
-Get:291 http://ubuntu.apt-get.eu karmic/main radeontool 1.5+git76606164-0ubuntu2 [56.3kB]
-Get:292 http://ubuntu.apt-get.eu karmic/multiverse sabnzbdplus 0.4.12-1 [204kB]
-Get:293 http://ubuntu.apt-get.eu karmic/main smartdimmer 0.8b4-1ubuntu2 [36.7kB]
-Get:294 http://ubuntu.apt-get.eu karmic/main ssl-cert 1.0.23ubuntu2 [10.9kB]
-Get:295 http://ubuntu.apt-get.eu karmic/main toshset 1.75-1 [73.9kB]
-Get:296 http://ubuntu.apt-get.eu karmic/main ttf-liberation 1.05.1.20090721-0ubuntu1 [1038kB]
-Get:297 http://ubuntu.apt-get.eu karmic/multiverse unrar 1:3.9.3-1 [103kB]
-Get:298 http://ubuntu.apt-get.eu karmic/main unzip 6.0-1 [181kB]
-Get:299 http://ubuntu.apt-get.eu karmic/main usplash 0.5.49 [36.1kB]
-Get:300 http://ubuntu.apt-get.eu karmic/main usplash-theme-ubuntu 0.27 [37.5kB]
-Get:301 http://ubuntu.apt-get.eu karmic/main vbetool 1.1-2 [10.9kB]
-Get:302 http://ubuntu.apt-get.eu karmic/main whois 4.7.34ubuntu2 [36.3kB]
-Get:303 http://ubuntu.apt-get.eu karmic/main wireless-tools 29-2ubuntu6 [119kB]
-Get:304 http://ubuntu.apt-get.eu karmic/main wpasupplicant 0.6.9-3ubuntu1 [381kB]
-Get:305 http://ubuntu.apt-get.eu karmic/main mesa-utils 7.6.0-1ubuntu4 [48.0kB]
-Get:306 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-apm 1:1.2.1-2 [69.2kB]
-Get:307 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-ark 1:0.7.1-2 [18.0kB]
-Get:308 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-r128 6.8.1-1 [180kB]
-Get:309 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-mach64 6.8.2-1 [217kB]
-Get:310 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-radeon 1:6.12.99+git20090929.7968e1fb-0ubuntu1 [586kB]
-Get:311 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-ati 1:6.12.99+git20090929.7968e1fb-0ubuntu1 [216kB]
-Get:312 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-chips 1:1.2.1-3 [83.7kB]
-Get:313 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-cirrus 1:1.3.1-1ubuntu2 [48.3kB]
-Get:314 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-fbdev 1:0.4.0-4 [20.8kB]
-Get:315 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-geode 2.11.6-1 [161kB]
-Get:316 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-i128 1:1.3.2-1 [36.5kB]
-Get:317 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-i740 1:1.3.0-1 [32.8kB]
-Get:318 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-mga 1:1.4.11.dfsg-1 [118kB]
-Get:319 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-neomagic 1:1.2.3-1 [45.8kB]
-Get:320 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-nv 1:2.1.14-2ubuntu3 [115kB]
-Get:321 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-rendition 1:4.2.1-1 [33.3kB]
-Get:322 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-s3 1:0.6.2-1 [43.5kB]
-Get:323 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-s3virge 1:1.10.2-2 [49.2kB]
-Get:324 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-savage 1:2.3.0-1ubuntu1 [95.2kB]
-Get:325 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-siliconmotion 1:1.7.2-1 [89.1kB]
-Get:326 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-sis 1:0.10.1-2 [307kB]
-Get:327 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-sisusb 1:0.9.1-1 [50.3kB]
-Get:328 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-tdfx 1:1.4.1-1 [47.4kB]
-Get:329 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-trident 1:1.3.1-1 [82.1kB]
-Get:330 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-tseng 1:1.2.1-1 [35.7kB]
-Get:331 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-vesa 1:2.2.1-1 [25.2kB]
-Get:332 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-openchrome 1:0.2.903+svn758-0ubuntu1 [197kB]
-Get:333 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-voodoo 1:1.2.2-1 [23.7kB]
-Get:334 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-vmware 1:10.16.7-1 [42.5kB]
-Get:335 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-v4l 1:0.2.0-3ubuntu1 [26.0kB]
-Get:336 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-evdev 1:2.2.5-1ubuntu6 [67.5kB]
-Get:337 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-synaptics 1.1.2-1ubuntu7 [68.6kB]
-Get:338 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-mouse 1:1.4.0-2 [54.3kB]
-Get:339 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-vmmouse 1:12.6.4-1ubuntu3 [24.5kB]
-Get:340 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-wacom 1:0.8.4.1-0ubuntu4 [70.8kB]
-Get:341 http://ubuntu.apt-get.eu karmic/main xinit 1.1.1-1 [33.6kB]
-Get:342 http://ubuntu.apt-get.eu karmic/main xfonts-encodings 1:1.0.2-3 [584kB]
-Get:343 http://ubuntu.apt-get.eu karmic/main xfonts-utils 1:7.4+1ubuntu1 [92.0kB]
-Get:344 http://ubuntu.apt-get.eu karmic/main xfonts-100dpi 1:1.0.0-4build1 [3908kB]
-Get:345 http://ubuntu.apt-get.eu karmic/main xfonts-75dpi 1:1.0.0-4build1 [3472kB]
-Get:346 http://ubuntu.apt-get.eu karmic/main xfonts-base 1:1.0.0-6 [6133kB]
-Get:347 http://ubuntu.apt-get.eu karmic/main xfonts-scalable 1:1.0.0-7 [341kB]
-Get:348 http://ubuntu.apt-get.eu karmic/universe xfonts-terminus 4.28-1 [1087kB]
-Get:349 http://ubuntu.apt-get.eu karmic/main xinput 1.4.2-1 [15.3kB]
-Get:350 http://ubuntu.apt-get.eu karmic/main libgl1-mesa-dri 7.6.0-1ubuntu4 [2878kB]
-Get:351 http://ubuntu.apt-get.eu karmic/main xorg-docs-core 1:1.4-5 [58.6kB]
-Get:352 http://ubuntu.apt-get.eu karmic/main xterm 243-1ubuntu1 [499kB]
-Get:353 http://ubuntu.apt-get.eu karmic/main zip 3.0-1ubuntu1 [324kB]
-Get:354 http://ubuntu.apt-get.eu karmic/main liblircclient0 0.8.6-0ubuntu2 [88.1kB]
-Get:355 http://ubuntu.apt-get.eu karmic/main setserial 2.17-45 [51.6kB]
-Get:356 http://ubuntu.apt-get.eu karmic/universe lirc 0.8.6-0ubuntu2 [559kB]
-Get:357 http://ubuntu.apt-get.eu karmic/main lm-sensors 1:3.0.2-2ubuntu4 [125kB]
-Get:358 http://ubuntu.apt-get.eu karmic/main lynx-cur 2.8.7pre6-1 [1200kB]
-Get:359 http://ubuntu.apt-get.eu karmic/main lynx 2.8.7pre6-1 [15.1kB]
-Get:360 http://ubuntu.apt-get.eu karmic/universe par2 0.4-10 [102kB]
-Get:361 http://ubuntu.apt-get.eu karmic/universe python-yenc 0.3+debian-2ubuntu1 [19.2kB]
+Get:166 http://archive.ubuntu.com karmic-security/main libvorbisfile3 1.2.0.dfsg-6ubuntu0.1 [22.5kB]
+Get:167 http://archive.ubuntu.com karmic-security/main libwbclient0 2:3.4.0-3ubuntu5.4 [102kB]
+Get:168 http://archive.ubuntu.com karmic-security/main libsmbclient 2:3.4.0-3ubuntu5.4 [1652kB]
+Get:169 http://ubuntu.apt-get.eu karmic/main libgif4 4.1.6-6 [39.4kB]
+Get:170 http://ubuntu.apt-get.eu karmic/main libid3tag0 0.15.1b-10build1 [35.4kB]
+Get:171 http://ubuntu.apt-get.eu karmic/main libjpeg62 6b-14build1 [92.7kB]
+Get:172 http://ubuntu.apt-get.eu karmic/main libtiff4 3.8.2-13 [131kB]
+Get:173 http://ubuntu.apt-get.eu karmic/main libimlib2 1.4.2-5 [216kB]
+Get:174 http://archive.ubuntu.com karmic-updates/main linux-firmware 1.25 [5714kB]
+Get:175 http://ubuntu.apt-get.eu karmic/universe fluxbox 1.1.1-2 [1095kB]
+Get:176 http://ubuntu.apt-get.eu karmic/main fontconfig 2.6.0-1ubuntu12 [137kB]
+Get:177 http://ubuntu.apt-get.eu karmic/main genext2fs 1.4.1-2.1build1 [23.3kB]
+Get:178 http://ubuntu.apt-get.eu karmic/main grub 0.97-29ubuntu59 [407kB]
+Get:179 http://ubuntu.apt-get.eu karmic/main libhal1 0.5.13-1ubuntu8 [104kB]
+Get:180 http://ubuntu.apt-get.eu karmic/main libhal-storage1 0.5.13-1ubuntu8 [24.3kB]
+Get:181 http://ubuntu.apt-get.eu karmic/main hal-info 20090716-0ubuntu1 [43.9kB]
+Get:182 http://ubuntu.apt-get.eu karmic/main hal 0.5.13-1ubuntu8 [378kB]
+Get:183 http://archive.ubuntu.com karmic-security/main linux-image-generic 2.6.31.19.32 [3380B]
+Get:184 http://archive.ubuntu.com karmic-security/main linux-generic 2.6.31.19.32 [3372B]
+Get:185 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19 2.6.31-19.56 [9531kB]
+Get:186 http://ubuntu.apt-get.eu karmic/universe hfsprogs 332.14-7 [133kB]
+Get:187 http://ubuntu.apt-get.eu karmic/universe wwwconfig-common 0.2.1 [22.8kB]
+Get:188 http://ubuntu.apt-get.eu karmic/universe javascript-common 6 [3766B]
+Get:189 http://ubuntu.apt-get.eu karmic/main lftp 3.7.15-1ubuntu2 [402kB]
+Get:190 http://ubuntu.apt-get.eu karmic/main libaudio2 1.9.2-1 [84.6kB]
+Get:191 http://ubuntu.apt-get.eu karmic/main libavutil49 4:0.5+svn20090706-2ubuntu2 [92.2kB]
+Get:192 http://ubuntu.apt-get.eu karmic/main libgsm1 1.0.13-1 [28.2kB]
+Get:193 http://ubuntu.apt-get.eu karmic/main liboil0.3 0.3.16-1ubuntu1 [148kB]
+Get:194 http://ubuntu.apt-get.eu karmic/main libschroedinger-1.0-0 1.0.8-2 [211kB]
+Get:195 http://ubuntu.apt-get.eu karmic/main libspeex1 1.2~rc1-1 [113kB]
+Get:196 http://ubuntu.apt-get.eu karmic/main libogg0 1.1.4~dfsg-1 [16.9kB]
+Get:197 http://ubuntu.apt-get.eu karmic/main libtheora0 1.0-2.1build1 [290kB]
+Get:198 http://ubuntu.apt-get.eu karmic/main libavcodec52 4:0.5+svn20090706-2ubuntu2 [3971kB]
+Get:199 http://archive.ubuntu.com karmic-security/main linux-headers-2.6.31-19-generic 2.6.31-19.56 [674kB]
+Get:200 http://archive.ubuntu.com karmic-security/main linux-headers-generic 2.6.31.19.32 [3368B]
+Get:201 http://archive.ubuntu.com karmic-security/main python2.5 2.5.4-1ubuntu6.1 [2915kB]
+Get:202 http://archive.ubuntu.com karmic-security/main samba-common 2:3.4.0-3ubuntu5.4 [387kB]
+Get:203 http://archive.ubuntu.com karmic-security/main samba 2:3.4.0-3ubuntu5.4 [6241kB]
+Get:204 http://ubuntu.apt-get.eu karmic/main libavformat52 4:0.5+svn20090706-2ubuntu2 [707kB]
+Get:205 http://ubuntu.apt-get.eu karmic/main libcdio7 0.78.2+dfsg1-3 [142kB]
+Get:206 http://ubuntu.apt-get.eu karmic/main libdb4.6 4.6.21-13ubuntu2 [605kB]
+Get:207 http://ubuntu.apt-get.eu karmic/main libsysfs2 2.1.0-5 [23.1kB]
+Get:208 http://ubuntu.apt-get.eu karmic/main tsconf 1.0-7 [12.7kB]
+Get:209 http://ubuntu.apt-get.eu karmic/main libts-0.0-0 1.0-7 [28.6kB]
+Get:210 http://ubuntu.apt-get.eu karmic/main libdirectfb-1.2-0 1.2.7-2ubuntu1 [731kB]
+Get:211 http://archive.ubuntu.com karmic-security/main samba-common-bin 2:3.4.0-3ubuntu5.4 [4787kB]
+Get:212 http://ubuntu.apt-get.eu karmic/main libdrm-intel1 2.4.14-1ubuntu1 [391kB]
+Get:213 http://ubuntu.apt-get.eu karmic/main libdrm-radeon1 2.4.14-1ubuntu1 [382kB]
+Get:214 http://ubuntu.apt-get.eu karmic/main libenca0 1.9-7 [75.2kB]
+Get:215 http://archive.ubuntu.com karmic-security/universe transmission-cli 1.75-0ubuntu2.2 [365kB]
+Get:216 http://archive.ubuntu.com karmic-security/main xserver-common 2:1.6.4-2ubuntu4.1 [74.8kB]
+Get:217 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-intel 2:2.9.0-1ubuntu2.1 [600kB]
+Get:218 http://archive.ubuntu.com karmic-updates/main xserver-xorg-video-all 1:7.4+3ubuntu10 [1166B]
+Get:219 http://archive.ubuntu.com karmic-updates/main xserver-xorg-input-all 1:7.4+3ubuntu10 [1028B]
+Get:220 http://archive.ubuntu.com karmic-updates/main xserver-xorg 1:7.4+3ubuntu10 [29.0kB]
+Get:221 http://archive.ubuntu.com karmic-security/main xserver-xorg-core 2:1.6.4-2ubuntu4.1 [2215kB]
+Get:222 http://ubuntu.apt-get.eu karmic/multiverse libfaac0 1.26-0.1ubuntu2 [61.4kB]
+Get:223 http://ubuntu.apt-get.eu karmic/universe libfaad0 2.6.1-3.1 [167kB]
+Get:224 http://archive.ubuntu.com karmic-updates/universe xlibmesa-glu 1:7.4+3ubuntu10 [954B]
+Get:225 http://archive.ubuntu.com karmic-updates/main xorg 1:7.4+3ubuntu10 [1282B]
+Get:226 http://ubuntu.apt-get.eu karmic/main libflac8 1.2.1-2build1 [150kB]
+Get:227 http://ubuntu.apt-get.eu karmic/main libftdi1 0.16-2 [17.5kB]
+Get:228 http://ubuntu.apt-get.eu karmic/main libglu1-mesa 7.6.0-1ubuntu4 [184kB]
+Get:229 http://ubuntu.apt-get.eu karmic/universe libglew1.5 1.5.1-4ubuntu1 [92.9kB]
+Get:230 http://ubuntu.apt-get.eu karmic/main libiw29 29-2ubuntu6 [35.3kB]
+Get:231 http://ubuntu.apt-get.eu karmic/main libjasper1 1.900.1-6 [152kB]
+Get:232 http://ubuntu.apt-get.eu karmic/universe libjs-prototype 1.6.0.3-1 [33.4kB]
+Get:233 http://ubuntu.apt-get.eu karmic/universe libjs-scriptaculous 1.8.2-1 [126kB]
+Get:234 http://ubuntu.apt-get.eu karmic/main liblcms1 1.18.dfsg-1ubuntu1 [103kB]
+Get:235 http://ubuntu.apt-get.eu karmic/main liblzo2-2 2.03-1 [64.5kB]
+Get:236 http://ubuntu.apt-get.eu karmic/main libmad0 0.15.1b-4 [74.5kB]
+Get:237 http://ubuntu.apt-get.eu karmic/main libmikmod2 3.1.11-a-6ubuntu4 [155kB]
+Get:238 http://ubuntu.apt-get.eu karmic/universe libmms0 0.4-2 [28.7kB]
+Get:239 http://ubuntu.apt-get.eu karmic/main libmng1 1.0.9-1build1 [209kB]
+Get:240 http://ubuntu.apt-get.eu karmic/main mysql-common 5.1.37-1ubuntu5 [69.5kB]
+Get:241 http://ubuntu.apt-get.eu karmic/main libmysqlclient16 5.1.37-1ubuntu5 [1903kB]
+Get:242 http://ubuntu.apt-get.eu karmic/main libnl1 1.1-5 [145kB]
+Get:243 http://ubuntu.apt-get.eu karmic/main libnss-mdns 0.10-3ubuntu3 [25.0kB]
+Get:244 http://ubuntu.apt-get.eu karmic/main libpam-ck-connector 0.3.1-0ubuntu2 [8164B]
+Get:245 http://ubuntu.apt-get.eu karmic/main libpcsclite1 1.5.3-1ubuntu1 [46.8kB]
+Get:246 http://ubuntu.apt-get.eu karmic/main libpixman-1-0 0.14.0-1 [159kB]
+Get:247 http://ubuntu.apt-get.eu karmic/main libpolkit2 0.9-4ubuntu1 [109kB]
+Get:248 http://ubuntu.apt-get.eu karmic/main libpolkit-dbus2 0.9-4ubuntu1 [24.2kB]
+Get:249 http://ubuntu.apt-get.eu karmic/main libpolkit-grant2 0.9-4ubuntu1 [20.8kB]
+Get:250 http://ubuntu.apt-get.eu karmic/main libsndfile1 1.0.20-1ubuntu1 [238kB]
+Get:251 http://ubuntu.apt-get.eu karmic/main libwrap0 7.6.q-16 [30.5kB]
+Get:252 http://ubuntu.apt-get.eu karmic/main libqt3-mt 3:3.3.8-b-5ubuntu3 [3282kB]
+Get:253 http://ubuntu.apt-get.eu karmic/main libsamplerate0 0.1.7-2 [1348kB]
+Get:254 http://ubuntu.apt-get.eu karmic/main libsdl1.2debian-alsa 1.2.13-4ubuntu4 [218kB]
+Get:255 http://ubuntu.apt-get.eu karmic/main libsdl1.2debian 1.2.13-4ubuntu4 [21.8kB]
+Get:256 http://ubuntu.apt-get.eu karmic/main libsdl-image1.2 1.2.7-1 [32.2kB]
+Get:257 http://ubuntu.apt-get.eu karmic/main libsmpeg0 0.4.5+cvs20030824-2.2 [102kB]
+Get:258 http://ubuntu.apt-get.eu karmic/main libsdl-mixer1.2 1.2.8-6build1 [99.1kB]
+Get:259 http://ubuntu.apt-get.eu karmic/main libsensors4 1:3.0.2-2ubuntu4 [63.0kB]
+Get:260 http://ubuntu.apt-get.eu karmic/main libtalloc1 1.4.0~git20090718-1 [19.3kB]
+Get:261 http://ubuntu.apt-get.eu karmic/main libtag1-vanilla 1.6-2ubuntu2 [227kB]
+Get:262 http://ubuntu.apt-get.eu karmic/main libtag1c2a 1.6-2ubuntu2 [7922B]
+Get:263 http://ubuntu.apt-get.eu karmic/main libtagc0 1.6-2ubuntu2 [13.4kB]
+Get:264 http://ubuntu.apt-get.eu karmic/main libtidy-0.99-0 20081224cvs-1 [137kB]
+Get:265 http://ubuntu.apt-get.eu karmic/main libx86-1 1.1+ds1-4 [8888B]
+Get:266 http://ubuntu.apt-get.eu karmic/main libusplash0 0.5.49 [101kB]
+Get:267 http://ubuntu.apt-get.eu karmic/main libxfont1 1:1.4.0-1ubuntu1 [152kB]
+Get:268 http://ubuntu.apt-get.eu karmic/main libxvmc1 2:1.0.4-2ubuntu2 [20.2kB]
+Get:269 http://ubuntu.apt-get.eu karmic/main user-setup 1.27ubuntu11 [139kB]
+Get:270 http://ubuntu.apt-get.eu karmic/universe mt-daapd 0.9~r1696.dfsg-13build1 [277kB]
+Get:271 http://ubuntu.apt-get.eu karmic/main openssh-server 1:5.1p1-6ubuntu2 [286kB]
+Get:272 http://ubuntu.apt-get.eu karmic/main os-prober 1.35 [22.1kB]
+Get:273 http://ubuntu.apt-get.eu karmic/main patch 2.5.9-5 [100kB]
+Get:274 http://ubuntu.apt-get.eu karmic/main policykit 0.9-4ubuntu1 [67.8kB]
+Get:275 http://ubuntu.apt-get.eu karmic/main update-inetd 4.31 [16.9kB]
+Get:276 http://ubuntu.apt-get.eu karmic/main tcpd 7.6.q-16 [78.9kB]
+Get:277 http://ubuntu.apt-get.eu karmic/main openbsd-inetd 0.20080125-2ubuntu1 [37.2kB]
+Get:278 http://ubuntu.apt-get.eu karmic/universe proftpd-basic 1.3.2-3 [799kB]
+Get:279 http://ubuntu.apt-get.eu karmic/universe python-chardet 1.0.1-1.1 [172kB]
+Get:280 http://ubuntu.apt-get.eu karmic/main python-cheetah 2.0.1-2ubuntu6 [200kB]
+Get:281 http://ubuntu.apt-get.eu karmic/universe python-cherrypy 2.3.0-2 [245kB]
+Get:282 http://ubuntu.apt-get.eu karmic/main python-configobj 4.5.3-1 [258kB]
+Get:283 http://ubuntu.apt-get.eu karmic/universe python-feedparser 4.1-14 [114kB]
+Get:284 http://ubuntu.apt-get.eu karmic/main python-libxml2 2.7.5.dfsg-1ubuntu1 [374kB]
+Get:285 http://ubuntu.apt-get.eu karmic/main python-openssl 0.9-1 [104kB]
+Get:286 http://ubuntu.apt-get.eu karmic/main python-sip4 4.9.1-snapshot-20091015-0ubuntu1 [165kB]
+Get:287 http://ubuntu.apt-get.eu karmic/main python-qt3 3.18.1-1ubuntu1 [4754kB]
+Get:288 http://ubuntu.apt-get.eu karmic/main unattended-upgrades 0.52ubuntu1 [19.3kB]
+Get:289 http://ubuntu.apt-get.eu karmic/main python-software-properties 0.75.4 [27.9kB]
+Get:290 http://ubuntu.apt-get.eu karmic/main python-utidylib 0.2-3.2ubuntu1 [8544B]
+Get:291 http://ubuntu.apt-get.eu karmic/main libpciaccess0 0.10.6-2ubuntu1 [29.5kB]
+Get:292 http://ubuntu.apt-get.eu karmic/main radeontool 1.5+git76606164-0ubuntu2 [56.3kB]
+Get:293 http://ubuntu.apt-get.eu karmic/multiverse sabnzbdplus 0.4.12-1 [204kB]
+Get:294 http://ubuntu.apt-get.eu karmic/main smartdimmer 0.8b4-1ubuntu2 [36.7kB]
+Get:295 http://ubuntu.apt-get.eu karmic/main ssl-cert 1.0.23ubuntu2 [10.9kB]
+Get:296 http://ubuntu.apt-get.eu karmic/main toshset 1.75-1 [73.9kB]
+Get:297 http://ubuntu.apt-get.eu karmic/main ttf-liberation 1.05.1.20090721-0ubuntu1 [1038kB]
+Get:298 http://ubuntu.apt-get.eu karmic/multiverse unrar 1:3.9.3-1 [103kB]
+Get:299 http://ubuntu.apt-get.eu karmic/main unzip 6.0-1 [181kB]
+Get:300 http://ubuntu.apt-get.eu karmic/main usplash 0.5.49 [36.1kB]
+Get:301 http://ubuntu.apt-get.eu karmic/main usplash-theme-ubuntu 0.27 [37.5kB]
+Get:302 http://ubuntu.apt-get.eu karmic/main vbetool 1.1-2 [10.9kB]
+Get:303 http://ubuntu.apt-get.eu karmic/main whois 4.7.34ubuntu2 [36.3kB]
+Get:304 http://ubuntu.apt-get.eu karmic/main wireless-tools 29-2ubuntu6 [119kB]
+Get:305 http://ubuntu.apt-get.eu karmic/main wpasupplicant 0.6.9-3ubuntu1 [381kB]
+Get:306 http://ubuntu.apt-get.eu karmic/main mesa-utils 7.6.0-1ubuntu4 [48.0kB]
+Get:307 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-apm 1:1.2.1-2 [69.2kB]
+Get:308 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-ark 1:0.7.1-2 [18.0kB]
+Get:309 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-r128 6.8.1-1 [180kB]
+Get:310 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-mach64 6.8.2-1 [217kB]
+Get:311 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-radeon 1:6.12.99+git20090929.7968e1fb-0ubuntu1 [586kB]
+Get:312 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-ati 1:6.12.99+git20090929.7968e1fb-0ubuntu1 [216kB]
+Get:313 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-chips 1:1.2.1-3 [83.7kB]
+Get:314 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-cirrus 1:1.3.1-1ubuntu2 [48.3kB]
+Get:315 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-fbdev 1:0.4.0-4 [20.8kB]
+Get:316 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-geode 2.11.6-1 [161kB]
+Get:317 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-i128 1:1.3.2-1 [36.5kB]
+Get:318 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-i740 1:1.3.0-1 [32.8kB]
+Get:319 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-mga 1:1.4.11.dfsg-1 [118kB]
+Get:320 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-neomagic 1:1.2.3-1 [45.8kB]
+Get:321 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-nv 1:2.1.14-2ubuntu3 [115kB]
+Get:322 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-rendition 1:4.2.1-1 [33.3kB]
+Get:323 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-s3 1:0.6.2-1 [43.5kB]
+Get:324 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-s3virge 1:1.10.2-2 [49.2kB]
+Get:325 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-savage 1:2.3.0-1ubuntu1 [95.2kB]
+Get:326 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-siliconmotion 1:1.7.2-1 [89.1kB]
+Get:327 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-sis 1:0.10.1-2 [307kB]
+Get:328 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-sisusb 1:0.9.1-1 [50.3kB]
+Get:329 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-tdfx 1:1.4.1-1 [47.4kB]
+Get:330 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-trident 1:1.3.1-1 [82.1kB]
+Get:331 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-tseng 1:1.2.1-1 [35.7kB]
+Get:332 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-vesa 1:2.2.1-1 [25.2kB]
+Get:333 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-openchrome 1:0.2.903+svn758-0ubuntu1 [197kB]
+Get:334 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-voodoo 1:1.2.2-1 [23.7kB]
+Get:335 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-vmware 1:10.16.7-1 [42.5kB]
+Get:336 http://ubuntu.apt-get.eu karmic/main xserver-xorg-video-v4l 1:0.2.0-3ubuntu1 [26.0kB]
+Get:337 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-evdev 1:2.2.5-1ubuntu6 [67.5kB]
+Get:338 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-synaptics 1.1.2-1ubuntu7 [68.6kB]
+Get:339 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-mouse 1:1.4.0-2 [54.3kB]
+Get:340 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-vmmouse 1:12.6.4-1ubuntu3 [24.5kB]
+Get:341 http://ubuntu.apt-get.eu karmic/main xserver-xorg-input-wacom 1:0.8.4.1-0ubuntu4 [70.8kB]
+Get:342 http://ubuntu.apt-get.eu karmic/main xinit 1.1.1-1 [33.6kB]
+Get:343 http://ubuntu.apt-get.eu karmic/main xfonts-encodings 1:1.0.2-3 [584kB]
+Get:344 http://ubuntu.apt-get.eu karmic/main xfonts-utils 1:7.4+1ubuntu1 [92.0kB]
+Get:345 http://ubuntu.apt-get.eu karmic/main xfonts-100dpi 1:1.0.0-4build1 [3908kB]
+Get:346 http://ubuntu.apt-get.eu karmic/main xfonts-75dpi 1:1.0.0-4build1 [3472kB]
+Get:347 http://ubuntu.apt-get.eu karmic/main xfonts-base 1:1.0.0-6 [6133kB]
+Get:348 http://ubuntu.apt-get.eu karmic/main xfonts-scalable 1:1.0.0-7 [341kB]
+Get:349 http://ubuntu.apt-get.eu karmic/universe xfonts-terminus 4.28-1 [1087kB]
+Get:350 http://ubuntu.apt-get.eu karmic/main xinput 1.4.2-1 [15.3kB]
+Get:351 http://ubuntu.apt-get.eu karmic/main libgl1-mesa-dri 7.6.0-1ubuntu4 [2878kB]
+Get:352 http://ubuntu.apt-get.eu karmic/main xorg-docs-core 1:1.4-5 [58.6kB]
+Get:353 http://ubuntu.apt-get.eu karmic/main xterm 243-1ubuntu1 [499kB]
+Get:354 http://ubuntu.apt-get.eu karmic/main zip 3.0-1ubuntu1 [324kB]
+Get:355 http://ubuntu.apt-get.eu karmic/main liblircclient0 0.8.6-0ubuntu2 [88.1kB]
+Get:356 http://ubuntu.apt-get.eu karmic/main setserial 2.17-45 [51.6kB]
+Get:357 http://ubuntu.apt-get.eu karmic/universe lirc 0.8.6-0ubuntu2 [559kB]
+Get:358 http://ubuntu.apt-get.eu karmic/main lm-sensors 1:3.0.2-2ubuntu4 [125kB]
+Get:359 http://ubuntu.apt-get.eu karmic/main lynx-cur 2.8.7pre6-1 [1200kB]
+Get:360 http://ubuntu.apt-get.eu karmic/main lynx 2.8.7pre6-1 [15.1kB]
+Get:361 http://ubuntu.apt-get.eu karmic/universe par2 0.4-10 [102kB]
+Get:362 http://ubuntu.apt-get.eu karmic/universe python-yenc 0.3+debian-2ubuntu1 [19.2kB]
 Preconfiguring packages ...
-Fetched 206MB in 14s (14.2MB/s)
+Fetched 207MB in 14s (13.8MB/s)
 Selecting previously deselected package libfuse2.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10858 files and directories currently installed.)
 Unpacking libfuse2 (from .../libfuse2_2.7.4-1.1ubuntu4.3_i386.deb) ...
@@ -4832,6 +4856,8 @@ Selecting previously deselected package ftp.
 Unpacking ftp (from .../archives/ftp_0.17-19_i386.deb) ...
 Selecting previously deselected package geoip-database.
 Unpacking geoip-database (from .../geoip-database_1.4.6.dfsg-5_all.deb) ...
+Selecting previously deselected package gettext-base.
+Unpacking gettext-base (from .../gettext-base_0.17-8ubuntu2_i386.deb) ...
 Selecting previously deselected package hdparm.
 Unpacking hdparm (from .../hdparm_9.15-1ubuntu4_i386.deb) ...
 Selecting previously deselected package iso-codes.
@@ -4883,15 +4909,25 @@ Unpacking pm-utils (from .../pm-utils_1.2.5-2ubuntu7_all.deb) ...
 Selecting previously deselected package acpi-support.
 Unpacking acpi-support (from .../acpi-support_0.129_i386.deb) ...
 Selecting previously deselected package linux-sound-base.
-Unpacking linux-sound-base (from .../linux-sound-base_1.0.20+dfsg-1ubuntu5_all.deb) ...
+Unpacking linux-sound-base (from .../linux-sound-base_1.0.22.1+dfsg-0ubuntu3~ricotz1_all.deb) ...
 Selecting previously deselected package alsa-base.
-Unpacking alsa-base (from .../alsa-base_1.0.20+dfsg-1ubuntu5_all.deb) ...
+Unpacking alsa-base (from .../alsa-base_1.0.22.1+dfsg-0ubuntu3~ricotz1_all.deb) ...
 Selecting previously deselected package libpython2.6.
 Unpacking libpython2.6 (from .../libpython2.6_2.6.4-0ubuntu3_i386.deb) ...
 Selecting previously deselected package libasound2.
-Unpacking libasound2 (from .../libasound2_1.0.20-3ubuntu6.1_i386.deb) ...
+Unpacking libasound2 (from .../libasound2_1.0.22-0ubuntu2~9.10~ricotz1_i386.deb) ...
 Selecting previously deselected package alsa-utils.
-Unpacking alsa-utils (from .../alsa-utils_1.0.20-2ubuntu6_i386.deb) ...
+Unpacking alsa-utils (from .../alsa-utils_1.0.22-0ubuntu1~9.10~ricotz1_i386.deb) ...
+dpkg: --compare-versions takes three arguments: <version> <relation> <version>
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use `dselect' or `aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+Type dpkg --license for copyright license and lack of warranty (GNU GPL) [*].
+
+Options marked [*] produce a lot of output - pipe it through `less' or `more' !
 Selecting previously deselected package libapr1.
 Unpacking libapr1 (from .../libapr1_1.3.8-1_i386.deb) ...
 Selecting previously deselected package libaprutil1.
@@ -4929,7 +4965,7 @@ Unpacking busybox (from .../busybox_1%3a1.13.3-1ubuntu7_i386.deb) ...
 Selecting previously deselected package libck-connector0.
 Unpacking libck-connector0 (from .../libck-connector0_0.3.1-0ubuntu2_i386.deb) ...
 Selecting previously deselected package libdbus-glib-1-2.
-Unpacking libdbus-glib-1-2 (from .../libdbus-glib-1-2_0.80-4ubuntu1_i386.deb) ...
+Unpacking libdbus-glib-1-2 (from .../libdbus-glib-1-2_0.82-2~ricotz1_i386.deb) ...
 Selecting previously deselected package libeggdbus-1-0.
 Unpacking libeggdbus-1-0 (from .../libeggdbus-1-0_0.5-1_i386.deb) ...
 Selecting previously deselected package libpolkit-gobject-1-0.
@@ -4979,7 +5015,7 @@ Unpacking fontconfig (from .../fontconfig_2.6.0-1ubuntu12_i386.deb) ...
 Selecting previously deselected package genext2fs.
 Unpacking genext2fs (from .../genext2fs_1.4.1-2.1build1_i386.deb) ...
 Selecting previously deselected package grub-common.
-Unpacking grub-common (from .../grub-common_1.97~beta4-1ubuntu4.1_i386.deb) ...
+Unpacking grub-common (from .../grub-common_1.98~20100128-1ubuntu3~9.10~ricotz1_i386.deb) ...
 Selecting previously deselected package grub.
 Unpacking grub (from .../grub_0.97-29ubuntu59_i386.deb) ...
 Selecting previously deselected package libhal1.
@@ -5027,7 +5063,7 @@ Unpacking libavformat52 (from .../libavformat52_4%3a0.5+svn20090706-2ubuntu2_i38
 Selecting previously deselected package libc-dev-bin.
 Unpacking libc-dev-bin (from .../libc-dev-bin_2.10.1-0ubuntu16_i386.deb) ...
 Selecting previously deselected package linux-libc-dev.
-Unpacking linux-libc-dev (from .../linux-libc-dev_2.6.31-19.56_i386.deb) ...
+Unpacking linux-libc-dev (from .../linux-libc-dev_2.6.32-12.17~ricotz1_i386.deb) ...
 Selecting previously deselected package libc6-dev.
 Unpacking libc6-dev (from .../libc6-dev_2.10.1-0ubuntu16_i386.deb) ...
 Selecting previously deselected package libcdio7.
@@ -5107,7 +5143,7 @@ Unpacking libsndfile1 (from .../libsndfile1_1.0.20-1ubuntu1_i386.deb) ...
 Selecting previously deselected package libwrap0.
 Unpacking libwrap0 (from .../libwrap0_7.6.q-16_i386.deb) ...
 Selecting previously deselected package libpulse0.
-Unpacking libpulse0 (from .../libpulse0_1%3a0.9.19-0ubuntu4.1_i386.deb) ...
+Unpacking libpulse0 (from .../libpulse0_1%3a0.9.22~0.9.21+stable-queue-32-g8478-0ubuntu5~9.10~ricotz1_i386.deb) ...
 Selecting previously deselected package libqt3-mt.
 Unpacking libqt3-mt (from .../libqt3-mt_3%3a3.3.8-b-5ubuntu3_i386.deb) ...
 Selecting previously deselected package libsamplerate0.
@@ -5549,6 +5585,8 @@ Setting up ftp (0.17-19) ...
 update-alternatives: using /usr/bin/netkit-ftp to provide /usr/bin/ftp (ftp) in auto mode.
 
 Setting up geoip-database (1.4.6.dfsg-5) ...
+Setting up gettext-base (0.17-8ubuntu2) ...
+
 Setting up hdparm (9.15-1ubuntu4) ...
 
 Setting up iso-codes (3.10.2-1) ...
@@ -5605,15 +5643,15 @@ update-rc.d: warning: /etc/init.d/acpi-support missing LSB information
 update-rc.d: see <http://wiki.debian.org/LSBInitScripts>
 All runlevel operations denied by policy
 
-Setting up linux-sound-base (1.0.20+dfsg-1ubuntu5) ...
+Setting up linux-sound-base (1.0.22.1+dfsg-0ubuntu3~ricotz1) ...
 
-Setting up alsa-base (1.0.20+dfsg-1ubuntu5) ...
+Setting up alsa-base (1.0.22.1+dfsg-0ubuntu3~ricotz1) ...
 
 Setting up libpython2.6 (2.6.4-0ubuntu3) ...
 
-Setting up libasound2 (1.0.20-3ubuntu6.1) ...
+Setting up libasound2 (1.0.22-0ubuntu2~9.10~ricotz1) ...
 
-Setting up alsa-utils (1.0.20-2ubuntu6) ...
+Setting up alsa-utils (1.0.22-0ubuntu1~9.10~ricotz1) ...
 
 Setting up libapr1 (1.3.8-1) ...
 
@@ -5669,7 +5707,7 @@ Setting up binutils (2.20-0ubuntu2) ...
 Setting up busybox (1:1.13.3-1ubuntu7) ...
 Setting up libck-connector0 (0.3.1-0ubuntu2) ...
 
-Setting up libdbus-glib-1-2 (0.80-4ubuntu1) ...
+Setting up libdbus-glib-1-2 (0.82-2~ricotz1) ...
 
 Setting up libeggdbus-1-0 (0.5-1) ...
 
@@ -5733,7 +5771,7 @@ Cleaning up old fontconfig caches... done.
 Regenerating fonts cache... done.
 
 Setting up genext2fs (1.4.1-2.1build1) ...
-Setting up grub-common (1.97~beta4-1ubuntu4.1) ...
+Setting up grub-common (1.98~20100128-1ubuntu3~9.10~ricotz1) ...
 All runlevel operations denied by policy
 
 Setting up grub (0.97-29ubuntu59) ...
@@ -5745,7 +5783,7 @@ Setting up libhal-storage1 (0.5.13-1ubuntu8) ...
 Setting up hal-info (20090716-0ubuntu1) ...
 Setting up hal (0.5.13-1ubuntu8) ...
 All runlevel operations denied by policy
-hal start/running, process 18681
+hal start/running, process 22131
 
 Setting up hfsprogs (332.14-7) ...
 Setting up wwwconfig-common (0.2.1) ...
@@ -5780,7 +5818,7 @@ Setting up libavcodec52 (4:0.5+svn20090706-2ubuntu2) ...
 Setting up libavformat52 (4:0.5+svn20090706-2ubuntu2) ...
 
 Setting up libc-dev-bin (2.10.1-0ubuntu16) ...
-Setting up linux-libc-dev (2.6.31-19.56) ...
+Setting up linux-libc-dev (2.6.32-12.17~ricotz1) ...
 Setting up libc6-dev (2.10.1-0ubuntu16) ...
 Setting up libcdio7 (0.78.2+dfsg1-3) ...
 
@@ -5855,7 +5893,7 @@ Setting up libsndfile1 (1.0.20-1ubuntu1) ...
 
 Setting up libwrap0 (7.6.q-16) ...
 
-Setting up libpulse0 (1:0.9.19-0ubuntu4.1) ...
+Setting up libpulse0 (1:0.9.22~0.9.21+stable-queue-32-g8478-0ubuntu5~9.10~ricotz1) ...
 
 Setting up libqt3-mt (3:3.3.8-b-5ubuntu3) ...
 
@@ -6330,35 +6368,40 @@ grub is already the newest version.
 P: Deconfiguring file /etc/kernel-img.conf
 P: Deconfiguring file /etc/apt/sources.list
 OK
-Get:1 http://archive.ubuntu.com karmic-security Release.gpg [189B]
-Get:2 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
-Get:3 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
-Get:4 http://ppa.launchpad.net karmic Release.gpg [307B]
-Get:5 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+OK
+Get:1 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
+Get:2 http://archive.ubuntu.com karmic-security Release.gpg [189B]
+Get:3 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
+Get:4 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Get:5 http://ubuntu.apt-get.eu karmic Release [65.9kB]
 Get:6 http://archive.ubuntu.com karmic-security Release [44.1kB]
-Get:7 http://ubuntu.apt-get.eu karmic Release [65.9kB]
-Get:8 http://archive.ubuntu.com karmic-backports Release [37.1kB]
-Get:9 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:7 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:8 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:9 http://archive.ubuntu.com karmic-backports Release [37.1kB]
 Get:10 http://ubuntu.apt-get.eu karmic/main Packages [1353kB]
 Get:11 http://archive.ubuntu.com karmic-updates Release [44.1kB]
-Get:12 http://ppa.launchpad.net karmic/main Packages [5993B]
-Get:13 http://ppa.launchpad.net karmic/main Sources [1525B]
-Get:14 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
-Get:15 http://ubuntu.apt-get.eu karmic/restricted Packages [7971B]
-Get:16 http://ubuntu.apt-get.eu karmic/universe Packages [5133kB]
-Get:17 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
-Get:18 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
-Get:19 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
-Get:20 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
-Get:21 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
-Get:22 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
-Get:23 http://ubuntu.apt-get.eu karmic/multiverse Packages [190kB]
-Get:24 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
-Get:25 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
-Get:26 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
-Get:27 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
-Get:28 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
-Fetched 7392kB in 7s (1005kB/s)
+Get:12 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
+Get:13 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:14 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:15 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
+Get:16 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
+Get:17 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
+Get:18 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
+Get:19 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
+Get:20 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
+Get:21 http://ubuntu.apt-get.eu karmic/restricted Packages [7971B]
+Get:22 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:23 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
+Get:24 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
+Get:25 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
+Get:26 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
+Get:27 http://ubuntu.apt-get.eu karmic/universe Packages [5133kB]
+Get:28 http://ppa.launchpad.net karmic/main Packages [16.9kB]
+Get:29 http://ppa.launchpad.net karmic/main Sources [4239B]
+Get:30 http://ppa.launchpad.net karmic/main Packages [5993B]
+Get:31 http://ppa.launchpad.net karmic/main Sources [1525B]
+Get:32 http://ubuntu.apt-get.eu karmic/multiverse Packages [190kB]
+Fetched 7479kB in 7s (1013kB/s)
 Reading package lists...
 P: Deconfiguring file /etc/apt/apt.conf
 P: Deconfiguring file /etc/hostname
@@ -6393,6 +6436,7 @@ Del x11-common 1:7.4+3ubuntu10 [315kB]
 Del linux-headers-2.6.31-19-generic 2.6.31-19.56 [674kB]
 Del libstdc++6 4.4.1-4ubuntu9 [346kB]
 Del libkrb5-3 1.7dfsg~beta3-1ubuntu0.3 [337kB]
+Del linux-libc-dev 2.6.32-12.17~ricotz1 [762kB]
 Del libsmbclient 2:3.4.0-3ubuntu5.4 [1652kB]
 Del libvorbisenc2 1.2.0.dfsg-6ubuntu0.1 [78.1kB]
 Del xbmc-bin 1:9.11-karmic1 [15.3MB]
@@ -6403,10 +6447,10 @@ Del gcc-4.4-base 4.4.1-4ubuntu9 [113kB]
 Del adduser 3.110ubuntu7 [118kB]
 Del liblwres50 1:9.6.1.dfsg.P1-3ubuntu0.3 [45.7kB]
 Del libc6-i686 2.10.1-0ubuntu16 [1199kB]
-Del libpulse0 1:0.9.19-0ubuntu4.1 [235kB]
 Del upstart 0.6.3-11 [511kB]
 Del libavahi-core6 0.6.25-1ubuntu5.1 [115kB]
 Del libkrb5support0 1.7dfsg~beta3-1ubuntu0.3 [39.6kB]
+Del libasound2 1.0.22-0ubuntu2~9.10~ricotz1 [395kB]
 Del libavahi-common3 0.6.25-1ubuntu5.1 [23.5kB]
 Del bind9-host 1:9.6.1.dfsg.P1-3ubuntu0.3 [63.1kB]
 Del usplash-theme-xbmc-spinner-black-silver 2.0 [107kB]
@@ -6419,6 +6463,7 @@ Del ntpdate 1:4.2.4p6+dfsg-1ubuntu5.1 [66.8kB]
 Del libglib2.0-data 2.22.3-0ubuntu1 [982B]
 Del libc-dev-bin 2.10.1-0ubuntu16 [207kB]
 Del samba 2:3.4.0-3ubuntu5.4 [6241kB]
+Del alsa-base 1.0.22.1+dfsg-0ubuntu3~ricotz1 [273kB]
 Del libgssapi-krb5-2 1.7dfsg~beta3-1ubuntu0.3 [108kB]
 Del libc6-dev 2.10.1-0ubuntu16 [4761kB]
 Del samba-common 2:3.4.0-3ubuntu5.4 [387kB]
@@ -6438,30 +6483,32 @@ Del openssl 0.9.8g-16ubuntu3.1 [398kB]
 Del dhcp3-client 3.1.2-1ubuntu7.1 [253kB]
 Del xlibmesa-glu 1:7.4+3ubuntu10 [954B]
 Del python2.6 2.6.4-0ubuntu3 [2444kB]
-Del linux-libc-dev 2.6.31-19.56 [743kB]
 Del binutils 2.20-0ubuntu2 [1599kB]
 Del libgcc1 1:4.4.1-4ubuntu9 [55.0kB]
 Del libfuse2 2.7.4-1.1ubuntu4.3 [129kB]
 Del libisc50 1:9.6.1.dfsg.P1-3ubuntu0.3 [153kB]
-Del libasound2 1.0.20-3ubuntu6.1 [391kB]
+Del alsa-utils 1.0.22-0ubuntu1~9.10~ricotz1 [1104kB]
 Del libc-bin 2.10.1-0ubuntu16 [715kB]
 Del apache2-utils 2.2.12-1ubuntu2.1 [155kB]
 Del rsyslog 4.2.0-2ubuntu5.1 [277kB]
 Del libbind9-50 1:9.6.1.dfsg.P1-3ubuntu0.3 [33.5kB]
 Del libavahi-client3 0.6.25-1ubuntu5.1 [54.0kB]
 Del python-minimal 2.6.4-0ubuntu1 [15.2kB]
+Del libdbus-glib-1-2 0.82-2~ricotz1 [70.1kB]
 Del linux-image-2.6.31-19-generic 2.6.31-19.56 [28.8MB]
+Del grub-common 1.98~20100128-1ubuntu3~9.10~ricotz1 [1533kB]
 Del xserver-xorg 1:7.4+3ubuntu10 [29.0kB]
 Del libvorbisfile3 1.2.0.dfsg-6ubuntu0.1 [22.5kB]
+Del libpulse0 1:0.9.22~0.9.21+stable-queue-32-g8478-0ubuntu5~9.10~ricotz1 [242kB]
 Del apache2.2-common 2.2.12-1ubuntu2.1 [285kB]
 Del gcc-4.4 4.4.1-4ubuntu9 [2976kB]
 Del xserver-xorg-core 2:1.6.4-2ubuntu4.1 [2215kB]
 Del xbmc-live 1:9.11-karmic1 [46.7kB]
+Del linux-sound-base 1.0.22.1+dfsg-0ubuntu3~ricotz1 [34.4kB]
 Del libc6 2.10.1-0ubuntu16 [3759kB]
 Del xbmc-ppa-keyring 2009.06.03 [3390B]
 Del libexpat1 2.0.1-4ubuntu1.1 [138kB]
 Del transmission-daemon 1.75-0ubuntu2.2 [178kB]
-Del grub-common 1.97~beta4-1ubuntu4.1 [994kB]
 Del samba-common-bin 2:3.4.0-3ubuntu5.4 [4787kB]
 Del udev 147~-6.1 [430kB]
 Del linux-firmware 1.25 [5714kB]
@@ -6495,43 +6542,48 @@ Del xserver-xorg-video-intel 2:2.9.0-1ubuntu2.1 [600kB]
 Del xbmc-web-pm3 1:9.11-karmic1 [3080kB]
 Del libpython2.6 2.6.4-0ubuntu3 [967kB]
 OK
+OK
 Get:1 file: ./ Release.gpg [315B]
 Get:2 file: ./ Release [754B]
 Ign file: ./ Packages
 Ign file: ./ Packages
 Get:3 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
 Get:4 http://ppa.launchpad.net karmic Release.gpg [307B]
-Get:5 http://archive.ubuntu.com karmic-security Release.gpg [189B]
-Get:6 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
+Get:5 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:6 http://archive.ubuntu.com karmic-security Release.gpg [189B]
+Get:7 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
 Hit http://ubuntu.apt-get.eu karmic Release
-Get:7 http://ppa.launchpad.net karmic Release [66.0kB]
-Get:8 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
-Get:9 http://archive.ubuntu.com karmic-security Release [44.1kB]
+Get:8 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:9 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Get:10 http://archive.ubuntu.com karmic-security Release [44.1kB]
 Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Get:10 http://ppa.launchpad.net karmic/main Packages [5993B]
+Get:11 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:12 http://archive.ubuntu.com karmic-backports Release [37.1kB]
 Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
-Get:11 http://archive.ubuntu.com karmic-backports Release [37.1kB]
-Get:12 http://archive.ubuntu.com karmic-updates Release [44.1kB]
+Get:13 http://archive.ubuntu.com karmic-updates Release [44.1kB]
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
-Get:13 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
-Get:14 http://ppa.launchpad.net karmic/main Sources [1525B]
+Get:14 http://ppa.launchpad.net karmic/main Packages [16.9kB]
+Get:15 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
-Get:15 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:16 http://ppa.launchpad.net karmic/main Sources [4239B]
+Get:17 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Get:16 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
-Get:17 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
-Get:18 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
-Get:19 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
-Get:20 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
-Get:21 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
-Get:22 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
-Get:23 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
-Get:24 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
-Get:25 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
-Fetched 642kB in 1s (519kB/s)
+Get:18 http://ppa.launchpad.net karmic/main Packages [5993B]
+Get:19 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
+Get:20 http://ppa.launchpad.net karmic/main Sources [1525B]
+Get:21 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
+Get:22 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
+Get:23 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
+Get:24 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
+Get:25 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
+Get:26 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
+Get:27 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
+Get:28 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
+Get:29 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
+Fetched 729kB in 1s (595kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -6576,7 +6628,7 @@ Get:29 http://archive.ubuntu.com karmic-security/main libk5crypto3 1.7dfsg~beta3
 Get:30 http://archive.ubuntu.com karmic-security/main ntpdate 1:4.2.4p6+dfsg-1ubuntu5.1 [66.8kB]
 Get:31 http://archive.ubuntu.com karmic-security/main openssl 0.9.8g-16ubuntu3.1 [398kB]
 Preconfiguring packages ...
-Fetched 18.1MB in 1s (12.7MB/s)
+Fetched 18.1MB in 1s (12.1MB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10856 files and directories currently installed.)
 Preparing to replace gzip 1.3.12-8ubuntu1 (using .../gzip_1.3.12-8ubuntu1.1_i386.deb) ...
 install-info: warning: maintainer scripts should not call install-info anymore,
@@ -6622,8 +6674,8 @@ Unpacking replacement tzdata ...
 Setting up tzdata (2009u-0ubuntu0.9.10) ...
 
 Current default time zone: 'Etc/UTC'
-Local time is now:      Sun Feb  7 11:22:58 UTC 2010.
-Universal Time is now:  Sun Feb  7 11:22:58 UTC 2010.
+Local time is now:      Sun Feb  7 16:24:48 UTC 2010.
+Universal Time is now:  Sun Feb  7 16:24:48 UTC 2010.
 Run 'dpkg-reconfigure tzdata' if you wish to change it.
 
 
@@ -6719,10 +6771,10 @@ Setting up libglib2.0-0 (2.22.3-0ubuntu1) ...
 Setting up libglib2.0-data (2.22.3-0ubuntu1) ...
 Setting up rsyslog (4.2.0-2ubuntu5.1) ...
 Installing new version of config file /etc/rsyslog.conf ...
-rsyslog start/running, process 9513
+rsyslog start/running, process 12980
 
 Setting up udev (147~-6.1) ...
-udev start/running, process 9546
+udev start/running, process 13013
 Removing `local diversion of /sbin/udevadm to /sbin/udevadm.upgrade'
 update-initramfs: deferring update (trigger activated)
 
@@ -6755,29 +6807,35 @@ Ign file: ./ Packages
 Ign file: ./ Packages
 Hit http://ubuntu.apt-get.eu karmic Release.gpg
 Hit http://ppa.launchpad.net karmic Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-security Release.gpg
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
-Hit http://ubuntu.apt-get.eu karmic Release
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
+Hit http://ubuntu.apt-get.eu karmic Release
 Hit http://ppa.launchpad.net karmic Release
-Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
 Hit http://archive.ubuntu.com karmic-security Release
-Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
-Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
 Hit http://archive.ubuntu.com karmic-backports Release
+Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-updates Release
-Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
+Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
+Ign http://archive.ubuntu.com karmic-security/main Packages/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
-Hit http://ppa.launchpad.net karmic/main Packages
-Ign http://archive.ubuntu.com karmic-security/main Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Hit http://ppa.launchpad.net karmic/main Sources
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/universe Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/multiverse Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/restricted Packages/DiffIndex
@@ -6810,7 +6868,7 @@ The following NEW packages will be installed:
 Need to get 122kB of archives.
 After this operation, 319kB of additional disk space will be used.
 Get:1 http://ubuntu.apt-get.eu karmic/main squashfs-tools 1:4.0-1 [122kB]
-Fetched 122kB in 0s (2143kB/s)
+Fetched 122kB in 0s (4103kB/s)
 Selecting previously deselected package squashfs-tools.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10858 files and directories currently installed.)
 Unpacking squashfs-tools (from .../squashfs-tools_1%3a4.0-1_i386.deb) ...
@@ -6823,21 +6881,21 @@ Creating 4.0 filesystem on filesystem.squashfs, block size 131072.
 Exportable Squashfs 4.0 filesystem, data block size 131072
 	compressed data, compressed metadata, compressed fragments
 	duplicates are removed
-Filesystem size 406315.90 Kbytes (396.79 Mbytes)
-	41.87% of uncompressed filesystem size (970318.67 Kbytes)
-Inode table size 544945 bytes (532.17 Kbytes)
-	28.31% of uncompressed inode table size (1925174 bytes)
-Directory table size 554314 bytes (541.32 Kbytes)
-	45.37% of uncompressed directory table size (1221749 bytes)
-Number of duplicate files found 7808
-Number of inodes 55935
-Number of files 45931
-Number of fragments 2704
-Number of symbolic links  3303
+Filesystem size 407076.98 Kbytes (397.54 Mbytes)
+	41.86% of uncompressed filesystem size (972373.75 Kbytes)
+Inode table size 545019 bytes (532.25 Kbytes)
+	28.30% of uncompressed inode table size (1925849 bytes)
+Directory table size 554547 bytes (541.55 Kbytes)
+	45.37% of uncompressed directory table size (1222246 bytes)
+Number of duplicate files found 7733
+Number of inodes 55954
+Number of files 45943
+Number of fragments 2714
+Number of symbolic links  3307
 Number of device nodes 94
 Number of fifo nodes 0
 Number of socket nodes 1
-Number of directories 6606
+Number of directories 6609
 Number of ids (unique uids + gids) 28
 Number of uids 8
 	root (0)
@@ -6876,35 +6934,40 @@ Number of gids 24
 P: Deconfiguring file /etc/kernel-img.conf
 P: Deconfiguring file /etc/apt/sources.list
 OK
-Get:1 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
-Get:2 http://archive.ubuntu.com karmic-security Release.gpg [189B]
-Get:3 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
-Get:4 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
-Get:5 http://ppa.launchpad.net karmic Release.gpg [307B]
-Get:6 http://archive.ubuntu.com karmic-security Release [44.1kB]
-Get:7 http://ubuntu.apt-get.eu karmic Release [65.9kB]
+OK
+Get:1 http://archive.ubuntu.com karmic-security Release.gpg [189B]
+Get:2 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:3 http://ubuntu.apt-get.eu karmic Release.gpg [189B]
+Get:4 http://archive.ubuntu.com karmic-backports Release.gpg [189B]
+Get:5 http://archive.ubuntu.com karmic-updates Release.gpg [189B]
+Get:6 http://ppa.launchpad.net karmic Release.gpg [307B]
+Get:7 http://archive.ubuntu.com karmic-security Release [44.1kB]
 Get:8 http://archive.ubuntu.com karmic-backports Release [37.1kB]
-Get:9 http://ppa.launchpad.net karmic Release [66.0kB]
-Get:10 http://archive.ubuntu.com karmic-updates Release [44.1kB]
-Get:11 http://ubuntu.apt-get.eu karmic/main Packages [1353kB]
-Get:12 http://ppa.launchpad.net karmic/main Packages [5993B]
-Get:13 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
-Get:14 http://ppa.launchpad.net karmic/main Sources [1525B]
-Get:15 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
-Get:16 http://ubuntu.apt-get.eu karmic/restricted Packages [7971B]
-Get:17 http://ubuntu.apt-get.eu karmic/universe Packages [5133kB]
-Get:18 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
-Get:19 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
-Get:20 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
-Get:21 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
-Get:22 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
-Get:23 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
-Get:24 http://ubuntu.apt-get.eu karmic/multiverse Packages [190kB]
-Get:25 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
-Get:26 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
-Get:27 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
-Get:28 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
-Fetched 7392kB in 7s (1013kB/s)
+Get:9 http://ubuntu.apt-get.eu karmic Release [65.9kB]
+Get:10 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:11 http://archive.ubuntu.com karmic-updates Release [44.1kB]
+Get:12 http://ubuntu.apt-get.eu karmic/main Packages [1353kB]
+Get:13 http://ppa.launchpad.net karmic Release [66.0kB]
+Get:14 http://archive.ubuntu.com karmic-security/main Packages [62.3kB]
+Get:15 http://ppa.launchpad.net karmic/main Packages [16.9kB]
+Get:16 http://archive.ubuntu.com karmic-security/restricted Packages [14B]
+Get:17 http://archive.ubuntu.com karmic-security/universe Packages [27.3kB]
+Get:18 http://ppa.launchpad.net karmic/main Sources [4239B]
+Get:19 http://ubuntu.apt-get.eu karmic/restricted Packages [7971B]
+Get:20 http://archive.ubuntu.com karmic-security/multiverse Packages [1666B]
+Get:21 http://ppa.launchpad.net karmic/main Packages [5993B]
+Get:22 http://ppa.launchpad.net karmic/main Sources [1525B]
+Get:23 http://archive.ubuntu.com karmic-backports/main Packages [66.6kB]
+Get:24 http://ubuntu.apt-get.eu karmic/universe Packages [5133kB]
+Get:25 http://archive.ubuntu.com karmic-backports/restricted Packages [14B]
+Get:26 http://archive.ubuntu.com karmic-backports/universe Packages [14.6kB]
+Get:27 http://archive.ubuntu.com karmic-backports/multiverse Packages [14B]
+Get:28 http://archive.ubuntu.com karmic-updates/main Packages [165kB]
+Get:29 http://archive.ubuntu.com karmic-updates/restricted Packages [14B]
+Get:30 http://ubuntu.apt-get.eu karmic/multiverse Packages [190kB]
+Get:31 http://archive.ubuntu.com karmic-updates/universe Packages [97.9kB]
+Get:32 http://archive.ubuntu.com karmic-updates/multiverse Packages [6942B]
+Fetched 7479kB in 7s (979kB/s)
 Reading package lists...
 P: Deconfiguring file /etc/apt/apt.conf
 P: Deconfiguring file /etc/hostname
@@ -6935,35 +6998,42 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 OK
+OK
 Get:1 file: ./ Release.gpg [315B]
 Get:2 file: ./ Release [754B]
 Ign file: ./ Packages
 Ign file: ./ Packages
 Hit http://ubuntu.apt-get.eu karmic Release.gpg
-Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-security Release.gpg
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://ubuntu.apt-get.eu karmic Release
-Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-security Release
-Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Hit http://archive.ubuntu.com karmic-backports Release
+Hit http://ppa.launchpad.net karmic Release
+Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
 Hit http://archive.ubuntu.com karmic-updates Release
+Hit http://ppa.launchpad.net karmic Release
 Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
-Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-security/main Packages/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
-Hit http://ppa.launchpad.net karmic/main Packages
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
-Hit http://ppa.launchpad.net karmic/main Sources
-Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
+Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/universe Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/multiverse Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/restricted Packages/DiffIndex
@@ -7004,30 +7074,36 @@ Get:2 file: ./ Release [754B]
 Ign file: ./ Packages
 Ign file: ./ Packages
 Hit http://ubuntu.apt-get.eu karmic Release.gpg
-Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-security Release.gpg
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://ubuntu.apt-get.eu karmic Release
 Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-security Release
 Hit http://archive.ubuntu.com karmic-backports Release
 Ign http://ubuntu.apt-get.eu karmic/main Packages/DiffIndex
-Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
-Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-updates Release
+Ign http://ubuntu.apt-get.eu karmic/restricted Packages/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/universe Packages/DiffIndex
-Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Ign http://ubuntu.apt-get.eu karmic/multiverse Packages/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
 Ign http://archive.ubuntu.com karmic-security/main Packages/DiffIndex
-Hit http://ppa.launchpad.net karmic/main Packages
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Hit http://ppa.launchpad.net karmic/main Sources
+Ign http://ppa.launchpad.net karmic/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-security/restricted Packages/DiffIndex
+Ign http://ppa.launchpad.net karmic/main Sources/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/universe Packages/DiffIndex
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Ign http://archive.ubuntu.com karmic-security/multiverse Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/main Packages/DiffIndex
 Ign http://archive.ubuntu.com karmic-backports/restricted Packages/DiffIndex
@@ -7084,7 +7160,7 @@ Get:1 http://ubuntu.apt-get.eu karmic/main efibootmgr 0.5.4-2ubuntu1 [35.9kB]
 Get:2 http://ubuntu.apt-get.eu karmic/main elilo 3.8-1ubuntu2 [139kB]
 Get:3 http://ubuntu.apt-get.eu karmic/main mbr 1.1.10-2 [23.0kB]
 Get:4 http://ubuntu.apt-get.eu karmic/main lilo 1:22.8-8ubuntu1 [390kB]
-Fetched 588kB in 0s (3931kB/s)
+Fetched 588kB in 0s (1841kB/s)
 Download complete and in download only mode
 Reading package lists...
 Building dependency tree...
@@ -7101,9 +7177,9 @@ The following NEW packages will be installed:
 Need to get 123kB of archives.
 After this operation, 397kB of additional disk space will be used.
 Get:1 http://ubuntu.apt-get.eu karmic/main memtest86+ 2.11-3ubuntu5 [123kB]
-Fetched 123kB in 0s (2899kB/s)
+Fetched 123kB in 0s (2900kB/s)
 Selecting previously deselected package memtest86+.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45495 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45508 files and directories currently installed.)
 Unpacking memtest86+ (from .../memtest86+_2.11-3ubuntu5_i386.deb) ...
 Setting up memtest86+ (2.11-3ubuntu5) ...
 
@@ -7117,7 +7193,7 @@ The following packages will be REMOVED:
   memtest86+*
 0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
 After this operation, 397kB disk space will be freed.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45511 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45524 files and directories currently installed.)
 Removing memtest86+ ...
 Purging configuration files for memtest86+ ...
 P: Begin installing grub...
@@ -7141,9 +7217,9 @@ The following NEW packages will be installed:
 Need to get 619kB of archives.
 After this operation, 1536kB of additional disk space will be used.
 Get:1 http://ubuntu.apt-get.eu karmic/main genisoimage 9:1.1.9-1ubuntu2 [619kB]
-Fetched 619kB in 0s (8879kB/s)
+Fetched 619kB in 0s (8498kB/s)
 Selecting previously deselected package genisoimage.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45495 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45508 files and directories currently installed.)
 Unpacking genisoimage (from .../genisoimage_9%3a1.1.9-1ubuntu2_i386.deb) ...
 Setting up genisoimage (9:1.1.9-1ubuntu2) ...
 Reading package lists...
@@ -7156,7 +7232,7 @@ The following packages will be REMOVED:
   genisoimage*
 0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
 After this operation, 1536kB disk space will be freed.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45518 files and directories currently installed.)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 45531 files and directories currently installed.)
 Removing genisoimage ...
 P: Deconfiguring file /etc/hostname
 P: Deconfiguring file /bin/hostname
@@ -7179,29 +7255,30 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 OK
+OK
 Get:1 file: ./ Release.gpg [315B]
 Get:2 file: ./ Release [754B]
+Ign file: ./ Packages
+Ign file: ./ Packages
 Hit http://ubuntu.apt-get.eu karmic Release.gpg
-Ign file: ./ Packages
-Ign file: ./ Packages
 Hit http://archive.ubuntu.com karmic-security Release.gpg
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
-Hit http://ubuntu.apt-get.eu karmic Release
 Hit http://ppa.launchpad.net karmic Release.gpg
+Hit http://ppa.launchpad.net karmic Release.gpg
+Hit http://ubuntu.apt-get.eu karmic Release
 Hit http://archive.ubuntu.com karmic-security Release
 Hit http://archive.ubuntu.com karmic-backports Release
-Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://ppa.launchpad.net karmic Release
+Hit http://ubuntu.apt-get.eu karmic/main Packages
 Hit http://archive.ubuntu.com karmic-updates Release
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-security/main Packages
 Hit http://archive.ubuntu.com karmic-security/restricted Packages
 Hit http://archive.ubuntu.com karmic-security/universe Packages
-Hit http://ppa.launchpad.net karmic/main Sources
 Hit http://archive.ubuntu.com karmic-security/multiverse Packages
 Hit http://archive.ubuntu.com karmic-backports/main Packages
 Hit http://archive.ubuntu.com karmic-backports/restricted Packages
@@ -7209,8 +7286,12 @@ Hit http://archive.ubuntu.com karmic-backports/universe Packages
 Hit http://archive.ubuntu.com karmic-backports/multiverse Packages
 Hit http://archive.ubuntu.com karmic-updates/main Packages
 Hit http://archive.ubuntu.com karmic-updates/restricted Packages
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Hit http://archive.ubuntu.com karmic-updates/universe Packages
 Hit http://archive.ubuntu.com karmic-updates/multiverse Packages
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -7232,28 +7313,32 @@ Ign file: ./ Packages
 Hit http://ubuntu.apt-get.eu karmic Release.gpg
 Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-security Release.gpg
-Hit http://ubuntu.apt-get.eu karmic Release
-Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-backports Release.gpg
+Hit http://ubuntu.apt-get.eu karmic Release
+Hit http://ppa.launchpad.net karmic Release.gpg
 Hit http://archive.ubuntu.com karmic-updates Release.gpg
-Hit http://ubuntu.apt-get.eu karmic/main Packages
-Hit http://ppa.launchpad.net karmic/main Packages
 Hit http://archive.ubuntu.com karmic-security Release
+Hit http://ubuntu.apt-get.eu karmic/main Packages
+Hit http://ppa.launchpad.net karmic Release
+Hit http://archive.ubuntu.com karmic-backports Release
 Hit http://ubuntu.apt-get.eu karmic/restricted Packages
 Hit http://ubuntu.apt-get.eu karmic/universe Packages
 Hit http://ubuntu.apt-get.eu karmic/multiverse Packages
-Hit http://ppa.launchpad.net karmic/main Sources
-Hit http://archive.ubuntu.com karmic-backports Release
+Hit http://ppa.launchpad.net karmic Release
 Hit http://archive.ubuntu.com karmic-updates Release
 Hit http://archive.ubuntu.com karmic-security/main Packages
 Hit http://archive.ubuntu.com karmic-security/restricted Packages
 Hit http://archive.ubuntu.com karmic-security/universe Packages
 Hit http://archive.ubuntu.com karmic-security/multiverse Packages
 Hit http://archive.ubuntu.com karmic-backports/main Packages
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Hit http://archive.ubuntu.com karmic-backports/restricted Packages
 Hit http://archive.ubuntu.com karmic-backports/universe Packages
 Hit http://archive.ubuntu.com karmic-backports/multiverse Packages
 Hit http://archive.ubuntu.com karmic-updates/main Packages
+Hit http://ppa.launchpad.net karmic/main Packages
+Hit http://ppa.launchpad.net karmic/main Sources
 Hit http://archive.ubuntu.com karmic-updates/restricted Packages
 Hit http://archive.ubuntu.com karmic-updates/universe Packages
 Hit http://archive.ubuntu.com karmic-updates/multiverse Packages
