@@ -15,6 +15,15 @@
 			<posy>90</posy>
 			<width>707</width>
 			<height>183</height>
+			<control type="image">
+				<posx>40</posx>
+				<posy>-2</posy>
+				<width>540</width>
+				<height>74</height>
+				<texture border="37,0,0,0">dialogs/back.png</texture>
+				<colordiffuse>DialogBackground</colordiffuse>
+				<visible>Window.IsActive(2005) | Window.IsActive(2006)</visible>
+			</control>
 			<control type="image" id="400">
 				<posx>324</posx>
 				<posy>12</posy>
@@ -77,7 +86,7 @@
 				<textcolor>Date</textcolor>
 				<align>right</align>
 				<font>Font_Date</font>
-				<label>$INFO[Control.GetLabel(401)]</label>
+				<label>$INFO[Control.GetLabel(402)]</label>
 				<scroll>true</scroll>
 			</control>
 		</control>

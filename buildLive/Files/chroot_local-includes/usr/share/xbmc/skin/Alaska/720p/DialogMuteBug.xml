@@ -17,9 +17,9 @@
 			<width>707</width>
 			<height>183</height>
 			<control type="image">
-				<posx>200</posx>
+				<posx>180</posx>
 				<posy>-2</posy>
-				<width>280</width>
+				<width>300</width>
 				<height>74</height>
 				<texture border="37,0,0,0">dialogs/back.png</texture>
 				<colordiffuse>DialogBackground</colordiffuse>

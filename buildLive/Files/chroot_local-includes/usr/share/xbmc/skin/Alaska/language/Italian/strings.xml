@@ -292,5 +292,7 @@
 	<string id="40291">PANORAMA</string>
 	<string id="40292">MURO</string>
 	<string id="40293">GRIGLIA</string>
+	<string id="40294">Blocca Visuali</string> 
+	<string id="40295">Blocco Totale</string>
 
 </strings>

@@ -225,5 +225,7 @@
 	<string id="40290">Episoden</string>
 	<string id="40291">Fanart</string>
 	<string id="40292">Fläche</string>
-	<string id="40293">Netz</string>	
+	<string id="40293">Netz</string>
+	<string id="40294">Ansichtwechsel gegen Änderung sperren</string>
+    <string id="40295">Alles gegen Änderung sperren</string>
 </strings>

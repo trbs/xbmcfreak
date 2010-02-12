@@ -83,9 +83,9 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_ZoomOutZoomIn</include>
 			<posx>250</posx>
-			<posy>136</posy>
+			<posy>150</posy>
 			<width>778</width>
-			<height>600</height>
+			<height>320</height>
 			<itemgap>6</itemgap>
 			<onleft>3</onleft>
 			<onright>3</onright>
@@ -457,6 +457,30 @@
 					<visible>ControlGroup(3).HasFocus(-97)</visible>
 				</control>
 			</control>
+		</control>
+		<control type="image">
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+			<posx>630</posx>
+			<posy>130</posy>
+			<height>20</height>
+			<width>20</width>
+			<texture>arrowupfo.png</texture>
+			<colordiffuse>ArrowFilterColor</colordiffuse>
+			<visible>Container(5).HasPrevious</visible>
+		</control>
+		<control type="image">
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+			<posx>630</posx>
+			<posy>478</posy>
+			<height>20</height>
+			<width>20</width>
+			<texture>arrowdownfo.png</texture>
+			<colordiffuse>ArrowFilterColor</colordiffuse>
+			<visible>Container(5).HasNext</visible>
 		</control>
 		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>

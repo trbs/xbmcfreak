@@ -319,7 +319,7 @@
 			<onup>7050</onup>
 			<ondown>7050</ondown>
 			<itemgap>0</itemgap>
-			<include condition="!Skin.HasSetting(TotalLockdown)">allowmenu_ 7001</include>
+			<include condition="!Skin.HasSetting(TotalLockdown)">allowmenu_7001</include>
 			<include condition="Skin.HasSetting(TotalLockdown)">nomenu</include>
 			<include>Animation_ZoomInMenu</include>
 			<orientation>horizontal</orientation>
@@ -383,7 +383,7 @@
 			<onup>7050</onup>
 			<ondown>7050</ondown>
 			<itemgap>0</itemgap>
-			<include condition="!Skin.HasSetting(TotalLockdown)">allowmenu_ 7001</include>
+			<include condition="!Skin.HasSetting(TotalLockdown)">allowmenu_7001</include>
 			<include condition="Skin.HasSetting(TotalLockdown)">nomenu</include>
 			<include>Animation_ZoomInMenu</include>
 			<orientation>horizontal</orientation>

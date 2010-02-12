@@ -110,7 +110,7 @@
 	<string id="40106">Esconder Logoff</string>
 	<string id="40107">Esconder Info</string>
 	<string id="40108">Modo de Depuração</string>
-	<string id="40109">Grade de Depuração</string>	
+	<string id="40109">Grade de Depuração</string>
 	<string id="40112">Miniatura</string>
 	<string id="40113">Vista</string>
 	<string id="40114">Informação</string>
@@ -209,7 +209,7 @@
 	<string id="40273">Resetar Fundo p/ DVD</string>
 	<string id="40274">Resetar Pasta c/ Fundos p/ Desligar</string>
 	<string id="40275">Resetar Fundo p/ Desligar</string>
-	<string id="40276">Resetar Pasta c/ Fundos p/ Configurações</string>	
+	<string id="40276">Resetar Pasta c/ Fundos p/ Configurações</string>
 	<string id="40277">Resetar Fundo p/ Configurações</string>
 	<string id="40278">ABRIR PLAYLIST</string>
 	<string id="40279">SAVAR PLAYLIST</string>
@@ -220,12 +220,14 @@
 	<string id="40284">POSTER[CR]QUADRADO</string>
 	<string id="40285">LISTA</string>
 	<string id="40286">BANER</string>
-	<string id="40287">PANIEL</string>
-	<string id="40288">PANIEL[CR]LARGO</string>
+	<string id="40287">PAINEL</string>
+	<string id="40288">PAINEL[CR]LARGO</string>
 	<string id="40289">ARQUIVOS</string>
 	<string id="40290">EPISÓDIOS</string>
 	<string id="40291">PAISAGEM</string>
 	<string id="40292">PAREDE</string>
 	<string id="40293">GRADE</string>
-	
+	<string id="40294">Travamento de Vista</string>
+	<string id="40295">Travamento Total</string>
+
 </strings>

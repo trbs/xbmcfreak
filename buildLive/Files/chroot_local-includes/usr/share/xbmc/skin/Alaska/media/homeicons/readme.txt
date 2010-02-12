@@ -16,3 +16,4 @@ settingsicon.png
 tvshowsicon.png
 videosicon.png
 weathericon.png
+shutdownicon.png
