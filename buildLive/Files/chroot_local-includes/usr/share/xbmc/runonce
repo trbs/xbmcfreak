@@ -20,22 +20,27 @@ sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
 #create shares
 if [ ! -d "/home/$xbmcUser/Downloads" ]; then
 mkdir /home/$xbmcUser/Downloads
+chmod 777 /home/$xbmcUser/Downloads
 fi
 
 if [ ! -d "/home/$xbmcUser/Music" ]; then
 mkdir /home/$xbmcUser/Music
+chmod 777 /home/$xbmcUser/Music
 fi
 
 if [ ! -d "/home/$xbmcUser/Pictures" ]; then
 mkdir /home/$xbmcUser/Pictures
+chmod 777 /home/$xbmcUser/Pictures
 fi
 
 if [ ! -d "/home/$xbmcUser/TV Shows" ]; then
 mkdir "/home/$xbmcUser/TV Shows"
+chmod 777 "/home/$xbmcUser/TV Shows"
 fi
 
 if [ ! -d "/home/$xbmcUser/Videos" ]; then
 mkdir /home/$xbmcUser/Videos
+chmod 777 /home/$xbmcUser/Videos
 fi
 
 #copy asroundrc
