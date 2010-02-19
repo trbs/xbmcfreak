@@ -41,6 +41,7 @@ do
 
 
 	echo "#!/bin/bash" >  /home/$xbmcUser/.xsession
+	echo "ulimit -c 0" >>  /home/$xbmcUser/.xsession
 	echo "/usr/bin/xbmc --standalone" >>  /home/$xbmcUser/.xsession
 
 	echo "case \"\$?\" in" >>  /home/$xbmcUser/.xsession
