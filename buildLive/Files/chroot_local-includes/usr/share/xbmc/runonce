@@ -16,6 +16,7 @@ chown $xbmcUser:$xbmcUser /home/$xbmcUser/.sabnzbd/
 
 #configure samba
 sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
+sed -i "s/guest account = xbmc/guest account = $xbmcUser/g" /etc/samba/smb.conf
 
 #create shares
 if [ ! -d "/home/$xbmcUser/Downloads" ]; then
