@@ -12,7 +12,7 @@ makeConfig()
 	configString="$configString --hostname XBMCLive"
 	configString="$configString --iso-application XBMC_Live"
 	configString="$configString --iso-volume XBMC_Live"
-	configString="$configString --iso-publisher http://xbmc.org"
+	configString="$configString --iso-publisher http://www.xbmcfreak.nl"
 
 	configString="$configString --bootloader grub"
 

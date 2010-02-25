@@ -8,7 +8,7 @@ retrieveLatestNVIDIAURL()
 	echo $driverDownloadURL
 }
 
-getInstallers()
+getNvidiaInstallers()
 {
 	#
 	# Download the latest drivers installers
@@ -30,3 +30,4 @@ getInstallers()
 	mv NVIDIA*.run Files/chroot_local-includes/root
 
 }
+

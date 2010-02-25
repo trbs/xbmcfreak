@@ -8,14 +8,11 @@ if [ ! -f /etc/mtab ]; then
 	ln -s /proc/mounts /etc/mtab
 fi
 
+#nvidia drivers
 cd /root
-
 sh ./NVIDIA-Linux-*.run --extract-only
-
 cd NVIDIA-Linux-*
-
-# TODO, make it cleaner
-mv $(find * | grep -v usr) usr/bin
+mv $(ls -1d * | grep -v usr) usr/bin
 
 pushd .
 cd usr/lib
@@ -36,11 +33,13 @@ ln -s libvdpau_nvidia.so.1 libvdpau_nvidia.so
 ln -s libvdpau.so.1 libvdpau.so
 ln -s libvdpau_trace.so.1 libvdpau_trace.so
 popd
+
 pushd .
 cd usr/lib/tls
 ln -s libnvidia-tls.so.* libnvidia-tls.so.1
 ln -s libnvidia-tls.so.1 libnvidia-tls.so
 popd
+
 pushd .
 cd usr
 mkdir lib/xorg
@@ -71,7 +70,6 @@ popd
 pushd .
 cd $modulesdir
 mkdir -p updates/dkms
-
 cp /tmp/nvidia.ko updates/dkms
 depmod $kernelVersion
 tar cvf /tmp/modules.tar modules.* updates

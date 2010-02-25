@@ -33,15 +33,12 @@ if ! which lh > /dev/null ; then
 	exit 1
 fi
 
-#
-#
-#
 mkdir -p Files/chroot_local-includes/root &> /dev/null
 
-# Get latest installers 
+# Get Nvidia installers 
 if [ -z "$USE_LOCAL_INSTALLERS" ]; then
 	rm *.run &> /dev/null
-	getInstallers
+	getNvidiaInstallers
 else
 	mv NVIDIA*.run Files/chroot_local-includes/root
 fi
