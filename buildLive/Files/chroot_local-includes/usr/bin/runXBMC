@@ -32,9 +32,11 @@ do
         if [ ! -d "/home/$xbmcUser/.xbmc/" ]; then
          echo ".xbmc dir does not exist"
          rm -rf /home/$xbmcUser/.xbmc/
-         tar zxvf /usr/share/xbmc/xbmc.tar.gz --directory=/home/$xbmcUser/
-         sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/$xbmcUser/.xbmc/userdata/sources.xml
-         chown $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc -R
+         if grep -q "driver=nvidia" "/proc/cmdline" ; then
+          tar zxvf /usr/share/xbmc/xbmc-nvidia.tar.gz --directory=/home/$xbmcUser/
+          sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/$xbmcUser/.xbmc/userdata/sources.xml
+          chown $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc -R
+        fi
         else
          echo ".xbmc dir already exists"
         fi
