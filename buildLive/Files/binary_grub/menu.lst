@@ -9,13 +9,13 @@ splashimage=/boot/grub/splash.xpm.gz
 
 
 title  XBMCLive - NVIDIA GPU
-kernel /live/vmlinuz boot=live vga=788 xbmc=autostart,tempfs,nodiskmount,setvolume splash quiet loglevel=0 module=nvidia persistent quickreboot quickusbmodules skipconfig union=aufs
+kernel /live/vmlinuz boot=live vga=788 xbmc=autostart,tempfs,nodiskmount,setvolume splash quiet loglevel=0 module=nvidia persistent quickreboot quickusbmodules skipconfig union=aufs driver=nvidia
 initrd /live/initrd.img
 quiet
 boot
 
 title  XBMCLive - NVIDIA GPU, SAFE MODE
-kernel /live/vmlinuz boot=live vga=788 xbmc=tempfs,nodiskmount,setvolume quiet loglevel=0 module=nvidia persistent quickreboot quickusbmodules skipconfig union=aufs
+kernel /live/vmlinuz boot=live vga=788 xbmc=tempfs,nodiskmount,setvolume quiet loglevel=0 module=nvidia persistent quickreboot quickusbmodules skipconfig union=aufs driver=nvidia
 initrd /live/initrd.img
 quiet
 boot

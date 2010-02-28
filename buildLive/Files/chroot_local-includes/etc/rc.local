@@ -10,7 +10,9 @@
 # bits.
 #
 # By default this script does nothing.
-insmod /lib/modules/2.6.31-19-generic/kernel/drivers/hwmon/coretemp.ko
+if grep -q "driver=nvidia" "/proc/cmdline" ; then
+ insmod /lib/modules/2.6.31-19-generic/kernel/drivers/hwmon/coretemp.ko
+fi
 echo USB0 > /proc/acpi/wakeup
 if [ ! -e "/usr/share/xbmc/runonce" ]; then
  echo "runonce script already applied"
