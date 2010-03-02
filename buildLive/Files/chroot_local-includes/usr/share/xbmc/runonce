@@ -44,8 +44,11 @@ mkdir /home/$xbmcUser/Videos
 chmod 777 /home/$xbmcUser/Videos
 fi
 
-#copy asroundrc
-cp /usr/share/xbmc/asoundrc /home/$xbmcUser/.asoundrc
+#copy asroundrc for nvidia ion users
+if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null
+then
+ cp /usr/share/xbmc/asoundrc-nvidiaion /home/$xbmcUser/.asoundrc
+fi
 
 #fix user rights
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R

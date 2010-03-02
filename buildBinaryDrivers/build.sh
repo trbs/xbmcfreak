@@ -35,12 +35,26 @@ fi
 
 mkdir -p Files/chroot_local-includes/root &> /dev/null
 
-# Get Nvidia installers 
+#Get Nvidia installers 
 if [ -z "$USE_LOCAL_INSTALLERS" ]; then
 	rm *.run &> /dev/null
 	getNvidiaInstallers
 else
 	mv NVIDIA*.run Files/chroot_local-includes/root
+fi
+
+#Get AMD installers
+if ! ls $THISDIR/ati*.run > /dev/null 2>&1 ; then
+	getAMDInstaller
+else
+	mv $THISDIR/ati*.run $THISDIR/Files/chroot_local-includes/root
+fi
+
+#Get BC drivers if files are not already available
+if [ ! -f $THISDIR/crystalhd-HEAD.tar.gz ]; then
+	getBCDriversSources
+else
+	mv $THISDIR/crystalhd-HEAD.tar.gz $THISDIR/Files/chroot_local-includes/root
 fi
 
 # Clean any previous run
