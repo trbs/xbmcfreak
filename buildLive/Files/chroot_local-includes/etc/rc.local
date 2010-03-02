@@ -10,7 +10,7 @@
 # bits.
 #
 # By default this script does nothing.
-if grep -q "driver=nvidia" "/proc/cmdline" ; then
+if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
  insmod /lib/modules/2.6.31-19-generic/kernel/drivers/hwmon/coretemp.ko
 fi
 echo USB0 > /proc/acpi/wakeup

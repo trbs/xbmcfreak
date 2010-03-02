@@ -45,8 +45,7 @@ chmod 777 /home/$xbmcUser/Videos
 fi
 
 #copy asroundrc for nvidia ion users
-if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null
-then
+if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
  cp /usr/share/xbmc/asoundrc-nvidiaion /home/$xbmcUser/.asoundrc
 fi
 
