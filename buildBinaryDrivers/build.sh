@@ -57,4 +57,5 @@ makeConfig
 build
 
 # Get files from chroot
-cp $WORKDIR/chroot/tmp/*.ext3 .
+cp $WORKDIR/chroot/tmp/*.ext3 . &> /dev/null
+cp $WORKDIR/chroot/tmp/crystalhd.tar . &> /dev/null
