@@ -1,37 +1,18 @@
 #!/bin/sh
 
-GPU=$(lspci -nn | grep 0300)
+# Add <xbmc=autostart,nodiskmount,setvolume loglevel=0> to grub's kernel entries
+if [ -f /target/boot/grub/menu.lst ]; then
+	# TODO Do not modify single-mode entry
+	sed -i -e "/^kernel/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/" /target/boot/grub/menu.lst
 
-# 10de == NVIDIA
-if [ "$(echo $GPU | grep 10de)" ]; then
- if [ -f /target/boot/grub/menu.lst ]; then
-         sed -i -e "/^kernel/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/ driver=nvidia" /target/boot/grub/menu.lst
-         sed -i -e "/^# kopt=root=/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=nvidia/" /target/boot/grub/menu.lst
- fi
- 
- if [ -f /target/boot/grub/grub.cfg ]; then
-         sed -i -e "/^ linux/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=nvidia/" /target/boot/grub/grub.cfg
- fi
-else
-# 1002 == AMD
-if [ "$(echo $GPU | grep 1002)"  ]; then
- if [ -f /target/boot/grub/menu.lst ]; then
-         sed -i -e "/^kernel/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=amd/" /target/boot/grub/menu.lst
-         sed -i -e "/^# kopt=root=/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=amd/" /target/boot/grub/menu.lst
- fi
- 
- if [ -f /target/boot/grub/grub.cfg ]; then
-         sed -i -e "/^ linux/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=amd/" /target/boot/grub/grub.cfg
- fi
-else
- if [ -f /target/boot/grub/menu.lst ]; then
-         sed -i -e "/^kernel/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=intel/" /target/boot/grub/menu.lst
-         sed -i -e "/^# kopt=root=/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=intel/" /target/boot/grub/menu.lst
- fi
- 
- if [ -f /target/boot/grub/grub.cfg ]; then
-         sed -i -e "/^ linux/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0 driver=intel/" /target/boot/grub/grub.cfg
- fi
+	sed -i -e "/^# kopt=root=/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/" /target/boot/grub/menu.lst
+
 fi
+
+if [ -f /target/boot/grub/grub.cfg ]; then
+	# Watch out for the leading space in kernel line!
+	sed -i -e "/^ linux/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/" /target/boot/grub/grub.cfg
+
+	# TODO modify grub2 templates
 fi
 

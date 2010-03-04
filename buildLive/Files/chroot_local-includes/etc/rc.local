@@ -12,12 +12,14 @@
 # By default this script does nothing.
 
 #insmod coretemp.ko for nvidia ion users
-if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
+GPU=$(lspci -nn | grep 0300)
+if [ "$(echo $GPU | grep 'nVidia Corporation ION')" ]; then
  insmod /lib/modules/2.6.31-19-generic/kernel/drivers/hwmon/coretemp.ko
 fi
 
 #insmod crystalhd.ko for crystalhd users
-if lspci | grep 'Crystal HD' &> /dev/null ; then
+BC=$(lspci -nn | grep 0300)
+if [ "$(echo $BC | grep Broadcom)" ]; then
  /sbin/insmod /lib/modules/`uname -r`/kernel/drivers/video/broadcom/crystalhd.ko >& /dev/null
 fi
 
