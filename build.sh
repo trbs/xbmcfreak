@@ -55,14 +55,24 @@ rsync -r --exclude=.svn --exclude=$WORKDIR . $WORKDIR
 
 if ! which lh > /dev/null ; then
 	cd $WORKPATH/Tools
-	git clone git://live.debian.net/git/live-helper.git
-	if [ "$?" -ne "0" ]; then
-		exit 1
-	fi
+	if [ ! -d live-helper ]; then
+		if [ ! -f live-helper.tar ]; then
+			git clone git://live.debian.net/git/live-helper.git
+			if [ "$?" -ne "0" ]; then
+				exit 1
+			fi
+			
+			# Saved, to avoid cloning for multiple builds
+			tar cvf live-helper.tar live-helper  > /dev/null 2>&1
+		else
+			tar xvf live-helper.tar  > /dev/null 2>&1
+		fi
 
-	# Fix for missing directory for karmic d-i, to be removed when fixed upstream!
-	cd live-helper/data/debian-cd
-	ln -s lenny karmic
+		# Fix for missing directory for karmic d-i, to be removed when fixed upstream!
+		cd live-helper/data/debian-cd
+		ln -s lenny karmic
+		cd $WORKPATH/Tools
+	fi
 
 	LH_HOMEDIR=$WORKPATH/Tools/live-helper
 
