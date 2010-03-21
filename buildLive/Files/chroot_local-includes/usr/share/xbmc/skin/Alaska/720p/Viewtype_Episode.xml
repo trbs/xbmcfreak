@@ -99,7 +99,7 @@
 					<posy>13</posy>
 					<width>253</width>
 					<height>139</height>
-					<texture diffuse="episode/episodematte.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="episode/episodematte.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="139,82" start="80" end="100" time="400" tween="back" easing="out" />
@@ -220,7 +220,7 @@
 			<posy>135</posy>
 			<width>506</width>
 			<height>278</height>
-			<texture diffuse="episode/episodematte.png">$INFO[ListItem.Icon]</texture>
+			<texture background="true" diffuse="episode/episodematte.png">$INFO[ListItem.Icon]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 		</control>
 		<control type="image">

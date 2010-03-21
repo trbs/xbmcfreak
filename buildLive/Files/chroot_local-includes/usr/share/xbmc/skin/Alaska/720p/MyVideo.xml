@@ -17,6 +17,7 @@
 		<include>Viewtype_List</include>
 		<include>Viewtype_Poster</include>
 		<include>Viewtype_SquarePoster</include>
+		<include>Viewtype_Panel</include>
 		<include>Viewtype_Episode</include>
 		<include>Global_ContextFilter</include>
 		<control type="grouplist" id="7000">

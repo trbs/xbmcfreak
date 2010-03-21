@@ -20,9 +20,9 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>Window.IsActive(501) | Window.IsActive(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+			<visible>[Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(25) | Window.IsActive(24)] + !Container.Content(episodes)</visible>
 			<include condition="Window.IsActive(501) | Window.IsActive(502)">SquarePanel</include>
-			<include condition="Window.IsActive(25)">TallPanel</include>
+			<include condition="Window.IsActive(25) | Window.IsActive(24)">TallPanel</include>
 		</control>
 		<control type="panel" id="59">
 			<animation effect="slide" start="0,0" end="0,5" time="200" condition="!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(RSS_only_on_home) + !Window.IsActive(home) + !Window.IsVisible(2006)">Conditional</animation>

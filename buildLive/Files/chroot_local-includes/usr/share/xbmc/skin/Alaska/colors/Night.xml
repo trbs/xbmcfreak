@@ -36,7 +36,7 @@
 	<color name="Time">FFFFFFFF</color>
 	<color name="TimeAMPM">ff009ACD</color>
 	<color name="Date">ff009ACD</color>
-	<color name="RSSBody">FFFFFFFF</color>
+	<color name="RSSBody">FF009ACD</color>
 	<color name="RSSHighlight">FFFFFFFF</color>
 	<color name="RSSHeadline">FFFFFFFF</color>
 	<color name="RSSTitle">ff009ACD</color>
@@ -127,7 +127,7 @@
 
 	<!-- Panels -->
 
-	<color name="PanelDiffuse">ff0086b2</color>
+	<color name="PanelDiffuse">ff222222</color>
 	<color name="PanelDiffuseDivider">FFFFFFFF</color>
 	<color name="PanelListTitle">FFFFFFFF</color>
 	<color name="PanelListLabel">FFFFFFFF</color>

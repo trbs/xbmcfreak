@@ -15,6 +15,7 @@
 			<onleft>7001</onleft>
 			<onright>60</onright>
 			<scrolltime>160</scrolltime>
+			<pagecontrol>60</pagecontrol>
 			<viewtype label="">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>6</focusposition>
@@ -184,6 +185,23 @@
 				<label>$INFO[ListItem.path]</label>
 				<include>Global_HeadingDetailVars</include>
 			</control>
+		</control>
+		<!-- Scroll Bar -->
+		<control type="scrollbar" id="60">
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<posx>784</posx>
+			<posy>102</posy>
+			<width>26</width>
+			<height>526</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(450) + Control.HasFocus(60)</visible>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
+			<onleft>450</onleft>
+			<onright>7001</onright>
+			<showonepage>true</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60)">Conditional</animation>
 		</control>
 		<include>Global_Time</include>
 		<include>Global_RSS</include>

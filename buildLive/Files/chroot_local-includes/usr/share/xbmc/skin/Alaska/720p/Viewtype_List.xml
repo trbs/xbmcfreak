@@ -44,7 +44,7 @@
 					<visible>Container.Content(songs) + !Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
-					<posx>73</posx>
+					<posx>91</posx>
 					<posy>0</posy>
 					<width>750</width>
 					<height>49</height>
@@ -56,7 +56,7 @@
 					<visible>IsEmpty(ListItem.Title) + !Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
-					<posx>73</posx>
+					<posx>91</posx>
 					<posy>0</posy>
 					<width>750</width>
 					<height>25</height>
@@ -68,7 +68,7 @@
 					<visible>Window.IsActive(500)</visible>
 				</control>
 				<control type="label">
-					<posx>73</posx>
+					<posx>91</posx>
 					<posy>3</posy>
 					<width>830</width>
 					<height>25</height>
@@ -80,7 +80,7 @@
 					<visible>!IsEmpty(ListItem.Title) + !Window.IsVisible(1) + !Container.Content(songs)</visible>
 				</control>
 				<control type="label">
-					<posx>73</posx>
+					<posx>91</posx>
 					<posy>0</posy>
 					<width>750</width>
 					<height>49</height>
@@ -93,7 +93,7 @@
 					<visible>Window.IsVisible(1)</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" end="-38,0" condition="Window.IsActive(500)">Conditional</animation>
+					<animation effect="slide" end="-20,0" condition="Window.IsActive(500)">Conditional</animation>
 					<posx>111</posx>
 					<posy>26</posy>
 					<width>830</width>
@@ -123,7 +123,7 @@
 					<posy>12</posy>
 					<width>80</width>
 					<height>80</height>
-					<texture diffuse="list/listmatte.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="list/listmatte.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="52,52" start="50" end="100" time="200" tween="cubic" easing="out" />
@@ -136,7 +136,7 @@
 					<posy>12</posy>
 					<width>80</width>
 					<height>80</height>
-					<texture diffuse="list/listmatte.png" fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
+					<texture background="true" diffuse="list/listmatte.png" fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="52,52" start="50" end="100" time="200" tween="cubic" easing="out" />

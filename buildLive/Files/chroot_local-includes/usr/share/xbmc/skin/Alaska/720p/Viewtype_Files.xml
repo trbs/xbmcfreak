@@ -32,7 +32,7 @@
 					<selectedcolor>ListSelectedNF</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>false</scroll>
-					<visible>Window.IsVisible(24) | ![Window.IsVisible(1) | Window.IsVisible(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<visible>IsEmpty(ListItem.Title) | IsEmpty(ListItem.Episode) + [Window.IsVisible(24) | ![Window.IsVisible(1) | Window.IsVisible(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
 				</control>
 				<control type="label">
 					<posx>770</posx>
@@ -205,7 +205,7 @@
 					<textcolor>ListTitleFO</textcolor>
 					<selectedcolor>ListSelectedFO</selectedcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>Window.IsVisible(24) | ![Window.IsVisible(1) | Window.IsVisible(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<visible>IsEmpty(ListItem.Title) | IsEmpty(ListItem.Episode) + [Window.IsVisible(24) | ![Window.IsVisible(1) | Window.IsVisible(502) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>30</posx>
@@ -532,7 +532,7 @@
 				<width>390</width>
 				<height>482</height>
 				<aspectratio align="left" aligny="center">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">common/thumb_border.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!Container.Content(Genres)</visible>
@@ -586,7 +586,7 @@
 				<width>540</width>
 				<height>482</height>
 				<aspectratio align="right" aligny="top">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">common/thumb_border.png</bordertexture>
 				<bordersize>8</bordersize>
 				<animation type="Conditional" condition="Window.IsActive(2003)">

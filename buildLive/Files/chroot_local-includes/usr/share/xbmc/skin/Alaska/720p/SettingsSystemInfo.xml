@@ -93,58 +93,68 @@
 				<width>778</width>
 				<height>600</height>
 				<control type="label" id="2">
+					<width>778</width>
 					<description>Label 2</description>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="3">
+					<width>778</width>
 					<description>Label 3</description>
 					<posx>0</posx>
 					<posy>35</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="4">
+					<width>778</width>
 					<description>Label 4</description>
 					<posx>0</posx>
 					<posy>70</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="5">
+					<width>778</width>
 					<description>Label 5</description>
 					<posx>0</posx>
 					<posy>105</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="6">
+					<width>778</width>
 					<description>Label 6</description>
 					<posx>0</posx>
 					<posy>140</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="7">
+					<width>778</width>
 					<description>Label 7</description>
 					<posx>0</posx>
 					<posy>175</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="8">
+					<width>778</width>
 					<description>Label 8</description>
 					<posx>0</posx>
 					<posy>210</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="9">
+					<width>778</width>
 					<description>Label 9</description>
 					<posx>0</posx>
 					<posy>245</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="10">
+					<width>778</width>
 					<description>Label 10</description>
 					<posx>0</posx>
 					<posy>280</posy>
 					<include>DialogLabelNF</include>
 				</control>
 				<control type="label" id="11">
+					<width>778</width>
 					<description>Label 11</description>
 					<posx>0</posx>
 					<posy>315</posy>

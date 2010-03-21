@@ -214,7 +214,7 @@
 				<description>Movies</description>
 				<label>$LOCALIZE[342]</label>
 				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(25) + Container.Content(movies) + !Window.IsActive(134)</visible>
+				<visible>Window.IsActive(25) + Container.Content(movies) + IsEmpty(Container.PluginName) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
 				<description>Name of Plugin</description>
@@ -236,7 +236,7 @@
 			</control>
 			<control type="label">
 				<description>Pictures</description>
-				<label>$LOCALIZE[1]: $INFO[ListItem.Label]</label>
+				<label>[COLOR clear]$LOCALIZE[1][/COLOR]: $INFO[ListItem.Label]</label>
 				<include>Global_HeadingSectionVars</include>
 				<visible>[Window.IsActive(2) + [Control.IsVisible(59) | [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]]] + !Window.IsActive(134)</visible>
 			</control>
@@ -318,7 +318,7 @@
 				<visible>!Container.Content(episodes) + !Window.IsActive(134)</visible>
 			</control>
 			<control type="label">
-				<label>$INFO[ListItem.Season,SEASON ]$INFO[Container.NumItems, - , EPISODES]</label>
+				<label>$LOCALIZE[20373] $INFO[ListItem.Season] - $INFO[Container.NumItems] $LOCALIZE[20360]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Container.Content(episodes) + !Window.IsActive(134)</visible>
 			</control>

@@ -1420,7 +1420,7 @@
 			</control>
 			<control type="button" id="3702">
 				<onclick>ActivateWindow(2600)</onclick>
-				<label>$LOCALIZE[33007] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+				<label>$INFO[Window(Weather).Property(Day1.Title)] $INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
 				<include>Home_MainMenuLabel</include>
 				<visible allowhiddenfocus="false">!Skin.HasSetting(hideday1)</visible>
 			</control>

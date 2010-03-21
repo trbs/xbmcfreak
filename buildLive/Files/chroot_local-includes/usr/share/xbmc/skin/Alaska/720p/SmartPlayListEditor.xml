@@ -73,7 +73,6 @@
 				<posy>178</posy>
 				<width>345</width>
 				<height>34</height>
-				<align>right</align>
 				<aligny>center</aligny>
 				<include>DialogLabelLargeNF</include>
 				<onright>22</onright>

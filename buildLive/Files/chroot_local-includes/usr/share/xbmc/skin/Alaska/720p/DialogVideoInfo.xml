@@ -310,6 +310,30 @@
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 		</control>
+		<control type="group">
+			<include>Animation_ZoomedByMenu</include>
+			<animation effect="slide" start="0,0" end="-242,0" time="400" tween="cubic" easing="inout">WindowOpen</animation>
+			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
+			<visible>!Container.Content(episodes)</visible>
+			<control type="image">
+				<posx>484</posx>
+				<posy>85</posy>
+				<width>320</width>
+				<height>476</height>
+				<texture background="true" diffuse="poster/postermatte.png">$INFO[ListItem.Icon]</texture>					
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<visible>stringcompare(Container.ViewMode,$LOCALIZE[40282]) | stringcompare(Container.ViewMode,$LOCALIZE[40283])</visible>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+			</control>
+			<control type="image">
+				<posx>482</posx>
+				<posy>83</posy>
+				<width>324</width>
+				<height>480</height>
+				<texture>poster/posterframeFO.png</texture>
+				<visible>stringcompare(Container.ViewMode,$LOCALIZE[40282]) | stringcompare(Container.ViewMode,$LOCALIZE[40283])</visible>
+			</control>
+		</control>
 		<!-- view options -->
 		<include>Global_ContextFilter</include>
 		<control type="grouplist" id="7001">
