@@ -107,11 +107,16 @@ if ! ls live-initramfs_*.udeb > /dev/null 2>&1 ; then
 	cd $THISDIR
 fi
 
-# Retrieve live_installer from Debian's repositories
+# Retrieve live_installer from Ubuntu's repositories
 if ! ls live-installer*.udeb > /dev/null 2>&1 ; then
 	echo "Retrieving live_installer udebs..."
-	latestPackage=$(curl -x "" -s -f http://ftp.debian.org/debian/pool/main/l/live-installer/ | grep -o 'live[^"]*_i386.udeb' | sort -r -k2 -t_ -n | head -n 1)
-	wget -q "http://ftp.uk.debian.org/debian/pool/main/l/live-installer/$latestPackage"
+	
+        # This is the debian repository (as a reference) 
+        #repoURL="http://ftp.debian.org/debian/pool/main/l/live-installer/" 
+        repoURL="http://archive.ubuntu.com/ubuntu/pool/universe/l/live-installer/" 
+        latestPackage=$(curl -x "" -s -f $repoURL | grep -o 'live[^"]*_i386.udeb' | sort -r -k2 -t_ -n | head -n 1) 
+
+	wget -q "$repoURL$latestPackage"
 	if [ "$?" -ne "0" ] || [ ! -f $latestPackage ] ; then
 		echo "Needed package (1) not found, exiting..."
 		exit 1

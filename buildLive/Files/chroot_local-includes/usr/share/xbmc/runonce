@@ -67,6 +67,25 @@ ldconfig
 chmod 777 /usr/bin/makemkv
 chmod 777 /usr/bin/makemkvcon
 
+#check if ramdrive is loaded
+GPU=$(lspci -nn | grep 0300)
+if [ ! -d "/home/$xbmcUser/.xbmc/" ]; then
+ echo ".xbmc dir does not exist"
+ rm -rf /home/$xbmcUser/.xbmc/
+ if [ "$(echo $GPU | grep 10de)" ]; then
+  #extract userdata folder for nvidia users
+  tar zxvf /usr/share/xbmc/xbmc-nvidia.tar.gz --directory=/home/$xbmcUser/
+  sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/$xbmcUser/.xbmc/userdata/sources.xml
+  #add advancedsettings.xml for nvidia ion users
+  if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
+   cp /usr/share/xbmc/advancedsettings-nvidiaion.xml /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml
+  fi
+  chown $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc -R
+ fi
+ else
+ echo ".xbmc dir already exists"
+fi
+
 #remove runonce
 rm -f /usr/share/xbmc/runonce
 
