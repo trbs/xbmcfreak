@@ -14,7 +14,7 @@
 #insmod coretemp.ko for nvidia ion users
 GPU=$(lspci -nn | grep 0300)
 if [ "$(echo $GPU | grep 'nVidia Corporation ION')" ]; then
- insmod /lib/modules/2.6.31-19-generic/kernel/drivers/hwmon/coretemp.ko
+ insmod /lib/modules/2.6.31-20-generic/kernel/drivers/hwmon/coretemp.ko
 fi
 
 #insmod crystalhd.ko for crystalhd users
