@@ -3,6 +3,28 @@
 #get current user
 xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
 
+#check if ramdrive is loaded
+GPU=$(lspci -nn | grep 0300)
+if [ ! -d "/home/$xbmcUser/.xbmc/" ]; then
+ echo ".xbmc dir does not exist"
+ rm -rf /home/$xbmcUser/.xbmc/
+ if [ "$(echo $GPU | grep 10de)" ]; then
+  #extract userdata folder for nvidia users
+  echo found Nvidia GPU
+  tar zxvf /usr/share/xbmc/xbmc-nvidia.tar.gz --directory=/home/$xbmcUser/ >> /dev/null 2>&1
+  sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/$xbmcUser/.xbmc/userdata/sources.xml
+  #add advancedsettings.xml for nvidia ion users
+  if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
+   echo found Nvidia ION GPU
+   cp /usr/share/xbmc/tools/nvidia/advancedsettings.xml /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml
+   #cp /usr/share/xbmc/asoundrc-nvidiaion /home/$xbmcUser/.asoundrc
+  fi
+  chown $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc -R
+ fi
+ else
+ echo ".xbmc dir already exists"
+fi
+
 #configure torrent-transmission
 sed -i "s/USER=debian-transmission/USER=$xbmcUser/g" /etc/init.d/transmission-daemon
 chown -hR $xbmcUser:$xbmcUser /var/lib/transmission-daemon
@@ -16,38 +38,43 @@ chown $xbmcUser:$xbmcUser /home/$xbmcUser/.sabnzbd/
 
 #configure samba
 sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
-sed -i "s/guest account = xbmc/guest account = $xbmcUser/g" /etc/samba/smb.conf
 
 #create shares
 if [ ! -d "/home/$xbmcUser/Downloads" ]; then
 mkdir /home/$xbmcUser/Downloads
-chmod 777 /home/$xbmcUser/Downloads
+chmod 755 /home/$xbmcUser/Downloads
 fi
 
 if [ ! -d "/home/$xbmcUser/Music" ]; then
 mkdir /home/$xbmcUser/Music
-chmod 777 /home/$xbmcUser/Music
+chmod 755 /home/$xbmcUser/Music
 fi
 
 if [ ! -d "/home/$xbmcUser/Pictures" ]; then
 mkdir /home/$xbmcUser/Pictures
-chmod 777 /home/$xbmcUser/Pictures
+chmod 755 /home/$xbmcUser/Pictures
 fi
 
 if [ ! -d "/home/$xbmcUser/TV Shows" ]; then
 mkdir "/home/$xbmcUser/TV Shows"
-chmod 777 "/home/$xbmcUser/TV Shows"
+chmod 755 "/home/$xbmcUser/TV Shows"
 fi
 
 if [ ! -d "/home/$xbmcUser/Videos" ]; then
 mkdir /home/$xbmcUser/Videos
-chmod 777 /home/$xbmcUser/Videos
+chmod 755 /home/$xbmcUser/Videos
 fi
 
-#copy asroundrc for nvidia ion users
-if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
- cp /usr/share/xbmc/asoundrc-nvidiaion /home/$xbmcUser/.asoundrc
-fi
+#mt-daapd
+sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/mt-daapd.conf
+update-rc.d avahi-daemon defaults
+
+#fix permissions makemkv
+chmod 777 /usr/bin/makemkv
+chmod 777 /usr/bin/makemkvcon
+
+#reload modules for makemkv
+ldconfig
 
 #fix user rights
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R
@@ -55,37 +82,8 @@ chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/XOT-Uzg.v3/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/scripts/BluRay/ -R
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/web
 chown $xbmcUser:$xbmcUser /usr/share/xbmc/plugins/programs
-
-#mt-daapd
-sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/mt-daapd.conf
-update-rc.d avahi-daemon defaults
-
-#reload modules for makemkv
-ldconfig
-
-#fix permissions makemkv
-chmod 777 /usr/bin/makemkv
-chmod 777 /usr/bin/makemkvcon
-
-#check if ramdrive is loaded
-GPU=$(lspci -nn | grep 0300)
-if [ ! -d "/home/$xbmcUser/.xbmc/" ]; then
- echo ".xbmc dir does not exist"
- rm -rf /home/$xbmcUser/.xbmc/
- if [ "$(echo $GPU | grep 10de)" ]; then
-  #extract userdata folder for nvidia users
-  tar zxvf /usr/share/xbmc/xbmc-nvidia.tar.gz --directory=/home/$xbmcUser/
-  sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/$xbmcUser/.xbmc/userdata/sources.xml
-  #add advancedsettings.xml for nvidia ion users
-  if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
-   cp /usr/share/xbmc/advancedsettings-nvidiaion.xml /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml
-  fi
-  chown $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc -R
- fi
- else
- echo ".xbmc dir already exists"
-fi
+chown $xbmcUser:$xbmcUser /usr/bin/makemkv
+chown $xbmcUser:$xbmcUser /usr/bin/makemkvcon
 
 #remove runonce
 rm -f /usr/share/xbmc/runonce
-

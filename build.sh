@@ -21,8 +21,8 @@ cleanup()
 		if [ -z "$KEEP_WORKAREA" ]; then
 			echo "Cleaning workarea..." 
 			rm -rf $WORKPATH
-			if [ -f $THISDIR/binary.iso ]; then
-				chmod 777 $THISDIR/binary.iso 
+			if [ -f $THISDIR/binary.* ]; then
+				chmod 777 $THISDIR/binary.* 
 			fi
 			echo "All clean"
 		fi
@@ -147,4 +147,4 @@ cd $WORKPATH/buildLive
 cd $THISDIR
 
 mv $WORKPATH/buildLive/binary.iso .
-chmod 777 *.iso
+chmod 777 binary.iso
