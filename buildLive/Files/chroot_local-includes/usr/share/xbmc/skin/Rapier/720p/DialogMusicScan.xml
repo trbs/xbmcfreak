@@ -1,0 +1,49 @@
+<window id="112">
+	<defaultcontrol always="true">402</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<include>NotificationOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="753" y="4">true</origin>
+	</coordinates>
+
+	<controls>	
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)">conditional</animation>
+
+			<control type="image">
+				<width>270</width>
+				<height>35</height>
+				<texture border="8">special://skin/images/skin/top-bar-status-background.png</texture>
+			</control>	
+
+			<control type="label" id="1">
+				<description>Caption</description>
+				<posx>8</posx>
+				<posy>3</posy>
+				<width>254</width>
+				<height>15</height>
+				<font>ScanContentFont</font>
+				<textcolor>TopBarStatusColor</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13413]...</label>
+			</control>
+		
+			<control type="label" id="402">
+				<description>Current Directory</description>
+				<posx>8</posx>
+				<posy>17</posy>
+				<width>254</width>
+				<height>15</height>
+				<font>ScanContentFont2</font>
+				<textcolor>TopBarStatusColor</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<haspath>true</haspath>
+			</control>
+		</control>
+	</controls>	
+</window>

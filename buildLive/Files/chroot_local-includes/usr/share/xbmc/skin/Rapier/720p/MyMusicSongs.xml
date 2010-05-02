@@ -1,0 +1,40 @@
+<window id="501">
+	<defaultcontrol always="true">500</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50,51,52,63</views>
+	
+	<controls>	
+		<control type="group">			
+			<include>BackgroundMusic</include>
+			<include>BackgroundNoContent</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+
+		<control type="group">       
+			<include>IconView</include> <!-- 50 -->
+			<include>BigIconView</include> <!-- 51 -->
+			<include>ListView</include> <!-- 52 -->
+			<include>AlbumThumbnailView</include> <!-- 63 -->
+		</control>	
+
+		<control type="group" id="505">		
+			<description>Menu Bar Area</description>			
+			<posy>MenuBarOffsetY</posy>	
+			<visible>!Window.IsActive(MusicInformation)+ !Window.IsActive(135)</visible>
+			<include>MenuBarImage</include>
+			<include>DefaultMenuBar</include>
+			<include>MenuBarOpenCloseAnim</include>	
+		</control>
+		
+		<control type="group">		
+			<description>Top Bar Area</description>		
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbMusicFiles</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>	
+	</controls>	
+</window>

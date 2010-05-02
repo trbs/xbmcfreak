@@ -1,0 +1,169 @@
+<window type="dialog" id="3016">
+	<defaultcontrol always="true">110</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="0" y="572">true</origin>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<include>HomeSubMenuBarImage</include>
+			<include>HomeSubMenuBarOpenCloseAnim</include>
+			
+			<control type="group">
+				<posx>10</posx>
+				<include>HomeSubMenuSlideAnim</include>
+				
+				<control type="list" id="110">
+					<description>TV Shows Menu Bar</description>
+					<width>1260</width>
+					<height>34</height>
+					<ondown>Dialog.Close(3016)</ondown>
+					<orientation>horizontal</orientation>
+					<include>HomeSubMenuOpenCloseAnim</include>
+					<itemlayout width="180">
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>		
+					</itemlayout>
+					<focusedlayout width="180">
+						<control type="image">
+							<posy>-1</posy>
+							<width>180</width>
+							<height>36</height>
+							<texture border="0,0,0,2">button-submenu-focus.png</texture>
+							<include>HomeSubMenuFocusAnim</include>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>					
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Title</description>
+							<label>$LOCALIZE[556]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,TVShowTitles,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeTVShowsSubMenuItem1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem1CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem1CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem1) + !IsEmpty(Skin.String(TVShowsSubMenuItem1CustomLabel))</visible>
+						</item>
+						<item id="2">
+							<description>Genres</description>
+							<label>$LOCALIZE[135]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,TVShowGenres,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeTVShowsSubMenuItem2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem2CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem2CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem2) + !IsEmpty(Skin.String(TVShowsSubMenuItem2CustomLabel))</visible>
+						</item>
+						<item id="3">
+							<description>Year</description>
+							<label>$LOCALIZE[345]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,TVShowYears,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeTVShowsSubMenuItem3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem3CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem3CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem3) + !IsEmpty(Skin.String(TVShowsSubMenuItem3CustomLabel))</visible>
+						</item>
+						<item id="4">
+							<description>Actors</description>
+							<label>$LOCALIZE[344]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,TVShowActors,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeTVShowsSubMenuItem4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem4CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem4CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem4) + !IsEmpty(Skin.String(TVShowsSubMenuItem4CustomLabel))</visible>
+						</item>
+						<item id="5">
+							<description>Studios</description>
+							<label>$LOCALIZE[20388]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,videodb://2/5/,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeTVShowsSubMenuItem5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem5CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem5CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem5) + !IsEmpty(Skin.String(TVShowsSubMenuItem5CustomLabel))</visible>
+						</item>
+						<item id="6">
+							<description>Recently Added Episodes</description>
+							<label>$LOCALIZE[31303]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeTVShowsSubMenuItem6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem6CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem6CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem6) + !IsEmpty(Skin.String(TVShowsSubMenuItem6CustomLabel))</visible>
+						</item>
+						<item id="7">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(TVShowsSubMenuItem7CustomLabel)]</label>
+							<onclick>Dialog.Close(3016)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(TVShowsSubMenuItem7CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeTVShowsSubMenuItem7) + !IsEmpty(Skin.String(TVShowsSubMenuItem7CustomLabel))</visible>
+						</item>
+					</content>						
+				</control>
+			</control>
+		</control>
+		
+		<control type="group">	
+			<description>Bottom Bar Area</description>	
+			<posy>34</posy>	
+			<include>HomeSubMenuCoverTopImage</include>		
+			<include>HomeSubMenuCoverTopOverlay</include>
+			
+			<control type="image">
+				<Description>TV Shows Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos2</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-tvshows-text-focus.png</texture>
+				<include>HomeMenuCategoryFocusAnim2</include>
+			</control>	
+		</control>
+	</controls>
+</window>

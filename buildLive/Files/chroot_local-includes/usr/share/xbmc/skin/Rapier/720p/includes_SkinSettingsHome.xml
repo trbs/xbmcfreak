@@ -1,0 +1,1889 @@
+<includes> 
+	<include name="HomeSkinSettings"> <!-- 2200 -->
+		<control type="grouplist" id="901">		
+			<description>Home Content Area</description>
+			<posx>385</posx>
+			<posy>140</posy>
+			<width>800</width>
+			<height>456</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>	
+			<onup>901</onup>
+			<ondown>901</ondown>
+			<onleft>850</onleft>
+			<visible>Skin.String(SkinSettingsCategory,2)</visible>
+			<control type="togglebutton" id="2018">
+				<description>Toggle Home Menu Basic/Advanced</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31076]</label>
+				<altlabel>$LOCALIZE[31077]</altlabel>
+				<usealttexture>Skin.HasSetting(UseAdvancedHomeMenu)</usealttexture>
+				<onclick>Skin.ToggleSetting(UseAdvancedHomeMenu)</onclick>
+				<onclick>Skin.Reset(ShowDatabasePath)</onclick>
+				<onclick>ReloadSkin()</onclick>
+			</control>
+			<control type="radiobutton" id="2090">
+				<description>Programs Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[0]</label>
+				<selected>Skin.HasSetting(ExpandProgramsSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandProgramsSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu)</enable>
+			</control>
+				<control type="button" id="2178">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31102]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2091">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2092">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2093">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2094">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2095">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2096">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2097">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2098">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2099">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2100">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2101">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2102">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2103">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2104">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2105">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2106">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2107">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2108">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2109">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizeProgramsSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeProgramsSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2110">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2111">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(ProgramsSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings) + Skin.HasSetting(CustomizeProgramsSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2046">
+				<description>Pictures Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[1]</label>
+				<selected>Skin.HasSetting(ExpandPicturesSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandPicturesSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu)</enable>
+			</control>
+				<control type="button" id="2179">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31101]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2047">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2048">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2049">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2050">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2051">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2052">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2053">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2054">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2055">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2056">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2057">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2058">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2059">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2060">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2061">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2062">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2063">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2064">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2065">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizePicturesSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizePicturesSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2066">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2067">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(PicturesSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesSubMenuSettings) + Skin.HasSetting(CustomizePicturesSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2068">
+				<description>Music Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[2]</label>
+				<selected>Skin.HasSetting(ExpandMusicSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandMusicSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu)</enable>
+			</control>
+				<control type="button" id="2180">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31100]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2069">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2186">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem1CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem1CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2070">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2071">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2072">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2187">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem2CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem2CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2073">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2074">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2075">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2188">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem3CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem3CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2076">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2077">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2078">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2189">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem4CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem4CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2079">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2080">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2081">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2190">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem5CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem5CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2082">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2083">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2084">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2191">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem6CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem6CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2085">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2086">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2087">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizeMusicSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMusicSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2192">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(MusicSubMenuItem7CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(MusicSubMenuItem7CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2088">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2089">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MusicSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicSubMenuSettings) + Skin.HasSetting(CustomizeMusicSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2024">
+				<description>Videos Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[3]</label>
+				<selected>Skin.HasSetting(ExpandVideosSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandVideosSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu)</enable>
+			</control>
+				<control type="button" id="2181">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31095]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2025">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2193">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem1CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem1CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2026">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2027">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2028">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2194">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem2CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem2CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2029">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2030">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2031">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2195">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem3CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem3CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2032">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2033">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2034">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2196">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem4CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem4CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2035">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2036">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2037">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2197">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem5CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem5CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2038">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2039">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2040">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2198">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem6CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem6CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2041">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2042">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2043">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizeVideosSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeVideosSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="2199">
+					<description>Toggle File/Library Parameter</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31600]</label>
+					<altlabel>                 $LOCALIZE[31601]</altlabel>
+					<usealttexture>Skin.HasSetting(VideosSubMenuItem7CustomLibParam)</usealttexture>
+					<onclick>Skin.ToggleSetting(VideosSubMenuItem7CustomLibParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2044">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2045">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(VideosSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosSubMenuSettings) + Skin.HasSetting(CustomizeVideosSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2112">
+				<description>Movies Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[20342]</label>
+				<selected>Skin.HasSetting(ExpandMoviesSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandMoviesSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu) + Library.HasContent(Movies)</enable>
+			</control>
+				<control type="button" id="2182">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31099]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2113">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2114">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2115">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2116">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2117">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2118">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2119">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2120">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2121">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2122">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2123">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2124">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2125">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2126">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2127">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2128">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2129">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2130">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2131">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizeMoviesSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeMoviesSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2132">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2133">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(MoviesSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesSubMenuSettings) + Skin.HasSetting(CustomizeMoviesSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2134">
+				<description>TVShows Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[20343]</label>
+				<selected>Skin.HasSetting(ExpandTVShowsSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandTVShowsSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu) + Library.HasContent(TVShows)</enable>
+			</control>
+				<control type="button" id="2183">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31099]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2135">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2136">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2137">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2138">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2139">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2140">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2141">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2142">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2143">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2144">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2145">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2146">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2147">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2148">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2149">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2150">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2151">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2152">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2153">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizeTVShowsSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeTVShowsSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2154">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2155">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(TVShowsSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings) + Skin.HasSetting(CustomizeTVShowsSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2156">
+				<description>General Customize Category Sub Menus</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>- $LOCALIZE[128]</label>
+				<selected>Skin.HasSetting(ExpandGeneralSubMenuSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandGeneralSubMenuSettings)</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu)</enable>
+			</control>
+				<control type="button" id="2184">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31097]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2185">
+					<description>Note</description>
+					<include>SettingsContentSmallBlankBtn</include>
+					<label>$LOCALIZE[31098]</label>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2157">
+					<description>Item 1</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31088]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem1)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem1)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2158">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem1CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem1CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2159">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem1CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem1CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem1) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2160">
+					<description>Item 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31089]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem2)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem2)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2161">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem2CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem2CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2162">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem2CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem2CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem2) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2163">
+					<description>Item 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31090]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem3)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem3)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2164">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem3CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem3CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2165">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem3CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem3CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem3) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2166">
+					<description>Item 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31091]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem4)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem4)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2167">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem4CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem4CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2168">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem4CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem4CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem4) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2169">
+					<description>Item 5</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31092]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem5)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem5)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2170">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem5CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem5CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2171">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem5CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem5CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem5) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2172">
+					<description>Item 6</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31093]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem6)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem6)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2173">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem6CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem6CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2174">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem6CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem6CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem6) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2175">
+					<description>Item 7</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31094]</label>
+					<selected>Skin.HasSetting(CustomizeGeneralSubMenuItem7)</selected>
+					<onclick>Skin.ToggleSetting(CustomizeGeneralSubMenuItem7)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2176">
+					<description>Custom Label</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[21899] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem7CustomLabel)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem7CustomLabel)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2177">
+					<description>Custom Parameters</description>
+					<include>SettingsContentSmallerBtn</include>
+					<label>                 $LOCALIZE[31096] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralSubMenuItem7CustomParam)][/COLOR]</label2>
+					<onclick>Skin.SetString(GeneralSubMenuItem7CustomParam)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralSubMenuSettings) + Skin.HasSetting(CustomizeGeneralSubMenuItem7) + Skin.HasSetting(UseAdvancedHomeMenu)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2200">
+				<description>Show Database Path</description>
+				<include>SettingsContentBtn</include>
+				<label>- $LOCALIZE[31081]</label>
+				<selected>Skin.HasSetting(ShowDatabasePath)</selected>
+				<onclick>Skin.ToggleSetting(ShowDatabasePath)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<enable>Skin.HasSetting(UseAdvancedHomeMenu)</enable>
+			</control>
+			<control type="radiobutton" id="2000">
+				<description>Custom Category Icons</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[31078]</label>
+				<selected>Skin.HasSetting(ExpandCustomCategoryIconsSettings)</selected>
+				<enable>!Skin.HasSetting(HideHomeCategoryIcons)</enable>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCategoryToggleSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandCustomCategoryIconsSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="2001">
+					<description>Use Custom Category Icons</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31079]</label>
+					<selected>Skin.HasSetting(UseCustomCategoryIcons)</selected>
+					<onclick>Skin.ToggleSetting(UseCustomCategoryIcons)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2002">
+					<description>Programs Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[0] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(ProgramsCategoryIconPath)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2003">
+					<description>Pictures Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[1] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(PicturesCategoryIconPath)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2004">
+					<description>Music Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[2] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(MusicCategoryIconPath)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2005">
+					<description>Videos Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[3] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(VideosCategoryIconPath)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2006">
+					<description>Movies Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[20342] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(MoviesCategoryIconPath)</onclick>
+					<enable>Library.HasContent(Movies)</enable>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2007">
+					<description>TV Shows Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[20343] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(TVShowsCategoryIconPath)</onclick>
+					<enable>Library.HasContent(TVShows)</enable>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2008">
+					<description>General Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[128] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(GeneralCategoryIconPath)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="2009">
+					<description>System Custom Category Icon</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[13000] $LOCALIZE[31080] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(SystemCategoryIconPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(SystemCategoryIconPath)</onclick>
+					<visible>Skin.HasSetting(ExpandCustomCategoryIconsSettings) + Skin.HasSetting(UseCustomCategoryIcons) + !Skin.HasSetting(HideHomeCategoryIcons)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2019">
+				<description>Hide Category Icons</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31074]</label>
+				<selected>Skin.HasSetting(HideHomeCategoryIcons)</selected>
+				<onclick>Skin.ToggleSetting(HideHomeCategoryIcons)</onclick>
+			</control>
+			<control type="radiobutton" id="2010">
+				<description>Hide Categories</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[31070]</label>
+				<selected>Skin.HasSetting(ExpandCategoryToggleSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralSubMenuSettings)</onclick>
+				<onclick>Skin.Reset(ExpandCustomCategoryIconsSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandCategoryToggleSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="2011">
+					<description>Hide Programs Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[0]</label>
+					<selected>Skin.HasSetting(HideProgramsCategory)</selected>
+					<onclick>Skin.ToggleSetting(HideProgramsCategory)</onclick>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2012">
+					<description>Hide Pictures Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[1]</label>
+					<selected>Skin.HasSetting(HidePicturesCategory)</selected>
+					<onclick>Skin.ToggleSetting(HidePicturesCategory)</onclick>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2013">
+					<description>Hide Music Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[2]</label>
+					<selected>Skin.HasSetting(HideMusicCategory)</selected>
+					<onclick>Skin.ToggleSetting(HideMusicCategory)</onclick>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2014">
+					<description>Hide Videos Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[3]</label>
+					<selected>Skin.HasSetting(HideVideosCategory)</selected>
+					<onclick>Skin.ToggleSetting(HideVideosCategory)</onclick>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2015">
+					<description>Hide Movies Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[20342]</label>
+					<selected>Skin.HasSetting(HideMoviesCategory)</selected>
+					<onclick>Skin.ToggleSetting(HideMoviesCategory)</onclick>
+					<enable>Library.HasContent(Movies)</enable>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2016">
+					<description>Hide TV Shows Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[20343]</label>
+					<selected>Skin.HasSetting(HideTVShowsCategory)</selected>
+					<onclick>Skin.ToggleSetting(HideTVShowsCategory)</onclick>
+					<enable>Library.HasContent(TVShows)</enable>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="2017">
+					<description>Hide General Category</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[128]</label>
+					<selected>Skin.HasSetting(HideGeneralCategory)</selected>
+					<onclick>Skin.ToggleSetting(HideGeneralCategory)</onclick>
+					<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="2020">
+				<description>Hide Now Playing Music</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31071]</label>
+				<selected>Skin.HasSetting(HideNowPlayingMusic)</selected>
+				<onclick>Skin.ToggleSetting(HideNowPlayingMusic)</onclick>
+			</control>
+			<control type="radiobutton" id="2021">
+				<description>Hide Now Playing Videos</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31072]</label>
+				<selected>Skin.HasSetting(HideNowPlayingVideos)</selected>
+				<onclick>Skin.ToggleSetting(HideNowPlayingVideos)</onclick>
+			</control>
+			<control type="radiobutton" id="2022">
+				<description>Show Navigation Buttons</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31075]</label>
+				<selected>Skin.HasSetting(ShowHomeNavButtons)</selected>
+				<onclick>Skin.ToggleSetting(ShowHomeNavButtons)</onclick>
+			</control>
+			<control type="radiobutton" id="2023">
+				<description>Hide Bottom Pane White Highlight</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31024]</label>
+				<selected>Skin.HasSetting(HideHomeBottomPaneWhiteHighlight)</selected>
+				<onclick>Skin.ToggleSetting(HideHomeBottomPaneWhiteHighlight)</onclick>
+			</control>
+		</control>
+	</include>
+</includes>

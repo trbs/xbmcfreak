@@ -1,0 +1,112 @@
+<window id="12">
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>	
+	    <control type="group">	
+    		<include>BackgroundSystem</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>
+			<include>FullControlAreaBackground</include>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+
+		<control type="group" id="9001">
+			<include>ControlsOpenCloseAnim</include>
+			
+			<control type="grouplist" id="3">
+				<description>Category Area</description>
+				<posx>95</posx>
+				<posy>142</posy>
+				<width>250</width>
+				<height>456</height>
+				<itemgap>2</itemgap>
+				<orientation>vertical</orientation>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>850</onleft>
+				<onright>5</onright>								
+			</control>	
+
+			<control type="grouplist" id="5">
+				<description>Content Area</description>
+				<posx>385</posx>
+				<posy>140</posy>
+				<width>800</width>
+				<height>456</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>3</onleft>
+			</control>
+		</control>
+	
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<include>SettingsCatBtn</include>
+		</control>
+	
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<include>SettingsContentBtn</include>
+		</control>
+	
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<include>SettingsContentBtn</include>
+		</control>
+	
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<include>SettingsContentBtn</include>
+		</control>	
+		
+		<control type="group">
+			<include>ControlsOpenCloseAnim</include>
+			
+			<control type="image">
+				<description>Up Arrow</description>
+				<posx>1195</posx>
+				<posy>140</posy>
+				<include>PreviousUp</include>
+				<visible>Container(5).HasPrevious</visible>
+			</control>
+			
+			<control type="image">
+				<description>Down Arrow</description>
+				<posx>1195</posx>
+				<posy>568</posy>
+				<include>NextDown</include>
+				<visible>Container(5).HasNext</visible>
+			</control>
+		</control>
+
+		<include>DialogPopUpScreenDim</include>
+		
+		<control type="group">
+			<description>Menu Bar Area</description>
+			<posy>MenuBarOffsetY</posy>	
+			<visible>!Window.Previous(Pictures) + !Window.Previous(MusicLibrary) + !Window.Previous(MusicFiles) + !Window.Previous(VideoLibrary) + !Window.Previous(VideoFiles) + !Window.Previous(Weather)</visible>
+			<include>MenuBarImage</include>
+			<include>SettingsMenuBar</include>
+			<include>MenuBarSettingsOpenCloseAnim</include>
+		</control>
+
+		<control type="group">
+			<description>Top Bar Area</description>	
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbSettings</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>
+		
+		<control type="group">
+			<description>Bottom Bar Area</description>
+			<posy>BottomPaneOffsetY</posy>	
+			<include>InfoPaneImage</include>
+			<include>InfoPaneSettingsDetails</include>
+		</control>
+	</controls>
+</window>

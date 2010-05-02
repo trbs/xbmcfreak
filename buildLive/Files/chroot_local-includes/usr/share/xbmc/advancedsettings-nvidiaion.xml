@@ -1,0 +1,4 @@
+<advancedsettings>
+    <cputempcommand>echo "$(sensors -u | tail -n4 | grep temp1_input | awk '{print $2 }' |awk '{printf("%d\n",$1 + 0.5);}') C"</cputempcommand>
+    <gputempcommand>echo "$(nvclock -T | sed -ne "s/=> GPU temp.*: \([0-9]\+\).*/\1/p") C"</gputempcommand>
+</advancedsettings>

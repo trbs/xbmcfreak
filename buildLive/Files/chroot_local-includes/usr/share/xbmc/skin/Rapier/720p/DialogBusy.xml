@@ -1,0 +1,44 @@
+<window id="136">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="390" y="180">true</origin>
+	</coordinates>
+	
+	<controls>
+		<include>BusyDialogBox</include>
+		
+		<control type="image">
+			<posx>DialogMarginOffsetX</posx>
+			<posy>21</posy>
+			<width>128</width>
+			<height>128</height>
+			<texture>notification.png</texture>
+		</control>
+		
+		<control type="label">
+			<description>Line 1</description>
+			<posx>178</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>282</width>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<label>$LOCALIZE[503]...</label>
+			<scroll>yes</scroll>
+		</control>
+		
+		<control type="label">
+			<description>Line 2</description>
+			<posx>178</posx>
+			<posy>89</posy>
+			<width>282</width>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<label>$LOCALIZE[20186]</label>
+			<scroll>yes</scroll>
+		</control>
+	</controls>
+</window>

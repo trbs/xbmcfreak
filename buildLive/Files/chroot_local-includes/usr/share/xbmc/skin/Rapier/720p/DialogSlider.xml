@@ -1,0 +1,43 @@
+<window id="145">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="520" y="580">true</origin>
+	</coordinates>
+	
+	<controls>
+		<include>SliderDialogBox</include>
+			
+		<control type="label" id="10">
+			<description>Dialog Title</description>
+			<label>-</label>
+			<visible>false</visible>
+		</control>
+		
+		<control type="label" id="12">
+			<description>Slider Value</description>
+			<posx>30</posx>
+			<posy>30</posy>
+			<width>200</width>
+			<align>center</align>
+			<font>SliderDialogFont</font>
+			<textcolor>DefaultColor3</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+		</control>
+		
+		<control type="slider" id="11">
+			<description>Slider</description>
+			<posx>67</posx>
+			<posy>75</posy>
+			<width>125</width>
+			<height>24</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<texturesliderbar>slider-background.png</texturesliderbar>
+			<textureslidernibfocus>slider-nib-focus.png</textureslidernibfocus>
+			<textureslidernib>slider-nib-nofocus.png</textureslidernib>
+		</control>
+	</controls>
+</window>

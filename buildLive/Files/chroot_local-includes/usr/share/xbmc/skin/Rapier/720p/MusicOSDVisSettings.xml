@@ -1,0 +1,70 @@
+<window id="121">	
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>DialogOpenCloseAnim</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>30</posx>
+		<posy>70</posy>
+	</coordinates>
+	
+	<controls>
+		<include>PlayerDialogBox</include>
+
+		<control type="label" id="2">
+			<include>FullscreenDialogTitle</include>
+		</control>
+
+		<control type="label" id="3">
+			<description>No Settings Title</description>
+			<posx>DialogMarginOffsetX</posx>
+			<posy>200</posy>
+			<width>410</width>
+			<font>HeadFont2</font>
+			<textcolor>DefaultColor</textcolor>
+			<align>center</align>
+			<label>13390</label>
+		</control>
+		
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>DialogMarginOffsetX</posx>
+			<posy>DialogMarginOffsetY</posy>
+			<width>410</width>
+			<height>407</height>
+			<itemgap>2</itemgap>
+			<pagecontrol>101</pagecontrol>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<onleft>101</onleft>
+			<onright>101</onright>	
+		</control>
+		
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<align>left</align>
+		</control>
+		
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+		</control>
+		
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<font>DefaultFont</font>
+			<textcolor>DefaultColor</textcolor>
+		</control>
+		
+		<control type="spincontrol" id="101">
+			<description>Next Page</description>
+			<posx>412</posx>
+			<posy>488</posy>
+			<onup>5</onup>
+		</control>	
+	</controls>	
+</window>

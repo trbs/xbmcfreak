@@ -1,0 +1,160 @@
+<includes>
+	<include name="IconViewScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>92</posy>
+			<height>538</height>
+			<visible>!Skin.HasSetting(HideIconViewScrollbar) + Control.IsVisible(50)</visible>
+			<onleft>500</onleft>
+		</control>	
+	</include>
+	
+	<include name="BigIconViewScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>92</posy>
+			<height>538</height>
+			<visible>!Skin.HasSetting(HideBigIconViewScrollbar) + Control.IsVisible(51)</visible>
+			<onleft>500</onleft>
+		</control>			
+	</include>
+	
+	<include name="ListViewScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>92</posy>
+			<height>538</height>
+			<visible>!Skin.HasSetting(HideListViewScrollbar) + Control.IsVisible(52)</visible>
+			<onleft>500</onleft>
+		</control>			
+	</include>
+	
+	<include name="ThumbnailViewScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>92</posy>
+			<height>538</height>
+			<visible>!Skin.HasSetting(HideThumbnailViewScrollbar) + [Control.IsVisible(54) | Control.IsVisible(63)]</visible>
+			<onleft>500</onleft>
+		</control>			
+	</include>
+	
+	<include name="WideIconViewScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>92</posy>
+			<height>544</height>
+			<visible>!Skin.HasSetting(HideWideIconViewScrollbar) + [Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(60)]</visible>
+			<onleft>500</onleft>
+		</control>			
+	</include>
+	
+	<include name="ListInfoViewScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>348</posy>
+			<height>289</height>
+			<visible>!Skin.HasSetting(HideListInfoViewScrollbar) + [Control.IsVisible(58) | Control.IsVisible(61) | Control.IsVisible(62)]</visible>
+			<onleft>500</onleft>
+		</control>		
+	</include>
+	
+	<include name="ListInfo2ViewScrollbar">
+		<control type="scrollbar" id="150">
+			<posx>1250</posx>
+			<posy>97</posy>
+			<height>542</height>
+			<visible>!Skin.HasSetting(HideListInfo2ViewScrollbar) + [Control.IsVisible(66) | Control.IsVisible(65) | Control.IsVisible(68) | Control.IsVisible(67)]</visible>
+			<onleft>500</onleft>
+		</control>			
+	</include>
+	
+	
+	<include name="FanartViewScrollbar">
+		<control type="scrollbar" id="150">
+			<posy>637</posy>
+			<height>10</height>
+			<width>1280</width>
+			<orientation>horizontal</orientation>
+			<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
+			<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+			<visible>Skin.HasSetting(ShowFanartViewScrollbar) + Control.IsVisible(59)</visible>
+			<onup>500</onup>
+		</control>
+	</include>
+	
+	<include name="WrapInfoViewScrollbar">
+		<control type="scrollbar" id="150">
+			<posx>-1</posx>
+			<posy>710</posy>
+			<height>10</height>
+			<width>1282</width>
+			<orientation>horizontal</orientation>
+			<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
+			<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+			<visible>Skin.HasSetting(ShowWrapInfoViewScrollbar) + [Control.IsVisible(53) | Control.IsVisible(64)]</visible>
+			<animation effect="fade" end="50" condition="true">Conditional</animation>
+			<onup>500</onup>
+			<ondown>-</ondown>
+		</control>
+	</include>
+	
+	<include name="WallViewScrollbar">
+		<control type="scrollbar" id="150">
+			<posx>-1</posx>
+			<posy>710</posy>
+			<height>10</height>
+			<width>1282</width>
+			<orientation>horizontal</orientation>
+			<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
+			<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
+			<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+			<visible>Skin.HasSetting(ShowWallViewScrollbar) + [Control.IsVisible(69) | Control.IsVisible(70)]</visible>
+			<visible>!Control.IsVisible(659)</visible>
+			<onup>500</onup>
+			<ondown>-</ondown>
+		</control>
+	</include>
+	
+	<include name="FileManagerScrollbar">
+		<control type="scrollbar" id="150">
+			<posx>30</posx>
+			<posy>92</posy>
+			<height>538</height>
+			<onright>20</onright>
+		</control>	
+		
+		<control type="scrollbar" id="151">
+			<posx>1236</posx>
+			<posy>92</posy>
+			<height>538</height>
+			<onleft>21</onleft>
+		</control>	
+	</include>
+	
+	<include name="IconFileBrowserScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>584</posx>
+			<posy>20</posy>
+			<height>325</height>
+			<showonepage>true</showonepage>
+			<onleft>451</onleft>
+			<onright>9001</onright>
+			<visible>Control.IsVisible(451)</visible>		
+		</control>
+	</include>
+	
+	<include name="ListFileBrowserScrollbar">	
+		<control type="scrollbar" id="150">
+			<posx>323</posx>
+			<posy>20</posy>
+			<height>325</height>
+			<showonepage>true</showonepage>
+			<onleft>450</onleft>
+			<onright>9001</onright>
+			<visible>Control.IsVisible(450)</visible>		
+		</control>
+	</include>
+</includes>

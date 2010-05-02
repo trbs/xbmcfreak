@@ -1,0 +1,514 @@
+<includes>
+	<include name="VideoMediaFlags">
+		<control type="image">
+			<description>Blu-ray</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/bluray.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.bluray) | substring(ListItem.filename,.blu-ray) | substring(ListItem.filename,.brrip)</visible>
+		</control>
+		<control type="image">
+			<description>HD DVD</description>
+			<width>120</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hddvd.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.hddvd) | substring(ListItem.filename,.hd-dvd)</visible>
+		</control>
+			<control type="image">
+			<description>DVD</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvd.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.sddvd) | substring(ListItem.filename,.iso,right) | substring(ListItem.filename,.img,right) 
+			| substring(ListItem.filename,.ifo,right) | substring(ListItem.filename,.vob,right)</visible>
+		</control>
+		<control type="image">
+			<description>HDTV</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hdtv.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.hdtv)</visible>
+		</control>
+		<control type="image">
+			<description>DVD Rip</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdrip.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.dvdrip)</visible>
+		</control>
+		<control type="image">
+			<description>DVD R5</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdr5.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.dvdr5) | substring(ListItem.filename,.r5)</visible>
+		</control>
+		<control type="image">
+			<description>DVD Screener</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdscreener.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.dvdscreener) | substring(ListItem.filename,.dvdscr) | substring(ListItem.filename,.screener)</visible>
+		</control>
+		<control type="image">
+			<description>Telesync</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/telesync.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.telesync) | substring(ListItem.filename,.ts.)</visible>
+		</control>
+		<control type="image">
+			<description>Cam</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/cam.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.cam)</visible>
+		</control>
+		<control type="image">
+			<description>Video Res</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>Xvid Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/xvid.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,xvid)</visible>
+		</control>
+		<control type="image">
+			<description>Divx Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/divx.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
+		</control>
+		<control type="image">
+			<description>H264 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/h264.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,h264)</visible>
+		</control>
+		<control type="image">
+			<description>AVC1 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/avc1.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,avc1)</visible>
+		</control>
+		<control type="image">
+			<description>WVC1 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/wvc1.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,wvc1) | substring(ListItem.VideoCodec,vc-1)</visible>
+		</control>
+		<control type="image">
+			<description>MPEG-1 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg1video.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
+		</control>
+		<control type="image">
+			<description>MPEG-2 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg2video.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,mpeg video) | substring(ListItem.VideoCodec,mpeg2)</visible>
+		</control>
+		<control type="image">
+			<description>MPEG-4 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg4video.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.VideoCodec,mpeg-4 visual)</visible>
+		</control>
+	</include>
+	
+	<include name="AudioMediaFlags">
+		<control type="image">
+			<description>MP3 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/mp3.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.AudioCodec,mp3)</visible>
+		</control>
+		<control type="image">
+			<description>DTS Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dts.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.AudioCodec,dca)</visible>
+		</control>
+		<control type="image">
+			<description>AAC Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/aac.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.AudioCodec,aac)</visible>
+		</control>
+		<control type="image">
+			<description>Dolby Digital/AC3 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dolbydigital.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.AudioCodec,ac3) | substring(ListItem.AudioCodec,ac-3)</visible>
+		</control>
+		<control type="image">
+			<description>WMA Pro Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/wmapro.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.AudioCodec,wmapro)</visible>
+		</control>
+		<control type="image">
+			<description>FLAC Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/flac.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.AudioCodec,flac)</visible>
+		</control>
+		<control type="image">
+			<description>Audio Channels</description>
+			<width>70</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	
+	<include name="AspectMediaFlags">
+		<control type="image">
+			<description>Aspect Ratio</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+
+	<include name="RatingMediaFlags">
+		<control type="image">
+			<description>Rated General</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-general.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.MPAA,Rated G)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated PG</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-pg.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated PG-13</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-pg13.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.MPAA,Rated PG-13)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated R</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-restricted.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.MPAA,Rated R)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated NC-17</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-nc17.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.MPAA,Rated NC-17)</visible>  
+		</control>
+	</include>
+	
+	<include name="PlayerVideoMediaFlags">
+		<control type="image">
+			<description>Video Res</description>
+			<width>60</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>Xvid Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/xvid.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,xvid)</visible>
+		</control>
+		<control type="image">
+			<description>Divx Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/divx.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5)</visible>
+		</control>
+		<control type="image">
+			<description>H264 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/h264.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,h264)</visible>
+		</control>
+		<control type="image">
+			<description>AVC1 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/avc1.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,avc1)</visible>
+		</control>
+		<control type="image">
+			<description>WVC1 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/wvc1.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,wvc1) | substring(VideoPlayer.VideoCodec,vc-1)</visible>
+		</control>
+		<control type="image">
+			<description>MPEG-1 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg1video.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,mpeg1video)</visible>
+		</control>
+		<control type="image">
+			<description>MPEG-2 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg2video.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,mpeg2video) | substring(VideoPlayer.VideoCodec,mpeg video) | substring(VideoPlayer.VideoCodec,mpeg2)</visible>
+		</control>
+		<control type="image">
+			<description>MPEG-4 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg4video.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.VideoCodec,mpeg-4 visual)</visible>
+		</control>
+	</include>
+	
+	<include name="PlayerAudioMediaFlags">
+		<control type="image">
+			<description>MP3 Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/mp3.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.AudioCodec,mp3)</visible>
+		</control>
+		<control type="image">
+			<description>DTS Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dts.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.AudioCodec,dca)</visible>
+		</control>
+		<control type="image">
+			<description>AAC</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/aac.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.AudioCodec,aac)</visible>
+		</control>
+		<control type="image">
+			<description>Dolby Digital/AC3</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dolbydigital.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.AudioCodec,ac3) | substring(VideoPlayer.AudioCodec,ac-3)</visible>
+		</control>
+		<control type="image">
+			<description>WMA Pro Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/wmapro.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.AudioCodec,wmapro)</visible>
+		</control>
+		<control type="image">
+			<description>FLAC Codec</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/flac.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.AudioCodec,flac)</visible>
+		</control>
+		<control type="image">
+			<description>Audio Channels</description>
+			<width>70</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	
+	<include name="PlayerRatingMediaFlags">
+		<control type="image">
+			<description>Rated General</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-general.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.MPAA,Rated G)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated PG</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-pg.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.MPAA,Rated PG) + !substring(VideoPlayer.MPAA,Rated PG-13)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated PG-13</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-pg13.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.MPAA,Rated PG-13)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated R</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-restricted.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.MPAA,Rated R)</visible>  
+		</control>
+		<control type="image">
+			<description>Rated NC-17</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture>flagging/ratings/mpaa-nc17.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.MPAA,Rated NC-17)</visible>  
+		</control>
+	</include>
+	
+	<include name="StudioMediaFlag">
+		<control type="image">
+			<description>Studio</description>
+			<posx>590</posx>
+			<posy>6</posy>
+			<width>100</width>
+			<height>68</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>special://skin/images/studios/$INFO[ListItem.Studio].png</texture>
+			<visible>!Container.OnNext + !Container.OnPrevious + !Skin.HasSetting(HideStudioFlags)</visible>
+			<include>MediaFlagFadeAnim</include>
+		</control>
+	</include>
+	
+	<include name="VideoInfoStudioMediaFlag">
+		<control type="image">
+			<description>Studio</description>
+			<posx>110</posx>
+			<posy>500</posy>
+			<width>161</width>
+			<height>109</height>
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>special://skin/images/studios/$INFO[ListItem.Studio].png</texture>
+		</control>
+	</include>
+</includes>

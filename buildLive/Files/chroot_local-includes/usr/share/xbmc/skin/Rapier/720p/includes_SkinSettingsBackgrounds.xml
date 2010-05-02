@@ -1,0 +1,586 @@
+<includes> 
+	<include name="BackgroundsSkinSettings"> <!-- 4053 -->
+		<control type="grouplist" id="903">		
+			<description>Backgrounds Content Area</description>
+			<posx>385</posx>
+			<posy>140</posy>
+			<width>800</width>
+			<height>456</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>	
+			<onup>903</onup>
+			<ondown>903</ondown>
+			<onleft>850</onleft>
+			<visible>Skin.String(SkinSettingsCategory,4)</visible>
+			<control type="radiobutton" id="4048">
+				<description>Default Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[571]</label>
+				<selected>Skin.HasSetting(ExpandDefaultBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandDefaultBGSettings)</onclick>
+			</control>
+				<control type="radiobutton" id="4049">
+					<description>Default Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31034] ($LOCALIZE[31031])</label>
+					<selected>Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)</selected>
+					<onclick>Skin.SetString(DefaultBackground,1)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandDefaultBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4050">
+					<description>Default Background 2</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31034] ($LOCALIZE[31030])</label>
+					<selected>Skin.String(DefaultBackground,2)</selected>
+					<onclick>Skin.SetString(DefaultBackground,2)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandDefaultBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4051">
+					<description>Default Background 3</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31035] ($LOCALIZE[31031])</label>
+					<selected>Skin.String(DefaultBackground,3)</selected>
+					<onclick>Skin.SetString(DefaultBackground,3)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandDefaultBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4052">
+					<description>Default Background 4</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31035] ($LOCALIZE[31030])</label>
+					<selected>Skin.String(DefaultBackground,4)</selected>
+					<onclick>Skin.SetString(DefaultBackground,4)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Skin.HasSetting(ExpandDefaultBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4000">
+				<description>Programs Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[0]</label>
+				<selected>Skin.HasSetting(ExpandProgramsBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandProgramsBGSettings)</onclick>
+			</control>
+				<control type="togglebutton" id="4001">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageProgramsBGSettings)</usealttexture>
+					<onclick>Skin.Reset(ProgramsCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageProgramsBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4002">
+					<description>Programs Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(ProgramsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsBGSettings) + !Skin.HasSetting(UseMultiImageProgramsBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4003">
+					<description>Programs Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(ProgramsCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(ProgramsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsBGSettings) + Skin.HasSetting(UseMultiImageProgramsBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4004">
+					<description>Programs Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[0] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllProgramsCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllProgramsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4005">
+					<description>Programs Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimProgramsCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimProgramsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4006">
+				<description>Pictures Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[1]</label>
+				<selected>Skin.HasSetting(ExpandPicturesBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandPicturesBGSettings)</onclick>
+			</control>
+				<control type="togglebutton" id="4007">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImagePicturesBGSettings)</usealttexture>
+					<onclick>Skin.Reset(PicturesCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImagePicturesBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4008">
+					<description>Pictures Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(PicturesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesBGSettings) + !Skin.HasSetting(UseMultiImagePicturesBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4009">
+					<description>Pictures Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(PicturesCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(PicturesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesBGSettings) + Skin.HasSetting(UseMultiImagePicturesBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4010">
+					<description>Pictures Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[1] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllPicturesCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllPicturesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4011">
+					<description>Pictures Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimPicturesCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimPicturesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4012">
+				<description>Music Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[2]</label>
+				<selected>Skin.HasSetting(ExpandMusicBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandMusicBGSettings)</onclick>
+			</control>
+				<control type="togglebutton" id="4013">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageMusicBGSettings)</usealttexture>
+					<onclick>Skin.Reset(MusicCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageMusicBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4014">
+					<description>Music Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(MusicCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicBGSettings) + !Skin.HasSetting(UseMultiImageMusicBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4015">
+					<description>Music Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MusicCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(MusicCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicBGSettings) + Skin.HasSetting(UseMultiImageMusicBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4016">
+					<description>Music Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[2] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllMusicCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllMusicCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4017">
+					<description>Music Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimMusicCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimMusicCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4018">
+				<description>Videos Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[3]</label>
+				<selected>Skin.HasSetting(ExpandVideosBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandVideosBGSettings)</onclick>
+			</control>
+				<control type="togglebutton" id="4019">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageVideosBGSettings)</usealttexture>
+					<onclick>Skin.Reset(VideosCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageVideosBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4020">
+					<description>Videos Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(VideosCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosBGSettings) + !Skin.HasSetting(UseMultiImageVideosBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4021">
+					<description>Videos Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(VideosCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(VideosCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosBGSettings) + Skin.HasSetting(UseMultiImageVideosBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4022">
+					<description>Videos Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[3] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllVideosCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllVideosCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4023">
+					<description>Videos Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimVideosCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimVideosCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4024">
+				<description>Movies Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[342]</label>
+				<selected>Skin.HasSetting(ExpandMoviesBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandMoviesBGSettings)</onclick>
+				<enable>Library.HasContent(Movies)</enable>
+			</control>
+				<control type="togglebutton" id="4025">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageMoviesBGSettings)</usealttexture>
+					<onclick>Skin.Reset(MoviesCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageMoviesBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4026">
+					<description>Movies Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(MoviesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesBGSettings) + !Skin.HasSetting(UseMultiImageMoviesBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4027">
+					<description>Movies Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(MoviesCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(MoviesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesBGSettings) + Skin.HasSetting(UseMultiImageMoviesBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4028">
+					<description>Movies Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[342] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllMoviesCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllMoviesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4029">
+					<description>Movies Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimMoviesCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimMoviesCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4030">
+				<description>TV Shows Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[20343]</label>
+				<selected>Skin.HasSetting(ExpandTVShowsBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandTVShowsBGSettings)</onclick>
+				<enable>Library.HasContent(TVShows)</enable>
+			</control>
+				<control type="togglebutton" id="4031">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageTVShowsBGSettings)</usealttexture>
+					<onclick>Skin.Reset(TVShowsCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageTVShowsBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4032">
+					<description>TV Shows Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(TVShowsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsBGSettings) + !Skin.HasSetting(UseMultiImageTVShowsBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4033">
+					<description>TV Shows Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(TVShowsCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(TVShowsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsBGSettings) + Skin.HasSetting(UseMultiImageTVShowsBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4034">
+					<description>TV Shows Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[20343] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllTVShowsCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllTVShowsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4035">
+					<description>TV Shows Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimTVShowsCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimTVShowsCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4036">
+				<description>General Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[128]</label>
+				<selected>Skin.HasSetting(ExpandGeneralBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandSystemBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandGeneralBGSettings)</onclick>
+			</control>
+				<control type="togglebutton" id="4037">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageGeneralBGSettings)</usealttexture>
+					<onclick>Skin.Reset(GeneralCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageGeneralBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4038">
+					<description>General Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(GeneralCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralBGSettings) + !Skin.HasSetting(UseMultiImageGeneralBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4039">
+					<description>General Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(GeneralCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(GeneralCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralBGSettings) + Skin.HasSetting(UseMultiImageGeneralBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4040">
+					<description>General Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[128] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllGeneralCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllGeneralCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4041">
+					<description>General Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimGeneralCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimGeneralCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4042">
+				<description>System Background Settings</description>
+				<include>SettingsContentRadioBtn</include>
+				<label>$LOCALIZE[13000]</label>
+				<selected>Skin.HasSetting(ExpandSystemBGSettings)</selected>
+				<onclick>Skin.Reset(ExpandDefaultBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandProgramsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandPicturesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMusicBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandVideosBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandMoviesBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandTVShowsBGSettings)</onclick>
+				<onclick>Skin.Reset(ExpandGeneralBGSettings)</onclick>
+				<onclick>Skin.ToggleSetting(ExpandSystemBGSettings)</onclick>
+			</control>
+				<control type="togglebutton" id="4043">
+					<description>Image/Multi Image Toggle</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31057]</label>
+					<altlabel>             $LOCALIZE[31056]</altlabel>
+					<usealttexture>!Skin.HasSetting(UseMultiImageSystemBGSettings)</usealttexture>
+					<onclick>Skin.Reset(SystemCustomBG)</onclick>
+					<onclick>Skin.ToggleSetting(UseMultiImageSystemBGSettings)</onclick>
+					<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4044">
+					<description>System Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31054] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(SystemCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetImage(SystemCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandSystemBGSettings) + !Skin.HasSetting(UseMultiImageSystemBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="button" id="4045">
+					<description>System Multi Custom Background Path</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31055] - </label>
+					<label2>[COLOR=DefaultColor4]$INFO[Skin.String(SystemCustomBG)][/COLOR]</label2>
+					<onclick>Skin.SetPath(SystemCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandSystemBGSettings) + Skin.HasSetting(UseMultiImageSystemBGSettings)</visible>
+					<!--<include>BackgroundSettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="togglebutton" id="4046">
+					<description>System Apply To All Windows</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31052] $LOCALIZE[13000] $LOCALIZE[31061]</label>
+					<altlabel>             $LOCALIZE[31051]</altlabel>
+					<usealttexture>!Skin.HasSetting(ApplyAllSystemCustomBG)</usealttexture>
+					<onclick>Skin.ToggleSetting(ApplyAllSystemCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+				<control type="radiobutton" id="4047">
+					<description>System Dim Background</description>
+					<include>SettingsContentSmallBtn</include>
+					<label>             $LOCALIZE[31060] ($LOCALIZE[31062])</label>
+					<selected>Skin.HasSetting(DimSystemCustomBG)</selected>
+					<onclick>Skin.ToggleSetting(DimSystemCustomBG)</onclick>
+					<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
+					<!--<include>SettingsItemOpenCloseAnim</include>-->
+				</control>
+			<control type="radiobutton" id="4053">
+				<description>Animate Background</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31064]</label>
+				<selected>Skin.HasSetting(AnimateBackground)</selected>
+				<onclick>Skin.ToggleSetting(AnimateBackground)</onclick>
+				<onclick>ReloadSkin()</onclick>
+			</control>
+		</control>
+	</include>
+</includes>

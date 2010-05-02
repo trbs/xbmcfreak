@@ -1,0 +1,24 @@
+<includes>
+	<include name="ScriptsSkinSettings">
+		<control type="grouplist" id="904">	
+			<description>Scripts Content Area</description>
+			<posx>385</posx>
+			<posy>140</posy>
+			<width>800</width>
+			<height>456</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>	
+			<onup>903</onup>
+			<ondown>903</ondown>
+			<onleft>850</onleft>
+			<visible>Skin.String(SkinSettingsCategory,5)</visible>
+			<control type="radiobutton" id="5000">
+				<description>Show OpenSubtitles_OSD Button</description>
+				<include>SettingsContentBtn</include>
+				<label>$LOCALIZE[31500]</label>
+				<selected>Skin.HasSetting(ShowOpenSubtitlesOSDBtn)</selected>
+				<onclick>Skin.ToggleSetting(ShowOpenSubtitlesOSDBtn)</onclick>
+			</control>
+		</control>
+	</include>
+</includes>

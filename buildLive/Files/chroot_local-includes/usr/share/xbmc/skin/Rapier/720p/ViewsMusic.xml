@@ -1,0 +1,1290 @@
+<includes>
+	<include name="MusicWideIconView">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">60</defaultcontrol>
+			<visible>Control.IsVisible(60)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>WideIconViewScrollbar</include>
+
+			<control type="panel" id="60">
+				<viewtype label="31108">Wide Icon</viewtype>
+				<posx>40</posx>
+				<posy>92</posy>
+				<width>1200</width>
+				<height>548</height>
+				<pagecontrol>150</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<onup>60</onup>
+				<ondown>60</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>
+				<visible>Container.Content(Songs) | Container.Content(Albums)</visible>
+				<itemlayout height="137" width="600">				
+					<control type="image">
+						<description>Background</description>
+						<width>590</width>
+						<height>133</height>	
+						<texture border="5">button-nofocus.png</texture>
+						<include>WideIconViewItemBackgroundFadeAnim</include>
+					</control>	
+					<control type="image">
+						<description>Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>114</width>
+						<height>114</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="7">item-shadow-border.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>114</width>
+						<height>114</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>131</posx>
+						<posy>14</posy>
+						<width>446</width>
+						<font>MediaInfoHeadFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					</control>
+					<control type="label">
+						<description>Artist (Songs)</description>
+						<posx>131</posx>
+						<posy>33</posy>
+						<width>446</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Genre (Albums)</description>
+						<posx>131</posx>
+						<posy>33</posy>
+						<width>446</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<description>Album (Songs)</description>
+						<posx>131</posx>
+						<posy>65</posy>
+						<width>446</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Album,$LOCALIZE[558]: ,][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Artist (Albums)</description>
+						<posx>131</posx>
+						<posy>65</posy>
+						<width>446</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Artist,$LOCALIZE[557]: ,][/UPPERCASE]</label>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<description>Duration Time</description>
+						<posx>131</posx>
+						<posy>107</posy>
+						<width>326</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="image">
+						<description>Star Rating</description>
+						<posx>447</posx>
+						<posy>102</posy>
+						<width>130</width>
+						<height>20</height>
+						<texture background="true">$INFO[ListItem.Rating]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+				</itemlayout>															
+				<focusedlayout height="137" width="600">	
+					<control type="image">
+						<description>Background</description>
+						<width>590</width>
+						<height>133</height>	
+						<texture border="5">button-focus2.png</texture>
+						<include>WideIconViewItemBackgroundFocusFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>114</width>
+						<height>114</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<bordertexture border="7">item-shadow-border.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>7</posx>
+						<posy>12</posy>
+						<width>114</width>
+						<height>114</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="label">
+						<description>Title</description>
+						<posx>131</posx>
+						<posy>14</posy>
+						<width>446</width>
+						<font>MediaInfoHeadFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
+					</control>
+					<control type="label">
+						<description>Artist (Songs)</description>
+						<posx>131</posx>
+						<posy>33</posy>
+						<width>446</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Genre (Albums)</description>
+						<posx>131</posx>
+						<posy>33</posy>
+						<width>446</width>
+						<font>MediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<description>Album (Songs)</description>
+						<posx>131</posx>
+						<posy>65</posy>
+						<width>446</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Album,$LOCALIZE[558]: ,][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Artist (Albums)</description>
+						<posx>131</posx>
+						<posy>65</posy>
+						<width>446</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Artist,$LOCALIZE[557]: ,][/UPPERCASE]</label>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<description>Duration Time</description>
+						<posx>131</posx>
+						<posy>107</posy>
+						<width>326</width>
+						<font>MediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="image">
+						<description>Star Rating</description>
+						<posx>447</posx>
+						<posy>102</posy>
+						<width>130</width>
+						<height>20</height>
+						<texture background="true">$INFO[ListItem.Rating]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+				</focusedlayout>			
+			</control>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="Container.Row(0) + !Control.HasFocus(150)">Conditional</animation>
+				<animation effect="slide" end="0,135" condition="Container.Row(3) + !Control.HasFocus(150)">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,60)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(60)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<include name="MusicListInfoView">
+		<control type="group" id="500">			    
+			<defaultcontrol always="true">62</defaultcontrol>
+			<visible>Control.IsVisible(62)</visible>
+			<include>InfoPaneHiddenSlideAnim</include>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>ListMediaControlAreaBackground</include>
+			<include>ListInfoViewScrollbar</include>	
+
+			<control type="list" id="62">	
+				<viewtype label="31111">List Info</viewtype>
+				<posx>730</posx>
+				<posy>348</posy>
+				<width>520</width>
+				<height>289</height>
+				<pagecontrol>150</pagecontrol>
+				<onup>62</onup>
+				<ondown>62</ondown>
+				<onleft>850</onleft>
+				<onright>150</onright>	
+				<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)</visible>
+				<itemlayout height="36">
+					<control type="image">
+						<width>520</width>
+						<height>36</height>	
+						<texture border="0,2,0,0">button-list-nofocus.png</texture>
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>	
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>					
+					<control type="label">
+						<posx>35</posx>
+						<width>420</width>
+						<height>36</height>
+						<font>ListFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>492</posx>
+						<width>100</width>
+						<height>36</height>
+						<font>ListFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label2</info>
+						<visible>!Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<posx>492</posx>
+						<width>100</width>
+						<height>36</height>
+						<font>ListFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Year</info>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>493</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Overlay</info>
+					</control>	
+				</itemlayout>		
+				<focusedlayout height="36">	
+					<control type="image">
+						<posy>1</posy>
+						<width>520</width>
+						<height>36</height>	
+						<texture border="5,2,0,0">button-list-focus.png</texture>
+						<visible>Control.HasFocus(62)</visible>
+					</control>
+					<control type="image">
+						<posy>1</posy>i
+						<width>520</width>
+						<height>36</height>	
+						<texture border="5,2,0,0">button-list-alt-focus.png</texture>
+						<visible>!Control.HasFocus(62)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture background="true">$INFO[ListItem.ActualIcon].png</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<width>420</width>
+						<height>36</height>
+						<font>ListFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>492</posx>
+						<width>100</width>
+						<height>36</height>
+						<font>ListFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label2</info>
+						<visible>!Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<posx>492</posx>
+						<width>100</width>
+						<height>36</height>
+						<font>ListFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Year</info>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="image">
+						<description>Overlay</description>
+						<posx>493</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<info>ListItem.Overlay</info>
+					</control>	
+				</focusedlayout>		
+			</control>	
+				
+			<control type="group">
+				<posy>344</posy>
+				<posx>20</posx>
+				<visible>!Substring(ListItem.Label,..) + !Container.OnNext + !Container.OnPrevious</visible>
+				<include>ControlsOpenCloseAnim</include>
+						
+				<control type="grouplist">
+					<itemgap>25</itemgap>
+					<control type="label">
+						<description>Artist</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[557][/UPPERCASE]</label>
+						<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+					</control>	
+					<control type="label">
+						<description>Year</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>			
+					<control type="label">
+						<description>Genre</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[515][/UPPERCASE]</label>
+						<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)</visible>
+					</control>							
+					<control type="label">
+						<description>Album</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[558][/UPPERCASE]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>		
+					<control type="label">
+						<description>Born</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21893][/UPPERCASE]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Formed</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21894][/UPPERCASE]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Moods</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[175][/UPPERCASE]</label>
+						<visible>Container.Content(Albums) | Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Styles</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[176][/UPPERCASE]</label>
+						<visible>Container.Content(Albums) | Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Themes</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21895][/UPPERCASE]</label>
+						<visible>Container.Content(Albums)</visible>
+					</control>			
+					<control type="label">
+						<description>Instruments</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21892][/UPPERCASE]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Died</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21897][/UPPERCASE]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Disbanded</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21896][/UPPERCASE]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Years Active</description>
+						<include>MusicListInfoViewCatLabel</include>
+						<label>[UPPERCASE]$LOCALIZE[21898][/UPPERCASE]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>	
+				</control>
+	
+				<control type="grouplist">
+					<posx>130</posx>
+					<itemgap>25</itemgap>
+					<control type="label">
+						<description>Artist Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Artist]</label>
+						<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Year Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Year]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>	
+					<control type="label">
+						<description>Genre Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Genre]</label>
+						<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Artist Genre Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_Genre)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Album Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Album]</label>
+						<visible>Container.Content(Songs)</visible>
+					</control>
+					<control type="label">
+						<description>Born Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_Born)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Formed Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_Formed)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>	
+					<control type="label">
+						<description>Moods Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<width>259</width>
+						<label fallback="31000">$INFO[ListItem.Property(Album_Mood)]</label>
+						<visible>Container.Content(Albums) | Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Styles Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Album_Style)]</label>
+						<visible>Container.Content(Albums) | Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Themes Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Album_Theme)]</label>
+						<visible>Container.Content(Albums)</visible>
+					</control>
+					<control type="label">
+						<description>Instruments Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_Instrument)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Died Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_Died)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+					<control type="label">
+						<description>Disbanded Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_Disbanded)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>	
+					<control type="label">
+						<description>Years Active Value</description>
+						<include>MusicListInfoViewCatValueLabel</include>
+						<label fallback="31000">$INFO[ListItem.Property(Artist_YearsActive)]</label>
+						<visible>Container.Content(Artists)</visible>
+					</control>
+				</control>
+			</control>
+	
+			<control type="group">					
+				<posx>430</posx>
+				<posy>344</posy>
+				<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+				
+				<control type="image">
+					<description>Cover</description>
+					<width>289</width>
+					<height>289</height>
+					<texture background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio>stretch</aspectratio>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>		
+				</control>
+
+				<control type="image">
+					<description>Default Cover Background</description>
+					<width>289</width>
+					<height>289</height>
+					<texture border="3">item-noshadow-background.png</texture>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+					
+				<control type="image">
+					<description>Default Cover</description>
+					<width>289</width>
+					<height>289</height>
+					<bordersize>60</bordersize>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>IsEmpty(ListItem.Thumb)</visible>		
+				</control>					
+			</control>
+			
+			<control type="image">
+				<description>Cover</description>
+				<posx>430</posx>
+				<posy>344</posy>
+				<width>289</width>
+				<height>289</height>
+				<texture background="true">$INFO[ListItem.Thumb]</texture>
+				<aspectratio aligny="top">keep</aspectratio>
+				<bordertexture border="7">item-shadow-border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<visible>Container.Content(Artists)</visible>	
+			</control>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+				<animation effect="slide" end="0,-135" condition="true">Conditional</animation>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,62)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(62)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>
+		</control>	
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="MusicListInfoView2">	
+		<control type="group" id="500">	
+	        <defaultcontrol always="true">67</defaultcontrol>
+			<visible>Control.IsVisible(67)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			<include>InfoPaneHiddenSlideAnim2</include>
+			<include>ListInfo2ViewScrollbar</include>
+			
+			<control type="group">
+				<description>Media Info Area</description>
+				<posx>40</posx>
+				<posy>92</posy>
+				
+				<control type="image">
+					<description>Default Background</description>
+					<width>560</width>
+					<height>315</height>
+					<texture border="9">item-background.png</texture>
+					<include>WideIconViewItemBackgroundFadeAnim</include>
+					<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+				</control>	
+						
+				<control type="largeimage">
+					<description>Fanart</description>
+					<width>560</width>
+					<height>315</height>
+					<bordertexture border="7">item-shadow-border.png</bordertexture>
+					<bordersize>5</bordersize>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>	
+				</control>
+				
+				<control type="group">
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<include>ControlsOpenCloseAnim</include>
+				
+					<control type="image">
+						<description>Genre Background</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>550</width>
+						<height>30</height>
+						<texture>background-dim.png</texture>
+						<visible>!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+						<animation effect="fade" end="30" condition="true">Conditional</animation>
+					</control>	
+					
+					<control type="label">
+						<description>Genre</description>
+						<posx>10</posx>
+						<posy>20</posy>
+						<width>540</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>5</posx>
+						<posy>335</posy>
+						<width>380</width>
+						<include>ListInfoView2CatLabel</include>		
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[557]:[/COLOR][/UPPERCASE] $INFO[ListItem.Artist]</label>
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+					</control>
+					
+					<control type="label">
+						<description>Media Info Row 1</description>
+						<posx>555</posx>
+						<posy>335</posy>
+						<width>160</width>
+						<include>ListInfoView2CatLabel</include>			
+						<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Year)</visible>
+					</control>
+					
+					<control type="group">
+						<visible>!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideAlbumsListInfo2Description)</visible>
+						
+						<control type="image">
+							<posx>5</posx>
+							<posy>355</posy>
+							<width>550</width>
+							<height>2</height>
+							<texture>separator3.png</texture>
+							<visible>!IsEmpty(ListItem.Property(Album_Description))</visible>
+						</control>
+						
+						<control type="textbox">
+							<description>Description</description>
+							<posx>5</posx>
+							<posy>370</posy>
+							<width>550</width>
+							<height>170</height>
+							<font>MediaInfoFont2</font>
+							<textcolor>MediaInfoColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>justify</align>
+							<label>$INFO[ListItem.Property(Album_Description)]</label>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollAlbumsListInfo2Description)</autoscroll>
+							<include>ControlsOpenCloseAnim</include>
+						</control>	
+					</control>
+				</control>
+			</control>
+			
+			<include condition="Skin.String(MusicListInfo2Style,1)">MusicListInfo2ClassicStyle</include>
+			<include condition="Skin.String(MusicListInfo2Style,2) | Skin.String(MusicListInfo2Style,)">MusicListInfo2BannerStyle</include>
+			<include condition="Skin.String(MusicListInfo2Style,3)">MusicListInfo2IconStyle</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,67)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(67)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+			
+			<control type="group">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+			</control>		
+		</control>		
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="MusicWrapListInfoView">
+		<control type="group" id="500">	
+		    <defaultcontrol always="true">64</defaultcontrol>
+			<visible>Control.IsVisible(64)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+
+			<control type="group">
+				<visible>!Skin.HasSetting(HideMusicWrapListMediaInfoDialog)</visible>
+				
+				<control type="image">
+					<description>Media Info Background</description>
+					<posx>90</posx>
+					<posy>110</posy>
+					<width>1100</width>
+					<height>392</height>
+					<texture border="25">item-focus-background.png</texture>
+					<animation effect="fade" end="70" condition="true">Conditional</animation>
+				</control>
+				
+				<control type="group">	
+					<description>Album Case Area</description>
+					<posx>120</posx>
+					<posy>140</posy>
+
+					<control type="image">
+						<description>Album Case</description>
+						<posx>0</posx>
+						<posy>2</posy>
+						<width>361</width>
+						<height>328</height>
+						<texture border="45,10,10,10">dvd-case.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideMusicWrapListInfoCase)</visible>
+					</control>
+
+					<control type="image">
+						<description>Cover</description>
+						<posx>35</posx>
+						<posy>6</posy>
+						<width>320</width>
+						<height>320</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>IconCrossfadeTime</fadetime>
+					</control>
+
+					<control type="image">
+						<description>DVD Case Gloss</description>
+						<posx>32</posx>
+						<posy>2</posy>
+						<width>328</width>
+						<height>328</height>
+						<texture border="16,8,16,8">dvd-case-gloss.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!Skin.HasSetting(HideMusicWrapListInfoCase)</visible>
+					</control>
+				</control>
+
+				<control type="group">				
+					<description>Info Dialog Box Area</description>
+					<posx>480</posx>
+					<posy>102</posy>
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<include>ControlsOpenCloseAnim</include>
+				
+					<control type="label">
+						<description>Title</description>
+						<posx>DialogMarginOffsetX</posx>
+						<posy>30</posy>
+						<width>640</width>
+						<font>FSMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<label>[UPPERCASE]$INFO[ListItem.Album] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>
+						<scroll>yes</scroll>
+					</control>	
+					
+					<control type="group">			
+						<posx>DialogMarginOffsetX</posx>
+						<visible>!IsEmpty(ListItem.Album)</visible>	
+						
+						<control type="label">
+							<description>Genre</description>
+							<posy>80</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[515][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Moods</description>
+							<posy>105</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[175][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Styles</description>
+							<posy>130</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[176][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Themes</description>
+							<posy>155</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[21895][/UPPERCASE]</label>
+						</control>
+						
+						<control type="label">
+							<description>Rating</description>
+							<posy>180</posy>
+							<include>InfoViewCatLabel</include>
+							<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE]</label>
+						</control>			
+					</control>
+					
+					<control type="group">			
+						<posx>250</posx>
+						<visible>!IsEmpty(ListItem.Album)</visible>	
+						
+						<control type="label">
+							<description>Genre Value</description>
+							<posy>80</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Genre]</label>
+						</control>
+
+						<control type="label">
+							<description>Moods Value</description>
+							<posy>105</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Property(Album_Mood)]</label>
+						</control>
+
+						<control type="label">
+							<description>Styles Value</description>
+							<posy>130</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Property(Album_Style)]</label>
+						</control>
+		
+						<control type="label">
+							<description>Themes Value</description>
+							<posy>155</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Property(Album_Theme)]</label>
+						</control>
+		
+						<control type="label">
+							<description>Rating Value</description>
+							<posy>180</posy>
+							<include>InfoViewCatValueLabel</include>
+							<label fallback="31000">$INFO[ListItem.Rating]</label>
+						</control>				
+					</control>
+					
+					<control type="textbox">
+						<description>Album Description</description>
+						<posx>DialogMarginOffsetX</posx>
+						<posy>220</posy>
+						<width>640</width>
+						<height>150</height>
+						<font>MediaInfoFont2</font>
+						<textcolor>MediaInfoColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Property(Album_Description)]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMusicWrapListInfoDescription)</autoscroll>
+						<visible>!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideMusicWrapListInfoDescription)</visible>
+					</control>
+				</control>
+			</control>
+			
+			<include condition="Skin.String(MusicWrapListStyle,) | Skin.String(MusicWrapListStyle,1)">MusicWrapInfo3DStyle</include>
+			<include condition="Skin.String(MusicWrapListStyle,2)">MusicWrapInfoFlatStyle</include>
+			<include condition="Skin.String(MusicWrapListStyle,3)">MusicWrapInfoSmallFlatStyle</include>
+			
+			<include>WrapInfoViewScrollbar</include>
+		
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,64)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(64)</visible>
+			</control>
+			
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>
+		</control>
+	</include>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------->	
+	<include name="MusicWallView">
+		<control type="group" id="500">	
+		    <defaultcontrol always="true">70</defaultcontrol>
+			<visible>Control.IsVisible(70)</visible>
+			<include>MediaViewOpenCloseAnim</include>
+			
+			<control type="panel" id="70">
+				<viewtype label="31113">Wall</viewtype>
+				<posx>-2</posx>
+				<posy>45</posy>
+				<width>1284</width>
+				<height>675</height>
+				<pagecontrol>150</pagecontrol>
+				<scrolltime>100</scrolltime>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<onup>850</onup>
+				<ondown>150</ondown>
+				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+				<itemlayout width="214" height="214" condition="!Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Default Cover Background</description>
+						<posy>33</posy>
+						<width>214</width>
+						<height>214</height>
+						<texture border="5">item-noshadow-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>WallViewItemBackgroundFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<posy>33</posy>
+						<width>214</width>
+						<height>214</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posy>33</posy>
+						<width>214</width>
+						<height>214</height>
+						<bordersize>40</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Cover Dim</description>
+						<posy>33</posy>
+						<width>214</width>
+						<height>214</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb) + !Skin.HasSetting(DoNotDimMusicWallCover)</visible>
+						<include>WallViewItemCoverDimAnim</include>
+					</control>
+				</itemlayout>
+				<itemlayout width="214" height="225" condition="Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Default Cover Background</description>
+						<width>214</width>
+						<height>225</height>
+						<texture border="5">item-noshadow-background.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+						<include>WallViewItemBackgroundFadeAnim</include>
+					</control>
+					<control type="image">
+						<description>Cover</description>
+						<width>214</width>
+						<height>225</height>
+						<texture background="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<width>214</width>
+						<height>225</height>
+						<bordersize>40</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Cover Dim</description>
+						<width>214</width>
+						<height>225</height>
+						<texture>background-dim.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Thumb) + !Skin.HasSetting(DoNotDimMusicWallCover)</visible>
+						<include>WallViewItemCoverDimAnim</include>
+					</control>
+				</itemlayout>					
+				<focusedlayout width="214" height="214" condition="!Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Top Left Corner Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)</visible>
+						<include>MusicWallViewTopLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Edge Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(0)</visible>
+						<include>MusicWallViewTopEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Right Corner Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(0)</visible>
+						<include>MusicWallViewTopRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Left Edge Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1)</visible>
+						<include>MusicWallViewLeftEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Mid Row Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)</visible>
+						<include>MusicWallViewMidRowFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Right Edge Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(1)</visible>
+						<include>MusicWallViewRightEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Left Corner Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2)</visible>
+						<include>MusicWallViewBottomLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Edge Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(2)</visible>
+						<include>MusicWallViewBottomEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Right Corner Cover</description>
+						<include>MusicWallCoverImage</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(2)</visible>
+						<include>MusicWallViewBottomRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover Background</description>
+						<posy>33</posy>
+						<width>214</width>
+						<height>214</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="5">item-noshadow-background2.png</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<posy>33</posy>
+						<width>214</width>
+						<height>214</height>
+						<bordersize>40</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</focusedlayout>
+				<focusedlayout width="214" height="225" condition="Skin.HasSetting(HideMenuBar)">
+					<control type="image">
+						<description>Top Left Corner Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0)</visible>
+						<include>MusicWallViewTopLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Edge Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(5) + Container.Row(0)</visible>
+						<include>MusicWallViewTopEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Top Right Corner Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(0)</visible>
+						<include>MusicWallViewTopRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Left Edge Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1)</visible>
+						<include>MusicWallViewLeftEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Mid Row Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(5)</visible>
+						<include>MusicWallViewMidRowFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Right Edge Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(1)</visible>
+						<include>MusicWallViewRightEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Left Corner Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2)</visible>
+						<include>MusicWallViewBottomLeftCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Edge Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + ! Container.Column(0) + !Container.Column(5) + Container.Row(2)</visible>
+						<include>MusicWallViewBottomEdgeFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Bottom Right Corner Cover</description>
+						<include>MusicWallCoverImage2</include>
+						<visible>!IsEmpty(ListItem.Thumb) + Container.Column(5) + Container.Row(2)</visible>
+						<include>MusicWallViewBottomRightCornerFocusAnim</include>
+					</control>
+					<control type="image">
+						<description>Default Cover Background</description>
+						<width>214</width>
+						<height>225</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="5">item-noshadow-background2.png</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Cover</description>
+						<width>214</width>
+						<height>225</height>
+						<bordersize>40</bordersize>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			
+			<include>WallViewScrollbar</include>
+			
+			<control type="group">
+				<posy>SortLetterOffsetY</posy>
+				<include>SortLetterNotification</include>
+			</control>
+			
+			<control type="button" id="188">
+				<onfocus>Skin.SetString(CurrentViewMode,70)</onfocus>
+				<include>ViewOptionsHelperBtn</include>
+				<visible>Control.IsVisible(70)</visible>
+			</control>
+
+			<include>ViewsScreenFullFadeAnim</include>
+			<include>ViewsDialogPopUpScreenDim</include>	
+
+			<control type="group" id="659">
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				<include>InfoPaneImage</include>
+				<include>InfoPaneMediaDetails</include>
+				<visible>Control.HasFocus(70) + System.IdleTime(2)</visible>
+				<animation effect="slide" start="0,74" time="300">Visible</animation>
+			</control>	
+		</control>
+	</include>
+	
+	<include name="MusicWallCoverImage">
+		<posy>33</posy>
+		<width>214</width>
+		<height>214</height>
+		<bordersize>9</bordersize>
+		<bordertexture border="9">item-background2.png</bordertexture>
+		<texture background="true">$INFO[ListItem.Thumb]</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="MusicWallCoverImage2">
+		<width>214</width>
+		<height>225</height>
+		<bordersize>9</bordersize>
+		<bordertexture border="9">item-background2.png</bordertexture>
+		<texture background="true">$INFO[ListItem.Thumb]</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+</includes>

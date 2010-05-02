@@ -1,0 +1,218 @@
+<window type="dialog" id="3014">
+	<defaultcontrol always="true">110</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="0" y="572">true</origin>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<include>HomeSubMenuBarImage</include>
+			<include>HomeSubMenuBarOpenCloseAnim</include>
+
+			<control type="group">
+				<posx>10</posx>
+				<include>HomeSubMenuSlideAnim</include>
+							
+				<control type="list" id="110">
+					<description>Videos Menu Bar</description>
+					<width>1260</width>
+					<height>34</height>
+					<ondown>Dialog.Close(3014)</ondown>
+					<orientation>horizontal</orientation>
+					<include>HomeSubMenuOpenCloseAnim</include>
+					<itemlayout width="180">
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>		
+					</itemlayout>
+					<focusedlayout width="180">
+						<control type="image">
+							<posy>-1</posy>
+							<width>180</width>
+							<height>36</height>
+							<texture border="0,0,0,2">button-submenu-focus.png</texture>
+							<include>HomeSubMenuFocusAnim</include>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>					
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Files</description>
+							<label>$LOCALIZE[1214]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles)</onclick>
+							<visible>!Skin.HasSetting(CustomizeVideosSubMenuItem1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem1CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem1CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem1) + !Skin.HasSetting(VideosSubMenuItem1CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem1CustomLabel))</visible>
+						</item>
+						<item id="1">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem1CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem1CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem1) + Skin.HasSetting(VideosSubMenuItem1CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem1CustomLabel))</visible>
+						</item>
+						<item id="2">
+							<description>Library</description>
+							<label>$LOCALIZE[14022]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary)</onclick>
+							<visible>!Skin.HasSetting(CustomizeVideosSubMenuItem2)</visible>	
+						</item>
+						<item id="2">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem2CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem2CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem2) + !Skin.HasSetting(VideosSubMenuItem2CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem2CustomLabel))</visible>
+						</item>
+						<item id="2">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem2CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem2CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem2) + Skin.HasSetting(VideosSubMenuItem2CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem2CustomLabel))</visible>
+						</item>
+						<item id="3">
+							<description>Movies</description>
+							<label>$LOCALIZE[20342]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,MovieTitles,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeVideosSubMenuItem3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem3CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem3CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem3) + !Skin.HasSetting(VideosSubMenuItem3CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem3CustomLabel))</visible>
+						</item>
+						<item id="3">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem3CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem3CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem3) + Skin.HasSetting(VideosSubMenuItem3CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem3CustomLabel))</visible>
+						</item>
+						<item id="4">
+							<description>TV Shows</description>
+							<label>$LOCALIZE[20343]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,TVShowTitles,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeVideosSubMenuItem4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem4CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem4CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem4) + !Skin.HasSetting(VideosSubMenuItem4CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem4CustomLabel))</visible>
+						</item>
+						<item id="4">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem4CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem4CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem4) + Skin.HasSetting(VideosSubMenuItem4CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem4CustomLabel))</visible>
+						</item>
+						<item id="5">
+							<description>Playlists</description>
+							<label>$LOCALIZE[136]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,Playlists,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeVideosSubMenuItem5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem5CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem5CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem5) + !Skin.HasSetting(VideosSubMenuItem5CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem5CustomLabel))</visible>
+						</item>
+						<item id="5">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem5CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem5CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem5) + Skin.HasSetting(VideosSubMenuItem5CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem5CustomLabel))</visible>
+						</item>
+						<item id="6">
+							<description>Video Plugins</description>
+							<label>$LOCALIZE[31302]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,Plugins,Return)</onclick>
+							<visible>!Skin.HasSetting(CustomizeVideosSubMenuItem6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem6CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem6CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem6) + !Skin.HasSetting(VideosSubMenuItem6CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem6CustomLabel))</visible>
+						</item>
+						<item id="6">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem6CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem6CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem6) + Skin.HasSetting(VideosSubMenuItem6CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem6CustomLabel))</visible>
+						</item>
+						<item id="7">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem7CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoFiles,$INFO[Skin.String(VideosSubMenuItem7CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem7) + !Skin.HasSetting(VideosSubMenuItem7CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem7CustomLabel))</visible>
+						</item>
+						<item id="7">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(VideosSubMenuItem7CustomLabel)]</label>
+							<onclick>Dialog.Close(3014)</onclick>
+							<onclick>ActivateWindow(VideoLibrary,$INFO[Skin.String(VideosSubMenuItem7CustomParam)],Return)</onclick>
+							<visible>Skin.HasSetting(CustomizeVideosSubMenuItem7) + Skin.HasSetting(VideosSubMenuItem7CustomLibParam) + !IsEmpty(Skin.String(VideosSubMenuItem7CustomLabel))</visible>
+						</item>
+					</content>						
+				</control>
+			</control>
+		</control>
+		
+		<control type="group">	
+			<description>Bottom Bar Area</description>	
+			<posy>34</posy>	
+			<include>HomeSubMenuCoverTopImage</include>		
+			<include>HomeSubMenuCoverTopOverlay</include>
+			
+			<control type="image">
+				<Description>Videos Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos2</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-videos-text-focus.png</texture>
+				<include>HomeMenuCategoryFocusAnim2</include>
+			</control>	
+		</control>
+	</controls>
+</window>

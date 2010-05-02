@@ -1,0 +1,732 @@
+<includes>
+	<include name="DialogBackgroundDim">
+		<control type="image">
+			<posy>MenuBarOffsetY</posy>
+			<include>BackgroundSize</include>
+			<texture>background-dim.png</texture>
+			<include>BackgroundTransAnim</include>
+			<include>DialogBackgroundDimAnim</include>	
+		</control>	
+	</include>
+	
+	<include name="LoginScreenBackground">
+		<control type="image">
+			<description>Default Background</description>
+			<include>BackgroundSize</include>
+			<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundLoginScreenDefaultImage</include>
+			<include condition="Skin.String(DefaultBackground,2)">BackgroundLoginScreenDefaultImage2</include>
+			<include condition="Skin.String(DefaultBackground,3)">BackgroundLoginScreenDefaultImage3</include>
+			<include condition="Skin.String(DefaultBackground,4)">BackgroundLoginScreenDefaultImage4</include>
+			<aspectratio aligny="top">scale</aspectratio>
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<include>BackgroundOpenCloseAnim</include>
+		</control>
+	</include>
+	
+	<include name="BackgroundHome">
+		<control type="group">
+			<description>Home Backgrounds</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundHomeDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundHomeDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundHomeDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundHomeDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="BackgroundPrograms">
+		<control type="group">
+			<description>Programs Custom Background</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundProgramsDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundProgramsDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundProgramsDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundProgramsDefaultImage4</include>
+				<visible>Skin.HasSetting(ApplyAllProgramsCustomBG)</visible>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include>BackgroundProgramsDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundProgramsDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundProgramsDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundProgramsDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundProgramsDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllProgramsCustomBG)</visible>
+				<include>BackgroundProgramsDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundPictures">
+		<control type="group">
+			<description>Pictures Custom Background</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundPicturesDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundPicturesDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundPicturesDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundPicturesDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<visible>Skin.HasSetting(ApplyAllPicturesCustomBG)</visible>
+				<include>BackgroundPicturesDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>		
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundPicturesDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundPicturesDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundPicturesDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundPicturesDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllPicturesCustomBG)</visible>
+				<include>BackgroundPicturesDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundMusic">
+		<control type="group">
+			<description>Music Custom Background</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundMusicDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundMusicDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundMusicDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundMusicDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<visible>Skin.HasSetting(ApplyAllMusicCustomBG)</visible>
+				<include>BackgroundMusicDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundMusicDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundMusicDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundMusicDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundMusicDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllMusicCustomBG)</visible>
+				<include>BackgroundMusicDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundVideos">
+		<control type="group">
+			<description>Videos Custom Background</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundVideosDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundVideosDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundVideosDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundVideosDefaultImage4</include>
+				<visible>Skin.HasSetting(ApplyAllVideosCustomBG)</visible>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include>BackgroundVideosDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundVideosDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundVideosDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundVideosDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundVideosDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllVideosCustomBG)</visible>
+				<include>BackgroundVideosDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundMovies">
+		<control type="group">
+			<description>Movies Custom Background</description>
+			<visible>[Substring(Container.FolderPath,videodb://1/,Left) | Substring(Container.FolderPath,videodb://4/,Left)] 
+			+ ![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundMoviesDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundMoviesDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundMoviesDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundMoviesDefaultImage4</include>
+				<visible>Skin.HasSetting(ApplyAllMoviesCustomBG)</visible>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include>BackgroundMoviesDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundMoviesDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundMoviesDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundMoviesDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundMoviesDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllMoviesCustomBG)</visible>
+				<include>BackgroundMoviesDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="BackgroundTVShows">
+		<control type="group">
+			<description>TV Shows Custom Background</description>
+			<visible>[Substring(Container.FolderPath,videodb://2/,Left) | Substring(Container.FolderPath,videodb://5/,Left)] 
+			+ ![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundTVShowsDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundTVShowsDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundTVShowsDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundTVShowsDefaultImage4</include>
+				<visible>Skin.HasSetting(ApplyAllTVShowsCustomBG)</visible>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include>BackgroundTVShowsDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundTVShowsDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundTVShowsDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundTVShowsDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundTVShowsDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllTVShowsCustomBG)</visible>
+				<include>BackgroundTVShowsDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="BackgroundGeneral">
+		<control type="group">
+			<description>General Custom Background</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundGeneralDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundGeneralDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundGeneralDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundGeneralDefaultImage4</include>
+				<visible>Skin.HasSetting(ApplyAllGeneralCustomBG)</visible>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include>BackgroundGeneralDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundGeneralDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundGeneralDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundGeneralDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundGeneralDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllGeneralCustomBG)</visible>
+				<include>BackgroundGeneralDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundSystem">
+		<control type="group">
+			<description>System Custom Background</description>
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="multiimage">
+				<description>Custom Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundSystemDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundSystemDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundSystemDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundSystemDefaultImage4</include>
+				<visible>Skin.HasSetting(ApplyAllSystemCustomBG)</visible>
+				<aspectratio aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<randomize>true</randomize>
+				<include>BackgroundSystemDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundSystemDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundSystemDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundSystemDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundSystemDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(ApplyAllSystemCustomBG)</visible>
+				<include>BackgroundSystemDimAnim</include>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundNoContent">
+		<control type="group">
+			<description>Default Background</description>
+			<visible>[IsEmpty(Container.FolderPath) | Substring(Container.FolderPath,videodb://3/,Left) | Substring(Container.FolderPath,videodb://6/,Left) 
+			| Substring(Container.FolderPath,plugin://video/,Left) | Substring(Container.FolderPath,special://videoplaylists/,Left)
+			| Substring(Container.FolderPath,special://musicplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)] 
+			+ ![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+			
+			<control type="image">
+				<description>Default Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<include condition="Skin.String(DefaultBackground,) | Skin.String(DefaultBackground,1)">BackgroundNoContentDefaultImage</include>
+				<include condition="Skin.String(DefaultBackground,2)">BackgroundNoContentDefaultImage2</include>
+				<include condition="Skin.String(DefaultBackground,3)">BackgroundNoContentDefaultImage3</include>
+				<include condition="Skin.String(DefaultBackground,4)">BackgroundNoContentDefaultImage4</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<fadetime>BackgroundCrossfadeTime</fadetime>
+				<include condition="Skin.HasSetting(AnimateBackground)">CustomBackgroundAnim</include>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundMusicPlaying">
+		<control type="group">
+			<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)</visible>
+		
+			<control type="visualisation">
+				<description>Visualization</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<aspectratio aligny="top">scale</aspectratio>
+				<visible>!Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
+			</control>	
+	
+			<control type="image">
+				<description>Artist Fanart</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+				<visible>Skin.HasSetting(UseFanartForMusicPlayingBG)</visible>
+				<include condition="Skin.HasSetting(AnimateFanartMusicPlayingBG)">FanartBackgroundAnim</include>
+			</control>
+			
+			<control type="image">
+				<description>Dim Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<texture>background-dim.png</texture>
+				<include>BackgroundMediaNowPlayingDimAnim</include>
+				<visible>!Skin.HasSetting(DoNotDimMusicPlayingBG)</visible>
+			</control>	
+		</control>
+	</include>
+	
+	<include name="BackgroundVideoPlaying">
+		<control type="group">
+			<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)</visible>
+			
+			<control type="videowindow">
+				<description>Video</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<aspectratio aligny="top">scale</aspectratio>
+			</control>
+
+			<control type="image">
+				<description>Dim Background</description>
+				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundSize</include>
+				<texture>background-dim.png</texture>
+				<include>BackgroundMediaNowPlayingDimAnim</include>
+				<visible>!Skin.HasSetting(DoNotDimVideoPlayingBG)</visible>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundFanart">
+		<control type="group">
+			<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicPlayingBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoPlayingBG)]</visible>
+
+			<control type="group">
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)
+				+ [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] 
+				| [Control.IsVisible(53) + !Skin.HasSetting(HideMoviesWrapListInfoFanart)] 
+				| [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)]
+				| Control.IsVisible(59)]</visible>
+				
+				<control type="largeimage">
+					<description>Fanart Background</description>
+					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundSize</include>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include condition="Skin.HasSetting(AnimateMoviesFanart)">FanartBackgroundAnim</include>
+				</control>	
+				
+				<control type="image">
+					<description>Dim Background</description>
+					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundSize</include>
+					<texture>background-dim.png</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMoviesFanart)</visible>
+					<include>BackgroundFanartDimAnim</include>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)]
+				+ [[Control.IsVisible(52) + !Skin.HasSetting(HideTVShowsListFanart)] 
+				| [Control.IsVisible(61) + !Skin.HasSetting(HideTVShowsListInfoFanart)]]</visible>
+				
+				<control type="largeimage">
+					<description>Fanart Background</description>
+					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundSize</include>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include condition="Skin.HasSetting(AnimateTVShowsFanart)">FanartBackgroundAnim</include>
+				</control>	
+				
+				<control type="image">
+					<description>Dim Background</description>
+					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundSize</include>
+					<texture>background-dim.png</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimTVShowsFanart)</visible>
+					<include>BackgroundFanartDimAnim</include>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]
+				+ [[Control.IsVisible(52) + !Skin.HasSetting(HideMusicListFanart)] 
+				| [Control.IsVisible(62) + !Skin.HasSetting(HideMusicListInfoFanart)]
+				| [Control.IsVisible(64) + !Skin.HasSetting(HideMusicWrapListInfoFanart)]]</visible>
+				
+				<control type="largeimage">
+					<description>Fanart Background</description>
+					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundSize</include>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include condition="Skin.HasSetting(AnimateMusicFanart)">FanartBackgroundAnim</include>
+				</control>
+
+				<control type="image">
+					<description>Dim Background</description>
+					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundSize</include>
+					<texture>background-dim.png</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
+					<include>BackgroundFanartDimAnim</include>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BackgroundLoginScreenDefaultImage">
+		<texture>special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundLoginScreenDefaultImage2">
+		<texture>special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundLoginScreenDefaultImage3">
+		<texture>special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundLoginScreenDefaultImage4">
+		<texture>special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundHomeDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	
+	<include name="BackgroundHomeDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	
+	<include name="BackgroundHomeDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	
+	<include name="BackgroundHomeDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	
+	<include name="BackgroundProgramsDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(ProgramsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundProgramsDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(ProgramsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundProgramsDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(ProgramsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundProgramsDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(ProgramsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundPicturesDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(PicturesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundPicturesDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(PicturesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundPicturesDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(PicturesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundPicturesDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(PicturesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMusicDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMusicDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMusicDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMusicDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundVideosDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(VideosCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundVideosDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(VideosCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundVideosDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(VideosCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundVideosDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(VideosCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMoviesDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(MoviesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMoviesDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(MoviesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMoviesDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(MoviesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundMoviesDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(MoviesCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundTVShowsDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(TVShowsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundTVShowsDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(TVShowsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundTVShowsDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(TVShowsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundTVShowsDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(TVShowsCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundGeneralDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(GeneralCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundGeneralDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(GeneralCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundGeneralDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(GeneralCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundGeneralDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(GeneralCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundSystemDefaultImage">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundSystemDefaultImage2">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background2.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundSystemDefaultImage3">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background3.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundSystemDefaultImage4">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/default-background4.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+	
+	<include name="BackgroundNoContentDefaultImage">
+		<texture background="true">special://skin/images/backgrounds/default-background.jpg</texture>
+	</include>
+	
+	<include name="BackgroundNoContentDefaultImage2">
+		<texture background="true">special://skin/images/backgrounds/default-background2.jpg</texture>
+	</include>
+	
+	<include name="BackgroundNoContentDefaultImage3">
+		<texture background="true">special://skin/images/backgrounds/default-background3.jpg</texture>
+	</include>
+	
+	<include name="BackgroundNoContentDefaultImage4">
+		<texture background="true">special://skin/images/backgrounds/default-background4.jpg</texture>
+	</include>
+</includes>

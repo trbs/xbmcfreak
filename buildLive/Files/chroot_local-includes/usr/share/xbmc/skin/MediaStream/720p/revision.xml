@@ -1,0 +1,6 @@
+<!-- MediaStream skin revision: 2515 - built with build.bat version 1.0 -->
+<includes>
+  <include name="Revision">
+    <label>MediaStream v1.5 (15/01/2010), SVN - r2515</label>
+  </include>
+</includes>

@@ -1,0 +1,187 @@
+<window type="dialog" id="3002">
+	<defaultcontrol always="true">200</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<control type="grouplist" id="200">
+			<description>View Mode Menu</description>
+			<posx>76</posx>
+			<posy>75</posy>
+			<width>229</width>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<include>MenuOpenCloseAnim</include>
+			<control type="image">
+				<include>MenuBarItemBigTopBorder</include>
+			</control>
+			<control type="button" id="1">
+				<description>Icon</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31103]</label>
+				<onclick>Container.SetViewMode(50)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+			</control>
+			<control type="button" id="2">
+				<description>Big Icon</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31104]</label>
+				<onclick>Container.SetViewMode(51)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+			</control>
+			<control type="button" id="3">
+				<description>Wide Icon (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31108]</label>
+				<onclick>Container.SetViewMode(55)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="4">
+				<description>Wide Icon (TV Shows)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31108]</label>
+				<onclick>Container.SetViewMode(56)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="button" id="5">
+				<description>Wide Icon (Episodes)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31108]</label>
+				<onclick>Container.SetViewMode(57)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="button" id="6">
+				<description>Wide Icon (Music)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31108]</label>
+				<onclick>Container.SetViewMode(60)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+			</control>
+			<control type="button" id="7">
+				<description>Thumbnail (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31107]</label>
+				<onclick>Container.SetViewMode(54)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="8">
+				<description>Thumbnail (Music)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31107]</label>
+				<onclick>Container.SetViewMode(63)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(MusicFiles) | Container.Content(Songs) | Container.Content(Albums)</visible>
+			</control>
+			<control type="button" id="9">
+				<description>List</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31105]</label>
+				<onclick>Container.SetViewMode(52)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+			</control>
+			<control type="button" id="10">
+				<description>List Media Info (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31111]</label>
+				<onclick>Container.SetViewMode(58)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="11">
+				<description>List Media Info (TV Shows)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31111]</label>
+				<onclick>Container.SetViewMode(61)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Episodes)]</visible>
+			</control>
+			<control type="button" id="12">
+				<description>List Media Info (Music)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31111]</label>
+				<onclick>Container.SetViewMode(62)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)</visible>
+			</control>
+			<control type="button" id="13">
+				<description>List Media Info 2 (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31112]</label>
+				<onclick>Container.SetViewMode(66)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="14">
+				<description>List Media Info 2 (TV Shows)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31112]</label>
+				<onclick>Container.SetViewMode(65)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="button" id="15">
+				<description>List Media Info 2 (Episodes)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31112]</label>
+				<onclick>Container.SetViewMode(68)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+			</control>
+			<control type="button" id="16">
+				<description>List Media Info 2 (Music)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31112]</label>
+				<onclick>Container.SetViewMode(67)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+			</control>
+			<control type="button" id="17">
+				<description>Wrap List Media Info (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31106]</label>
+				<onclick>Container.SetViewMode(53)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="18">
+				<description>Wrap List Media Info (Music)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31106]</label>
+				<onclick>Container.SetViewMode(64)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+			</control>
+			<control type="button" id="19">
+				<description>Fanart (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31110]</label>
+				<onclick>Container.SetViewMode(59)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="20">
+				<description>Wall (Movies)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31113]</label>
+				<onclick>Container.SetViewMode(69)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+			</control>
+			<control type="button" id="21">
+				<description>Wall (Music)</description>
+				<include>MenuBarItemBigBtn</include>
+				<label>$LOCALIZE[31113]</label>
+				<onclick>Container.SetViewMode(70)</onclick>
+				<onclick>Dialog.Close(3002)</onclick>
+				<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+			</control>
+			<control type="image">
+				<include>MenuBarItemBigBottomBorder</include>
+			</control>
+		</control>
+	</controls>	
+</window>

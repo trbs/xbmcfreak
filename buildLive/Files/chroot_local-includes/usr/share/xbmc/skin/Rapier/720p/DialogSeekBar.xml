@@ -1,0 +1,649 @@
+<window id="115">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>0</zorder>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo</visible>
+	
+	<controls>	
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(SliderDialog) | Window.IsActive(3011) | Player.ShowCodec">Conditional</animation>
+			
+			<control type="group">	
+				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV) + Window.IsActive(FullScreenVideo)</visible>
+				<include>FSMediaInfoBackground</include>
+				<include>FSMediaInfoOpenCloseAnim</include>
+			
+				<control type="image">
+					<description>Cover</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>90</width>
+					<height>130</height>
+					<info>VideoPlayer.Cover</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="group">				
+					<posx>130</posx>
+		
+					<control type="label">
+						<description>Title/Year</description>
+						<posy>5</posy>
+						<width>980</width>
+						<font>SeekBarMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="label">
+						<description>System Time</description>
+						<posx>1130</posx>
+						<posy>10</posy>
+						<width>130</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<info>System.Time</info>
+					</control>
+					
+					<control type="label">
+						<description>Genre</description>
+						<posy>35</posy>
+						<width>900</width>
+						<font>SeekBarMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Genre]</label>
+					</control>
+					
+					<control type="label">
+						<description>Chapter Title</description>
+						<posx>1130</posx>
+						<posy>55</posy>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.ChapterName,$LOCALIZE[21396]: ]</label>
+					</control>
+					
+					<control type="label">
+						<description>Chapter/Chapter Count</description>
+						<posx>1130</posx>
+						<posy>78</posy>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ] $INFO[Player.ChapterCount,/ ]</label>
+						<visible>Player.ChapterCount</visible>
+					</control>
+					
+					<control type="label">
+						<description>Elapsed/Duration Time</description>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Time] $INFO[Player.Duration,/ ]</label>
+						<visible>!Player.Seeking</visible>
+					</control>
+					
+					<include>RewindSpeedLabels</include>
+					<include>FastForwardSpeedLabels</include>
+					
+					<control type="label">
+						<description>Finish Time</description>
+						<posx>1130</posx>
+						<posy>100</posy>
+						<width>535</width>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.FinishTime]</label>
+					</control>
+					
+					<control type="progress">
+						<description>Progressbar</description>
+						<posy>119</posy>
+						<width>1130</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>
+			</control>
+				
+			<control type="group">		
+				<visible>VideoPlayer.Content(Movies) + Window.IsActive(FullScreenVideo)</visible>
+				<include>FSMediaInfoBackground</include>
+				<include>FSMediaInfoOpenCloseAnim</include>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>90</width>
+					<height>130</height>
+					<info>VideoPlayer.Cover</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="group">			
+					<posx>130</posx>
+		
+					<control type="label">
+						<description>Title/Year</description>
+						<posy>5</posy>
+						<width>1020</width>
+						<font>SeekBarMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="label">
+						<description>System Time</description>
+						<posx>1130</posx>
+						<posy>10</posy>
+						<width>130</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<info>System.Time</info>
+					</control>
+					
+					<control type="label">
+						<description>Genre/Director/Rating</description>
+						<posy>35</posy>
+						<width>900</width>
+						<font>SeekBarMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Genre,$LOCALIZE[515]: ] $INFO[VideoPlayer.Director,| $LOCALIZE[20339]: ] $INFO[VideoPlayer.Rating,| $LOCALIZE[563]: ]</label>
+					</control>
+
+					<control type="grouplist">
+						<description>Media Flags Area</description>
+						<posy>65</posy>
+						<width>400</width>
+						<height>60</height>
+						<itemgap>0</itemgap>
+						<align>left</align>
+						<orientation>horizontal</orientation>
+						<include>MediaFlagFadeAnim</include>
+						<include>PlayerVideoMediaFlags</include>
+						<include>PlayerAudioMediaFlags</include>
+						<include>PlayerRatingMediaFlags</include>
+					</control>
+
+					<control type="label">
+						<description>Chapter/Chapter Count</description>
+						<posx>1130</posx>
+						<posy>78</posy>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ] $INFO[Player.ChapterCount,/ ]</label>
+						<visible>Player.ChapterCount</visible>
+					</control>
+		
+					<control type="label">
+						<description>Elapsed/Duration Time</description>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Time] $INFO[Player.Duration,/ ]</label>
+						<visible>!Player.Seeking</visible>
+					</control>
+							
+					<include>RewindSpeedLabels</include>
+					<include>FastForwardSpeedLabels</include>
+					
+					<control type="label">
+						<description>Finish Time</description>
+						<posx>1130</posx>
+						<posy>100</posy>
+						<width>535</width>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.FinishTime]</label>
+					</control>
+		
+					<control type="progress">
+						<description>Progressbar</description>
+						<posy>119</posy>
+						<width>1130</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">		
+				<visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + Window.IsActive(Visualisation)</visible>
+				<include>FSMediaInfoBackground</include>
+				<include>FSMediaInfoOpenCloseAnim</include>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>130</width>
+					<height>130</height>
+					<info>MusicPlayer.Cover</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="group">			
+					<posx>170</posx>
+		
+					<control type="label">
+						<description>Title/Year</description>
+						<posy>5</posy>
+						<width>980</width>
+						<font>SeekBarMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[MusicPlayer.Title] $INFO[MusicPlayer.Year,(,)]</label>
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="label">
+						<description>System Time</description>
+						<posx>1090</posx>
+						<posy>10</posy>
+						<width>130</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<info>System.Time</info>
+					</control>
+						
+					<control type="label">
+						<description>Artist/Album</description>
+						<posy>35</posy>
+						<width>900</width>
+						<font>SeekBarMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[MusicPlayer.Artist,$LOCALIZE[557]: ] $INFO[MusicPlayer.Album,| $LOCALIZE[558]: ]</label>
+					</control>
+					
+					<control type="image">
+						<description>Star Rating</description>
+						<posy>65</posy>
+						<width>160</width>
+						<height>25</height>
+						<info>MusicPlayer.Rating</info>
+						<aspectratio align="left">keep</aspectratio>
+					</control>
+
+					<control type="label">
+						<description>Playlist Pos No</description>
+						<posx>1090</posx>
+						<posy>55</posy>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[MusicPlayer.PlaylistPosition,$LOCALIZE[554]: ] $INFO[MusicPlayer.PlaylistLength,/ ]</label>
+						<visible>!MusicPartyMode.Enabled</visible>
+					</control>
+					
+					<control type="label">
+						<description>Next Track</description>
+						<posx>1090</posx>
+						<posy>78</posy>
+						<width>535</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[MusicPlayer.offset(1).Artist,$LOCALIZE[209]: ] $INFO[MusicPlayer.offset(1).Title,- ]</label>
+					</control>
+
+					<control type="label">
+						<description>Elapsed/Duration Time</description>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[MusicPlayer.Time] $INFO[Player.Duration,/ ]</label>
+					</control>
+					
+					<include>RewindSpeedLabels</include>
+					<include>FastForwardSpeedLabels</include>
+
+					<control type="label">
+						<description>Party Mode</description>
+						<posx>1090</posx>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$LOCALIZE[589]</label>
+						<visible>MusicPartyMode.Enabled</visible>
+					</control>
+						
+					<control type="progress">
+						<description>Progressbar</description>
+						<posy>119</posy>
+						<width>1090</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>			
+			</control>
+			
+			<control type="group">		
+				<visible>VideoPlayer.Content(Episodes) + Window.IsActive(FullScreenVideo)</visible>
+				<include>FSMediaInfoBackground</include>
+				<include>FSMediaInfoOpenCloseAnim</include>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>130</width>
+					<height>130</height>
+					<info>VideoPlayer.Cover</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="group">			
+					<posx>170</posx>
+		
+					<control type="label">
+						<description>Title/Year</description>
+						<posy>5</posy>
+						<width>980</width>
+						<font>SeekBarMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="label">
+						<description>System Time</description>
+						<posx>1090</posx>
+						<posy>10</posy>
+						<width>130</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<info>System.Time</info>
+					</control>
+					
+					<control type="label">
+						<description>TV Show/Season/Episode</description>
+						<posy>35</posy>
+						<width>900</width>
+						<font>SeekBarMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.TVShowTitle,$LOCALIZE[20364]: ] $INFO[VideoPlayer.Season,| $LOCALIZE[20373]: ] $INFO[VideoPlayer.Episode,| $LOCALIZE[20359]: ]</label>
+					</control>
+					
+					<control type="grouplist">
+						<description>Media Flags Area</description>
+						<posy>65</posy>
+						<width>400</width>
+						<height>60</height>
+						<itemgap>0</itemgap>
+						<align>left</align>
+						<orientation>horizontal</orientation>
+						<include>MediaFlagFadeAnim</include>
+						<include>PlayerVideoMediaFlags</include>
+						<include>PlayerAudioMediaFlags</include>
+					</control>
+					
+					<control type="label">
+						<description>Chapter Title</description>
+						<posx>1090</posx>
+						<posy>55</posy>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.ChapterName,$LOCALIZE[21396]: ]</label>
+					</control>
+					
+					<control type="label">
+						<description>Chapter/Chapter Count</description>
+						<posx>1090</posx>
+						<posy>78</posy>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.Chapter,$LOCALIZE[554]: ] $INFO[Player.ChapterCount,/ ]</label>
+						<visible>Player.ChapterCount</visible>
+					</control>
+
+					<control type="label">
+						<description>Elapsed/Duration Time</description>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Time] $INFO[Player.Duration,/ ]</label>
+					</control>
+					
+					<include>RewindSpeedLabels</include>
+					<include>FastForwardSpeedLabels</include>
+					
+					<control type="label">
+						<description>Finish Time</description>
+						<posx>1090</posx>
+						<posy>100</posy>
+						<width>535</width>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.FinishTime]</label>
+					</control>
+	
+					<control type="progress">
+						<description>Progressbar</description>
+						<posy>119</posy>
+						<width>1090</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>			
+			</control>
+			
+			<control type="group">		
+				<visible>VideoPlayer.Content(MusicVideos) + Window.IsActive(FullScreenVideo)</visible>
+				<include>FSMediaInfoBackground</include>
+				<include>FSMediaInfoOpenCloseAnim</include>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>130</width>
+					<height>130</height>
+					<info>VideoPlayer.Cover</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="group">			
+					<posx>170</posx>
+		
+					<control type="label">
+						<description>Title/Year</description>
+						<posy>5</posy>
+						<width>980</width>
+						<font>SeekBarMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="label">
+						<description>System Time</description>
+						<posx>1090</posx>
+						<posy>10</posy>
+						<width>130</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<info>System.Time</info>
+					</control>
+					
+					<control type="label">
+						<description>Artist/Studio</description>
+						<posy>35</posy>
+						<width>900</width>
+						<font>SeekBarMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Artist,$LOCALIZE[557]: ] $INFO[VideoPlayer.Studio,| $LOCALIZE[572]: ]</label>
+					</control>
+					
+					<control type="grouplist">
+						<description>Media Flags Area</description>
+						<posy>65</posy>
+						<width>400</width>
+						<height>60</height>
+						<itemgap>0</itemgap>
+						<align>left</align>
+						<orientation>horizontal</orientation>
+						<include>MediaFlagFadeAnim</include>
+						<include>PlayerVideoMediaFlags</include>
+						<include>PlayerAudioMediaFlags</include>
+					</control>
+
+					<control type="label">
+						<description>Elapsed/Duration Time</description>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Time] $INFO[Player.Duration,/ ]</label>
+					</control>
+					
+					<include>RewindSpeedLabels</include>
+					<include>FastForwardSpeedLabels</include>
+					
+					<control type="label">
+						<description>Finish Time</description>
+						<posx>1090</posx>
+						<posy>100</posy>
+						<width>535</width>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.FinishTime]</label>
+					</control>
+						
+					<control type="progress">
+						<description>Progressbar</description>
+						<posy>119</posy>
+						<width>1090</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>			
+			</control>
+			
+			<control type="group">		
+				<visible>VideoPlayer.Content(LiveTV) + Window.IsActive(FullScreenVideo)</visible>
+				<include>FSMediaInfoBackground</include>
+				<include>FSMediaInfoOpenCloseAnim</include>
+				
+				<control type="image">
+					<description>Cover</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>130</width>
+					<height>130</height>
+					<info>VideoPlayer.Cover</info>
+					<aspectratio align="left">keep</aspectratio>
+				</control>
+				
+				<control type="group">			
+					<posx>170</posx>
+		
+					<control type="label">
+						<description>Title/Year</description>
+						<posy>5</posy>
+						<width>980</width>
+						<font>SeekBarMediaInfoHeadFont</font>
+						<textcolor>MediaInfoHeadColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
+						<scroll>yes</scroll>
+					</control>
+					
+					<control type="label">
+						<description>System Time</description>
+						<posx>1090</posx>
+						<posy>10</posy>
+						<width>130</width>
+						<font>SeekBarMediaInfoFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<info>System.Time</info>
+					</control>
+					
+					<control type="label">
+						<description>Genre</description>
+						<posy>35</posy>
+						<width>900</width>
+						<font>SeekBarMediaInfoHeadFont2</font>
+						<textcolor>MediaInfoHeadColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Genre]</label>
+					</control>	
+
+					<control type="label">
+						<description>Elapsed/Duration Time</description>
+						<posy>100</posy>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[VideoPlayer.Time] $INFO[Player.Duration,/ ]</label>
+					</control>
+					
+					<include>RewindSpeedLabels</include>
+					<include>FastForwardSpeedLabels</include>
+					
+					<control type="label">
+						<description>Finish Time</description>
+						<posx>1090</posx>
+						<posy>100</posy>
+						<width>535</width>
+						<font>SeekBarMediaInfoProgressFont</font>
+						<textcolor>ProgressColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>right</align>
+						<label>$INFO[Player.FinishTime]</label>
+					</control>
+	
+					<control type="progress">
+						<description>Progressbar</description>
+						<posy>119</posy>
+						<width>1090</width>
+						<info>Player.Progress</info>
+					</control>
+				</control>			
+			</control>
+		</control>
+	</controls>
+</window>

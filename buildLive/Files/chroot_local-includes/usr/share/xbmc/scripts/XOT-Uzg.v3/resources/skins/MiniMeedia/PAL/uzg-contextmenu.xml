@@ -1,0 +1,186 @@
+<window>
+	<defaultcontrol>1001</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group" id="1000">
+			<posx>330</posx>
+			<posy>250</posy>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="image" id="1001">
+				<description>Context Menu Background Top</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>230</width>
+				<height>20</height>
+				<texture>xot_dialog-context-top.png</texture>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="image" id="1002">
+				<description>Context Menu Background Middle</description>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>230</width>
+				<texture>xot_dialog-context-middle.png</texture>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<control type="image" id="1003">
+				<description>Context Menu Background Bottom</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>230</width>
+				<height>20</height>
+				<texture>xot_dialog-context-bottom.png</texture>
+			</control>
+			<!-- ** Required ** Do not change <description> or <type> -->
+			<!-- Only adjust this one please. All others will be calculated-->
+			<control type="button" id="1101">
+				<description>Context Menu Button1</description>
+				<posx>18</posx>
+				<posy>21</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1109</onup>
+				<ondown>1102</ondown>
+			</control>
+			<control type="button" id="1102">
+				<description>Context Menu Button2</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1101</onup>
+				<ondown>1103</ondown>
+			</control>
+			<control type="button" id="1103">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1102</onup>
+				<ondown>1104</ondown>
+			</control>
+			<control type="button" id="1104">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1103</onup>
+				<ondown>1105</ondown>
+			</control>
+			<control type="button" id="1105">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1104</onup>
+				<ondown>1106</ondown>
+			</control>
+			<control type="button" id="1106">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1105</onup>
+				<ondown>1107</ondown>
+			</control>
+			<control type="button" id="1107">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1106</onup>
+				<ondown>1108</ondown>
+			</control>
+			<control type="button" id="1108">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1107</onup>
+				<ondown>1109</ondown>
+			</control>
+			<control type="button" id="1109">
+				<description>Context Menu Button3</description>
+				<posx>18</posx>
+				<posy>20</posy>
+				<width>200</width>
+				<height>32</height>
+				<font>font13</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<texturenofocus>xot_keyboard-btn-space.png</texturenofocus>
+				<texturefocus>xot_keyboard-btn-space-focus2.png</texturefocus>
+				<onup>1108</onup>
+				<ondown>1101</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,431 @@
+<window id="503">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<control type="group">		
+			<include>BackgroundMusic</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>
+			<include>BackgroundOpenCloseAnim</include>		
+		</control>
+		
+		<control type="group">		
+			<posy>MenuBarOffsetY</posy>		
+			<include>MenuBarImage</include>
+			<include>FileManagerDividerPaneImage</include>
+		
+			<control type="label">
+				<description>Path Left</description>
+				<posx>80</posx>
+				<width>450</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13000] $LOCALIZE[2]</label>
+			</control>	
+			
+			<control type="label">
+				<description>Path Right</description>
+				<posx>750</posx>
+				<width>450</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor3</textcolor>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[559]</label>
+			</control>
+
+			<control type="label">
+				<description>Num Objects Left</description>
+				<posx>535</posx>
+				<width>210</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[127]</label>
+				<visible>Control.HasFocus(50)</visible>
+			</control>	
+		
+			<control type="label">
+				<description>Num Objects Right</description>
+				<posx>535</posx>
+				<width>210</width>
+				<height>34</height>	
+				<font>MenuBarButtonFont</font>
+				<textcolor>DefaultColor2</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(100).NumItems] $LOCALIZE[127]</label>
+				<visible>Control.HasFocus(100)</visible>
+			</control>					
+		</control>
+		
+		<control type="group">	
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbMusicPlaylistEditor</include>
+			<include>WeatherNotification</include>	
+			<include>MediaPlayingNotification</include>
+		</control>
+		
+		<control type="group">
+			<description>Bottom Bar Area</description>
+			<posy>BottomPaneOffsetY</posy>	
+			<include>InfoPaneImage</include>
+			<include>InfoPaneMusicPlaylistEditorDetails</include>
+		</control>
+
+		<control type="group">
+			<include>MediaViewOpenCloseAnim</include>
+		
+			<control type="list" id="50">	
+				<description>System Music List</description>
+				<posx>80</posx>
+				<posy>92</posy>
+				<width>450</width>
+				<height>540</height>
+				<scrolltime>200</scrolltime>	
+				<wraparound>yes</wraparound>
+				<pagecontrol>150</pagecontrol>
+				<orientation>vertical</orientation>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>150</onleft>
+				<onright>285</onright>
+				<itemlayout width="340" height="36">
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>		
+				<focusedlayout width="340" height="36">	
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-focus.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-alt-focus.png</texture>
+						<visible>!Control.HasFocus(50)</visible>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>	
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>		
+			</control>
+
+			<control type="list" id="100">	
+				<description>Current Playlist List</description>
+				<posx>750</posx>
+				<posy>92</posy>
+				<width>450</width>
+				<height>540</height>
+				<scrolltime>200</scrolltime>	
+				<wraparound>yes</wraparound>
+				<pagecontrol>151</pagecontrol>
+				<orientation>vertical</orientation>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>285</onleft>
+				<onright>151</onright>
+				<itemlayout width="340" height="36">
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>				
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>		
+				<focusedlayout width="340" height="36">	
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-focus.png</texture>
+						<visible>Control.HasFocus(100)</visible>
+					</control>
+					<control type="image">
+						<width>450</width>
+						<height>34</height>	
+						<texture border="5">button-alt-focus.png</texture>
+						<visible>!Control.HasFocus(100)</visible>
+					</control>
+					<control type="image">
+						<posx>5</posx>
+						<posy>6</posy>
+						<width>23</width>
+						<height>23</height>
+						<texture>$INFO[ListItem.ActualIcon].png</texture>
+					</control>	
+					<control type="label">
+						<posx>35</posx>
+						<posy>17</posy>
+						<width>410</width>
+						<font>DefaultFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>		
+			</control>
+			
+			<control type="group">
+				<description>Music Info Area Left</description>
+				<posx>540</posx>
+				<posy>85</posy>
+				<width>200</width>
+				<visible>Control.HasFocus(50)</visible>
+				
+				<control type="image">
+					<posx>10</posx>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Container(50).ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+				</control>
+				
+				<control type="grouplist">
+					<posy>185</posy>
+					<width>200</width>
+					<control type="label">
+						<description>Title</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[556]</label>
+					</control>
+					<control type="textbox">
+						<description>Title Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(50).ListItem.Title]</label>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[557]</label>
+					</control>
+					<control type="textbox">
+						<description>Artist Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(50).ListItem.Artist]</label>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[558]</label>
+					</control>
+					<control type="textbox">
+						<description>Album Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(50).ListItem.Album]</label>
+					</control>
+					<control type="label">
+						<description>Genre</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[515]</label>
+					</control>
+					<control type="textbox">
+						<description>Genre Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(50).ListItem.Genre]</label>
+					</control>
+					<control type="label">
+						<description>Duration</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[555]</label>
+					</control>
+					<control type="textbox">
+						<description>Duration Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(50).ListItem.Duration]</label>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Music Info Area Right</description>
+				<posx>540</posx>
+				<posy>85</posy>
+				<width>200</width>
+				<visible>Control.HasFocus(100)</visible>
+				
+				<control type="image">
+					<posx>10</posx>
+					<width>180</width>
+					<height>180</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Container(100).ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+				</control>
+				
+				<control type="grouplist">
+					<posy>185</posy>
+					<width>200</width>
+					<control type="label">
+						<description>Title</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[556]</label>
+					</control>
+					<control type="textbox">
+						<description>Title Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(100).ListItem.Title]</label>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[557]</label>
+					</control>
+					<control type="textbox">
+						<description>Artist Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(100).ListItem.Artist]</label>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[558]</label>
+					</control>
+					<control type="textbox">
+						<description>Album Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(100).ListItem.Album]</label>
+					</control>
+					<control type="label">
+						<description>Genre</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[515]</label>
+					</control>
+					<control type="textbox">
+						<description>Genre Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(100).ListItem.Genre]</label>
+					</control>
+					<control type="label">
+						<description>Duration</description>
+						<include>PLSongInfoLabel</include>
+						<label>$LOCALIZE[555]</label>
+					</control>
+					<control type="textbox">
+						<description>Duration Value</description>
+						<include>PLSongInfoLabel2</include>
+						<label fallback="31000">$INFO[Container(100).ListItem.Duration]</label>
+					</control>
+				</control>
+			</control>	
+			
+			<control type="group" id="285">
+				<description>Options Button Area</description>
+				<posx>540</posx>
+				<posy>555</posy>
+				
+				<control type="group" id="286">			
+					<control type="button" id="6">
+						<description>Open</description>	
+						<width>99</width>
+						<height>34</height>
+						<label>$LOCALIZE[502]</label>	
+						<ondown>8</ondown>
+						<onleft>50</onleft>
+						<onright>7</onright>	
+					</control>		
+					<control type="button" id="7">
+						<description>Save</description>	
+						<posx>102</posx>
+						<width>99</width>
+						<height>34</height>
+						<label>$LOCALIZE[190]</label>
+						<ondown>8</ondown>
+						<onleft>6</onleft>
+						<onright>100</onright>
+					</control>
+				</control>		
+				
+				<control type="button" id="8">
+					<description>Clear</description>
+					<posy>36</posy>
+					<width>200</width>
+					<height>34</height>
+					<label>$LOCALIZE[192]</label>
+					<onup>286</onup>
+					<onleft>50</onleft>
+					<onright>100</onright>
+				</control>
+			</control>		
+				
+			<control type="scrollbar" id="150">
+				<posx>30</posx>
+				<posy>92</posy>
+				<height>540</height>
+				<visible>!Skin.HasSetting(HideScrollbar)</visible>
+				<onright>50</onright>
+			</control>	
+			
+			<control type="scrollbar" id="151">
+				<posx>1236</posx>
+				<posy>92</posy>
+				<height>540</height>
+				<visible>!Skin.HasSetting(HideScrollbar)</visible>
+				<onleft>100</onleft>
+			</control>	
+		</control>
+	</controls>	
+</window>

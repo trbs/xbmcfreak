@@ -1,0 +1,192 @@
+<window type="dialog" id="114">
+	<defaultcontrol always="true">107</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
+	
+	<coordinates>
+		<system>1</system>	
+		<origin x="0" y="0">true</origin>
+	</coordinates>	
+	
+	<controls>
+		<control type="group">
+			<visible>!Window.IsActive(Home) + !Window.IsActive(SlideShow)</visible>
+			<include>NowPlaying</include>
+			<include>NowPlayingPlayerControlsOpenCloseAnim</include>
+		</control>
+		
+		<control type="group">
+			<posy>646</posy>
+			<include>PlayerControlsPaneImage</include>
+			<include>PlayerControlsOpenCloseAnim</include>
+
+			<control type="grouplist" id="202">
+				<description>Player Controls</description>
+				<posx>485</posx>
+				<posy>14</posy>
+				<width>310</width>
+				<height>50</height>
+				<itemgap>10</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>	
+				<onleft>201</onleft>
+				<onright>203</onright>
+				<control type="button" id="106">
+					<description>Skip Prev</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-skip-prev-focus.png</texturefocus>
+					<texturenofocus>osd-skip-prev-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="105">
+					<description>Rewind</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-rewind-focus.png</texturefocus>
+					<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="button" id="104">
+					<description>Stop</description>
+					<posy>2</posy>
+					<width>46</width>
+					<height>46</height>
+					<texturefocus>osd-stop-focus.png</texturefocus>
+					<texturenofocus>osd-stop-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="togglebutton" id="107">
+					<description>Pause/Play</description>
+					<posy>2</posy>
+					<width>46</width>
+					<height>46</height>
+					<texturefocus>osd-pause-focus.png</texturefocus>
+					<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+					<alttexturefocus>osd-play-focus.png</alttexturefocus>
+					<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="108">
+					<description>Forward</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-forward-focus.png</texturefocus>
+					<texturenofocus>osd-forward-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>		
+				<control type="button" id="109">
+					<description>Skip Next</description>
+					<posy>5</posy>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-skip-next-focus.png</texturefocus>
+					<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+			</control>
+			
+			<control type="grouplist" id="203">
+				<description>Player Extra Controls</description>
+				<posx>840</posx>
+				<posy>19</posy>
+				<width>300</width>
+				<height>40</height>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<onleft>202</onleft>
+				<onright>201</onright>
+				<control type="button" id="250">
+					<description>Repeat</description>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Repeat)</onclick>
+				</control>
+				<control type="togglebutton" id="251">
+					<description>Random</description>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>osd-random-off-focus.png</texturefocus>
+					<texturenofocus>osd-random-off-nofocus.png</texturenofocus>
+					<usealttexture>Playlist.IsRandom</usealttexture>
+					<alttexturefocus>osd-random-on-focus.png</alttexturefocus>
+					<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>PlayerControl(Random)</onclick>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Repeat Control States</description>
+				<posx>840</posx>
+				<posy>19</posy>
+				
+				<control type="image">
+					<description>Repeat No Focus</description>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd-repeat-nofocus.png</texture>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<visible>!Control.HasFocus(250)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Repeat Focus</description>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd-repeat-focus.png</texture>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<visible>Control.HasFocus(250)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Repeat One No Focus</description>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd-repeat-one-nofocus.png</texture>
+					<visible>Playlist.IsRepeatOne</visible>
+					<visible>!Control.HasFocus(250)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Repeat One Focus</description>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd-repeat-one-focus.png</texture>
+					<visible>Playlist.IsRepeatOne</visible>
+					<visible>Control.HasFocus(250)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Repeat All No Focus</description>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd-repeat-all-nofocus.png</texture>
+					<visible>Playlist.IsRepeat</visible>
+					<visible>!Control.HasFocus(250)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Repeat All Focus</description>
+					<width>40</width>
+					<height>40</height>
+					<texture>osd-repeat-all-focus.png</texture>
+					<visible>Playlist.IsRepeat</visible>
+					<visible>Control.HasFocus(250)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

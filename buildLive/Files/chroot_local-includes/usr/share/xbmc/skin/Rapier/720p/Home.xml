@@ -1,0 +1,58 @@
+<window id="0">
+	<defaultcontrol always="true">510</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<control type="group">	
+			<include>BackgroundHome</include>
+			<include>BackgroundVideoPlaying</include>
+			<include>BackgroundMusicPlaying</include>
+			<include>BackgroundOpenCloseAnim</include>	
+		</control>
+	
+		<include condition="!Skin.HasSetting(HideHomeCategoryIcons) + !Skin.HasSetting(UseCustomCategoryIcons)">HomeCategoryIcons</include>
+		<include condition="!Skin.HasSetting(HideHomeCategoryIcons) + Skin.HasSetting(UseCustomCategoryIcons)">HomeCustomCategoryIcons</include>	
+		<include>DialogPopUpScreenDim</include>	
+					
+		<control type="group" id="510">	
+			<description>Bottom Bar Area</description>	
+			<posx>0</posx>
+			<posy>606</posy>
+			<include>BottomPaneTopHighlightImage</include>
+			<include>HomeMenuPaneImage</include>
+			<include>HomeSubMenuCoverBottomImage</include>
+			<include>HomeMenuPaneOpenCloseAnim</include>
+			<include>HomeMenuPaneSpecificCloseAnim</include>
+			<include condition="!Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuBasic</include>
+			<include condition="Skin.HasSetting(UseAdvancedHomeMenu)">HomeMenuAdvanced</include>
+			<include>HomeMenuCategoryFocusImages</include>
+			<include>HomeMenuPaneOverlay</include>
+			<include>HomeSubMenuCoverBottomOverlay</include>
+			<include condition="Skin.HasSetting(ShowHomeNavButtons)">HomeNavButtons</include>
+		</control>
+
+		<control type="group">
+			<visible>Player.HasMedia</visible>
+			<include>NowPlaying</include>
+			<include>NowPlayingOpenCloseAnim</include>
+		</control>
+		
+		<control type="group" id="505">		
+			<description>Menu Bar Area</description>			
+			<posy>MenuBarOffsetY</posy>	
+			<include>MenuBarImage</include>
+			<include>MenuBarRSSFeedsOpenCloseAnim</include>			
+			<include>MenuBarRSSFeeds</include>	
+			<visible>System.GetBool(LookAndFeel.EnableRSSFeeds)</visible>
+		</control>
+	
+		<control type="group">
+			<description>Top Bar Area</description>
+			<include>TopBarImage</include>
+			<include>SystemTray</include>
+			<include>BreadCrumbHome</include>
+			<include>WeatherNotification</include>
+			<include>MediaPlayingNotification</include>
+		</control>
+	</controls>		
+</window>

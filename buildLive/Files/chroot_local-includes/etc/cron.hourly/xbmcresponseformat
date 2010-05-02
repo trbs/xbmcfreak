@@ -1,0 +1,2 @@
+#!/bin/sh
+curl 'http://localhost:8080/xbmcCmds/xbmcHttp?command=SetResponseFormat()' >/dev/null 2>&1

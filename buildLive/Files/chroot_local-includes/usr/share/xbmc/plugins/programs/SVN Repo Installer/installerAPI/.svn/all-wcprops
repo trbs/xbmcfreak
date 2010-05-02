@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI
+END
+xbmcplugin_actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_actions.py
+END
+xbmcplugin_update.py
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_update.py
+END
+xbmcplugin_logviewer.py
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_logviewer.py
+END
+xbmcplugin_lib.py
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_lib.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/__init__.py
+END
+xbmcplugin_info.py
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_info.py
+END
+xbmcplugin_list.py
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_list.py
+END
+xbmcplugin_downloader.py
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/usr/share/xbmc/plugins/programs/SVN%20Repo%20Installer/installerAPI/xbmcplugin_downloader.py
+END

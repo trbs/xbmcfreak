@@ -1,0 +1,155 @@
+<window type="dialog" id="3006">
+	<defaultcontrol always="true">110</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<origin x="0" y="572">true</origin>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<include>HomeSubMenuBarImage</include>
+			<include>HomeSubMenuBarOpenCloseAnim</include>
+			
+			<control type="group">
+				<posx>10</posx>
+				<include>HomeSubMenuSlideAnim</include>
+
+				<control type="list" id="110">
+					<description>General Menu Bar</description>
+					<width>1260</width>
+					<height>34</height>
+					<ondown>Dialog.Close(3006)</ondown>
+					<orientation>horizontal</orientation>
+					<include>HomeSubMenuOpenCloseAnim</include>
+					<itemlayout width="180">
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>		
+					</itemlayout>
+					<focusedlayout width="180">
+						<control type="image">
+							<posy>-1</posy>
+							<width>180</width>
+							<height>36</height>
+							<texture border="0,0,0,2">button-submenu-focus.png</texture>
+							<include>HomeSubMenuFocusAnim</include>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<width>176</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>					
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Favourites</description>
+							<label>$LOCALIZE[1036]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow(Favourites)</onclick>
+							<visible>!Skin.HasSetting(CustomizeGeneralSubMenuItem1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem1CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem1CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem1) + !IsEmpty(Skin.String(GeneralSubMenuItem1CustomLabel))</visible>
+						</item>
+						<item id="2">
+							<description>Scripts</description>
+							<label>$LOCALIZE[10020]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>!Skin.HasSetting(CustomizeGeneralSubMenuItem2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem2CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem2CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem2) + !IsEmpty(Skin.String(GeneralSubMenuItem2CustomLabel))</visible>
+						</item>
+						<item id="3">
+							<description>Filemanager</description>
+							<label>$LOCALIZE[10003]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow(Filemanager)</onclick>
+							<visible>!Skin.HasSetting(CustomizeGeneralSubMenuItem3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem3CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem3CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem3) + !IsEmpty(Skin.String(GeneralSubMenuItem3CustomLabel))</visible>
+						</item>
+						<item id="4">
+							<description>Weather</description>
+							<label>$LOCALIZE[8]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow(Weather)</onclick>
+							<visible>!Skin.HasSetting(CustomizeGeneralSubMenuItem4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem4CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem4CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem4) + !IsEmpty(Skin.String(GeneralSubMenuItem4CustomLabel))</visible>
+						</item>
+						<item id="5">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem5CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem5CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem5) + !IsEmpty(Skin.String(GeneralSubMenuItem5CustomLabel))</visible>
+						</item>
+						<item id="6">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem6CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem6CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem6) + !IsEmpty(Skin.String(GeneralSubMenuItem6CustomLabel))</visible>
+						</item>
+						<item id="7">
+							<description>Custom Item</description>
+							<label>$INFO[Skin.String(GeneralSubMenuItem7CustomLabel)]</label>
+							<onclick>Dialog.Close(3006)</onclick>
+							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuItem7CustomParam)])</onclick>
+							<visible>Skin.HasSetting(CustomizeGeneralSubMenuItem7) + !IsEmpty(Skin.String(GeneralSubMenuItem7CustomLabel))</visible>
+						</item>
+					</content>						
+				</control>
+			</control>
+		</control>
+		
+		<control type="group">	
+			<description>Bottom Bar Area</description>	
+			<posy>34</posy>	
+			<include>HomeSubMenuCoverTopImage</include>		
+			<include>HomeSubMenuCoverTopOverlay</include>
+					
+			<control type="image">
+				<Description>General Category Focus</Description>
+				<include>HomeMenuCategoryFocusPos2</include>
+				<include>HomeMenuCategoryFocusDim</include>
+				<texture>special://skin/images/homecategories/focus/$INFO[System.Language]-general-text-focus.png</texture>
+				<include>HomeMenuCategoryFocusAnim2</include>
+			</control>	
+		</control>
+	</controls>
+</window>
