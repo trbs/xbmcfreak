@@ -32,7 +32,7 @@ chown -hR $xbmcUser:$xbmcUser /var/lib/transmission-daemon
 #configure sabnzbd
 sed -i "s/USER=xbmc/USER=$xbmcUser/g" /etc/default/sabnzbdplus
 tar zxvf /usr/share/xbmc/sabnzbd.tar.gz --directory=/home/$xbmcUser/
-sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/xbmc/.sabnzbd/sabnzbd.ini
+sed -i "s/home\/xbmc/home\/$xbmcUser/g" /home/$xbmcUser/.sabnzbd/sabnzbd.ini
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/.sabnzbd/
 /etc/init.d/sabnzbdplus restart
 
