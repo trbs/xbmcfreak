@@ -113,7 +113,8 @@ if ! ls live-installer*.udeb > /dev/null 2>&1 ; then
 	
         # This is the debian repository (as a reference) 
         #repoURL="http://ftp.debian.org/debian/pool/main/l/live-installer/" 
-        repoURL="http://archive.ubuntu.com/ubuntu/pool/universe/l/live-installer/" 
+        #repoURL="http://archive.ubuntu.com/ubuntu/pool/universe/l/live-installer/" 
+	repoURL="http://archive.ubuntu.com/ubuntu/pool/main/l/live-installer/"
         latestPackage=$(curl -x "" -s -f $repoURL | grep -o 'live[^"]*_i386.udeb' | sort -r -k2 -t_ -n | head -n 1) 
 
 	wget -q "$repoURL$latestPackage"
