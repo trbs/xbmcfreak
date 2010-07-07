@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/xbmc/!svn/ver/29142/trunk/tools/XBMCLive/SDK/buildBinaryDrivers/Files/chroot_sources
+END
+ubuntu.list.chroot.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildBinaryDrivers/Files/chroot_sources/ubuntu.list.chroot.karmic-variant
+END
+ubuntu.list.binary.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildBinaryDrivers/Files/chroot_sources/ubuntu.list.binary.karmic-variant
+END

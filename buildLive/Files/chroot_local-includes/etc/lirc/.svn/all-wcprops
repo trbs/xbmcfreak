@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/etc/lirc
+END
+hardware.conf
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/etc/lirc/hardware.conf
+END
+lircd.conf
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-includes/etc/lirc/lircd.conf
+END

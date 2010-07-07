@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/xbmc/!svn/ver/25401/trunk/tools/XBMCLive/SDK/buildDEBs/squashfs-udeb/debian
+END
+control
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/xbmc/!svn/ver/25400/trunk/tools/XBMCLive/SDK/buildDEBs/squashfs-udeb/debian/control
+END
+install
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/xbmc/!svn/ver/25401/trunk/tools/XBMCLive/SDK/buildDEBs/squashfs-udeb/debian/install
+END
+changelog
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/xbmc/!svn/ver/25400/trunk/tools/XBMCLive/SDK/buildDEBs/squashfs-udeb/debian/changelog
+END
+rules
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/xbmc/!svn/ver/25400/trunk/tools/XBMCLive/SDK/buildDEBs/squashfs-udeb/debian/rules
+END
+squashfs-udeb.postinst
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/xbmc/!svn/ver/25400/trunk/tools/XBMCLive/SDK/buildDEBs/squashfs-udeb/debian/squashfs-udeb.postinst
+END

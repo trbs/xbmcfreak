@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/xbmc/!svn/ver/29140/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources
+END
+ubuntu.list.binary.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/ubuntu.list.binary.lucid-variant
+END
+ubuntu.list.binary.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/ubuntu.list.binary.karmic-variant
+END
+xbmc.list.binary.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc.list.binary.lucid-variant
+END
+xbmc.binary.gpg
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc.binary.gpg
+END
+ubuntu.list.chroot.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/ubuntu.list.chroot.lucid-variant
+END
+xbmc-svn.list.binary.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc-svn.list.binary.lucid-variant
+END
+xbmc-svn.binary.gpg
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/xbmc/!svn/ver/26983/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc-svn.binary.gpg
+END
+xbmc.list.binary.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc.list.binary.karmic-variant
+END
+tvheadend.list.binary
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/tvheadend.list.binary
+END
+ubuntu.list.chroot.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/ubuntu.list.chroot.karmic-variant
+END
+xbmc-svn.list.binary.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc-svn.list.binary.karmic-variant
+END
+tvheadend.binary.gpg
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/xbmc/!svn/ver/26976/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/tvheadend.binary.gpg
+END
+xbmc.list.chroot.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc.list.chroot.lucid-variant
+END
+xbmc.chroot.gpg
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc.chroot.gpg
+END
+xbmc-svn.list.chroot.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc-svn.list.chroot.lucid-variant
+END
+xbmc-svn.chroot.gpg
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/xbmc/!svn/ver/26983/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc-svn.chroot.gpg
+END
+xbmc.list.chroot.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc.list.chroot.karmic-variant
+END
+tvheadend.list.chroot
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/tvheadend.list.chroot
+END
+xbmc-svn.list.chroot.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/xbmc-svn.list.chroot.karmic-variant
+END
+tvheadend.chroot.gpg
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/xbmc/!svn/ver/26976/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources/tvheadend.chroot.gpg
+END

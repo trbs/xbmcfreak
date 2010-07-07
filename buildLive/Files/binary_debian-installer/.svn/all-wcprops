@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/xbmc/!svn/ver/29455/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_debian-installer
+END
+preseed.cfg.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/xbmc/!svn/ver/29455/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_debian-installer/preseed.cfg.lucid-variant
+END
+udeb_exclude
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/xbmc/!svn/ver/25969/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_debian-installer/udeb_exclude
+END
+preseed.cfg.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/xbmc/!svn/ver/29455/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_debian-installer/preseed.cfg.karmic-variant
+END

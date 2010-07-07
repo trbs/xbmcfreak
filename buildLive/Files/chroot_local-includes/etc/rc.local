@@ -11,18 +11,6 @@
 #
 # By default this script does nothing.
 
-#insmod coretemp.ko for nvidia ion users
-GPU=$(lspci -nn | grep 0300)
-if [ "$(echo $GPU | grep 'nVidia Corporation ION')" ]; then
- insmod /lib/modules/2.6.31-20-generic/kernel/drivers/hwmon/coretemp.ko
-fi
-
-#insmod crystalhd.ko for crystalhd users
-BC=$(lspci -nn | grep 0300)
-if [ "$(echo $BC | grep Broadcom)" ]; then
- /sbin/insmod /lib/modules/`uname -r`/kernel/drivers/video/broadcom/crystalhd.ko >& /dev/null
-fi
-
 #enable resume from standby function for MS remotes
 echo USB0 > /proc/acpi/wakeup
 

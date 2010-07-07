@@ -1,0 +1,52 @@
+10
+
+dir
+31632
+https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildLive/Files
+https://xbmc.svn.sourceforge.net/svnroot/xbmc
+
+
+
+2010-07-02T13:34:54.658721Z
+31575
+lcapriotti
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+568bbfeb-2a22-0410-94d2-cc84cf5bfa90
+
+binary_local-hooks
+dir
+
+binary_debian-installer
+dir
+
+chroot_sources
+dir
+
+binary_local-includes
+dir
+
+binary_grub
+dir
+
+chroot_local-packageslists
+dir
+
+chroot_local-hooks
+dir
+
+chroot_local-includes
+dir
+

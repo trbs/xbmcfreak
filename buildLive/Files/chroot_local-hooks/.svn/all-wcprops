@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/xbmc/!svn/ver/31575/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks
+END
+14-setSysctl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/14-setSysctl
+END
+15-disableFloppy.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svnroot/xbmc/!svn/ver/31467/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/15-disableFloppy.lucid-variant
+END
+06-addToPolicyKitConf.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/06-addToPolicyKitConf.karmic-variant
+END
+11-setLirc
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/11-setLirc
+END
+04-setTimeZone
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/04-setTimeZone
+END
+09-setCPUFreqUtils
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/09-setCPUFreqUtils
+END
+17-wirelessUpgrade
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/xbmc/!svn/ver/31575/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/17-wirelessUpgrade
+END
+02-setGLDrivers.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/xbmc/!svn/ver/29456/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/02-setGLDrivers.lucid-variant
+END
+13-setTvheadend
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/13-setTvheadend
+END
+00-installCrystalHD.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/xbmc/!svn/ver/30284/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/00-installCrystalHD.lucid-variant
+END
+10-setUsplashTheme.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/xbmc/!svn/ver/27621/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/10-setUsplashTheme.karmic-variant
+END
+05-changeAdduserDefaults
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/05-changeAdduserDefaults
+END
+00-installCrystalHD.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svnroot/xbmc/!svn/ver/29141/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/00-installCrystalHD.karmic-variant
+END
+01-holdKernel.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svnroot/xbmc/!svn/ver/29144/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/01-holdKernel.karmic-variant
+END
+16-alsaUpgrade
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/xbmc/!svn/ver/31574/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/16-alsaUpgrade
+END
+03-setLocales
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/03-setLocales
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/xbmc/!svn/ver/31560/trunk/tools/XBMCLive/SDK/buildDEBs
+END
+build-live-initramfs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/xbmc/!svn/ver/31558/trunk/tools/XBMCLive/SDK/buildDEBs/build-live-initramfs.sh
+END
+build-installer.sh.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/xbmc/!svn/ver/31560/trunk/tools/XBMCLive/SDK/buildDEBs/build-installer.sh.lucid-variant
+END
+build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/xbmc/!svn/ver/27691/trunk/tools/XBMCLive/SDK/buildDEBs/build.sh
+END
+build-installer.sh.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/xbmc/!svn/ver/28536/trunk/tools/XBMCLive/SDK/buildDEBs/build-installer.sh.karmic-variant
+END
+mkDeb.sh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildDEBs/mkDeb.sh
+END

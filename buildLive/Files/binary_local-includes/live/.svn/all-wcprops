@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/xbmc/!svn/ver/29141/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_local-includes/live
+END
+nvidia.module.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/xbmc/!svn/ver/29141/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_local-includes/live/nvidia.module.karmic-variant
+END
+amd.module.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/xbmc/!svn/ver/29141/trunk/tools/XBMCLive/SDK/buildLive/Files/binary_local-includes/live/amd.module.karmic-variant
+END

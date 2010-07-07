@@ -1,8 +1,44 @@
-#!/bin/sh
+#!/bin/bash
 
+#      Copyright (C) 2005-2008 Team XBMC
+#      http://www.xbmc.org
 #
-# Depencency list: git-core apt-cacher-ng debootstrap asciidoc docbook-xsl curl build-essential
+#  This Program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2, or (at your option)
+#  any later version.
 #
+#  This Program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with XBMC; see the file COPYING.  If not, write to
+#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+#  http://www.gnu.org/copyleft/gpl.html
+
+
+echo
+echo "Checking availability of required packages..."
+
+REQUIREDPACKAGES=( git-core debootstrap asciidoc docbook-xsl curl build-essential debhelper autoconf automake autotools-dev)
+NOTINSTALLED=()
+
+for k in "${REQUIREDPACKAGES[@]}" ; do 
+	if [ "$( dpkg -l  | grep "ii" | grep "$k" )" = "" ] ; then
+		NOTINSTALLED+=($k)
+	fi
+done
+
+if [ ${#NOTINSTALLED[@]} -gt 0 ]; then
+	echo
+	echo "FATAL: the following packages are missing, exiting." 
+	for k in "${NOTINSTALLED[@]}"; do 
+		echo "  $k"; 
+	done 
+	exit 1 
+fi 
 
 #
 # Make sure only root can run our script
@@ -11,9 +47,6 @@ if [ "$(id -u)" != "0" ]; then
 	exit 1
 fi
 
-# May be useful for debugging purposes
-# KEEP_WORKAREA="yes"
-
 # Clean our mess on exiting
 cleanup()
 {
@@ -21,7 +54,7 @@ cleanup()
 		if [ -z "$KEEP_WORKAREA" ]; then
 			echo "Cleaning workarea..." 
 			rm -rf $WORKPATH
-			if [ -f $THISDIR/binary.* ]; then
+			if [ -f $THISDIR/binary.iso ]; then
 				chmod 777 $THISDIR/binary.* 
 			fi
 			echo "All clean"
@@ -30,28 +63,34 @@ cleanup()
 }
 trap 'cleanup' EXIT TERM INT
 
-# Using apt-cacher(-ng) to speed up apt-get downloads
-export APT_HTTP_PROXY="http://127.0.0.1:3142"
-export APT_FTP_PROXY="http://127.0.0.1:3142"
 
-# We use apt-cacher when retrieving d-i udebs, too
-export http_proxy="http://127.0.0.1:3142"
-export ftp_proxy="http://127.0.0.1:3142"
-
-# Closest Ubuntu mirror
-export UBUNTUMIRROR_BASEURL="http://ubuntuarchive.eweka.nl/ubuntu/"
+if [ -z $VARIANTNAME ]; then
+	# Get host codename by default
+	export VARIANTNAME=$(cat /etc/lsb-release | grep CODENAME | cut -d= -f2)
+fi
 
 THISDIR=$(pwd)
 WORKDIR=workarea
 WORKPATH=$THISDIR/$WORKDIR
+export WORKPATH
+export WORKDIR
+
+echo ""
 
 if [ -d "$WORKPATH" ]; then
+	echo "Cleaning workarea..." 
 	rm -rf $WORKPATH
 fi
 mkdir $WORKPATH
 
+if ls $THISDIR/binary.* > /dev/null 2>&1; then
+	rm -rf $THISDIR/binary.*
+fi
+
+echo "Creating new workarea..." 
+
 # cp all (except svn directories) into workarea
-rsync -r --exclude=.svn --exclude=$WORKDIR . $WORKDIR
+rsync -r -l --exclude=.svn --exclude=$WORKDIR . $WORKDIR
 
 if ! which lh > /dev/null ; then
 	cd $WORKPATH/Tools
@@ -61,16 +100,18 @@ if ! which lh > /dev/null ; then
 			if [ "$?" -ne "0" ]; then
 				exit 1
 			fi
-			
+
 			# Saved, to avoid cloning for multiple builds
 			tar cvf live-helper.tar live-helper  > /dev/null 2>&1
 		else
 			tar xvf live-helper.tar  > /dev/null 2>&1
 		fi
 
-		# Fix for missing directory for karmic d-i, to be removed when fixed upstream!
+		# Fix for missing directory for Ubuntu's d-i, to be removed when fixed upstream!
 		cd live-helper/data/debian-cd
-		ln -s lenny karmic
+		if [ ! -h $VARIANTNAME ]; then
+			ln -s lenny $VARIANTNAME
+		fi
 		cd $WORKPATH/Tools
 	fi
 
@@ -82,69 +123,95 @@ if ! which lh > /dev/null ; then
 	cd $THISDIR
 fi
 
+echo "Start building, using Ubuntu $VARIANTNAME repositories ..."
+
+
+cd $WORKPATH
+
+# Put in place distro variants, remove other variants
+find ./  -name "*-variant" | \
+while read i; do
+#	if [[ $i =~ $VARIANTNAME-variant ]]; then
+	if [ -n "$(echo $i | grep $VARIANTNAME-variant)" ]; then
+		j=${i%%.$VARIANTNAME-variant}
+		mv $i $j
+	else
+		rm -rf $i
+	fi
+done
+
+# Execute hooks if env variable is defined
+if [ -n "$SDK_BUILDHOOKS" ]; then
+	for hook in $SDK_BUILDHOOKS; do
+		if [ -x $hook ]; then
+			$hook
+		fi
+	done
+fi
+
 #
 # Build needed packages
 #
-cd $WORKPATH/buildDEBs
-./build.sh
-if [ "$?" -ne "0" ]; then
-	exit 1
+if [ -f $WORKPATH/buildDEBs/build.sh ]; then
+	echo ""
+	echo "------------------------"
+	echo "Build needed packages..."
+	echo "------------------------"
+	echo ""
+
+	cd $WORKPATH/buildDEBs
+	./build.sh
+	if [ "$?" -ne "0" ]; then
+		exit 1
+	fi
+	cd $THISDIR
 fi
-cd $THISDIR
 
 #
 # Build binary drivers
 #
-cd $WORKPATH/buildBinaryDrivers
-./build.sh
-if [ "$?" -ne "0" ]; then
-	exit 1
+if [ -f $WORKPATH/buildBinaryDrivers/build.sh ]; then
+	echo ""
+	echo "-----------------------"
+	echo "Build binary drivers..."
+	echo "-----------------------"
+	echo ""
+
+	cd $WORKPATH/buildBinaryDrivers
+	./build.sh
+	if [ "$?" -ne "0" ]; then
+		exit 1
+	fi
+	cd $THISDIR
 fi
-cd $THISDIR
 
 #
 # Copy all needed files in place for the real build
 #
-mkdir -p $WORKPATH/buildLive/Files/chroot_local-packages &> /dev/null
-mkdir -p $WORKPATH/buildLive/Files/binary_local-udebs &> /dev/null
-mkdir -p $WORKPATH/buildLive/Files/binary_local-includes/live/restrictedDrivers &> /dev/null
 
-if ! ls $WORKPATH/buildDEBs/live-initramfs*.* > /dev/null 2>&1; then
-        echo "Files missing (1), exiting..."
-        exit 1
+filesToRun=$(ls $WORKPATH/copyFiles-*.sh 2> /dev/null)
+if [ -n "$filesToRun" ]; then
+	for hook in $filesToRun; do
+		$hook
+		if [ "$?" -ne "0" ]; then
+			exit 1
+		fi
+	done
 fi
-cp $WORKPATH/buildDEBs/live-initramfs*.* $WORKPATH/buildLive/Files/chroot_local-packages
-
-if ! ls $WORKPATH/buildDEBs/squashfs-udeb*.* > /dev/null 2>&1; then
-        echo "Files missing (2), exiting..."
-        exit 1
-fi
-cp $WORKPATH/buildDEBs/squashfs-udeb*.* $WORKPATH/buildLive/Files/binary_local-udebs
-
-if ! ls $WORKPATH/buildDEBs/live-installer*.* > /dev/null 2>&1; then
-        echo "Files missing (3), exiting..."
-        exit 1
-fi
-cp $WORKPATH/buildDEBs/live-installer*.* $WORKPATH/buildLive/Files/binary_local-udebs
-
-if ! ls $WORKPATH/buildDEBs/xbmclive-installhelpers*.* > /dev/null 2>&1; then
-        echo "Files missing (4), exiting..."
-        exit 1
-fi
-cp $WORKPATH/buildDEBs/xbmclive-installhelpers*.* $WORKPATH/buildLive/Files/binary_local-udebs
-
-if ! ls $WORKPATH/buildBinaryDrivers/*.ext3 > /dev/null 2>&1; then
-        echo "Files missing (5), exiting..."
-        exit 1
-fi
-cp $WORKPATH/buildBinaryDrivers/*.ext3 $WORKPATH/buildLive/Files/binary_local-includes/live/restrictedDrivers
 
 #
 # Perform XBMCLive image build
 #
+
+echo ""
+echo "-------------------------------"
+echo "Perform XBMCLive image build..."
+echo "-------------------------------"
+echo ""
+
 cd $WORKPATH/buildLive
 ./build.sh
 cd $THISDIR
 
-mv $WORKPATH/buildLive/binary.iso .
-chmod 777 binary.iso
+mv $WORKPATH/buildLive/binary.* .
+chmod 777 binary.*

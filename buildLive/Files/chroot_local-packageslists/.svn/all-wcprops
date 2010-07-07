@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/xbmc/!svn/ver/31470/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-packageslists
+END
+packages.list.karmic-variant
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/xbmc/!svn/ver/28563/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-packageslists/packages.list.karmic-variant
+END
+packages.list.lucid-variant
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/xbmc/!svn/ver/31470/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-packageslists/packages.list.lucid-variant
+END
