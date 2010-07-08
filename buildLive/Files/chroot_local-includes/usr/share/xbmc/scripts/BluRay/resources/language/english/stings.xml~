@@ -1,9 +1,0 @@
-<strings>
-    <string id="30000">Use local or remote MakeMKV</string>
-    <string id="40001">Local</string>
-    <string id="40002">Remote</string>
-    <string id="30001">MakeMKV location</string>
-    <string id="31000">Stream location</string>
-    <string id="31001">IP address</string>
-    <string id="31002">Port number</string>
-</strings>
