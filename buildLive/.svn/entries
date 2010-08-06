@@ -1,14 +1,14 @@
 10
 
 dir
-31632
+32416
 https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildLive
 https://xbmc.svn.sourceforge.net/svnroot/xbmc
 
 
 
-2010-07-02T13:34:54.658721Z
-31575
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 
 
@@ -69,10 +69,10 @@ file
 
 
 
-2010-06-27T08:02:19.748376Z
-fc16e67b494223c73c4050972ed77d65
-2010-01-25T09:44:07.170964Z
-27158
+2010-08-02T07:01:48.417796Z
+06f409172004f3a0c84521bec1c51093
+2010-08-01T16:00:54.055736Z
+32401
 lcapriotti
 has-props
 
@@ -95,7 +95,7 @@ has-props
 
 
 
-1479
+1478
 
 mkConfig.sh.karmic-variant
 file

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/svnroot/xbmc/!svn/ver/31575/trunk/tools/XBMCLive/SDK/buildLive
+/svnroot/xbmc/!svn/ver/32403/trunk/tools/XBMCLive/SDK/buildLive
 END
 mkConfig.sh.lucid-variant
 K 25
@@ -13,7 +13,7 @@ build.sh
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svnroot/xbmc/!svn/ver/27158/trunk/tools/XBMCLive/SDK/buildLive/build.sh
+/svnroot/xbmc/!svn/ver/32401/trunk/tools/XBMCLive/SDK/buildLive/build.sh
 END
 mkConfig.sh.karmic-variant
 K 25

@@ -1,14 +1,14 @@
 10
 
 dir
-31632
+32416
 https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildBinaryDrivers/Files/chroot_local-hooks
 https://xbmc.svn.sourceforge.net/svnroot/xbmc
 
 
 
-2010-02-11T14:46:17.325856Z
-27654
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2010-06-27T08:02:50.012384Z
-d04f83fb08021bc42c5dacbcf481cc6f
-2010-02-11T14:46:17.325856Z
-27654
+2010-08-02T07:01:48.470005Z
+ef68b015d3113720664f8f554d91518a
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 has-props
 
@@ -58,7 +58,7 @@ has-props
 
 
 
-3090
+3088
 
 20-buildAMD.sh
 file
@@ -66,10 +66,10 @@ file
 
 
 
-2010-06-27T08:02:50.012384Z
-363df9949539b022fcca50c84051b08a
-2010-02-11T14:46:17.325856Z
-27654
+2010-08-02T07:01:48.474004Z
+8aa1eb004092e664cb63e3f5a96a5e61
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 has-props
 
@@ -92,7 +92,7 @@ has-props
 
 
 
-2283
+2281
 
 10-buildBC.sh
 file
@@ -100,10 +100,10 @@ file
 
 
 
-2010-06-27T08:02:50.012384Z
-0c02a02dd195b2a641dbd4cf3e19bbfd
-2010-02-11T14:46:17.325856Z
-27654
+2010-08-02T07:01:48.474004Z
+b327e74f84cc417651f7c00ea1c43990
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 
 
@@ -126,5 +126,5 @@ lcapriotti
 
 
 
-2396
+2392
 

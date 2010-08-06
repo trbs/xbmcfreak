@@ -1,7 +1,7 @@
 10
 
 dir
-31632
+32416
 https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_sources
 https://xbmc.svn.sourceforge.net/svnroot/xbmc
 
@@ -366,14 +366,14 @@ lcapriotti
 
 182
 
-xbmc-svn.list.binary.karmic-variant
+xbmc.list.chroot.lucid-variant
 file
 
 
 
 
-2010-06-27T08:01:46.940379Z
-ad0002b43ddd3ba75a43c7a46d1be6e2
+2010-06-27T08:01:46.936381Z
+22dd0fb21fc17f41b5e999d5c9b8aba5
 2010-02-10T16:53:22.542068Z
 27621
 lcapriotti
@@ -398,7 +398,7 @@ lcapriotti
 
 
 
-142
+128
 
 tvheadend.binary.gpg
 file
@@ -434,14 +434,14 @@ lcapriotti
 
 2384
 
-xbmc.list.chroot.lucid-variant
+xbmc-svn.list.binary.karmic-variant
 file
 
 
 
 
-2010-06-27T08:01:46.936381Z
-22dd0fb21fc17f41b5e999d5c9b8aba5
+2010-06-27T08:01:46.940379Z
+ad0002b43ddd3ba75a43c7a46d1be6e2
 2010-02-10T16:53:22.542068Z
 27621
 lcapriotti
@@ -466,7 +466,7 @@ lcapriotti
 
 
 
-128
+142
 
 xbmc.chroot.gpg
 file

@@ -1,37 +1,22 @@
-#!/bin/bash
-
-#      Copyright (C) 2005-2010 Team XBMC
-#      http://www.xbmc.org
-#
-#  This Program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2, or (at your option)
-#  any later version.
-#
-#  This Program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-#  GNU General Public License for more details.
-#
-#  You should have received a copy of the GNU General Public License
-#  along with XBMC; see the file COPYING.  If not, write to
-#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
-#  http://www.gnu.org/copyleft/gpl.html
-
-# This script will restart Lirc upon resume.
-
-. /usr/lib/pm-utils/functions
-
-case "$1" in
-        hibernate|suspend)
+# Script to disable lirc before suspend and restart after wake.
+ 
+case "${1}" in
+        suspend|hibernate)
+		if [ "$(pidof xbmc.bin)" ] ; then
+			wget -q -b -O /dev/null -o /dev/null "http://127.0.0.1:8080/xbmcCmds/xbmcHttp?command=ExecBuilt&Inparameter=LIRC.Stop"
+		fi
                 /etc/init.d/lirc stop
                 ;;
-        thaw|resume)
+        resume|thaw)
+ # If remote still does not work after suspend, uncomment the lines below. 
+ # Note you may need to change "lirc_mceusb". See output from 'sudo lsmod | grep lirc' for module name.
+                #rmmod lirc_mceusb
+                #modprobe lirc_mceusb
                 /etc/init.d/lirc start
+		if [ "$(pidof xbmc.bin)" ] ; then
+			wget -q -b -O /dev/null -o /dev/null "http://127.0.0.1:8080/xbmcCmds/xbmcHttp?command=ExecBuiltIn&parameter=LIRC.Start"
+		fi
                 ;;
-        *)
-                ;;
-
 esac
 
-exit $?
+

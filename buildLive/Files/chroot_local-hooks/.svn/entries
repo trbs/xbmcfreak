@@ -1,14 +1,14 @@
 10
 
 dir
-31632
+32416
 https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks
 https://xbmc.svn.sourceforge.net/svnroot/xbmc
 
 
 
-2010-07-02T13:34:54.658721Z
-31575
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 
 
@@ -236,33 +236,12 @@ file
 
 
 
-2010-07-03T09:55:08.854415Z
-4dbf5559fc2cda2a88e7c5f6019de7df
-2010-07-02T13:34:54.658721Z
-31575
+
+23d26fb0c7b3fdd789aba9d79720b28f
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2248
 
 02-setGLDrivers.lucid-variant
 file
@@ -338,10 +317,10 @@ file
 
 
 
-2010-06-27T08:02:16.396382Z
-4263e8969f7188ce28397fe52e6ebfc7
-2010-05-18T10:17:00.992738Z
-30284
+2010-08-02T07:01:48.393510Z
+9bfc29ebe1b8059402710b9244955b62
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 has-props
 
@@ -364,7 +343,7 @@ has-props
 
 
 
-2091
+2090
 
 10-setUsplashTheme.karmic-variant
 file
@@ -468,40 +447,6 @@ has-props
 
 1006
 
-16-alsaUpgrade
-file
-
-
-
-
-2010-07-03T09:55:08.858416Z
-7b39e40da0ddc61be7be4c2a32791bc4
-2010-07-02T13:32:34.189045Z
-31574
-lcapriotti
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1943
-
 01-holdKernel.karmic-variant
 file
 
@@ -535,6 +480,40 @@ has-props
 
 
 1077
+
+16-alsaUpgrade
+file
+
+
+
+
+2010-08-02T07:01:48.393510Z
+bc2713f9ec68edf6b05a2a40009d5e99
+2010-08-01T16:07:10.721224Z
+32403
+lcapriotti
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1952
 
 03-setLocales
 file

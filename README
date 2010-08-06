@@ -1,3 +1,14 @@
+svn32416 (svn)
+
+- advancedsettings.xml added for Nvidia ION GPU's
+- sources.xml added
+- coretemp modules added to /etc/modules
+- rtmpdump binaries added
+- compat-wireless-2.6.35 package (rc6)
+- kernel 2.6.32-24
+- wakeonlan added
+- ethtool and locate added
+
 10.08 (SVN):
 - started from scratch by import latest SVN
 

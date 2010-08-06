@@ -11,8 +11,11 @@
 #
 # By default this script does nothing.
 
+#wakeonlanconfig
+update-rc.d -f wakeonlanconfig defaults
+
 #enable resume from standby function for MS remotes
-echo USB0 > /proc/acpi/wakeup
+echo "USB0" > /proc/acpi/wakeup
 
 #execute runonce script
 if [ ! -e "/usr/share/xbmc/runonce" ]; then

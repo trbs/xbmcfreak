@@ -9,6 +9,7 @@ chown -hR $xbmcUser:$xbmcUser /var/lib/transmission-daemon
 
 #configure samba
 sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/samba/smb.conf
+#sed -i "s/guest account = xbmc/guest account = $xbmcUser/g" /etc/samba/smb.conf
 
 #create shares
 if [ ! -d "/home/$xbmcUser/Downloads" ]; then
@@ -36,12 +37,41 @@ mkdir /home/$xbmcUser/Videos
 chmod 755 /home/$xbmcUser/Videos
 fi
 
+#copy sources.xml and upnpserver.xml
+cp /usr/share/xbmc/sources.xml /home/$xbmcUser/.xbmc/userdata/
+cp /usr/share/xbmc/upnpserver.xml /home/$xbmcUser/.xbmc/userdata/
+
 #mt-daapd
 sed -i "s/home\/xbmc/home\/$xbmcUser/g" /etc/mt-daapd.conf
 update-rc.d avahi-daemon defaults
 
+#sabnzbd
+sed -i "s/USER=xbmc/USER=$xbmcUser/g" /etc/default/sabnzbdplus
+
 #fix user rights
 chown $xbmcUser:$xbmcUser /home/$xbmcUser/ -R
+
+#fix makemkv
+#ldconfig
+chmod 777 /usr/bin/makemkv
+chmod 777 /usr/bin/makemkvcon
+chown $xbmcUser:$xbmcUser /usr/bin/makemkv -R
+chown $xbmcUser:$xbmcUser /usr/bin/makemkvcon -R
+
+#fix user rights rtmpdump
+chown $xbmcUser:$xbmcUser /usr/local/bin/rtmpdump -R
+chown $xbmcUser:$xbmcUser /usr/local/sbin/rtmp* -R
+
+#hdmi sound click fix
+cp /usr/share/xbmc/system/keymaps/remote.xml /home/$xbmcUser/.xbmc/userdata/keymaps/remote.xml -rf
+cp /usr/share/xbmc/system/keymaps/keyboard.xml /home/$xbmcUser/.xbmc/userdata/keymaps/keyboard.xml -rf
+
+#check Nvidia ION GPU
+if lspci -nn | grep 'nVidia Corporation ION' &> /dev/null ; then
+  echo found Nvidia ION GPU
+  cp /usr/share/xbmc/ion-adv.xml /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml
+  chown $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc -R
+fi
 
 #remove runonce
 rm -f /usr/share/xbmc/runonce

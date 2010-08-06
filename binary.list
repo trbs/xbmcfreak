@@ -206,11 +206,10 @@
 /install/preseed.cfg
 /install/vmlinuz
 /live
-/live/filesystem.packages
-/live/filesystem.size
 /live/filesystem.squashfs
 /live/initrd.img
 /live/memtest
+/live/packages.txt
 /live/parameters.txt
 /live/vmlinuz
 /md5sum.txt

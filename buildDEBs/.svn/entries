@@ -1,14 +1,14 @@
 10
 
 dir
-31632
+32416
 https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildDEBs
 https://xbmc.svn.sourceforge.net/svnroot/xbmc
 
 
 
-2010-07-02T08:45:45.371926Z
-31560
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2010-07-03T09:55:09.210416Z
-a169a7ca4904eba650039c124761414c
-2010-07-02T08:33:56.299411Z
-31558
+2010-08-02T07:01:48.426004Z
+185384455edf7952b29771fab8833ee2
+2010-08-01T16:07:10.721224Z
+32403
 lcapriotti
 has-props
 
@@ -58,7 +58,7 @@ has-props
 
 
 
-2114
+2112
 
 xbmclive-installhelpers
 dir

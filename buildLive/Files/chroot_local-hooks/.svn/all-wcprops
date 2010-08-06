@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svnroot/xbmc/!svn/ver/31575/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks
+/svnroot/xbmc/!svn/ver/32403/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks
 END
 14-setSysctl
 K 25
@@ -43,7 +43,7 @@ END
 K 25
 svn:wc:ra_dav:version-url
 V 107
-/svnroot/xbmc/!svn/ver/31575/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/17-wirelessUpgrade
+/svnroot/xbmc/!svn/ver/32403/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/17-wirelessUpgrade
 END
 02-setGLDrivers.lucid-variant
 K 25
@@ -61,7 +61,7 @@ END
 K 25
 svn:wc:ra_dav:version-url
 V 122
-/svnroot/xbmc/!svn/ver/30284/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/00-installCrystalHD.lucid-variant
+/svnroot/xbmc/!svn/ver/32403/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/00-installCrystalHD.lucid-variant
 END
 10-setUsplashTheme.karmic-variant
 K 25
@@ -91,7 +91,7 @@ END
 K 25
 svn:wc:ra_dav:version-url
 V 103
-/svnroot/xbmc/!svn/ver/31574/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/16-alsaUpgrade
+/svnroot/xbmc/!svn/ver/32403/trunk/tools/XBMCLive/SDK/buildLive/Files/chroot_local-hooks/16-alsaUpgrade
 END
 03-setLocales
 K 25
