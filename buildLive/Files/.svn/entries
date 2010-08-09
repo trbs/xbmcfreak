@@ -1,52 +1,0 @@
-10
-
-dir
-32416
-https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/SDK/buildLive/Files
-https://xbmc.svn.sourceforge.net/svnroot/xbmc
-
-
-
-2010-08-01T16:07:10.721224Z
-32403
-lcapriotti
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-568bbfeb-2a22-0410-94d2-cc84cf5bfa90
-
-binary_local-hooks
-dir
-
-binary_debian-installer
-dir
-
-chroot_sources
-dir
-
-binary_local-includes
-dir
-
-binary_grub
-dir
-
-chroot_local-packageslists
-dir
-
-chroot_local-hooks
-dir
-
-chroot_local-includes
-dir
-
