@@ -1,11 +1,11 @@
-beta2 10.00
+10.00 beta2:
 
 - /var/www/index.html added
 - Nvidia ION Alsa scripts added
 - /bin/nvclock added
 - XBMCFreak.sh using the new Hooks instead of runonce
 
-svn32416 (svn)
+svn32416 (svn):
 
 - advancedsettings.xml added for Nvidia ION GPU's
 - sources.xml added
