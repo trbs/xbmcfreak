@@ -75,9 +75,9 @@ make install
 popd
 pushd .
 
-rm -f alsa-driver*
-rm -f alsa-lib*
-rm -f alsa-utils*
+rm -rf alsa-driver*
+rm -rf alsa-lib*
+rm -rf alsa-utils*
 
 # TODO CHECK
 # alsaconf
@@ -85,6 +85,8 @@ rm -f alsa-utils*
 apt-get -y remove build-essential ncurses-dev gettext xmlto libasound2-dev
 apt-get -y remove libncursesw5-dev
 apt-get -y autoremove
+
+dpkg -l | grep ^rc | cut -d' ' -f3|xargs dpkg -P
 
 rm /bin/uname
 mv /bin/uname.ori /bin/uname

@@ -200,6 +200,13 @@
 /dists/stable
 /dists/testing
 /dists/unstable
+/Hooks
+/Hooks/hwSetup_AMD.sh
+/Hooks/hwSetup_NVIDIA_HDMI.sh
+/Hooks/hwSetup_NVIDIA.sh
+/Hooks/setupSources.sh
+/Hooks/XBMCFreakDev.sh
+/Hooks/XBMCFreak.sh
 /install
 /install/earlyPreseed
 /install/initrd.gz
