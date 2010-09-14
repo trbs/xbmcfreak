@@ -34,10 +34,7 @@ if [ ! -d "/home/$xbmcUser/Downloads" ]; then
         chmod 755 /home/$xbmcUser/Downloads
 fi
 
-#create userdata dir
-if [ ! -d "/home/$xbmcUser/.xbmc/userdata" ]; then
-        mkdir /home/$xbmcUser/.xbmc/userdata
-fi
+mkdir -p /home/$xbmcUser/.xbmc/userdata &> /dev/null
 
 #copy guisettings.xml
 cp /usr/share/xbmc/dev/guisettings-dev.xml /home/$xbmcUser/.xbmc/userdata/guisettings.xml -Rf
