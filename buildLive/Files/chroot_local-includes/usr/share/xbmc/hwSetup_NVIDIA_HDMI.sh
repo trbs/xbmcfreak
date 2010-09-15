@@ -183,7 +183,7 @@ alsa-utils start &> /dev/null
 /usr/bin/amixer -q -c 0 sset 'IEC958 Default PCM',0 unmute &> /dev/null
 /usr/bin/amixer -q -c 0 sset 'IEC958',0 unmute &> /dev/null
 /usr/bin/amixer -q -c 0 sset 'IEC958',1 unmute &> /dev/null
-
+/usr/bin/amixer -c 1 sset 'IEC958' unmute &> /dev/null
 #
 # Store alsa settings
 #

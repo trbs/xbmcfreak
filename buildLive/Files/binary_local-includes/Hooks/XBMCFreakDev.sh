@@ -46,7 +46,7 @@ aptitude -y install nfs-common
 echo "192.168.0.111:/volume1/misc/Videos /home/xbmc/Videos nfs defaults 0 0" >> /etc/fstab
 echo "192.168.0.111:/volume1/misc/Music /home/xbmc/Music nfs defaults 0 0" >> /etc/fstab
 echo "192.168.0.111:/volume1/misc/Pictures /home/xbmc/Pictures nfs defaults 0 0" >> /etc/fstab
-echo "192.168.0.111:/volume1/misc/TV\040Shows /home/xbmc/TV\040Shows nfs defaults 0 0" >> /etc/fstab
+echo "192.168.0.111:/volume1/misc/TV Shows /home/xbmc/TV Shows nfs defaults 0 0" | sed -e "s/TV Shows/TV\\\040Shows/g" >> /etc/fstab
 echo "192.168.0.111:/volume1/downloads /home/xbmc/Downloads nfs defaults 0 0" >> /etc/fstab
 mount -a
 
