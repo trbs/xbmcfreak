@@ -31,6 +31,7 @@ mkdir -p /home/$xbmcUser/.xbmc/userdata
 if [ ! -f /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml ] ; then
 	cat > /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml << 'EOF'
 <advancedsettings>
+    <cputempcommand>echo "$(sensors -u | tail -n4 | grep temp1_input | awk '{print $2 }' |awk '{printf("%d\n",$1 + 0.5);}') C"</cputempcommand>
     <gputempcommand>echo "$(nvidia-settings -tq gpuCoreTemp) C"</gputempcommand>
 </advancedsettings>
 EOF

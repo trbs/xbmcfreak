@@ -24,7 +24,7 @@ SDK_BUILDHOOKS=""
 
 # getopt-parse.bash
 
-TEMP=$(getopt -o snp:ulkgiv:h:x --long xbmc-svn,nvidia-only,proxy:,usb-image,live-only,keep-workarea,grub2,intel-only,variant:,hook:,x-swat -- "$@")
+TEMP=$(getopt -o snp:ulkgiv:h:x:z --long xbmc-svn,nvidia-only,proxy:,usb-image,live-only,keep-workarea,grub2,intel-only,variant:,hook:,x-swat,pre-posed -- "$@")
 eval set -- "$TEMP"
 
 while true
@@ -83,6 +83,11 @@ do
 		export SDK_BUILDHOOKS="$SDK_BUILDHOOKS $HOOKNAME"
 		shift 2
 		;;
+        -z|--pre-posed)
+                echo "Enable option: Use pre-posed repository (Ubuntu-X team Updates)"
+                export SDK_BUILDHOOKS="$SDK_BUILDHOOKS ./buildHook-pre-posed.sh"
+                shift
+                ;;
 	-x|--x-swat)
 		echo "Enable option: Use x-swat repository (Ubuntu-X team Updates)"
 		export SDK_BUILDHOOKS="$SDK_BUILDHOOKS ./buildHook-xswat.sh"
