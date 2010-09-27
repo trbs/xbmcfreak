@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#      Copyright (C) 2005-2010 Team XBMC
+#      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,20 +18,13 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
+#
+echo ""
+echo "Blacklisting floppy..."
+echo ""
 
-. /usr/lib/pm-utils/functions
+echo "" >> /etc/modprobe.d/blacklist.conf
+echo "# Boot speed optimization" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist floppy" >> /etc/modprobe.d/blacklist.conf
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
-
-esac
-
-exit $?
+update-initramfs -u 

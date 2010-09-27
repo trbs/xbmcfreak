@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#      Copyright (C) 2005-2010 Team XBMC
+#      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,20 +18,12 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
 
-. /usr/lib/pm-utils/functions
+mkdir -p $WORKPATH/buildLive/Files/binary_local-includes/live/restrictedDrivers &> /dev/null
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
+if ! ls $WORKPATH/buildBinaryDrivers/*.ext3 > /dev/null 2>&1; then
+	echo "Files missing (restrictedDrivers), exiting..."
+	exit 1
+fi
+cp $WORKPATH/buildBinaryDrivers/*.ext3 $WORKPATH/buildLive/Files/binary_local-includes/live/restrictedDrivers
 
-esac
-
-exit $?

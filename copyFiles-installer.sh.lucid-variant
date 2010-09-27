@@ -18,20 +18,16 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
+mkdir -p $WORKPATH/buildLive/Files/binary_local-udebs &> /dev/null
 
-. /usr/lib/pm-utils/functions
+if ! ls $WORKPATH/buildDEBs/live-installer*.udeb > /dev/null 2>&1; then
+	echo "Files missing (live-installer), exiting..."
+	exit 1
+fi
+cp $WORKPATH/buildDEBs/live-installer*.udeb $WORKPATH/buildLive/Files/binary_local-udebs
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
-
-esac
-
-exit $?
+if ! ls $WORKPATH/buildDEBs/xbmclive-installhelpers*.udeb > /dev/null 2>&1; then
+	echo "Files missing (xbmclive-installhelpers), exiting..."
+	exit 1
+fi
+cp $WORKPATH/buildDEBs/xbmclive-installhelpers*.udeb $WORKPATH/buildLive/Files/binary_local-udebs

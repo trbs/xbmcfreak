@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #      Copyright (C) 2005-2010 Team XBMC
 #      http://www.xbmc.org
@@ -18,20 +18,11 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
 
-. /usr/lib/pm-utils/functions
+cat > $WORKPATH/buildLive/Files/chroot_sources/proposed.list.chroot << EOF
+deb http://archive.ubuntu.com/ubuntu/ lucid-proposed main restricted universe multiverse
+EOF
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
-
-esac
-
-exit $?
+cat > $WORKPATH/buildLive/Files/chroot_sources/proposed.list.binary << EOF
+deb http://archive.ubuntu.com/ubuntu/ lucid-proposed main restricted universe multiverse
+EOF

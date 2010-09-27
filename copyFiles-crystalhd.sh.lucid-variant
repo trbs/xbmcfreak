@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#      Copyright (C) 2005-2010 Team XBMC
+#      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,20 +18,22 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
 
-. /usr/lib/pm-utils/functions
+echo ""
+echo "Retrieving CrystalHD drivers..."
+echo ""
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
+mkdir -p $WORKPATH/buildLive/Files/chroot_local-includes/root &> /dev/null
 
-esac
+if ! ls $WORKPATH/crystalhd.tar > /dev/null 2>&1; then
+	cd $WORKPATH
+	svn checkout http://crystalhd-for-osx.googlecode.com/svn/tags/crystalhd-for-osx-2.0.0/crystalhd
+	if [ "$?" -ne "0" ]; then
+		echo "Error retrieving CrystalHD drivers, exiting..."
+		exit 1
+	fi
 
-exit $?
+	tar cf crystalhd.tar crystalhd/
+fi
+
+cp $WORKPATH/crystalhd.tar $WORKPATH/buildLive/Files/chroot_local-includes/root

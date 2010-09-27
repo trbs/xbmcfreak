@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-#      Copyright (C) 2005-2010 Team XBMC
+#      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,20 +18,24 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
+GPU=$(lspci -nn | grep 0300)
 
-. /usr/lib/pm-utils/functions
+#	echo "deb http://ppa.launchpad.net/nvidia-vdpau/ppa/ubuntu karmic main" > /target/etc/apt/sources.list.d/nvidia-vdpau.list
+#	chroot /target apt-get install nvidia-glx-190
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
+# 10de == NVIDIA
+if [ "$(echo $GPU | grep 10de)" ]; then
+	restrictedDriversNeeded=nvidia
+else
+	# 1002 == AMD
+	if [ "$(echo $GPU | grep 1002)"  ]; then
+		restrictedDriversNeeded=amd
+	fi
+fi
 
-esac
+if [ -n "$restrictedDriversNeeded" ] ; then
+	mount -o loop /cdrom/live/restrictedDrivers/$restrictedDriversNeeded.ext3 /mnt
+	cp -a /mnt/* /target
+	umount /mnt
+fi
 
-exit $?

@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-#      Copyright (C) 2005-2010 Team XBMC
+#      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,20 +18,19 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
+# Add <xbmc=autostart,nodiskmount,setvolume loglevel=0> to grub's kernel entries
+if [ -f /target/boot/grub/menu.lst ]; then
+	# TODO Do not modify single-mode entry
+	sed -i -e "/^kernel/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/" /target/boot/grub/menu.lst
 
-. /usr/lib/pm-utils/functions
+	sed -i -e "/^# kopt=root=/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/" /target/boot/grub/menu.lst
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
+fi
 
-esac
+if [ -f /target/boot/grub/grub.cfg ]; then
+	# Watch out for the leading space in kernel line!
+	sed -i -e "/^ linux/s/\(.*\)/\1 xbmc=autostart,nodiskmount,setvolume loglevel=0/" /target/boot/grub/grub.cfg
 
-exit $?
+	# TODO modify grub2 templates
+fi
+

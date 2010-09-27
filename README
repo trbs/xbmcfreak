@@ -1,6 +1,12 @@
+27 sept 2010
+
+- grub 800x600 fixed resolution
+- rewritten all hooks scripts
+- vsync for nvidia hdmi set to 2
+
 15 sept 2010:
 
-- Added pre-posed repo
+- Added pro-posed repo
 - Additional fixes after beta2
 
 10.00 beta2:

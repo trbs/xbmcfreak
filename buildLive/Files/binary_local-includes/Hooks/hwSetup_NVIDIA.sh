@@ -21,18 +21,39 @@
 #check Nvidia GPU
 nvidiaGpuType=$(lspci -nn | grep '0300' | grep '10de')
 if [ ! -n "$nvidiaGpuType" ] ; then
-	exit 0
+	echo "no Nvidia chipset found"
 fi
 
 xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
 
-mkdir -p /home/$xbmcUser/.xbmc/userdata
+mkdir -p /home/$xbmcUser/.xbmc/userdata &> /dev/null
 
+rm -rf /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml
 if [ ! -f /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml ] ; then
-	cat > /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml << 'EOF'
+	cat > /home/$xbmcUser/.xbmc/userdata/advancedsettings.xml << EOF
 <advancedsettings>
-    <cputempcommand>echo "$(sensors -u | tail -n4 | grep temp1_input | awk '{print $2 }' |awk '{printf("%d\n",$1 + 0.5);}') C"</cputempcommand>
-    <gputempcommand>echo "$(nvidia-settings -tq gpuCoreTemp) C"</gputempcommand>
+  <video>
+    <excludefromscan>
+      <regexp>@eaDir</regexp>
+      <regexp>@EADIR</regexp>
+    </excludefromscan>
+    <excludefromlisting>
+      <regexp>@eaDir</regexp>
+      <regexp>@EADIR</regexp>
+    </excludefromlisting>
+  </video>
+  <audio>
+    <excludefromscan>
+      <regexp>@eaDir</regexp>
+      <regexp>@EADIR</regexp>
+    </excludefromscan>
+    <excludefromlisting>
+      <regexp>@eaDir</regexp>
+      <regexp>@EADIR</regexp>
+    </excludefromlisting>
+  </audio>
+  <gputempcommand>echo "$(nvidia-settings -tq gpuCoreTemp) C"</gputempcommand>
+  <cputempcommand>echo "$(sensors -u | tail -n4 | grep temp1_input | awk '{print $2 }' |awk '{printf("%d\n",$1 + 0.5);}') C"</cputempcommand>
 </advancedsettings>
 EOF
 fi
@@ -41,13 +62,15 @@ fi
 # Always sync to vblank
 #
 if [ ! -f /home/$xbmcUser/.xbmc/userdata/guisettings.xml ] ; then
-	cat > /home/$xbmcUser/.xbmc/userdata/guisettings.xml << 'EOF'
+	cat > /home/$xbmcUser/.xbmc/userdata/guisettings.xml << EOF
 <settings>
     <videoscreen>
         <vsync>2</vsync>
     </videoscreen>
 </settings>
 EOF
+else
+	sed -i 's#\(<vsync>\)[0-9]*\(</vsync>\)#\1'2'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
 fi
 
 chown -R $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc

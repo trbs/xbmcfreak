@@ -18,20 +18,24 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
+# Temporary fix until package in PPA is created
 
-. /usr/lib/pm-utils/functions
+mkdir -p $WORKPATH/buildLive/Files/chroot_local-packages &> /dev/null
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
+if ! ls $WORKPATH/plymouth-theme-xbmc-logo*.deb > /dev/null 2>&1; then
+	cd $WORKPATH
+	svn checkout https://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk/tools/XBMCLive/PlymouthThemes/plymouth-theme-xbmc-logo
+	if [ "$?" -ne "0" ]; then
+		echo "Error retrieving Plymouth theme files, exiting..."
+		exit 1
+	fi
 
-esac
+	cd plymouth-theme-xbmc-logo
+	dpkg-buildpackage -rfakeroot -b -uc -us 
+	if [ "$?" -ne "0" ]; then
+		exit 1
+	fi
+	cd ..
+fi
 
-exit $?
+cp $WORKPATH/plymouth-theme-xbmc-logo*.deb $WORKPATH/buildLive/Files/chroot_local-packages

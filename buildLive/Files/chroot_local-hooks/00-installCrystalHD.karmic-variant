@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#      Copyright (C) 2005-2010 Team XBMC
+#      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
 #
 #  This Program is free software; you can redistribute it and/or modify
@@ -18,20 +18,15 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-# This script will restart Lirc upon resume.
+echo ""
+echo "Extracting CrystalHD drivers..."
+echo ""
 
-. /usr/lib/pm-utils/functions
+cd /
 
-case "$1" in
-        hibernate|suspend)
-                /etc/init.d/lirc stop
-                ;;
-        thaw|resume)
-                /etc/init.d/lirc start
-                ;;
-        *)
-                ;;
+tar xvf /root/crystalhd.tar > /dev/null
 
-esac
+rm /root/crystalhd.tar
 
-exit $?
+# Assuming only one kernel is installed!
+depmod $(ls /lib/modules)
