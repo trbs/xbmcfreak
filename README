@@ -2,6 +2,8 @@
 
 ./buildWithOptions.sh --variant lucid --xbmc-svn --x-swat --proposed
 
+- /etc/pm/sleep.d/74network-resume.sh added
+- added echo USB0 > /proc/acpi/wakeup to rc.local
 - grub2 uses an universally supported resolution (800x600), avoid blank ttys (Ctrl-Alt-F1/F6)
 - vsync 2 for nvidia cards enabled
 - fixes for sabnzbd, use http://ip-address:9999/wizard to configure for the first time
