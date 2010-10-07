@@ -11,6 +11,9 @@
 #
 # By default this script does nothing.
 
+#enable resume USB remotes
+echo USB0 > /proc/acpi/wakeup &> /dev/null
+
 #execute runonce script
 if [ ! -e "/usr/share/xbmc/hwSetup_NVIDIA_HDMI.sh" ]; then
  echo "runonce script already applied"

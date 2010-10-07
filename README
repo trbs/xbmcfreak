@@ -1,7 +1,16 @@
+6 okt 2010
+
+- add auto configure sound for nvidia ion & ion2
+- crystalhd-for-osx-3.8.0 instead of 2.0.0
+- wireless driver backports package
+- removed g++ autoconf packages
+- live-boot version 2.0.1-1 
+
 27 sept 2010
 
 ./buildWithOptions.sh --variant lucid --xbmc-svn --x-swat --proposed
 
+- Ubuntu Audio Dev team PPA added
 - /etc/pm/sleep.d/74network-resume.sh added
 - added echo USB0 > /proc/acpi/wakeup to rc.local
 - grub2 uses an universally supported resolution (800x600), avoid blank ttys (Ctrl-Alt-F1/F6)

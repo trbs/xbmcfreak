@@ -44,7 +44,8 @@ if [ -n "$NvidiaHDMIFirstGen" ] ; then
 	# "ALC662 Digital"
 	# "ALC889A Digital"
 	# "ALC888 Digital"
-	DIGITALCONTROL="VT1708S Digital\|ALC662 rev1 Digital\|ALC1200 Digital\|ALC662 Digital\|ALC889A Digital\|ALC888 Digital"
+        # "ALC887 Digital"
+	DIGITALCONTROL="VT1708S Digital\|ALC662 rev1 Digital\|ALC1200 Digital\|ALC662 Digital\|ALC889A Digital\|ALC888 Digital\|ALC887 Digital"
 fi
 
 if [ -n "$NvidiaHDMISecondGen" ] ; then
@@ -233,5 +234,27 @@ if [ -n "$restartALSA" ] ; then
 
 	alsactl store &> /dev/null
 fi
+
+# Setup Triple Audiooutput
+if [ ! -f /home/$xbmcUser/.xbmc/userdata/guisettings.xml ] ; then
+        cat > /home/$xbmcUser/.xbmc/userdata/guisettings.xml << EOF
+<settings>
+    <audiooutput>
+        <audiodevice>custom</audiodevice>
+        <channellayout>0</channellayout>
+        <customdevice>plug:both</customdevice>
+        <mode>2</mode>
+        <passthroughdevice>alsa:hdmi</passthroughdevice>
+    </audiooutput>
+</settings>
+EOF
+else
+        sed -i 's#\(<audiodevice>\)[0-9]*\(</audiodevice>\)#\1'custom'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
+        sed -i 's#\(<channellayout>\)[0-9]*\(</channellayout>\)#\1'0'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
+        sed -i 's#\(<customdevice>\)[0-9]*\(</customdevice>\)#\1'plug:both'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
+        sed -i 's#\(<mode>\)[0-9]*\(</mode>\)#\1'2'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
+        sed -i 's#\(<passthroughdevice>\)[0-9]*\(</passthroughdevice>\)#\1'alsa:hdmi'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
+fi
+chown -R $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc
 
 rm -f /usr/share/xbmc/hwSetup_NVIDIA_HDMI.sh
