@@ -35,7 +35,8 @@ wget lynx lftp ftp zip
 sabnzbdplus sabnzbdplus-theme-mobile
 lm-sensors
 transmission-cli transmission-daemon transmission-common
-apache2
+apache2 libapache2-mod-php5 php5-common php5-curl
 libid3tag0 mt-daapd
 python-software-properties
 locate ethtool
+nfs-common

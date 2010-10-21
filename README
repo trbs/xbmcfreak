@@ -1,3 +1,14 @@
+19 okt 2010
+
+- XBMC 10.00 Beta3 packages
+- New Nvidia Linux Display Drivers 260.19.12
+- XBMC Remote PHP added
+- NFS support added
+- PHP supprt added
+- Fixes for Auto sound Nvidia ION and second ION devices
+- New live /etc/xbmc/live.d/ configuration options
+- Torrent-transmission settings.json symbolic link fix
+
 6 okt 2010
 
 - add auto configure sound for nvidia ion & ion2

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #      Copyright (C) 2005-2008 Team XBMC
 #      http://www.xbmc.org
@@ -18,20 +18,31 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
-if [ -f /target/boot/grub/grub.cfg ]; then
-	# Modify /etc/default/grub on target
-
-	# Comment out defaults if not done already
-	sed -i -e 's/^GRUB_CMDLINE_LINUX_DEFAULT/#GRUB_CMDLINE_LINUX_DEFAULT/' /target/etc/default/grub
-	sed -i -e 's/^GRUB_GFXMODE/#GRUB_GFXMODE/' /target/etc/default/grub
-	sed -i -e 's/^GRUB_GFXPAYLOAD_LINUX/#GRUB_GFXPAYLOAD_LINUX/' /target/etc/default/grub
-
-	# Set our own defaults
-	echo  >> /target/etc/default/grub
-	echo '# Defaults from XBMC Installation' >> /target/etc/default/grub
-	echo 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash xbmc=autostart,nodiskmount loglevel=0 video=vesafb"' >> /target/etc/default/grub
-	echo 'GRUB_GFXMODE="800x600"' >> /target/etc/default/grub
-	echo 'GRUB_GFXPAYLOAD_LINUX="800x600"' >> /target/etc/default/grub
-
-	in-target update-grub
+#check AMD GPU
+amdGpuType=$(lspci -nn | grep '0300' | grep '1002')
+if [ ! -n "$amdGpuType" ] ; then
+	exit 0
 fi
+
+xbmcUser=$(getent passwd 1000 | sed -e 's/\:.*//')
+
+mkdir -p /home/$xbmcUser/.xbmc/userdata
+
+#
+# Always sync to vblank
+#
+if [ ! -f /home/$xbmcUser/.xbmc/userdata/guisettings.xml ] ; then
+	mkdir -p /home/$xbmcUser/.xbmc/userdata &> /dev/null
+	cat > /home/$xbmcUser/.xbmc/userdata/guisettings.xml << 'EOF'
+<settings>
+    <videoscreen>
+        <vsync>2</vsync>
+    </videoscreen>
+</settings>
+EOF
+	chown -R $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc
+else
+	sed -i 's#\(<vsync>\)[0-9]*\(</vsync>\)#\1'2'\2#g' /home/$xbmcUser/.xbmc/userdata/guisettings.xml
+fi
+
+chown -R $xbmcUser:$xbmcUser /home/$xbmcUser/.xbmc
