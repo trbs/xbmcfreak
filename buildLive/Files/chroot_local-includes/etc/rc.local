@@ -11,8 +11,10 @@
 #
 # By default this script does nothing.
 
-#enable resume USB remotes
-echo USB0 > /proc/acpi/wakeup &> /dev/null
+#enable resume USB remotes (enable all ports)
+for device in `cat /proc/acpi/wakeup |awk '{ print $1 }'|grep US..`; do
+ echo $device  > /proc/acpi/wakeup &> /dev/null
+done
 
 #execute runonce script
 if [ ! -e "/usr/share/xbmc/hwSetup_NVIDIA_HDMI.sh" ]; then
