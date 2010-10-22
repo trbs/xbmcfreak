@@ -99,8 +99,8 @@ EOF
 	sed -i "s/hiddev/hidraw/g" /lib/udev/rules.d/70-hid2hci.rules
 
 	#apache2
-	echo "127.0.0.1 localhost XBMCLive" > /etc/hostname
-	echo "127.0.1.1 XBMCLive" >> /etc/hostname
+	#echo "127.0.0.1 localhost XBMCLive" > /etc/hostname
+	#echo "127.0.1.1 XBMCLive" >> /etc/hostname
 	echo "ServerName XBMCLive" >> /etc/apache2/apache2.conf
 	service apache2 restart >/dev/null 2>&1 &
 
