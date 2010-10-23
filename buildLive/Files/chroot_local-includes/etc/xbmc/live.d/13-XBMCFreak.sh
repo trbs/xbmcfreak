@@ -153,4 +153,9 @@ fi
 #set XBMCLive hostname
 hostname XBMCLive
 
+#enable resume USB remotes (enable all ports)
+for device in `cat /proc/acpi/wakeup |awk '{ print $1 }'|grep US..`; do
+ echo $device  > /proc/acpi/wakeup &> /dev/null
+done
+
 exit 0

@@ -21,7 +21,7 @@ if ifconfig eth0 | grep '00:01:2e:bc:12:bc' > /dev/null; then
 		chmod 755 /home/xbmc/Pictures
 		chmod 755 /home/xbmc/Music
 		chmod 755 /home/xbmc/Videos
-		chmod 755 ' /home/xbmc/TV Shows'
+		chmod 755 '/home/xbmc/TV Shows'
 	fi
 	mount -a 2>&1 &
 else
