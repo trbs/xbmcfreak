@@ -5,7 +5,6 @@ include "topline.php";
 
 //artist argument should be filled in
 if(!empty($_GET['artist']))
-
 {
 
   //get artist and artistid arguments
@@ -29,9 +28,8 @@ if(!empty($_GET['artist']))
   $urlartist = urlencode($artist);
   echo "<li><a href=getalbums.php?artist=$urlartist&artistid=$artistid>$artist</a></li></ul></div>";
 
-  echo "<div id=\"utility\"><ul>";
-
   //show all albums
+  echo "<div id=\"utility\"><ul>";
   $artists = $results['albums'];
   foreach ($artists as $value)
   {

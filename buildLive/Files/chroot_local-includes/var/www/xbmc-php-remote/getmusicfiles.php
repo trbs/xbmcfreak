@@ -139,7 +139,7 @@ echo "</ul></div>";
 //show playlist url when songs are added
 if(!empty($_GET['directorycontent'])) {
   echo "<br>";
-  echo "<div id=\"utility\"><ul><li><a href=getplaylist.php>playlist</a></li></ul></div>";
+  echo "<div id=\"utility\"><ul><li><a href=getplaylist.php>Playlist</a></li></ul></div>";
 }
 
 } else { echo "No source given!"; }
