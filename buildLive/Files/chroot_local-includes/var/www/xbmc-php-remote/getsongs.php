@@ -129,7 +129,7 @@ echo "</ul></div>";
 
 } else { echo "No artist given!"; }
 
-echo "<br><div id=\"utility\"><ul><li><a href=getplaylist.php>playlist</a></li></ul></div>";
+echo "<br><div id=\"utility\"><ul><li><a href=getplaylist.php>Playlist</a></li></ul></div>";
 
 include "downline.php";
 ?>

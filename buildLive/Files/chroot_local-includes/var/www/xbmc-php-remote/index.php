@@ -12,10 +12,20 @@
 <?php else: ?>
 <link rel="stylesheet" href="css/desktop.css" title="default" type="text/css">
 <?php endif; ?>
-
 <title>XBMC Remote</title>
 </head>
-<body>
-<div id="container">
-<div id="header">
-
+<?php if ($iphone == '1'): ?>
+<frameset rows="35,*" border="0">
+  <frame src="top.php" name="top">
+  <frame src="main.php" name="main">
+<?php elseif ($iphone == '2'): ?>
+<frameset rows="35,*" border="0">
+  <frame src="top.php" name="top">
+  <frame src="main.php" name="main">
+<?php else: ?>
+<frameset rows="55,*" border="0">
+  <frame src="top.php" name="top" scrolling="no">
+  <frame src="main.php" name="main">
+<?php endif; ?>
+</frameset>
+</html>

@@ -12,9 +12,6 @@ curl_setopt($ch, CURLOPT_URL, $xbmcjsonservice);
 $request = '{"jsonrpc": "2.0", "method": "Player.GetActivePlayers", "id": 1}';
 curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 $array = json_decode(curl_exec($ch),true);
-if (($array['result']['audio']) == 1) { echo "AudioPlayer active"; echo "<br><br>"; }
-if (($array['result']['video']) == 1) { echo "VideoPlayer active"; echo "<br><br>"; }
-
 echo "<br>";
 
 if(!empty($_GET['action'])) {
@@ -60,8 +57,6 @@ if ($_GET['action'] == 'AudioPlayer.PlayPause') {
   $request = '{"jsonrpc": "2.0", "method": "VideoPlayer.PlayPause", "id": 1}';
   curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
   $array = json_decode(curl_exec($ch),true);
-
-  //if (($array['result']['paused']) == 1) {echo "Song paused"; echo "<br><br>"; } else { echo "Playing"; echo "<br><br>"; }
 }
 
 //Action Move up
@@ -115,11 +110,10 @@ if ($_GET['action'] == 'Action.Stop') {
   $request = '{"jsonrpc": "2.0", "method": "XBMC.GetVolume", "id": 1}';
   curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
   $array = json_decode(curl_exec($ch),true);
-  //echo "Current volume: "; echo $array['result']; echo "<br><br>";
 
   //increase and decrease volumes
-  $decreasevolume = $array['result'] - 10;
-  $increasevolume = $array['result'] + 10;
+  $decreasevolume = $array['result'] - 5;
+  $increasevolume = $array['result'] + 5;
 
 if(!empty($_GET['action'])) {
 
@@ -139,8 +133,6 @@ if ($_GET['action'] == 'Decrease.Volume') {
 
 }
 
-//echo '' . $xbmchttpapi . '/xbmcCmds/xbmcHttp?command=Action(3)';
-
 echo "<center>";
 echo "<a href=remote.php?action=Action.Stop><img src=\"./img/media28-stop.png\"></a>\n";
 echo "<a href=remote.php?action=Action.Move.Up><img src=\"./img/arrow3-up.png\"></a>\n";
@@ -156,7 +148,9 @@ echo "<a href=remote.php?action=Action.Show.Info><img src=\"./img/information.pn
 echo "</center>";
 
 echo "<center>";
-//echo "<a href=remote.php?action=AudioPlaylist.Play>AudioPlaylist.Play</a><br>\n";
+
+//TODO: play button when song is paused, paused button when song is playing.
+//if (($array['result']['paused']) == 1) {echo "Song paused"; echo "<br><br>"; } else { echo "Playing"; echo "<br><br>"; }
 echo "<a href=remote.php?action=AudioPlayer.PlayPause><img src=\"./img/play-pause-sign.png\"></a><br>\n";
 echo "<a href=remote.php?action=Decrease.Volume><img src=\"./img/volume-left.png\"></a>\n";
 echo "<a href=remote.php?action=AudioPlaylist.SkipPrevious><img src=\"./img/arrows-skip-backward.png\"></a>\n";
